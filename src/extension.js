@@ -111,38 +111,26 @@ const Aiva = GObject.registerClass(
          * init extension
          */
         _init(extension) {
-            /**
-             * init extension
-             */
+            // Init extension
             super._init(0.0, _('AIVA'));
             log('Initing extension');
 
-            /**
-             * set/get extension props
-             */
+            // get extension props
             this.extension = extension;
             log('Extension loaded');
 
-            /**
-             * load settings
-             */
+            // load settings
             this._loadSettings();
             log('Settings loaded');
 
-            /**
-             * chat history
-             */
+            // chat history
             this.chatHistory = [];
             log('New chat history created');
 
-            /**
-             * recursive talk
-             */
+            // recursive talk
             this.recursiveHistory = [];
 
-            /**
-             * after tune
-             */
+            // after tune
             this.afterTune = null;
 
             // Load history file if recursive talk is enabled
