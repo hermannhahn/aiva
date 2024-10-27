@@ -39,15 +39,15 @@ const Aiva = GObject.registerClass(
              * utility functions [log, logError...]
              */
             const utils = new Utils(this);
-            const log = utils.log;
             this.utils = utils;
-            log('Utils loaded');
+            this.log = utils.log;
+            this.log('Utils loaded');
 
             /**
              * get extension settings
              */
             const {settings} = this.extension;
-            log('Settings loaded');
+            this.log('Settings loaded');
 
             /**
              * set/get user settings [GEMINI_API_KEY, AZURE_SPEECH_KEY, AZURE_SPEECH_REGION, AZURE_SPEECH_LANGUAGE, AZURE_SPEECH_VOICE, RECURSIVE_TALK, USERNAME, LOCATION, EXT_DIR, HISTORY_FILE]
@@ -81,25 +81,25 @@ const Aiva = GObject.registerClass(
                 this.userSettings.EXT_DIR,
                 'history.json',
             ]);
-            log('User settings loaded');
+            this.log('User settings loaded');
 
             /**
              * get ui layouts  [tray, icon, item, searchEntry, micButton, clearButton, settingsButton, chatSection, scrollView, inputChat, responseChat, copyButton, newSeparator]
              */
             this.ui = new AppLayout();
-            log('UI layouts loaded');
+            this.log('UI layouts loaded');
 
             /**
              * Azure API [tts, transcribe]
              */
             this.azure = new MicrosoftAzure(this);
-            log('Azure API loaded');
+            this.log('Azure API loaded');
 
             /**
              * create audio instance
              */
             this.audio = new Audio(this);
-            log('Audio loaded');
+            this.log('Audio loaded');
         }
 
         /**
@@ -111,19 +111,19 @@ const Aiva = GObject.registerClass(
         _init(extension) {
             // Init extension
             super._init(0.0, _('AIVA'));
-            log('Initing extension');
+            this.log('Initing extension');
 
             // get extension props
             this.extension = extension;
-            log('Extension loaded');
+            this.log('Extension loaded');
 
             // load settings
             this._loadSettings();
-            log('Settings loaded');
+            this.log('Settings loaded');
 
             // chat history
             this.chatHistory = [];
-            log('New chat history created');
+            this.log('New chat history created');
 
             // recursive talk
             this.recursiveHistory = [];
@@ -134,17 +134,17 @@ const Aiva = GObject.registerClass(
             // Load history file if recursive talk is enabled
             if (this.userSettings.RECURSIVE_TALK) {
                 this.recursiveHistory = this.utils.loadHistoryFile();
-                log('Recursive talk history loaded.');
+                this.log('Recursive talk history loaded.');
             }
 
             // Initialize app tray
             this.ui.tray.add_child(this.ui.icon);
             this.add_child(this.ui.tray);
-            log('App tray initialized.');
+            this.log('App tray initialized.');
 
             // Add scroll to chat section
             this.ui.scrollView.add_child(this.ui.chatSection.actor);
-            log('Scroll bar loaded');
+            this.log('Scroll bar loaded');
 
             // If press enter on question input box
             this.ui.searchEntry.clutter_text.connect('activate', (actor) => {
@@ -159,10 +159,10 @@ const Aiva = GObject.registerClass(
                 this.ui.searchEntry.grab_key_focus();
             });
             this.ui.searchEntry.connect('key-focus-in', () => {
-                log('Text has gained focus');
+                this.log('Text has gained focus');
             });
             this.ui.searchEntry.connect('key-focus-out', () => {
-                log('Text has lost focus');
+                this.log('Text has lost focus');
             });
 
             // If press mic button
@@ -536,9 +536,9 @@ const Aiva = GObject.registerClass(
             );
 
             if (process) {
-                log(`Executing command: ${command}`);
+                this.log(`Executing command: ${command}`);
             } else {
-                log('Error executing command.');
+                this.log('Error executing command.');
             }
         }
 
@@ -546,7 +546,7 @@ const Aiva = GObject.registerClass(
          * remove all .wav files from /tmp folder
          */
         removeWavFiles() {
-            log('Removing all .wav files from /tmp folder');
+            this.log('Removing all .wav files from /tmp folder');
             const command = 'rm -rf /tmp/*gva*.wav';
             const process = GLib.spawn_async(
                 null, // pasta de trabalho
@@ -557,9 +557,9 @@ const Aiva = GObject.registerClass(
             );
 
             if (process) {
-                log('Wav files removed successfully.');
+                this.log('Wav files removed successfully.');
             } else {
-                log('Error removing wav files.');
+                this.log('Error removing wav files.');
             }
         }
     },
@@ -590,7 +590,7 @@ export default class AivaExtension extends Extension {
                 let response = decoder.decode(bytes.get_data());
                 const res = JSON.parse(response);
                 this._aiva.settings.LOCATION = `${res.countryName}/${res.cityName}`;
-                log(this._aiva.settings.LOCATION);
+                this.log(this._aiva.settings.LOCATION);
             },
         );
     }
