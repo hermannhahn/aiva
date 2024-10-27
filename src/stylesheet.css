@@ -17,7 +17,6 @@
     text-wrap: wrap;
     word-wrap: break-word;
     cursor: text;
-    padding-top: 50px;
 }
 .response-chat:hover {
     background-color: rgb(42, 42, 42);
