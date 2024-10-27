@@ -11,7 +11,7 @@
     "build": "./scripts/build.sh",
     "build:dev": "./scripts/build.sh --unsafe-reload",
     "build:install": "./scripts/build.sh --install",
-    "check:lint": "eslintt src/**/*.js",
+    "check:lint": "eslint src/**/*.js",
     "check:format": "prettier --check src/**/*.js"
   },
   "type": "module",
