@@ -1,5 +1,5 @@
 {
-  "name": "aiva-gnome-extension",
+  "name": "aiva",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -17,7 +17,7 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hermannhahn/gemini-gnome-extension.git"
+    "url": "git+https://github.com/hermannhahn/aiva.git"
   },
   "keywords": [
     "AI",
@@ -28,9 +28,9 @@
   "author": "Hermann Hahn",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/hermannhahn/gemini-gnome-extension/issues"
+    "url": "https://github.com/hermannhahn/aiva/issues"
   },
-  "homepage": "https://github.com/hermannhahn/gemini-gnome-extension#readme",
+  "homepage": "https://github.com/hermannhahn/aiva#readme",
   "devDependencies": {
     "@eslint/js": "^9.3.0",
     "@girs/gjs": "^4.0.0-beta.14",
