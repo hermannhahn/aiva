@@ -578,6 +578,9 @@ export default class AivaExtension extends Extension {
             settings: this.getSettings(),
             openSettings: this.openPreferences,
             uuid: this.uuid,
+            log: (message) => {
+                this.log(message);
+            },
         });
         Main.panel.addToStatusArea('gvaGnomeExtension', this._aiva, 1);
         _httpSession.send_and_read_async(
@@ -603,7 +606,7 @@ export default class AivaExtension extends Extension {
                         let response = decoder.decode(bytes.get_data());
                         const res = JSON.parse(response);
                         this._aiva.userSettings.LOCATION = `${res.country_name}/${res.city}`;
-                        this.log(this._aiva.userSettings.LOCATION);
+                        this._aiva.log(this._aiva.userSettings.LOCATION);
                     },
                 );
             },
