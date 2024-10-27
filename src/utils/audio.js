@@ -55,9 +55,11 @@ export class Audio {
         if (!this.isPlaying) {
             return;
         }
+        this.isPlaying = false;
+
         // Kill player pid
         GLib.spawn_command_line_async('kill ' + this.playingPid);
-        this.isPlaying = false;
+
         log('Stopping audio.');
     }
 
