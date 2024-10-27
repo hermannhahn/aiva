@@ -224,6 +224,7 @@ const Aiva = GObject.registerClass(
                 can_focus: false,
                 hover: true,
             });
+            this.responseChat = responseChat;
 
             // Create copy button
             let copyButton = new PopupMenu.PopupMenuItem('', {
@@ -452,7 +453,7 @@ const Aiva = GObject.registerClass(
          * scroll down
          */
         _scrollToBottom() {
-            this.utils.scrollToBottom(this.ui.responseChat, this.ui.scrollView);
+            this.utils.scrollToBottom(this.responseChat, this.ui.scrollView);
         }
 
         /**
