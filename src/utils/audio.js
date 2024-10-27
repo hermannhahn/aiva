@@ -27,7 +27,7 @@ export class Audio {
     // Play audio
     play(audiofile) {
         if (!this.isPlaying) {
-            log('Playing audio: ' + audiofile);
+            log('Playing audio... ' + audiofile);
             // Process sync, not async
             const process = GLib.spawn_async(
                 null, // pasta de trabalho
@@ -53,14 +53,15 @@ export class Audio {
     // Stop audio
     stop() {
         if (!this.isPlaying) {
+            log('Audio not playing.');
             return;
         }
         this.isPlaying = false;
+        log('Stopping audio...');
 
         // Kill player pid
         GLib.spawn_command_line_async('kill ' + this.playingPid);
-
-        log('Stopping audio.');
+        log('Audio stopped successfully. [PID: ' + this.playingPid + ']');
     }
 
     // Start record
@@ -68,9 +69,11 @@ export class Audio {
         if (this.isRecording) {
             // Stop recording
             this.stopRecord();
+            log('Recording stopped.');
+            return;
         }
-
         this.isRecording = true;
+        log('Recording...');
 
         // Definir o arquivo de saída no diretório da extensão
         this.questionPath = 'gva_temp_audio_XXXXXX.wav';
@@ -99,16 +102,18 @@ export class Audio {
     // Stop record
     stopRecord() {
         if (!this.isRecording) {
+            log('Recording not started.');
             return;
         }
+        this.isRecording = false;
+        log('Stopping recording...');
 
+        // Stop recording
         this.pipeline.force_exit();
+        log('Recording stopped successfully.');
 
         // Transcribe audio
         this.app.azure.transcribe(this.questionPath);
-
-        // Stop recording
-        this.isRecording = false;
     }
 
     // Função para converter arquivo de áudio em base64
