@@ -204,8 +204,7 @@ export class Utils {
                 log(
                     `History file created. : ${this.app.userSettings.HISTORY_FILE}`,
                 );
-                let history = [];
-                history.push({
+                this.app.recursiveHistory.push({
                     role: 'user',
                     parts: [
                         {
@@ -213,7 +212,7 @@ export class Utils {
                         },
                     ],
                 });
-                history.push({
+                this.app.recursiveHistory.push({
                     role: 'model',
                     parts: [
                         {
@@ -224,7 +223,7 @@ export class Utils {
                     ],
                 });
                 // Save history.json
-                return history;
+                return this.app.recursiveHistory;
             } catch (e) {
                 logError(
                     e,
