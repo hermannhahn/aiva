@@ -570,7 +570,8 @@ export default class AivaExtension extends Extension {
      * Enable extension
      */
     enable() {
-        let url = 'https://thisipcan.cyou/json';
+        let url = 'https://api.ipify.org?format=json'; // e.g. response: {"ip":"177.97.182.155"}
+        // Get IP from url response
         let _httpSession = new Soup.Session();
         let message = Soup.Message.new('GET', url);
         this._aiva = new Aiva({
@@ -589,8 +590,23 @@ export default class AivaExtension extends Extension {
                 let decoder = new TextDecoder('utf-8');
                 let response = decoder.decode(bytes.get_data());
                 const res = JSON.parse(response);
-                this._aiva.settings.LOCATION = `${res.countryName}/${res.cityName}`;
-                this.log(this._aiva.settings.LOCATION);
+                const ip = res.ip;
+                // Get location from https://ipapi.co/{ip}/json/
+                url = `https://ipapi.co/${ip}/json/`;
+                message = Soup.Message.new('GET', url);
+                _httpSession.send_and_read_async(
+                    message,
+                    GLib.PRIORITY_DEFAULT,
+                    null,
+                    (_httpSession, result) => {
+                        let bytes = _httpSession.send_and_read_finish(result);
+                        let decoder = new TextDecoder('utf-8');
+                        let response = decoder.decode(bytes.get_data());
+                        const res = JSON.parse(response);
+                        this._aiva.userSettings.LOCATION = `${res.country_name}/${res.city}`;
+                        this.log(this._aiva.userSettings.LOCATION);
+                    },
+                );
             },
         );
     }
