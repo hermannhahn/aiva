@@ -1,0 +1,16 @@
+{
+  "name": "AIVA",
+  "description": "Artificial Intelligence Voice Assistant",
+  "uuid": "aiva@gemini-assist.vercel.app",
+  "donations": {
+    "pix": "hermann.h.hahn@gmail.com"
+  },
+  "shell-version": [
+    "45",
+    "46",
+    "47"
+  ],
+  "settings-schema": "org.gnome.shell.extensions.aiva",
+  "url": "https://gemini-assist.vercel.app/gnome-extension",
+  "version": 0.0
+}

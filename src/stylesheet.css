@@ -1,0 +1,181 @@
+/* Add your custom extension styling here */
+.ai-entry {
+    width: 250px;
+    height: 20px !important;
+    border-radius: 100px;
+    text-wrap: wrap;
+}
+.m-w-100 {
+    max-width: 960px;
+    text-wrap: wrap;
+    overflow-y: auto;
+    word-wrap: break-word;
+}
+.response-chat {
+    color: rgb(243, 232, 212);
+    max-width: 960px;
+    text-wrap: wrap;
+    word-wrap: break-word;
+    cursor: text;
+    padding-top: 50px;
+}
+.response-chat:hover {
+    background-color: rgb(42, 42, 42);
+    color: white;
+}
+.response-chat::selection {
+    color: black;
+}
+.input-chat {
+    color: rgb(243, 232, 212);
+    max-width: 960px;
+    text-wrap: wrap;
+    text-align: justify;
+    word-wrap: break-word;
+}
+.input-chat:hover {
+    background-color: rgb(42, 42, 42);
+    color: white;
+}
+.input-chat::selection {
+    color: black;
+}
+.chat-scroll-section {
+    max-width: 960px;
+    text-wrap: wrap;
+    overflow-y: auto;
+    word-wrap: break-word;
+    padding: 10px;
+}
+.chat-section {
+    max-width: 960px;
+    text-wrap: wrap;
+    overflow-y: auto;
+    word-wrap: break-word;
+    padding-top: 30px;
+}
+.google-gemini-icon {
+    background-image: url('assets/icon_gemini.png');
+    background-size: 24px;
+    width: 24px;
+    height: 24px;
+    padding: 0px;
+}
+.copy-icon {
+    background-image: url('assets/icon_copy.png');
+    background-size: 26px;
+    width: 24px;
+    height: 24px;
+}
+.copy-icon:hover {
+    background-image: url('assets/icon_copy.png');
+}
+.copy-icon:active {
+    background-image: url('assets/icon_check.png');
+}
+.copy-icon-checked {
+    background-image: url('assets/icon_check.png');
+    background-size: 26px;
+    width: 24px;
+    height: 24px;
+}
+.copy-icon-checked:hover {
+    background-image: url('assets/icon_check.png');
+}
+.copy-icon-checked:active {
+    background-image: url('assets/icon_check.png');
+}
+.mic-icon {
+    background-image: url('assets/icon_mic.png');
+    background-size: 26px;
+    width: 24px;
+    height: 24px;
+    border: 1px solid transparent;
+    border-radius: 150px;
+}
+.mic-icon:hover {
+    background-color: rgb(42, 42, 42);
+}
+.mic-icon:checked {
+    border: 1px solid rgb(226, 0, 0);
+    -webkit-animation: pulse 1s infinite;
+    animation: pulse 1s infinite;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.trash-icon {
+    background-image: url('assets/icon_trash.png');
+    background-size: 20px;
+    width: 22px;
+    height: 22px;
+}
+.trash-icon:hover {
+    background-color: rgb(42, 42, 42);
+    border-radius: 150px;
+}
+.trash-icon:active {
+    background-size: 18px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid transparent;
+}
+.settings-icon {
+    background-image: url('assets/icon_settings.png');
+    background-size: 20px;
+    width: 22px;
+    height: 22px;
+}
+.settings-icon:hover {
+    background-color: rgb(42, 42, 42);
+    border-radius: 150px;
+}
+.settings-icon:active {
+    background-size: 18px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid transparent;
+}
+.inputLabel {
+    color: black;
+    font-weight: bold;
+    padding-right: 10px;
+    padding-bottom: 30px;
+}
+.inputEntry {
+    color: black;
+    padding-right: 10px;
+    padding-bottom: 30px;
+}
+.howToButton {
+    color: black;
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+.saveButton {
+    color: black;
+    font-weight: bold;
+    padding: 30px;
+}
+.statusLabel {
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+}
+.switch {
+    width: 60px;
+    height: 34px;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}

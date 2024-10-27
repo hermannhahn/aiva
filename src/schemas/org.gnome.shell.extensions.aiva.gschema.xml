@@ -1,0 +1,50 @@
+<schemalist gettext-domain="gnome-shell-extensions">
+  <schema id="org.gnome.shell.extensions.aiva"
+      path="/org/gnome/shell/extensions/aiva/">
+
+    <key name="gemini-api-key" type="s">
+        <default>"KEY"</default>
+        <summary>Gemini api key for working</summary>
+        <description>
+            You need to set api key for this extention
+        </description>
+    </key>
+    <key name="azure-speech-key" type="s">
+        <default>"AZURE_SPEECH_KEY"</default>
+        <summary>Azure speech api key for voice working</summary>
+        <description>
+            You need to set api key for voice working in this extention
+        </description>
+    </key>
+    <key name="azure-speech-region" type="s">
+        <default>"eastus"</default>
+        <summary>Azure speech region for voice working</summary>
+        <description>
+            You need to set region for voice working in this extention
+        </description>
+    </key>
+    <key name="azure-speech-language" type="s">
+        <default>"en-US"</default>
+        <summary>Azure speech language for voice working</summary>
+        <description>
+            You need to set language for voice working in this extention
+        </description>
+    </key>
+    <key name="azure-speech-voice" type="s">
+        <default>"en-US-JennyNeural"</default>
+        <summary>Azure speech voice for voice working</summary>
+        <description>
+            You need to set voice for voice working in this extention
+        </description>
+    </key>
+    <key name="log-history" type="b">
+        <default>true</default>
+        <summary>Remember talk history</summary>
+        <description>
+           it will remeember talk history
+        </description>
+    </key>
+
+   
+  </schema>
+</schemalist>
