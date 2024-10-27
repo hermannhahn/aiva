@@ -201,7 +201,7 @@ export class Utils {
                     this.app.userSettings.HISTORY_FILE,
                     initialContent,
                 );
-                log(
+                this.log(
                     `History file created. : ${this.app.userSettings.HISTORY_FILE}`,
                 );
                 this.app.recursiveHistory.push({
@@ -232,7 +232,7 @@ export class Utils {
                 return [];
             }
         } else {
-            log(
+            this.log(
                 `The history.json file already exists: ${this.app.userSettings.HISTORY_FILE}`,
             );
             return this.loadHistoryFile();
@@ -246,7 +246,7 @@ export class Utils {
                 this.app.userSettings.HISTORY_FILE,
                 JSON.stringify(this.app.chatHistory, null, 2),
             );
-            log(`History saved in: ${this.app.userSettings.HISTORY_FILE}`);
+            this.log(`History saved in: ${this.app.userSettings.HISTORY_FILE}`);
         } catch (e) {
             logError(
                 e,
@@ -269,7 +269,7 @@ export class Utils {
                 );
                 let [, contents] = file.load_contents(null);
                 let chatHistory = JSON.parse(contents);
-                log(
+                this.log(
                     `History loaded from: ${this.app.userSettings.HISTORY_FILE}`,
                 );
                 return chatHistory;
@@ -296,15 +296,15 @@ export class Utils {
         );
 
         if (process) {
-            log(`Executing command: ${command}`);
+            this.log(`Executing command: ${command}`);
         } else {
-            log('Error executing command.');
+            this.log('Error executing command.');
         }
     }
 
     // Remove all .wav file from /tmp folder
     removeWavFiles() {
-        log('Removing all .wav files from /tmp folder');
+        this.log('Removing all .wav files from /tmp folder');
         const command = 'rm -rf /tmp/*gva*.wav';
         const process = GLib.spawn_async(
             null, // pasta de trabalho
@@ -315,9 +315,9 @@ export class Utils {
         );
 
         if (process) {
-            log('Wav files removed successfully.');
+            this.log('Wav files removed successfully.');
         } else {
-            log('Error removing wav files.');
+            this.log('Error removing wav files.');
         }
     }
 
@@ -336,9 +336,9 @@ export class Utils {
         );
 
         if (process) {
-            log('Notification sent successfully.');
+            this.log('Notification sent successfully.');
         } else {
-            log('Error sending notification.');
+            this.log('Error sending notification.');
         }
     }
 
@@ -376,7 +376,7 @@ export class Utils {
                     return false; // Para garantir que o timeout execute apenas uma vez
                 });
             }
-            log(`Texto copiado: ${this.app.ui.responseChat.label.text}`);
+            this.log(`Texto copiado: ${this.app.ui.responseChat.label.text}`);
         }
     }
 
@@ -453,7 +453,7 @@ export class Utils {
             const [, contents] = file.load_contents(null);
             return GLib.base64_encode(contents);
         } catch (error) {
-            log('Erro ao ler o arquivo: ' + error);
+            this.log('Erro ao ler o arquivo: ' + error);
             return null;
         }
     }
