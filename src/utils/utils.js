@@ -17,7 +17,7 @@ export class Utils {
      */
     log(message) {
         if (message) {
-            console.log(`[ DEBUG ] ${message}`);
+            console.log(`[AIVA] ${message}`);
         }
     }
 
@@ -27,7 +27,7 @@ export class Utils {
      */
     logError(message) {
         if (message) {
-            console.log(`[ ERROR ] ${message}`);
+            console.log(`[ERROR] ${message}`);
         }
     }
 
