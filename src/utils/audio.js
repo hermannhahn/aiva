@@ -1,7 +1,13 @@
 import GLib from 'gi://GLib';
 import Gio from 'gi://Gio';
 
+import {Utils} from './utils.js';
+
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
+
+// Utils
+const utils = new Utils();
+const log = utils.log;
 
 export class Audio {
     constructor(app) {
@@ -15,13 +21,13 @@ export class Audio {
         this.playingPid = 0;
         this.pipeline = null;
         this.questionPath = null;
-        this.app.log('Audio loaded');
+        console.log('Audio loaded');
     }
 
     // Play audio
     play(audiofile) {
         if (!this.isPlaying) {
-            this.app.log('Playing audio... ' + audiofile);
+            log('Playing audio... ' + audiofile);
             // Process sync, not async
             const process = GLib.spawn_async(
                 null, // pasta de trabalho
@@ -33,12 +39,12 @@ export class Audio {
             if (process) {
                 this.playingPid = process.pid;
                 this.isPlaying = true;
-                this.app.log('Audio played successfully.');
+                log('Audio played successfully.');
             } else {
-                this.app.log('Error playing audio.');
+                log('Error playing audio.');
             }
         } else {
-            this.app.log('Audio already playing.');
+            log('Audio already playing.');
             this.stop();
             this.play(audiofile);
         }
@@ -47,17 +53,15 @@ export class Audio {
     // Stop audio
     stop() {
         if (!this.isPlaying) {
-            this.app.log('Audio not playing.');
+            log('Audio not playing.');
             return;
         }
         this.isPlaying = false;
-        this.app.log('Stopping audio...');
+        log('Stopping audio...');
 
         // Kill player pid
         GLib.spawn_command_line_async('kill ' + this.playingPid);
-        this.app.log(
-            'Audio stopped successfully. [PID: ' + this.playingPid + ']',
-        );
+        log('Audio stopped successfully. [PID: ' + this.playingPid + ']');
     }
 
     // Start record
@@ -65,11 +69,11 @@ export class Audio {
         if (this.isRecording) {
             // Stop recording
             this.stopRecord();
-            this.app.log('Recording stopped.');
+            log('Recording stopped.');
             return;
         }
         this.isRecording = true;
-        this.app.log('Recording...');
+        log('Recording...');
 
         // Definir o arquivo de saída no diretório da extensão
         this.questionPath = 'gva_temp_audio_XXXXXX.wav';
@@ -98,15 +102,15 @@ export class Audio {
     // Stop record
     stopRecord() {
         if (!this.isRecording) {
-            this.app.log('Recording not started.');
+            log('Recording not started.');
             return;
         }
         this.isRecording = false;
-        this.app.log('Stopping recording...');
+        log('Stopping recording...');
 
         // Stop recording
         this.pipeline.force_exit();
-        this.app.log('Recording stopped successfully.');
+        log('Recording stopped successfully.');
 
         // Transcribe audio
         this.app.azure.transcribe(this.questionPath);
@@ -119,7 +123,7 @@ export class Audio {
             const [, contents] = file.load_contents(null);
             return GLib.base64_encode(contents);
         } catch (error) {
-            this.app.log('Erro ao ler o arquivo: ' + error);
+            log('Erro ao ler o arquivo: ' + error);
             return null;
         }
     }
