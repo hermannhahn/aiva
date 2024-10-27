@@ -246,19 +246,17 @@ const Aiva = GObject.registerClass(
             // Chat settings
             inputChat.label.x_expand = true;
             responseChat.label.x_expand = true;
+            inputChat.label.y_expand = true;
+            responseChat.label.y_expand = true;
 
             // Enable text selection
             inputChat.label.clutter_text.reactive = true;
             inputChat.label.clutter_text.selectable = true;
-
-            // Disable clutter_text hover
-            inputChat.label.clutter_text.hover = false;
-
-            // Enable text selection
             responseChat.label.clutter_text.reactive = true;
             responseChat.label.clutter_text.selectable = true;
 
             // Disable clutter_text hover
+            inputChat.label.clutter_text.hover = false;
             responseChat.label.clutter_text.hover = false;
 
             // Format question
@@ -408,6 +406,9 @@ const Aiva = GObject.registerClass(
 
                         // Enable searchEntry
                         this.ui.searchEntry.clutter_text.reactive = true;
+
+                        // Disable responseChat focus
+                        responseChat.label.clutter_text.reactive = false;
 
                         // Extract code and tts from response
                         let answer = this.utils.extractCodeAndTTS(aiResponse);
