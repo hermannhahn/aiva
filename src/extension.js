@@ -37,9 +37,17 @@ const Aiva = GObject.registerClass(
          */
         _fetchSettings() {
             /**
+             * @description utility functions [log, logError...]
+             */
+            this.utils = new Utils(this);
+            const log = this.utils.log;
+            log('Utils loaded');
+
+            /**
              * @description get extension settings
              */
             const {settings} = this.extension;
+            log('Settings loaded');
 
             /**
              * @description set/get user settings
@@ -73,26 +81,25 @@ const Aiva = GObject.registerClass(
                 this.userSettings.EXT_DIR,
                 'history.json',
             ]);
+            log('User settings loaded');
 
             /**
              * @description get ui layouts  [tray, icon, item, searchEntry, micButton, clearButton, settingsButton, chatSection, scrollView, inputChat, responseChat, copyButton, newSeparator]
              */
             this.ui = new AppLayout();
-
-            /**
-             * @description utility functions [log, logError...]
-             */
-            this.utils = new Utils(this);
+            log('UI layouts loaded');
 
             /**
              * @description Azure API [tts, transcribe]
              */
             this.azure = new MicrosoftAzure(this);
+            log('Azure API loaded');
 
             /**
              * @description create audio instance
              */
             this.audio = new Audio(this);
+            log('Audio loaded');
         }
 
         /**
@@ -102,11 +109,15 @@ const Aiva = GObject.registerClass(
          * @description init extension
          */
         _init(extension) {
-            this.keyLoopBind = 0;
-            this.extension = extension;
-            this.userSettings = {};
             super._init(0.0, _('AIVA'));
+            this.keyLoopBind = 0;
+
+            this.extension = extension;
+            log('Extension loaded');
+
             this._loadSettings();
+            log('Settings loaded');
+
             this.chatHistory = [];
             this.recursiveHistory = [];
             this.afterTune = null;
@@ -114,10 +125,13 @@ const Aiva = GObject.registerClass(
             // Recursive Talk
             if (this.userSettings.RECURSIVE_TALK) {
                 this.recursiveHistory = this.utils.loadHistoryFile();
+                log('History loaded');
             }
+
             // Tray
             this.ui.tray.add_child(this.ui.icon);
             this.add_child(this.ui.tray);
+            log('Tray loaded');
 
             // Add scroll to chat section
             this.ui.scrollView.add_child(this.ui.chatSection.actor);
