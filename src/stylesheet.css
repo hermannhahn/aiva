@@ -51,7 +51,7 @@
     text-wrap: wrap;
     /* overflow-y: auto; */
     word-wrap: break-word;
-    padding-top: 30px;
+    margin-top: 50px;
 }
 .google-gemini-icon {
     background-image: url('assets/icon_gemini.png');
