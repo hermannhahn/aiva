@@ -568,6 +568,9 @@ const Aiva = GObject.registerClass(
 );
 
 export default class AivaExtension extends Extension {
+    /**
+     * Enable extension
+     */
     enable() {
         let url = 'https://thisipcan.cyou/json';
         let _httpSession = new Soup.Session();
@@ -594,6 +597,9 @@ export default class AivaExtension extends Extension {
         );
     }
 
+    /**
+     * Disable extension
+     */
     disable() {
         this._aiva.destroy();
         this._aiva = null;
