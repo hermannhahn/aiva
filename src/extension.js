@@ -39,10 +39,6 @@ const Aiva = GObject.registerClass(
              * utility functions [log, logError...]
              */
             this.utils = new Utils(this);
-            const log = this.utils.log;
-            const logError = this.utils.logError;
-            this.log = log;
-            this.logError = logError;
             this.log('Utils loaded');
 
             /**
@@ -563,6 +559,14 @@ const Aiva = GObject.registerClass(
             } else {
                 this.log('Error removing wav files.');
             }
+        }
+
+        log(message) {
+            this.utils.log(message);
+        }
+
+        logError(message) {
+            this.utils.logError(message);
         }
     },
 );
