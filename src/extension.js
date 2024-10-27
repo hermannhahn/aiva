@@ -103,6 +103,8 @@ const Aiva = GObject.registerClass(
         _init(extension) {
             // utility functions
             this.utils = new Utils(this);
+            this.log = this.utils.log;
+            this.logError = this.utils.logError;
             this.log('Utils loaded');
 
             // Init extension
@@ -557,26 +559,6 @@ const Aiva = GObject.registerClass(
             } else {
                 this.log('Error removing wav files.');
             }
-        }
-
-        /**
-         *
-         * @param {*} message
-         *
-         * log message
-         */
-        log(message) {
-            this.utils.log(message);
-        }
-
-        /**
-         *
-         * @param {*} message
-         *
-         * log error message
-         */
-        logError(message) {
-            this.utils.logError(message);
         }
     },
 );
