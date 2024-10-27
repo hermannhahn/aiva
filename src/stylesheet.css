@@ -40,15 +40,12 @@
     color: black;
 }
 .chat-scroll-section {
-    max-width: 960px;
-    text-wrap: wrap;
-    overflow-y: auto;
-    word-wrap: break-word;
+    /* overflow-y: auto; */
     padding: 10px;
+    margin-top: 50px;
 }
 .chat-section {
-    /* overflow-y: auto; */
-    margin-top: 50px;
+    overflow-y: auto;
 }
 .google-gemini-icon {
     background-image: url('assets/icon_gemini.png');
