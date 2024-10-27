@@ -2,7 +2,6 @@ import St from 'gi://St';
 import GObject from 'gi://GObject';
 import Soup from 'gi://Soup';
 import GLib from 'gi://GLib';
-import Gio from 'gi://Gio';
 
 import {
     Extension,
