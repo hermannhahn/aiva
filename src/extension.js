@@ -407,9 +407,6 @@ const Aiva = GObject.registerClass(
                         // Enable searchEntry
                         this.ui.searchEntry.clutter_text.reactive = true;
 
-                        // Disable responseChat focus
-                        responseChat.label.clutter_text.reactive = false;
-
                         // Extract code and tts from response
                         let answer = this.utils.extractCodeAndTTS(aiResponse);
 
