@@ -112,55 +112,80 @@ const Aiva = GObject.registerClass(
          * init extension
          */
         _init(extension) {
+            /**
+             * init extension
+             */
             super._init(0.0, _('AIVA'));
-            this.keyLoopBind = 0;
+            log('Initing extension');
 
+            /**
+             * set/get extension props
+             */
             this.extension = extension;
             log('Extension loaded');
 
+            /**
+             * load settings
+             */
             this._loadSettings();
             log('Settings loaded');
 
+            /**
+             * chat history
+             */
             this.chatHistory = [];
+            log('New chat history created');
+
+            /**
+             * recursive talk
+             */
             this.recursiveHistory = [];
+
+            /**
+             * after tune
+             */
             this.afterTune = null;
 
-            // Recursive Talk
+            // Load history file if recursive talk is enabled
             if (this.userSettings.RECURSIVE_TALK) {
                 this.recursiveHistory = this.utils.loadHistoryFile();
-                log('History loaded');
+                log('Recursive talk history loaded.');
             }
 
-            // Tray
+            // Initialize app tray
             this.ui.tray.add_child(this.ui.icon);
             this.add_child(this.ui.tray);
-            log('Tray loaded');
+            log('App tray initialized.');
 
             // Add scroll to chat section
             this.ui.scrollView.add_child(this.ui.chatSection.actor);
+            log('Scroll bar loaded');
 
+            // If press enter on question input box
             this.ui.searchEntry.clutter_text.connect('activate', (actor) => {
                 const question = actor.text;
                 this.ui.searchEntry.clutter_text.set_text('');
                 this.ui.searchEntry.clutter_text.reactive = false;
                 this.chat(question);
             });
-            // Check if searchEntry has focus
+
+            // DEBUG
             this.ui.searchEntry.connect('button-press-event', () => {
                 this.ui.searchEntry.grab_key_focus();
             });
-
             this.ui.searchEntry.connect('key-focus-in', () => {
                 log('Text has gained focus');
             });
-
             this.ui.searchEntry.connect('key-focus-out', () => {
                 log('Text has lost focus');
             });
 
+            // If press mic button
             this.ui.micButton.connect('clicked', (_self) => {
                 this.audio.record();
             });
+
+            // If press clear button
             this.ui.clearButton.connect('clicked', (_self) => {
                 this.ui.searchEntry.clutter_text.set_text('');
                 this.chatHistory = [];
@@ -169,6 +194,8 @@ const Aiva = GObject.registerClass(
                 this.ui.scrollView.add_child(this.ui.chatSection.actor);
                 this.menu.box.add_child(this.ui.scrollView);
             });
+
+            // If press settings button
             this.ui.settingsButton.connect('clicked', (_self) => {
                 this.openSettings();
                 // Close App
@@ -193,6 +220,12 @@ const Aiva = GObject.registerClass(
             }
         }
 
+        /**
+         *
+         * @param {*} userQuestion
+         *
+         * send question to chat
+         */
         chat(userQuestion) {
             // Create chat items
             // Create input and response chat items
@@ -268,6 +301,15 @@ const Aiva = GObject.registerClass(
             //     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl id varius lacinia, lectus quam laoreet libero, at laoreet lectus lectus eu quam. Maecenas vitae lacus sit amet justo ultrices condimentum. Maecenas id dolor vitae quam semper blandit. Aenean sed sapien ut ante elementum bibendum. Sed euismod, nisl id varius lacinia, lectus quam laoreet libero, at laoreet lectus lectus eu quam. Maecenas vitae lacus sit amet justo ultrices condimentum. Maecenas id dolor vitae quam semper blandit. Aenean sed sapien ut ante elementum bibendum. Sed euismod, nisl id varius lacinia, lectus quam laoreet libero, at laoreet lectus lectus eu quam. Maecenas vitae lacus sit amet justo ultrices condimentum. Maecenas id dolor vitae quam semper blandit. Aenean sed sapien ut ante elementum bibendum. Sed euismod, nisl id varius lacinia, lectus quam laoreet libero, at laoreet lectus lectus eu quam. Maecenas vitae lacus sit amet justo ultrices condimentum. Maecenas id dolor vitae quam semper blandit. Aenean sed sapien ut ante elementum bibendum. Sed euismod, nisl id varius lacinia, lectus quam laoreet libero, at laoreet lectus lectus eu quam. Maecenas vitae lacus sit amet justo ultrices condimentum. Maecenas id dolor vitae quam semper blandit. Aenean sed sapien ut ante elementum bibendum. Sed euismod, nisl id varius lacinia, lectus quam laoreet libero, at laoreet lectus lectus eu quam. Maecenas vitae lacus sit amet justo ultrices condimentum. Maecenas id dolor vitae quam semper blandit. Aenean sed sapien ut ante elementum bibendum. Sed euismod, nisl id varius lacinia, lectus quam laoreet libero, at laoreet lectus lectus eu quam. Maecenas vitae lacus sit amet justo ultrices condimentum. Maecenas id dolor vitae quam semper blandit. Aenean sed sapien ut ante elementum bibendum. Sed euismod, nisl id varius la';
         }
 
+        /**
+         *
+         * @param {*} userQuestion
+         * @param {*} responseChat
+         * @param {*} copyButton
+         * @param {*} destroyLoop [default is false]
+         *
+         * get ai response for user question
+         */
         response(userQuestion, responseChat, copyButton, destroyLoop = false) {
             if (destroyLoop) {
                 this.destroyLoop();
@@ -425,10 +467,19 @@ const Aiva = GObject.registerClass(
             );
         }
 
+        /**
+         * scroll down
+         */
         _scrollToBottom() {
             this.utils.scrollToBottom(this.ui.responseChat, this.ui.scrollView);
         }
 
+        /**
+         *
+         * @returns string
+         *
+         * get tune string
+         */
         getTuneString() {
             const date = new Date();
             let driveTune = '';
@@ -440,6 +491,13 @@ const Aiva = GObject.registerClass(
        `;
         }
 
+        /**
+         *
+         * @param {*} input
+         * @returns string
+         *
+         * build body for request
+         */
         buildBody(input) {
             const stringfiedHistory = JSON.stringify([
                 ...this.recursiveHistory,
@@ -451,10 +509,16 @@ const Aiva = GObject.registerClass(
             return `{"contents":${stringfiedHistory}}`;
         }
 
+        /**
+         * open settings
+         */
         openSettings() {
             this.extension.openSettings();
         }
 
+        /**
+         * destroy loop
+         */
         destroyLoop() {
             if (this.afterTune) {
                 clearTimeout(this.afterTune);
@@ -462,11 +526,20 @@ const Aiva = GObject.registerClass(
             }
         }
 
+        /**
+         * destroy extension
+         */
         destroy() {
             this.destroyLoop();
             super.destroy();
         }
 
+        /**
+         *
+         * @param {*} cmd
+         *
+         * execute command
+         */
         executeCommand(cmd) {
             const command = cmd;
             const process = GLib.spawn_async(
@@ -484,7 +557,9 @@ const Aiva = GObject.registerClass(
             }
         }
 
-        // Remove all .wav file from /tmp folder
+        /**
+         * remove all .wav files from /tmp folder
+         */
         removeWavFiles() {
             log('Removing all .wav files from /tmp folder');
             const command = 'rm -rf /tmp/*gva*.wav';
@@ -501,257 +576,6 @@ const Aiva = GObject.registerClass(
             } else {
                 log('Error removing wav files.');
             }
-        }
-
-        // Play audio
-        playAudio(audiofile) {
-            if (!this.isPlaying) {
-                log('Playing audio: ' + audiofile);
-                // Process sync, not async
-                const process = GLib.spawn_async(
-                    null, // pasta de trabalho
-                    ['/bin/sh', '-c', `play ${audiofile}`], // comando e argumentos
-                    null, // opções
-                    GLib.SpawnFlags.SEARCH_PATH, // flags
-                    null, // PID
-                );
-                if (process) {
-                    this.playingPid = process.pid;
-                    this.isPlaying = true;
-                    log('Audio played successfully.');
-                } else {
-                    log('Error playing audio.');
-                }
-            } else {
-                log('Audio already playing.');
-                // Kill player pid
-                GLib.spawn_command_line_async('kill ' + this.playingPid);
-                this.isPlaying = false;
-                this.playAudio(audiofile);
-            }
-        }
-
-        // Função para iniciar a gravação
-        startRecording() {
-            if (this.isRecording) {
-                // Stop recording
-                this.stopRecording();
-                return;
-            }
-            // Definir o arquivo de saída no diretório da extensão
-            this.outputPath = 'gva_temp_audio_XXXXXX.wav';
-
-            // Pipeline GStreamer para capturar áudio do microfone e salvar como .wav
-            this.pipeline = new Gio.Subprocess({
-                argv: [
-                    'gst-launch-1.0',
-                    'pulsesrc',
-                    '!',
-                    'audioconvert',
-                    '!',
-                    'wavenc',
-                    '!',
-                    'filesink',
-                    `location=${this.outputPath}`,
-                ],
-                flags:
-                    Gio.SubprocessFlags.STDOUT_PIPE |
-                    Gio.SubprocessFlags.STDERR_PIPE,
-            });
-
-            this.pipeline.init(null);
-            this.isRecording = true;
-        }
-
-        stopRecording() {
-            if (!this.isRecording) {
-                return;
-            }
-
-            // Stop recording
-            this.pipeline.force_exit();
-
-            // Transcribe audio
-            this.transcribeAudio(this.outputPath);
-
-            //
-            this.isRecording = false;
-        }
-
-        // Função para transcrever o áudio gravado usando Microsoft Speech-to-Text API
-        transcribeAudio(audioPath) {
-            // Carregar o arquivo de áudio em formato binário
-            let file = Gio.File.new_for_path(audioPath);
-            let [, audioBinary] = file.load_contents(null);
-
-            if (!audioBinary) {
-                log('Falha ao carregar o arquivo de áudio.');
-                return;
-            }
-
-            // Requisição à API do Microsoft Speech-to-Text
-            const apiUrl = `https://${this.userSettings.AZURE_SPEECH_REGION}.stt.speech.microsoft.com/speech/recognition/conversation/cognitiveservices/v1?language=${this.userSettings.AZURE_SPEECH_LANGUAGE}`;
-
-            // Headers necessários para a requisição
-            const headers = [
-                'Content-Type: audio/wav', // O arquivo será enviado em formato .wav
-                'Ocp-Apim-Subscription-Key: ' +
-                    this.userSettings.AZURE_SPEECH_KEY, // Chave de autenticação
-                'Accept: application/json', // A resposta será em JSON
-            ];
-
-            // Criar um arquivo temporário para armazenar o áudio binário (opcional)
-            const [success, tempFilePath] = GLib.file_open_tmp(
-                'gva_azure_att_audio_XXXXXX.wav',
-            );
-            if (!success) {
-                log('Error creating temporary audio file.');
-                return;
-            }
-
-            // Escrever o áudio binário no arquivo temporário
-            try {
-                GLib.file_set_contents(tempFilePath, audioBinary);
-            } catch (e) {
-                log('Erro ao escrever no arquivo temporário: ' + e.message);
-                return;
-            }
-
-            // Usa subprocesso para enviar requisição HTTP com curl, lendo o áudio do arquivo
-            let subprocess = new Gio.Subprocess({
-                argv: [
-                    'curl',
-                    '-X',
-                    'POST',
-                    '-H',
-                    headers[0], // Content-Type
-                    '-H',
-                    headers[1], // Ocp-Apim-Subscription-Key
-                    '-H',
-                    headers[2], // Accept
-                    '--data-binary',
-                    '@' + tempFilePath, // Enviar o arquivo de áudio binário
-                    apiUrl,
-                ],
-                flags:
-                    Gio.SubprocessFlags.STDOUT_PIPE |
-                    Gio.SubprocessFlags.STDERR_PIPE,
-            });
-
-            subprocess.init(null);
-
-            // Captura a resposta da API
-            subprocess.communicate_utf8_async(null, null, (proc, res) => {
-                try {
-                    let [ok, stdout, stderr] =
-                        proc.communicate_utf8_finish(res);
-                    if (ok && stdout) {
-                        log('Resposta da API: ' + stdout);
-                        let response = JSON.parse(stdout);
-
-                        if (response && response.DisplayText) {
-                            let transcription = response.DisplayText;
-                            log('Transcrição: ' + transcription);
-                            this.aiResponse(transcription); // Função para processar a resposta da transcrição
-                        } else {
-                            log('Nenhuma transcrição encontrada.');
-                        }
-                    } else {
-                        log('Erro na requisição: ' + stderr);
-                    }
-                } catch (e) {
-                    log('Erro ao processar resposta: ' + e.message);
-                } finally {
-                    // Remove all temp files
-                    GLib.unlink(audioPath);
-                    GLib.unlink(tempFilePath);
-                    this.utils.removeWavFiles();
-                }
-            });
-        }
-
-        // Função para converter texto em áudio usando Microsoft Text-to-Speech API
-        textToSpeech(text) {
-            const apiUrl = `https://${this.userSettings.AZURE_SPEECH_REGION}.tts.speech.microsoft.com/cognitiveservices/v1`;
-
-            // Headers para a requisição
-            const headers = [
-                'Content-Type: application/ssml+xml', // O conteúdo será enviado em formato SSML
-                'X-Microsoft-OutputFormat: riff-24khz-16bit-mono-pcm', // Especifica o formato do áudio
-                'Ocp-Apim-Subscription-Key: ' +
-                    this.userSettings.AZURE_SPEECH_KEY, // Chave da API da Azure
-            ];
-
-            // Estrutura SSML (Speech Synthesis Markup Language) para definir o texto e a voz
-            const ssml = `
-        <speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xml:lang='${this.userSettings.AZURE_SPEECH_LANGUAGE}'>
-            <voice name='${this.userSettings.AZURE_SPEECH_VOICE}'>${text}</voice>
-        </speak>
-    `;
-
-            // Criar um arquivo temporário para salvar o áudio gerado
-            const [success, tempFilePath] = GLib.file_open_tmp(
-                'gva_azure_tts_audio_XXXXXX.wav',
-            );
-            if (!success) {
-                log('Error creating temporary audio file.');
-                return;
-            }
-
-            // Escrever o SSML no arquivo temporário
-            try {
-                GLib.file_set_contents(tempFilePath, ssml);
-            } catch (e) {
-                log('Error writing to temporary audio file: ' + e.message);
-                return;
-            }
-
-            // Usa subprocesso para enviar requisição HTTP com curl, e salvar a resposta (áudio) em um arquivo
-            let subprocess = new Gio.Subprocess({
-                argv: [
-                    'curl',
-                    '-X',
-                    'POST',
-                    '-H',
-                    headers[0], // Content-Type
-                    '-H',
-                    headers[1], // X-Microsoft-OutputFormat
-                    '-H',
-                    headers[2], // Ocp-Apim-Subscription-Key
-                    '--data',
-                    ssml, // Dados a serem enviados (SSML)
-                    '--output',
-                    tempFilePath, // Salva o áudio gerado no arquivo temporário
-                    apiUrl,
-                ],
-                flags:
-                    Gio.SubprocessFlags.STDOUT_PIPE |
-                    Gio.SubprocessFlags.STDERR_PIPE,
-            });
-
-            subprocess.init(null);
-
-            // Captura o status da requisição
-            subprocess.communicate_utf8_async(null, null, (proc, res) => {
-                try {
-                    // eslint-disable-next-line no-unused-vars
-                    let [ok, stdout, stderr] =
-                        proc.communicate_utf8_finish(res);
-                    if (ok) {
-                        log('Audio file saved to: ' + tempFilePath);
-
-                        // Tocar o áudio gerado
-                        this.playAudio(tempFilePath);
-                    } else {
-                        log('Requisition error: ' + stderr);
-                    }
-                } catch (e) {
-                    log('Error processing response: ' + e.message);
-                } finally {
-                    // Limpeza: pode optar por remover o arquivo temporário após tocar o áudio, se necessário
-                    // GLib.unlink(tempFilePath);
-                }
-            });
         }
     },
 );
