@@ -50,7 +50,7 @@ const Aiva = GObject.registerClass(
             log('Settings loaded');
 
             /**
-             * @description set/get user settings
+             * @description set/get user settings [GEMINI_API_KEY, AZURE_SPEECH_KEY, AZURE_SPEECH_REGION, AZURE_SPEECH_LANGUAGE, AZURE_SPEECH_VOICE, RECURSIVE_TALK, USERNAME, LOCATION, EXT_DIR, HISTORY_FILE]
              */
             this.userSettings = {};
             this.userSettings.GEMINI_API_KEY =
