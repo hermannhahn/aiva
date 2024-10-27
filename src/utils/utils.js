@@ -224,7 +224,6 @@ export class Utils {
                     ],
                 });
                 // Save history.json
-                this.saveHistory();
                 return history;
             } catch (e) {
                 logError(
