@@ -89,6 +89,9 @@ const Aiva = GObject.registerClass(
              */
             this.azure = new MicrosoftAzure(this);
 
+            /**
+             * @description create audio instance
+             */
             this.audio = new Audio(this);
         }
 
