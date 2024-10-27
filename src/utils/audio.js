@@ -5,7 +5,9 @@ import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js'
 
 export class Audio {
     constructor(app) {
-        // Global variables
+        /**
+         * @description set/get app props
+         */
         this.app = app;
         this.log = app.utils.log;
 
@@ -17,7 +19,6 @@ export class Audio {
         this.playingPid = 0;
         this.pipeline = null;
         this.questionPath = null;
-        this.log('Audio loaded');
     }
 
     // Play audio
