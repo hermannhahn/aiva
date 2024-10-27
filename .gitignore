@@ -11,7 +11,7 @@ build/
 
 # Node.js dependências (caso esteja usando npm ou yarn)
 node_modules/
-#package-lock.json
+package-lock.json
 yarn.lock
 
 # Arquivos de configuração do editor de texto
