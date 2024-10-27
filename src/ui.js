@@ -58,7 +58,7 @@ export class AppLayout {
             x_expand: true,
             y_expand: true,
             reactive: true,
-            can_focus: false,
+            can_focus: true,
         });
 
         // Create scrollbar
