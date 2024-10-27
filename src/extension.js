@@ -17,6 +17,10 @@ import {AppLayout} from './ui.js';
 import {MicrosoftAzure} from './ai/azure.js';
 import {Audio} from './utils/audio.js';
 
+// Utils
+const utils = new Utils();
+const log = utils.log;
+
 const Aiva = GObject.registerClass(
     class Aiva extends PanelMenu.Button {
         /**
@@ -39,8 +43,7 @@ const Aiva = GObject.registerClass(
             /**
              * @description utility functions [log, logError...]
              */
-            this.utils = new Utils(this);
-            const log = this.utils.log;
+            this.utils = utils;
             log('Utils loaded');
 
             /**
