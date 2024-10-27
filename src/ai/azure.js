@@ -9,7 +9,6 @@ export class MicrosoftAzure {
          * set/get app props
          */
         this.app = app;
-        this.log = app.utils.log;
 
         /**
          * get azure api settings
@@ -58,7 +57,7 @@ export class MicrosoftAzure {
             'gva_azure_tts_audio_XXXXXX.wav',
         );
         if (!success) {
-            this.app.utils.log('Error creating temporary audio file.');
+            this.app.log('Error creating temporary audio file.');
             return;
         }
 
@@ -67,11 +66,9 @@ export class MicrosoftAzure {
          */
         try {
             GLib.file_set_contents(tempFilePath, ssml);
-            this.app.utils.log('SSML written to temporary audio file.');
+            this.app.log('SSML written to temporary audio file.');
         } catch (e) {
-            this.app.utils.log(
-                'Error writing to temporary audio file: ' + e.message,
-            );
+            this.app.log('Error writing to temporary audio file: ' + e.message);
             return;
         }
 
@@ -106,14 +103,14 @@ export class MicrosoftAzure {
                 let [success, stdout, stderr] =
                     proc.communicate_utf8_finish(res);
                 if (success) {
-                    this.app.utils.log('Audio file saved to: ' + tempFilePath);
+                    this.app.log('Audio file saved to: ' + tempFilePath);
                     // Play audio
                     this.app.audio.play(tempFilePath);
                 } else {
-                    this.app.utils.log('Requisition error: ' + stderr);
+                    this.app.log('Requisition error: ' + stderr);
                 }
             } catch (e) {
-                this.app.utils.log('Error processing response: ' + e.message);
+                this.app.log('Error processing response: ' + e.message);
             } finally {
                 // GLib.unlink(tempFilePath);
             }
@@ -137,7 +134,7 @@ export class MicrosoftAzure {
          */
         let [, audioBinary] = file.load_contents(null);
         if (!audioBinary) {
-            this.app.utils.log('Falha ao carregar o arquivo de áudio.');
+            this.app.log('Falha ao carregar o arquivo de áudio.');
             return;
         }
 
@@ -162,7 +159,7 @@ export class MicrosoftAzure {
             'gva_azure_att_audio_XXXXXX.wav',
         );
         if (!success) {
-            this.app.utils.log('Error creating temporary audio file.');
+            this.app.log('Error creating temporary audio file.');
             return;
         }
 
@@ -172,7 +169,7 @@ export class MicrosoftAzure {
         try {
             GLib.file_set_contents(tempFilePath, audioBinary);
         } catch (e) {
-            this.app.utils.log(
+            this.app.log(
                 'Erro ao escrever no arquivo temporário: ' + e.message,
             );
             return;
@@ -207,23 +204,23 @@ export class MicrosoftAzure {
             try {
                 let [ok, stdout, stderr] = proc.communicate_utf8_finish(res);
                 if (ok && stdout) {
-                    this.app.utils.log('Resposta da API: ' + stdout);
+                    this.app.log('Resposta da API: ' + stdout);
                     let response = JSON.parse(stdout);
 
                     if (response && response.DisplayText) {
                         let transcription = response.DisplayText;
-                        this.app.utils.log('Transcrição: ' + transcription);
+                        this.app.log('Transcrição: ' + transcription);
                         this.app.chat(transcription);
                     } else {
-                        this.app.utils.log('Nenhuma transcrição encontrada.');
+                        this.app.log('Nenhuma transcrição encontrada.');
                         this.app.chat('Transcribe error.');
                     }
                 } else {
-                    this.app.utils.log('Erro na requisição: ' + stderr);
+                    this.app.log('Erro na requisição: ' + stderr);
                     this.app.chat(stderr);
                 }
             } catch (e) {
-                this.app.utils.log('Erro ao processar resposta: ' + e.message);
+                this.app.log('Erro ao processar resposta: ' + e.message);
                 this.app.chat(e.message);
             }
         });
