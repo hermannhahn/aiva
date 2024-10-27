@@ -1,13 +1,51 @@
+# Diretório de build e arquivos temporários
+build/
+*.log
+*.swp
+*.bak
+
+# Arquivos específicos de extensões GNOME
+*.lock
+*.local
+*.installed
+
+# Node.js dependências (caso esteja usando npm ou yarn)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Arquivos de configuração do editor de texto
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos gerados pelo compilador de schema (glib-compile-schemas)
+schemas/*.compiled
+
+# Arquivos de pacotes (caso utilize gnome-extensions pack)
+*.zip
+
+# Arquivos temporários ou específicos de deploy
+*.tar.gz
+*.deb
+*.rpm
+
+# Dependências Python (caso seu projeto tenha scripts Python)
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Others
 *.gresource*
 *.shell-extension/
-*.zip
-*~
 dist/
 gschemas.compiled
 locale/
-node_modules/
-last_answer.wav
-lastAnswer.wav
-lastQuestion.wav
-memory.db
+*.wav
+*.db
 .gitconfig
