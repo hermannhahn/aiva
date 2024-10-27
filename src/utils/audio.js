@@ -6,13 +6,13 @@ import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js'
 export class Audio {
     constructor(app) {
         /**
-         * @description set/get app props
+         * set/get app props
          */
         this.app = app;
         this.log = app.utils.log;
 
         /**
-         * @description set/get player props
+         * set/get player props
          */
         this.isPlaying = false;
         this.isRecording = false;
