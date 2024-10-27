@@ -36,12 +36,6 @@ const Aiva = GObject.registerClass(
          */
         _fetchSettings() {
             /**
-             * utility functions [log, logError...]
-             */
-            this.utils = new Utils(this);
-            this.log('Utils loaded');
-
-            /**
              * get extension settings
              */
             const {settings} = this.extension;
@@ -107,6 +101,10 @@ const Aiva = GObject.registerClass(
          * init extension
          */
         _init(extension) {
+            // utility functions
+            this.utils = new Utils(this);
+            this.log('Utils loaded');
+
             // Init extension
             super._init(0.0, _('AIVA'));
             this.log('Initing extension');
