@@ -7,12 +7,10 @@ export class MicrosoftAzure {
     constructor(app) {
         this.app = app;
         this.log = app.utils.log;
-
         this.AZURE_SPEECH_KEY = app.AZURE_SPEECH_KEY;
         this.AZURE_SPEECH_REGION = app.AZURE_SPEECH_REGION;
         this.AZURE_SPEECH_LANGUAGE = app.AZURE_SPEECH_LANGUAGE;
         this.AZURE_SPEECH_VOICE = app.AZURE_SPEECH_VOICE;
-        this.app.utils.log('Microsoft Azure API loaded');
     }
 
     // Função para converter texto em áudio usando Microsoft Text-to-Speech API
