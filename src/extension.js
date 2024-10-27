@@ -38,9 +38,8 @@ const Aiva = GObject.registerClass(
             /**
              * utility functions [log, logError...]
              */
-            const utils = new Utils(this);
-            this.utils = utils;
-            this.log = utils.log;
+            this.utils = new Utils(this);
+            this.log = this.utils.log;
             this.log('Utils loaded');
 
             /**
