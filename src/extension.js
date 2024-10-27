@@ -24,7 +24,7 @@ const log = utils.log;
 const Aiva = GObject.registerClass(
     class Aiva extends PanelMenu.Button {
         /**
-         * @description load settings
+         * load settings
          */
         _loadSettings() {
             this._settingsChangedId = this.extension.settings.connect(
@@ -37,23 +37,23 @@ const Aiva = GObject.registerClass(
         }
 
         /**
-         * @description fetch settings
+         * fetch settings
          */
         _fetchSettings() {
             /**
-             * @description utility functions [log, logError...]
+             * utility functions [log, logError...]
              */
             this.utils = utils;
             log('Utils loaded');
 
             /**
-             * @description get extension settings
+             * get extension settings
              */
             const {settings} = this.extension;
             log('Settings loaded');
 
             /**
-             * @description set/get user settings [GEMINI_API_KEY, AZURE_SPEECH_KEY, AZURE_SPEECH_REGION, AZURE_SPEECH_LANGUAGE, AZURE_SPEECH_VOICE, RECURSIVE_TALK, USERNAME, LOCATION, EXT_DIR, HISTORY_FILE]
+             * set/get user settings [GEMINI_API_KEY, AZURE_SPEECH_KEY, AZURE_SPEECH_REGION, AZURE_SPEECH_LANGUAGE, AZURE_SPEECH_VOICE, RECURSIVE_TALK, USERNAME, LOCATION, EXT_DIR, HISTORY_FILE]
              */
             this.userSettings = {};
             this.userSettings.GEMINI_API_KEY =
@@ -87,19 +87,19 @@ const Aiva = GObject.registerClass(
             log('User settings loaded');
 
             /**
-             * @description get ui layouts  [tray, icon, item, searchEntry, micButton, clearButton, settingsButton, chatSection, scrollView, inputChat, responseChat, copyButton, newSeparator]
+             * get ui layouts  [tray, icon, item, searchEntry, micButton, clearButton, settingsButton, chatSection, scrollView, inputChat, responseChat, copyButton, newSeparator]
              */
             this.ui = new AppLayout();
             log('UI layouts loaded');
 
             /**
-             * @description Azure API [tts, transcribe]
+             * Azure API [tts, transcribe]
              */
             this.azure = new MicrosoftAzure(this);
             log('Azure API loaded');
 
             /**
-             * @description create audio instance
+             * create audio instance
              */
             this.audio = new Audio(this);
             log('Audio loaded');
@@ -109,7 +109,7 @@ const Aiva = GObject.registerClass(
          *
          * @param {*} extension
          *
-         * @description init extension
+         * init extension
          */
         _init(extension) {
             super._init(0.0, _('AIVA'));
