@@ -204,7 +204,7 @@ export class Utils {
                 this.log(
                     `History file created. : ${this.app.userSettings.HISTORY_FILE}`,
                 );
-                this.app.recursiveHistory.push({
+                this.app.chatHistory.push({
                     role: 'user',
                     parts: [
                         {
@@ -212,7 +212,7 @@ export class Utils {
                         },
                     ],
                 });
-                this.app.recursiveHistory.push({
+                this.app.chatHistory.push({
                     role: 'model',
                     parts: [
                         {
@@ -223,7 +223,7 @@ export class Utils {
                     ],
                 });
                 // Save history.json
-                return this.app.recursiveHistory;
+                return this.app.chatHistory;
             } catch (e) {
                 logError(
                     e,
