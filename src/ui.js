@@ -25,7 +25,7 @@ export class AppLayout {
         this.searchEntry = new St.Entry({
             name: 'aiEntry',
             style_class: 'ai-entry',
-            can_focus: false,
+            can_focus: true,
             hint_text: _('Ask me anything...'),
             x_expand: true,
             y_expand: true,
@@ -58,7 +58,7 @@ export class AppLayout {
             x_expand: true,
             y_expand: true,
             reactive: true,
-            can_focus: true,
+            can_focus: false,
         });
 
         // Create scrollbar
