@@ -8,7 +8,6 @@ import {convertMD} from './md2pango.js';
 export class Utils {
     constructor(app) {
         this.app = app;
-        console.log('Utils loaded');
     }
 
     /**
