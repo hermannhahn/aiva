@@ -561,10 +561,22 @@ const Aiva = GObject.registerClass(
             }
         }
 
+        /**
+         *
+         * @param {*} message
+         *
+         * log message
+         */
         log(message) {
             this.utils.log(message);
         }
 
+        /**
+         *
+         * @param {*} message
+         *
+         * log error message
+         */
         logError(message) {
             this.utils.logError(message);
         }
