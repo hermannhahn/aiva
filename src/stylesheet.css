@@ -49,7 +49,7 @@
 .chat-section {
     max-width: 960px;
     text-wrap: wrap;
-    overflow-y: auto;
+    /* overflow-y: auto; */
     word-wrap: break-word;
     padding-top: 30px;
 }
