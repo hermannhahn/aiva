@@ -76,13 +76,13 @@ export class AppLayout {
             style_class: 'input-chat',
             reactive: true,
             can_focus: false,
-            hover: true,
+            hover: false,
         });
         this.responseChat = new PopupMenu.PopupMenuItem('', {
             style_class: 'response-chat',
             reactive: true,
             can_focus: false,
-            hover: true,
+            hover: false,
         });
 
         // Create copy button
