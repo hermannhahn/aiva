@@ -5,6 +5,9 @@
     border-radius: 100px;
     text-wrap: wrap;
 }
+.menu {
+    color: aliceblue;
+}
 .menu-box {
     display: flex;
     flex-direction: column;
