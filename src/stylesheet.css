@@ -6,6 +6,7 @@
     text-wrap: wrap;
 }
 .app-item {
+    height: 100px;
     z-index: 1; /* Para garantir que o container fixo fique acima */
 }
 .items-container {
