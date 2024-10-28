@@ -154,7 +154,6 @@ const Aiva = GObject.registerClass(
 
             // Add scroll to chat section
             this.ui.scrollView.add_child(this.ui.chatSection.actor);
-            this.log('Scroll bar loaded');
 
             // If press enter on question input box
             this.ui.searchEntry.clutter_text.connect('activate', (actor) => {
