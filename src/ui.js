@@ -17,51 +17,48 @@ export class AppLayout {
 
         // Create app item section
         this.item = new PopupMenu.PopupBaseMenuItem({
+            style_class: 'app-item',
             reactive: false,
             can_focus: false,
-            style_class: 'app-item',
         });
 
         // Create search entry
         this.searchEntry = new St.Entry({
             name: 'searchEntry',
             style_class: 'searchEntry',
+            hint_text: _('Ask me anything...'),
             reactive: true,
             can_focus: false,
-            hint_text: _('Ask me anything...'),
-            // x_expand: true,
-            // y_expand: true,
+            x_expand: true,
         });
 
         // Create voice activation button
         this.micButton = new St.Button({
+            style_class: 'mic-icon',
             can_focus: false,
             toggle_mode: true,
-            style_class: 'mic-icon',
         });
 
         // Create clear history button
         this.clearButton = new St.Button({
+            style_class: 'trash-icon',
             can_focus: false,
             toggle_mode: true,
-            style_class: 'trash-icon',
         });
 
         // Create settings button
         this.settingsButton = new St.Button({
+            style_class: 'settings-icon',
             can_focus: false,
             toggle_mode: true,
-            style_class: 'settings-icon',
         });
 
         // Create chat section
         this.chatSection = new PopupMenu.PopupMenuSection({
             style_class: 'chat-section',
             reactive: true,
-            can_focus: true,
-            can_focus_in_child: true,
-            // x_expand: true,
-            // y_expand: true,
+            can_focus: false,
+            can_focus_in_child: false,
         });
 
         // Create scrollbar
@@ -76,13 +73,13 @@ export class AppLayout {
             style_class: 'input-chat',
             reactive: true,
             can_focus: false,
-            hover: false,
+            hover: true,
         });
         this.responseChat = new PopupMenu.PopupMenuItem('', {
             style_class: 'response-chat',
             reactive: true,
             can_focus: false,
-            hover: false,
+            hover: true,
         });
 
         // Create copy button
@@ -90,7 +87,7 @@ export class AppLayout {
             style_class: 'copy-icon',
             reactive: true,
             can_focus: false,
-            hover: false,
+            hover: true,
         });
 
         // Separator
