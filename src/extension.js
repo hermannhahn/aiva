@@ -141,7 +141,7 @@ const Aiva = GObject.registerClass(
             this.log('App tray initialized.');
 
             // Add items to menu
-            this.ui.menu.addMenuItem(this.ui.item);
+            this.menu.addMenuItem(this.ui.item);
 
             // Add search entry, mic button, clear button and settings button to menu
             this.ui.item.add_child(this.ui.searchEntry);
@@ -150,7 +150,7 @@ const Aiva = GObject.registerClass(
             this.ui.item.add_child(this.ui.settingsButton);
 
             // Add scroll view to menu
-            this.ui.menu.add_child(this.ui.scrollView);
+            this.menu.add_child(this.ui.scrollView);
 
             // Add scroll to chat section
             this.ui.scrollView.add_child(this.ui.chatSection.actor);
