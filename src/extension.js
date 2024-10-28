@@ -301,7 +301,7 @@ const Aiva = GObject.registerClass(
             }
 
             // Scroll down
-            this._scrollToBottom();
+            this.utils.scrollToBottom();
 
             // Create http session
             let _httpSession = new Soup.Session();
@@ -328,7 +328,7 @@ const Aiva = GObject.registerClass(
                             response,
                         );
                         // Scroll down
-                        this._scrollToBottom();
+                        this.utils.scrollToBottom();
                         // Enable searchEntry
                         this.ui.searchEntry.clutter_text.reactive = true;
                         return;
@@ -383,7 +383,7 @@ const Aiva = GObject.registerClass(
                                 );
 
                                 // Scroll down
-                                this._scrollToBottom();
+                                this.utils.scrollToBottom();
                                 // Enable searchEntry
                                 this.ui.searchEntry.clutter_text.reactive = true;
                                 return;
@@ -408,7 +408,7 @@ const Aiva = GObject.registerClass(
                         }
 
                         // Scroll down
-                        this._scrollToBottom();
+                        this.utils.scrollToBottom();
 
                         // Enable searchEntry
                         this.ui.searchEntry.clutter_text.reactive = true;
@@ -448,17 +448,10 @@ const Aiva = GObject.registerClass(
                         }
 
                         // Scroll down
-                        this._scrollToBottom();
+                        this.utils.scrollToBottom();
                     }
                 },
             );
-        }
-
-        /**
-         * scroll down
-         */
-        _scrollToBottom() {
-            this.utils.scrollToBottom(this.responseChat, this.ui.scrollView);
         }
 
         /**
