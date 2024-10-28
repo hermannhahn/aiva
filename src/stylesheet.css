@@ -5,6 +5,9 @@
     border-radius: 100px;
     text-wrap: wrap;
 }
+.app-item {
+    z-index: 1; /* Para garantir que o container fixo fique acima */
+}
 .items-container {
     /* Ajuste de acordo com o layout desejado */
     z-index: 2; /* Para garantir que o container fixo fique acima */
