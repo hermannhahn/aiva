@@ -215,7 +215,7 @@ const Aiva = GObject.registerClass(
                 style_class: 'input-chat',
                 reactive: true,
                 can_focus: false,
-                hover: true,
+                hover: false,
             });
             this.ui.inputChat = inputChat;
 
@@ -224,7 +224,7 @@ const Aiva = GObject.registerClass(
                 style_class: 'response-chat',
                 reactive: true,
                 can_focus: false,
-                hover: true,
+                hover: false,
             });
             this.ui.responseChat = responseChat;
 
