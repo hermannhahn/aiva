@@ -28,8 +28,6 @@
     justify-content: center;
     position: relative;
     z-index: 1;
-    max-height: 750px;
-    overflow-y: scroll;
     border-radius: 10px;
 }
 .menu-box::selection {
@@ -78,6 +76,9 @@
     word-wrap: break-word;
     z-index: 1000;
     position: relative;
+    max-height: 750px;
+    margin-top: 200px;
+    overflow-y: auto;
 }
 .chat-section::selection {
     color: black;
