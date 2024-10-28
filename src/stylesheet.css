@@ -15,12 +15,6 @@
     align-items: center;
     justify-content: center;
 }
-.m-w-100 {
-    max-width: 960px;
-    text-wrap: wrap;
-    overflow-y: auto;
-    word-wrap: break-word;
-}
 .response-chat {
     color: rgb(243, 232, 212);
     max-width: 960px;
