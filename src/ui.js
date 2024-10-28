@@ -27,6 +27,7 @@ export class AppLayout {
             style_class: 'ai-entry',
             reactive: true,
             can_focus: true,
+            hover: true,
             hint_text: _('Ask me anything...'),
             x_expand: true,
             y_expand: true,
