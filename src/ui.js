@@ -35,21 +35,24 @@ export class AppLayout {
 
         // Create voice activation button
         this.micButton = new St.Button({
-            can_focus: false,
+            can_focus: true,
+            reactive: true,
             toggle_mode: true,
             style_class: 'mic-icon',
         });
 
         // Create clear history button
         this.clearButton = new St.Button({
-            can_focus: false,
+            can_focus: true,
+            reactive: true,
             toggle_mode: true,
             style_class: 'trash-icon',
         });
 
         // Create settings button
         this.settingsButton = new St.Button({
-            can_focus: false,
+            can_focus: true,
+            reactive: true,
             toggle_mode: true,
             style_class: 'settings-icon',
         });
@@ -75,13 +78,13 @@ export class AppLayout {
             style_class: 'input-chat',
             reactive: true,
             can_focus: false,
-            hover: false,
+            hover: true,
         });
         this.responseChat = new PopupMenu.PopupMenuItem('', {
             style_class: 'response-chat',
             reactive: true,
             can_focus: false,
-            hover: false,
+            hover: true,
         });
 
         // Create copy button
@@ -89,7 +92,7 @@ export class AppLayout {
             style_class: 'copy-icon',
             reactive: true,
             can_focus: false,
-            hover: false,
+            hover: true,
         });
 
         // Separator
