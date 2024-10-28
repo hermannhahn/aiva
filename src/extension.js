@@ -136,9 +136,21 @@ const Aiva = GObject.registerClass(
             }
 
             // Initialize app tray
-            this.ui.tray.add_child(this.ui.icon);
             this.add_child(this.ui.tray);
+            this.ui.tray.add_child(this.ui.icon);
             this.log('App tray initialized.');
+
+            // Add items to menu
+            this.menu.addMenuItem(this.ui.item);
+
+            // Add search entry, mic button, clear button and settings button to menu
+            this.ui.item.add_child(this.ui.searchEntry);
+            this.ui.item.add_child(this.ui.micButton);
+            this.ui.item.add_child(this.ui.clearButton);
+            this.ui.item.add_child(this.ui.settingsButton);
+
+            // Add scroll view to menu
+            this.ui.item.add_child(this.ui.scrollView);
 
             // Add scroll to chat section
             this.ui.scrollView.add_child(this.ui.chatSection.actor);
@@ -184,18 +196,6 @@ const Aiva = GObject.registerClass(
                 // Close App
                 this.menu.close();
             });
-
-            // Add search entry, mic button, clear button and settings button to menu
-            this.ui.item.add_child(this.ui.searchEntry);
-            this.ui.item.add_child(this.ui.micButton);
-            this.ui.item.add_child(this.ui.clearButton);
-            this.ui.item.add_child(this.ui.settingsButton);
-
-            // Add items to app
-            this.menu.addMenuItem(this.ui.item);
-
-            // Add chat section to app
-            this.menu.box.add_child(this.ui.scrollView);
 
             // Open settings if gemini api key is not configured
             if (this.userSettings.GEMINI_API_KEY === '') {
