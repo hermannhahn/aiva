@@ -7,8 +7,11 @@
 }
 .app-item {
     height: 50px;
-    z-index: 1;
+    z-index: 2;
     position: relative; /* Para garantir que o container fixo fique acima */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .menu-box {
     color: aliceblue;
@@ -18,7 +21,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    z-index: 2;
+    z-index: 1;
 }
 .response-chat {
     color: rgb(243, 232, 212);
@@ -29,7 +32,7 @@
     user-select: text;
     /* Para garantir que o texto fique abaixo */
     position: relative;
-    z-index: 2;
+    z-index: 1;
 }
 .response-chat:hover {
     background-color: rgb(42, 42, 42);
