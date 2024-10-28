@@ -17,7 +17,7 @@ export class AppLayout {
 
         // Menu
         this.menu = new PopupMenu.PopupMenu({
-            style_class: 'panel-status-menu-box',
+            style_class: 'menu-box',
         });
 
         // Create app item section
