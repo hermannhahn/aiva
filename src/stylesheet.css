@@ -31,7 +31,6 @@
 }
 .response-chat {
     color: rgb(243, 232, 212);
-    max-width: 960px;
     text-wrap: wrap;
     word-wrap: break-word;
     cursor: text;
@@ -49,7 +48,6 @@
 }
 .input-chat {
     color: rgb(243, 232, 212);
-    max-width: 960px;
     text-wrap: wrap;
     text-align: justify;
     word-wrap: break-word;
@@ -72,7 +70,8 @@
     color: black;
     text-wrap: wrap;
     word-wrap: break-word;
-    margin-top: 300px;
+    z-index: 1000;
+    position: relative;
 }
 .chat-section::selection {
     color: black;
