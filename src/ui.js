@@ -29,28 +29,26 @@ export class AppLayout {
             style_class: 'searchEntry',
             hint_text: _('Ask me anything...'),
             reactive: true,
-            can_focus: false,
+            can_focus: true,
+            hover: false,
             x_expand: true,
         });
 
         // Create voice activation button
         this.micButton = new St.Button({
             style_class: 'mic-icon',
-            can_focus: false,
             toggle_mode: true,
         });
 
         // Create clear history button
         this.clearButton = new St.Button({
             style_class: 'trash-icon',
-            can_focus: false,
             toggle_mode: true,
         });
 
         // Create settings button
         this.settingsButton = new St.Button({
             style_class: 'settings-icon',
-            can_focus: false,
             toggle_mode: true,
         });
 
