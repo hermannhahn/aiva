@@ -150,7 +150,7 @@ const Aiva = GObject.registerClass(
             this.ui.item.add_child(this.ui.settingsButton);
 
             // Add scroll view to menu
-            this.menu.add_child(this.ui.scrollView);
+            this.menu.box.add_child(this.ui.scrollView);
 
             // Add scroll to chat section
             this.ui.scrollView.add_child(this.ui.chatSection.actor);
