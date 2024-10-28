@@ -18,7 +18,7 @@ export class AppLayout {
         // Create app item section
         this.item = new PopupMenu.PopupBaseMenuItem({
             reactive: false,
-            can_focus: false,
+            can_focus: true,
             style_class: 'app-item',
         });
 
@@ -28,7 +28,6 @@ export class AppLayout {
             style_class: 'searchEntry',
             reactive: true,
             can_focus: true,
-            hover: true,
             hint_text: _('Ask me anything...'),
             x_expand: true,
             y_expand: true,
@@ -69,6 +68,7 @@ export class AppLayout {
             style_class: 'chat-scroll-section',
             reactive: true,
             overlay_scrollbars: false,
+            can_focus: false,
         });
 
         // Create input and response chat items
@@ -76,7 +76,7 @@ export class AppLayout {
             style_class: 'input-chat',
             reactive: true,
             can_focus: false,
-            hover: true,
+            hover: false,
         });
         this.responseChat = new PopupMenu.PopupMenuItem('', {
             style_class: 'response-chat',
