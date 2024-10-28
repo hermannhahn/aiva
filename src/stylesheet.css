@@ -5,6 +5,10 @@
     border-radius: 100px;
     text-wrap: wrap;
 }
+.items-container {
+    /* Ajuste de acordo com o layout desejado */
+    z-index: 2; /* Para garantir que o container fixo fique acima */
+}
 .menu-box {
     color: aliceblue;
     background-color: rgb(42, 42, 42);
