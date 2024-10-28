@@ -141,7 +141,7 @@ const Aiva = GObject.registerClass(
             this.log('App tray initialized.');
 
             // Add items to menu
-            this.menu.addMenuItem(this.ui.item);
+            this.ui.menu.addMenuItem(this.ui.item);
 
             // Add search entry, mic button, clear button and settings button to menu
             this.ui.item.add_child(this.ui.searchEntry);
@@ -184,17 +184,17 @@ const Aiva = GObject.registerClass(
             this.ui.clearButton.connect('clicked', (_self) => {
                 this.ui.searchEntry.clutter_text.set_text('');
                 this.chatHistory = [];
-                this.menu.box.remove_child(this.ui.scrollView);
+                this.ui.menu.box.remove_child(this.ui.scrollView);
                 this.ui.chatSection = new PopupMenu.PopupMenuSection();
                 this.ui.scrollView.add_child(this.ui.chatSection.actor);
-                this.menu.box.add_child(this.ui.scrollView);
+                this.ui.menu.box.add_child(this.ui.scrollView);
             });
 
             // If press settings button
             this.ui.settingsButton.connect('clicked', (_self) => {
                 this.openSettings();
                 // Close App
-                this.menu.close();
+                this.ui.menu.close();
             });
 
             // Open settings if gemini api key is not configured
