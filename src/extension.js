@@ -136,12 +136,24 @@ const Aiva = GObject.registerClass(
             }
 
             // Initialize app tray
-            this.add_child(this.ui.tray);
             this.ui.tray.add_child(this.ui.icon);
+            this.add_child(this.ui.tray);
             this.log('App tray initialized.');
 
             // Add scroll to chat section
             this.ui.scrollView.add_child(this.ui.chatSection.actor);
+
+            // Add items to menu
+            this.menu.addMenuItem(this.ui.item);
+
+            // Add scroll view to menu
+            this.menu.box.add_child(this.ui.scrollView);
+
+            // Add search entry, mic button, clear button and settings button to menu
+            this.ui.item.add_child(this.ui.searchEntry);
+            this.ui.item.add_child(this.ui.micButton);
+            this.ui.item.add_child(this.ui.clearButton);
+            this.ui.item.add_child(this.ui.settingsButton);
 
             // If press enter on question input box
             this.ui.searchEntry.clutter_text.connect('activate', (actor) => {
@@ -149,17 +161,6 @@ const Aiva = GObject.registerClass(
                 this.ui.searchEntry.clutter_text.set_text('');
                 this.ui.searchEntry.clutter_text.reactive = false;
                 this.chat(question);
-            });
-
-            // DEBUG
-            this.ui.searchEntry.connect('button-press-event', () => {
-                this.ui.searchEntry.grab_key_focus();
-            });
-            this.ui.searchEntry.connect('key-focus-in', () => {
-                this.log('Text has gained focus');
-            });
-            this.ui.searchEntry.connect('key-focus-out', () => {
-                this.log('Text has lost focus');
             });
 
             // If press mic button
@@ -183,18 +184,6 @@ const Aiva = GObject.registerClass(
                 // Close App
                 this.ui.menu.close();
             });
-
-            // Add items to menu
-            this.menu.addMenuItem(this.ui.item);
-
-            // Add scroll view to menu
-            this.menu.box.add_child(this.ui.scrollView);
-
-            // Add search entry, mic button, clear button and settings button to menu
-            this.ui.item.add_child(this.ui.searchEntry);
-            this.ui.item.add_child(this.ui.micButton);
-            this.ui.item.add_child(this.ui.clearButton);
-            this.ui.item.add_child(this.ui.settingsButton);
 
             // Open settings if gemini api key is not configured
             if (this.userSettings.GEMINI_API_KEY === '') {
