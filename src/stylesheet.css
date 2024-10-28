@@ -6,12 +6,9 @@
     text-wrap: wrap;
 }
 .app-item {
-    height: 100px;
-    z-index: 1; /* Para garantir que o container fixo fique acima */
-}
-.items-container {
-    /* Ajuste de acordo com o layout desejado */
-    z-index: 2; /* Para garantir que o container fixo fique acima */
+    height: 50px;
+    z-index: 1;
+    position: relative; /* Para garantir que o container fixo fique acima */
 }
 .menu-box {
     color: aliceblue;
@@ -20,6 +17,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
+    z-index: 2;
 }
 .response-chat {
     color: rgb(243, 232, 212);
@@ -27,6 +26,10 @@
     text-wrap: wrap;
     word-wrap: break-word;
     cursor: text;
+    user-select: text;
+    /* Para garantir que o texto fique abaixo */
+    position: relative;
+    z-index: 2;
 }
 .response-chat:hover {
     background-color: rgb(42, 42, 42);
