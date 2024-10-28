@@ -7,7 +7,7 @@
 }
 .app-item {
     height: 50px;
-    z-index: 2;
+    z-index: 1;
     position: relative; /* Para garantir que o container fixo fique acima */
     display: flex;
     align-items: center;
@@ -22,8 +22,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    z-index: 1;
-    padding-top: 100px;
+    z-index: 1000;
     max-height: 750px;
     overflow-y: scroll;
     border-radius: 10px;
