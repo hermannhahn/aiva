@@ -17,7 +17,7 @@ export class AppLayout {
 
         // Create app item section
         this.item = new PopupMenu.PopupBaseMenuItem({
-            reactive: false,
+            reactive: true,
             can_focus: true,
             style_class: 'app-item',
         });
@@ -68,7 +68,6 @@ export class AppLayout {
             style_class: 'chat-scroll-section',
             reactive: true,
             overlay_scrollbars: false,
-            can_focus: false,
         });
 
         // Create input and response chat items
