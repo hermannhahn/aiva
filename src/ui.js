@@ -15,11 +15,6 @@ export class AppLayout {
             style_class: 'google-gemini-icon',
         });
 
-        // Menu box
-        this.menu = new PopupMenu.PopupMenuBox({
-            style_class: 'menu-box',
-        });
-
         // Create app item section
         this.item = new PopupMenu.PopupBaseMenuItem({
             reactive: false,
