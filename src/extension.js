@@ -149,6 +149,8 @@ const Aiva = GObject.registerClass(
             // Add items container to menu
             this.menu.addMenuItem(this.ui.item);
             this.menu.style_class = 'menu';
+            this.items = new St.BoxLayout({style_class: 'items-container'});
+            this.menu.box.add_child(this.items);
 
             // Add scrollview to menu box
             this.menu.box.add_child(this.ui.scrollView);
