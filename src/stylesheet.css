@@ -5,7 +5,6 @@
     border-radius: 50px;
     text-wrap: wrap;
     z-index: 1000;
-    position: relative;
 }
 .app-item {
     height: 50px;
@@ -65,7 +64,8 @@
     color: black;
 }
 .chat-scroll-section {
-    /* overflow-y: auto; */
+    max-height: 750px;
+    overflow-y: auto;
     padding: 5px;
 }
 .chat-scroll-section::selection {
@@ -75,10 +75,6 @@
     color: black;
     text-wrap: wrap;
     word-wrap: break-word;
-    z-index: 1000;
-    position: relative;
-    max-height: 750px;
-    margin-top: 200px;
     overflow-y: auto;
 }
 .chat-section::selection {
