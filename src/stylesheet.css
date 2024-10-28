@@ -13,6 +13,10 @@
     align-items: center;
     justify-content: center;
 }
+.menu {
+    z-index: 1000;
+    position: relative;
+}
 .menu-box {
     color: aliceblue;
     background-color: rgb(42, 42, 42);
