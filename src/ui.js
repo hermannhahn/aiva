@@ -17,8 +17,8 @@ export class AppLayout {
 
         // Create app item section
         this.item = new PopupMenu.PopupBaseMenuItem({
-            reactive: true,
-            can_focus: true,
+            reactive: false,
+            can_focus: false,
             style_class: 'app-item',
         });
 
