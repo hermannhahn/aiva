@@ -150,10 +150,8 @@ const Aiva = GObject.registerClass(
             this.menu.addMenuItem(this.ui.item);
             this.menu.style_class = 'menu';
 
-            this.menu.addMenuItem(this.ui.newSeparator);
-
             // Add scrollview to menu box
-            this.menu.box.add_child(this.ui.scrollView);
+            this.menu.addMenuItem(this.ui.scrollView);
             this.menu.box.style_class = 'menu-box';
 
             // Add chat to scrollbar
@@ -238,6 +236,8 @@ const Aiva = GObject.registerClass(
                 hover: false,
             });
             this.ui.copyButton = copyButton;
+
+            this.menu.addMenuItem(this.ui.newSeparator);
 
             // Add user question to chat
             this.ui.chatSection.addMenuItem(inputChat);
