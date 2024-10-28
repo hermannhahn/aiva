@@ -70,6 +70,9 @@
 }
 .chat-section {
     color: black;
+    text-wrap: wrap;
+    word-wrap: break-word;
+    margin-top: 300px;
 }
 .chat-section::selection {
     color: black;
