@@ -39,7 +39,7 @@ const Aiva = GObject.registerClass(
              * get extension settings
              */
             const {settings} = this.extension;
-            this.log('Settings loaded');
+            this.log('Settings loaded.');
 
             /**
              * set/get user settings [GEMINI_API_KEY, AZURE_SPEECH_KEY, AZURE_SPEECH_REGION, AZURE_SPEECH_LANGUAGE, AZURE_SPEECH_VOICE, RECURSIVE_TALK, USERNAME, LOCATION, EXT_DIR, HISTORY_FILE]
@@ -73,25 +73,25 @@ const Aiva = GObject.registerClass(
                 this.userSettings.EXT_DIR,
                 'history.json',
             ]);
-            this.log('User settings loaded');
+            this.log('User settings loaded.');
 
             /**
              * get ui layouts  [tray, icon, item, searchEntry, micButton, clearButton, settingsButton, chatSection, scrollView, inputChat, responseChat, copyButton, newSeparator]
              */
             this.ui = new AppLayout();
-            this.log('UI layouts loaded');
+            this.log('UI layouts loaded.');
 
             /**
              * Azure API [tts, transcribe]
              */
             this.azure = new MicrosoftAzure(this);
-            this.log('Azure API loaded');
+            this.log('Azure API loaded.');
 
             /**
              * create audio instance
              */
             this.audio = new Audio(this);
-            this.log('Audio loaded');
+            this.log('Audio loaded.');
         }
 
         /**
@@ -105,26 +105,28 @@ const Aiva = GObject.registerClass(
             this.utils = new Utils(this);
             this.log = this.utils.log;
             this.logError = this.utils.logError;
-            this.log('Utils loaded');
+            this.log('Utils loaded.');
 
-            // Init extension
+            //
+            // Initialize extension
+            //
+
+            // Create extension
             super._init(0.0, _('AIVA'));
-            this.log('Initing extension');
+            this.log('Initing extension...');
 
             // get extension props
             this.extension = extension;
-            this.log('Extension loaded');
+            this.log('Extension data loaded.');
 
             // load settings
             this._loadSettings();
-            this.log('Settings loaded');
+            this.log('Settings loaded.');
 
             // chat history
             this.chatHistory = [];
-            this.log('New chat history created');
-
-            // recursive talk
             this.recursiveHistory = [];
+            this.log('New chat created.');
 
             // after tune
             this.afterTune = null;
@@ -135,25 +137,33 @@ const Aiva = GObject.registerClass(
                 this.log('Recursive talk history loaded.');
             }
 
-            // Initialize app tray
+            //
+            // Initialize UI
+            //
+
+            // Icon tray
             this.ui.tray.add_child(this.ui.icon);
             this.add_child(this.ui.tray);
             this.log('App tray initialized.');
 
-            // Add scroll to chat section
-            this.ui.scrollView.add_child(this.ui.chatSection.actor);
-
-            // Add items to menu
+            // Add items container to menu
             this.menu.addMenuItem(this.ui.item);
 
-            // Add scroll view to menu
+            // Add scrollview to menu box
             this.menu.box.add_child(this.ui.scrollView);
 
-            // Add search entry, mic button, clear button and settings button to menu
+            // Add chat to scrollbar
+            this.ui.scrollView.add_child(this.ui.chatSection.actor);
+
+            // Add search entry, mic button, clear button and settings button to items container
             this.ui.item.add_child(this.ui.searchEntry);
             this.ui.item.add_child(this.ui.micButton);
             this.ui.item.add_child(this.ui.clearButton);
             this.ui.item.add_child(this.ui.settingsButton);
+
+            //
+            // Actions
+            //
 
             // If press enter on question input box
             this.ui.searchEntry.clutter_text.connect('activate', (actor) => {
@@ -198,21 +208,23 @@ const Aiva = GObject.registerClass(
          * send question to chat
          */
         chat(userQuestion) {
-            // Create chat items
-            // Create input and response chat items
+            // Create question
             let inputChat = new PopupMenu.PopupMenuItem('', {
                 style_class: 'input-chat',
                 reactive: true,
                 can_focus: false,
                 hover: true,
             });
+            this.ui.inputChat = inputChat;
+
+            // Create response
             let responseChat = new PopupMenu.PopupMenuItem('', {
                 style_class: 'response-chat',
                 reactive: true,
                 can_focus: false,
                 hover: true,
             });
-            this.responseChat = responseChat;
+            this.ui.responseChat = responseChat;
 
             // Create copy button
             let copyButton = new PopupMenu.PopupMenuItem('', {
@@ -221,6 +233,7 @@ const Aiva = GObject.registerClass(
                 can_focus: false,
                 hover: false,
             });
+            this.ui.copyButton = copyButton;
 
             // Add user question to chat
             this.ui.chatSection.addMenuItem(inputChat);
@@ -274,13 +287,11 @@ const Aiva = GObject.registerClass(
         /**
          *
          * @param {*} userQuestion
-         * @param {*} responseChat
-         * @param {*} copyButton
          * @param {*} destroyLoop [default is false]
          *
          * get ai response for user question
          */
-        response(userQuestion, responseChat, copyButton, destroyLoop = false) {
+        response(userQuestion, destroyLoop = false) {
             if (destroyLoop) {
                 this.destroyLoop();
             }
@@ -309,7 +320,9 @@ const Aiva = GObject.registerClass(
                     let response = decoder.decode(bytes.get_data());
                     let res = JSON.parse(response);
                     if (res.error?.code !== 401 && res.error !== undefined) {
-                        responseChat?.label.clutter_text.set_markup(response);
+                        this.ui.responseChat?.label.clutter_text.set_markup(
+                            response,
+                        );
                         // Scroll down
                         this._scrollToBottom();
                         // Enable searchEntry
@@ -361,7 +374,7 @@ const Aiva = GObject.registerClass(
                                     );
                                 }
 
-                                responseChat?.label.clutter_text.set_markup(
+                                this.ui.responseChat?.label.clutter_text.set_markup(
                                     '<b>Gemini: </b> ' + aiResponse,
                                 );
 
@@ -376,18 +389,18 @@ const Aiva = GObject.registerClass(
 
                     if (
                         aiResponse !== undefined &&
-                        responseChat !== undefined
+                        this.ui.responseChat !== undefined
                     ) {
                         // Set ai response to chat
                         let formatedResponse =
                             this.utils.textformat(aiResponse);
-                        responseChat?.label.clutter_text.set_markup(
+                        this.ui.responseChat?.label.clutter_text.set_markup(
                             '<b>Gemini: </b> ' + formatedResponse,
                         );
 
                         // Add copy button to chat
-                        if (copyButton) {
-                            this.ui.chatSection.addMenuItem(copyButton);
+                        if (this.ui.copyButton) {
+                            this.ui.chatSection.addMenuItem(this.ui.copyButton);
                         }
 
                         // Scroll down
