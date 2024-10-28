@@ -9,7 +9,7 @@
 }
 .app-item {
     height: 50px;
-    z-index: 1;
+    z-index: 1000;
     position: relative; /* Para garantir que o container fixo fique acima */
     display: flex;
     align-items: center;
@@ -29,6 +29,7 @@
     position: relative;
     z-index: 1;
     border-radius: 10px;
+    max-height: 750px;
 }
 .menu-box::selection {
     color: black;
