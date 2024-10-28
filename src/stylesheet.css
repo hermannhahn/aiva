@@ -1,8 +1,8 @@
 /* Add your custom extension styling here */
-.ai-entry {
+.searchEntry {
     width: 250px;
     height: 20px !important;
-    border-radius: 100px;
+    border-radius: 50px;
     text-wrap: wrap;
 }
 .app-item {
