@@ -24,8 +24,8 @@ export class AppLayout {
 
         // Create search entry
         this.searchEntry = new St.Entry({
-            name: 'aiEntry',
-            style_class: 'ai-entry',
+            name: 'searchEntry',
+            style_class: 'searchEntry',
             reactive: true,
             can_focus: true,
             hover: true,
