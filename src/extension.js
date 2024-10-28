@@ -215,7 +215,7 @@ const Aiva = GObject.registerClass(
                 style_class: 'input-chat',
                 reactive: true,
                 can_focus: false,
-                hover: false,
+                hover: true,
             });
             this.ui.inputChat = inputChat;
 
@@ -224,16 +224,16 @@ const Aiva = GObject.registerClass(
                 style_class: 'response-chat',
                 reactive: true,
                 can_focus: false,
-                hover: false,
+                hover: true,
             });
             this.ui.responseChat = responseChat;
 
             // Create copy button
             let copyButton = new PopupMenu.PopupMenuItem('', {
                 style_class: 'copy-icon',
-                reactive: true,
+                reactive: false,
                 can_focus: false,
-                hover: false,
+                hover: true,
             });
             this.ui.copyButton = copyButton;
 
@@ -249,21 +249,21 @@ const Aiva = GObject.registerClass(
                 this.utils.copySelectedText();
             });
 
-            // Chat settings
-            inputChat.label.x_expand = true;
-            responseChat.label.x_expand = true;
-            inputChat.label.y_expand = true;
-            responseChat.label.y_expand = true;
+            // // Chat settings
+            // inputChat.label.x_expand = true;
+            // responseChat.label.x_expand = true;
+            // inputChat.label.y_expand = true;
+            // responseChat.label.y_expand = true;
 
-            // Enable text selection
-            inputChat.label.clutter_text.reactive = true;
-            inputChat.label.clutter_text.selectable = true;
-            responseChat.label.clutter_text.reactive = true;
-            responseChat.label.clutter_text.selectable = true;
+            // // Enable text selection
+            // inputChat.label.clutter_text.reactive = true;
+            // inputChat.label.clutter_text.selectable = true;
+            // responseChat.label.clutter_text.reactive = true;
+            // responseChat.label.clutter_text.selectable = true;
 
-            // Disable clutter_text hover
-            inputChat.label.clutter_text.hover = false;
-            responseChat.label.clutter_text.hover = false;
+            // // Disable clutter_text hover
+            // inputChat.label.clutter_text.hover = false;
+            // responseChat.label.clutter_text.hover = false;
 
             // Format question
             let formatedQuestion = this.utils.inputformat(userQuestion);
@@ -278,7 +278,7 @@ const Aiva = GObject.registerClass(
             responseChat.label.clutter_text.set_markup(aiResponse);
 
             // Get ai response for user question
-            this.response(userQuestion, responseChat, copyButton);
+            this.response(userQuestion);
 
             // Add separator to chat
             this.ui.chatSection.addMenuItem(this.ui.newSeparator);
