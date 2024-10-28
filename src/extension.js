@@ -150,6 +150,8 @@ const Aiva = GObject.registerClass(
             this.menu.addMenuItem(this.ui.item);
             this.menu.style_class = 'menu';
 
+            this.menu.addMenuItem(this.ui.newSeparator);
+
             // Add scrollview to menu box
             this.menu.box.add_child(this.ui.scrollView);
             this.menu.box.style_class = 'menu-box';
