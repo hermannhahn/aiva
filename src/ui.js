@@ -17,8 +17,8 @@ export class AppLayout {
 
         // Create app item section
         this.item = new PopupMenu.PopupBaseMenuItem({
-            reactive: true,
-            can_focus: true,
+            reactive: false,
+            can_focus: false,
             style_class: 'app-item',
         });
 
@@ -27,32 +27,29 @@ export class AppLayout {
             name: 'searchEntry',
             style_class: 'searchEntry',
             reactive: true,
-            can_focus: true,
+            can_focus: false,
             hint_text: _('Ask me anything...'),
-            x_expand: true,
-            y_expand: true,
+            // x_expand: true,
+            // y_expand: true,
         });
 
         // Create voice activation button
         this.micButton = new St.Button({
-            can_focus: true,
-            reactive: true,
+            can_focus: false,
             toggle_mode: true,
             style_class: 'mic-icon',
         });
 
         // Create clear history button
         this.clearButton = new St.Button({
-            can_focus: true,
-            reactive: true,
+            can_focus: false,
             toggle_mode: true,
             style_class: 'trash-icon',
         });
 
         // Create settings button
         this.settingsButton = new St.Button({
-            can_focus: true,
-            reactive: true,
+            can_focus: false,
             toggle_mode: true,
             style_class: 'settings-icon',
         });
@@ -60,10 +57,11 @@ export class AppLayout {
         // Create chat section
         this.chatSection = new PopupMenu.PopupMenuSection({
             style_class: 'chat-section',
-            x_expand: true,
-            y_expand: true,
             reactive: true,
-            can_focus: false,
+            can_focus: true,
+            can_focus_in_child: true,
+            // x_expand: true,
+            // y_expand: true,
         });
 
         // Create scrollbar
@@ -92,7 +90,7 @@ export class AppLayout {
             style_class: 'copy-icon',
             reactive: true,
             can_focus: false,
-            hover: true,
+            hover: false,
         });
 
         // Separator
