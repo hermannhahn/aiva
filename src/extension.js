@@ -151,7 +151,7 @@ const Aiva = GObject.registerClass(
             this.menu.style_class = 'menu';
 
             // Add scrollview to menu box
-            this.menu.addMenuItem(this.ui.scrollView);
+            this.menu.box.add_child(this.ui.scrollView);
             this.menu.box.style_class = 'menu-box';
 
             // Add chat to scrollbar
