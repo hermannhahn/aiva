@@ -25,6 +25,7 @@ export class AppLayout {
         this.searchEntry = new St.Entry({
             name: 'aiEntry',
             style_class: 'ai-entry',
+            reactive: true,
             can_focus: true,
             hint_text: _('Ask me anything...'),
             x_expand: true,
@@ -79,7 +80,7 @@ export class AppLayout {
             style_class: 'response-chat',
             reactive: true,
             can_focus: false,
-            hover: true,
+            hover: false,
         });
 
         // Create copy button
