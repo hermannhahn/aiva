@@ -153,14 +153,10 @@ const Aiva = GObject.registerClass(
             // Add scrollview to menu box
             this.menu.box.add_child(this.ui.scrollView);
             // Enable menu box vertical expand
-            this.menu.box.x_expand = true;
-            this.menu.box.y_expand = true;
             this.menu.box.style_class = 'menu-box';
 
             // Add chat to scrollbar
             this.ui.scrollView.add_child(this.ui.chatSection.actor);
-            this.ui.scrollView.x_expand = true;
-            this.ui.scrollView.y_expand = true;
 
             // Add search entry, mic button, clear button and settings button to items container
             this.ui.item.add_child(this.ui.searchEntry);
