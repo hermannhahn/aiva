@@ -269,13 +269,28 @@ const Aiva = GObject.registerClass(
             // DEBUG
             let debugPhrase =
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl id varius lacinia, lectus quam laoreet libero, at laoreet lectus lectus eu quam. Maecenas vitae lacus sit amet justo ultrices condimentum. Maecenas id dolor vitae quam semper blandit. Aenean sed sapien ut ante elementum bibendum. Sed euismod, nisl id varius lacinia, lectus quam laoreet libero, at laoreet lectus lectus eu quam. Maecenas vitae lacus sit amet justo ultrices condimentum. Maecenas id dolor vitae quam semper blandit. Aenean sed sapien ut ante elementum bibendum. Sed euismod, nisl id varius lacinia, lectus quam laoreet libero, at laoreet lectus lectus eu quam. Maecenas vitae lacus sit amet justo ultrices condimentum. Maecenas id dolor vitae quam semper blandit. Aenean sed sapien ut ante elementum bibendum. Sed euismod, nisl id varius lacinia, lectus quam laoreet libero, at laoreet lectus lectus eu quam. Maecenas vitae lacus sit amet justo ultrices condimentum. Maecenas id dolor vitae quam semper blandit. Aenean sed sapien ut ante elementum bibendum. Sed euismod, nisl id varius lacinia, lectus quam laoreet libero, at laoreet lectus lectus eu quam. Maecenas vitae lacus sit amet justo ultrices condimentum. Maecenas id dolor vitae quam semper blandit. Aenean sed sapien ut ante elementum bibendum. Sed euismod, nisl id varius lacinia, lectus quam laoreet libero, at laoreet lectus lectus eu quam. Maecenas vitae lacus sit amet justo ultrices condimentum. Maecenas id dolor vitae quam semper blandit. Aenean sed sapien ut ante elementum bibendum. Sed euismod, nisl id varius lacinia, lectus quam laoreet libero, at laoreet lectus lectus eu quam. Maecenas vitae lacus sit amet justo ultrices condimentum. Maecenas id dolor vitae quam semper blandit. Aenean sed sapien ut ante elementum bibendum. Sed euismod, nisl id varius la';
-            let formatedResponse = this.utils.textformat(debugPhrase);
             responseChat?.label.clutter_text.set_markup(
-                '<b>Gemini: </b> ' + formatedResponse,
+                '<b>Gemini: </b> ' + debugPhrase,
             );
             this.ui.searchEntry.clutter_text.reactive = true;
             this.ui.searchEntry.clutter_text.selectable = true;
+            this.ui.searchEntry.clutter_text.editable = true;
+            this.ui.searchEntry.clutter_text.activatable = true;
             this.ui.searchEntry.clutter_text.hover = true;
+            // Change responseChat clutter_text selected text colors
+            responseChat.label.clutter_text.connect(
+                'selection-changed',
+                (_self) => {
+                    let selectedText = _self.get_selected_text();
+                    if (selectedText) {
+                        _self.set_style_class_name('selected-text');
+                    } else {
+                        _self.set_style_class_name('');
+                    }
+                },
+            );
+
+            //
             // END DEBUG
         }
 
