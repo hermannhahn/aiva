@@ -10,6 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 10px;
 }
 .menu {
     max-height: 750px;
@@ -69,7 +70,6 @@
     word-wrap: break-word;
     padding-left: 10px;
     padding-right: 10px;
-    padding-bottom: 10px;
 }
 .chat-section::selection {
     background-color: rgb(42, 42, 42);
