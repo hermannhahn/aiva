@@ -64,6 +64,7 @@
     text-wrap: wrap;
     word-wrap: break-word;
     z-index: 1;
+    padding: 10px;
 }
 .chat-section::selection {
     color: black;
