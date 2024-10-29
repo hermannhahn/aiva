@@ -344,7 +344,7 @@ export class Utils {
 
     copySelectedText() {
         let selectedText =
-            this.app.responseChat.label.clutter_text.get_selection();
+            this.app.ui.responseChat.label.clutter_text.get_selection();
         if (selectedText) {
             this.app.extension.clipboard.set_text(
                 St.ClipboardType.CLIPBOARD,
@@ -376,7 +376,7 @@ export class Utils {
                     return false; // Para garantir que o timeout execute apenas uma vez
                 });
             }
-            this.log(`Texto copiado: ${this.app.responseChat.label.text}`);
+            this.log(`Texto copiado: ${this.app.ui.responseChat.label.text}`);
         }
     }
 
