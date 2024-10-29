@@ -70,7 +70,7 @@
     color: black;
 }
 .chat-section {
-    color: black;
+    color: rgb(243, 232, 212);
     text-wrap: wrap;
     word-wrap: break-word;
     overflow-y: auto;
