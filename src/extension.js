@@ -214,7 +214,6 @@ const Aiva = GObject.registerClass(
             let inputChat = new PopupMenu.PopupMenuItem('', {
                 style_class: 'input-chat',
                 reactive: true,
-                can_focus: false,
             });
             this.ui.inputChat = inputChat;
 
@@ -222,15 +221,12 @@ const Aiva = GObject.registerClass(
             let responseChat = new PopupMenu.PopupMenuItem('', {
                 style_class: 'response-chat',
                 reactive: true,
-                can_focus: false,
             });
             this.ui.responseChat = responseChat;
 
             // Create copy button
             let copyButton = new PopupMenu.PopupMenuItem('', {
                 style_class: 'copy-icon',
-                reactive: false,
-                can_focus: false,
             });
             this.ui.copyButton = copyButton;
 
