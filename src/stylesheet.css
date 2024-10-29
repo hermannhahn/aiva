@@ -62,7 +62,6 @@
     color: black;
 }
 .chat-scroll-section {
-    max-height: 750px;
     overflow-y: auto;
     padding: 5px;
 }
@@ -73,7 +72,8 @@
     color: rgb(243, 232, 212);
     text-wrap: wrap;
     word-wrap: break-word;
-    overflow-y: auto;
+    max-height: 750px;
+    overflow-y: hidden;
 }
 .chat-section::selection {
     color: black;
