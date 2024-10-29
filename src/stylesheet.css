@@ -40,10 +40,6 @@
     word-wrap: break-word;
     z-index: 1;
 }
-/* .response-chat:hover {
-    background-color: rgb(42, 42, 42);
-    color: rgb(243, 232, 212);
-} */
 .response-chat::selection {
     color: rgb(24, 24, 24);
 }
@@ -54,10 +50,6 @@
     word-wrap: break-word;
     z-index: 1;
 }
-/* .input-chat:hover {
-    background-color: rgb(42, 42, 42);
-    color: white;
-} */
 .input-chat::selection {
     color: rgb(24, 24, 24);
 }
@@ -65,6 +57,8 @@
     overflow-y: auto;
     padding: 5px;
     margin-left: 10px;
+    margin-right: 10px;
+    max-height: 750px;
 }
 .chat-scroll-section::selection {
     color: black;
@@ -73,8 +67,6 @@
     color: rgb(243, 232, 212);
     text-wrap: wrap;
     word-wrap: break-word;
-    max-height: 750px;
-    overflow-y: hidden;
 }
 .chat-section::selection {
     color: black;
