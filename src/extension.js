@@ -225,7 +225,7 @@ const Aiva = GObject.registerClass(
             });
             responseChat.label.clutter_text.reactive = true;
             responseChat.label.clutter_text.selectable = true;
-            responseChat.label.clutter_text.hover = false;
+            responseChat.label.clutter_text.hover = true;
             this.ui.responseChat = responseChat;
 
             // Copy Button
