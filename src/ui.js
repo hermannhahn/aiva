@@ -63,17 +63,14 @@ export class AppLayout {
         // Create input and response chat items
         this.inputChat = new PopupMenu.PopupMenuItem('', {
             style_class: 'input-chat',
-            can_focus: true,
         });
         this.responseChat = new PopupMenu.PopupMenuItem('', {
             style_class: 'response-chat',
-            can_focus: true,
         });
 
         // Create copy button
         this.copyButton = new PopupMenu.PopupMenuItem('', {
             style_class: 'copy-icon',
-            can_focus: false,
         });
 
         // Separator
