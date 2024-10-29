@@ -19,6 +19,11 @@
     color: aliceblue;
     background-color: rgb(42, 42, 42);
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 .menu-box::selection {
     background-color: rgb(42, 42, 42);
@@ -27,6 +32,8 @@
     color: rgb(243, 232, 212);
     background-color: rgb(42, 42, 42);
     text-wrap: wrap;
+    text-align: justify;
+    word-wrap: break-word;
     margin-top: 10px;
 }
 .response-chat:hover {
