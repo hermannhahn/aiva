@@ -59,6 +59,7 @@ Other files may be included but they aren't directly related to extension develo
 
 ## TODO
 
+-   [x] Implement development scripts
 -   [x] Implement GNOME Shell Integration
 -   [x] Implement Settings UI
 -   [x] Implement Gemini API
@@ -66,15 +67,13 @@ Other files may be included but they aren't directly related to extension develo
 -   [x] Implement Azure Speech to Text API
 -   [x] Implement Azure Text To Speech API
 -   [x] Implement generic voice response for long responses
--   [x] Implement auto copy to clipboard code examples
--   [x] Implement don't speech code examples
 -   [x] Implement Chat UI
--   [x] Implement development scripts
 -   [x] Implement Release Process
 -   [x] Implement README
--   [x] Implement Clear History Button
 -   [x] Implement Random response to wait AI response
 -   [x] Implement select box to Voice language options
+-   [ ] Implement don't speech code examples
+-   [ ] Implement auto copy to clipboard code examples
 -   [ ] Implement Voice activation with hotkeys
 -   [ ] Implement Stop Button to stop speech
 -   [ ] Implement Imports and Code Separators
