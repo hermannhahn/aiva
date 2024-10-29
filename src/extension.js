@@ -278,27 +278,24 @@ const Aiva = GObject.registerClass(
             this.ui.searchEntry.clutter_text.activatable = true;
             this.ui.searchEntry.clutter_text.hover = true;
 
-            responseChat.label.clutter_text.line_wrap_mode =
+            responseChat.label.text.line_wrap_mode =
                 St.TextLineWrapMode.WORD_CHAR;
-            responseChat.label.clutter_text.line_wrap = true;
-            responseChat.label.clutter_text.justify = true;
-            responseChat.label.clutter_text.line_alignment =
+            responseChat.label.text.line_wrap = true;
+            responseChat.label.text.justify = true;
+            responseChat.label.text.line_alignment =
                 St.TextJustify.JUSTIFY_FILL;
-            responseChat.label.clutter_text.selected_text_color = '#000000';
-            responseChat.label.clutter_text.selection_color = '#000000';
+            responseChat.label.text.selected_text_color = '#000000';
+            responseChat.label.text.selection_color = '#000000';
 
             // Change responseChat clutter_text selected text colors
-            responseChat.label.clutter_text.connect(
-                'selection-changed',
-                (_self) => {
-                    let selectedText = _self.get_selected_text();
-                    if (selectedText) {
-                        _self.set_style_class_name('selected-text');
-                    } else {
-                        _self.set_style_class_name('');
-                    }
-                },
-            );
+            responseChat.connect('selection-changed', (_self) => {
+                let selectedText = _self.get_selected_text();
+                if (selectedText) {
+                    _self.set_style_class_name('selected-text');
+                } else {
+                    _self.set_style_class_name('');
+                }
+            });
 
             //
             // END DEBUG
