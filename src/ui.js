@@ -18,6 +18,7 @@ export class AppLayout {
         // Create app item section
         this.item = new PopupMenu.PopupBaseMenuItem({
             style_class: 'app-item',
+            hover: false,
         });
 
         // Create search entry
