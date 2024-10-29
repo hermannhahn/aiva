@@ -29,6 +29,7 @@ export class AppLayout {
             hint_text: _('Ask me anything...'),
             track_hover: true,
             x_expand: true,
+            y_expand: true,
             can_focus: false,
         });
 
@@ -57,6 +58,8 @@ export class AppLayout {
         this.chatSection = new PopupMenu.PopupMenuSection({
             style_class: 'chat-section',
             can_focus: false,
+            x_expand: true,
+            y_expand: true,
         });
         this.chatSection.actor.style_class = 'chat-section';
 
