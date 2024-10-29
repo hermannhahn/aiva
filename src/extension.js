@@ -231,7 +231,6 @@ const Aiva = GObject.registerClass(
             // Copy Button
             let copyButton = new PopupMenu.PopupMenuItem('', {
                 style_class: 'copy-icon',
-                can_focus: false,
             });
             copyButton.label.clutter_text.reactive = true;
             copyButton.label.clutter_text.selectable = true;
