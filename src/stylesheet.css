@@ -33,6 +33,7 @@
 }
 .response-chat {
     color: rgb(243, 232, 212);
+    background-color: rgb(42, 42, 42);
     text-wrap: wrap;
     text-align: justify;
     word-wrap: break-word;
