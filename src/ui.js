@@ -66,7 +66,7 @@ export class AppLayout {
         // Create scrollbar
         this.scrollView = new St.ScrollView({
             style_class: 'chat-scroll-section',
-            overlay_scrollbars: false,
+            overlay_scrollbars: true,
             can_focus: false,
             x_expand: true,
             y_expand: true,
