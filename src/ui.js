@@ -70,24 +70,16 @@ export class AppLayout {
             style_class: 'chat-scroll-section',
             overlay_scrollbars: false,
             can_focus: false,
-            x_expand: true,
-            y_expand: true,
         });
-        this.scrollView.actor.x_expand = true;
-        this.scrollView.actor.y_expand = true;
 
         // Create input and response chat items
         this.inputChat = new PopupMenu.PopupMenuItem('', {
             style_class: 'input-chat',
             can_focus: false,
-            x_expand: true,
-            y_expand: true,
         });
         this.responseChat = new PopupMenu.PopupMenuItem('', {
             style_class: 'response-chat',
             can_focus: false,
-            x_expand: true,
-            y_expand: true,
         });
 
         // Create copy button
