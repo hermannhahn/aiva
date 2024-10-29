@@ -20,7 +20,6 @@ export class AppLayout {
             style_class: 'app-item',
             reactive: false,
             can_focus: true,
-            can_focus_children: true,
         });
 
         // Create search entry
