@@ -43,10 +43,10 @@
     position: relative;
     z-index: 1000;
 }
-.response-chat:hover {
+/* .response-chat:hover {
     background-color: rgb(42, 42, 42);
     color: rgb(243, 232, 212);
-}
+} */
 .response-chat::selection {
     color: rgb(24, 24, 24);
 }
@@ -56,10 +56,10 @@
     text-align: justify;
     word-wrap: break-word;
 }
-.input-chat:hover {
+/* .input-chat:hover {
     background-color: rgb(42, 42, 42);
     color: white;
-}
+} */
 .input-chat::selection {
     color: black;
 }
