@@ -19,7 +19,7 @@ import {Audio} from './utils/audio.js';
 const Aiva = GObject.registerClass(
     class Aiva extends PanelMenu.Button {
         /**
-         * load settings
+         * load extension settings
          */
         _loadSettings() {
             this._settingsChangedId = this.extension.settings.connect(
