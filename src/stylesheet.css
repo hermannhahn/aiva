@@ -36,12 +36,9 @@
 .response-chat {
     color: rgb(243, 232, 212);
     text-wrap: wrap;
+    text-align: justify;
     word-wrap: break-word;
-    cursor: text;
-    user-select: text;
-    /* Para garantir que o texto fique abaixo */
-    position: relative;
-    z-index: 1000;
+    z-index: 1;
 }
 /* .response-chat:hover {
     background-color: rgb(42, 42, 42);
@@ -55,6 +52,7 @@
     text-wrap: wrap;
     text-align: justify;
     word-wrap: break-word;
+    z-index: 1;
 }
 /* .input-chat:hover {
     background-color: rgb(42, 42, 42);
