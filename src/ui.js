@@ -57,8 +57,6 @@ export class AppLayout {
         this.chatSection = new PopupMenu.PopupMenuSection({
             style_class: 'chat-section',
             can_focus: false,
-            x_expand: true,
-            y_expand: true,
         });
         this.chatSection.actor.style_class = 'chat-section';
 
@@ -67,8 +65,6 @@ export class AppLayout {
             style_class: 'chat-scroll-section',
             overlay_scrollbars: false,
             can_focus: false,
-            x_expand: true,
-            y_expand: true,
         });
 
         // Create input and response chat items
