@@ -19,6 +19,8 @@ export class AppLayout {
         this.item = new PopupMenu.PopupBaseMenuItem({
             style_class: 'app-item',
         });
+        // Disable clutter_text hover
+        this.item.label.clutter_text.hover = false;
 
         // Create search entry
         this.searchEntry = new St.Entry({
