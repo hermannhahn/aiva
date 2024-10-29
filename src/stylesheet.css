@@ -39,6 +39,7 @@
     word-wrap: break-word;
     max-width: 800px;
     max-height: 600px;
+    overflow-y: auto;
 }
 .response-chat:hover {
     background-color: rgb(42, 42, 42);
@@ -53,6 +54,7 @@
     word-wrap: break-word;
     max-width: 800px;
     max-height: 600px;
+    overflow-y: auto;
 }
 .input-chat::selection {
     background-color: rgb(42, 42, 42);
