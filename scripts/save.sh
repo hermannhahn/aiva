@@ -8,6 +8,9 @@
 # Main script starts here #
 ###########################
 
+# Build
+npm run build:install
+
 # Get version from package.json
 VERSION=$(jq -r .version package.json) # E.g. 1.0.0
 
@@ -51,9 +54,6 @@ cd -- "$( dirname "$0" )/../"
 git add .
 git commit -S -m "$BRANCH"
 git push
-
-# Build
-npm run build:install
 
 echo "All done."
 
