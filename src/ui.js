@@ -53,6 +53,7 @@ export class AppLayout {
         this.chatSection = new PopupMenu.PopupMenuSection({
             style_class: 'chat-section',
         });
+        this.chatSection.actor.style_class = 'chat-section';
 
         // Create scrollbar
         this.scrollView = new St.ScrollView({
