@@ -60,11 +60,9 @@ export class AppLayout {
         // Create input and response chat items
         this.inputChat = new PopupMenu.PopupMenuItem('', {
             style_class: 'input-chat',
-            reactive: true,
         });
         this.responseChat = new PopupMenu.PopupMenuItem('', {
             style_class: 'response-chat',
-            reactive: true,
         });
 
         // Create copy button
