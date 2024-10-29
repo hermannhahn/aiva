@@ -56,6 +56,8 @@ export class AppLayout {
         // Create chat section
         this.chatSection = new PopupMenu.PopupMenuSection({
             style_class: 'chat-section',
+            x_expand: true,
+            y_expand: true,
             can_focus: false,
         });
         this.chatSection.actor.style_class = 'chat-section';
