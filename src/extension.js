@@ -2,7 +2,6 @@ import St from 'gi://St';
 import GObject from 'gi://GObject';
 import Soup from 'gi://Soup';
 import GLib from 'gi://GLib';
-import Gtk from 'gi://Gtk';
 
 import {
     Extension,
@@ -286,12 +285,6 @@ const Aiva = GObject.registerClass(
 
             responseChat.label.clutter_text.line_wrap = true;
             responseChat.label.clutter_text.justify = true;
-            this.ui.chatSection.actor.set_vexpand(true); // Permite que o chatSection cresça conforme necessário
-            this.ui.chatSection.actor.set_height(-1); // Define altura flexível baseada nos filhos
-            this.ui.scrollView.set_policy(
-                Gtk.PolicyType.NEVER,
-                Gtk.PolicyType.AUTOMATIC,
-            ); // Política de rolagem automática
 
             // responseChat.label.clutter_text.selected_text_color = '#000000';
             // responseChat.label.clutter_text.selection_color = '#000000';
