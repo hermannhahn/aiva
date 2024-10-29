@@ -79,16 +79,12 @@ export class AppLayout {
         this.responseChat = new PopupMenu.PopupMenuItem('', {
             style_class: 'response-chat',
             can_focus: false,
-            x_expand: true,
-            y_expand: true,
         });
 
         // Create copy button
         this.copyButton = new PopupMenu.PopupMenuItem('', {
             style_class: 'copy-icon',
             can_focus: false,
-            x_expand: true,
-            y_expand: true,
         });
 
         // Separator
