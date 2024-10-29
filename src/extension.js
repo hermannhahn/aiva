@@ -214,40 +214,32 @@ const Aiva = GObject.registerClass(
             let inputChat = new PopupMenu.PopupMenuItem('', {
                 style_class: 'input-chat',
             });
-            // Enable text selection
             inputChat.label.clutter_text.reactive = true;
             inputChat.label.clutter_text.selectable = true;
-            // Disable clutter_text hover
             inputChat.label.clutter_text.hover = false;
-            // Save
             this.ui.inputChat = inputChat;
 
             // Response
             let responseChat = new PopupMenu.PopupMenuItem('', {
                 style_class: 'response-chat',
             });
-            // Enable text selection
             responseChat.label.clutter_text.reactive = true;
             responseChat.label.clutter_text.selectable = true;
-            // Disable clutter_text hover
             responseChat.label.clutter_text.hover = false;
-            // Save
             this.ui.responseChat = responseChat;
 
-            // add copy button
+            // Copy Button
             let copyButton = new PopupMenu.PopupMenuItem('', {
                 style_class: 'copy-icon',
             });
             this.ui.copyButton = copyButton;
 
-            this.menu.addMenuItem(this.ui.newSeparator);
-
-            // Add items
+            // add items
             this.ui.chatSection.addMenuItem(inputChat);
             this.ui.chatSection.addMenuItem(responseChat);
             this.ui.chatSection.addMenuItem(copyButton);
 
-            // Add copy button
+            // add copy button
             copyButton.connect('activate', (_self) => {
                 this.utils.copySelectedText();
             });
