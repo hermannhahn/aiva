@@ -213,7 +213,7 @@ const Aiva = GObject.registerClass(
             // Question
             let inputChat = new PopupMenu.PopupMenuItem('', {
                 style_class: 'input-chat',
-                can_focus: true,
+                can_focus: false,
             });
             inputChat.label.clutter_text.reactive = true;
             inputChat.label.clutter_text.selectable = true;
@@ -223,7 +223,7 @@ const Aiva = GObject.registerClass(
             // Response
             let responseChat = new PopupMenu.PopupMenuItem('', {
                 style_class: 'response-chat',
-                can_focus: true,
+                can_focus: false,
             });
             responseChat.label.clutter_text.reactive = true;
             responseChat.label.clutter_text.selectable = true;
