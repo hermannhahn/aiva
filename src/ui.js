@@ -62,6 +62,8 @@ export class AppLayout {
             x_expand: true,
             y_expand: true,
         });
+        this.chatSection.actor.x_expand = true;
+        this.chatSection.actor.y_expand = true;
 
         // Create scrollbar
         this.scrollView = new St.ScrollView({
@@ -71,6 +73,8 @@ export class AppLayout {
             x_expand: true,
             y_expand: true,
         });
+        this.scrollView.actor.x_expand = true;
+        this.scrollView.actor.y_expand = true;
 
         // Create input and response chat items
         this.inputChat = new PopupMenu.PopupMenuItem('', {
