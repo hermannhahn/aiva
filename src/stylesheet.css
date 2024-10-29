@@ -27,7 +27,6 @@
     position: relative;
     z-index: 1;
     border-radius: 10px;
-    max-height: 750px;
 }
 .menu-box::selection {
     color: black;
@@ -55,7 +54,8 @@
 .chat-scroll-section {
     overflow-y: hidden;
     z-index: 1;
-    padding-right: 5px;
+    padding-right: 10px;
+    max-height: 750px;
 }
 .chat-scroll-section::selection {
     color: black;
@@ -65,8 +65,7 @@
     text-wrap: wrap;
     word-wrap: break-word;
     z-index: 1;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 10px;
 }
 .chat-section::selection {
     color: black;
