@@ -202,3 +202,7 @@
     width: 0;
     height: 0;
 }
+.selected-text {
+    color: black;
+    font-weight: bold;
+}
