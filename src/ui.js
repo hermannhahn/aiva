@@ -28,7 +28,7 @@ export class AppLayout {
             style_class: 'searchEntry',
             hint_text: _('Ask me anything...'),
             x_expand: true,
-            can_focus: true,
+            can_focus: false,
         });
 
         // Create voice activation button
@@ -69,11 +69,11 @@ export class AppLayout {
         // Create input and response chat items
         this.inputChat = new PopupMenu.PopupMenuItem('', {
             style_class: 'input-chat',
-            can_focus: true,
+            can_focus: false,
         });
         this.responseChat = new PopupMenu.PopupMenuItem('', {
             style_class: 'response-chat',
-            can_focus: true,
+            can_focus: false,
         });
 
         // Create copy button
