@@ -27,6 +27,7 @@
     position: relative;
     z-index: 1;
     border-radius: 10px;
+    max-height: 750px;
 }
 .menu-box::selection {
     color: black;
@@ -37,7 +38,6 @@
     text-align: justify;
     word-wrap: break-word;
     z-index: 1;
-    padding: 5px;
 }
 .response-chat::selection {
     color: rgb(24, 24, 24);
@@ -48,7 +48,6 @@
     text-align: justify;
     word-wrap: break-word;
     z-index: 1;
-    padding: 5px;
 }
 .input-chat::selection {
     color: rgb(24, 24, 24);
