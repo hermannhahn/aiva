@@ -62,6 +62,8 @@ export class AppLayout {
             y_expand: true,
         });
         this.chatSection.actor.style_class = 'chat-section';
+        this.chatSection.actor.x_expand = true;
+        this.chatSection.actor.y_expand = true;
 
         // Create scrollbar
         this.scrollView = new St.ScrollView({
