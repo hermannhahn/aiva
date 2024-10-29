@@ -61,7 +61,6 @@ export class AppLayout {
             x_expand: true,
             y_expand: true,
         });
-        this.chatSection.actor.style_class = 'chat-section';
         this.chatSection.actor.x_expand = true;
         this.chatSection.actor.y_expand = true;
 
