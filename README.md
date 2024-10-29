@@ -86,15 +86,17 @@ Other files may be included but they aren't directly related to extension develo
 
 ## Bug Fixes
 
--   [x] Chat Scrolling
--   [x] Form focus
--   [x] Go to end of chat after send new question and after receive response
--   [x] Formatting chat messages
--   [x] Increase chat width size
--   [x] Fix chat form
--   [ ] Add function to clear history when disable history.
--   [ ] Fix clear chat button to clear just the chat, not the history file.
--   [ ] Fix gnome notify function
+-   [x] Fix Chat Scrolling
+-   [x] Fix auto scroll down on new messages
+-   [x] Formatting chat messages.
+-   [x] Increase chat width size.
+-   [x] Add function to clear chat history.
+-   [x] Fix clear chat button to clear just the chat, not the history file.
+-   [ ] Fix question input entry focus.
+-   [ ] Fix gnome notify function.
+-   [ ] Fix copy button.
+-   [ ] Change selected text colors.
+-   [ ] Fix clutter_text text format and wrap mode.
 
 ## License
 
