@@ -27,7 +27,6 @@
     justify-content: center;
     position: relative;
     border-radius: 10px;
-    max-height: 750px;
 }
 .menu-box::selection {
     background-color: rgb(42, 42, 42);
@@ -37,6 +36,8 @@
     text-wrap: wrap;
     text-align: justify;
     word-wrap: break-word;
+    max-width: 800px;
+    max-height: 600px;
 }
 .response-chat:hover {
     background-color: rgb(42, 42, 42);
@@ -49,6 +50,8 @@
     text-wrap: wrap;
     text-align: justify;
     word-wrap: break-word;
+    max-width: 800px;
+    max-height: 600px;
 }
 .input-chat::selection {
     background-color: rgb(42, 42, 42);
@@ -68,7 +71,6 @@
     word-wrap: break-word;
     padding-left: 10px;
     padding-right: 10px;
-    max-height: 750px;
 }
 .chat-section::selection {
     background-color: rgb(42, 42, 42);
