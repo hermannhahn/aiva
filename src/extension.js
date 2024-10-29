@@ -218,9 +218,8 @@ const Aiva = GObject.registerClass(
             inputChat.label.clutter_text.reactive = true;
             inputChat.label.clutter_text.selectable = true;
             inputChat.label.clutter_text.hover = true;
-            inputChat.label.clutter_text.line_wrap = true;
-            inputChat.label.x_expand = true;
-            inputChat.label.y_expand = true;
+            inputChat.label.clutter_text.x_expand = true;
+            inputChat.label.clutter_text.y_expand = true;
             this.ui.inputChat = inputChat;
 
             // Response
@@ -231,10 +230,8 @@ const Aiva = GObject.registerClass(
             responseChat.label.clutter_text.reactive = true;
             responseChat.label.clutter_text.selectable = true;
             responseChat.label.clutter_text.hover = true;
-            responseChat.label.clutter_text.line_wrap = true;
-            responseChat.label.clutter_text.justify = true;
-            responseChat.label.x_expand = true;
-            responseChat.label.y_expand = true;
+            responseChat.label.clutter_text.x_expand = true;
+            responseChat.label.clutter_text.y_expand = true;
             this.ui.responseChat = responseChat;
 
             // Copy Button
@@ -276,9 +273,9 @@ const Aiva = GObject.registerClass(
             // DEBUG
             let debugPhrase =
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl id varius lacinia, lectus quam laoreet libero, at laoreet lectus lectus eu quam. Maecenas vitae lacus sit amet justo ultrices condimentum. Maecenas id dolor vitae quam semper blandit. Aenean sed sapien ut ante elementum bibendum. Sed euismod, nisl id varius lacinia, lectus quam laoreet libero, at laoreet lectus lectus eu quam. Maecenas vitae lacus sit amet justo ultrices condimentum. Maecenas id dolor vitae quam semper blandit. Aenean sed sapien ut ante elementum bibendum. Sed euismod, nisl id varius lacinia, lectus quam laoreet libero, at laoreet lectus lectus eu quam. Maecenas vitae lacus sit amet justo ultrices condimentum. Maecenas id dolor vitae quam semper blandit. Aenean sed sapien ut ante elementum bibendum. Sed euismod, nisl id varius lacinia, lectus quam laoreet libero, at laoreet lectus lectus eu quam. Maecenas vitae lacus sit amet justo ultrices condimentum. Maecenas id dolor vitae quam semper blandit. Aenean sed sapien ut ante elementum bibendum. Sed euismod, nisl id varius lacinia, lectus quam laoreet libero, at laoreet lectus lectus eu quam. Maecenas vitae lacus sit amet justo ultrices condimentum. Maecenas id dolor vitae quam semper blandit. Aenean sed sapien ut ante elementum bibendum. Sed euismod, nisl id varius lacinia, lectus quam laoreet libero, at laoreet lectus lectus eu quam. Maecenas vitae lacus sit amet justo ultrices condimentum. Maecenas id dolor vitae quam semper blandit. Aenean sed sapien ut ante elementum bibendum. Sed euismod, nisl id varius lacinia, lectus quam laoreet libero, at laoreet lectus lectus eu quam. Maecenas vitae lacus sit amet justo ultrices condimentum. Maecenas id dolor vitae quam semper blandit. Aenean sed sapien ut ante elementum bibendum. Sed euismod, nisl id varius la';
-            let formatedResponse = this.utils._converttext(debugPhrase);
+            // let formatedResponse = this.utils._converttext(debugPhrase);
             responseChat?.label.clutter_text.set_markup(
-                '<b>Gemini: </b> ' + formatedResponse,
+                '<b>Gemini: </b> ' + debugPhrase,
             );
 
             this.ui.searchEntry.clutter_text.reactive = true;
@@ -287,11 +284,15 @@ const Aiva = GObject.registerClass(
             this.ui.searchEntry.clutter_text.activatable = true;
             this.ui.searchEntry.clutter_text.hover = true;
 
+            responseChat.label.clutter_text.line_wrap = true;
+            responseChat.label.clutter_text.justify = true;
             // responseChat.label.clutter_text.selected_text_color = '#000000';
             // responseChat.label.clutter_text.selection_color = '#000000';
             // responseChat.label.clutter_text.selected_background_color =
             //     '#000000';
             // responseChat.label.clutter_text.selected_background_opacity = 0.5;
+
+            inputChat.label.clutter_text.line_wrap = true;
 
             // Scroll down
             this.utils.scrollToBottom();
