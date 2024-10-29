@@ -282,18 +282,6 @@ const Aiva = GObject.registerClass(
             responseChat.label.clutter_text.justify = true;
             responseChat.label.clutter_text.selected_text_color = '#000000';
             responseChat.label.clutter_text.selection_color = '#000000';
-
-            // Change responseChat clutter_text selected text colors
-            responseChat.connect('selection-changed', (_self) => {
-                log('selection');
-                let selectedText = _self.get_selected_text();
-                if (selectedText) {
-                    _self.set_style_class_name('selected-text');
-                } else {
-                    _self.set_style_class_name('');
-                }
-            });
-
             //
             // END DEBUG
         }
