@@ -148,11 +148,14 @@ const Aiva = GObject.registerClass(
 
             // Add items container to menu
             this.menu.addMenuItem(this.ui.item);
-            this.menu.style_class = 'menu';
+            // this.menu.style_class = 'menu';
 
             // Add scrollview to menu box
             this.menu.box.add_child(this.ui.scrollView);
-            this.menu.box.style_class = 'menu-box';
+            // Enable menu box vertical expand
+            this.menu.box.x_expand = true;
+            this.menu.box.y_expand = true;
+            // this.menu.box.style_class = 'menu-box';
 
             // Add chat to scrollbar
             this.ui.scrollView.add_child(this.ui.chatSection.actor);
