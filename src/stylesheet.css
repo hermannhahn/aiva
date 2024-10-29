@@ -4,11 +4,9 @@
     height: 20px !important;
     border-radius: 10px;
     text-wrap: wrap;
-    z-index: 1000;
 }
 .app-item {
     height: 50px;
-    z-index: 1000;
     position: relative; /* Para garantir que o container fixo fique acima */
     display: flex;
     align-items: center;
@@ -25,7 +23,6 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    z-index: 1;
     border-radius: 10px;
 }
 .menu-box::selection {
@@ -36,7 +33,6 @@
     text-wrap: wrap;
     text-align: justify;
     word-wrap: break-word;
-    z-index: 1;
 }
 .response-chat::selection {
     color: rgb(24, 24, 24);
@@ -46,15 +42,14 @@
     text-wrap: wrap;
     text-align: justify;
     word-wrap: break-word;
-    z-index: 1;
 }
 .input-chat::selection {
     color: rgb(24, 24, 24);
 }
 .chat-scroll-section {
-    overflow-y: hidden;
-    z-index: 1;
+    overflow-y: auto;
     padding-right: 10px;
+    padding-bottom: 10px;
     max-height: 750px;
 }
 .chat-scroll-section::selection {
@@ -64,7 +59,6 @@
     color: rgb(243, 232, 212);
     text-wrap: wrap;
     word-wrap: break-word;
-    z-index: 1;
     padding: 10px;
 }
 .chat-section::selection {
