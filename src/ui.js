@@ -27,6 +27,7 @@ export class AppLayout {
             name: 'searchEntry',
             style_class: 'searchEntry',
             hint_text: _('Ask me anything...'),
+            track_hover: true,
             x_expand: true,
             can_focus: false,
         });
