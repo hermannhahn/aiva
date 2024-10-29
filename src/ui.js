@@ -18,8 +18,7 @@ export class AppLayout {
         // Create app item section
         this.item = new PopupMenu.PopupBaseMenuItem({
             style_class: 'app-item',
-            reactive: false,
-            can_focus: true,
+            can_focus: false,
         });
 
         // Create search entry
@@ -28,29 +27,34 @@ export class AppLayout {
             style_class: 'searchEntry',
             hint_text: _('Ask me anything...'),
             x_expand: true,
+            can_focus: true,
         });
 
         // Create voice activation button
         this.micButton = new St.Button({
             style_class: 'mic-icon',
             toggle_mode: true,
+            can_focus: false,
         });
 
         // Create clear history button
         this.clearButton = new St.Button({
             style_class: 'trash-icon',
             toggle_mode: true,
+            can_focus: false,
         });
 
         // Create settings button
         this.settingsButton = new St.Button({
             style_class: 'settings-icon',
             toggle_mode: true,
+            can_focus: false,
         });
 
         // Create chat section
         this.chatSection = new PopupMenu.PopupMenuSection({
             style_class: 'chat-section',
+            can_focus: false,
         });
         this.chatSection.actor.style_class = 'chat-section';
 
@@ -58,19 +62,23 @@ export class AppLayout {
         this.scrollView = new St.ScrollView({
             style_class: 'chat-scroll-section',
             overlay_scrollbars: false,
+            can_focus: false,
         });
 
         // Create input and response chat items
         this.inputChat = new PopupMenu.PopupMenuItem('', {
             style_class: 'input-chat',
+            can_focus: true,
         });
         this.responseChat = new PopupMenu.PopupMenuItem('', {
             style_class: 'response-chat',
+            can_focus: true,
         });
 
         // Create copy button
         this.copyButton = new PopupMenu.PopupMenuItem('', {
             style_class: 'copy-icon',
+            can_focus: false,
         });
 
         // Separator
