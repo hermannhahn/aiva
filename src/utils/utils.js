@@ -342,9 +342,8 @@ export class Utils {
         }
     }
 
-    copySelectedText() {
-        let selectedText =
-            this.app.ui.responseChat.label.clutter_text.get_selection();
+    copySelectedText(responseChat, copyButton) {
+        let selectedText = responseChat.label.clutter_text.get_selection();
         if (selectedText) {
             this.app.extension.clipboard.set_text(
                 St.ClipboardType.CLIPBOARD,
@@ -352,12 +351,12 @@ export class Utils {
                 selectedText,
             );
             // Create label
-            if (this.app.ui.copyButton) {
-                this.app.ui.copyButton.label.clutter_text.set_markup(
+            if (copyButton) {
+                copyButton.label.clutter_text.set_markup(
                     _('[ Selected Copied ]'),
                 );
                 GLib.timeout_add(GLib.PRIORITY_DEFAULT, 3000, () => {
-                    this.app.ui.copyButton.label.clutter_text.set_markup('');
+                    copyButton.label.clutter_text.set_markup('');
                     return false; // Para garantir que o timeout execute apenas uma vez
                 });
             }
@@ -365,18 +364,16 @@ export class Utils {
             this.app.extension.clipboard.set_text(
                 St.ClipboardType.CLIPBOARD,
                 // Get text selection
-                this.app.ui.responseChat.label.text,
+                responseChat.label.text,
             );
-            if (this.app.ui.copyButton) {
-                this.app.ui.copyButton.label.clutter_text.set_markup(
-                    _('[ Copied ]'),
-                );
+            if (copyButton) {
+                copyButton.label.clutter_text.set_markup(_('[ Copied ]'));
                 GLib.timeout_add(GLib.PRIORITY_DEFAULT, 3000, () => {
-                    this.app.ui.copyButton.label.clutter_text.set_markup('');
+                    copyButton.label.clutter_text.set_markup('');
                     return false; // Para garantir que o timeout execute apenas uma vez
                 });
             }
-            this.log(`Texto copiado: ${this.app.ui.responseChat.label.text}`);
+            this.log(`Texto copiado: ${responseChat.label.text}`);
         }
     }
 
