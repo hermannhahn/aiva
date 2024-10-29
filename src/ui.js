@@ -18,8 +18,6 @@ export class AppLayout {
         // Create app item section
         this.item = new PopupMenu.PopupBaseMenuItem({
             style_class: 'app-item',
-            reactive: false,
-            can_focus: false,
         });
 
         // Create search entry
@@ -27,44 +25,35 @@ export class AppLayout {
             name: 'searchEntry',
             style_class: 'searchEntry',
             hint_text: _('Ask me anything...'),
-            reactive: true,
-            can_focus: false,
             x_expand: true,
         });
 
         // Create voice activation button
         this.micButton = new St.Button({
             style_class: 'mic-icon',
-            can_focus: false,
             toggle_mode: true,
         });
 
         // Create clear history button
         this.clearButton = new St.Button({
             style_class: 'trash-icon',
-            can_focus: false,
             toggle_mode: true,
         });
 
         // Create settings button
         this.settingsButton = new St.Button({
             style_class: 'settings-icon',
-            can_focus: false,
             toggle_mode: true,
         });
 
         // Create chat section
         this.chatSection = new PopupMenu.PopupMenuSection({
             style_class: 'chat-section',
-            reactive: true,
-            can_focus: false,
-            can_focus_in_child: false,
         });
 
         // Create scrollbar
         this.scrollView = new St.ScrollView({
             style_class: 'chat-scroll-section',
-            reactive: true,
             overlay_scrollbars: false,
         });
 
@@ -72,22 +61,15 @@ export class AppLayout {
         this.inputChat = new PopupMenu.PopupMenuItem('', {
             style_class: 'input-chat',
             reactive: true,
-            can_focus: false,
-            hover: true,
         });
         this.responseChat = new PopupMenu.PopupMenuItem('', {
             style_class: 'response-chat',
             reactive: true,
-            can_focus: false,
-            hover: true,
         });
 
         // Create copy button
         this.copyButton = new PopupMenu.PopupMenuItem('', {
             style_class: 'copy-icon',
-            reactive: true,
-            can_focus: false,
-            hover: true,
         });
 
         // Separator
