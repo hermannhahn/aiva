@@ -2,7 +2,7 @@
 .searchEntry {
     width: 250px;
     height: 20px !important;
-    border-radius: 50px;
+    border-radius: 10px;
     text-wrap: wrap;
     z-index: 1000;
 }
@@ -15,8 +15,7 @@
     justify-content: center;
 }
 .menu {
-    z-index: 1;
-    position: relative;
+    max-height: 750px;
 }
 .menu-box {
     color: aliceblue;
@@ -28,7 +27,6 @@
     position: relative;
     z-index: 1;
     border-radius: 10px;
-    max-height: 750px;
 }
 .menu-box::selection {
     color: black;
@@ -56,9 +54,8 @@
 .chat-scroll-section {
     overflow-y: hidden;
     padding: 5px;
-    margin-left: 10px;
-    margin-right: 10px;
-    max-height: 750px;
+    margin-left: 5px;
+    z-index: 1;
 }
 .chat-scroll-section::selection {
     color: black;
@@ -67,6 +64,7 @@
     color: rgb(243, 232, 212);
     text-wrap: wrap;
     word-wrap: break-word;
+    z-index: 1;
 }
 .chat-section::selection {
     color: black;
