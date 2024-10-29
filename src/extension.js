@@ -218,8 +218,8 @@ const Aiva = GObject.registerClass(
             inputChat.label.clutter_text.reactive = true;
             inputChat.label.clutter_text.selectable = true;
             inputChat.label.clutter_text.hover = true;
-            inputChat.label.clutter_text.x_expand = true;
-            inputChat.label.clutter_text.y_expand = true;
+            inputChat.label.x_expand = true;
+            inputChat.label.y_expand = true;
             this.ui.inputChat = inputChat;
 
             // Response
@@ -230,8 +230,8 @@ const Aiva = GObject.registerClass(
             responseChat.label.clutter_text.reactive = true;
             responseChat.label.clutter_text.selectable = true;
             responseChat.label.clutter_text.hover = true;
-            responseChat.label.clutter_text.x_expand = true;
-            responseChat.label.clutter_text.y_expand = true;
+            responseChat.label.x_expand = true;
+            responseChat.label.y_expand = true;
             this.ui.responseChat = responseChat;
 
             // Copy Button
