@@ -286,9 +286,9 @@ const Aiva = GObject.registerClass(
 
             responseChat.label.clutter_text.line_wrap = true;
             responseChat.label.clutter_text.justify = true;
-            responseChat.actor.set_vexpand(true); // Permite expansão vertical
-            responseChat.actor.set_hexpand(false); // Evita expansão horizontal indesejada
-            responseChat.actor.set_height(-1); // Define altura flexível baseada no conteúdo
+            responseChat.label.set_vexpand(true); // Permite expansão vertical
+            responseChat.label.set_hexpand(false); // Evita expansão horizontal indesejada
+            responseChat.label.set_height(-1); // Define altura flexível baseada no conteúdo
             this.ui.chatSection.actor.set_vexpand(true); // Permite que o chatSection cresça conforme necessário
             this.ui.chatSection.actor.set_height(-1); // Define altura flexível baseada nos filhos
             this.ui.scrollView.set_policy(
