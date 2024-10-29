@@ -67,6 +67,7 @@
     background-color: rgb(42, 42, 42);
 }
 .chat-section {
+    overflow-y: auto;
     color: rgb(243, 232, 212);
     text-wrap: wrap;
     word-wrap: break-word;
