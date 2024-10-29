@@ -214,24 +214,24 @@ const Aiva = GObject.registerClass(
             let inputChat = new PopupMenu.PopupMenuItem('', {
                 style_class: 'input-chat',
                 can_focus: false,
-                x_expand: true,
-                y_expand: true,
             });
             inputChat.label.clutter_text.reactive = true;
             inputChat.label.clutter_text.selectable = true;
             inputChat.label.clutter_text.hover = true;
+            inputChat.label.clutter_text.x_expand = true;
+            inputChat.label.clutter_text.y_expand = true;
             this.ui.inputChat = inputChat;
 
             // Response
             let responseChat = new PopupMenu.PopupMenuItem('', {
                 style_class: 'response-chat',
                 can_focus: false,
-                x_expand: true,
-                y_expand: true,
             });
             responseChat.label.clutter_text.reactive = true;
             responseChat.label.clutter_text.selectable = true;
             responseChat.label.clutter_text.hover = true;
+            inputChat.label.clutter_text.x_expand = true;
+            inputChat.label.clutter_text.y_expand = true;
             this.ui.responseChat = responseChat;
 
             // Copy Button
