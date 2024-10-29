@@ -18,7 +18,6 @@ export class AppLayout {
         // Create app item section
         this.item = new PopupMenu.PopupBaseMenuItem({
             style_class: 'app-item',
-            hover: false,
         });
 
         // Create search entry
@@ -50,6 +49,7 @@ export class AppLayout {
         // Create chat section
         this.chatSection = new PopupMenu.PopupMenuSection({
             style_class: 'chat-section',
+            hover: false,
         });
 
         // Create scrollbar
