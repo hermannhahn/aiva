@@ -29,6 +29,7 @@
     background-color: rgb(42, 42, 42);
 }
 .response-chat {
+    overflow-y: auto;
     color: rgb(243, 232, 212);
     background-color: rgb(42, 42, 42);
     text-wrap: wrap;
@@ -44,6 +45,7 @@
     background-color: rgb(42, 42, 42);
 }
 .input-chat {
+    overflow-y: auto;
     color: rgb(243, 232, 212);
     text-wrap: wrap;
     text-align: justify;
