@@ -57,6 +57,8 @@ export class AppLayout {
         this.chatSection = new PopupMenu.PopupMenuSection({
             style_class: 'chat-section',
             can_focus: false,
+            x_expand: true,
+            y_expand: true,
         });
         this.chatSection.actor.style_class = 'chat-section';
 
@@ -71,14 +73,10 @@ export class AppLayout {
         this.inputChat = new PopupMenu.PopupMenuItem('', {
             style_class: 'input-chat',
             can_focus: false,
-            x_expand: true,
-            y_expand: true,
         });
         this.responseChat = new PopupMenu.PopupMenuItem('', {
             style_class: 'response-chat',
             can_focus: false,
-            x_expand: true,
-            y_expand: true,
         });
 
         // Create copy button
