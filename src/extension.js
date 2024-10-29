@@ -248,7 +248,7 @@ const Aiva = GObject.registerClass(
 
             // add copy button
             copyButton.connect('activate', (_self) => {
-                this.utils.copySelectedText();
+                this.utils.copySelectedText(responseChat, copyButton);
             });
 
             // Format question
