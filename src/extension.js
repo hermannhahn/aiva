@@ -148,17 +148,19 @@ const Aiva = GObject.registerClass(
 
             // Add items container to menu
             this.menu.addMenuItem(this.ui.item);
-            // this.menu.style_class = 'menu';
+            this.menu.style_class = 'menu';
 
             // Add scrollview to menu box
             this.menu.box.add_child(this.ui.scrollView);
             // Enable menu box vertical expand
             this.menu.box.x_expand = true;
             this.menu.box.y_expand = true;
-            // this.menu.box.style_class = 'menu-box';
+            this.menu.box.style_class = 'menu-box';
 
             // Add chat to scrollbar
             this.ui.scrollView.add_child(this.ui.chatSection.actor);
+            this.ui.scrollView.x_expand = true;
+            this.ui.scrollView.y_expand = true;
 
             // Add search entry, mic button, clear button and settings button to items container
             this.ui.item.add_child(this.ui.searchEntry);
@@ -221,8 +223,6 @@ const Aiva = GObject.registerClass(
             inputChat.label.clutter_text.reactive = true;
             inputChat.label.clutter_text.selectable = true;
             inputChat.label.clutter_text.hover = true;
-            inputChat.label.x_expand = true;
-            inputChat.label.y_expand = true;
             this.ui.inputChat = inputChat;
 
             // Response
@@ -233,8 +233,6 @@ const Aiva = GObject.registerClass(
             responseChat.label.clutter_text.reactive = true;
             responseChat.label.clutter_text.selectable = true;
             responseChat.label.clutter_text.hover = true;
-            responseChat.label.x_expand = true;
-            responseChat.label.y_expand = true;
             this.ui.responseChat = responseChat;
 
             // Copy Button
@@ -286,7 +284,8 @@ const Aiva = GObject.registerClass(
             this.ui.searchEntry.clutter_text.activatable = true;
             this.ui.searchEntry.clutter_text.hover = true;
 
-            responseChat.label.clutter_text.line_wrap = true;
+            // responseChat.label.clutter_text.line_wrap = true;
+            responseChat.label.clutter_text.wrap = true;
             responseChat.label.clutter_text.justify = true;
 
             // responseChat.label.clutter_text.selected_text_color = '#000000';
@@ -295,7 +294,7 @@ const Aiva = GObject.registerClass(
             //     '#000000';
             // responseChat.label.clutter_text.selected_background_opacity = 0.5;
 
-            inputChat.label.clutter_text.line_wrap = true;
+            inputChat.label.clutter_text.wrap = true;
 
             // Scroll down
             this.utils.scrollToBottom();
