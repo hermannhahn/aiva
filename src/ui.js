@@ -81,9 +81,6 @@ export class AppLayout {
             style_class: 'response-chat',
             can_focus: false,
         });
-        this.responseChat.label.set_vexpand(true); // Permite expansão vertical
-        this.responseChat.label.set_hexpand(false); // Evita expansão horizontal indesejada
-        this.responseChat.label.set_height(-1); // Define altura flexível baseada no conteúdo
 
         // Create copy button
         this.copyButton = new PopupMenu.PopupMenuItem('', {
