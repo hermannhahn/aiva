@@ -55,6 +55,7 @@
 .chat-scroll-section {
     overflow-y: hidden;
     z-index: 1;
+    padding-right: 5px;
 }
 .chat-scroll-section::selection {
     color: black;
@@ -64,7 +65,8 @@
     text-wrap: wrap;
     word-wrap: break-word;
     z-index: 1;
-    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .chat-section::selection {
     color: black;
