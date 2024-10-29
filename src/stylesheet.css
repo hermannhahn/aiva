@@ -203,6 +203,6 @@
     height: 0;
 }
 .selected-text {
-    color: black;
+    color: rgb(221, 13, 13);
     font-weight: bold;
 }
