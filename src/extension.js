@@ -213,16 +213,24 @@ const Aiva = GObject.registerClass(
             // Create question
             let inputChat = new PopupMenu.PopupMenuItem('', {
                 style_class: 'input-chat',
-                reactive: true,
-                selectable: true,
+                label: {
+                    clutter_text: {
+                        reactive: true,
+                        selectable: true,
+                    },
+                },
             });
             this.ui.inputChat = inputChat;
 
             // Create response
             let responseChat = new PopupMenu.PopupMenuItem('', {
                 style_class: 'response-chat',
-                reactive: true,
-                selectable: true,
+                label: {
+                    clutter_text: {
+                        reactive: true,
+                        selectable: true,
+                    },
+                },
             });
             this.ui.responseChat = responseChat;
 
