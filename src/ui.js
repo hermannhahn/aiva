@@ -68,6 +68,8 @@ export class AppLayout {
             style_class: 'chat-scroll-section',
             overlay_scrollbars: false,
             can_focus: false,
+            x_expand: true,
+            y_expand: true,
         });
 
         // Create input and response chat items
