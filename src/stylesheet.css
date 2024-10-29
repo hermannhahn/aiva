@@ -29,9 +29,6 @@
     background-color: rgb(42, 42, 42);
 }
 .response-chat {
-    max-width: 800px;
-    max-height: 600px;
-    overflow-y: auto;
     color: rgb(243, 232, 212);
     background-color: rgb(42, 42, 42);
     text-wrap: wrap;
@@ -46,9 +43,6 @@
     background-color: rgb(42, 42, 42);
 }
 .input-chat {
-    max-width: 800px;
-    max-height: 600px;
-    overflow-y: auto;
     color: rgb(243, 232, 212);
     text-wrap: wrap;
     text-align: justify;
@@ -58,7 +52,9 @@
     background-color: rgb(42, 42, 42);
 }
 .chat-scroll-section {
-    overflow: auto;
+    max-width: 800px;
+    max-height: 600px;
+    overflow: scroll;
     padding-right: 10px;
     padding-bottom: 10px;
 }
@@ -66,7 +62,7 @@
     background-color: rgb(42, 42, 42);
 }
 .chat-section {
-    overflow-y: auto;
+    overflow-y: scroll;
     color: rgb(243, 232, 212);
     text-wrap: wrap;
     word-wrap: break-word;
