@@ -6,7 +6,6 @@
     text-wrap: wrap;
 }
 .app-item {
-    height: 50px;
     position: relative; /* Para garantir que o container fixo fique acima */
     display: flex;
     align-items: center;
@@ -60,7 +59,6 @@
     overflow-y: auto;
     padding-right: 10px;
     padding-bottom: 10px;
-    max-height: 750px;
 }
 .chat-scroll-section::selection {
     background-color: rgb(42, 42, 42);
@@ -71,6 +69,7 @@
     word-wrap: break-word;
     padding-left: 10px;
     padding-right: 10px;
+    padding-bottom: 10px;
 }
 .chat-section::selection {
     background-color: rgb(42, 42, 42);
