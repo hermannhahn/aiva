@@ -283,15 +283,15 @@ const Aiva = GObject.registerClass(
             this.ui.searchEntry.clutter_text.activatable = true;
             this.ui.searchEntry.clutter_text.hover = true;
 
-            // responseChat.label.clutter_text.line_wrap = true;
-            // responseChat.label.clutter_text.justify = true;
+            responseChat.label.clutter_text.line_wrap = true;
+            responseChat.label.clutter_text.justify = true;
             // responseChat.label.clutter_text.selected_text_color = '#000000';
             // responseChat.label.clutter_text.selection_color = '#000000';
             // responseChat.label.clutter_text.selected_background_color =
             //     '#000000';
             // responseChat.label.clutter_text.selected_background_opacity = 0.5;
 
-            // inputChat.label.clutter_text.line_wrap = true;
+            inputChat.label.clutter_text.line_wrap = true;
 
             // Scroll down
             this.utils.scrollToBottom();
