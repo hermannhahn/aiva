@@ -238,6 +238,7 @@ const Aiva = GObject.registerClass(
             this.ui.chatSection.addMenuItem(inputChat);
             this.ui.chatSection.addMenuItem(responseChat);
             this.ui.chatSection.addMenuItem(copyButton);
+            this.ui.chatSection.addMenuItem(this.ui.newSeparator);
 
             // add copy button
             copyButton.connect('activate', (_self) => {
@@ -258,9 +259,6 @@ const Aiva = GObject.registerClass(
 
             // Get ai response for user question
             this.response(userQuestion);
-
-            // Add separator to chat
-            this.ui.chatSection.addMenuItem(this.ui.newSeparator);
 
             // DEBUG
             // let debugPhrase =
