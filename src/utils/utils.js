@@ -365,7 +365,7 @@ export class Utils {
             this.app.extension.clipboard.set_text(
                 St.ClipboardType.CLIPBOARD,
                 // Get text selection
-                this.app.responseChat.label.text,
+                this.app.ui.responseChat.label.text,
             );
             if (this.app.ui.copyButton) {
                 this.app.ui.copyButton.label.clutter_text.set_markup(
