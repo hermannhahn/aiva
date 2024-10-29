@@ -175,12 +175,6 @@ const Aiva = GObject.registerClass(
                 this.chat(question);
             });
 
-            // If click on input box
-            this.ui.searchEntry.connect('clicked', (_self) => {
-                this.ui.searchEntry.clutter_text.set_cursor_position(0);
-                this.ui.searchEntry.clutter_text.set_selection(0, 0);
-            });
-
             // If press mic button
             this.ui.micButton.connect('clicked', (_self) => {
                 this.audio.record();
