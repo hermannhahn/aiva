@@ -59,7 +59,7 @@
     color: white;
 } */
 .input-chat::selection {
-    color: black;
+    color: rgb(24, 24, 24);
 }
 .chat-scroll-section {
     overflow-y: auto;
