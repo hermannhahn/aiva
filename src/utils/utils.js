@@ -157,8 +157,6 @@ export class Utils {
             lineLength - words.reduce((sum, word) => sum + word.length, 0);
         const spacesPerGap = Math.floor(totalSpaces / words.length - 1);
         const extraSpaces = totalSpaces % (words.length - 1);
-        const lastWordLength = words[words.length].length;
-        const lastGapLength = lastWordLength + extraSpaces;
 
         return words.reduce((justifiedLine, word, index) => {
             justifiedLine += word;
@@ -168,11 +166,6 @@ export class Utils {
             }
             if (index === 0) {
                 justifiedLine += word;
-                return justifiedLine;
-            }
-
-            if (index === lastGapLength) {
-                justifiedLine += spaceChar.repeat(lastGapLength);
                 return justifiedLine;
             }
             return justifiedLine;
