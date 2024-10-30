@@ -57,7 +57,7 @@ export class Utils {
      *
      * @description Insert lines breaks and justify
      */
-    textformat(text) {
+    _Offtextformat(text) {
         const LINE_LENGTH = 100; // Max line length
         const SPACE_CHAR = '\x20';
         const NEW_LINE_CHAR = '\n';
@@ -106,8 +106,8 @@ export class Utils {
         return result;
     }
 
-    _Offtextformat(text) {
-        const LINE_LENGTH = 100; // Max line length
+    textformat(text) {
+        const LINE_LENGTH = 90; // Max line length
         const SPACE_CHAR = '\x20';
         const NEW_LINE_CHAR = '\n';
 
