@@ -266,6 +266,10 @@ const Aiva = GObject.registerClass(
             // Get ai response for user question
             // this.response(userQuestion);
 
+            responseChat.label.clutter_text.line_wrap = true;
+            inputChat.label.clutter_text.line_wrap = true;
+            responseChat.label.clutter_text.justify = true;
+
             // DEBUG
             let debugPhrase =
                 'A Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl id varius lacinia, lectus quam laoreet libero, at laoreet lectus lectus eu quam. Maecenas vitae lacus sit amet justo ultrices condimentum. Maecenas id dolor vitae quam semper blandit. Aenean sed sapien ut ante elementum bibendum. Sed euismod, nisl id varius lacinia, lectus quam laoreet libero, at laoreet lectus lectus eu quam. Maecenas vitae lacus sit amet justo ultrices condimentum. Maecenas id dolor vitae quam semper blandit. Aenean sed sapien ut ante elementum bibendum. Sed euismod, nisl id varius lacinia, lectus quam laoreet libero, at laoreet lectus lectus eu quam. Maecenas vitae lacus sit amet justo ultrices condimentum. Maecenas id dolor vitae quam semper blandit. Aenean sed sapien ut ante elementum bibendum. Sed euismod, nisl id varius lacinia, lectus quam laoreet libero, at laoreet lectus lectus eu quam. Maecenas vitae lacus sit amet justo ultrices condimentum. Maecenas id dolor vitae quam semper blandit. Aenean sed sapien ut ante elementum bibendum. Sed euismod, nisl id varius lacinia, lectus quam laoreet libero, at laoreet lectus lectus eu quam. Maecenas vitae lacus sit amet justo ultrices condimentum. Maecenas id dolor vitae quam semper blandit. Aenean sed sapien ut ante elementum bibendum. Sed euismod, nisl id varius lacinia, lectus quam laoreet libero, at laoreet lectus lectus eu quam. Maecenas vitae lacus sit amet justo ultrices condimentum. Maecenas id dolor vitae quam semper blandit. Aenean sed sapien ut ante elementum bibendum. Sed euismod, nisl id varius lacinia, lectus quam laoreet libero, at laoreet lectus lectus eu quam. Maecenas vitae lacus sit amet justo ultrices condimentum. Maecenas id dolor vitae quam semper blandit. Aenean sed sapien ut ante elementum bibendum. Sed euismod, nisl id varius la';
@@ -280,12 +284,10 @@ const Aiva = GObject.registerClass(
             this.ui.searchEntry.clutter_text.activatable = true;
             this.ui.searchEntry.clutter_text.hover = true;
 
-            // responseChat.label.clutter_text.line_wrap = true;
-            responseChat.label.clutter_text.justify = true;
-            // inputChat.label.clutter_text.line_wrap = true;
-
             // Scroll down
             this.utils.scrollToBottom();
+            responseChat.label.clutter_text.line_wrap = false;
+            inputChat.label.clutter_text.line_wrap = false;
             //
             // END DEBUG
         }
