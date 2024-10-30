@@ -125,7 +125,6 @@ export class Utils {
                 justifiedLine += SPACE_CHAR;
             }
             if (extraSpaces > 0) extraSpaces--;
-            justifiedLine += SPACE_CHAR;
         }
         justifiedLine += words[words.length - 1];
         return justifiedLine;
