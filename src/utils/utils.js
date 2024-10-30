@@ -57,7 +57,7 @@ export class Utils {
      *
      * @description Insert lines breaks and justify
      */
-    _Offtextformat(text) {
+    textformat(text) {
         const LINE_LENGTH = 100; // Max line length
         const SPACE_CHAR = '\x20';
         const NEW_LINE_CHAR = '\n';
@@ -91,7 +91,6 @@ export class Utils {
                     result +=
                         this._justifyLine(
                             currentLine,
-                            currentPoints,
                             LINE_LENGTH,
                             SPACE_CHAR,
                         ) + NEW_LINE_CHAR;
@@ -107,7 +106,7 @@ export class Utils {
         return result;
     }
 
-    textformat(text) {
+    _Offtextformat(text) {
         const LINE_LENGTH = 100; // Max line length
         const SPACE_CHAR = '\x20';
         const NEW_LINE_CHAR = '\n';
@@ -149,7 +148,7 @@ export class Utils {
         return result;
     }
 
-    _OffjustifyLine(words, lineLength, spaceChar) {
+    _justifyLine(words, lineLength, spaceChar) {
         if (words.length <= 1) {
             return words.join(spaceChar);
         }
@@ -189,52 +188,6 @@ export class Utils {
             return 0.5; // Short character
         }
         return 1; // Other character
-    }
-
-    _justifyLine(words, LINE_LENGTH, SPACE_CHAR) {
-        if (words.length <= 1) {
-            return words.join(spaceChar);
-        }
-        if (words.length <= 5) return words[0]; // Dont justify if is smaller then five words.
-
-        let spaceChar = '\x20';
-        // Calculate spaces needed
-        const totalSpaces =
-            LINE_LENGTH - words.reduce((sum, word) => sum + word.length, 0);
-        const spacesPerGap = Math.floor(totalSpaces / (words.length - 1));
-        let extraSpaces = totalSpaces % (words.length - 1);
-
-        // Calculate spaces needed
-        const spacesNeeded =
-            LINE_LENGTH -
-            words.reduce((justifiedLine, word, index) => {
-                justifiedLine += word;
-                justifiedLine += spaceChar.repeat(spacesPerGap);
-                if (index < extraSpaces) {
-                    justifiedLine += spaceChar;
-                }
-                return justifiedLine;
-            }, '');
-
-        const numGaps = words.length - 1; // Gaps betwen words
-
-        const spaceWidth = Math.floor(spacesNeeded / numGaps); // Uniform spaces
-        extraSpaces = spacesNeeded % numGaps; // Extra spaces
-
-        let justifiedLine = `${SPACE_CHAR}`;
-
-        for (let i = 0; i < words.length - 1; i++) {
-            justifiedLine += words[i];
-            // Add extra spaces in first lines
-            justifiedLine += SPACE_CHAR.repeat(
-                spaceWidth + (extraSpaces > 0 ? 1 : 0),
-            );
-            if (extraSpaces > 0) extraSpaces--;
-        }
-
-        justifiedLine += words[words.length - 1]; // Add the last word
-
-        return justifiedLine;
     }
 
     scrollToBottom() {
