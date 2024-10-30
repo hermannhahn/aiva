@@ -157,12 +157,11 @@ export class Utils {
             lineLength - words.reduce((sum, word) => sum + word.length, 0);
         const spacesPerGap = Math.floor(totalSpaces / words.length);
         const extraSpaces = totalSpaces % words.length;
-        // let extraSpaces = totalSpaces;
         return words.reduce((justifiedLine, word, index) => {
             justifiedLine += word;
             justifiedLine += spaceChar.repeat(spacesPerGap);
             if (index < extraSpaces) {
-                justifiedLine += spaceChar;
+                justifiedLine += spaceChar + spaceChar;
             }
             return justifiedLine;
         }, '');
