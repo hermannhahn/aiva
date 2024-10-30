@@ -117,17 +117,15 @@ export class Utils {
         let extraSpaces = spacesNeeded % numGaps; // Extra spaces
 
         let justifiedLine = `${SPACE_CHAR}`;
-        words.forEach((word, index) => {
-            justifiedLine += word;
-            if (
-                extraSpaces > 0 ||
-                index < words.length - 1 ||
-                index < extraSpaces
-            ) {
-                justifiedLine += `${SPACE_CHAR}`;
-                extraSpaces--;
+
+        justifiedLine = words.reduce((line, word, index) => {
+            line += word;
+            line += SPACE_CHAR.repeat(spaceWidth);
+            if (index < extraSpaces) {
+                line += SPACE_CHAR;
             }
-        });
+            return line;
+        }, '');
         return justifiedLine;
     }
 
