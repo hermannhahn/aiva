@@ -59,7 +59,7 @@ export class Utils {
      */
     textformat(text) {
         const LINE_LENGTH = 100; // Max line length
-        const SPACE_CHAR = '\x20';
+        const SPACE_CHAR = ' ';
         const NEW_LINE_CHAR = '\n';
 
         text = this._converttext(text);
@@ -107,7 +107,7 @@ export class Utils {
     }
 
     _justifyLine(words, TOTAL_POINTS, LINE_LENGTH) {
-        const SPACE_CHAR = '\x20';
+        const SPACE_CHAR = ' ';
         if (words.length <= 5) return words[0]; // Dont justify if is smaller then five words.
 
         const spacesNeeded = LINE_LENGTH - TOTAL_POINTS; // Necessary spaces
@@ -117,16 +117,18 @@ export class Utils {
         let extraSpaces = spacesNeeded % numGaps; // Extra spaces
 
         let justifiedLine = `${SPACE_CHAR}`;
-
-        for (let i = 0; i < words.length - 1; i++) {
-            justifiedLine += words[i];
-            // Add extra spaces in first lines
-            for (let j = 0; j < spaceWidth; j++) {
-                justifiedLine += SPACE_CHAR;
+        words.forEach((word, index) => {
+            justifiedLine += word;
+            if (
+                extraSpaces > 0 ||
+                index < words.length - 1 ||
+                index < extraSpaces
+            ) {
+                justifiedLine += `${SPACE_CHAR}`;
+                extraSpaces--;
             }
-            if (extraSpaces > 0) extraSpaces--;
-        }
-        justifiedLine += words[words.length - 1];
+            justifiedLine += `${SPACE_CHAR}`.repeat(spaceWidth);
+        });
         return justifiedLine;
     }
 
