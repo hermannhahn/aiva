@@ -107,7 +107,7 @@ export class Utils {
     }
 
     textformat(text) {
-        const LINE_LENGTH = 95; // Max line length
+        const LINE_LENGTH = 100; // Max line length
         const SPACE_CHAR = '\x20';
         const NEW_LINE_CHAR = '\n';
 
@@ -155,18 +155,14 @@ export class Utils {
 
         const totalSpaces =
             lineLength - words.reduce((sum, word) => sum + word.length, 0);
-        const spacesPerGap = Math.floor(totalSpaces / words.length - 1);
-        const extraSpaces = totalSpaces % words.length;
+        const spacesPerGap = Math.floor(totalSpaces / (words.length - 1));
+        const extraSpaces = totalSpaces % (words.length - 1);
 
         return words.reduce((justifiedLine, word, index) => {
             justifiedLine += word;
             justifiedLine += spaceChar.repeat(spacesPerGap);
             if (index < extraSpaces) {
-                justifiedLine += spaceChar + spaceChar;
-            }
-            if (index === 0) {
-                justifiedLine += word;
-                return justifiedLine;
+                justifiedLine += spaceChar;
             }
             return justifiedLine;
         }, '');
