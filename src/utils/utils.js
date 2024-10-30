@@ -107,7 +107,7 @@ export class Utils {
     }
 
     textformat(text) {
-        const LINE_LENGTH = 50; // Max line length
+        const LINE_LENGTH = 90; // Max line length
         const SPACE_CHAR = '\x20';
         const NEW_LINE_CHAR = '\n';
 
