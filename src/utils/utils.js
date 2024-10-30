@@ -127,7 +127,6 @@ export class Utils {
                 justifiedLine += `${SPACE_CHAR}`;
                 extraSpaces--;
             }
-            justifiedLine += `${SPACE_CHAR}`.repeat(spaceWidth);
         });
         return justifiedLine;
     }
