@@ -8,9 +8,6 @@
 # Main script starts here #
 ###########################
 
-# Build
-npm run build:install
-
 # Get version from package.json
 VERSION=$(jq -r .version package.json) # E.g. 1.0.0
 
