@@ -106,7 +106,8 @@ export class Utils {
         return result;
     }
 
-    _justifyLine(words, TOTAL_POINTS, LINE_LENGTH, SPACE_CHAR) {
+    _justifyLine(words, TOTAL_POINTS, LINE_LENGTH) {
+        const SPACE_CHAR = '\x20';
         if (words.length <= 5) return words[0]; // Dont justify if is smaller then five words.
 
         const spacesNeeded = LINE_LENGTH - TOTAL_POINTS; // Necessary spaces
@@ -120,14 +121,13 @@ export class Utils {
         for (let i = 0; i < words.length - 1; i++) {
             justifiedLine += words[i];
             // Add extra spaces in first lines
-            justifiedLine += SPACE_CHAR.repeat(
-                spaceWidth + (extraSpaces > 0 ? 1 : 0),
-            );
+            for (let j = 0; j < spaceWidth; j++) {
+                justifiedLine += SPACE_CHAR;
+            }
             if (extraSpaces > 0) extraSpaces--;
+            justifiedLine += SPACE_CHAR;
         }
-
-        justifiedLine += words[words.length - 1]; // Add the last word
-
+        justifiedLine += words[words.length - 1];
         return justifiedLine;
     }
 
