@@ -146,7 +146,6 @@ export class Utils {
 
     _calculatePoints(char) {
         if (
-            char === '!' ||
             char === '`' ||
             char === "'" ||
             char === ':' ||
