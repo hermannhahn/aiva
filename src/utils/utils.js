@@ -159,7 +159,7 @@ export class Utils {
         const extraSpaces = (totalSpaces % words.length) - 1;
         const lastWordLength = words[words.length - 1].length;
         const lastGapLength = lastWordLength + extraSpaces;
-        words[words.length - 1] = words[words.length - 1].padEnd(
+        words[words.length] = words[words.length].padEnd(
             lastGapLength,
             spaceChar,
         );
