@@ -145,16 +145,7 @@ export class Utils {
     }
 
     _calculatePoints(char) {
-        if (
-            char === '`' ||
-            char === "'" ||
-            char === ':' ||
-            char === '(' ||
-            char === ')' ||
-            char === '.' ||
-            char === ',' ||
-            char === ';'
-        ) {
+        if (char === '.' || char === ',' || char === ';') {
             return 0.75; // Short character
         }
         return 1; // Other character
