@@ -107,7 +107,7 @@ export class Utils {
     }
 
     textformat(text) {
-        const LINE_LENGTH = 110; // Max line length
+        const LINE_LENGTH = 95; // Max line length
         const SPACE_CHAR = '\x20';
         const NEW_LINE_CHAR = '\n';
 
@@ -155,8 +155,15 @@ export class Utils {
 
         const totalSpaces =
             lineLength - words.reduce((sum, word) => sum + word.length, 0);
-        const spacesPerGap = Math.floor(totalSpaces / words.length);
-        const extraSpaces = totalSpaces % words.length;
+        const spacesPerGap = Math.floor(totalSpaces / words.length - 1);
+        const extraSpaces = (totalSpaces % words.length) - 1;
+        const lastWordLength = words[words.length - 1].length;
+        const lastGapLength = lastWordLength + extraSpaces;
+        words[words.length - 1] = words[words.length - 1].padEnd(
+            lastGapLength,
+            spaceChar,
+        );
+
         return words.reduce((justifiedLine, word, index) => {
             justifiedLine += word;
             justifiedLine += spaceChar.repeat(spacesPerGap);
