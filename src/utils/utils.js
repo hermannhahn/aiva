@@ -111,11 +111,15 @@ export class Utils {
         if (words.length <= 5) return words[0]; // Dont justify if is smaller then five words.
 
         const spacesNeeded = LINE_LENGTH - TOTAL_POINTS; // Necessary spaces
+        this.log(spacesNeeded);
         const numGaps = words.length - 1; // Gaps betwen words
+        this.log(numGaps);
 
         let spaceWidth = Math.abs(Math.floor(spacesNeeded / numGaps)); // Uniform spaces
+        this.log(spaceWidth);
         // convert number to positive
         let extraSpaces = spacesNeeded % numGaps; // Extra spaces
+        this.log(extraSpaces);
 
         let justifiedLine = `${SPACE_CHAR}`;
 
