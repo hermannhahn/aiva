@@ -159,16 +159,21 @@ export class Utils {
         const extraSpaces = (totalSpaces % words.length) - 1;
         const lastWordLength = words[words.length - 1].length;
         const lastGapLength = lastWordLength + extraSpaces;
-        words[words.length] = words[words.length].padEnd(
-            lastGapLength,
-            spaceChar,
-        );
 
         return words.reduce((justifiedLine, word, index) => {
             justifiedLine += word;
             justifiedLine += spaceChar.repeat(spacesPerGap);
             if (index < extraSpaces) {
                 justifiedLine += spaceChar + spaceChar;
+            }
+            if (index === 0) {
+                justifiedLine += word;
+                return justifiedLine;
+            }
+
+            if (index === lastGapLength) {
+                justifiedLine += spaceChar.repeat(lastGapLength);
+                return justifiedLine;
             }
             return justifiedLine;
         }, '');
