@@ -149,7 +149,7 @@ export class Utils {
         return result;
     }
 
-    _justifyLine(words, lineLength, spaceChar) {
+    _OffjustifyLine(words, lineLength, spaceChar) {
         if (words.length <= 1) {
             return words.join(spaceChar);
         }
@@ -158,7 +158,7 @@ export class Utils {
             lineLength - words.reduce((sum, word) => sum + word.length, 0);
         const spacesPerGap = Math.floor(totalSpaces / (words.length - 1));
         const extraSpaces = totalSpaces % (words.length - 1);
-
+        // let extraSpaces = totalSpaces;
         return words.reduce((justifiedLine, word, index) => {
             justifiedLine += word;
             justifiedLine += spaceChar.repeat(spacesPerGap);
@@ -191,14 +191,35 @@ export class Utils {
         return 1; // Other character
     }
 
-    _OffjustifyLine(words, TOTAL_POINTS, LINE_LENGTH, SPACE_CHAR) {
+    _justifyLine(words, LINE_LENGTH, SPACE_CHAR) {
+        if (words.length <= 1) {
+            return words.join(spaceChar);
+        }
         if (words.length <= 5) return words[0]; // Dont justify if is smaller then five words.
 
-        const spacesNeeded = LINE_LENGTH - TOTAL_POINTS; // Necessary spaces
+        let spaceChar = '\x20';
+        // Calculate spaces needed
+        const totalSpaces =
+            LINE_LENGTH - words.reduce((sum, word) => sum + word.length, 0);
+        const spacesPerGap = Math.floor(totalSpaces / (words.length - 1));
+        let extraSpaces = totalSpaces % (words.length - 1);
+
+        // Calculate spaces needed
+        const spacesNeeded =
+            LINE_LENGTH -
+            words.reduce((justifiedLine, word, index) => {
+                justifiedLine += word;
+                justifiedLine += spaceChar.repeat(spacesPerGap);
+                if (index < extraSpaces) {
+                    justifiedLine += spaceChar;
+                }
+                return justifiedLine;
+            }, '');
+
         const numGaps = words.length - 1; // Gaps betwen words
 
         const spaceWidth = Math.floor(spacesNeeded / numGaps); // Uniform spaces
-        let extraSpaces = spacesNeeded % numGaps; // Extra spaces
+        extraSpaces = spacesNeeded % numGaps; // Extra spaces
 
         let justifiedLine = `${SPACE_CHAR}`;
 
