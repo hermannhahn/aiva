@@ -266,11 +266,11 @@ const Aiva = GObject.registerClass(
             // Get ai response for user question
             // this.response(userQuestion);
 
-            responseChat.label.clutter_text.line_wrap = true;
-            responseChat.label.clutter_text.wrap_mode = 1;
-            responseChat.label.clutter_text.justify = true;
+            // responseChat.label.clutter_text.line_wrap = true;
+            // responseChat.label.clutter_text.wrap_mode = 1;
+            // responseChat.label.clutter_text.justify = true;
 
-            inputChat.label.clutter_text.line_wrap = true;
+            // inputChat.label.clutter_text.line_wrap = true;
 
             // DEBUG
             let debugPhrase =
