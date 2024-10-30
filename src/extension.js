@@ -210,30 +210,25 @@ const Aiva = GObject.registerClass(
          * send question to chat
          */
         chat(userQuestion) {
-            // Create uuid
-            let uuid = GLib.uuid_string_random();
-            let inputChat = {};
-
             // Question
-            inputChat[uuid] = new PopupMenu.PopupMenuItem('', {
+            let inputChat = new PopupMenu.PopupMenuItem('', {
                 style_class: 'input-chat',
                 can_focus: false,
             });
-            inputChat[uuid].label.clutter_text.reactive = true;
-            inputChat[uuid].label.clutter_text.selectable = true;
-            inputChat[uuid].label.clutter_text.hover = true;
-            this.ui.inputChat = inputChat[uuid];
+            inputChat.label.clutter_text.reactive = true;
+            inputChat.label.clutter_text.selectable = true;
+            inputChat.label.clutter_text.hover = true;
+            this.ui.inputChat = inputChat;
 
             // Response
-            let responseChat = {};
-            responseChat[uuid] = new PopupMenu.PopupMenuItem('', {
+            let responseChat = new PopupMenu.PopupMenuItem('', {
                 style_class: 'response-chat',
                 can_focus: false,
             });
-            responseChat[uuid].label.clutter_text.reactive = true;
-            responseChat[uuid].label.clutter_text.selectable = true;
-            responseChat[uuid].label.clutter_text.hover = true;
-            this.ui.responseChat = responseChat[uuid];
+            responseChat.label.clutter_text.reactive = true;
+            responseChat.label.clutter_text.selectable = true;
+            responseChat.label.clutter_text.hover = true;
+            this.ui.responseChat = responseChat;
 
             // Copy Button
             let copyButton = new PopupMenu.PopupMenuItem('', {
@@ -246,33 +241,33 @@ const Aiva = GObject.registerClass(
             this.ui.copyButton = copyButton;
 
             // add items
-            this.ui.chatSection.addMenuItem(inputChat[uuid]);
-            this.ui.chatSection.addMenuItem(responseChat[uuid]);
+            this.ui.chatSection.addMenuItem(inputChat);
+            this.ui.chatSection.addMenuItem(responseChat);
             this.ui.chatSection.addMenuItem(copyButton);
             this.ui.chatSection.addMenuItem(this.ui.newSeparator);
 
             // add copy button
             copyButton.connect('activate', (_self) => {
-                this.utils.copySelectedText(responseChat[uuid], copyButton);
+                this.utils.copySelectedText(responseChat, copyButton);
             });
 
             // Format question
             let formatedQuestion = this.utils.inputformat(userQuestion);
 
             // Add user question to chat
-            inputChat[uuid].label.clutter_text.set_markup(
+            inputChat.label.clutter_text.set_markup(
                 `<b>${this.userSettings.USERNAME}: </b>${formatedQuestion}`,
             );
 
             // Set temporary response message
             let aiResponse = _('<b>Gemini: </b> ...');
-            responseChat[uuid].label.clutter_text.set_markup(aiResponse);
+            responseChat.label.clutter_text.set_markup(aiResponse);
 
             // Get ai response for user question
             // this.response(userQuestion);
 
-            responseChat[uuid].label.clutter_text.line_wrap = true;
-            responseChat[uuid].label.clutter_text.justify = true;
+            responseChat.label.clutter_text.line_wrap = true;
+            responseChat.label.clutter_text.justify = true;
 
             // inputChat.label.clutter_text.line_wrap = true;
 
@@ -280,7 +275,7 @@ const Aiva = GObject.registerClass(
             let debugPhrase =
                 'A Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl id varius lacinia, lectus quam laoreet libero, at laoreet lectus lectus eu quam. Maecenas vitae lacus sit amet justo ultrices condimentum. Maecenas id dolor vitae quam semper blandit. Aenean sed sapien ut ante elementum bibendum. Sed euismod, nisl id varius lacinia, lectus quam laoreet libero, at laoreet lectus lectus eu quam. Maecenas vitae lacus sit amet justo ultrices condimentum. Maecenas id dolor vitae quam semper blandit. Aenean sed sapien ut ante elementum bibendum. Sed euismod, nisl id varius lacinia, lectus quam laoreet libero, at laoreet lectus lectus eu quam. Maecenas vitae lacus sit amet justo ultrices condimentum. Maecenas id dolor vitae quam semper blandit. Aenean sed sapien ut ante elementum bibendum. Sed euismod, nisl id varius lacinia, lectus quam laoreet libero, at laoreet lectus lectus eu quam. Maecenas vitae lacus sit amet justo ultrices condimentum. Maecenas id dolor vitae quam semper blandit. Aenean sed sapien ut ante elementum bibendum. Sed euismod, nisl id varius lacinia, lectus quam laoreet libero, at laoreet lectus lectus eu quam. Maecenas vitae lacus sit amet justo ultrices condimentum. Maecenas id dolor vitae quam semper blandit. Aenean sed sapien ut ante elementum bibendum. Sed euismod, nisl id varius lacinia, lectus quam laoreet libero, at laoreet lectus lectus eu quam. Maecenas vitae lacus sit amet justo ultrices condimentum. Maecenas id dolor vitae quam semper blandit. Aenean sed sapien ut ante elementum bibendum. Sed euismod, nisl id varius lacinia, lectus quam laoreet libero, at laoreet lectus lectus eu quam. Maecenas vitae lacus sit amet justo ultrices condimentum. Maecenas id dolor vitae quam semper blandit. Aenean sed sapien ut ante elementum bibendum. Sed euismod, nisl id varius la';
             let formatedResponse = this.utils._converttext(debugPhrase);
-            responseChat[uuid]?.label.clutter_text.set_markup(
+            responseChat?.label.clutter_text.set_markup(
                 '<b>Gemini: </b>\n\n' + formatedResponse + '\n',
             );
 
