@@ -155,7 +155,7 @@ export class Utils {
             char === ',' ||
             char === ';'
         ) {
-            return 0.5; // Short character
+            return 0.75; // Short character
         }
         return 1; // Other character
     }
