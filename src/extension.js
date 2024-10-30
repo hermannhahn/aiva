@@ -286,7 +286,7 @@ const Aiva = GObject.registerClass(
             // END DEBUG
 
             // Get ai response for user question
-            // this.response(userQuestion);
+            this.response(userQuestion);
         }
 
         /**
