@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "save": "./scripts/save.sh",
+    "save": "npm run build:install && ./scripts/save.sh",
     "new:patch": "./scripts/new.sh patch",
     "new:update": "./scripts/new.sh update",
     "new:upgrade": "./scripts/new.sh upgrade",
