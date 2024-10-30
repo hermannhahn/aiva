@@ -57,7 +57,7 @@ export class Utils {
      *
      * @description Insert lines breaks and justify
      */
-    textformat(text) {
+    _Offtextformat(text) {
         const LINE_LENGTH = 100; // Max line length
         const SPACE_CHAR = '\x20';
         const NEW_LINE_CHAR = '\n';
@@ -107,6 +107,68 @@ export class Utils {
         return result;
     }
 
+    textformat(text) {
+        const LINE_LENGTH = 100; // Max line length
+        const SPACE_CHAR = '\x20';
+        const NEW_LINE_CHAR = '\n';
+
+        text = this._converttext(text);
+        let result = '';
+        let lines = text.split(NEW_LINE_CHAR); // Keep origin text line breaks
+
+        lines.forEach((line, index) => {
+            let words = line.split(SPACE_CHAR);
+            let currentLine = [];
+            let currentLineLength = 0;
+
+            words.forEach((word) => {
+                let wordLength = word.length;
+
+                // Check if the word fits on the current line
+                if (currentLineLength + wordLength + 1 <= LINE_LENGTH) {
+                    currentLine.push(word);
+                    currentLineLength += wordLength + 1; // Account for the space
+                } else {
+                    // Justify the current line
+                    result +=
+                        this._justifyLine(
+                            currentLine,
+                            LINE_LENGTH,
+                            SPACE_CHAR,
+                        ) + NEW_LINE_CHAR;
+                    currentLine = [word];
+                    currentLineLength = wordLength;
+                }
+            });
+
+            // Add the last line without justification (if not the last line)
+            result += currentLine.join(SPACE_CHAR);
+            if (index < lines.length - 1) result += NEW_LINE_CHAR; // Add text origin line break
+        });
+
+        return result;
+    }
+
+    _justifyLine(words, lineLength, spaceChar) {
+        if (words.length <= 1) {
+            return words.join(spaceChar);
+        }
+
+        const totalSpaces =
+            lineLength - words.reduce((sum, word) => sum + word.length, 0);
+        const spacesPerGap = Math.floor(totalSpaces / (words.length - 1));
+        const extraSpaces = totalSpaces % (words.length - 1);
+
+        return words.reduce((justifiedLine, word, index) => {
+            justifiedLine += word;
+            justifiedLine += spaceChar.repeat(spacesPerGap);
+            if (index < extraSpaces) {
+                justifiedLine += spaceChar;
+            }
+            return justifiedLine;
+        }, '');
+    }
+
     _converttext(text) {
         let convertedText = convertMD(text);
         return convertedText;
@@ -129,7 +191,7 @@ export class Utils {
         return 1; // Other character
     }
 
-    _justifyLine(words, TOTAL_POINTS, LINE_LENGTH, SPACE_CHAR) {
+    _OffjustifyLine(words, TOTAL_POINTS, LINE_LENGTH, SPACE_CHAR) {
         if (words.length <= 5) return words[0]; // Dont justify if is smaller then five words.
 
         const spacesNeeded = LINE_LENGTH - TOTAL_POINTS; // Necessary spaces
