@@ -107,7 +107,7 @@ export class Utils {
     }
 
     textformat(text) {
-        const LINE_LENGTH = 90; // Max line length
+        const LINE_LENGTH = 50; // Max line length
         const SPACE_CHAR = '\x20';
         const NEW_LINE_CHAR = '\n';
 
@@ -124,9 +124,9 @@ export class Utils {
                 let wordLength = word.length;
 
                 // Check if the word fits on the current line
-                if (currentLineLength + wordLength + 1 <= LINE_LENGTH) {
+                if (currentLineLength + wordLength + 2 <= LINE_LENGTH) {
                     currentLine.push(word);
-                    currentLineLength += wordLength + 1; // Account for the space
+                    currentLineLength += wordLength + 2; // Account for the space
                 } else {
                     // Justify the current line
                     result +=
