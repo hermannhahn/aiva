@@ -155,8 +155,8 @@ export class Utils {
 
         const totalSpaces =
             lineLength - words.reduce((sum, word) => sum + word.length, 0);
-        const spacesPerGap = Math.floor(totalSpaces / (words.length - 1));
-        const extraSpaces = totalSpaces % (words.length - 1);
+        const spacesPerGap = Math.floor(totalSpaces / words.length);
+        const extraSpaces = totalSpaces % words.length;
         // let extraSpaces = totalSpaces;
         return words.reduce((justifiedLine, word, index) => {
             justifiedLine += word;
