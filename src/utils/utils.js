@@ -146,18 +146,12 @@ export class Utils {
 
     _calculatePoints(char) {
         if (
-            char === 'l' ||
-            char === 'i' ||
-            char === 'I' ||
-            char === 'j' ||
             char === '!' ||
             char === '`' ||
             char === "'" ||
             char === ':' ||
-            char === '*' ||
             char === '(' ||
             char === ')' ||
-            char === 't' ||
             char === '.' ||
             char === ',' ||
             char === ';'
