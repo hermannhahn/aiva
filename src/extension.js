@@ -449,15 +449,31 @@ const Aiva = GObject.registerClass(
                                 _('Code example copied to clipboard'),
                             );
                         }
-
+                        let date = new Date();
                         // Add to chat
                         this.chatHistory.push({
                             role: 'user',
-                            parts: [{text: userQuestion}],
+                            parts: [
+                                {
+                                    text:
+                                        '[' +
+                                        date.toLocaleString() +
+                                        ']' +
+                                        userQuestion,
+                                },
+                            ],
                         });
                         this.chatHistory.push({
                             role: 'model',
-                            parts: [{text: aiResponse}],
+                            parts: [
+                                {
+                                    text:
+                                        '[' +
+                                        date.toLocaleString() +
+                                        ']' +
+                                        aiResponse,
+                                },
+                            ],
                         });
 
                         // Save history.json
