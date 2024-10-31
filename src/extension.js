@@ -297,7 +297,7 @@ const Aiva = GObject.registerClass(
             // Send to brain
             let brain = this.brain.proccess(formatedQuestion);
             if (brain.status === 'send_to_gemini') {
-                this.response(brain.question, true);
+                this.response(brain.question);
             }
         }
 
