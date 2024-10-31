@@ -702,9 +702,7 @@ class GeminiSettings {
                 assistName.get_buffer().get_text(),
             );
 
-            statusLabel.set_markup(
-                _('Your preferences have been saved\n\nLanguage: '),
-            );
+            statusLabel.set_markup(_('\nYour preferences have been saved'));
         });
 
         // Adicionar elementos à grade
