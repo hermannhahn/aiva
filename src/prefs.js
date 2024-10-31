@@ -703,12 +703,7 @@ class GeminiSettings {
             );
 
             statusLabel.set_markup(
-                _(
-                    'Your preferences have been saved\n\nLanguage: ' +
-                        selectedLanguage +
-                        '\nSelected voice: ' +
-                        selectedVoice,
-                ),
+                _('Your preferences have been saved\n\nLanguage: '),
             );
         });
 
