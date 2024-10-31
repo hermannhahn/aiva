@@ -63,7 +63,7 @@ export class Utils {
         return text;
     }
 
-    insertLineBreaksByWidth(text, maxWidth = 700, font = '16px Arial') {
+    insertLineBreaks(text, maxWidth = 700, font = '16px Arial') {
         // Convert text
         text = this._converttext(text);
 
