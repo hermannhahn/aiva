@@ -37,8 +37,8 @@ class GeminiSettings {
         const defaultRegion = this.schema.get_string('azure-speech-region');
         const defaultLanguage = this.schema.get_string('azure-speech-language');
         const defaultVoice = this.schema.get_string('azure-speech-voice');
-        const defaultLog = this.schema.get_boolean('log-history');
         const defaultAssistName = this.schema.get_boolean('assist-name');
+        const defaultLog = this.schema.get_boolean('log-history');
         // Set Gemini default name if no name is setted
         if (
             defaultAssistName === '' ||
@@ -633,15 +633,6 @@ class GeminiSettings {
         // Inicializa o `azureVoiceSelector` com base na linguagem armazenada
         updateVoices(defaultLanguage);
 
-        // HISTORY LOG
-        const histroyLabel = new Gtk.Label({
-            label: _('Remember talk history'),
-            halign: Gtk.Align.START,
-        });
-        const historyButton = new Gtk.Switch({
-            valign: Gtk.Align.CENTER,
-        });
-
         // AIVA Name
         const labelAssistName = new Gtk.Label({
             label: _('Assistant Name'),
@@ -649,6 +640,15 @@ class GeminiSettings {
         });
         const assistName = new Gtk.Entry({
             buffer: new Gtk.EntryBuffer(),
+        });
+
+        // HISTORY LOG
+        const histroyLabel = new Gtk.Label({
+            label: _('Remember talk history'),
+            halign: Gtk.Align.START,
+        });
+        const historyButton = new Gtk.Switch({
+            valign: Gtk.Align.CENTER,
         });
 
         const save = new Gtk.Button({
@@ -664,13 +664,13 @@ class GeminiSettings {
         // apiKeyLabel.set_property('padding', 40);
 
         // Set default
-        historyButton.set_active(defaultLog);
         apiKey.set_text(defaultKey);
         azureSpeechKey.set_text(defaultSpeechKey);
         azureRegion.set_text(defaultRegion);
         azureVoiceSelector.set_active_id(defaultVoice);
         languageSelector.set_active_id(defaultLanguage);
         assistName.set_text(defaultAssistName);
+        historyButton.set_active(defaultLog);
 
         // Adicionar eventos
         save.connect('clicked', () => {
@@ -730,14 +730,14 @@ class GeminiSettings {
         this.main.attach(labelVoice, 0, 4, 1, 1);
         this.main.attach(azureVoiceSelector, 2, 4, 2, 1);
 
-        this.main.attach(histroyLabel, 0, 5, 1, 1);
-        this.main.attach(historyButton, 2, 5, 1, 1);
+        this.main.attach(labelAssistName, 0, 5, 1, 1);
+        this.main.attach(assistName, 2, 5, 2, 1);
 
-        this.main.attach(labelAssistName, 0, 6, 1, 1);
-        this.main.attach(assistName, 2, 6, 2, 1);
+        this.main.attach(histroyLabel, 0, 6, 1, 1);
+        this.main.attach(historyButton, 2, 6, 2, 1);
 
-        this.main.attach(save, 0, 7, 3, 1);
-        this.main.attach(statusLabel, 3, 7, 1, 1);
+        this.main.attach(save, 0, 7, 1, 1);
+        this.main.attach(statusLabel, 2, 7, 2, 1);
 
         // Adicionar a grade à página
         this.ui.add(this.main);
