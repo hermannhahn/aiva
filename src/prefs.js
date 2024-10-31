@@ -736,7 +736,7 @@ class GeminiSettings {
         this.main.attach(histroyLabel, 0, 6, 1, 1);
         this.main.attach(historyButton, 2, 6, 1, 1);
 
-        this.main.attach(save, 4, 7, 1, 2);
+        this.main.attach(save, 2, 7, 1, 1);
 
         this.main.attach(statusLabel, 2, 8, 4, 1);
 
