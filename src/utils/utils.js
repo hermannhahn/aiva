@@ -330,9 +330,9 @@ export class Utils {
    `;
     }
 
-    resetHistoryFile() {
-        this.app.chatHistory = [];
-        this.app.chatHistory.push({
+    historyInitContent() {
+        let history = [];
+        history.push({
             role: 'user',
             parts: [
                 {
@@ -340,7 +340,7 @@ export class Utils {
                 },
             ],
         });
-        this.app.chatHistory.push({
+        history.push({
             role: 'model',
             parts: [
                 {
@@ -351,7 +351,7 @@ export class Utils {
                 },
             ],
         });
-        this.saveHistory();
+        return history;
     }
 
     // Create history.json file if not exist
@@ -363,7 +363,11 @@ export class Utils {
             )
         ) {
             try {
-                let initialContent = JSON.stringify([], null, 2);
+                let initialContent = JSON.stringify(
+                    this.historyInitContent(),
+                    null,
+                    2,
+                );
                 GLib.file_set_contents(
                     this.app.userSettings.HISTORY_FILE,
                     initialContent,
@@ -371,27 +375,8 @@ export class Utils {
                 this.log(
                     `History file created. : ${this.app.userSettings.HISTORY_FILE}`,
                 );
-                this.app.chatHistory.push({
-                    role: 'user',
-                    parts: [
-                        {
-                            text: _('Hi, who are you?'),
-                        },
-                    ],
-                });
-                this.app.chatHistory.push({
-                    role: 'model',
-                    parts: [
-                        {
-                            text:
-                                _('Hi! I am ') +
-                                this.app.userSettings.ASSIST_NAME +
-                                _(', your helpfull assistant.'),
-                        },
-                    ],
-                });
                 // Save history.json
-                return this.app.chatHistory;
+                return this.loadHistoryFile();
             } catch (e) {
                 logError(
                     e,
