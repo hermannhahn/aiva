@@ -467,11 +467,7 @@ const Aiva = GObject.registerClass(
                             role: 'model',
                             parts: [
                                 {
-                                    text:
-                                        '[' +
-                                        date.toLocaleString() +
-                                        '] ' +
-                                        aiResponse,
+                                    text: aiResponse,
                                 },
                             ],
                         });
