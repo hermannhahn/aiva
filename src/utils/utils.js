@@ -132,8 +132,8 @@ export class Utils {
 
                 // Constrói a linha justificada com o espaço extra
                 let justifiedLine = words.join(
-                    ' '.repeat(Math.round(extraSpace / 6)) + ' ',
-                    // ' '.repeat(Math.abs(Math.ceil(extraSpace / spacesNeeded))),
+                    ' '.repeat(Math.abs(Math.ceil(extraSpace / 6))),
+                    // ' '.repeat(Math.round(extraSpace / 6)) + ' ',
                 ); // Ajusta conforme necessário
                 justifiedText += justifiedLine + '\n';
             } else {
