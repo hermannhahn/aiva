@@ -13,7 +13,7 @@ export default class ClipboardIndicatorPreferences extends ExtensionPreferences 
         const page = new Adw.PreferencesPage();
         page.add(settingsUI.ui);
         // Set window size to 800x600
-        window.set_default_size(800, 600);
+        window.set_default_size(600, 600);
         window.add(page);
     }
 }
@@ -702,7 +702,7 @@ class GeminiSettings {
                 assistName.get_buffer().get_text(),
             );
 
-            statusLabel.set_markup(_('\nYour preferences have been saved'));
+            statusLabel.set_markup(_('Your preferences have been saved'));
         });
 
         // Adicionar elementos à grade
