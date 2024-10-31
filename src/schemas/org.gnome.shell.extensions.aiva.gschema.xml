@@ -36,13 +36,6 @@
             You need to set voice for voice working in this extention
         </description>
     </key>
-    <key name="assist-name" type "s">
-        <default>"Aiva"</default>
-        <summary>Assistant name</summary>
-        <description>
-            Set your assistant name
-        </description>
-    </key>
     <key name="log-history" type="b">
         <default>true</default>
         <summary>Remember talk history</summary>
