@@ -738,7 +738,7 @@ class GeminiSettings {
 
         this.main.attach(save, 2, 7, 1, 1);
 
-        this.main.attach(statusLabel, 2, 8, 4, 1);
+        this.main.attach(statusLabel, 2, 8, 2, 1);
 
         // Adicionar a grade à página
         this.ui.add(this.main);
