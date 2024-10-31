@@ -458,7 +458,7 @@ const Aiva = GObject.registerClass(
                                     text:
                                         '[' +
                                         date.toLocaleString() +
-                                        ']' +
+                                        '] ' +
                                         userQuestion,
                                 },
                             ],
@@ -470,7 +470,7 @@ const Aiva = GObject.registerClass(
                                     text:
                                         '[' +
                                         date.toLocaleString() +
-                                        ']' +
+                                        '] ' +
                                         aiResponse,
                                 },
                             ],
