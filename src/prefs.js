@@ -649,12 +649,10 @@ class GeminiSettings {
         });
         const historyButton = new Gtk.Switch({
             valign: Gtk.Align.CENTER,
-            style_class: 'switch',
         });
 
         const save = new Gtk.Button({
             label: _('Save'),
-            style_class: 'button',
             halign: Gtk.Align.CENTER,
         });
         const statusLabel = new Gtk.Label({
