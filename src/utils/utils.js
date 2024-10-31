@@ -99,12 +99,8 @@ export class Utils {
                 } else {
                     // Justify and break line when reach the line length
                     result +=
-                        this._justifyLine(
-                            currentLine,
-                            LINE_LENGTH,
-                            wordPoints,
-                            SPACE_CHAR,
-                        ) + NEW_LINE_CHAR;
+                        this._justifyLine(currentLine, wordPoints, SPACE_CHAR) +
+                        NEW_LINE_CHAR;
                     currentLine = [word]; // Start new line
                     currentPoints = wordPoints;
                 }
@@ -117,7 +113,8 @@ export class Utils {
         return result;
     }
 
-    _justifyLine(words, LINE_LENGTH, TOTAL_POINTS, SPACE_CHAR) {
+    _justifyLine(words, TOTAL_POINTS, SPACE_CHAR) {
+        const LINE_LENGTH = 50; // Max line length
         if (words.length <= 5) return words[0]; // Dont justify if is smaller then five words.
 
         const spacesNeeded = Math.abs(LINE_LENGTH - TOTAL_POINTS); // Necessary spaces
