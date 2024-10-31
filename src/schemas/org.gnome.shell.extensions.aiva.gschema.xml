@@ -44,7 +44,12 @@
            it will remeember talk history
         </description>
     </key>
-
-   
+    <key name="assist-name" type "s">
+        <default>"Aiva"</default>
+        <summary>Assistant name</summary>
+        <description>
+            Set your assistant name
+        </description>
+    </key>   
   </schema>
 </schemalist>
