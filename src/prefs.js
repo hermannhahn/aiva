@@ -16,16 +16,17 @@ export default class ClipboardIndicatorPreferences extends ExtensionPreferences 
         window.set_default_size(800, 600);
         window.add(page);
     }
+
+    getSettings() {
+        return this.extension.settings;
+    }
 }
 
 class GeminiSettings {
     constructor(schema) {
         this.schema = schema;
         this.ui = new Adw.PreferencesGroup({title: _('Settings:')});
-        this.init();
-    }
 
-    init() {
         this.main = new Gtk.Grid({
             margin_top: 10,
             margin_bottom: 10,
