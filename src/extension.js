@@ -307,178 +307,184 @@ const Aiva = GObject.registerClass(
             // Scroll down
             this.utils.scrollToBottom();
 
-            // Create http session
-            let _httpSession = new Soup.Session();
-            let url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.0-pro:generateContent?key=${this.userSettings.GEMINI_API_KEY}`;
+            try {
+                // Create http session
+                let _httpSession = new Soup.Session();
+                let url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.0-pro:generateContent?key=${this.userSettings.GEMINI_API_KEY}`;
 
-            // Send async request
-            var body = this.buildBody(userQuestion);
-            let message = Soup.Message.new('POST', url);
-            let bytes = GLib.Bytes.new(body);
-            message.set_request_body_from_bytes('application/json', bytes);
-            _httpSession.send_and_read_async(
-                message,
-                GLib.PRIORITY_DEFAULT,
-                null,
-                (_httpSession, result) => {
-                    let bytes = _httpSession.send_and_read_finish(result);
-                    if (!bytes) {
-                        this.log('Error getting response.');
-                        this.ui.responseChat?.label.clutter_text.set_markup(
-                            _(
-                                "Sorry, I'm having connection trouble. Please try again.",
-                            ),
-                        );
-                        this.ui.searchEntry.clutter_text.reactive = true;
-                        this.ui.searchEntry.clutter_text.set_markup(
-                            userQuestion,
-                        );
-                        // Scroll down
-                        this.utils.scrollToBottom();
-                        return;
-                    }
-                    this.log('Response received.');
-                    let decoder = new TextDecoder('utf-8');
-                    // Get response
-                    let response = decoder.decode(bytes.get_data());
-                    let res = JSON.parse(response);
-                    if (res.error?.code !== 401 && res.error !== undefined) {
-                        this.ui.responseChat?.label.clutter_text.set_markup(
-                            response,
-                        );
-                        // Scroll down
-                        this.utils.scrollToBottom();
-                        // Enable searchEntry
-                        this.ui.searchEntry.clutter_text.reactive = true;
-                        return;
-                    }
-                    let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
-                    // SAFETY warning
-                    if (res.candidates[0].finishReason === 'SAFETY') {
-                        // get safety reason
-                        for (
-                            let i = 0;
-                            i < res.candidates[0].safetyRatings.length;
-                            i++
+                // Send async request
+                var body = this.buildBody(userQuestion);
+                let message = Soup.Message.new('POST', url);
+                let bytes = GLib.Bytes.new(body);
+                message.set_request_body_from_bytes('application/json', bytes);
+                _httpSession.send_and_read_async(
+                    message,
+                    GLib.PRIORITY_DEFAULT,
+                    null,
+                    (_httpSession, result) => {
+                        let bytes = _httpSession.send_and_read_finish(result);
+                        this.log('Response received.');
+                        let decoder = new TextDecoder('utf-8');
+                        // Get response
+                        let response = decoder.decode(bytes.get_data());
+                        let res = JSON.parse(response);
+                        if (
+                            res.error?.code !== 401 &&
+                            res.error !== undefined
                         ) {
-                            let safetyRating =
-                                res.candidates[0].safetyRatings[i];
-                            if (safetyRating.probability !== 'NEGLIGIBLE') {
-                                if (
-                                    safetyRating.category ===
-                                    'HARM_CATEGORY_SEXUALLY_EXPLICIT'
-                                ) {
-                                    aiResponse = _(
-                                        "Sorry, I can't answer this question. Possible sexually explicit content in the question or answer.",
-                                    );
-                                }
-                                if (
-                                    safetyRating.category ===
-                                    'HARM_CATEGORY_HATE_SPEECH'
-                                ) {
-                                    aiResponse = _(
-                                        "Sorry, I can't answer this question. Possible hate speech in the question or answer.",
-                                    );
-                                }
-                                if (
-                                    safetyRating.category ===
-                                    'HARM_CATEGORY_HARASSMENT'
-                                ) {
-                                    aiResponse = _(
-                                        "Sorry, I can't answer this question. Possible harassment in the question or answer.",
-                                    );
-                                }
-                                if (
-                                    safetyRating.category ===
-                                    'HARM_CATEGORY_DANGEROUS_CONTENT'
-                                ) {
-                                    aiResponse = _(
-                                        "Sorry, I can't answer this question. Possible dangerous content in the question or answer.",
-                                    );
-                                }
+                            this.ui.responseChat?.label.clutter_text.set_markup(
+                                response,
+                            );
+                            // Scroll down
+                            this.utils.scrollToBottom();
+                            // Enable searchEntry
+                            this.ui.searchEntry.clutter_text.reactive = true;
+                            return;
+                        }
+                        let aiResponse =
+                            res.candidates[0]?.content?.parts[0]?.text;
+                        // SAFETY warning
+                        if (res.candidates[0].finishReason === 'SAFETY') {
+                            // get safety reason
+                            for (
+                                let i = 0;
+                                i < res.candidates[0].safetyRatings.length;
+                                i++
+                            ) {
+                                let safetyRating =
+                                    res.candidates[0].safetyRatings[i];
+                                if (safetyRating.probability !== 'NEGLIGIBLE') {
+                                    if (
+                                        safetyRating.category ===
+                                        'HARM_CATEGORY_SEXUALLY_EXPLICIT'
+                                    ) {
+                                        aiResponse = _(
+                                            "Sorry, I can't answer this question. Possible sexually explicit content in the question or answer.",
+                                        );
+                                    }
+                                    if (
+                                        safetyRating.category ===
+                                        'HARM_CATEGORY_HATE_SPEECH'
+                                    ) {
+                                        aiResponse = _(
+                                            "Sorry, I can't answer this question. Possible hate speech in the question or answer.",
+                                        );
+                                    }
+                                    if (
+                                        safetyRating.category ===
+                                        'HARM_CATEGORY_HARASSMENT'
+                                    ) {
+                                        aiResponse = _(
+                                            "Sorry, I can't answer this question. Possible harassment in the question or answer.",
+                                        );
+                                    }
+                                    if (
+                                        safetyRating.category ===
+                                        'HARM_CATEGORY_DANGEROUS_CONTENT'
+                                    ) {
+                                        aiResponse = _(
+                                            "Sorry, I can't answer this question. Possible dangerous content in the question or answer.",
+                                        );
+                                    }
 
-                                this.ui.responseChat?.label.clutter_text.set_markup(
-                                    '<b>Gemini: </b> ' + aiResponse,
-                                );
+                                    this.ui.responseChat?.label.clutter_text.set_markup(
+                                        '<b>Gemini: </b> ' + aiResponse,
+                                    );
 
-                                // Scroll down
-                                this.utils.scrollToBottom();
-                                // Enable searchEntry
-                                this.ui.searchEntry.clutter_text.reactive = true;
-                                return;
+                                    // Scroll down
+                                    this.utils.scrollToBottom();
+                                    // Enable searchEntry
+                                    this.ui.searchEntry.clutter_text.reactive = true;
+                                    return;
+                                }
                             }
                         }
-                    }
 
-                    if (
-                        aiResponse !== undefined &&
-                        this.ui.responseChat !== undefined
-                    ) {
-                        // Set ai response to chat
-                        let formatedResponse =
-                            this.utils.textformat(aiResponse);
-                        this.ui.responseChat?.label.clutter_text.set_markup(
-                            '<b>Gemini: </b> ' + formatedResponse,
-                        );
-
-                        // Add copy button to chat
-                        if (this.ui.copyButton) {
-                            this.ui.chatSection.addMenuItem(this.ui.copyButton);
-                        }
-
-                        // Scroll down
-                        this.utils.scrollToBottom();
-
-                        // Enable searchEntry
-                        this.ui.searchEntry.clutter_text.reactive = true;
-
-                        // Extract code and tts from response
-                        let answer = this.utils.extractCodeAndTTS(aiResponse);
-
-                        // Speech response
-                        if (answer.tts !== null) {
-                            this.azure.tts(answer.tts);
-                        }
-
-                        // If answer.code is not null, copy to clipboard
-                        if (answer.code !== null) {
-                            this.extension.clipboard.set_text(
-                                St.ClipboardType.CLIPBOARD,
-                                answer.code,
+                        if (
+                            aiResponse !== undefined &&
+                            this.ui.responseChat !== undefined
+                        ) {
+                            // Set ai response to chat
+                            let formatedResponse =
+                                this.utils.textformat(aiResponse);
+                            this.ui.responseChat?.label.clutter_text.set_markup(
+                                '<b>Gemini: </b> ' + formatedResponse,
                             );
-                            this.utils.gnomeNotify(
-                                _('Code example copied to clipboard'),
-                            );
+
+                            // Add copy button to chat
+                            if (this.ui.copyButton) {
+                                this.ui.chatSection.addMenuItem(
+                                    this.ui.copyButton,
+                                );
+                            }
+
+                            // Scroll down
+                            this.utils.scrollToBottom();
+
+                            // Enable searchEntry
+                            this.ui.searchEntry.clutter_text.reactive = true;
+
+                            // Extract code and tts from response
+                            let answer =
+                                this.utils.extractCodeAndTTS(aiResponse);
+
+                            // Speech response
+                            if (answer.tts !== null) {
+                                this.azure.tts(answer.tts);
+                            }
+
+                            // If answer.code is not null, copy to clipboard
+                            if (answer.code !== null) {
+                                this.extension.clipboard.set_text(
+                                    St.ClipboardType.CLIPBOARD,
+                                    answer.code,
+                                );
+                                this.utils.gnomeNotify(
+                                    _('Code example copied to clipboard'),
+                                );
+                            }
+
+                            // Add to chat
+                            this.chatHistory.push({
+                                role: 'user',
+                                parts: [
+                                    {
+                                        text: userQuestion,
+                                    },
+                                ],
+                            });
+                            this.chatHistory.push({
+                                role: 'model',
+                                parts: [
+                                    {
+                                        text: aiResponse,
+                                    },
+                                ],
+                            });
+
+                            // Save history.json
+                            if (this.userSettings.RECURSIVE_TALK) {
+                                this.utils.saveHistory();
+                            }
+
+                            // Scroll down
+                            this.utils.scrollToBottom();
                         }
-
-                        // Add to chat
-                        this.chatHistory.push({
-                            role: 'user',
-                            parts: [
-                                {
-                                    text: userQuestion,
-                                },
-                            ],
-                        });
-                        this.chatHistory.push({
-                            role: 'model',
-                            parts: [
-                                {
-                                    text: aiResponse,
-                                },
-                            ],
-                        });
-
-                        // Save history.json
-                        if (this.userSettings.RECURSIVE_TALK) {
-                            this.utils.saveHistory();
-                        }
-
-                        // Scroll down
-                        this.utils.scrollToBottom();
-                    }
-                },
-            );
+                    },
+                );
+            } catch (error) {
+                this.logError(error);
+                this.log('Error getting response.');
+                this.ui.responseChat?.label.clutter_text.set_markup(
+                    _(
+                        "Sorry, I'm having connection trouble. Please try again.",
+                    ),
+                );
+                this.ui.searchEntry.clutter_text.reactive = true;
+                this.ui.searchEntry.clutter_text.set_markup(userQuestion);
+                // Scroll down
+                this.utils.scrollToBottom();
+            }
         }
 
         /**
