@@ -695,6 +695,7 @@ class GeminiSettings {
             const selectedVoice = azureVoiceSelector.get_active_id();
             this.schema.set_string('azure-speech-voice', selectedVoice);
 
+            // Check if historyButton state changes
             this.schema.set_boolean('log-history', histroyButton.state);
             this.schema.set_string(
                 'assist-name',
