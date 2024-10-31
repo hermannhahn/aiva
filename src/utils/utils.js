@@ -120,10 +120,10 @@ export class Utils {
     _justifyLine(words, LINE_LENGTH, TOTAL_POINTS, SPACE_CHAR) {
         if (words.length <= 5) return words[0]; // Dont justify if is smaller then five words.
 
-        const spacesNeeded = LINE_LENGTH - TOTAL_POINTS; // Necessary spaces
+        const spacesNeeded = LINE_LENGTH / TOTAL_POINTS; // Necessary spaces
         const numGaps = words.length - 1; // Gaps betwen words
 
-        let spaceWidth = Math.abs(Math.floor(spacesNeeded / numGaps) / numGaps); // Space width
+        let spaceWidth = Math.abs(Math.floor(spacesNeeded / numGaps)); // Space width
         spaceWidth = Math.max(1, spaceWidth); // Uniform spaces
         let extraSpaces = spacesNeeded % numGaps; // Extra spaces
 
