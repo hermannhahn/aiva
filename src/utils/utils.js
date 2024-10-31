@@ -1,6 +1,9 @@
 import GLib from 'gi://GLib';
 import Gio from 'gi://Gio';
 import St from 'gi://St';
+import Pango from 'gi://Pango';
+import PangoCairo from 'gi://PangoCairo';
+
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 import {convertMD} from './md2pango.js';
@@ -59,12 +62,37 @@ export class Utils {
         return text;
     }
 
-    expandText(responseChat) {
-        // Count clutter_text line breaker \n
-        let lines = responseChat.label.clutter_text.text.split('\n');
-        let lineCount = lines.length;
-        // Set height
-        responseChat.label.clutter_text.height = lineCount * 20;
+    insertLineBreaks(text, maxWidth = 750, font = '12px Arial') {
+        // Cria um contexto Pango para medir o texto
+        const layout = new Pango.Layout(new PangoCairo.Context());
+        layout.set_font_description(Pango.FontDescription.from_string(font));
+
+        let lines = [];
+        let currentLine = '';
+
+        for (let word of text.split(' ')) {
+            // Adiciona a palavra à linha de teste
+            let testLine = currentLine ? currentLine + ' ' + word : word;
+            layout.set_text(testLine, -1);
+
+            // Obtém o tamanho da linha em pixels
+            let [, logical] = layout.get_pixel_extents();
+            // let ink = layout.get_pixel_extents();
+            // let logical = layout.get_logical_extents();
+
+            if (logical.width > maxWidth) {
+                // Adiciona a linha atual à lista de linhas e inicia uma nova linha
+                lines.push(currentLine);
+                currentLine = word;
+            } else {
+                currentLine = testLine;
+            }
+        }
+
+        // Adiciona a última linha
+        lines.push(currentLine);
+
+        return lines.join('\n');
     }
 
     /**
