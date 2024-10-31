@@ -67,7 +67,7 @@ export class Utils {
      * @description Insert lines breaks and justify
      */
     textformat(text) {
-        const LINE_LENGTH = 90; // Max line length
+        const LINE_LENGTH = 76; // Max line length
         const SPACE_CHAR = ' ';
         const NEW_LINE_CHAR = '\n';
 
