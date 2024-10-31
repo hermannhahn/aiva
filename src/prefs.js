@@ -736,9 +736,9 @@ class GeminiSettings {
         this.main.attach(histroyLabel, 0, 6, 1, 1);
         this.main.attach(historyButton, 2, 6, 1, 1);
 
-        this.main.attach(save, 2, 7, 1, 1);
+        this.main.attach(save, 4, 7, 1, 1);
 
-        this.main.attach(statusLabel, 2, 8, 1, 1);
+        this.main.attach(statusLabel, 3, 8, 1, 1);
 
         // Adicionar a grade à página
         this.ui.add(this.main);
