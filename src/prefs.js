@@ -19,9 +19,14 @@ export default class ClipboardIndicatorPreferences extends ExtensionPreferences 
 }
 
 class GeminiSettings {
-    constructor(schema) {
+    constructor(schema, app) {
         this.schema = schema;
         this.ui = new Adw.PreferencesGroup({title: _('Settings:')});
+        this.app = app;
+        this.init();
+    }
+
+    init() {
         this.main = new Gtk.Grid({
             margin_top: 10,
             margin_bottom: 10,
@@ -638,7 +643,7 @@ class GeminiSettings {
             label: _('Remember talk history'),
             halign: Gtk.Align.START,
         });
-        const histroyButton = new Gtk.Switch({
+        const historyButton = new Gtk.Switch({
             valign: Gtk.Align.CENTER,
         });
 
@@ -664,7 +669,7 @@ class GeminiSettings {
         // apiKeyLabel.set_property('padding', 40);
 
         // Set default
-        histroyButton.set_active(defaultLog);
+        historyButton.set_active(defaultLog);
         apiKey.set_text(defaultKey);
         azureSpeechKey.set_text(defaultSpeechKey);
         azureRegion.set_text(defaultRegion);
@@ -673,6 +678,10 @@ class GeminiSettings {
         assistName.set_text(defaultAssistName);
 
         // Adicionar eventos
+        historyButton.connect('toggled', () => {
+            // reset history
+            this.app.utils.resetHistory();
+        });
         save.connect('clicked', () => {
             this.schema.set_string(
                 'gemini-api-key',
@@ -695,8 +704,7 @@ class GeminiSettings {
             const selectedVoice = azureVoiceSelector.get_active_id();
             this.schema.set_string('azure-speech-voice', selectedVoice);
 
-            // Check if historyButton state changes
-            this.schema.set_boolean('log-history', histroyButton.state);
+            this.schema.set_boolean('log-history', historyButton.state);
             this.schema.set_string(
                 'assist-name',
                 assistName.get_buffer().get_text(),
@@ -732,7 +740,7 @@ class GeminiSettings {
         this.main.attach(azureVoiceSelector, 2, 4, 2, 1);
 
         this.main.attach(histroyLabel, 0, 5, 1, 1);
-        this.main.attach(histroyButton, 2, 5, 1, 1);
+        this.main.attach(historyButton, 2, 5, 1, 1);
 
         this.main.attach(labelAssistName, 0, 6, 1, 1);
         this.main.attach(assistName, 2, 6, 2, 1);
