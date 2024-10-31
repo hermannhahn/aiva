@@ -19,10 +19,9 @@ export default class ClipboardIndicatorPreferences extends ExtensionPreferences 
 }
 
 class GeminiSettings {
-    constructor(schema, app) {
+    constructor(schema) {
         this.schema = schema;
         this.ui = new Adw.PreferencesGroup({title: _('Settings:')});
-        this.app = app;
         this.init();
     }
 
@@ -678,10 +677,6 @@ class GeminiSettings {
         assistName.set_text(defaultAssistName);
 
         // Adicionar eventos
-        historyButton.connect('toggled', () => {
-            // reset history
-            this.app.utils.resetHistory();
-        });
         save.connect('clicked', () => {
             this.schema.set_string(
                 'gemini-api-key',
