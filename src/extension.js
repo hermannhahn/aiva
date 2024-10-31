@@ -280,13 +280,13 @@ const Aiva = GObject.registerClass(
             //
             // END DEBUG
 
-            responseChat.label.clutter_text.line_wrap = true;
             responseChat.label.clutter_text.justify = true;
-            inputChat.label.clutter_text.line_wrap = true;
+            responseChat.label.clutter_text.line_wrap = true;
             inputChat.label.clutter_text.justify = true;
+            inputChat.label.clutter_text.line_wrap = true;
 
             // Expand responseChat if clicked
-            responseChat.label.clutter_text.connect('clicked', (_self) => {
+            responseChat.label.clutter_text.connect('activate', (_self) => {
                 this.utils.expandText(responseChat);
             });
 
