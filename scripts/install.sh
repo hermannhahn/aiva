@@ -19,5 +19,5 @@ echo "Dependencies installed."
 echo "Installing extension..."
 npm run build:install
 echo "Extension installed."
-echo "Active Gemini Voice Assistant: https://extensions.gnome.org/local/"
+echo "Active AIVA extension: https://extensions.gnome.org/local/"
 exit 0
