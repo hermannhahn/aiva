@@ -332,6 +332,9 @@ export class Utils {
 
     // Create history.json file if not exist
     createHistoryFile() {
+        // Get date
+        const date = new Date();
+
         if (
             !GLib.file_test(
                 this.app.userSettings.HISTORY_FILE,
@@ -351,7 +354,11 @@ export class Utils {
                     role: 'user',
                     parts: [
                         {
-                            text: _('Hi, who are you?'),
+                            text:
+                                '[' +
+                                date.toLocaleString() +
+                                ']' +
+                                _('Hi, who are you?'),
                         },
                     ],
                 });
@@ -359,9 +366,11 @@ export class Utils {
                     role: 'model',
                     parts: [
                         {
-                            text: _(
-                                'Hi! I am Gemini, your helpfull assistant.',
-                            ),
+                            text:
+                                '[' +
+                                date.toLocaleString() +
+                                ']' +
+                                _('Hi! I am Gemini, your helpfull assistant.'),
                         },
                     ],
                 });
