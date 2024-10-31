@@ -39,14 +39,23 @@ export class Utils {
      */
     inputformat(text) {
         text = text
-            .replace(/&/g, '&amp;')
-            .replace(/</g, '&lt;')
-            .replace(/>/g, '&gt;')
-            .replace(/"/g, '&quot;')
-            .replace(/'/g, '&apos;')
-            .replace(/`/g, '&#96;')
-            .replace(/:/g, '&#58;')
-            .replace(/;/g, '&#59;');
+            .replace(/&/g, '\u0026')
+            .replace(/</g, '\u003c')
+            .replace(/>/g, '\u003e')
+            .replace(/"/g, '\u0022')
+            .replace(/'/g, '\u0027')
+            .replace(/`/g, '\u0060')
+            .replace(/:/g, '\u003a')
+            .replace(/;/g, '\u003b');
+        // text = text
+        //     .replace(/&/g, '&amp;')
+        //     .replace(/</g, '&lt;')
+        //     .replace(/>/g, '&gt;')
+        //     .replace(/"/g, '&quot;')
+        //     .replace(/'/g, '&apos;')
+        //     .replace(/`/g, '&#96;')
+        //     .replace(/:/g, '&#58;')
+        //     .replace(/;/g, '&#59;');
         return text;
     }
 
