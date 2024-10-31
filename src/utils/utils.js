@@ -357,8 +357,11 @@ export class Utils {
                             text:
                                 '[' +
                                 date.toLocaleString() +
-                                ']' +
-                                _('Hi, who are you?'),
+                                ', ' +
+                                this.userSettings.LOCATION +
+                                '] ' +
+                                this.userSettings.USERNAME +
+                                _(': Hi, who are you?'),
                         },
                     ],
                 });
@@ -369,7 +372,7 @@ export class Utils {
                             text:
                                 '[' +
                                 date.toLocaleString() +
-                                ']' +
+                                '] ' +
                                 _('Hi! I am Gemini, your helpfull assistant.'),
                         },
                     ],
