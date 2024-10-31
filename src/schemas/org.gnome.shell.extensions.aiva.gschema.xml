@@ -43,6 +43,13 @@
         </description>
     </key>
     <!-- assist-name -->
+    <key name="assist-name" type="s">
+        <default>"AIVA"</default>
+        <summary>Assistant name</summary>
+        <description>
+            Set your assistant name
+        </description>
+    </key>
     <!--- log-history -->
     <key name="log-history" type="b">
         <default>true</default>
