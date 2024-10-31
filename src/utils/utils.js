@@ -125,7 +125,7 @@ export class Utils {
 
         let spaceWidth = Math.floor(spacesNeeded / numGaps / 2); // Space width
         spaceWidth = Math.max(1, spaceWidth); // Uniform spaces
-        let extraSpaces = (spacesNeeded % numGaps) - 1; // Extra spaces
+        let extraSpaces = spacesNeeded % numGaps; // Extra spaces
 
         let justifiedLine = `${SPACE_CHAR}`;
 
