@@ -63,7 +63,7 @@ export class Utils {
         return text;
     }
 
-    insertLineBreaks(text, maxWidth = 700, font = '16px Arial') {
+    insertLineBreaks(text, maxWidth = 700, font = '12px Arial') {
         // Convert text
         text = this._converttext(text);
 
@@ -99,6 +99,45 @@ export class Utils {
         lines.push(currentLine);
 
         return lines.join('\n');
+    }
+
+    justifyText(text, maxWidth = 700, font = '12px Arial') {
+        const {Pango, PangoCairo, Cairo} = imports.gi;
+
+        // Cria uma superfície temporária e contexto Cairo para medir o texto
+        const surface = new Cairo.ImageSurface(Cairo.Format.ARGB32, 0, 0);
+        const cairoContext = new Cairo.Context(surface);
+        const layout = PangoCairo.create_layout(cairoContext);
+        layout.set_font_description(Pango.FontDescription.from_string(font));
+
+        // Divide o texto em linhas
+        const lines = text.split('\n');
+        let justifiedText = '';
+
+        for (let line of lines) {
+            layout.set_text(line.trim(), -1);
+            let [, logical] = layout.get_pixel_extents();
+
+            // Verifica se a largura da linha é menor que a largura máxima permitida
+            if (logical.width < maxWidth && line.includes(' ')) {
+                const words = line.split(' ');
+                const spacesNeeded = words.length - 1;
+
+                // Calcula o espaço adicional necessário para justificar a linha
+                const extraSpace = (maxWidth - logical.width) / spacesNeeded;
+
+                // Constrói a linha justificada com o espaço extra
+                let justifiedLine = words.join(
+                    ' '.repeat(Math.ceil(extraSpace / 6)),
+                ); // Ajusta conforme necessário
+                justifiedText += justifiedLine + '\n';
+            } else {
+                // Se a linha já é igual ou maior que a largura máxima, mantém como está
+                justifiedText += line + '\n';
+            }
+        }
+
+        return justifiedText.trim();
     }
 
     /**
