@@ -4,4 +4,8 @@ export class Brain {
     constructor(app) {
         this.app = app;
     }
+
+    proccess(question) {
+        this.app.response(question);
+    }
 }
