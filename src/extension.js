@@ -295,10 +295,7 @@ const Aiva = GObject.registerClass(
             // inputChat.label.clutter_text.line_wrap = true;
 
             // Send to brain
-            let brain = this.brain.proccess(formatedQuestion);
-            if (brain.status === 'send_to_gemini') {
-                this.response(brain.question);
-            }
+            this.brain.proccess(formatedQuestion);
         }
 
         /**
