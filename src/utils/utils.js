@@ -76,6 +76,12 @@ export class Utils {
         let lines = text.split(NEW_LINE_CHAR); // Keep origin text line breaks
 
         lines.forEach((line, index) => {
+            // Don't split first line, insert \n with 76 chars but dont broke word.
+            if (index === 0) {
+                result += line;
+                if (index < lines.length - 1) result += NEW_LINE_CHAR;
+            }
+            // Split line by spaces
             let words = line.split(SPACE_CHAR);
             let currentLine = [];
             let currentPoints = 0;
