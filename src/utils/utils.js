@@ -330,6 +330,30 @@ export class Utils {
    `;
     }
 
+    resetHistoryFile() {
+        this.app.chatHistory = [];
+        this.app.chatHistory.push({
+            role: 'user',
+            parts: [
+                {
+                    text: _('Hi, who are you?'),
+                },
+            ],
+        });
+        this.app.chatHistory.push({
+            role: 'model',
+            parts: [
+                {
+                    text:
+                        _('Hi! I am ') +
+                        this.app.userSettings.ASSIST_NAME +
+                        _(', your helpfull assistant.'),
+                },
+            ],
+        });
+        this.saveHistory();
+    }
+
     // Create history.json file if not exist
     createHistoryFile() {
         if (
@@ -359,9 +383,10 @@ export class Utils {
                     role: 'model',
                     parts: [
                         {
-                            text: _(
-                                'Hi! I am Gemini, your helpfull assistant.',
-                            ),
+                            text:
+                                _('Hi! I am ') +
+                                this.app.userSettings.ASSIST_NAME +
+                                _(', your helpfull assistant.'),
                         },
                     ],
                 });
