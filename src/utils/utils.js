@@ -63,6 +63,8 @@ export class Utils {
     }
 
     insertLineBreaks(text, maxWidth = 750, font = '12px Arial') {
+        // Convert text
+        text = this._converttext(text);
         // Cria um contexto Pango para medir o texto
         const layout = new Pango.Layout(new PangoCairo.Context());
         layout.set_font_description(Pango.FontDescription.from_string(font));
