@@ -649,6 +649,7 @@ class GeminiSettings {
         });
         const historyButton = new Gtk.Switch({
             valign: Gtk.Align.CENTER,
+            expand: false,
         });
 
         const save = new Gtk.Button({
@@ -659,6 +660,7 @@ class GeminiSettings {
             label: '',
             useMarkup: true,
             halign: Gtk.Align.CENTER,
+            expand: true,
         });
 
         // Set labels property
@@ -739,7 +741,7 @@ class GeminiSettings {
 
         this.main.attach(save, 2, 7, 1, 1);
 
-        this.main.attach(statusLabel, 2, 8, 2, 1);
+        this.main.attach(statusLabel, 2, 8, 1, 1);
 
         // Adicionar a grade à página
         this.ui.add(this.main);
