@@ -37,7 +37,7 @@ class GeminiSettings {
         const defaultRegion = this.schema.get_string('azure-speech-region');
         const defaultLanguage = this.schema.get_string('azure-speech-language');
         const defaultVoice = this.schema.get_string('azure-speech-voice');
-        const defaultAssistName = this.schema.get_boolean('assist-name');
+        const defaultAssistName = this.schema.get_string('assist-name');
         const defaultLog = this.schema.get_boolean('log-history');
         // Set Gemini default name if no name is setted
         if (
