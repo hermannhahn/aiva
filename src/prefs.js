@@ -16,10 +16,6 @@ export default class ClipboardIndicatorPreferences extends ExtensionPreferences 
         window.set_default_size(800, 600);
         window.add(page);
     }
-
-    getSettings() {
-        return this.extension.settings;
-    }
 }
 
 class GeminiSettings {
