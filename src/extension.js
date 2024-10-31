@@ -321,8 +321,23 @@ const Aiva = GObject.registerClass(
                 null,
                 (_httpSession, result) => {
                     let bytes = _httpSession.send_and_read_finish(result);
+                    if (!bytes) {
+                        this.log('Error getting response.');
+                        this.ui.responseChat?.label.clutter_text.set_markup(
+                            _(
+                                "Sorry, I'm having connection trouble. Please try again.",
+                            ),
+                        );
+                        this.ui.searchEntry.clutter_text.reactive = true;
+                        this.ui.searchEntry.clutter_text.set_markup(
+                            userQuestion,
+                        );
+                        // Scroll down
+                        this.utils.scrollToBottom();
+                        return;
+                    }
+                    this.log('Response received.');
                     let decoder = new TextDecoder('utf-8');
-
                     // Get response
                     let response = decoder.decode(bytes.get_data());
                     let res = JSON.parse(response);
