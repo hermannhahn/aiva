@@ -22,7 +22,6 @@ class GeminiSettings {
     constructor(schema) {
         this.schema = schema;
         this.ui = new Adw.PreferencesGroup({title: _('Settings:')});
-
         this.main = new Gtk.Grid({
             margin_top: 10,
             margin_bottom: 10,
@@ -41,17 +40,17 @@ class GeminiSettings {
         const defaultLog = this.schema.get_boolean('log-history');
         const defaultAssistName = this.schema.get_boolean('assist-name');
         // Set Gemini default name if no name is setted
-        if (
-            defaultAssistName === '' ||
-            defaultAssistName === null ||
-            defaultAssistName === undefined
-        ) {
-            console.log(
-                '[AIVA] No name setted, setting default name: Aiva, before: ' +
-                    defaultAssistName,
-            );
-            this.schema.set_string('assist-name', 'Aiva');
-        }
+        // if (
+        //     defaultAssistName === '' ||
+        //     defaultAssistName === null ||
+        //     defaultAssistName === undefined
+        // ) {
+        //     console.log(
+        //         '[AIVA] No name setted, setting default name: Aiva, before: ' +
+        //             defaultAssistName,
+        //     );
+        //     this.schema.set_string('assist-name', 'Aiva');
+        // }
 
         // GEMINI API KEY
         const apiKeyLabel = new Gtk.Label({
