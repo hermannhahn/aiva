@@ -195,7 +195,7 @@ const Aiva = GObject.registerClass(
             this.ui.settingsButton.connect('clicked', (_self) => {
                 this.openSettings();
                 // Close App
-                this.ui.menu.close();
+                this.menu.close();
             });
 
             // Open settings if gemini api key is not configured
