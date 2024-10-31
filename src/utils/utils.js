@@ -116,6 +116,12 @@ export class Utils {
             layout.set_text(line.trim(), -1);
             let [, logical] = layout.get_pixel_extents();
 
+            // If is the last line don't justify
+            if (line === lines[lines.length - 1]) {
+                justifiedText += line + '\n';
+                continue;
+            }
+
             // Verifica se a largura da linha é menor que a largura máxima permitida
             if (logical.width < maxWidth && line.includes(' ')) {
                 const words = line.split(' ');
@@ -126,7 +132,7 @@ export class Utils {
 
                 // Constrói a linha justificada com o espaço extra
                 let justifiedLine = words.join(
-                    ' '.repeat(Math.ceil(extraSpace / spacesNeeded)),
+                    ' '.repeat(Math.abs(Math.ceil(extraSpace / spacesNeeded))),
                 ); // Ajusta conforme necessário
                 justifiedText += justifiedLine + '\n';
             } else {
