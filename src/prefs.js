@@ -649,7 +649,6 @@ class GeminiSettings {
         });
         const historyButton = new Gtk.Switch({
             valign: Gtk.Align.CENTER,
-            expand: false,
         });
 
         const save = new Gtk.Button({
