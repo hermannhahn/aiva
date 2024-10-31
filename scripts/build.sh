@@ -153,7 +153,7 @@ function try_restarting_gnome_shell() {
 }
 
 function install_extension_package() {
-	echo "Installing the extension..."
+	echo "Installing the extension $UUID..."
 	gnome-extensions install --force "$UUID".shell-extension.zip
 	echo "Extension installed."
 
