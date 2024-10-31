@@ -15,6 +15,7 @@ import {Utils} from './utils/utils.js';
 import {AppLayout} from './ui.js';
 import {MicrosoftAzure} from './ai/azure.js';
 import {Audio} from './utils/audio.js';
+import {Brain} from './brain.js';
 
 const Aiva = GObject.registerClass(
     class Aiva extends PanelMenu.Button {
@@ -93,6 +94,11 @@ const Aiva = GObject.registerClass(
              */
             this.audio = new Audio(this);
             this.log('Audio loaded.');
+
+            /**
+             * load brain
+             */
+            this.brain = new Brain(this);
         }
 
         /**
@@ -270,6 +276,7 @@ const Aiva = GObject.registerClass(
             this.ui.searchEntry.clutter_text.editable = true;
             this.ui.searchEntry.clutter_text.activatable = true;
             this.ui.searchEntry.clutter_text.hover = true;
+            responseChat.label.clutter_text.justify = true;
 
             // DEBUG
             // let debugPhrase =
@@ -283,13 +290,15 @@ const Aiva = GObject.registerClass(
             //
             // END DEBUG
 
-            responseChat.label.clutter_text.justify = true;
             // responseChat.label.clutter_text.line_wrap = true;
             // inputChat.label.clutter_text.justify = true;
             // inputChat.label.clutter_text.line_wrap = true;
 
-            // Get ai response for user question
-            this.response(userQuestion);
+            // Send to brain
+            let brain = this.brain.proccess(formatedQuestion);
+            if (brain.status === 'send_to_gemini') {
+                this.response(brain.question, true);
+            }
         }
 
         /**
