@@ -67,7 +67,7 @@ export class Utils {
      * @description Insert lines breaks and justify
      */
     textformat(text) {
-        const LINE_LENGTH = 50; // Max line length
+        const LINE_LENGTH = 90; // Max line length
         const SPACE_CHAR = ' ';
         const NEW_LINE_CHAR = '\n';
 
@@ -128,8 +128,8 @@ export class Utils {
         const spacesNeeded = LINE_LENGTH - TOTAL_POINTS; // Necessary spaces
         const numGaps = words.length - 1; // Gaps betwen words
 
-        let spaceWidth = Math.abs(Math.floor(spacesNeeded / numGaps)); // Uniform spaces
-        // convert number to positive
+        let spaceWidth = Math.abs(Math.floor(spacesNeeded / numGaps) / 2); // Space width
+        spaceWidth = Math.max(1, spaceWidth); // Uniform spaces
         let extraSpaces = spacesNeeded % numGaps; // Extra spaces
 
         let justifiedLine = `${SPACE_CHAR}`;
