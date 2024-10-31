@@ -5,7 +5,7 @@
 # ==============================================================================
 
 echo "Downloading extension..."
-git clone https://github.com/hermannhahn/gemini-gnome-extension.git
+git clone https://github.com/hermannhahn/aiva.git
 cd gemini-gnome-extension
 echo "Extension cloned."
 echo "Installing dependencies..."
