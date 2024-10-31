@@ -3,6 +3,7 @@ import Gio from 'gi://Gio';
 import St from 'gi://St';
 import Pango from 'gi://Pango';
 import PangoCairo from 'gi://PangoCairo';
+import Cairo from 'gi://cairo';
 
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
@@ -62,11 +63,16 @@ export class Utils {
         return text;
     }
 
-    insertLineBreaks(text, maxWidth = 750, font = '12px Arial') {
+    insertLineBreaksByWidth(text, maxWidth = 700, font = '16px Arial') {
         // Convert text
         text = this._converttext(text);
-        // Cria um contexto Pango para medir o texto
-        const layout = new Pango.Layout(new PangoCairo.Context());
+
+        // Cria uma superfície temporária e contexto Cairo para medir o texto
+        const surface = new Cairo.ImageSurface(Cairo.Format.ARGB32, 0, 0);
+        const cairoContext = new Cairo.Context(surface);
+
+        // Obtém o contexto Pango a partir do contexto Cairo
+        const layout = PangoCairo.create_layout(cairoContext);
         layout.set_font_description(Pango.FontDescription.from_string(font));
 
         let lines = [];
@@ -79,8 +85,6 @@ export class Utils {
 
             // Obtém o tamanho da linha em pixels
             let [, logical] = layout.get_pixel_extents();
-            // let ink = layout.get_pixel_extents();
-            // let logical = layout.get_logical_extents();
 
             if (logical.width > maxWidth) {
                 // Adiciona a linha atual à lista de linhas e inicia uma nova linha
