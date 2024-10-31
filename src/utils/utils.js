@@ -59,6 +59,14 @@ export class Utils {
         return text;
     }
 
+    expandText(responseChat) {
+        // Count clutter_text line breaker \n
+        let lines = responseChat.label.clutter_text.text.split('\n');
+        let lineCount = lines.length;
+        // Set height
+        responseChat.label.clutter_text.height = lineCount * 20;
+    }
+
     /**
      *
      * @param {*} text
