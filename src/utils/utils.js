@@ -440,6 +440,13 @@ export class Utils {
                 this.log(
                     `History loaded from: ${this.app.userSettings.HISTORY_FILE}`,
                 );
+                // Reset chatHistory if RECURSIVE_TALK is disabled
+                if (this.app.userSettings.RECURSIVE_TALK === false) {
+                    chatHistory = [];
+                    this.log(
+                        `History reset to empty array: ${this.app.userSettings.HISTORY_FILE}`,
+                    );
+                }
                 return chatHistory;
             } catch (e) {
                 logError(
