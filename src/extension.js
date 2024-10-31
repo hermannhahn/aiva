@@ -59,6 +59,7 @@ const Aiva = GObject.registerClass(
                 settings.get_string('azure-speech-voice');
             this.userSettings.RECURSIVE_TALK =
                 settings.get_boolean('log-history');
+            this.userSettings.ASSIST_NAME = settings.get_string('assist-name');
             this.userSettings.USERNAME = GLib.get_real_name();
             this.userSettings.LOCATION = '';
             this.userSettings.EXT_DIR = GLib.build_filenamev([
