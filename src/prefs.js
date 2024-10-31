@@ -660,7 +660,6 @@ class GeminiSettings {
             label: '',
             useMarkup: true,
             halign: Gtk.Align.CENTER,
-            expand: true,
         });
 
         // Set labels property
