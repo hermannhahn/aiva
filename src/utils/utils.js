@@ -63,7 +63,7 @@ export class Utils {
         return text;
     }
 
-    insertLineBreaks(text, maxWidth = 700, font = '12px Arial') {
+    insertLineBreaks(text, maxWidth = 700, font = '14px Arial') {
         // Convert text
         text = this._converttext(text);
 
@@ -101,7 +101,7 @@ export class Utils {
         return lines.join('\n');
     }
 
-    justifyText(text, maxWidth = 700, font = '12px Arial') {
+    justifyText(text, maxWidth = 700, font = '14px Arial') {
         // Cria uma superfície temporária e contexto Cairo para medir o texto
         const surface = new Cairo.ImageSurface(Cairo.Format.ARGB32, 0, 0);
         const cairoContext = new Cairo.Context(surface);
