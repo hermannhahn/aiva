@@ -123,9 +123,9 @@ export class Utils {
         const spacesNeeded = Math.abs(LINE_LENGTH - TOTAL_POINTS); // Necessary spaces
         const numGaps = words.length - 1; // Gaps betwen words
 
-        let spaceWidth = Math.floor(spacesNeeded / numGaps / 1.5); // Space width
+        let spaceWidth = Math.floor(spacesNeeded / numGaps / 2); // Space width
         spaceWidth = Math.max(1, spaceWidth); // Uniform spaces
-        let extraSpaces = spacesNeeded % numGaps; // Extra spaces
+        let extraSpaces = (spacesNeeded % numGaps) - 1; // Extra spaces
 
         let justifiedLine = `${SPACE_CHAR}`;
 
