@@ -67,7 +67,7 @@ export class Utils {
      * @description Insert lines breaks and justify
      */
     textformat(text) {
-        const LINE_LENGTH = 100; // Max line length
+        const LINE_LENGTH = 90; // Max line length
         const SPACE_CHAR = ' ';
         const NEW_LINE_CHAR = '\n';
 
@@ -101,6 +101,7 @@ export class Utils {
                         this._justifyLine(
                             currentLine,
                             LINE_LENGTH,
+                            wordPoints,
                             SPACE_CHAR,
                         ) + NEW_LINE_CHAR;
                     currentLine = [word]; // Start new line
@@ -115,18 +116,7 @@ export class Utils {
         return result;
     }
 
-    _justifyLine(words, LINE_LENGTH, SPACE_CHAR) {
-        const TOTAL_POINTS = words.reduce(
-            (sum, word) =>
-                sum +
-                word
-                    .split('')
-                    .reduce(
-                        (sum, char) => sum + this._calculatePoints(char),
-                        0,
-                    ),
-            0,
-        );
+    _justifyLine(words, LINE_LENGTH, TOTAL_POINTS, SPACE_CHAR) {
         if (words.length <= 5) return words[0]; // Dont justify if is smaller then five words.
 
         const spacesNeeded = LINE_LENGTH - TOTAL_POINTS; // Necessary spaces
