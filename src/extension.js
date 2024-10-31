@@ -261,7 +261,8 @@ const Aiva = GObject.registerClass(
             );
 
             // Set temporary response message
-            let aiResponse = _('<b>Gemini: </b> ...');
+            let aiResponse =
+                `<b>${this.userSettings.ASSIST_NAME}:</b> ` + _('...');
             responseChat.label.clutter_text.set_markup(aiResponse);
 
             this.ui.searchEntry.clutter_text.reactive = true;
@@ -333,7 +334,8 @@ const Aiva = GObject.registerClass(
                             res.error !== undefined
                         ) {
                             this.ui.responseChat?.label.clutter_text.set_markup(
-                                response,
+                                `<b>${this.userSettings.ASSIST_NAME}:</b> ` +
+                                    _(response),
                             );
                             // Scroll down
                             this.utils.scrollToBottom();
@@ -388,7 +390,8 @@ const Aiva = GObject.registerClass(
                                     }
 
                                     this.ui.responseChat?.label.clutter_text.set_markup(
-                                        '<b>Gemini: </b> ' + aiResponse,
+                                        `<b>${this.userSettings.ASSIST_NAME}:</b> ` +
+                                            aiResponse,
                                     );
 
                                     // Scroll down
@@ -406,9 +409,13 @@ const Aiva = GObject.registerClass(
                         ) {
                             // Set ai response to chat
                             let formatedResponse =
-                                this.utils.textformat(aiResponse);
+                                this.utils.insertLineBreaks(aiResponse);
+                            let justifiedText =
+                                this.utils.justifyText(formatedResponse);
+
                             this.ui.responseChat?.label.clutter_text.set_markup(
-                                '<b>Gemini: </b> ' + formatedResponse,
+                                `<b>${this.userSettings.ASSIST_NAME}:</b> ` +
+                                    justifiedText,
                             );
 
                             // Add copy button to chat
