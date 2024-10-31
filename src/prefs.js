@@ -38,6 +38,19 @@ class GeminiSettings {
         const defaultLanguage = this.schema.get_string('azure-speech-language');
         const defaultVoice = this.schema.get_string('azure-speech-voice');
         const defaultLog = this.schema.get_boolean('log-history');
+        const defaultAssistName = this.schema.get_boolean('assist-name');
+        // Set Gemini default name if no name is setted
+        if (
+            defaultAssistName === '' ||
+            defaultAssistName === null ||
+            defaultAssistName === undefined
+        ) {
+            console.log(
+                '[AIVA] No name setted, setting default name: Aiva, before: ' +
+                    defaultAssistName,
+            );
+            this.schema.set_string('assist-name', 'Aiva');
+        }
 
         // GEMINI API KEY
         const apiKeyLabel = new Gtk.Label({
@@ -96,7 +109,6 @@ class GeminiSettings {
             label: _('Select Voice'),
             halign: Gtk.Align.START,
         });
-
         const azureVoiceSelector = new Gtk.ComboBoxText();
 
         // Mapeamento das opções de voz para cada linguagem
@@ -630,6 +642,15 @@ class GeminiSettings {
             valign: Gtk.Align.CENTER,
         });
 
+        // AIVA Name
+        const labelAssistName = new Gtk.Label({
+            label: _('Assistant Name'),
+            halign: Gtk.Align.START,
+        });
+        const assistName = new Gtk.Entry({
+            buffer: new Gtk.EntryBuffer(),
+        });
+
         const save = new Gtk.Button({
             label: _('Save'),
         });
@@ -649,6 +670,7 @@ class GeminiSettings {
         azureRegion.set_text(defaultRegion);
         azureVoiceSelector.set_active_id(defaultVoice);
         languageSelector.set_active_id(defaultLanguage);
+        assistName.set_text(defaultAssistName);
 
         // Adicionar eventos
         save.connect('clicked', () => {
@@ -674,6 +696,11 @@ class GeminiSettings {
             this.schema.set_string('azure-speech-voice', selectedVoice);
 
             this.schema.set_boolean('log-history', histroyButton.state);
+            this.schema.set_string(
+                'assist-name',
+                assistName.get_buffer().get_text(),
+            );
+
             statusLabel.set_markup(
                 _(
                     'Your preferences have been saved\n\nLanguage: ' +
@@ -706,9 +733,13 @@ class GeminiSettings {
         this.main.attach(histroyLabel, 0, 5, 1, 1);
         this.main.attach(histroyButton, 2, 5, 1, 1);
 
-        this.main.attach(save, 0, 6, 5, 1);
-        this.main.attach(statusLabel, 0, 7, 5, 1);
+        this.main.attach(labelAssistName, 0, 6, 1, 1);
+        this.main.attach(assistName, 2, 6, 2, 1);
 
+        this.main.attach(save, 0, 7, 3, 1);
+        this.main.attach(statusLabel, 3, 7, 1, 1);
+
+        // Adicionar a grade à página
         this.ui.add(this.main);
     }
 }
