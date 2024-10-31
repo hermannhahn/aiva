@@ -76,11 +76,6 @@ export class Utils {
         let lines = text.split(NEW_LINE_CHAR); // Keep origin text line breaks
 
         lines.forEach((line, index) => {
-            // Don't split first line, insert \n with 76 chars but dont broke word.
-            if (index === 0) {
-                result += line;
-                if (index < lines.length - 1) result += NEW_LINE_CHAR;
-            }
             // Split line by spaces
             let words = line.split(SPACE_CHAR);
             let currentLine = [];
@@ -128,7 +123,7 @@ export class Utils {
         const spacesNeeded = LINE_LENGTH - TOTAL_POINTS; // Necessary spaces
         const numGaps = words.length - 1; // Gaps betwen words
 
-        let spaceWidth = Math.abs(Math.floor(spacesNeeded / numGaps) / 2); // Space width
+        let spaceWidth = Math.abs(Math.floor(spacesNeeded / numGaps) / numGaps); // Space width
         spaceWidth = Math.max(1, spaceWidth); // Uniform spaces
         let extraSpaces = spacesNeeded % numGaps; // Extra spaces
 
