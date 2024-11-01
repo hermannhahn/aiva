@@ -37,9 +37,7 @@ const Aiva = GObject.registerClass(
         }
 
         /**
-         * fetch settings
-         *
-         * @description fetch settings to this
+         * @description fetch settings
          */
         _fetchSettings() {
             this.log('Fetching settings...');
@@ -80,11 +78,13 @@ const Aiva = GObject.registerClass(
             this.log('All Settings fetched.');
         }
 
+        /**
+         * @description create instances
+         */
         _createInstances() {
             /**
-             * utils instance
+             * this.utils = new Utils(this);
              *
-             * @instance this.utils = new Utils(this);
              * @function log|logError|inputformat|textformat|insertLineBreaks
              * @description generic utilities
              */
