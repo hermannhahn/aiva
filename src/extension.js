@@ -37,13 +37,20 @@ const Aiva = GObject.registerClass(
          */
         _fetchSettings() {
             /**
-             * get extension settings
+             * load utils
              */
-            const {settings} = this.extension;
-            this.log('Settings loaded.');
+            this.utils = new Utils(this);
+            this.log = this.utils.log;
+            this.logError = this.utils.logError;
+            this.log('Utils loaded.');
 
             /**
-             * set/get user settings [GEMINI_API_KEY, AZURE_SPEECH_KEY, AZURE_SPEECH_REGION, AZURE_SPEECH_LANGUAGE, AZURE_SPEECH_VOICE, RECURSIVE_TALK, USERNAME, LOCATION, EXT_DIR, HISTORY_FILE]
+             * extension settings
+             */
+            const {settings} = this.extension;
+
+            /**
+             * user settings
              */
             this.userSettings = {};
             this.userSettings.GEMINI_API_KEY =
@@ -75,16 +82,23 @@ const Aiva = GObject.registerClass(
                 this.userSettings.EXT_DIR,
                 'history.json',
             ]);
-            this.log('User settings loaded.');
+            this.log('Settings loaded.');
 
             /**
-             * get ui layouts  [tray, icon, item, searchEntry, micButton, clearButton, settingsButton, chatSection, scrollView, inputChat, responseChat, copyButton, newSeparator]
+             * UI
+             * @example this.ui.searchEntry
+             * @options tray | icon | item | searchEntry | micButton | clearButton | settingsButton |
+             * chatSection | scrollView | inputChat | responseChat | copyButton | newSeparator
+             * @description Graphic interfaces to app
              */
             this.ui = new AppLayout(this);
             this.log('UI layouts loaded.');
 
             /**
-             * Azure API [tts, transcribe]
+             * Azure API
+             * @example this.azure.tts("test")
+             * @options tts | transcribe
+             * @description tts: text to speech | transcribe: speech to text
              */
             this.azure = new MicrosoftAzure(this);
             this.log('Azure API loaded.');
@@ -96,15 +110,15 @@ const Aiva = GObject.registerClass(
             this.log('Audio loaded.');
 
             /**
+             * load brain
+             */
+            this.brain = new Brain(this);
+
+            /**
              * load chat
              */
             this.chat = new Chat(this);
             this.log('Chat loaded.');
-
-            /**
-             * load brain
-             */
-            this.brain = new Brain(this);
         }
 
         /**
@@ -114,12 +128,6 @@ const Aiva = GObject.registerClass(
          * init extension
          */
         _init(extension) {
-            // utility functions
-            this.utils = new Utils(this);
-            this.log = this.utils.log;
-            this.logError = this.utils.logError;
-            this.log('Utils loaded.');
-
             //
             // Initialize extension
             //
