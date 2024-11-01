@@ -6,7 +6,13 @@ export class Brain {
     }
 
     proccess(question) {
-        this.app.response(question);
+        // this.app.response(question);
+        if (this._isCommand(question)) {
+            this.app.log(question);
+            // this.executeCommand(question)
+        } else if (this._isVoiceCommand(question)) {
+            this.app.log('is voice command: ' + question);
+        }
     }
 
     _isCommand(text) {
@@ -19,13 +25,9 @@ export class Brain {
     _isVoiceCommand(text) {
         text = text.toLowerCase();
         // Regex: please and open in same prhase
-        let please = _(
-            'please',
-        )
+        let please = _('please');
         let activationWords = [
-            _(
-                'open',
-            ),
+            _('open'),
             _('run'),
             _('execute'),
             _('start'),
@@ -34,10 +36,12 @@ export class Brain {
             _('close'),
             _('stop'),
             _('terminate'),
-            _('deactivate'),
-        ]
-        let regexs = [/please\s+open\s+in/g;
-        if (text.includes('voice')) {
+            _('exit'),
+        ];
+
+        let regex = new RegExp(`^${please}\\s+(${activationWords.join('|')})$`);
+
+        if (regex.test(text)) {
             return true;
         }
         return false;
