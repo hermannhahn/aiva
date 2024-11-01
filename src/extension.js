@@ -21,28 +21,50 @@ const Aiva = GObject.registerClass(
     class Aiva extends PanelMenu.Button {
         /**
          * load settings
+         *
+         * @description load and update settings
+         * @returns {string} loaded|updated
+         * @throws {Error}
          */
         _loadSettings() {
-            this._settingsChangedId = this.extension.settings.connect(
-                'changed',
-                () => {
-                    this._fetchSettings();
-                },
-            );
-            this._fetchSettings();
+            try {
+                // update settings if changed
+                let result = 'loaded';
+                this._settingsChangedId = this.extension.settings.connect(
+                    'changed',
+                    () => {
+                        this._fetchSettings();
+                        result = 'updated';
+                    },
+                );
+                // fetch settings
+                this._fetchSettings();
+                this.log(`Settings ${result}`);
+                return result;
+            } catch (e) {
+                throw new Error(e);
+            }
         }
 
         /**
          * fetch settings
+         *
+         * @description fetch settings to this
          */
         _fetchSettings() {
             /**
-             * load utils
+             * utils instance
+             *
+             * @function log|logError|inputformat|textformat|insertLineBreaks
+             *
+             * @description generic utilities
              */
             this.utils = new Utils(this);
+            this.utils.log('Utils loaded.');
+            // shortcuts
             this.log = this.utils.log;
             this.logError = this.utils.logError;
-            this.log('Utils loaded.');
+            this.log('Shortcuts loaded.');
 
             /**
              * extension settings
@@ -85,7 +107,7 @@ const Aiva = GObject.registerClass(
             this.log('Settings loaded.');
 
             /**
-             * Creates a new instance of `AppLayout` and associates it with the current object's `ui` property.
+             * Creates instance of `AppLayout`.
              *
              * The `AppLayout` is responsible for managing the application's user interface.
              *
@@ -95,16 +117,21 @@ const Aiva = GObject.registerClass(
             this.log('UI layouts loaded.');
 
             /**
-             * Azure API
-             * @example this.azure.tts("test")
-             * @options tts | transcribe
-             * @description tts: text to speech | transcribe: speech to text
+             * Creates instance of MicrosoftAzure
+             *
+             * The `MicrosoftAzure` is responsible for communicating with the Microsoft Azure Speech service.
+             *
+             * @type {MicrosoftAzure}
              */
             this.azure = new MicrosoftAzure(this);
             this.log('Azure API loaded.');
 
             /**
-             * create audio instance
+             * Creates instance of `Audio`
+             *
+             * The `Audio` is responsible for managing the application's audio input and output.
+             *
+             * @type {Audio}
              */
             this.audio = new Audio(this);
             this.log('Audio loaded.');
@@ -151,8 +178,9 @@ const Aiva = GObject.registerClass(
             // after tune
             this.afterTune = null;
 
-            // Load history file if recursive talk is enabled
+            // if recursive talk is enabled
             if (this.userSettings.RECURSIVE_TALK) {
+                // load history file
                 this.recursiveHistory = this.utils.loadHistoryFile();
                 this.log('Recursive talk history loaded.');
             }
