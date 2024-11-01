@@ -38,8 +38,11 @@ export class Brain {
             _('terminate'),
             _('exit'),
         ];
-
-        let regex = new RegExp(`^${please}\\s+(${activationWords.join('|')})$`);
+        // Regex: * + please + * + activationWords + *
+        let regex = new RegExp(
+            `^${please} +(${activationWords.join('|')})$`,
+            'i',
+        );
 
         if (regex.test(text)) {
             return true;
