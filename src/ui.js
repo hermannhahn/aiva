@@ -178,4 +178,17 @@ export class AppLayout {
         this.responseChat = responseChat;
         return responseChat;
     }
+
+    copy() {
+        // Copy Button
+        let copyButton = new PopupMenu.PopupMenuItem('', {
+            style_class: 'copy-icon',
+            can_focus: false,
+        });
+        copyButton.label.clutter_text.reactive = true;
+        copyButton.label.clutter_text.selectable = true;
+        copyButton.label.clutter_text.hover = true;
+        this.copyButton = copyButton;
+        return copyButton;
+    }
 }
