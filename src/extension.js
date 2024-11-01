@@ -16,6 +16,7 @@ import {AppLayout} from './ui.js';
 import {MicrosoftAzure} from './ai/azure.js';
 import {Audio} from './utils/audio.js';
 import {Brain} from './brain.js';
+import {Chat} from './chat.js';
 
 const Aiva = GObject.registerClass(
     class Aiva extends PanelMenu.Button {
@@ -80,7 +81,7 @@ const Aiva = GObject.registerClass(
             /**
              * get ui layouts  [tray, icon, item, searchEntry, micButton, clearButton, settingsButton, chatSection, scrollView, inputChat, responseChat, copyButton, newSeparator]
              */
-            this.ui = new AppLayout();
+            this.ui = new AppLayout(this);
             this.log('UI layouts loaded.');
 
             /**
@@ -94,6 +95,12 @@ const Aiva = GObject.registerClass(
              */
             this.audio = new Audio(this);
             this.log('Audio loaded.');
+
+            /**
+             * load chat
+             */
+            this.chat = new Chat(this);
+            this.log('Chat loaded.');
 
             /**
              * load brain
@@ -120,7 +127,7 @@ const Aiva = GObject.registerClass(
 
             // Create extension
             super._init(0.0, _('AIVA'));
-            this.log('Initing extension...');
+            this.log('Extension initialized.');
 
             // get extension props
             this.extension = extension;
@@ -133,7 +140,6 @@ const Aiva = GObject.registerClass(
             // chat history
             this.chatHistory = [];
             this.recursiveHistory = [];
-            this.log('New chat created.');
 
             // after tune
             this.afterTune = null;
@@ -147,62 +153,8 @@ const Aiva = GObject.registerClass(
             //
             // Initialize UI
             //
-
-            // Icon tray
-            this.ui.tray.add_child(this.ui.icon);
-            this.add_child(this.ui.tray);
-            this.log('App tray initialized.');
-
-            // Add items container to menu
-            this.menu.addMenuItem(this.ui.item);
-            this.menu.style_class = 'menu';
-
-            // Add scrollview to menu box
-            this.menu.box.add_child(this.ui.scrollView);
-            this.menu.box.style_class = 'menu-box';
-
-            // Add chat to scrollbar
-            this.ui.scrollView.add_child(this.ui.chatSection.actor);
-
-            // Add search entry, mic button, clear button and settings button to items container
-            this.ui.item.add_child(this.ui.searchEntry);
-            this.ui.item.add_child(this.ui.micButton);
-            this.ui.item.add_child(this.ui.clearButton);
-            this.ui.item.add_child(this.ui.settingsButton);
-
-            //
-            // Actions
-            //
-
-            // If press enter on question input box
-            this.ui.searchEntry.clutter_text.connect('activate', (actor) => {
-                const question = actor.text;
-                this.ui.searchEntry.clutter_text.set_text('');
-                this.ui.searchEntry.clutter_text.reactive = false;
-                this.chat(question);
-            });
-
-            // If press mic button
-            this.ui.micButton.connect('clicked', (_self) => {
-                this.audio.record();
-            });
-
-            // If press clear button
-            this.ui.clearButton.connect('clicked', (_self) => {
-                this.ui.searchEntry.clutter_text.set_text('');
-                this.chatHistory = [];
-                this.ui.menu.box.remove_child(this.ui.scrollView);
-                this.ui.chatSection = new PopupMenu.PopupMenuSection();
-                this.ui.scrollView.add_child(this.ui.chatSection.actor);
-                this.ui.menu.box.add_child(this.ui.scrollView);
-            });
-
-            // If press settings button
-            this.ui.settingsButton.connect('clicked', (_self) => {
-                this.openSettings();
-                // Close App
-                this.menu.close();
-            });
+            this.ui.init();
+            this.log('UI initialized.');
 
             // Open settings if gemini api key is not configured
             if (this.userSettings.GEMINI_API_KEY === '') {
