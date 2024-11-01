@@ -22,31 +22,33 @@ export class Brain {
         return false;
     }
 
-    _isVoiceCommand(text) {
+    _isVoiceCommand(
+        text,
+        maxWords = 10,
+        triggerWord = 'please',
+        activationWords = [
+            'open',
+            'run',
+            'execute',
+            'start',
+            'launch',
+            'activate',
+            'close',
+            'stop',
+            'terminate',
+            'exit',
+        ],
+    ) {
+        // Converter para minúsculas apenas uma vez
         text = text.toLowerCase();
-        // Regex: please and open in same prhase
-        let please = _('please');
-        let activationWords = [
-            _('open'),
-            _('run'),
-            _('execute'),
-            _('start'),
-            _('launch'),
-            _('activate'),
-            _('close'),
-            _('stop'),
-            _('terminate'),
-            _('exit'),
-        ];
-        // Regex: * + ${please} + * + ${activationWords} + *
-        let regex = new RegExp(
-            '.*' + please + '.*' + activationWords.join('.*') + '.*',
-            'i',
-        );
 
-        if (regex.test(text)) {
-            return true;
-        }
-        return false;
+        // Dividir o texto em palavras e pegar as primeiras 'maxWords'
+        const words = text.split(/\s+/).slice(0, maxWords);
+
+        // Verificar se 'triggerWord' e pelo menos uma 'activationWord' estão presentes
+        return (
+            words.includes(triggerWord) &&
+            words.some((word) => activationWords.includes(word))
+        );
     }
 }
