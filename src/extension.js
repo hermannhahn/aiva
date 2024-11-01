@@ -23,18 +23,17 @@ const Aiva = GObject.registerClass(
          * @description load and update settings
          */
         _loadSettings() {
+            this.log('Loading settings...');
+            // fetch settings
+            this._fetchSettings();
             // update settings if changed
-            let result = 'loaded';
             this._settingsChangedId = this.extension.settings.connect(
                 'changed',
                 () => {
                     this._fetchSettings();
-                    result = 'updated';
                 },
             );
-            // fetch settings
-            this._fetchSettings();
-            this.log(`Settings ${result}`);
+            this.log('Settings loaded.');
         }
 
         /**
@@ -43,53 +42,50 @@ const Aiva = GObject.registerClass(
          * @description fetch settings to this
          */
         _fetchSettings() {
-            /**
-             * extension settings
-             */
+            this.log('Fetching settings...');
+            // extension settings
             const {settings} = this.extension;
-
-            /**
-             * user settings
-             */
-            this.userSettings = {};
-            this.userSettings.GEMINI_API_KEY =
-                settings.get_string('gemini-api-key');
-            this.userSettings.AZURE_SPEECH_KEY =
-                settings.get_string('azure-speech-key');
-            this.userSettings.AZURE_SPEECH_REGION = settings.get_string(
-                'azure-speech-region',
-            );
-            this.userSettings.AZURE_SPEECH_LANGUAGE = settings.get_string(
-                'azure-speech-language',
-            );
-            this.userSettings.AZURE_SPEECH_VOICE =
-                settings.get_string('azure-speech-voice');
-            this.userSettings.RECURSIVE_TALK =
-                settings.get_boolean('log-history');
-            this.userSettings.ASSIST_NAME = settings.get_string('assist-name');
-            this.userSettings.USERNAME = GLib.get_real_name();
-            this.userSettings.LOCATION = '';
-            this.userSettings.EXT_DIR = GLib.build_filenamev([
-                GLib.get_home_dir(),
-                '.local',
-                'share',
-                'gnome-shell',
-                'extensions',
-                'aiva@gemini-assist.vercel.app',
-            ]);
-            this.userSettings.HISTORY_FILE = GLib.build_filenamev([
-                this.userSettings.EXT_DIR,
-                'history.json',
-            ]);
-            this.log('Settings loaded.');
+            this.log('Extension settings loaded.');
+            // user settings
+            this.userSettings = {
+                ASSIST_NAME: settings.get_string('assist-name'),
+                AZURE_SPEECH_KEY: settings.get_string('azure-speech-key'),
+                AZURE_SPEECH_REGION: settings.get_string('azure-speech-region'),
+                AZURE_SPEECH_LANGUAGE: settings.get_string(
+                    'azure-speech-language',
+                ),
+                AZURE_SPEECH_VOICE: settings.get_string('azure-speech-voice'),
+                EXT_DIR: GLib.build_filenamev([
+                    GLib.get_home_dir(),
+                    '.local',
+                    'share',
+                    'gnome-shell',
+                    'extensions',
+                    'aiva@gemini-assist.vercel.app',
+                ]),
+                GEMINI_API_KEY: settings.get_string('gemini-api-key'),
+                HISTORY_FILE: GLib.build_filenamev([
+                    GLib.get_home_dir(),
+                    '.local',
+                    'share',
+                    'gnome-shell',
+                    'extensions',
+                    'aiva@gemini-assist.vercel.app',
+                ]),
+                LOCATION: 'Unknown',
+                RECURSIVE_TALK: settings.get_boolean('log-history'),
+                USERNAME: GLib.get_real_name(),
+            };
+            this.log('User settings loaded.');
+            this.log('All Settings fetched.');
         }
 
         _createInstances() {
             /**
              * utils instance
              *
+             * @instance this.utils = new Utils(this);
              * @function log|logError|inputformat|textformat|insertLineBreaks
-             *
              * @description generic utilities
              */
             this.utils = new Utils(this);
@@ -97,7 +93,7 @@ const Aiva = GObject.registerClass(
             // log shortcuts
             this.log = this.utils.log;
             this.logError = this.utils.logError;
-            this.log('Log shortcuts loaded.');
+            this.log('Utils: Log shortcuts loaded.');
 
             /**
              * ui instance
