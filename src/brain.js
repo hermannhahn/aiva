@@ -8,7 +8,7 @@ export class Brain {
     proccess(question) {
         // this.app.response(question);
         if (this._isCommand(question)) {
-            this.app.log(question);
+            this.app.log('is command: ' + question);
             // this.executeCommand(question)
         } else if (this._isVoiceCommand(question)) {
             this.app.log('is voice command: ' + question);
