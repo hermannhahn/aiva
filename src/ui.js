@@ -175,6 +175,7 @@ export class AppLayout {
         responseChat.label.clutter_text.reactive = true;
         responseChat.label.clutter_text.selectable = true;
         responseChat.label.clutter_text.hover = true;
+        responseChat.label.clutter_text.justify = true;
         this.responseChat = responseChat;
         return responseChat;
     }
