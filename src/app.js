@@ -8,4 +8,8 @@ export class App {
             console.log(`[AIVA] ${message}`);
         }
     }
+
+    init() {
+        this.log('App initialized.');
+    }
 }
