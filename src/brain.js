@@ -41,6 +41,7 @@ export class Brain {
         // Regex: * + ${please} + * + ${activationWords} + *
         let regex = new RegExp(
             '.*' + please + '.*' + activationWords.join('.*') + '.*',
+            'i',
         );
 
         if (regex.test(text)) {
