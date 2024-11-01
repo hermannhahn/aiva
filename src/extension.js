@@ -83,9 +83,8 @@ const Aiva = GObject.registerClass(
          */
         _createInstances() {
             /**
-             * this.utils = new Utils(this);
+             * log | logError | inputformat | textformat | insertLineBreaks
              *
-             * @function log|logError|inputformat|textformat|insertLineBreaks
              * @description generic utilities
              */
             this.utils = new Utils(this);
@@ -96,11 +95,9 @@ const Aiva = GObject.registerClass(
             this.log('Utils: Log shortcuts loaded.');
 
             /**
-             * ui instance
+             * tray | icon | chatSection | scrollView | copyButton |
              *
              * @description The `AppLayout` is responsible for managing the application's user interface.
-             *
-             * @type {AppLayout}
              */
             this.ui = new AppLayout(this);
             this.log('UI layouts loaded.');
