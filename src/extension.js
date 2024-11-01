@@ -20,30 +20,21 @@ import {Chat} from './chat.js';
 const Aiva = GObject.registerClass(
     class Aiva extends PanelMenu.Button {
         /**
-         * load settings
-         *
          * @description load and update settings
-         * @returns {string} loaded|updated
-         * @throws {Error}
          */
         _loadSettings() {
-            try {
-                // update settings if changed
-                let result = 'loaded';
-                this._settingsChangedId = this.extension.settings.connect(
-                    'changed',
-                    () => {
-                        this._fetchSettings();
-                        result = 'updated';
-                    },
-                );
-                // fetch settings
-                this._fetchSettings();
-                this.log(`Settings ${result}`);
-                return result;
-            } catch (e) {
-                throw new Error(e);
-            }
+            // update settings if changed
+            let result = 'loaded';
+            this._settingsChangedId = this.extension.settings.connect(
+                'changed',
+                () => {
+                    this._fetchSettings();
+                    result = 'updated';
+                },
+            );
+            // fetch settings
+            this._fetchSettings();
+            this.log(`Settings ${result}`);
         }
 
         /**
@@ -52,20 +43,6 @@ const Aiva = GObject.registerClass(
          * @description fetch settings to this
          */
         _fetchSettings() {
-            /**
-             * utils instance
-             *
-             * @function log|logError|inputformat|textformat|insertLineBreaks
-             *
-             * @description generic utilities
-             */
-            this.utils = new Utils(this);
-            this.utils.log('Utils loaded.');
-            // shortcuts
-            this.log = this.utils.log;
-            this.logError = this.utils.logError;
-            this.log('Shortcuts loaded.');
-
             /**
              * extension settings
              */
@@ -105,11 +82,27 @@ const Aiva = GObject.registerClass(
                 'history.json',
             ]);
             this.log('Settings loaded.');
+        }
+
+        _createInstances() {
+            /**
+             * utils instance
+             *
+             * @function log|logError|inputformat|textformat|insertLineBreaks
+             *
+             * @description generic utilities
+             */
+            this.utils = new Utils(this);
+            this.utils.log('Utils loaded.');
+            // log shortcuts
+            this.log = this.utils.log;
+            this.logError = this.utils.logError;
+            this.log('Log shortcuts loaded.');
 
             /**
-             * Creates instance of `AppLayout`.
+             * ui instance
              *
-             * The `AppLayout` is responsible for managing the application's user interface.
+             * @description The `AppLayout` is responsible for managing the application's user interface.
              *
              * @type {AppLayout}
              */
@@ -155,11 +148,7 @@ const Aiva = GObject.registerClass(
          * init extension
          */
         _init(extension) {
-            //
-            // Initialize extension
-            //
-
-            // Create extension
+            // initialize extension
             super._init(0.0, _('AIVA'));
             this.log('Extension initialized.');
 
