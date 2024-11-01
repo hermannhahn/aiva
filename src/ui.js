@@ -87,6 +87,8 @@ export class AppLayout {
         this.newSeparator = new PopupMenu.PopupSeparatorMenuItem();
 
         this.createTray();
+        this.addItems();
+        this.itemsActions();
     }
 
     createTray() {
@@ -94,8 +96,6 @@ export class AppLayout {
         this.ui.tray.add_child(this.ui.icon);
         this.add_child(this.ui.tray);
         this.log('App tray initialized.');
-
-        this.addItems();
     }
 
     addItems() {
@@ -115,8 +115,6 @@ export class AppLayout {
         this.ui.item.add_child(this.ui.micButton);
         this.ui.item.add_child(this.ui.clearButton);
         this.ui.item.add_child(this.ui.settingsButton);
-
-        this.itemsActions();
     }
 
     itemsActions() {
