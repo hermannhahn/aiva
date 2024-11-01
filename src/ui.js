@@ -86,12 +86,12 @@ export class AppLayout {
         // Separator
         this.newSeparator = new PopupMenu.PopupSeparatorMenuItem();
 
-        this.createTray();
+        this.createApp();
         this.addItems();
         this.itemsActions();
     }
 
-    createTray() {
+    createApp() {
         // Icon tray
         this.tray.add_child(this.icon);
         this.app.add_child(this.tray);
