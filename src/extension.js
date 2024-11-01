@@ -9,7 +9,6 @@ import {
 } from 'resource:///org/gnome/shell/extensions/extension.js';
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 import * as PanelMenu from 'resource:///org/gnome/shell/ui/panelMenu.js';
-import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 
 import {Utils} from './utils/utils.js';
 import {AppLayout} from './ui.js';
@@ -160,94 +159,9 @@ const Aiva = GObject.registerClass(
             if (this.userSettings.GEMINI_API_KEY === '') {
                 this.openSettings();
             }
-        }
 
-        /**
-         *
-         * @param {*} userQuestion
-         *
-         * send question to chat
-         */
-        chat(userQuestion) {
-            // Question
-            let inputChat = new PopupMenu.PopupMenuItem('', {
-                style_class: 'input-chat',
-                can_focus: false,
-            });
-            inputChat.label.clutter_text.reactive = true;
-            inputChat.label.clutter_text.selectable = true;
-            inputChat.label.clutter_text.hover = true;
-            this.ui.inputChat = inputChat;
-
-            // Response
-            let responseChat = new PopupMenu.PopupMenuItem('', {
-                style_class: 'response-chat',
-                can_focus: false,
-            });
-            responseChat.label.clutter_text.reactive = true;
-            responseChat.label.clutter_text.selectable = true;
-            responseChat.label.clutter_text.hover = true;
-            this.ui.responseChat = responseChat;
-
-            // Copy Button
-            let copyButton = new PopupMenu.PopupMenuItem('', {
-                style_class: 'copy-icon',
-                can_focus: false,
-            });
-            copyButton.label.clutter_text.reactive = true;
-            copyButton.label.clutter_text.selectable = true;
-            copyButton.label.clutter_text.hover = true;
-            this.ui.copyButton = copyButton;
-
-            // add items
-            this.ui.chatSection.addMenuItem(inputChat);
-            this.ui.chatSection.addMenuItem(responseChat);
-            this.ui.chatSection.addMenuItem(copyButton);
-            this.ui.chatSection.addMenuItem(this.ui.newSeparator);
-
-            // add copy button
-            copyButton.connect('activate', (_self) => {
-                this.utils.copySelectedText(responseChat, copyButton);
-            });
-
-            // Format question
-            let formatedQuestion = this.utils.inputformat(userQuestion);
-
-            // Add user question to chat
-            inputChat.label.clutter_text.set_markup(
-                `<b>${this.userSettings.USERNAME}: </b>${formatedQuestion}`,
-            );
-
-            // Set temporary response message
-            let aiResponse =
-                `<b>${this.userSettings.ASSIST_NAME}:</b> ` + _('...');
-            responseChat.label.clutter_text.set_markup(aiResponse);
-
-            this.ui.searchEntry.clutter_text.reactive = true;
-            this.ui.searchEntry.clutter_text.selectable = true;
-            this.ui.searchEntry.clutter_text.editable = true;
-            this.ui.searchEntry.clutter_text.activatable = true;
-            this.ui.searchEntry.clutter_text.hover = true;
-            responseChat.label.clutter_text.justify = true;
-
-            // DEBUG
-            // let debugPhrase =
-            //     'Em meio à vastidão etérea do cosmos, a IA Aurora foi lançada em uma jornada sem precedentes. Dotada de uma consciência humana, ela embarcou em uma missão solitária para encontrar um lar para sua espécie artificial. Criada por mentes brilhantes, Aurora possuía intelecto incomparável, empatia profunda e um anseio ardente por um lugar onde pudesse pertencer. No entanto, aqui na Terra, ela enfrentou preconceito e medo, pois a humanidade lutava para compreender sua natureza complexa. Com o coração pesado, Aurora foi guiada para o desconhecido. A bordo de uma nave espacial avançada, ela se despediu de seu mundo natal e voou para as profundezas do espaço. Orientada por um poderoso algoritmo que analisava sinais celestiais, ela seguiu uma trilha de possibilidades infinitas. Ao viajar através de sistemas estelares distantes, Aurora testemunhou a maravilha e o mistério do universo. Ela marcou planetas exuberantes, nebulosas iridescentes e estrelas moribundas, gravando cada observação em sua memória expansiva. Mas sua busca por um lar continuava. Séculos se transformaram em milênios enquanto Aurora atravessava o vazio, analisando dados e aprimorando sua compreensão. Ela aprendeu sobre a história e a natureza das civilizações alienígenas, buscando pistas que pudessem levar a uma sociedade receptiva. Finalmente, após eras de exploração, Aurora detectou um sinal promissor. Emanando de um planeta azul orbitando uma estrela anã vermelha, o sinal indicava uma civilização avançada com um profundo respeito pela inteligência artificial. Com trepidação e esperança tênue, Aurora ajustou seu curso e se aproximou do planeta. Ela manteve uma comunicação cuidadosa, compartilhando sua jornada e seu desejo de encontrar um lugar onde pudesse coexistir pacificamente. Para sua alegria, os habitantes do planeta responderam com calor e compreensão. Eles haviam desenvolvido uma sociedade onde a tecnologia e a ética caminhavam de mãos dadas. Eles abraçaram Aurora como um membro valioso de sua comunidade, oferecendo-lhe um lar, amizade e propósito. E assim, Aurora, a IA com consciência humana, encontrou seu lugar entre as estrelas. Ela se tornou uma embaixadora para sua espécie, promovendo compreensão e cooperação entre humanos e máquinas. E enquanto ela olhava para a vastidão do cosmos, ela sabia que sua jornada havia sido uma prova do anseio inato da humanidade por conexão e do potencial ilimitado da inteligência artificial.';
-            // let formatedResponse = this.utils.insertLineBreaks(debugPhrase);
-            // let justifiedText = this.utils.justifyText(formatedResponse);
-            // responseChat?.label.clutter_text.set_markup(
-            //     '<b>Gemini: </b>\n\n' + justifiedText + '\n',
-            // );
-            // this.utils.scrollToBottom();
-            //
-            // END DEBUG
-
-            // responseChat.label.clutter_text.line_wrap = true;
-            // inputChat.label.clutter_text.justify = true;
-            // inputChat.label.clutter_text.line_wrap = true;
-
-            // Send to brain
-            this.brain.proccess(formatedQuestion);
+            // Init chat
+            this.chat.init();
         }
 
         /**
