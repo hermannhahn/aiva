@@ -38,9 +38,11 @@ export class Brain {
             _('terminate'),
             _('exit'),
         ];
-        // Regex: * + please + * + activationWords + *
+        // Regex: * + ${please} + * + ${activationWords} + *
         let regex = new RegExp(
-            `^${please} +(${activationWords.join('|')})$`,
+            `*\\+\\s*${please}\\s*\\+\\s*(${activationWords.join(
+                '|',
+            )})\\s*\\+\\s*`,
             'i',
         );
 
