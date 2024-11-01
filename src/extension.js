@@ -85,9 +85,9 @@ const Aiva = GObject.registerClass(
             this.log('Settings loaded.');
 
             /**
-             * Cria uma nova instância de `AppLayout` e a associa à propriedade `ui` do objeto atual.
+             * Creates a new instance of `AppLayout` and associates it with the current object's `ui` property.
              *
-             * O `AppLayout` é responsável por gerenciar a interface do usuário da aplicação.
+             * The `AppLayout` is responsible for managing the application's user interface.
              *
              * @type {AppLayout}
              */
