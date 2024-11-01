@@ -25,7 +25,7 @@ export class Brain {
     _isVoiceCommand(
         text,
         maxWords = 10,
-        triggerWord = [_('computer')],
+        triggerWord = _('computer'),
         activationWords = [
             _('open'),
             _('start'),
