@@ -9,6 +9,13 @@ import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js'
 
 import {convertMD} from './md2pango.js';
 
+/**
+ * App utilities
+ *
+ * @property {object} app - app instance
+ *
+ * @description Usage: const utils = new Utils(this);
+ */
 export class Utils {
     constructor(app) {
         this.app = app;
