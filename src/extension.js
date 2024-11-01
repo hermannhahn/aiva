@@ -85,11 +85,11 @@ const Aiva = GObject.registerClass(
             this.log('Settings loaded.');
 
             /**
-             * UI
-             * @example this.ui.searchEntry
-             * @options tray | icon | item | searchEntry | micButton | clearButton | settingsButton |
-             * chatSection | scrollView | inputChat | responseChat | copyButton | newSeparator
-             * @description Graphic interfaces to app
+             * Cria uma nova instância de `AppLayout` e a associa à propriedade `ui` do objeto atual.
+             *
+             * O `AppLayout` é responsável por gerenciar a interface do usuário da aplicação.
+             *
+             * @type {AppLayout}
              */
             this.ui = new AppLayout(this);
             this.log('UI layouts loaded.');
