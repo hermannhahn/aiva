@@ -88,9 +88,11 @@ export class Brain {
                 );
 
                 if (softwareName) {
-                    if (softwareName === 'google' || softwareName === 'chrome') {
+                    if (
+                        softwareName === 'google' ||
+                        softwareName === 'chrome'
+                    ) {
                         this.app.log('Software to open: ' + softwareName);
-                        this.app.openSoftware(softwareName);
                     } else if (softwareName === 'youtube') {
                         this.app.log('Software to open: ' + softwareName);
                     } else if (softwareName === 'vscode') {
@@ -106,3 +108,4 @@ export class Brain {
             }
         }
     }
+}
