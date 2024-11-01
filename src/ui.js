@@ -127,7 +127,7 @@ export class AppLayout {
             const question = actor.text;
             this.searchEntry.clutter_text.set_text('');
             this.searchEntry.clutter_text.reactive = false;
-            this.app.brain.proccess(question);
+            this.app.chat.send(question);
         });
 
         // If press mic button
@@ -151,5 +151,31 @@ export class AppLayout {
             // Close App
             this.app.menu.close();
         });
+    }
+
+    input() {
+        // Question
+        let inputChat = new PopupMenu.PopupMenuItem('', {
+            style_class: 'input-chat',
+            can_focus: false,
+        });
+        inputChat.label.clutter_text.reactive = true;
+        inputChat.label.clutter_text.selectable = true;
+        inputChat.label.clutter_text.hover = true;
+        this.inputChat = inputChat;
+        return inputChat;
+    }
+
+    response() {
+        // Response
+        let responseChat = new PopupMenu.PopupMenuItem('', {
+            style_class: 'response-chat',
+            can_focus: false,
+        });
+        responseChat.label.clutter_text.reactive = true;
+        responseChat.label.clutter_text.selectable = true;
+        responseChat.label.clutter_text.hover = true;
+        this.responseChat = responseChat;
+        return responseChat;
     }
 }
