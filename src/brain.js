@@ -11,7 +11,9 @@ export class Brain {
             this.app.log('is command: ' + question);
             // this.executeCommand(question)
         } else if (this._isVoiceCommand(question)) {
-            this.app.log('is voice command: ' + question);
+            this._commandInterpreter(question);
+        } else {
+            this.app.response(question);
         }
     }
 
@@ -22,10 +24,17 @@ export class Brain {
         return false;
     }
 
-    _isVoiceCommand(
+    _isVoiceCommand(text) {
+        text = text.toLowerCase();
+        if (text.startsWith(_('computer'))) {
+            return true;
+        }
+        return false;
+    }
+
+    _commandInterpreter(
         text,
         maxWords = 10,
-        triggerWord = _('computer'),
         activationWords = [
             _('open'),
             _('start'),
@@ -42,17 +51,6 @@ export class Brain {
             _('search'),
             _('find'),
             _('read'),
-
-            // 'open',
-            // 'run',
-            // 'execute',
-            // 'start',
-            // 'launch',
-            // 'activate',
-            // 'close',
-            // 'stop',
-            // 'terminate',
-            // 'exit',
         ],
     ) {
         // Converter para minúsculas apenas uma vez
@@ -60,20 +58,51 @@ export class Brain {
 
         // Dividir o texto em palavras e pegar as primeiras 'maxWords'
         const words = text.split(/\s+/).slice(0, maxWords);
-        const activationWordInText = words.some((word) =>
-            activationWords.includes(word),
-        );
-        this.app.log(
-            'activationWordInText: ' +
-                activationWordInText +
-                ' words: ' +
-                words,
-        );
+        const getActivationWord = () => {
+            for (const word of words) {
+                if (activationWords.includes(word)) {
+                    return word;
+                }
+            }
+            return false;
+        };
+        const activationWordInText = getActivationWord();
 
-        // Verificar se 'triggerWord' e pelo menos uma 'activationWord' estão presentes
-        return (
-            words.includes(triggerWord) &&
-            words.some((word) => activationWords.includes(word))
-        );
+        // Verificar se a palavra de ativação está no texto
+        if (activationWordInText) {
+            // If command is open
+            if (activationWordInText === _('open')) {
+                // Get software name
+                const softwareOptions = [
+                    'google',
+                    'chrome',
+                    'firefox',
+                    'youtube',
+                    'vscode',
+                    'code editor',
+                ];
+
+                // Check if software name is in softwareOptions
+                const softwareName = words.find((word) =>
+                    softwareOptions.includes(word),
+                );
+
+                if (softwareName) {
+                    if (softwareName === 'google' || softwareName === 'chrome') {
+                        this.app.log('Software to open: ' + softwareName);
+                        this.app.openSoftware(softwareName);
+                    } else if (softwareName === 'youtube') {
+                        this.app.log('Software to open: ' + softwareName);
+                    } else if (softwareName === 'vscode') {
+                        this.app.log('Software to open: ' + softwareName);
+                    } else if (softwareName === 'code editor') {
+                        this.app.log('Software to open: ' + softwareName);
+                    } else {
+                        this.app.log('Software not found: ' + softwareName);
+                    }
+                } else {
+                    this.app.log('Software not found');
+                }
+            }
+        }
     }
-}
