@@ -12,7 +12,7 @@ import {convertMD} from './md2pango.js';
 /**
  * App utilities
  *
- * @property {object} app - app instance
+ * @property {object} app - extension instance
  *
  * @description Usage: const utils = new Utils(this);
  */
