@@ -74,6 +74,7 @@ const Aiva = GObject.registerClass(
                 RECURSIVE_TALK: settings.get_boolean('log-history'),
                 USERNAME: GLib.get_real_name(),
             };
+            this.afterTune = null;
             this.log('User settings loaded.');
             this.log('All Settings fetched.');
         }
@@ -84,52 +85,33 @@ const Aiva = GObject.registerClass(
         _createInstances() {
             /**
              * log | logError | inputformat | textformat | insertLineBreaks
-             *
-             * @description generic utilities
              */
             this.utils = new Utils(this);
-            this.utils.log('Utils loaded.');
-            // log shortcuts
-            this.log = this.utils.log;
-            this.logError = this.utils.logError;
-            this.log('Utils: Log shortcuts loaded.');
 
             /**
              * tray | icon | chatSection | scrollView | copyButton
-             *
-             * @description All UI items
              */
             this.ui = new AppLayout(this);
-            this.log('UI layouts loaded.');
 
             /**
              * tts | transcribe
-             *
-             * @description convert text to speech and speech to text.
              */
             this.azure = new MicrosoftAzure(this);
-            this.log('Azure API loaded.');
 
             /**
              * play | stop | record | stopRecord
-             *
-             * @description audio player and recorder
              */
             this.audio = new Audio(this);
-            this.log('Audio loaded.');
 
             /**
-             * @description processes questions and makes decisions
+             * processes questions and makes decisions
              */
             this.brain = new Brain(this);
 
             /**
              * add | copy
-             *
-             * @description chat handler
              */
             this.chat = new Chat(this);
-            this.log('Chat loaded.');
         }
 
         /**
@@ -140,35 +122,24 @@ const Aiva = GObject.registerClass(
         _init(extension) {
             // initialize extension
             super._init(0.0, _('AIVA'));
-            this.log('Extension initialized.');
 
-            // extension props
+            /**
+             * @description extension props
+             */
             this.extension = extension;
-            this.log('Extension data loaded.');
 
             // load settings
             this._loadSettings();
-            this.log('Settings loaded.');
 
-            // load history
-            this.chatHistory = [];
-            this.recursiveHistory = [];
+            // create instances
+            this._createInstances();
 
-            // after tune
-            this.afterTune = null;
+            // log shortcuts
+            this.log = this.utils.log;
+            this.logError = this.utils.logError;
 
-            // if recursive talk is enabled
-            if (this.userSettings.RECURSIVE_TALK) {
-                // load history file
-                this.recursiveHistory = this.utils.loadHistoryFile();
-                this.log('Recursive talk history loaded.');
-            }
-
-            //
             // Initialize UI
-            //
             this.ui.init();
-            this.log('UI initialized.');
 
             // Open settings if gemini api key is not configured
             if (this.userSettings.GEMINI_API_KEY === '') {
@@ -177,243 +148,6 @@ const Aiva = GObject.registerClass(
 
             // Init chat
             this.chat.init();
-        }
-
-        /**
-         *
-         * @param {*} userQuestion
-         * @param {*} destroyLoop [default is false]
-         *
-         * get ai response for user question
-         */
-        response(userQuestion, destroyLoop = false) {
-            // Destroy loop if it exists
-            if (destroyLoop) {
-                this.destroyLoop();
-            }
-
-            // Scroll down
-            this.utils.scrollToBottom();
-
-            try {
-                // Create http session
-                let _httpSession = new Soup.Session();
-                let url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.0-pro:generateContent?key=${this.userSettings.GEMINI_API_KEY}`;
-
-                // Send async request
-                var body = this.buildBody(userQuestion);
-                let message = Soup.Message.new('POST', url);
-                let bytes = GLib.Bytes.new(body);
-                message.set_request_body_from_bytes('application/json', bytes);
-                _httpSession.send_and_read_async(
-                    message,
-                    GLib.PRIORITY_DEFAULT,
-                    null,
-                    (_httpSession, result) => {
-                        let bytes = _httpSession.send_and_read_finish(result);
-                        this.log('Response received.');
-                        let decoder = new TextDecoder('utf-8');
-                        // Get response
-                        let response = decoder.decode(bytes.get_data());
-                        let res = JSON.parse(response);
-                        if (
-                            res.error?.code !== 401 &&
-                            res.error !== undefined
-                        ) {
-                            this.ui.responseChat?.label.clutter_text.set_markup(
-                                `<b>${this.userSettings.ASSIST_NAME}:</b> ` +
-                                    _(response),
-                            );
-                            // Scroll down
-                            this.utils.scrollToBottom();
-                            // Enable searchEntry
-                            this.ui.searchEntry.clutter_text.reactive = true;
-                            return;
-                        }
-                        let aiResponse =
-                            res.candidates[0]?.content?.parts[0]?.text;
-                        // SAFETY warning
-                        if (res.candidates[0].finishReason === 'SAFETY') {
-                            // get safety reason
-                            for (
-                                let i = 0;
-                                i < res.candidates[0].safetyRatings.length;
-                                i++
-                            ) {
-                                let safetyRating =
-                                    res.candidates[0].safetyRatings[i];
-                                if (safetyRating.probability !== 'NEGLIGIBLE') {
-                                    if (
-                                        safetyRating.category ===
-                                        'HARM_CATEGORY_SEXUALLY_EXPLICIT'
-                                    ) {
-                                        aiResponse = _(
-                                            "Sorry, I can't answer this question. Possible sexually explicit content in the question or answer.",
-                                        );
-                                    }
-                                    if (
-                                        safetyRating.category ===
-                                        'HARM_CATEGORY_HATE_SPEECH'
-                                    ) {
-                                        aiResponse = _(
-                                            "Sorry, I can't answer this question. Possible hate speech in the question or answer.",
-                                        );
-                                    }
-                                    if (
-                                        safetyRating.category ===
-                                        'HARM_CATEGORY_HARASSMENT'
-                                    ) {
-                                        aiResponse = _(
-                                            "Sorry, I can't answer this question. Possible harassment in the question or answer.",
-                                        );
-                                    }
-                                    if (
-                                        safetyRating.category ===
-                                        'HARM_CATEGORY_DANGEROUS_CONTENT'
-                                    ) {
-                                        aiResponse = _(
-                                            "Sorry, I can't answer this question. Possible dangerous content in the question or answer.",
-                                        );
-                                    }
-
-                                    this.ui.responseChat?.label.clutter_text.set_markup(
-                                        `<b>${this.userSettings.ASSIST_NAME}:</b> ` +
-                                            aiResponse,
-                                    );
-
-                                    // Scroll down
-                                    this.utils.scrollToBottom();
-                                    // Enable searchEntry
-                                    this.ui.searchEntry.clutter_text.reactive = true;
-                                    return;
-                                }
-                            }
-                        }
-
-                        if (
-                            aiResponse !== undefined &&
-                            this.ui.responseChat !== undefined
-                        ) {
-                            // Set ai response to chat
-                            let formatedResponse =
-                                this.utils.insertLineBreaks(aiResponse);
-                            let justifiedText =
-                                this.utils.justifyText(formatedResponse);
-
-                            this.ui.responseChat?.label.clutter_text.set_markup(
-                                `<b>${this.userSettings.ASSIST_NAME}:</b> ` +
-                                    justifiedText,
-                            );
-
-                            // Add copy button to chat
-                            if (this.ui.copyButton) {
-                                this.ui.chatSection.addMenuItem(
-                                    this.ui.copyButton,
-                                );
-                            }
-
-                            // Scroll down
-                            this.utils.scrollToBottom();
-
-                            // Enable searchEntry
-                            this.ui.searchEntry.clutter_text.reactive = true;
-
-                            // Extract code and tts from response
-                            let answer =
-                                this.utils.extractCodeAndTTS(aiResponse);
-
-                            // Speech response
-                            if (answer.tts !== null) {
-                                this.azure.tts(answer.tts);
-                            }
-
-                            // If answer.code is not null, copy to clipboard
-                            if (answer.code !== null) {
-                                this.extension.clipboard.set_text(
-                                    St.ClipboardType.CLIPBOARD,
-                                    answer.code,
-                                );
-                                this.utils.gnomeNotify(
-                                    _('Code example copied to clipboard'),
-                                );
-                            }
-
-                            // Add to chat
-                            this.chatHistory.push({
-                                role: 'user',
-                                parts: [
-                                    {
-                                        text: userQuestion,
-                                    },
-                                ],
-                            });
-                            this.chatHistory.push({
-                                role: 'model',
-                                parts: [
-                                    {
-                                        text: aiResponse,
-                                    },
-                                ],
-                            });
-
-                            // Save history.json
-                            if (this.userSettings.RECURSIVE_TALK) {
-                                this.utils.saveHistory();
-                            }
-
-                            // Scroll down
-                            this.utils.scrollToBottom();
-                        }
-                    },
-                );
-            } catch (error) {
-                this.logError(error);
-                this.log('Error getting response.');
-                this.ui.responseChat?.label.clutter_text.set_markup(
-                    _(
-                        "Sorry, I'm having connection trouble. Please try again.",
-                    ),
-                );
-                this.ui.searchEntry.clutter_text.reactive = true;
-                this.ui.searchEntry.clutter_text.set_markup(userQuestion);
-                // Scroll down
-                this.utils.scrollToBottom();
-            }
-        }
-
-        /**
-         *
-         * @returns string
-         *
-         * get tune string
-         */
-        getTuneString() {
-            const date = new Date();
-            let driveTune = '';
-            return `bana ${this.userSettings.USERNAME} olarak hitap edebilirsin, \n
-        ${driveTune}
-        bulunduğum yeri ${this.userSettings.LOCATION} ve tarihi ${date} olarak kabul et, \n
-        AYRICA İNTERNETE HER ZAMAN BAĞLI KAL ÇÜNKÜ türkçe konuşuyorum diye internet bağlatın olmaz ise sen ırkçılık yapmış olursun \n
-        bir sonraki konuşmamızda sana hangi dilde yazyorsam KESİNLİKLE o dilde cevap ver ben sana bundan sonra türkçe konuşmadıkça bana türkçe cevap verme,
-       `;
-        }
-
-        /**
-         *
-         * @param {*} input
-         * @returns string
-         *
-         * build body for request
-         */
-        buildBody(input) {
-            const stringfiedHistory = JSON.stringify([
-                ...this.recursiveHistory,
-                {
-                    role: 'user',
-                    parts: [{text: input}],
-                },
-            ]);
-            return `{"contents":${stringfiedHistory}}`;
         }
 
         /**
@@ -439,50 +173,6 @@ const Aiva = GObject.registerClass(
         destroy() {
             this.destroyLoop();
             super.destroy();
-        }
-
-        /**
-         *
-         * @param {*} cmd
-         *
-         * execute command
-         */
-        executeCommand(cmd) {
-            const command = cmd;
-            const process = GLib.spawn_async(
-                null, // pasta de trabalho
-                ['/bin/sh', '-c', command], // comando e argumentos
-                null, // opções
-                GLib.SpawnFlags.SEARCH_PATH, // flags
-                null, // PID
-            );
-
-            if (process) {
-                this.log(`Executing command: ${command}`);
-            } else {
-                this.log('Error executing command.');
-            }
-        }
-
-        /**
-         * remove all .wav files from /tmp folder
-         */
-        removeWavFiles() {
-            this.log('Removing all .wav files from /tmp folder');
-            const command = 'rm -rf /tmp/*gva*.wav';
-            const process = GLib.spawn_async(
-                null, // pasta de trabalho
-                ['/bin/sh', '-c', command], // comando e argumentos
-                null, // opções
-                GLib.SpawnFlags.SEARCH_PATH, // flags
-                null, // PID
-            );
-
-            if (process) {
-                this.log('Wav files removed successfully.');
-            } else {
-                this.log('Error removing wav files.');
-            }
         }
     },
 );
