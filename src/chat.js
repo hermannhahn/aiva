@@ -11,12 +11,12 @@ export class Chat {
             this.recursiveHistory = this.utils.loadHistoryFile();
             this.log('Recursive talk history loaded.');
         }
-        this.app.utils.log('Chat loaded.');
+        this.log('Chat loaded.');
     }
 
     log(message) {
         if (message) {
-            console.log(`[CHAT] ${message}`);
+            this.app.utils.log(`[CHAT] ${message}`);
         }
     }
 
@@ -60,17 +60,15 @@ export class Chat {
         this.app.ui.searchEntry.clutter_text.hover = true;
     }
 
-    addInput(userQuestion) {
-        // Add user question to chat
-        this.app.ui.inputChat.label.clutter_text.set_markup(
-            `<b>${this.app.userSettings.USERNAME}: </b>${userQuestion}`,
-        );
-    }
-
-    addResponse(aiResponse) {
-        // Set temporary response message
-        this.app.ui.responseChat.label.clutter_text.set_markup(
-            `<b>${this.app.userSettings.ASSIST_NAME}:</b> ` + aiResponse,
-        );
+    add(text, role = 'user') {
+        if (role === 'user') {
+            this.app.ui.inputChat.label.clutter_text.set_markup(
+                `<b>${this.app.userSettings.USERNAME}:</b> ${text}`,
+            );
+        } else {
+            this.app.ui.responseChat.label.clutter_text.set_markup(
+                `<b>${this.app.userSettings.ASSIST_NAME}:</b> ${text}`,
+            );
+        }
     }
 }
