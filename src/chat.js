@@ -4,13 +4,6 @@ export class Chat {
         // load history
         this.history = [];
         this.recursiveHistory = [];
-
-        // if recursive talk is enabled
-        if (this.app.userSettings.RECURSIVE_TALK) {
-            // load history file
-            this.recursiveHistory = this.utils.loadHistoryFile();
-            this.log('Recursive talk history loaded.');
-        }
         this.log('Chat loaded.');
     }
 
@@ -21,6 +14,14 @@ export class Chat {
     }
 
     init() {
+        // if recursive talk is enabled
+        if (this.app.userSettings.RECURSIVE_TALK) {
+            // load history file
+            this.recursiveHistory = this.utils.loadHistoryFile();
+            this.log('Recursive talk history loaded.');
+        } else {
+            this.log('Recursive talk is disabled.');
+        }
         this.log('Chat initialized.');
     }
 
