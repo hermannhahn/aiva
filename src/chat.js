@@ -2,19 +2,16 @@ export class Chat {
     constructor(app) {
         this.app = app;
         // load history
-        this.chatHistory = [];
+        this.history = [];
         this.recursiveHistory = [];
 
-        // after tune
-        this.afterTune = null;
-
         // if recursive talk is enabled
-        if (this.userSettings.RECURSIVE_TALK) {
+        if (this.app.userSettings.RECURSIVE_TALK) {
             // load history file
             this.recursiveHistory = this.utils.loadHistoryFile();
             this.log('Recursive talk history loaded.');
         }
-        this.log('Chat loaded.');
+        this.app.utils.log('Chat loaded.');
     }
 
     log(message) {
