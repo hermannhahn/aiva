@@ -14,9 +14,10 @@ import {convertMD} from './md2pango.js';
  *
  * @property {object} this
  *
- * @example const utils = new Utils(this)
- *
  * @description app utilities
+ *
+ * @example const utils = new Utils(this);
+ * utils.log("example");
  */
 export class Utils {
     constructor(app) {
