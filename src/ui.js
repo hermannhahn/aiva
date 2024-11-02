@@ -6,6 +6,12 @@ export class AppLayout {
         this.app = app;
     }
 
+    log(message) {
+        if (message) {
+            this.app.utils.log(`[UI] ${message}`);
+        }
+    }
+
     init() {
         // Create tray
         this.tray = new St.BoxLayout({
