@@ -40,6 +40,10 @@ const Aiva = GObject.registerClass(
          * @description fetch settings
          */
         _fetchSettings() {
+            // log shortcuts
+            this.log = this.utils.log;
+            this.logError = this.utils.logError;
+
             this.log('Fetching settings...');
             // extension settings
             const {settings} = this.extension;
@@ -134,19 +138,12 @@ const Aiva = GObject.registerClass(
             // create instances
             this._createInstances();
 
-            // log shortcuts
-            this.log = this.utils.log;
-            this.logError = this.utils.logError;
-
-            // Initialize UI
-            this.ui.init();
-
-            // Open settings if gemini api key is not configured
+            // open settings if gemini api key is not configured
             if (this.userSettings.GEMINI_API_KEY === '') {
                 this.openSettings();
             }
 
-            // Init chat
+            // initialize chat
             this.chat.init();
         }
 
