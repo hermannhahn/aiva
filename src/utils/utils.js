@@ -10,11 +10,11 @@ import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js'
 import {convertMD} from './md2pango.js';
 
 /**
- * App utilities
+ * log | logError | inputformat | textformat | insertLineBreaks
  *
  * @property {object} app - extension instance
  *
- * @description Usage: const utils = new Utils(this);
+ * @description app utilities
  */
 export class Utils {
     constructor(app) {
