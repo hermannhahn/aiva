@@ -12,7 +12,9 @@ import {convertMD} from './md2pango.js';
 /**
  * log | logError | inputformat | textformat | insertLineBreaks
  *
- * @property {object} app - extension instance
+ * @property {object} this
+ *
+ * @example const utils = new Utils(this)
  *
  * @description app utilities
  */
