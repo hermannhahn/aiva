@@ -95,57 +95,54 @@ const Aiva = GObject.registerClass(
             this.log('Utils: Log shortcuts loaded.');
 
             /**
-             * tray | icon | chatSection | scrollView | copyButton |
+             * tray | icon | chatSection | scrollView | copyButton
              *
-             * @description The `AppLayout` is responsible for managing the application's user interface.
+             * @description All UI items
              */
             this.ui = new AppLayout(this);
             this.log('UI layouts loaded.');
 
             /**
-             * Creates instance of MicrosoftAzure
+             * tts | transcribe
              *
-             * The `MicrosoftAzure` is responsible for communicating with the Microsoft Azure Speech service.
-             *
-             * @type {MicrosoftAzure}
+             * @description convert text to speech and speech to text.
              */
             this.azure = new MicrosoftAzure(this);
             this.log('Azure API loaded.');
 
             /**
-             * Creates instance of `Audio`
+             * play | stop | record | stopRecord
              *
-             * The `Audio` is responsible for managing the application's audio input and output.
-             *
-             * @type {Audio}
+             * @description audio player and recorder
              */
             this.audio = new Audio(this);
             this.log('Audio loaded.');
 
             /**
-             * load brain
+             * @description processes questions and makes decisions
              */
             this.brain = new Brain(this);
 
             /**
-             * load chat
+             * add | copy
+             *
+             * @description chat handler
              */
             this.chat = new Chat(this);
             this.log('Chat loaded.');
         }
 
         /**
-         *
          * @param {*} extension
          *
-         * init extension
+         * @description init extension
          */
         _init(extension) {
             // initialize extension
             super._init(0.0, _('AIVA'));
             this.log('Extension initialized.');
 
-            // get extension props
+            // extension props
             this.extension = extension;
             this.log('Extension data loaded.');
 
@@ -153,7 +150,7 @@ const Aiva = GObject.registerClass(
             this._loadSettings();
             this.log('Settings loaded.');
 
-            // chat history
+            // load history
             this.chatHistory = [];
             this.recursiveHistory = [];
 
