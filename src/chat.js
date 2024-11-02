@@ -25,6 +25,18 @@ export class Chat {
         this.log('Chat initialized.');
     }
 
+    add(text, role = 'user') {
+        if (role === 'user') {
+            this.app.ui.inputChat.label.clutter_text.set_markup(
+                `<b>${this.app.userSettings.USERNAME}:</b> ${text}`,
+            );
+        } else {
+            this.app.ui.responseChat.label.clutter_text.set_markup(
+                `<b>${this.app.userSettings.ASSIST_NAME}:</b> ${text}`,
+            );
+        }
+    }
+
     /**
      *
      * @param {*} userQuestion
@@ -59,17 +71,5 @@ export class Chat {
         this.app.ui.searchEntry.clutter_text.editable = true;
         this.app.ui.searchEntry.clutter_text.activatable = true;
         this.app.ui.searchEntry.clutter_text.hover = true;
-    }
-
-    add(text, role = 'user') {
-        if (role === 'user') {
-            this.app.ui.inputChat.label.clutter_text.set_markup(
-                `<b>${this.app.userSettings.USERNAME}:</b> ${text}`,
-            );
-        } else {
-            this.app.ui.responseChat.label.clutter_text.set_markup(
-                `<b>${this.app.userSettings.ASSIST_NAME}:</b> ${text}`,
-            );
-        }
     }
 }
