@@ -2,13 +2,7 @@ import Soup from 'gi://Soup';
 import GLib from 'gi://GLib';
 import St from 'gi://St';
 
-import {Utils} from '../utils/utils.js';
-
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
-
-// Utils
-const utils = new Utils();
-const logError = utils.logError;
 
 export class GoogleGemini {
     static aiva;
@@ -269,13 +263,19 @@ export class GoogleGemini {
         this.aiva.responseChat.label.x_expand = true;
 
         // Scroll down
-        utils.scrollToBottom(this.aiva.responseChat, this.aiva.scrollView);
+        this.app.utils.scrollToBottom(
+            this.aiva.responseChat,
+            this.aiva.scrollView,
+        );
 
         // Add copy button to chat
         this.chatSection.addMenuItem(this.aiva.copyButton);
 
         // Scroll down
-        utils.scrollToBottom(this.aiva.responseChat, this.aiva.scrollView);
+        this.app.utils.scrollToBottom(
+            this.aiva.responseChat,
+            this.aiva.scrollView,
+        );
     }
 
     /**
