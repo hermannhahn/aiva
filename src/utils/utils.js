@@ -456,42 +456,6 @@ export class Utils {
         }
     }
 
-    executeCommand(cmd) {
-        const command = cmd;
-        const process = GLib.spawn_async(
-            null, // pasta de trabalho
-            ['/bin/sh', '-c', command], // comando e argumentos
-            null, // opções
-            GLib.SpawnFlags.SEARCH_PATH, // flags
-            null, // PID
-        );
-
-        if (process) {
-            this.log(`Executing command: ${command}`);
-        } else {
-            this.log('Error executing command.');
-        }
-    }
-
-    // Remove all .wav file from /tmp folder
-    removeWavFiles() {
-        this.log('Removing all .wav files from /tmp folder');
-        const command = 'rm -rf /tmp/*gva*.wav';
-        const process = GLib.spawn_async(
-            null, // pasta de trabalho
-            ['/bin/sh', '-c', command], // comando e argumentos
-            null, // opções
-            GLib.SpawnFlags.SEARCH_PATH, // flags
-            null, // PID
-        );
-
-        if (process) {
-            this.log('Wav files removed successfully.');
-        } else {
-            this.log('Error removing wav files.');
-        }
-    }
-
     gnomeNotify(text, type = 'normal') {
         const command =
             'notify-send --urgency=' +
@@ -672,6 +636,50 @@ export class Utils {
         } else {
             // Se não encontrar código, retorna apenas o texto original no campo tts
             return {code: null, tts};
+        }
+    }
+
+    /**
+     *
+     * @param {*} cmd
+     *
+     * execute command
+     */
+    executeCommand(cmd) {
+        const command = cmd;
+        const process = GLib.spawn_async(
+            null, // pasta de trabalho
+            ['/bin/sh', '-c', command], // comando e argumentos
+            null, // opções
+            GLib.SpawnFlags.SEARCH_PATH, // flags
+            null, // PID
+        );
+
+        if (process) {
+            this.log(`Executing command: ${command}`);
+        } else {
+            this.log('Error executing command.');
+        }
+    }
+
+    /**
+     * remove all .wav files from /tmp folder
+     */
+    removeWavFiles() {
+        this.log('Removing all .wav files from /tmp folder');
+        const command = 'rm -rf /tmp/*gva*.wav';
+        const process = GLib.spawn_async(
+            null, // pasta de trabalho
+            ['/bin/sh', '-c', command], // comando e argumentos
+            null, // opções
+            GLib.SpawnFlags.SEARCH_PATH, // flags
+            null, // PID
+        );
+
+        if (process) {
+            this.log('Wav files removed successfully.');
+        } else {
+            this.log('Error removing wav files.');
         }
     }
 }
