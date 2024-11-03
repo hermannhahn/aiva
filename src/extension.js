@@ -12,9 +12,6 @@ import * as PanelMenu from 'resource:///org/gnome/shell/ui/panelMenu.js';
 
 import {Utils} from './utils/utils.js';
 import {AppLayout} from './ui.js';
-import {MicrosoftAzure} from './ai/azure.js';
-import {Audio} from './utils/audio.js';
-import {Brain} from './brain.js';
 import {Chat} from './chat.js';
 
 const Aiva = GObject.registerClass(
@@ -98,21 +95,6 @@ const Aiva = GObject.registerClass(
             this.ui = new AppLayout(this);
 
             /**
-             * tts | transcribe
-             */
-            this.azure = new MicrosoftAzure(this);
-
-            /**
-             * play | stop | record | stopRecord
-             */
-            this.audio = new Audio(this);
-
-            /**
-             * processes questions and makes decisions
-             */
-            this.brain = new Brain(this);
-
-            /**
              * add | copy
              */
             this.chat = new Chat(this);
@@ -182,7 +164,7 @@ export default class AivaExtension extends Extension {
      * Enable extension
      */
     enable() {
-        let url = 'https://api.ipify.org?format=json'; // e.g. response: {"ip":"177.97.182.155"}
+        let url = 'https://api.ipify.org?format=json';
         // Get IP from url response
         let _httpSession = new Soup.Session();
         let message = Soup.Message.new('GET', url);
