@@ -13,7 +13,7 @@ export class Brain {
         } else if (this._isVoiceCommand(question)) {
             this._commandInterpreter(question);
         } else {
-            this.app.response(question);
+            this.app.gemini.response(question);
         }
     }
 
