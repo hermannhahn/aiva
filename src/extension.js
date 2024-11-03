@@ -215,9 +215,9 @@ export default class AivaExtension extends Extension {
                 console.log('[AIVA] ' + message);
             },
         });
-        console.log(['[AIVA] Initializing extension...']);
+        console.log('[AIVA] Initializing extension...');
         Main.panel.addToStatusArea('gvaGnomeExtension', this._aiva, 1);
-        console.log(['[AIVA] Getting IP...']);
+        console.log('[AIVA] Getting IP...');
         _httpSession.send_and_read_async(
             message,
             GLib.PRIORITY_DEFAULT,
@@ -227,12 +227,13 @@ export default class AivaExtension extends Extension {
                 let decoder = new TextDecoder('utf-8');
                 let response = decoder.decode(bytes.get_data());
                 const res = JSON.parse(response);
+                console.log('[AIVA][IPIFY] ' + res);
                 const ip = res.ip;
-                console.log(['[AIVA] IP: ' + ip]);
+                console.log('[AIVA] IP: ' + ip);
                 // Get location from https://ipapi.co/{ip}/json/
                 url = `https://ipapi.co/${ip}/json/`;
                 message = Soup.Message.new('GET', url);
-                console.log(['[AIVA] Getting location...']);
+                console.log('[AIVA] Getting location...');
                 _httpSession.send_and_read_async(
                     message,
                     GLib.PRIORITY_DEFAULT,
@@ -242,6 +243,7 @@ export default class AivaExtension extends Extension {
                         let decoder = new TextDecoder('utf-8');
                         let response = decoder.decode(bytes.get_data());
                         const res = JSON.parse(response);
+                        console.log('[AIVA][IP-API] ' + res);
                         this._aiva.userSettings.LOCATION = `${res.country_name}/${res.city}`;
                         console.log(
                             '[AIVA] Location: ' +
