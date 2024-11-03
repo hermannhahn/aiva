@@ -7,13 +7,7 @@ export class Chat {
         // load history
         this.history = [];
         this.recursiveHistory = [];
-        this.log('Chat loaded.');
-    }
-
-    log(message) {
-        if (message) {
-            this.app.utils.log(`[CHAT] ${message}`);
-        }
+        this.app.log('Chat loaded.');
     }
 
     init() {
@@ -21,11 +15,11 @@ export class Chat {
         if (this.app.userSettings.RECURSIVE_TALK) {
             // load history file
             this.recursiveHistory = this.utils.loadHistoryFile();
-            this.log('Recursive talk history loaded.');
+            this.app.log('Recursive talk history loaded.');
         } else {
-            this.log('Recursive talk is disabled.');
+            this.app.log('Recursive talk is disabled.');
         }
-        this.log('Chat initialized.');
+        this.app.log('Chat initialized.');
     }
 
     addQuestion(text) {
