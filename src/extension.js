@@ -143,6 +143,9 @@ const Aiva = GObject.registerClass(
                 this.openSettings();
             }
 
+            // initialize ui
+            this.ui.init();
+
             // initialize chat
             this.chat.init();
         }
