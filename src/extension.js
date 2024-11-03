@@ -90,51 +90,44 @@ const Aiva = GObject.registerClass(
          * @description create instances
          */
         _createInstances() {
-            this.log('Creating instances...');
+            this.log('Loadding instances...');
 
             /**
              * response
              */
             this.gemini = new GoogleGemini(this);
-            this.log('Gemini instance created.');
 
             /**
              * tts | stt
              */
             this.azure = new MicrosoftAzure(this);
-            this.log('Azure instance created.');
 
             /**
              * play | stop | record | stopRecord
              */
             this.audio = new Audio(this);
-            this.log('Audio instance created.');
 
             /**
              * log | logError | inputformat | textformat | insertLineBreaks
              */
             this.utils = new Utils(this);
-            this.log('Utils instance created.');
 
             /**
              * tray | icon | chatSection | scrollView | copyButton
              */
             this.ui = new UI(this);
-            this.log('UI instance created.');
 
             /**
              * add | copy
              */
             this.chat = new Chat(this);
-            this.log('Chat instance created.');
 
             /**
              *
              */
             this.brain = new Brain(this);
-            this.log('Brain instance created.');
 
-            this.log('All instances created.');
+            this.log('All instances loaded.');
         }
 
         /**
