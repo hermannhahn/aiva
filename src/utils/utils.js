@@ -4,6 +4,7 @@ import St from 'gi://St';
 import Pango from 'gi://Pango';
 import PangoCairo from 'gi://PangoCairo';
 import Cairo from 'gi://cairo';
+import Soup from 'gi://Soup';
 
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
@@ -136,153 +137,6 @@ export class Utils {
 
         return justifiedText.trim();
     }
-
-    /**
-     *
-     * @param {*} text
-     * @returns
-     *
-     * @description Insert lines breaks and justify
-     */
-    textformat(text) {
-        const LINE_LENGTH = 76; // Max line length
-        const SPACE_CHAR = ' ';
-        const NEW_LINE_CHAR = '\n';
-
-        text = this._converttext(text);
-        let result = '';
-        let lines = text.split(NEW_LINE_CHAR); // Keep origin text line breaks
-
-        lines.forEach((line, index) => {
-            // Split line by spaces
-            let words = line.split(SPACE_CHAR);
-            let currentLine = [];
-            let currentPoints = 0;
-
-            words.forEach((word) => {
-                let wordPoints = word
-                    .split('')
-                    .reduce(
-                        (sum, char) => sum + this._calculatePoints(char),
-                        0,
-                    );
-
-                // Check if the word can be pushed in this line
-                if (
-                    currentPoints + wordPoints + currentLine.length <=
-                    LINE_LENGTH
-                ) {
-                    currentLine.push(word);
-                    currentPoints += wordPoints;
-                } else {
-                    // Justify and break line when reach the line length
-                    result +=
-                        this._justifyLine(currentLine, wordPoints, SPACE_CHAR) +
-                        NEW_LINE_CHAR;
-                    currentLine = [word]; // Start new line
-                    currentPoints = wordPoints;
-                }
-            });
-
-            // Push the last line, dont justify if the line is the last one.
-            result += currentLine.join(SPACE_CHAR);
-            if (index < lines.length - 1) result += NEW_LINE_CHAR; // Add text origin line break
-        });
-        return result;
-    }
-
-    _justifyLine(words, TOTAL_POINTS, SPACE_CHAR) {
-        const LINE_LENGTH = 90; // Max line length
-        if (words.length <= 5) return words[0]; // Dont justify if is smaller then five words.
-
-        const spacesNeeded = Math.abs(LINE_LENGTH - TOTAL_POINTS); // Necessary spaces
-        const numGaps = words.length - 1; // Gaps betwen words
-
-        let spaceWidth = Math.floor(spacesNeeded / numGaps / 2); // Space width
-        spaceWidth = Math.max(1, spaceWidth); // Uniform spaces
-        let extraSpaces = spacesNeeded % numGaps; // Extra spaces
-
-        let justifiedLine = `${SPACE_CHAR}`;
-
-        justifiedLine = words.reduce((line, word, index) => {
-            line += word;
-            line += SPACE_CHAR.repeat(spaceWidth);
-            if (index < extraSpaces) {
-                line += SPACE_CHAR;
-            }
-            return line;
-        }, '');
-        return justifiedLine;
-    }
-
-    _calculatePoints(char) {
-        if (char === '.' || char === ',' || char === ';') {
-            return 0.75; // Short character
-        }
-        return 1; // Other character
-    }
-
-    // textformat(text) {
-    //     const LINE_LENGTH = 92; // Max line length
-    //     const SPACE_CHAR = '\x20';
-    //     const NEW_LINE_CHAR = '\n';
-
-    //     text = this._converttext(text);
-    //     let result = '';
-    //     let lines = text.split(NEW_LINE_CHAR); // Keep origin text line breaks
-
-    //     lines.forEach((line, index) => {
-    //         let words = line.split(SPACE_CHAR);
-    //         let currentLine = [];
-    //         let currentLineLength = 0;
-
-    //         words.forEach((word) => {
-    //             let wordLength = word.length;
-
-    //             // Check if the word fits on the current line
-    //             if (currentLineLength + wordLength + 1 <= LINE_LENGTH) {
-    //                 currentLine.push(word);
-    //                 currentLineLength += wordLength + 1; // Account for the space
-    //             } else {
-    //                 // Justify the current line
-    //                 result +=
-    //                     this._justifyLine(
-    //                         currentLine,
-    //                         LINE_LENGTH,
-    //                         SPACE_CHAR,
-    //                     ) + NEW_LINE_CHAR;
-    //                 currentLine = [word];
-    //                 currentLineLength = wordLength;
-    //             }
-    //         });
-
-    //         // Add the last line without justification (if not the last line)
-    //         result += currentLine.join(SPACE_CHAR);
-    //         if (index < lines.length - 1) result += NEW_LINE_CHAR; // Add text origin line break
-    //     });
-
-    //     return result;
-    // }
-
-    // _justifyLine(words, lineLength, spaceChar) {
-    //     if (words.length <= 1) {
-    //         return words.join(spaceChar);
-    //     }
-
-    //     const totalSpaces =
-    //         lineLength - words.reduce((sum, word) => sum + word.length, 0);
-    //     const spacesPerGap = Math.floor(totalSpaces / (words.length - 1));
-    //     const extraSpaces = totalSpaces % (words.length - 1);
-
-    //     return words.reduce((justifiedLine, word, index) => {
-    //         justifiedLine += word;
-    //         justifiedLine += spaceChar.repeat(spacesPerGap);
-    //         if (index < extraSpaces) {
-    //             justifiedLine += spaceChar;
-    //         }
-    //         return justifiedLine;
-    //     }, '');
-    // }
 
     _converttext(text) {
         let convertedText = convertMD(text);
@@ -664,5 +518,23 @@ export class Utils {
         } else {
             this.app.log('Error removing wav files.');
         }
+    }
+
+    api_request(url) {
+        // Get IP
+        let _httpSession = new Soup.Session();
+        let message = Soup.Message.new('GET', url);
+        _httpSession.send_and_read_async(
+            message,
+            GLib.PRIORITY_DEFAULT,
+            null,
+            (_httpSession, result) => {
+                let bytes = _httpSession.send_and_read_finish(result);
+                let decoder = new TextDecoder('utf-8');
+                let response = decoder.decode(bytes.get_data());
+                const res = JSON.parse(response);
+                return res;
+            },
+        );
     }
 }
