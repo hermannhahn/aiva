@@ -9,7 +9,7 @@ export class GoogleGemini {
         this.USERNAME = app.userSettings.USERNAME;
         this.LOCATION = app.userSettings.LOCATION;
         this.GEMINI_API_KEY = app.userSettings.GEMINI_API_KEY;
-        console.log('Google Gemini API loaded');
+        this.app.log('Google Gemini API loaded');
     }
 
     /**
