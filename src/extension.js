@@ -232,7 +232,7 @@ export default class AivaExtension extends Extension {
                 const country = res.country;
                 console.log('[AIVA] IP: ' + ip);
                 console.log('[AIVA] Country: ' + country);
-                this._aiva.userSettings.LOCATION = `${res.country}`;
+                this._aiva.userSettings.LOCATION = res.country;
             },
         );
     }
