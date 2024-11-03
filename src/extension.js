@@ -10,9 +10,10 @@ import {
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 import * as PanelMenu from 'resource:///org/gnome/shell/ui/panelMenu.js';
 
-import {Utils} from './utils/utils.js';
-import {AppLayout} from './ui.js';
+import {Brain} from './brain.js';
 import {Chat} from './chat.js';
+import {UI} from './ui.js';
+import {Utils} from './utils/utils.js';
 
 const Aiva = GObject.registerClass(
     class Aiva extends PanelMenu.Button {
@@ -92,12 +93,18 @@ const Aiva = GObject.registerClass(
             /**
              * tray | icon | chatSection | scrollView | copyButton
              */
-            this.ui = new AppLayout(this);
+            this.ui = new UI(this);
 
             /**
              * add | copy
              */
             this.chat = new Chat(this);
+
+            /**
+             *
+             */
+            this.brain = new Brain(this);
+            this.log('Instances created.');
         }
 
         /**
