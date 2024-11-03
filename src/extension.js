@@ -227,7 +227,6 @@ export default class AivaExtension extends Extension {
                 let decoder = new TextDecoder('utf-8');
                 let response = decoder.decode(bytes.get_data());
                 const res = JSON.parse(response);
-                console.log('[AIVA][MYIP.COM] ' + response);
                 const ip = res.ip;
                 const country = res.country;
                 console.log('[AIVA] IP: ' + ip);
