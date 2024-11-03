@@ -5,12 +5,7 @@ import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js'
 export class UI {
     constructor(app) {
         this.app = app;
-    }
-
-    log(message) {
-        if (message) {
-            this.app.utils.log(`[UI] ${message}`);
-        }
+        this.app.log('UI loaded.');
     }
 
     init() {
