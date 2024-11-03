@@ -14,9 +14,7 @@ import {Logger} from './utils/logger.js';
 const logger = new Logger();
 const log = logger.log;
 const logError = logger.logError;
-if (!log && !logError) {
-    console.log('[AIVA] Logger error!');
-}
+
 import {Audio} from './audio.js';
 import {Brain} from './brain.js';
 import {Chat} from './chat.js';
@@ -145,6 +143,10 @@ const Aiva = GObject.registerClass(
          * @description init extension
          */
         _init(extension) {
+            // load logger
+            this.log = log;
+            this.logError = logError;
+
             // initialize extension
             super._init(0.0, _('AIVA'));
 
