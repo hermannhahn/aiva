@@ -54,7 +54,7 @@ const Aiva = GObject.registerClass(
                 'share',
                 'gnome-shell',
                 'extensions',
-                'aiva@gemini-assist.vercel.app',
+                this.uuid,
             ]);
             // extension settings
             const {settings} = this.extension;
