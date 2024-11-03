@@ -133,7 +133,7 @@ export class AppLayout {
             const question = actor.text;
             this.searchEntry.clutter_text.set_text('');
             this.searchEntry.clutter_text.reactive = false;
-            this.app.chat.send(question);
+            this.app.chat.addQuestion(question);
         });
 
         // If press mic button
