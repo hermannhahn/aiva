@@ -5,14 +5,12 @@ import St from 'gi://St';
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 export class GoogleGemini {
-    static aiva;
-
-    constructor(aiva) {
-        this.aiva = aiva;
-        this.USERNAME = aiva.USERNAME;
-        this.LOCATION = aiva.LOCATION;
-        this.GEMINIAPIKEY = aiva.GEMINIAPIKEY;
-        console.log('Gemini Voice Assistant loaded');
+    constructor(app) {
+        this.app = app;
+        this.USERNAME = app.userSettings.USERNAME;
+        this.LOCATION = app.userSettings.LOCATION;
+        this.GEMINI_API_KEY = app.userSettings.GEMINIAPIKEY;
+        console.log('Google Gemini API loaded');
     }
 
     /**
@@ -29,12 +27,13 @@ export class GoogleGemini {
         }
 
         // Scroll down
-        this.utils.scrollToBottom();
+        this.app.utils.scrollToBottom();
 
         try {
+            this.app.log('Getting response...');
             // Create http session
             let _httpSession = new Soup.Session();
-            let url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.0-pro:generateContent?key=${this.userSettings.GEMINI_API_KEY}`;
+            let url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.0-pro:generateContent?key=${this.GEMINI_API_KEY}`;
 
             // Send async request
             var body = this.buildBody(userQuestion);
@@ -53,17 +52,13 @@ export class GoogleGemini {
                     let response = decoder.decode(bytes.get_data());
                     let res = JSON.parse(response);
                     if (res.error?.code !== 401 && res.error !== undefined) {
-                        this.ui.responseChat?.label.clutter_text.set_markup(
-                            `<b>${this.userSettings.ASSIST_NAME}:</b> ` +
-                                _(response),
-                        );
-                        // Scroll down
-                        this.utils.scrollToBottom();
-                        // Enable searchEntry
-                        this.ui.searchEntry.clutter_text.reactive = true;
+                        this.app.logError(res.error);
+                        this.app.chat.addResponse(response);
                         return;
                     }
                     let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
+                    this.app.log('Success getting response.');
+
                     // SAFETY warning
                     if (res.candidates[0].finishReason === 'SAFETY') {
                         // get safety reason
@@ -108,15 +103,7 @@ export class GoogleGemini {
                                     );
                                 }
 
-                                this.ui.responseChat?.label.clutter_text.set_markup(
-                                    `<b>${this.userSettings.ASSIST_NAME}:</b> ` +
-                                        aiResponse,
-                                );
-
-                                // Scroll down
-                                this.utils.scrollToBottom();
-                                // Enable searchEntry
-                                this.ui.searchEntry.clutter_text.reactive = true;
+                                this.app.chat.addResponse(aiResponse);
                                 return;
                             }
                         }
