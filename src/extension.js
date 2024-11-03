@@ -202,8 +202,8 @@ export default class AivaExtension extends Extension {
      * Enable extension
      */
     enable() {
-        // Get IP from https://api.ipify.org?format=json
-        let url = 'https://api.ipify.org?format=json';
+        // Get IP
+        let url = 'https://api.myip.com';
         let _httpSession = new Soup.Session();
         let message = Soup.Message.new('GET', url);
         this._aiva = new Aiva({
@@ -227,30 +227,12 @@ export default class AivaExtension extends Extension {
                 let decoder = new TextDecoder('utf-8');
                 let response = decoder.decode(bytes.get_data());
                 const res = JSON.parse(response);
-                console.log('[AIVA][IPIFY] ' + response);
+                console.log('[AIVA][MYIP.COM] ' + response);
                 const ip = res.ip;
+                const country = res.country;
                 console.log('[AIVA] IP: ' + ip);
-                // Get location from https://ipapi.co/{ip}/json/
-                url = `https://ipapi.co/${ip}/json/`;
-                message = Soup.Message.new('GET', url);
-                console.log('[AIVA] Getting location...');
-                _httpSession.send_and_read_async(
-                    message,
-                    GLib.PRIORITY_DEFAULT,
-                    null,
-                    (_httpSession, result) => {
-                        let bytes = _httpSession.send_and_read_finish(result);
-                        let decoder = new TextDecoder('utf-8');
-                        let response = decoder.decode(bytes.get_data());
-                        const res = JSON.parse(response);
-                        console.log('[AIVA][IP-API] ' + response);
-                        this._aiva.userSettings.LOCATION = `${res.country_name}/${res.city}`;
-                        console.log(
-                            '[AIVA] Location: ' +
-                                this._aiva.userSettings.LOCATION,
-                        );
-                    },
-                );
+                console.log('[AIVA] Country: ' + country);
+                this._aiva.userSettings.LOCATION = `${res.country}`;
             },
         );
     }
