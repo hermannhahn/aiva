@@ -9,10 +9,9 @@ export class Brain {
     proccess(question) {
         // this.app.response(question);
         if (this._isCommand(question)) {
-            this.app.log('is command: ' + question);
-            // this.executeCommand(question)
-        } else if (this._isVoiceCommand(question)) {
             this._commandInterpreter(question);
+        } else if (this._isVoiceCommand(question)) {
+            this._voiceCommandInterpreter(question);
         } else {
             this.app.gemini.response(question);
         }
@@ -33,7 +32,17 @@ export class Brain {
         return false;
     }
 
-    _commandInterpreter(
+    _commandInterpreter(text) {
+        if (text.startsWith('/help')) {
+            this.app.chat.help(text);
+        }
+
+        if (text.startsWith('/settings')) {
+            this.app.openSettings();
+        }
+    }
+
+    _voiceCommandInterpreter(
         text,
         maxWords = 10,
         activationWords = [
