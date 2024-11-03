@@ -1,10 +1,14 @@
 export class Logger {
+    constructor(debug) {
+        this.debug = debug;
+    }
+
     /**
      *
      * @param {*} message
      */
     log(message) {
-        if (message) {
+        if (this.debug && message) {
             console.log(`[AIVA] ${message}`);
         }
     }
@@ -14,7 +18,7 @@ export class Logger {
      * @param {*} message
      */
     logError(message) {
-        if (message) {
+        if (this.debug && message) {
             console.log(`[AIVA][ERROR] ${message}`);
         }
     }
