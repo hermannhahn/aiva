@@ -388,7 +388,7 @@ export class Utils {
         try {
             GLib.file_set_contents(
                 this.app.userSettings.HISTORY_FILE,
-                JSON.stringify(this.app.chatHistory, null, 2),
+                JSON.stringify(this.app.chat.history, null, 2),
             );
             this.log(`History saved in: ${this.app.userSettings.HISTORY_FILE}`);
         } catch (e) {
