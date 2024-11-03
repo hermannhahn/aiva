@@ -25,14 +25,14 @@ export class Chat {
         this.log('Chat initialized.');
     }
 
-    add(text, role = 'user') {
-        if (role === 'user') {
-            let inputChat = this.app.ui.input();
+    addQuestion(text) {
+            let inputChat = this.app.ui.question();
             inputChat.label.clutter_text.set_markup(
                 `<b>${this.app.userSettings.USERNAME}:</b> ${text}`,
             );
             this.app.ui.chatSection.addMenuItem(inputChat);
-        } else {
+        }
+        addResponse(text) {
             let responseChat = this.app.ui.response();
             let copyButton = this.app.ui.copy();
             this.app.ui.chatSection.addMenuItem(responseChat);
@@ -45,12 +45,6 @@ export class Chat {
             copyButton.connect('activate', (_self) => {
                 this.app.utils.copySelectedText(responseChat, copyButton);
             });
-            // Unlock search entry
-            this.app.ui.searchEntry.clutter_text.reactive = true;
-            this.app.ui.searchEntry.clutter_text.selectable = true;
-            this.app.ui.searchEntry.clutter_text.editable = true;
-            this.app.ui.searchEntry.clutter_text.activatable = true;
-            this.app.ui.searchEntry.clutter_text.hover = true;
         }
     }
 }
