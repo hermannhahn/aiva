@@ -1,3 +1,6 @@
+import St from 'gi://St';
+import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
+
 export class Chat {
     constructor(app) {
         this.app = app;
@@ -33,6 +36,16 @@ export class Chat {
             `<b>${this.app.userSettings.USERNAME}:</b> ${text}`,
         );
         this.app.utils.scrollToBottom();
+
+        // Add to chat
+        this.app.chat.history.push({
+            role: 'user',
+            parts: [
+                {
+                    text,
+                },
+            ],
+        });
     }
 
     addResponse(text) {
@@ -53,5 +66,36 @@ export class Chat {
             this.app.utils.copySelectedText(responseChat, copyButton);
         });
         this.app.utils.scrollToBottom();
+
+        // Extract code and tts from response
+        let answer = this.app.utils.extractCodeAndTTS(text);
+
+        // Speech response
+        if (answer.tts !== null) {
+            this.app.azure.tts(answer.tts);
+        }
+
+        // If answer.code is not null, copy to clipboard
+        if (answer.code !== null) {
+            this.app.extension.clipboard.set_text(
+                St.ClipboardType.CLIPBOARD,
+                answer.code,
+            );
+            this.app.utils.gnomeNotify(_('Code example copied to clipboard'));
+        }
+
+        this.app.chat.history.push({
+            role: 'model',
+            parts: [
+                {
+                    text,
+                },
+            ],
+        });
+
+        // Save history.json
+        if (this.app.userSettings.RECURSIVE_TALK) {
+            this.app.utils.saveHistory();
+        }
     }
 }
