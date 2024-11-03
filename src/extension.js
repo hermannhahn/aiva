@@ -10,6 +10,13 @@ import {
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 import * as PanelMenu from 'resource:///org/gnome/shell/ui/panelMenu.js';
 
+import {Logger} from './utils/logger.js';
+const logger = new Logger();
+const log = logger.log;
+const logError = logger.logError;
+if (!log && !logError) {
+    console.log('[AIVA] Logger error!');
+}
 import {Audio} from './audio.js';
 import {Brain} from './brain.js';
 import {Chat} from './chat.js';
@@ -42,10 +49,6 @@ const Aiva = GObject.registerClass(
          * @description fetch settings
          */
         _fetchSettings() {
-            // log shortcuts
-            this.log = this.utils.log;
-            this.logError = this.utils.logError;
-
             this.log('Fetching settings...');
             // extension settings
             const {settings} = this.extension;
