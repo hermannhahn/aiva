@@ -136,6 +136,7 @@ const Aiva = GObject.registerClass(
          * @description init extension
          */
         _init(extension) {
+            console.log('[AIVA] Initializing extension...');
             // load logger
             this.log = log;
             this.logError = logError;
@@ -164,6 +165,8 @@ const Aiva = GObject.registerClass(
 
             // initialize chat
             this.chat.init();
+
+            console.log('[AIVA] Extension initialized.');
         }
 
         /**
@@ -215,9 +218,8 @@ export default class AivaExtension extends Extension {
                 console.log('[AIVA] ' + message);
             },
         });
-        console.log('[AIVA] Initializing extension...');
         Main.panel.addToStatusArea('gvaGnomeExtension', this._aiva, 1);
-        console.log('[AIVA] Getting IP...');
+        this._aiva.log('[AIVA] Getting IP...');
         _httpSession.send_and_read_async(
             message,
             GLib.PRIORITY_DEFAULT,
@@ -229,8 +231,8 @@ export default class AivaExtension extends Extension {
                 const res = JSON.parse(response);
                 const ip = res.ip;
                 const country = res.country;
-                console.log('[AIVA] IP: ' + ip);
-                console.log('[AIVA] Country: ' + country);
+                this._aiva.log('[AIVA] IP: ' + ip);
+                this._aiva.log('[AIVA] Country: ' + country);
                 this._aiva.userSettings.LOCATION = res.country;
             },
         );
