@@ -27,10 +27,11 @@ export class Chat {
 
     addQuestion(text) {
         let inputChat = this.app.ui.question();
+        this.app.ui.chatSection.addMenuItem(inputChat);
         inputChat.label.clutter_text.set_markup(
             `<b>${this.app.userSettings.USERNAME}:</b> ${text}`,
         );
-        this.app.ui.chatSection.addMenuItem(inputChat);
+        this.app.utils.scrollToBottom();
     }
 
     addResponse(text) {
@@ -46,5 +47,6 @@ export class Chat {
         copyButton.connect('activate', (_self) => {
             this.app.utils.copySelectedText(responseChat, copyButton);
         });
+        this.app.utils.scrollToBottom();
     }
 }
