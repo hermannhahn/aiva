@@ -28,33 +28,29 @@ export class Chat {
     add(text, role = 'user') {
         if (role === 'user') {
             let inputChat = this.app.ui.input();
-            this.app.ui.inputChat.label.clutter_text.set_markup(
+            inputChat.label.clutter_text.set_markup(
                 `<b>${this.app.userSettings.USERNAME}:</b> ${text}`,
             );
+            this.app.ui.chatSection.addMenuItem(inputChat);
         } else {
             let responseChat = this.app.ui.response();
             let copyButton = this.app.ui.copy();
-
-            // add items
-            this.app.ui.chatSection.addMenuItem(inputChat);
             this.app.ui.chatSection.addMenuItem(responseChat);
             this.app.ui.chatSection.addMenuItem(copyButton);
             this.app.ui.chatSection.addMenuItem(this.app.ui.newSeparator);
-            this.app.ui.responseChat.label.clutter_text.set_markup(
+            responseChat.label.clutter_text.set_markup(
                 `<b>${this.app.userSettings.ASSIST_NAME}:</b> ${text}`,
             );
+            // add copy button
+            copyButton.connect('activate', (_self) => {
+                this.app.utils.copySelectedText(responseChat, copyButton);
+            });
+            // Unlock search entry
+            this.app.ui.searchEntry.clutter_text.reactive = true;
+            this.app.ui.searchEntry.clutter_text.selectable = true;
+            this.app.ui.searchEntry.clutter_text.editable = true;
+            this.app.ui.searchEntry.clutter_text.activatable = true;
+            this.app.ui.searchEntry.clutter_text.hover = true;
         }
-
-        // add copy button
-        copyButton.connect('activate', (_self) => {
-            this.app.utils.copySelectedText(responseChat, copyButton);
-        });
-
-        // Unlock search entry
-        this.app.ui.searchEntry.clutter_text.reactive = true;
-        this.app.ui.searchEntry.clutter_text.selectable = true;
-        this.app.ui.searchEntry.clutter_text.editable = true;
-        this.app.ui.searchEntry.clutter_text.activatable = true;
-        this.app.ui.searchEntry.clutter_text.hover = true;
     }
 }
