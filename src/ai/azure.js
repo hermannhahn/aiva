@@ -9,6 +9,7 @@ export class MicrosoftAzure {
          * set/get app props
          */
         this.app = app;
+        this.app.log('Microsoft Azure API loaded.');
 
         /**
          * get azure api settings
