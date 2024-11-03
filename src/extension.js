@@ -10,10 +10,14 @@ import {
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 import * as PanelMenu from 'resource:///org/gnome/shell/ui/panelMenu.js';
 
+import {Audio} from './audio.js';
 import {Brain} from './brain.js';
 import {Chat} from './chat.js';
 import {UI} from './ui.js';
 import {Utils} from './utils/utils.js';
+
+import {GoogleGemini} from './ai/gemini.js';
+import {MicrosoftAzure} from './ai/azure.js';
 
 const Aiva = GObject.registerClass(
     class Aiva extends PanelMenu.Button {
@@ -85,26 +89,51 @@ const Aiva = GObject.registerClass(
          * @description create instances
          */
         _createInstances() {
+            this.log('Creating instances...');
+
+            /**
+             * response
+             */
+            this.gemini = new GoogleGemini(this);
+            this.log('Gemini instance created.');
+
+            /**
+             * tts | stt
+             */
+            this.azure = new MicrosoftAzure(this);
+            this.log('Azure instance created.');
+
+            /**
+             * play | stop | record | stopRecord
+             */
+            this.audio = new Audio(this);
+            this.log('Audio instance created.');
+
             /**
              * log | logError | inputformat | textformat | insertLineBreaks
              */
             this.utils = new Utils(this);
+            this.log('Utils instance created.');
 
             /**
              * tray | icon | chatSection | scrollView | copyButton
              */
             this.ui = new UI(this);
+            this.log('UI instance created.');
 
             /**
              * add | copy
              */
             this.chat = new Chat(this);
+            this.log('Chat instance created.');
 
             /**
              *
              */
             this.brain = new Brain(this);
-            this.log('Instances created.');
+            this.log('Brain instance created.');
+
+            this.log('All instances created.');
         }
 
         /**
@@ -143,6 +172,7 @@ const Aiva = GObject.registerClass(
          * open settings
          */
         openSettings() {
+            this.log('Opening settings...');
             this.extension.openSettings();
         }
 
@@ -151,6 +181,7 @@ const Aiva = GObject.registerClass(
          */
         destroyLoop() {
             if (this.afterTune) {
+                this.log('Destroying loop...');
                 clearTimeout(this.afterTune);
                 this.afterTune = null;
             }
@@ -160,8 +191,10 @@ const Aiva = GObject.registerClass(
          * destroy extension
          */
         destroy() {
+            this.log('Destroying extension...');
             this.destroyLoop();
             super.destroy();
+            this.log('Extension destroyed.');
         }
     },
 );
@@ -171,8 +204,8 @@ export default class AivaExtension extends Extension {
      * Enable extension
      */
     enable() {
+        // Get IP from https://api.ipify.org?format=json
         let url = 'https://api.ipify.org?format=json';
-        // Get IP from url response
         let _httpSession = new Soup.Session();
         let message = Soup.Message.new('GET', url);
         this._aiva = new Aiva({
@@ -181,10 +214,12 @@ export default class AivaExtension extends Extension {
             openSettings: this.openPreferences,
             uuid: this.uuid,
             log: (message) => {
-                this.log(message);
+                console.log('[AIVA] ' + message);
             },
         });
+        console.log(['[AIVA] Initializing extension...']);
         Main.panel.addToStatusArea('gvaGnomeExtension', this._aiva, 1);
+        console.log(['[AIVA] Getting IP...']);
         _httpSession.send_and_read_async(
             message,
             GLib.PRIORITY_DEFAULT,
@@ -195,9 +230,11 @@ export default class AivaExtension extends Extension {
                 let response = decoder.decode(bytes.get_data());
                 const res = JSON.parse(response);
                 const ip = res.ip;
+                console.log(['[AIVA] IP: ' + ip]);
                 // Get location from https://ipapi.co/{ip}/json/
                 url = `https://ipapi.co/${ip}/json/`;
                 message = Soup.Message.new('GET', url);
+                console.log(['[AIVA] Getting location...']);
                 _httpSession.send_and_read_async(
                     message,
                     GLib.PRIORITY_DEFAULT,
@@ -208,7 +245,10 @@ export default class AivaExtension extends Extension {
                         let response = decoder.decode(bytes.get_data());
                         const res = JSON.parse(response);
                         this._aiva.userSettings.LOCATION = `${res.country_name}/${res.city}`;
-                        this._aiva.log(this._aiva.userSettings.LOCATION);
+                        console.log(
+                            '[AIVA] Location: ' +
+                                this._aiva.userSettings.LOCATION,
+                        );
                     },
                 );
             },
