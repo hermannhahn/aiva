@@ -135,6 +135,7 @@ export class UI {
             this.searchEntry.clutter_text.set_text('');
             this.searchEntry.clutter_text.reactive = false;
             this.app.chat.addQuestion(question);
+            this.app.brain.proccess(question);
         });
 
         // If press mic button
