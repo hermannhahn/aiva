@@ -46,6 +46,10 @@ export class Chat {
                 },
             ],
         });
+        // Save history.json
+        if (this.app.userSettings.RECURSIVE_TALK) {
+            this.app.utils.saveHistory();
+        }
     }
 
     addResponse(text) {
@@ -84,6 +88,7 @@ export class Chat {
             this.app.utils.gnomeNotify(_('Code example copied to clipboard'));
         }
 
+        // Save history.json
         this.app.chat.history.push({
             role: 'model',
             parts: [
@@ -92,8 +97,6 @@ export class Chat {
                 },
             ],
         });
-
-        // Save history.json
         if (this.app.userSettings.RECURSIVE_TALK) {
             this.app.utils.saveHistory();
         }
