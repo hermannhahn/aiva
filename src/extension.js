@@ -227,7 +227,7 @@ export default class AivaExtension extends Extension {
                 let decoder = new TextDecoder('utf-8');
                 let response = decoder.decode(bytes.get_data());
                 const res = JSON.parse(response);
-                console.log('[AIVA][IPIFY] ' + res);
+                console.log('[AIVA][IPIFY] ' + response);
                 const ip = res.ip;
                 console.log('[AIVA] IP: ' + ip);
                 // Get location from https://ipapi.co/{ip}/json/
@@ -243,7 +243,7 @@ export default class AivaExtension extends Extension {
                         let decoder = new TextDecoder('utf-8');
                         let response = decoder.decode(bytes.get_data());
                         const res = JSON.parse(response);
-                        console.log('[AIVA][IP-API] ' + res);
+                        console.log('[AIVA][IP-API] ' + response);
                         this._aiva.userSettings.LOCATION = `${res.country_name}/${res.city}`;
                         console.log(
                             '[AIVA] Location: ' +
