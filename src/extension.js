@@ -11,6 +11,7 @@ import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 import * as PanelMenu from 'resource:///org/gnome/shell/ui/panelMenu.js';
 
 import {Utils} from './utils/utils.js';
+import {AppLayout} from './ui.js';
 import {Chat} from './chat.js';
 
 const Aiva = GObject.registerClass(
@@ -87,6 +88,11 @@ const Aiva = GObject.registerClass(
              * log | logError | inputformat | textformat | insertLineBreaks
              */
             this.utils = new Utils(this);
+
+            /**
+             * tray | icon | chatSection | scrollView | copyButton
+             */
+            this.ui = new AppLayout(this);
 
             /**
              * add | copy
