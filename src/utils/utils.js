@@ -299,19 +299,7 @@ export class Utils {
             type +
             ' -a "AI Voice Assistant" ' +
             text;
-        const process = GLib.spawn_async(
-            null, // pasta de trabalho
-            ['/bin/sh', '-c', command], // comando e argumentos
-            null, // opções
-            GLib.SpawnFlags.SEARCH_PATH, // flags
-            null, // PID
-        );
-
-        if (process) {
-            this.app.log('Notification sent successfully.');
-        } else {
-            this.app.log('Error sending notification.');
-        }
+        this.executeCommand(command);
     }
 
     copySelectedText(responseChat, copyButton) {
@@ -362,7 +350,6 @@ export class Utils {
             if (notification.includes(title)) {
                 // Obtenha o ID da notificação
                 let notificationId = notification.split('\t')[0];
-
                 // Remova a notificação
                 GLib.spawn_command_line_async(
                     'notify-send -c ' + notificationId,
