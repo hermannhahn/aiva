@@ -363,7 +363,7 @@ export class Utils {
                     this.app.userSettings.HISTORY_FILE,
                     initialContent,
                 );
-                this.log(
+                this.app.log(
                     `History file created. : ${this.app.userSettings.HISTORY_FILE}`,
                 );
                 // Save history.json
@@ -376,7 +376,7 @@ export class Utils {
                 return [];
             }
         } else {
-            this.log(
+            this.app.log(
                 `The history.json file already exists: ${this.app.userSettings.HISTORY_FILE}`,
             );
             return this.loadHistoryFile();
@@ -390,7 +390,9 @@ export class Utils {
                 this.app.userSettings.HISTORY_FILE,
                 JSON.stringify(this.app.chat.history, null, 2),
             );
-            this.log(`History saved in: ${this.app.userSettings.HISTORY_FILE}`);
+            this.app.log(
+                `History saved in: ${this.app.userSettings.HISTORY_FILE}`,
+            );
         } catch (e) {
             logError(
                 e,
@@ -413,13 +415,13 @@ export class Utils {
                 );
                 let [, contents] = file.load_contents(null);
                 let chatHistory = JSON.parse(contents);
-                this.log(
+                this.app.log(
                     `History loaded from: ${this.app.userSettings.HISTORY_FILE}`,
                 );
                 // Reset chatHistory if RECURSIVE_TALK is disabled
                 if (this.app.userSettings.RECURSIVE_TALK === false) {
                     chatHistory = [];
-                    this.log(
+                    this.app.log(
                         `History reset to empty array: ${this.app.userSettings.HISTORY_FILE}`,
                     );
                 }
@@ -451,9 +453,9 @@ export class Utils {
         );
 
         if (process) {
-            this.log('Notification sent successfully.');
+            this.app.log('Notification sent successfully.');
         } else {
-            this.log('Error sending notification.');
+            this.app.log('Error sending notification.');
         }
     }
 
@@ -488,7 +490,7 @@ export class Utils {
                     return false; // Para garantir que o timeout execute apenas uma vez
                 });
             }
-            this.log(`Texto copiado: ${responseChat.label.text}`);
+            this.app.log(`Texto copiado: ${responseChat.label.text}`);
         }
     }
 
@@ -565,7 +567,7 @@ export class Utils {
             const [, contents] = file.load_contents(null);
             return GLib.base64_encode(contents);
         } catch (error) {
-            this.log('Erro ao ler o arquivo: ' + error);
+            this.app.log('Erro ao ler o arquivo: ' + error);
             return null;
         }
     }
@@ -636,9 +638,9 @@ export class Utils {
         );
 
         if (process) {
-            this.log(`Executing command: ${command}`);
+            this.app.log(`Executing command: ${command}`);
         } else {
-            this.log('Error executing command.');
+            this.app.log('Error executing command.');
         }
     }
 
@@ -646,7 +648,7 @@ export class Utils {
      * remove all .wav files from /tmp folder
      */
     removeWavFiles() {
-        this.log('Removing all .wav files from /tmp folder');
+        this.app.log('Removing all .wav files from /tmp folder');
         const command = 'rm -rf /tmp/*gva*.wav';
         const process = GLib.spawn_async(
             null, // pasta de trabalho
@@ -657,9 +659,9 @@ export class Utils {
         );
 
         if (process) {
-            this.log('Wav files removed successfully.');
+            this.app.log('Wav files removed successfully.');
         } else {
-            this.log('Error removing wav files.');
+            this.app.log('Error removing wav files.');
         }
     }
 }
