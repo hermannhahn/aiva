@@ -48,6 +48,12 @@ const Aiva = GObject.registerClass(
          */
         _fetchSettings() {
             this.log('Fetching settings...');
+            // debug mode
+            const DEBUG = true;
+            if (DEBUG) {
+                this.log('Debug mode enabled.');
+            }
+            // extension directory
             const EXT_DIR = GLib.build_filenamev([
                 GLib.get_home_dir(),
                 '.local',
