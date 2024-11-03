@@ -153,7 +153,7 @@ export class AppLayout {
 
         // If press settings button
         this.settingsButton.connect('clicked', (_self) => {
-            this.openSettings();
+            this.app.openSettings();
             // Close App
             this.app.menu.close();
         });
