@@ -28,6 +28,7 @@ export class Chat {
     addQuestion(text) {
         let inputChat = this.app.ui.question();
         this.app.ui.chatSection.addMenuItem(inputChat);
+        text = this.app.utils.inputformat(text);
         inputChat.label.clutter_text.set_markup(
             `<b>${this.app.userSettings.USERNAME}:</b> ${text}`,
         );
@@ -37,6 +38,10 @@ export class Chat {
     addResponse(text) {
         let responseChat = this.app.ui.response();
         let copyButton = this.app.ui.copy();
+        // Set ai response to chat
+        text = this.utils.insertLineBreaks(text);
+        text = this.utils.justifyText(text);
+
         this.app.ui.chatSection.addMenuItem(responseChat);
         this.app.ui.chatSection.addMenuItem(copyButton);
         this.app.ui.chatSection.addMenuItem(this.app.ui.newSeparator);
