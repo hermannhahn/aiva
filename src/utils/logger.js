@@ -1,6 +1,9 @@
 export class Logger {
     constructor(debug) {
         this.debug = debug;
+        if (debug) {
+            this.log('Debug mode enabled.');
+        }
     }
 
     /**
