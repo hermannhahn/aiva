@@ -1,26 +1,32 @@
+// DEBUG MODE
+const DEBUG = true;
+
+// Extension
 import St from 'gi://St';
 import GObject from 'gi://GObject';
 import Soup from 'gi://Soup';
 import GLib from 'gi://GLib';
-
 import {
     Extension,
     gettext as _,
 } from 'resource:///org/gnome/shell/extensions/extension.js';
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 import * as PanelMenu from 'resource:///org/gnome/shell/ui/panelMenu.js';
-
 import {Logger} from './utils/logger.js';
-const logger = new Logger();
+
+// Logger
+const logger = new Logger(DEBUG);
 const log = logger.log;
 const logError = logger.logError;
 
+// App
 import {Audio} from './audio.js';
 import {Brain} from './brain.js';
 import {Chat} from './chat.js';
 import {UI} from './ui.js';
 import {Utils} from './utils/utils.js';
 
+// API
 import {GoogleGemini} from './ai/gemini.js';
 import {MicrosoftAzure} from './ai/azure.js';
 
@@ -48,11 +54,6 @@ const Aiva = GObject.registerClass(
          */
         _fetchSettings() {
             this.log('Fetching settings...');
-            // debug mode
-            const DEBUG = true;
-            if (DEBUG) {
-                this.log('Debug mode enabled.');
-            }
             // extension directory
             const EXT_DIR = GLib.build_filenamev([
                 GLib.get_home_dir(),
