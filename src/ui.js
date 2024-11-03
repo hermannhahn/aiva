@@ -102,7 +102,7 @@ export class UI {
         // Icon tray
         this.tray.add_child(this.icon);
         this.app.add_child(this.tray);
-        this.log('App tray initialized.');
+        this.app.log('App tray initialized.');
     }
 
     addItems() {
