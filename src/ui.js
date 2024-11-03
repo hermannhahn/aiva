@@ -144,7 +144,7 @@ export class AppLayout {
         // If press clear button
         this.clearButton.connect('clicked', (_self) => {
             this.searchEntry.clutter_text.set_text('');
-            this.app.chatHistory = [];
+            this.app.chat.history = [];
             this.app.menu.box.remove_child(this.scrollView);
             this.chatSection = new PopupMenu.PopupMenuSection();
             this.scrollView.add_child(this.chatSection.actor);
