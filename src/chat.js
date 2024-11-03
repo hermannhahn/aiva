@@ -26,25 +26,25 @@ export class Chat {
     }
 
     addQuestion(text) {
-            let inputChat = this.app.ui.question();
-            inputChat.label.clutter_text.set_markup(
-                `<b>${this.app.userSettings.USERNAME}:</b> ${text}`,
-            );
-            this.app.ui.chatSection.addMenuItem(inputChat);
-        }
-        addResponse(text) {
-            let responseChat = this.app.ui.response();
-            let copyButton = this.app.ui.copy();
-            this.app.ui.chatSection.addMenuItem(responseChat);
-            this.app.ui.chatSection.addMenuItem(copyButton);
-            this.app.ui.chatSection.addMenuItem(this.app.ui.newSeparator);
-            responseChat.label.clutter_text.set_markup(
-                `<b>${this.app.userSettings.ASSIST_NAME}:</b> ${text}`,
-            );
-            // add copy button
-            copyButton.connect('activate', (_self) => {
-                this.app.utils.copySelectedText(responseChat, copyButton);
-            });
-        }
+        let inputChat = this.app.ui.question();
+        inputChat.label.clutter_text.set_markup(
+            `<b>${this.app.userSettings.USERNAME}:</b> ${text}`,
+        );
+        this.app.ui.chatSection.addMenuItem(inputChat);
+    }
+
+    addResponse(text) {
+        let responseChat = this.app.ui.response();
+        let copyButton = this.app.ui.copy();
+        this.app.ui.chatSection.addMenuItem(responseChat);
+        this.app.ui.chatSection.addMenuItem(copyButton);
+        this.app.ui.chatSection.addMenuItem(this.app.ui.newSeparator);
+        responseChat.label.clutter_text.set_markup(
+            `<b>${this.app.userSettings.ASSIST_NAME}:</b> ${text}`,
+        );
+        // add copy button
+        copyButton.connect('activate', (_self) => {
+            this.app.utils.copySelectedText(responseChat, copyButton);
+        });
     }
 }
