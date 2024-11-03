@@ -48,6 +48,14 @@ const Aiva = GObject.registerClass(
          */
         _fetchSettings() {
             this.log('Fetching settings...');
+            const EXT_DIR = GLib.build_filenamev([
+                GLib.get_home_dir(),
+                '.local',
+                'share',
+                'gnome-shell',
+                'extensions',
+                'aiva@gemini-assist.vercel.app',
+            ]);
             // extension settings
             const {settings} = this.extension;
             this.log('Extension settings loaded.');
@@ -60,19 +68,8 @@ const Aiva = GObject.registerClass(
                     'azure-speech-language',
                 ),
                 AZURE_SPEECH_VOICE: settings.get_string('azure-speech-voice'),
-                EXT_DIR: GLib.build_filenamev([
-                    GLib.get_home_dir(),
-                    '.local',
-                    'share',
-                    'gnome-shell',
-                    'extensions',
-                    'aiva@gemini-assist.vercel.app',
-                ]),
                 GEMINI_API_KEY: settings.get_string('gemini-api-key'),
-                HISTORY_FILE: GLib.build_filenamev([
-                    this.userSettings.EXT_DIR,
-                    'history.json',
-                ]),
+                HISTORY_FILE: GLib.build_filenamev([EXT_DIR, 'history.json']),
                 LOCATION: 'Unknown',
                 RECURSIVE_TALK: settings.get_boolean('log-history'),
                 USERNAME: GLib.get_real_name(),
