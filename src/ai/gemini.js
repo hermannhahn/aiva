@@ -45,7 +45,7 @@ export class GoogleGemini {
                 null,
                 (_httpSession, result) => {
                     let bytes = _httpSession.send_and_read_finish(result);
-                    this.log('Response received.');
+                    this.app.log('Response received.');
                     let decoder = new TextDecoder('utf-8');
                     // Get response
                     let response = decoder.decode(bytes.get_data());
