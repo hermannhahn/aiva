@@ -159,7 +159,7 @@ export class AppLayout {
         });
     }
 
-    input() {
+    question() {
         // Question
         let inputChat = new PopupMenu.PopupMenuItem('', {
             style_class: 'input-chat',
