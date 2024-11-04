@@ -58,7 +58,7 @@ export class Chat {
     }
 
     addtoResponse(text) {
-        this.app.ui.responseChat.label.clutter_text.set_markup(
+        this.responseChat.label.clutter_text.set_markup(
             `<b>${this.app.userSettings.ASSIST_NAME}:</b> ${text}`,
         );
         this.app.utils.scrollToBottom();
@@ -77,6 +77,8 @@ export class Chat {
         responseChat.label.clutter_text.set_markup(
             `<b>${this.app.userSettings.ASSIST_NAME}:</b> ${text}`,
         );
+        this.responseChat = responseChat;
+
         this.app.ui.searchEntry.clutter_text.reactive = true;
         // add copy button
         copyButton.connect('activate', (_self) => {
@@ -113,6 +115,5 @@ export class Chat {
         if (this.app.userSettings.RECURSIVE_TALK) {
             this.app.utils.saveHistory();
         }
-        this.app.ui.responseChat = responseChat;
     }
 }
