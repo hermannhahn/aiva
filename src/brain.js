@@ -7,7 +7,6 @@ export class Brain {
     }
 
     proccess(question) {
-        // this.app.response(question);
         if (this._isCommand(question)) {
             this._commandInterpreter(question);
             this.app.ui.searchEntry.clutter_text.reactive = true;
