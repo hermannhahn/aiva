@@ -1,3 +1,15 @@
+const DEBUG = true;
+
+/**
+ *
+ * AIVA - Artificial Intelligence Voice Assistant
+ *
+ * Author: Hermann Hahn
+ * Contact: hermann.h.hahn@gmail.com
+ * Repository: https://github.com/hermannhahn/aiva
+ *
+ */
+
 import St from 'gi://St';
 import GObject from 'gi://GObject';
 import Soup from 'gi://Soup';
@@ -9,11 +21,6 @@ import {
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 import * as PanelMenu from 'resource:///org/gnome/shell/ui/panelMenu.js';
 import {Logger} from './utils/logger.js';
-
-// Logger
-const logger = new Logger(true);
-const log = logger.log;
-const logError = logger.logError;
 
 // App
 import {Audio} from './audio.js';
@@ -86,7 +93,14 @@ const Aiva = GObject.registerClass(
          * @description create instances
          */
         _createInstances() {
-            this.log('Loadding instances...');
+            console.log('[AIVA] Creating instances...');
+
+            /**
+             * logger
+             */
+            const logger = new Logger(DEBUG);
+            this.log = logger.log;
+            this.logError = logger.logError;
 
             /**
              * response
@@ -133,9 +147,6 @@ const Aiva = GObject.registerClass(
          */
         _init(extension) {
             console.log('[AIVA] Initializing extension...');
-            // load logger
-            this.log = log;
-            this.logError = logError;
 
             // initialize extension
             super._init(0.0, _('AIVA'));
@@ -145,11 +156,11 @@ const Aiva = GObject.registerClass(
              */
             this.extension = extension;
 
-            // load settings
-            this._loadSettings();
-
             // create instances
             this._createInstances();
+
+            // load settings
+            this._loadSettings();
 
             // open settings if gemini api key is not configured
             if (this.userSettings.GEMINI_API_KEY === '') {
