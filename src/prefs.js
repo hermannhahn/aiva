@@ -67,7 +67,6 @@ class AivaSettings {
         const howToButtonApiKey = new Gtk.LinkButton({
             label: _('How to get API key?'),
             uri: 'https://github.com/wwardaww/gnome-gemini-ai?tab=readme-ov-file#using-gemini-api-key',
-            halign: Gtk.Align.START,
         });
 
         // AZURE API KEY
@@ -81,7 +80,6 @@ class AivaSettings {
         const howToButtonAzure = new Gtk.LinkButton({
             label: _('How to get API key?'),
             uri: 'https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/get-started-speech-to-text',
-            halign: Gtk.Align.START,
         });
 
         // AZURE REGION
@@ -93,8 +91,7 @@ class AivaSettings {
             buffer: new Gtk.EntryBuffer(),
         });
         const howToRegion = new Gtk.Label({
-            label: _('e.g.: eastus, westus, ...'),
-            halign: Gtk.Align.START,
+            label: _('e.g.: eastus, westus...'),
         });
 
         // AZURE LANGUAGE (ComboBoxText) to lang options
@@ -761,8 +758,8 @@ class AivaSettings {
             if (text === 'Azure Speech Region') {
                 return 'Região da API Speech Azure';
             }
-            if (text === 'e.g.: eastus, westus, ...') {
-                return 'Exemplo: eastus, westus, ...';
+            if (text === 'e.g.: eastus, westus...') {
+                return 'Exemplo: eastus, westus...';
             }
             if (text === 'Select Language') {
                 return 'Selecione a língua';
@@ -802,7 +799,7 @@ class AivaSettings {
             if (text === 'Azure Speech Region') {
                 return 'Región de la API de voz de Azure';
             }
-            if (text === 'e.g.: eastus, westus, ...') {
+            if (text === 'e.g.: eastus, westus...') {
                 return 'p. ej.: eastus, westus, ...';
             }
             if (text === 'Select Language') {
@@ -843,7 +840,7 @@ class AivaSettings {
             if (text === 'Azure Speech Region') {
                 return 'Région de l’API Azure Speech';
             }
-            if (text === 'e.g.: eastus, westus, ...') {
+            if (text === 'e.g.: eastus, westus...') {
                 return 'p. ex. : estus, ouestus, etc.';
             }
             if (text === 'Select Language') {
@@ -884,7 +881,7 @@ class AivaSettings {
             if (text === 'Azure Speech Region') {
                 return 'Azure Speech-API-Region';
             }
-            if (text === 'e.g.: eastus, westus, ...') {
+            if (text === 'e.g.: eastus, westus...') {
                 return 'z. B.: eastus, westus, ...';
             }
             if (text === 'Select Language') {
