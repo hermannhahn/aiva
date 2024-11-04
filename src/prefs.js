@@ -18,6 +18,19 @@ export default class ClipboardIndicatorPreferences extends ExtensionPreferences 
 class AivaSettings {
     constructor(schema) {
         this.schema = schema;
+
+        const defaultKey = this.schema.get_string('gemini-api-key');
+        const defaultSpeechKey = this.schema.get_string('azure-speech-key');
+        const defaultRegion = this.schema.get_string('azure-speech-region');
+        const defaultLanguage = this.schema.get_string('azure-speech-language');
+        const defaultVoice = this.schema.get_string('azure-speech-voice');
+        const defaultAssistName = this.schema.get_string('assist-name');
+        const defaultLog = this.schema.get_boolean('log-history');
+
+        const _ = (text) => {
+            return this.translations(text, defaultLanguage);
+        };
+
         this.ui = new Adw.PreferencesGroup({title: _('Settings:')});
         this.main = new Gtk.Grid({
             margin_top: 10,
@@ -29,13 +42,7 @@ class AivaSettings {
             column_homogeneous: false,
             row_homogeneous: false,
         });
-        const defaultKey = this.schema.get_string('gemini-api-key');
-        const defaultSpeechKey = this.schema.get_string('azure-speech-key');
-        const defaultRegion = this.schema.get_string('azure-speech-region');
-        const defaultLanguage = this.schema.get_string('azure-speech-language');
-        const defaultVoice = this.schema.get_string('azure-speech-voice');
-        const defaultAssistName = this.schema.get_string('assist-name');
-        const defaultLog = this.schema.get_boolean('log-history');
+
         // Set Gemini default name if no name is setted
         if (
             defaultAssistName === '' ||
