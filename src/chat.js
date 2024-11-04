@@ -97,10 +97,10 @@ export class Chat {
     addResponse(text) {
         let responseChat = this.app.ui.response();
         let copyButton = this.app.ui.copy();
-        text = this.app.utils.insertLineBreaks(text);
         this.app.ui.chatSection.addMenuItem(responseChat);
         this.app.ui.chatSection.addMenuItem(copyButton);
         this.app.ui.chatSection.addMenuItem(this.app.ui.newSeparator);
+        text = this.app.utils.insertLineBreaks(text);
         responseChat.label.clutter_text.set_markup(
             `<b>${this.app.userSettings.ASSIST_NAME}:</b> ${text}`,
         );
