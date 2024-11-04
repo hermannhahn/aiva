@@ -32,27 +32,32 @@ function compile_resources() {
 }
 
 function compile_translations() {
-	echo "Compiling translations..."
+    echo "Compiling translations..."
 
-	for PO_FILE in $(find po/ -type f | grep ".po"); do
-		LANG=$(basename "$PO_FILE" .po)
-		mkdir -p "$JS_DIR/locale/$LANG/LC_MESSAGES"
-		msgfmt -c "$PO_FILE" -o "$JS_DIR/locale/$LANG/LC_MESSAGES/$UUID.mo"
-	done
+    for PO_FILE in $(find po/ -type f -name "*.po"); do
+        LANG=$(basename "$PO_FILE" .po)
+        mkdir -p "$JS_DIR/locale/$LANG/LC_MESSAGES"
+        msgfmt -c "$PO_FILE" -o "$JS_DIR/locale/$LANG/LC_MESSAGES/messages.mo"
+    done
 
-	echo "Translations compiled."
+    echo "Translations compiled."
 }
 
 function create_translations() {
-	echo "Creating translations..."
-	mkdir -p po
-	xgettext -k_ -kN_ -o po/messages.pot src/*.js
-	for LANG in en-US de-DE fr-FR it-IT es-ES pt-BR; do
-		mkdir -p po/"$LANG"
-		mkdir -p po/"$LANG"/LC_MESSAGES
-		msgfmt -c po/messages.pot -o po/"$LANG"/LC_MESSAGES/$UUID.mo
-	done
-	echo "Translations created."
+    echo "Creating translations..."
+    mkdir -p po
+    xgettext -k_ -kN_ -o po/messages.pot src/*.js
+
+    for LANG in en-US de-DE fr-FR it-IT es-ES pt-BR; do
+        PO_FILE="po/$LANG.po"
+        
+        # Cria o arquivo .po se não existir
+        if [[ ! -f "$PO_FILE" ]]; then
+            msginit --input=po/messages.pot --locale="$LANG" -o "$PO_FILE"
+        fi
+    done
+
+    echo "Translations created."
 }
 
 function build_extension_package() {
