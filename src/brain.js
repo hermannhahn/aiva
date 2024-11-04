@@ -33,12 +33,14 @@ export class Brain {
     }
 
     _commandInterpreter(text) {
-        if (text.startsWith('/help')) {
-            this.app.chat.help(text);
-        }
+        if (text.startsWith('/')) {
+            if (text.startsWith('/help')) {
+                this.app.chat.help(text);
+            }
 
-        if (text.startsWith('/settings')) {
-            this.app.openSettings();
+            if (text.startsWith('/settings')) {
+                this.app.openSettings();
+            }
         }
     }
 
