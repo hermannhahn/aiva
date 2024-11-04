@@ -1,6 +1,8 @@
 import Gtk from 'gi://Gtk';
 import Adw from 'gi://Adw';
 
+import {gettext as _} from '@girs/gnome-shell/extensions/extension';
+
 import {ExtensionPreferences} from 'resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js';
 
 export default class ClipboardIndicatorPreferences extends ExtensionPreferences {
