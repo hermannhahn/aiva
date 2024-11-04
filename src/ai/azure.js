@@ -211,6 +211,7 @@ export class MicrosoftAzure {
                     if (response && response.DisplayText) {
                         let transcription = response.DisplayText;
                         this.app.log('Transcrição: ' + transcription);
+                        this.app.chat.addQuestion(transcription);
                         this.app.brain.proccess(transcription);
                     } else {
                         this.app.log('Nenhuma transcrição encontrada.');
