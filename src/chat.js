@@ -58,7 +58,7 @@ export class Chat {
     }
 
     addtoResponse(text) {
-        this.responseChat.label.clutter_text.set_markup(
+        this.app.ui.responseChat.label.clutter_text.set_markup(
             `<b>${this.app.userSettings.ASSIST_NAME}:</b> ${text}`,
         );
         this.app.utils.scrollToBottom();
@@ -113,6 +113,6 @@ export class Chat {
         if (this.app.userSettings.RECURSIVE_TALK) {
             this.app.utils.saveHistory();
         }
-        this.responseChat = responseChat;
+        this.app.ui.responseChat = responseChat;
     }
 }
