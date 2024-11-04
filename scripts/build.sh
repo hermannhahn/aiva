@@ -44,7 +44,7 @@ function compile_translations() {
 }
 
 function create_translations() {
-	echo "Creating translations...."
+	echo "Creating translations..."
 
 	xgettext -k_ -kN_ -o po/messages.pot src/*.js
 	for LANG in en-US de-DE fr-FR it-IT es-ES pt-BR; do
