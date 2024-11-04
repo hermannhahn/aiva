@@ -87,6 +87,7 @@ export class Chat {
         let answer = this.app.utils.extractCodeAndTTS(text);
 
         // Speech response
+        this.app.log('Speech response...');
         if (answer.tts !== null) {
             this.app.azure.tts(answer.tts);
         }
