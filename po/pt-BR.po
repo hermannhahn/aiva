@@ -18,67 +18,67 @@ msgstr ""
 
 #: src/brain.js:30
 msgid "computer"
-msgstr ""
+msgstr "computador"
 
 #: src/brain.js:56 src/brain.js:187
 msgid "open"
-msgstr ""
+msgstr "abrir"
 
 #: src/brain.js:57 src/brain.js:188
 msgid "start"
-msgstr ""
+msgstr "iniciar"
 
 #: src/brain.js:58 src/brain.js:189
 msgid "launch"
-msgstr ""
+msgstr "iniciar"
 
 #: src/brain.js:59
 msgid "activate"
-msgstr ""
+msgstr "ativar"
 
 #: src/brain.js:60
 msgid "close"
-msgstr ""
+msgstr "fechar"
 
 #: src/brain.js:61
 msgid "stop"
-msgstr ""
+msgstr "parar"
 
 #: src/brain.js:62
 msgid "terminate"
-msgstr ""
+msgstr "encerrar"
 
 #: src/brain.js:63
 msgid "exit"
-msgstr ""
+msgstr "sair"
 
 #: src/brain.js:64 src/brain.js:190
 msgid "run"
-msgstr ""
+msgstr "rodar"
 
 #: src/brain.js:65
 msgid "execute"
-msgstr ""
+msgstr "executar"
 
 #: src/brain.js:66
 msgid "play"
-msgstr ""
+msgstr "tocar"
 
 #: src/brain.js:67
 msgid "watch"
-msgstr ""
+msgstr "assistir"
 
 #: src/brain.js:68
 msgid "search"
-msgstr ""
+msgstr "pesquisar"
 
 #: src/brain.js:69
 msgid "find"
-msgstr ""
+msgstr "procurar"
 
 #: src/brain.js:70
 msgid "read"
-msgstr ""
+msgstr "ler"
 
 #: src/brain.js:88
 msgid "google"
@@ -98,7 +98,7 @@ msgstr ""
 
 #: src/brain.js:92
 msgid "code editor"
-msgstr ""
+msgstr "editor de código"
 
 #: src/brain.js:93
 msgid "youtube"
@@ -114,35 +114,35 @@ msgstr ""
 
 #: src/brain.js:96
 msgid "maps"
-msgstr ""
+msgstr "mapas"
 
 #: src/brain.js:97
 msgid "calculator"
-msgstr ""
+msgstr "calculadora"
 
 #: src/brain.js:98
 msgid "calendar"
-msgstr ""
+msgstr "calendario"
 
 #: src/brain.js:99
 msgid "notepad"
-msgstr ""
+msgstr "bloco de notas"
 
 #: src/brain.js:100
 msgid "snap store"
-msgstr ""
+msgstr "loja de aplicativos"
 
 #: src/brain.js:101
 msgid "extensions manager"
-msgstr ""
+msgstr "gerenciador de extensões"
 
 #: src/brain.js:102
 msgid "settings"
-msgstr ""
+msgstr "preferências"
 
 #: src/brain.js:103
 msgid "emulator"
-msgstr ""
+msgstr "emulador"
 
 #: src/brain.js:104
 msgid "terminal"
@@ -150,7 +150,7 @@ msgstr ""
 
 #: src/chat.js:79 src/chat.js:133
 msgid "Code example copied to clipboard"
-msgstr ""
+msgstr "Código copiado para a área de transferência"
 
 #: src/extension.js:140
 msgid "AIVA"
@@ -158,7 +158,7 @@ msgstr ""
 
 #: src/prefs.js:24
 msgid "Settings:"
-msgstr ""
+msgstr "Preferências:"
 
 #: src/prefs.js:57
 msgid "Gemini API Key"
@@ -166,7 +166,7 @@ msgstr ""
 
 #: src/prefs.js:64 src/prefs.js:77
 msgid "How to get API key?"
-msgstr ""
+msgstr "Como obter a chave de API?"
 
 #: src/prefs.js:70
 msgid "Azure Speech API Key"
@@ -174,52 +174,52 @@ msgstr ""
 
 #: src/prefs.js:83
 msgid "Azure Speech Region"
-msgstr ""
+msgstr "Região do Azure Speech"
 
 #: src/prefs.js:90
 msgid "e.g.: eastus, westus, ..."
-msgstr ""
+msgstr "ex: eastus, westus, ..."
 
 #: src/prefs.js:96
 msgid "Select Language"
-msgstr ""
+msgstr "Selecione a linguagem"
 
 #: src/prefs.js:100
 msgid "English"
-msgstr ""
+msgstr "Inglês"
 
 #: src/prefs.js:101
 msgid "Portuguese (Brazil)"
-msgstr ""
+msgstr "Português (Brasil)"
 
 #: src/prefs.js:102
 msgid "Spanish"
-msgstr ""
+msgstr "Espanhol"
 
 #: src/prefs.js:103
 msgid "French"
-msgstr ""
+msgstr "Francês"
 
 #: src/prefs.js:107
 msgid "Select Voice"
-msgstr ""
+msgstr "Selecione a voz"
 
 #: src/prefs.js:634
 msgid "Assistant Name"
-msgstr ""
+msgstr "Nome do assistente"
 
 #: src/prefs.js:643
 msgid "Remember talk history"
-msgstr ""
+msgstr "Lembrar conversa"
 
 #: src/prefs.js:651
 msgid "Save"
-msgstr ""
+msgstr "Salvar"
 
 #: src/prefs.js:702
 msgid "Your preferences have been saved"
-msgstr ""
+msgstr "Suas preferências foram salvas"
 
 #: src/ui.js:31
 msgid "Ask me anything..."
-msgstr ""
+msgstr "Pergunte-me qualquer coisa..."
