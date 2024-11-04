@@ -124,7 +124,7 @@ export class UI {
         // Actions
         //
 
-        // If press F12
+        // If press keyboard
         this.app.connect('key-press-event', (_self, event) => {
             if (event.keyval === 0xff1b) {
                 // F12
