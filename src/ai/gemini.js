@@ -51,7 +51,7 @@ export class GoogleGemini {
                     let res = JSON.parse(response);
                     if (res.error?.code !== 401 && res.error !== undefined) {
                         this.app.logError(res.error);
-                        this.app.chat.addToResponse(response);
+                        this.app.chat.editResponse(response);
                         return;
                     }
                     let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
@@ -103,7 +103,7 @@ export class GoogleGemini {
                             }
                         }
                     }
-                    this.app.chat.addResponse(aiResponse);
+                    this.app.chat.editResponse(aiResponse);
                 },
             );
         } catch (error) {
