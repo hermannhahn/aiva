@@ -32,7 +32,6 @@ export class Chat {
     }
 
     addQuestion(text) {
-        const date = new Date();
         const inputChat = this.app.ui.question();
         this.app.ui.chatSection.addMenuItem(inputChat);
         text = this.app.utils.inputformat(text);
@@ -41,12 +40,11 @@ export class Chat {
         );
 
         // Add to chat
-        const userText = `[${date}] <b>${this.app.userSettings.USERNAME}:</b> ${text}`;
         this.app.chat.history.push({
             role: 'user',
             parts: [
                 {
-                    userText,
+                    text,
                 },
             ],
         });
@@ -82,12 +80,11 @@ export class Chat {
         }
 
         // Save history.json
-        const modelText = `<b>${this.app.userSettings.ASSIST_NAME}:</b> ${text}`;
         this.app.chat.history.push({
             role: 'model',
             parts: [
                 {
-                    modelText,
+                    text,
                 },
             ],
         });
