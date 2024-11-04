@@ -33,7 +33,8 @@ export class Chat {
     }
 
     addQuestion(text) {
-        let inputChat = this.app.ui.question();
+        const date = new Date();
+        const inputChat = this.app.ui.question();
         this.app.ui.chatSection.addMenuItem(inputChat);
         text = this.app.utils.inputformat(text);
         inputChat.label.clutter_text.set_markup(
@@ -41,11 +42,12 @@ export class Chat {
         );
 
         // Add to chat
+        const userText = `[${date}] <b>${this.app.userSettings.USERNAME}:</b> ${text}`;
         this.app.chat.history.push({
             role: 'user',
             parts: [
                 {
-                    text,
+                    userText,
                 },
             ],
         });
@@ -81,11 +83,12 @@ export class Chat {
         }
 
         // Save history.json
+        const modelText = `<b>${this.app.userSettings.ASSIST_NAME}:</b> ${text}`;
         this.app.chat.history.push({
             role: 'model',
             parts: [
                 {
-                    text,
+                    modelText,
                 },
             ],
         });
@@ -135,11 +138,12 @@ export class Chat {
         }
 
         // Save history.json
+        const modelText = `<b>${this.app.userSettings.ASSIST_NAME}:</b> ${text}`;
         this.app.chat.history.push({
             role: 'model',
             parts: [
                 {
-                    text,
+                    modelText,
                 },
             ],
         });
