@@ -114,7 +114,7 @@ export class Chat {
         this.app.utils.scrollToBottom();
 
         // Extract code and tts from response
-        if (text === '...' && text === null) {
+        if (text === '...' || text === null) {
             return;
         }
 
