@@ -162,7 +162,9 @@ export class UI {
             style_class: 'input-chat',
             can_focus: false,
         });
-        chat.label.clutter_text.halign = St.Align.START;
+        let scolor = chat.label.clutter_text.get_selected_text_color();
+        this.app.log('Selection Color ' + scolor);
+        chat.label.clutter_text.set_line_alignment(0);
         chat.label.clutter_text.reactive = true;
         chat.label.clutter_text.selectable = true;
         chat.label.clutter_text.hover = true;
@@ -175,7 +177,7 @@ export class UI {
             style_class: 'input-chat',
             can_focus: false,
         });
-        inputChat.label.clutter_text.halign = St.Align.START;
+        inputChat.label.clutter_text.set_max_length(50);
         inputChat.label.clutter_text.reactive = true;
         inputChat.label.clutter_text.selectable = true;
         inputChat.label.clutter_text.hover = true;
@@ -189,7 +191,7 @@ export class UI {
             style_class: 'response-chat',
             can_focus: false,
         });
-        responseChat.label.clutter_text.halign = St.Align.START;
+        responseChat.label.clutter_text.set_max_length(50);
         responseChat.label.clutter_text.reactive = true;
         responseChat.label.clutter_text.selectable = true;
         responseChat.label.clutter_text.hover = true;
