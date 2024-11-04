@@ -56,9 +56,9 @@ export class Chat {
     }
 
     editResponse(text) {
-        text = this.app.utils.insertLineBreaks(text);
+        const formatedText = this.app.utils.insertLineBreaks(text);
         this.app.ui.responseChat.label.clutter_text.set_markup(
-            `<b>${this.app.userSettings.ASSIST_NAME}:</b> ${text}`,
+            `<b>${this.app.userSettings.ASSIST_NAME}:</b> ${formatedText}`,
         );
         this.app.utils.scrollToBottom();
         this.app.ui.searchEntry.clutter_text.reactive = true;
@@ -99,9 +99,9 @@ export class Chat {
         this.app.ui.chatSection.addMenuItem(responseChat);
         this.app.ui.chatSection.addMenuItem(copyButton);
         this.app.ui.chatSection.addMenuItem(this.app.ui.newSeparator);
-        text = this.app.utils.insertLineBreaks(text);
+        const formatedText = this.app.utils.insertLineBreaks(text);
         responseChat.label.clutter_text.set_markup(
-            `<b>${this.app.userSettings.ASSIST_NAME}:</b> ${text}`,
+            `<b>${this.app.userSettings.ASSIST_NAME}:</b> ${formatedText}`,
         );
         this.app.ui.responseChat = responseChat;
 
