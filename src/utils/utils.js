@@ -182,7 +182,14 @@ export class Utils {
             role: 'user',
             parts: [
                 {
-                    text: _('Hi, who are you?'),
+                    text:
+                        _('Hi, I am ') +
+                        this.app.userSettings.USERNAME +
+                        '. ' +
+                        _('I am from') +
+                        this.app.userSettings.LOCATION +
+                        '. ' +
+                        _('Who are you?'),
                 },
             ],
         });
