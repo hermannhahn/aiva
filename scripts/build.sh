@@ -43,6 +43,18 @@ function compile_translations() {
 	echo "Translations compiled."
 }
 
+function create_translations() {
+	echo "Creating translations..."
+
+	xgettext -k_ -kN_ -o po/messages.pot *.js
+	for LANG in en-US de-DE fr-FR it-IT es-ES pt-BR; do
+		mkdir -p po/"$LANG"/LC_MESSAGES
+		msgfmt -o po/"$LANG"/LC_MESSAGES/messages.mo po/"$LANG"/LC_MESSAGES/messages.po
+	done
+
+	echo "Translations created."
+}
+
 function build_extension_package() {
 	# Compile TypeScript files, if used
 	if [ "$USING_TYPESCRIPT" = "true" ]; then
@@ -91,6 +103,8 @@ function build_extension_package() {
 		else
 			echo "WARNING: gettext isn't installed. Skipping compilation of translations..."
 		fi
+	else
+		create_translations
 	fi
 
 	# Compile resources, if there are any
