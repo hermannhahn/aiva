@@ -62,6 +62,7 @@ class AivaSettings {
         const howToButtonApiKey = new Gtk.LinkButton({
             label: _('How to get API key?'),
             uri: 'https://github.com/wwardaww/gnome-gemini-ai?tab=readme-ov-file#using-gemini-api-key',
+            halign: Gtk.Align.START,
         });
 
         // AZURE API KEY
@@ -75,6 +76,7 @@ class AivaSettings {
         const howToButtonAzure = new Gtk.LinkButton({
             label: _('How to get API key?'),
             uri: 'https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/get-started-speech-to-text',
+            halign: Gtk.Align.START,
         });
 
         // AZURE REGION
