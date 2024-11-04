@@ -266,19 +266,18 @@ export class Utils {
                 let [, contents] = file.load_contents(null);
                 this.app.log('Contents: ' + contents);
                 // Parse JSON
-                let chatHistory = JSON.parse(contents);
-                this.app.log('chatHistory: ' + chatHistory);
+                // let chatHistory = JSON.parse(contents);
                 this.app.log(
                     `History loaded from: ${this.app.userSettings.HISTORY_FILE}`,
                 );
                 // Reset chatHistory if RECURSIVE_TALK is disabled
                 if (this.app.userSettings.RECURSIVE_TALK === false) {
-                    chatHistory = [];
+                    contents = [];
                     this.app.log(
                         `History reset to empty array: ${this.app.userSettings.HISTORY_FILE}`,
                     );
                 }
-                return chatHistory;
+                return contents;
             } catch (e) {
                 logError(
                     e,
