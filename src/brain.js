@@ -49,10 +49,9 @@ HELP
         }
     }
 
-    _voiceCommandInterpreter(
-        text,
-        maxWords = 10,
-        activationWords = [
+    _activationWord(text) {
+        const maxWords = 10;
+        const activationWords = [
             _('open'),
             _('start'),
             _('launch'),
@@ -68,11 +67,7 @@ HELP
             _('search'),
             _('find'),
             _('read'),
-        ],
-    ) {
-        // Converter para minúsculas apenas uma vez
-        text = text.toLowerCase();
-
+        ];
         // Dividir o texto em palavras e pegar as primeiras 'maxWords'
         const words = text.split(/\s+/).slice(0, maxWords);
         const getActivationWord = () => {
@@ -83,42 +78,69 @@ HELP
             }
             return false;
         };
-        const activationWordInText = getActivationWord();
+        return getActivationWord();
+    }
+
+    _getSoftwareName(text) {
+        // Get software name
+        const softwareOptions = [
+            'google',
+            'chrome',
+            'firefox',
+            'youtube',
+            'vscode',
+            'code editor',
+        ];
+
+        // Check if software name is in softwareOptions
+        const maxWords = 10;
+        const words = text.split(/\s+/).slice(0, maxWords);
+        const softwareName = words.find((word) =>
+            softwareOptions.includes(word),
+        );
+        return softwareName;
+    }
+
+    _runSoftware(software) {
+        switch (software) {
+            case 'google':
+                this.app.utils.executeCommand('google-chrome');
+                break;
+            case 'chrome':
+                this.app.utils.executeCommand('google-chrome');
+                break;
+            case 'firefox':
+                this.app.utils.executeCommand('firefox');
+                break;
+            case 'youtube':
+                this.app.utils.executeCommand('firefox youtube.com');
+                break;
+            case 'vscode':
+                this.app.utils.executeCommand('code');
+                break;
+            case 'code editor':
+                this.app.utils.executeCommand('code');
+                break;
+            default:
+                this.app.log('Software not found');
+                break;
+        }
+    }
+
+    _voiceCommandInterpreter(text) {
+        // Converter para minúsculas apenas uma vez
+        text = text.toLowerCase();
+
+        const activationWordInText = this.activationWord(text);
 
         // Verificar se a palavra de ativação está no texto
         if (activationWordInText) {
             // If command is open
             if (activationWordInText === _('open')) {
-                // Get software name
-                const softwareOptions = [
-                    'google',
-                    'chrome',
-                    'firefox',
-                    'youtube',
-                    'vscode',
-                    'code editor',
-                ];
-
-                // Check if software name is in softwareOptions
-                const softwareName = words.find((word) =>
-                    softwareOptions.includes(word),
-                );
+                const softwareName = this._getSoftwareName(text);
 
                 if (softwareName) {
-                    if (
-                        softwareName === 'google' ||
-                        softwareName === 'chrome'
-                    ) {
-                        this.app.log('Software to open: ' + softwareName);
-                    } else if (softwareName === 'youtube') {
-                        this.app.log('Software to open: ' + softwareName);
-                    } else if (softwareName === 'vscode') {
-                        this.app.log('Software to open: ' + softwareName);
-                    } else if (softwareName === 'code editor') {
-                        this.app.log('Software to open: ' + softwareName);
-                    } else {
-                        this.app.log('Software not found: ' + softwareName);
-                    }
+                    this._runSoftware(softwareName);
                 } else {
                     this.app.log('Software not found');
                 }
