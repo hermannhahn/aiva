@@ -11,6 +11,8 @@
     "build": "./scripts/build.sh",
     "build:dev": "./scripts/build.sh --unsafe-reload",
     "build:install": "./scripts/build.sh --install",
+    "translate": "./scripts/translate.sh",
+    "translate:update": "./scripts/translate.sh update",
     "check:lint": "eslint src/**/*.js",
     "check:format": "prettier --check src/**/*.js"
   },
