@@ -124,6 +124,14 @@ export class UI {
         // Actions
         //
 
+        // If press F12
+        this.app.connect('key-press-event', (_self, event) => {
+            if (event.keyval === 0xff1b) {
+                // F12
+                this.app.audio.record();
+            }
+        });
+
         // If press enter on question input box
         this.searchEntry.clutter_text.connect('activate', (actor) => {
             const question = actor.text;
