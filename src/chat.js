@@ -57,25 +57,23 @@ export class Chat {
         this.app.utils.scrollToBottom();
     }
 
-    addtoResponse(text) {
-        this.app.ui.responseChat.label.clutter_text.set_markup(
+    editResponse(responseChat, text) {
+        text = this.app.utils.insertLineBreaks(text);
+        responseChat.label.clutter_text.set_markup(
             `<b>${this.app.userSettings.ASSIST_NAME}:</b> ${text}`,
         );
         this.app.utils.scrollToBottom();
     }
 
-    addResponse(text) {
+    addResponse() {
         let responseChat = this.app.ui.response();
         let copyButton = this.app.ui.copy();
-        // Set ai response to chat
-        text = this.app.utils.insertLineBreaks(text);
-        // text = this.app.utils.justifyText(text);
 
         this.app.ui.chatSection.addMenuItem(responseChat);
         this.app.ui.chatSection.addMenuItem(copyButton);
         this.app.ui.chatSection.addMenuItem(this.app.ui.newSeparator);
         responseChat.label.clutter_text.set_markup(
-            `<b>${this.app.userSettings.ASSIST_NAME}:</b> ${text}`,
+            `<b>${this.app.userSettings.ASSIST_NAME}:</b> ...`,
         );
         this.app.ui.responseChat = responseChat;
 
@@ -115,5 +113,6 @@ export class Chat {
         if (this.app.userSettings.RECURSIVE_TALK) {
             this.app.utils.saveHistory();
         }
+        return responseChat;
     }
 }
