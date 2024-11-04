@@ -164,6 +164,7 @@ export class UI {
         });
         let scolor = chat.label.clutter_text.get_selected_text_color();
         this.app.log('Selection Color ' + scolor);
+        console.log('Selection Color ' + scolor);
         chat.label.clutter_text.reactive = true;
         chat.label.clutter_text.selectable = true;
         chat.label.clutter_text.hover = true;
