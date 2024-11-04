@@ -9,7 +9,7 @@ import {
 export default class ClipboardIndicatorPreferences extends ExtensionPreferences {
     fillPreferencesWindow(window) {
         window._settings = this.getSettings();
-        const settingsUI = new GeminiSettings(window._settings);
+        const settingsUI = new AivaSettings(window._settings);
         const page = new Adw.PreferencesPage();
         page.add(settingsUI.ui);
         // Set window size to 800x600
@@ -18,7 +18,7 @@ export default class ClipboardIndicatorPreferences extends ExtensionPreferences 
     }
 }
 
-class GeminiSettings {
+class AivaSettings {
     constructor(schema) {
         this.schema = schema;
         this.ui = new Adw.PreferencesGroup({title: _('Settings:')});
