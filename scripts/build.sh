@@ -109,7 +109,16 @@ function build_extension_package() {
 			echo "WARNING: gettext isn't installed. Skipping compilation of translations..."
 		fi
 	else
-		create_translations
+		if command -v xgettext &> /dev/null; then
+			create_translations
+			if command -v msgfmt &> /dev/null; then
+				compile_translations
+			else
+				echo "WARNING: gettext isn't installed. Skipping compilation of translations..."
+			fi
+		else
+			echo "WARNING: xgettext isn't installed. Skipping creation and compilation of translations..."
+		fi
 	fi
 
 	# Compile resources, if there are any
