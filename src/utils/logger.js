@@ -11,7 +11,7 @@ export class Logger {
      * @param {*} message
      */
     log(message) {
-        if (this.debug === true) {
+        if (this.app.logger.debug === true) {
             if (message) {
                 console.log(`[AIVA] ${message}`);
             }
@@ -23,7 +23,7 @@ export class Logger {
      * @param {*} message
      */
     logError(message) {
-        if (this.debug === true) {
+        if (this.app.logger.debug === true) {
             if (message) {
                 console.log(`[AIVA][ERROR] ${message}`);
             }
