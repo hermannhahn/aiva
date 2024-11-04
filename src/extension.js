@@ -56,7 +56,6 @@ const Aiva = GObject.registerClass(
          * @description fetch settings
          */
         _fetchSettings() {
-            this.log('Fetching settings...');
             // extension directory
             const EXT_DIR = GLib.build_filenamev([
                 GLib.get_home_dir(),
@@ -68,7 +67,6 @@ const Aiva = GObject.registerClass(
             ]);
             // extension settings
             const {settings} = this.extension;
-            this.log('Extension settings loaded.');
             // user settings
             this.userSettings = {
                 ASSIST_NAME: settings.get_string('assist-name'),
@@ -85,15 +83,16 @@ const Aiva = GObject.registerClass(
                 USERNAME: GLib.get_real_name(),
             };
             this.afterTune = null;
-            this.log('User settings loaded.');
-            this.log('All Settings fetched.');
         }
 
         /**
          * @description create instances
          */
         _createInstances() {
-            this.log('[AIVA] Creating instances...');
+            /**
+             * logger
+             */
+            this.logger = new Logger(DEBUG);
 
             /**
              * response
@@ -129,8 +128,6 @@ const Aiva = GObject.registerClass(
              *
              */
             this.brain = new Brain(this);
-
-            this.log('All instances loaded.');
         }
 
         /**
@@ -139,13 +136,7 @@ const Aiva = GObject.registerClass(
          * @description init extension
          */
         _init(extension) {
-            /**
-             * logger
-             */
-            const logger = new Logger(DEBUG);
-            this.logger = logger;
-
-            this.log('Initializing extension...');
+            console.log('[AIVA] Initializing extension...');
 
             // initialize extension
             super._init(0.0, _('AIVA'));
@@ -157,22 +148,29 @@ const Aiva = GObject.registerClass(
 
             // load settings
             this._loadSettings();
+            console.log('[AIVA] Settings loaded.');
 
             // create instances
+            console.log('[AIVA] Creating instances...');
             this._createInstances();
 
             // open settings if gemini api key is not configured
+            console.log('[AIVA] Checking API key...');
             if (this.userSettings.GEMINI_API_KEY === '') {
+                console.log('[AIVA] API key not configured.');
                 this.openSettings();
             }
+            console.log('[AIVA] API key configured.');
 
             // initialize ui
+            console.log('[AIVA] Initializing UI...');
             this.ui.init();
 
             // initialize chat
+            console.log('[AIVA] Initializing chat...');
             this.chat.init();
 
-            this.log('Extension initialized.');
+            console.log('[AIVA] Extension initialized.');
         }
 
         /**
