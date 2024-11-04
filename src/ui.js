@@ -156,6 +156,18 @@ export class UI {
         });
     }
 
+    chat() {
+        // Question
+        let chat = new PopupMenu.PopupMenuItem('', {
+            style_class: 'input-chat',
+            can_focus: false,
+        });
+        chat.label.clutter_text.reactive = true;
+        chat.label.clutter_text.selectable = true;
+        chat.label.clutter_text.hover = true;
+        return chat;
+    }
+
     question() {
         // Question
         let inputChat = new PopupMenu.PopupMenuItem('', {
