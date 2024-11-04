@@ -1,23 +1,10 @@
 import Gtk from 'gi://Gtk';
 import Adw from 'gi://Adw';
 
-// import {ExtensionPreferences} from 'resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js';
-
-const Gettext = imports.gettext;
-const extensionUtils = imports.misc.extensionUtils;
-const ExtensionPreferences =
-    imports.misc.extensionUtils.getCurrentExtension().imports.preferences
-        .ExtensionPreferences;
-
-const DOMAIN = 'clipboard_indicator'; // Substitua pelo domínio real da sua extensão
-const _ = Gettext.gettext;
-// const ngettext = Gettext.ngettext;
-
-// Vincule o domínio ao caminho dos arquivos de tradução
-Gettext.bindtextdomain(
-    DOMAIN,
-    extensionUtils.getCurrentExtension().path + '/locale',
-);
+import {
+    ExtensionPreferences,
+    gettext as _,
+} from 'resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js';
 
 export default class ClipboardIndicatorPreferences extends ExtensionPreferences {
     fillPreferencesWindow(window) {
