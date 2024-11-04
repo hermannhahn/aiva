@@ -8,7 +8,8 @@
 # Main script starts here #
 ###########################
 
-$UPDATE=$1
+# Get command line arguments
+UPDATE=$1
 
 # If UPDATE = 'update'
 if [ "$UPDATE" = "update" ]; then
