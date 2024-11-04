@@ -264,20 +264,24 @@ export class Utils {
                     this.app.userSettings.HISTORY_FILE,
                 );
                 let [, contents] = file.load_contents(null);
-                this.app.log('Contents: ' + contents);
+
+                // Decodifica contents de Uint8Array para string
+                let decodedContents = new TextDecoder().decode(contents);
+
                 // Parse JSON
-                // let chatHistory = JSON.parse(contents);
+                let chatHistory = JSON.parse(decodedContents);
                 this.app.log(
                     `History loaded from: ${this.app.userSettings.HISTORY_FILE}`,
                 );
+
                 // Reset chatHistory if RECURSIVE_TALK is disabled
                 if (this.app.userSettings.RECURSIVE_TALK === false) {
-                    contents = [];
+                    chatHistory = [];
                     this.app.log(
                         `History reset to empty array: ${this.app.userSettings.HISTORY_FILE}`,
                     );
                 }
-                return contents;
+                return chatHistory;
             } catch (e) {
                 logError(
                     e,
