@@ -61,7 +61,7 @@ export class Chat {
         let copyButton = this.app.ui.copy();
         // Set ai response to chat
         text = this.app.utils.insertLineBreaks(text);
-        text = this.app.utils.justifyText(text);
+        // text = this.app.utils.justifyText(text);
 
         this.app.ui.chatSection.addMenuItem(responseChat);
         this.app.ui.chatSection.addMenuItem(copyButton);
