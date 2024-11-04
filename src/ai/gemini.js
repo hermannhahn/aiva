@@ -26,6 +26,7 @@ export class GoogleGemini {
         }
 
         this.app.chat.addResponse('...');
+        this.app.ui.searchEntry.clutter_text.reactive = false;
 
         try {
             this.app.log('Getting response...');
