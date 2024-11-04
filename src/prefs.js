@@ -1,10 +1,13 @@
 import Gtk from 'gi://Gtk';
 import Adw from 'gi://Adw';
 
-import {ExtensionPreferences} from 'resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js';
+// import {ExtensionPreferences} from 'resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js';
 
 const Gettext = imports.gettext;
 const extensionUtils = imports.misc.extensionUtils;
+const ExtensionPreferences =
+    imports.misc.extensionUtils.getCurrentExtension().imports.preferences
+        .ExtensionPreferences;
 
 const DOMAIN = 'clipboard_indicator'; // Substitua pelo domínio real da sua extensão
 const _ = Gettext.gettext;
