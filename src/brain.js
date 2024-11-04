@@ -131,7 +131,7 @@ HELP
         // Converter para minúsculas apenas uma vez
         text = text.toLowerCase();
 
-        const activationWordInText = this.activationWord(text);
+        const activationWordInText = this._activationWord(text);
 
         // Verificar se a palavra de ativação está no texto
         if (activationWordInText) {
