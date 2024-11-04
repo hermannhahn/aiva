@@ -186,7 +186,7 @@ export class Utils {
                         _('Hi, I am ') +
                         this.app.userSettings.USERNAME +
                         '. ' +
-                        _('I am from') +
+                        _('I am from ') +
                         this.app.userSettings.LOCATION +
                         '. ' +
                         _('Who are you?'),
