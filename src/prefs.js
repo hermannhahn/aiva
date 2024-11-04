@@ -776,6 +776,130 @@ class AivaSettings {
                 return 'Suas preferências foram salvas';
             }
         }
+        if (lang === 'es') {
+            if (text === 'Settings:') {
+                return 'Preferencias:';
+            }
+            if (text === 'Gemini API Key') {
+                return 'Clave de API Gemini';
+            }
+            if (text === 'How to get API key?') {
+                return '¿Cómo obtener la clave de API?';
+            }
+            if (text === 'Azure Speech API Key') {
+                return 'Clave de API de voz de Azure';
+            }
+            if (text === 'How to get API key?') {
+                return '¿Cómo obtener la clave de API?';
+            }
+            if (text === 'Azure Speech Region') {
+                return 'Región de la API de voz de Azure';
+            }
+            if (text === 'e.g.: eastus, westus, ...') {
+                return 'p. ej.: eastus, westus, ...';
+            }
+            if (text === 'Select Language') {
+                return 'Seleccionar idioma';
+            }
+            if (text === 'Select Voice') {
+                return 'Seleccionar voz';
+            }
+            if (text === 'Assistant Name') {
+                return 'Nombre del asistente';
+            }
+            if (text === 'Remember talk history') {
+                return 'Recordar historial de conversaciones';
+            }
+            if (text === 'Save') {
+                return 'Guardar';
+            }
+            if (text === 'Your preferences have been saved') {
+                return 'Sus preferencias se han guardado';
+            }
+        }
+        if (lang === 'fr') {
+            if (text === 'Settings:') {
+                return 'Paramètres:';
+            }
+            if (text === 'Gemini API Key') {
+                return 'Clé API Gemini';
+            }
+            if (text === 'How to get API key?') {
+                return 'Comment obtenir une clé API ?';
+            }
+            if (text === 'Azure Speech API Key') {
+                return 'Clé API Azure Speech';
+            }
+            if (text === 'How to get API key?') {
+                return 'Comment obtenir une clé API ?';
+            }
+            if (text === 'Azure Speech Region') {
+                return 'Région de l’API Azure Speech';
+            }
+            if (text === 'e.g.: eastus, westus, ...') {
+                return 'p. ex. : estus, ouestus, etc.';
+            }
+            if (text === 'Select Language') {
+                return 'Sélectionner la langue';
+            }
+            if (text === 'Select Voice') {
+                return 'Sélectionner la voix';
+            }
+            if (text === 'Assistant Name') {
+                return 'Nom de l’assistant';
+            }
+            if (text === 'Remember talk history') {
+                return 'Se souvenir de l’historique des conversations';
+            }
+            if (text === 'Save') {
+                return 'Enregistrer';
+            }
+            if (text === 'Your preferences have been saved') {
+                return 'Vos préférences ont été enregistrées';
+            }
+        }
+        if (lang === 'de-DE') {
+            if (text === 'Settings:') {
+                return 'Einstellungen:';
+            }
+            if (text === 'Gemini API Key') {
+                return 'Gemini-API-Schlüssel';
+            }
+            if (text === 'How to get API key?') {
+                return 'Wie API-Schlüssel erhalten?';
+            }
+            if (text === 'Azure Speech API Key') {
+                return 'Azure Speech-API-Schlüssel';
+            }
+            if (text === 'How to get API key?') {
+                return 'Wie API-Schlüssel erhalten?';
+            }
+            if (text === 'Azure Speech Region') {
+                return 'Azure Speech-API-Region';
+            }
+            if (text === 'e.g.: eastus, westus, ...') {
+                return 'z. B.: eastus, westus, ...';
+            }
+            if (text === 'Select Language') {
+                return 'Sprache auswählen';
+            }
+            if (text === 'Select Voice') {
+                return 'Stimme auswählen';
+            }
+            if (text === 'Assistant Name') {
+                return 'Name des Assistenten';
+            }
+            if (text === 'Remember talk history') {
+                return 'Konversationsverlauf speichern';
+            }
+            if (text === 'Save') {
+                return 'Speichern';
+            }
+            if (text === 'Your preferences have been saved') {
+                return 'Ihre Einstellungen wurden gespeichert';
+            }
+        }
+
         return text;
     }
 }
