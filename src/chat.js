@@ -28,6 +28,8 @@ export class Chat {
         chat.label.clutter_text.set_markup(
             `<b>${this.app.userSettings.ASSIST_NAME}:</b> ${text}`,
         );
+        this.app.ui.searchEntry.clutter_text.reactive = true;
+        this.app.utils.scrollToBottom();
     }
 
     addQuestion(text) {
@@ -67,6 +69,7 @@ export class Chat {
         responseChat.label.clutter_text.set_markup(
             `<b>${this.app.userSettings.ASSIST_NAME}:</b> ${text}`,
         );
+        this.app.ui.searchEntry.clutter_text.reactive = true;
         // add copy button
         copyButton.connect('activate', (_self) => {
             this.app.utils.copySelectedText(responseChat, copyButton);
