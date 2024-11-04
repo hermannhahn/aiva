@@ -75,12 +75,13 @@
     background-color: rgb(42, 42, 42);
 }
 .chat-section {
-    overflow-y: scroll;
+    overflow-y: auto;
     color: rgb(243, 232, 212);
     text-wrap: wrap;
     word-wrap: break-word;
     padding-left: 10px;
     padding-right: 10px;
+    padding-bottom: 10px;
 }
 .chat-section::selection {
     background-color: rgb(42, 42, 42);
