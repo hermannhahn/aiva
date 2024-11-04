@@ -138,6 +138,7 @@ export class GoogleGemini {
      * build body for request
      */
     buildBody() {
+        console.log(this.app.chat.history);
         const stringfiedHistory = JSON.stringify(this.app.chat.history);
         console.log(stringfiedHistory);
         return `{"contents":${stringfiedHistory}}`;
