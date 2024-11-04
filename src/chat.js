@@ -22,6 +22,14 @@ export class Chat {
         this.app.log('Chat initialized.');
     }
 
+    add(text) {
+        let chat = this.app.ui.chat();
+        this.app.ui.chatSection.addMenuItem(chat);
+        chat.label.clutter_text.set_markup(
+            `<b>${this.app.userSettings.ASSIST_NAME}:</b> ${text}`,
+        );
+    }
+
     addQuestion(text) {
         let inputChat = this.app.ui.question();
         this.app.ui.chatSection.addMenuItem(inputChat);
