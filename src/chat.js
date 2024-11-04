@@ -134,12 +134,11 @@ export class Chat {
         }
 
         // Save history.json
-        const modelText = `<b>${this.app.userSettings.ASSIST_NAME}:</b> ${text}`;
         this.app.chat.history.push({
             role: 'model',
             parts: [
                 {
-                    modelText,
+                    text,
                 },
             ],
         });
