@@ -53,7 +53,6 @@ export class Chat {
         if (this.app.userSettings.RECURSIVE_TALK) {
             this.app.utils.saveHistory();
         }
-        this.app.ui.searchEntry.clutter_text.reactive = false;
         this.app.utils.scrollToBottom();
     }
 
