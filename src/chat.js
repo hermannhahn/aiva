@@ -39,7 +39,6 @@ export class Chat {
         inputChat.label.clutter_text.set_markup(
             `<b>${this.app.userSettings.USERNAME}:</b> ${text}`,
         );
-        this.app.utils.scrollToBottom();
 
         // Add to chat
         this.app.chat.history.push({
@@ -54,6 +53,8 @@ export class Chat {
         if (this.app.userSettings.RECURSIVE_TALK) {
             this.app.utils.saveHistory();
         }
+        this.app.ui.searchEntry.clutter_text.reactive = false;
+        this.app.utils.scrollToBottom();
     }
 
     addResponse(text) {
@@ -105,5 +106,6 @@ export class Chat {
         if (this.app.userSettings.RECURSIVE_TALK) {
             this.app.utils.saveHistory();
         }
+        this.responseChat = responseChat;
     }
 }
