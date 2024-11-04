@@ -25,8 +25,7 @@ export class GoogleGemini {
             this.destroyLoop();
         }
 
-        // Scroll down
-        this.app.utils.scrollToBottom();
+        this.app.chat.addResponse('...');
 
         try {
             this.app.log('Getting response...');
@@ -52,7 +51,7 @@ export class GoogleGemini {
                     let res = JSON.parse(response);
                     if (res.error?.code !== 401 && res.error !== undefined) {
                         this.app.logError(res.error);
-                        this.app.chat.addResponse(response);
+                        this.app.chat.addToResponse(response);
                         return;
                     }
                     let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
