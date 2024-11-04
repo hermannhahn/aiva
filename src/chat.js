@@ -57,6 +57,7 @@ export class Chat {
     }
 
     editResponse(text) {
+        text = this.app.utils.insertLineBreaks(text);
         this.app.ui.responseChat.label.clutter_text.set_markup(
             `<b>${this.app.userSettings.ASSIST_NAME}:</b> ${text}`,
         );
