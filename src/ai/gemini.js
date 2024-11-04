@@ -135,19 +135,10 @@ export class GoogleGemini {
 
     /**
      *
-     * @param {*} input
-     * @returns string
-     *
      * build body for request
      */
-    buildBody(input) {
-        const stringfiedHistory = JSON.stringify([
-            ...this.app.chat.recursiveHistory,
-            {
-                role: 'user',
-                parts: [{text: input}],
-            },
-        ]);
+    buildBody() {
+        const stringfiedHistory = JSON.stringify();
         return `{"contents":${stringfiedHistory}}`;
     }
 }
