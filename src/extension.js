@@ -143,8 +143,7 @@ const Aiva = GObject.registerClass(
              * logger
              */
             const logger = new Logger(DEBUG);
-            this.log = logger.log;
-            this.logError = logger.logError;
+            this.logger = logger;
 
             this.log('Initializing extension...');
 
@@ -203,6 +202,24 @@ const Aiva = GObject.registerClass(
             this.destroyLoop();
             super.destroy();
             this.log('Extension destroyed.');
+        }
+
+        /**
+         * @param {*} message
+         *
+         * logger
+         */
+        log(message) {
+            this.logger.log(message);
+        }
+
+        /**
+         * @param {*} message
+         *
+         * log error
+         */
+        logError(message) {
+            this.logger.logError(message);
         }
     },
 );
