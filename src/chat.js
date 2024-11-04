@@ -63,26 +63,7 @@ export class Chat {
             `<b>${this.app.userSettings.ASSIST_NAME}:</b> ${text}`,
         );
         this.app.utils.scrollToBottom();
-    }
-
-    addResponse() {
-        let responseChat = this.app.ui.response();
-        let copyButton = this.app.ui.copy();
-
-        this.app.ui.chatSection.addMenuItem(responseChat);
-        this.app.ui.chatSection.addMenuItem(copyButton);
-        this.app.ui.chatSection.addMenuItem(this.app.ui.newSeparator);
-        responseChat.label.clutter_text.set_markup(
-            `<b>${this.app.userSettings.ASSIST_NAME}:</b> ...`,
-        );
-        this.app.ui.responseChat = responseChat;
-
         this.app.ui.searchEntry.clutter_text.reactive = true;
-        // add copy button
-        copyButton.connect('activate', (_self) => {
-            this.app.utils.copySelectedText(responseChat, copyButton);
-        });
-        this.app.utils.scrollToBottom();
 
         // Extract code and tts from response
         let answer = this.app.utils.extractCodeAndTTS(text);
@@ -113,6 +94,24 @@ export class Chat {
         if (this.app.userSettings.RECURSIVE_TALK) {
             this.app.utils.saveHistory();
         }
+    }
+
+    addResponse() {
+        let responseChat = this.app.ui.response();
+        let copyButton = this.app.ui.copy();
+
+        this.app.ui.chatSection.addMenuItem(responseChat);
+        this.app.ui.chatSection.addMenuItem(copyButton);
+        this.app.ui.chatSection.addMenuItem(this.app.ui.newSeparator);
+        responseChat.label.clutter_text.set_markup(
+            `<b>${this.app.userSettings.ASSIST_NAME}:</b> ...`,
+        );
+        // add copy button
+        copyButton.connect('activate', (_self) => {
+            this.app.utils.copySelectedText(responseChat, copyButton);
+        });
+        this.app.utils.scrollToBottom();
+        this.app.ui.responseChat = responseChat;
         return responseChat;
     }
 }
