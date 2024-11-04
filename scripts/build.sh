@@ -34,7 +34,7 @@ function compile_resources() {
 function compile_translations() {
 	echo "Compiling translations..."
 
-	for PO_FILE in po/*.po; do
+	for PO_FILE in $(find po/ -type f | grep ".po"); do
 		LANG=$(basename "$PO_FILE" .po)
 		mkdir -p "$JS_DIR/locale/$LANG/LC_MESSAGES"
 		msgfmt -c "$PO_FILE" -o "$JS_DIR/locale/$LANG/LC_MESSAGES/$UUID.mo"
@@ -50,8 +50,8 @@ function create_translations() {
 	for LANG in en-US de-DE fr-FR it-IT es-ES pt-BR; do
 		mkdir -p po/"$LANG"
 		mkdir -p po/"$LANG"/LC_MESSAGES
+		msgfmt -c po/messages.pot -o po/"$LANG"/LC_MESSAGES/$UUID.mo
 	done
-
 	echo "Translations created."
 }
 
