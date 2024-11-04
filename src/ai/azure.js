@@ -211,18 +211,18 @@ export class MicrosoftAzure {
                     if (response && response.DisplayText) {
                         let transcription = response.DisplayText;
                         this.app.log('Transcrição: ' + transcription);
-                        this.app.chat(transcription);
+                        this.app.chat.addQuestion(transcription);
                     } else {
                         this.app.log('Nenhuma transcrição encontrada.');
-                        this.app.chat('Transcribe error.');
+                        this.app.chat.addQuestion('Transcribe error.');
                     }
                 } else {
                     this.app.log('Erro na requisição: ' + stderr);
-                    this.app.chat(stderr);
+                    this.app.chat.addResponse(stderr);
                 }
             } catch (e) {
                 this.app.log('Erro ao processar resposta: ' + e.message);
-                this.app.chat(e.message);
+                this.app.chat.addResponse(e.message);
             }
         });
     }
