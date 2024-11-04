@@ -10,8 +10,10 @@ export class Brain {
         // this.app.response(question);
         if (this._isCommand(question)) {
             this._commandInterpreter(question);
+            this.app.ui.searchEntry.clutter_text.reactive = true;
         } else if (this._isVoiceCommand(question)) {
             this._voiceCommandInterpreter(question);
+            this.app.ui.searchEntry.clutter_text.reactive = true;
         } else {
             this.app.gemini.response(question);
         }
