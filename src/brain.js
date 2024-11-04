@@ -35,7 +35,7 @@ export class Brain {
     _commandInterpreter(text) {
         if (text.startsWith('/')) {
             if (text.startsWith('/help')) {
-                this.app.chat.help(text);
+                this.app.chat.help();
             }
 
             if (text.startsWith('/settings')) {
