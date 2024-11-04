@@ -1,7 +1,3 @@
-// DEBUG MODE
-const DEBUG = true;
-
-// Extension
 import St from 'gi://St';
 import GObject from 'gi://GObject';
 import Soup from 'gi://Soup';
@@ -15,7 +11,7 @@ import * as PanelMenu from 'resource:///org/gnome/shell/ui/panelMenu.js';
 import {Logger} from './utils/logger.js';
 
 // Logger
-const logger = new Logger(DEBUG);
+const logger = new Logger(true);
 const log = logger.log;
 const logError = logger.logError;
 
