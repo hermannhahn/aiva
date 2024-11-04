@@ -136,6 +136,18 @@ const Aiva = GObject.registerClass(
         _init(extension) {
             console.log('[AIVA] Initializing extension...');
 
+            // set gettext language
+            GLib.setenv(
+                'LANGUAGE',
+                this.userSettings.AZURE_SPEECH_LANGUAGE,
+                true,
+            );
+            GLib.setenv(
+                'LC_ALL',
+                this.userSettings.AZURE_SPEECH_LANGUAGE,
+                true,
+            );
+
             // initialize extension
             super._init(0.0, _('AIVA'));
 
