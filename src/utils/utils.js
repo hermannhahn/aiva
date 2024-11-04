@@ -178,11 +178,13 @@ export class Utils {
 
     historyInitContent() {
         let history = [];
+        let date = new Date();
+        let userText = `[${date}] <b>${this.app.userSettings.USERNAME}:</b> Hi, who are you?`;
         history.push({
             role: 'user',
             parts: [
                 {
-                    text: _('Hi, who are you?'),
+                    userText,
                 },
             ],
         });
