@@ -1,7 +1,7 @@
 export class Logger {
-    constructor(debug) {
+    constructor(debug = true) {
         this.debug = debug;
-        if (debug) {
+        if (debug === true) {
             this.log('Debug mode enabled.');
         }
     }
@@ -11,8 +11,10 @@ export class Logger {
      * @param {*} message
      */
     log(message) {
-        if (this.debug && message) {
-            console.log(`[AIVA] ${message}`);
+        if (this.debug === true) {
+            if (message) {
+                console.log(`[AIVA] ${message}`);
+            }
         }
     }
 
@@ -21,8 +23,10 @@ export class Logger {
      * @param {*} message
      */
     logError(message) {
-        if (this.debug && message) {
-            console.log(`[AIVA][ERROR] ${message}`);
+        if (this.debug === true) {
+            if (message) {
+                console.log(`[AIVA][ERROR] ${message}`);
+            }
         }
     }
 }
