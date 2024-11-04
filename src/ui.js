@@ -162,6 +162,7 @@ export class UI {
             style_class: 'input-chat',
             can_focus: false,
         });
+        chat.label.clutter_text.halign = St.Align.START;
         chat.label.clutter_text.reactive = true;
         chat.label.clutter_text.selectable = true;
         chat.label.clutter_text.hover = true;
@@ -174,6 +175,7 @@ export class UI {
             style_class: 'input-chat',
             can_focus: false,
         });
+        inputChat.label.clutter_text.halign = St.Align.START;
         inputChat.label.clutter_text.reactive = true;
         inputChat.label.clutter_text.selectable = true;
         inputChat.label.clutter_text.hover = true;
@@ -187,6 +189,7 @@ export class UI {
             style_class: 'response-chat',
             can_focus: false,
         });
+        responseChat.label.clutter_text.halign = St.Align.START;
         responseChat.label.clutter_text.reactive = true;
         responseChat.label.clutter_text.selectable = true;
         responseChat.label.clutter_text.hover = true;
