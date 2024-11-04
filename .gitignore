@@ -41,8 +41,6 @@ __pycache__/
 *.pyo
 
 # Others
-*.gresource*
-*.shell-extension/
 dist/
 *.wav
 *.db
