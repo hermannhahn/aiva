@@ -32,15 +32,15 @@ function compile_resources() {
 }
 
 function compile_translations() {
-    echo "Compiling translations..."
+	echo "Compiling translations..."
 
-    for PO_FILE in $(find po/ -type f -name "*.po"); do
-        LANG=$(basename "$PO_FILE" .po)
-        mkdir -p "$JS_DIR/locale/$LANG/LC_MESSAGES"
-        msgfmt -c "$PO_FILE" -o "$JS_DIR/locale/$LANG/LC_MESSAGES/messages.mo"
-    done
+	for PO_FILE in po/*.po; do
+		LANG=$(basename "$PO_FILE" .po)
+		mkdir -p "$JS_DIR/locale/$LANG/LC_MESSAGES"
+		msgfmt -c "$PO_FILE" -o "$JS_DIR/locale/$LANG/LC_MESSAGES/$UUID.mo"
+	done
 
-    echo "Translations compiled."
+	echo "Translations compiled."
 }
 
 function create_translations() {
