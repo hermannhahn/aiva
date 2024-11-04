@@ -91,27 +91,25 @@ class GeminiSettings {
             halign: Gtk.Align.START,
         });
 
-        // AZURE LANGUAGE (ComboBoxText para seleção de língua)
+        // AZURE LANGUAGE (ComboBoxText) to lang options
         const labelLanguage = new Gtk.Label({
             label: _('Select Language'),
             halign: Gtk.Align.START,
         });
-
-        // Caixa de seleção (ComboBoxText) com opções de línguas
         const languageSelector = new Gtk.ComboBoxText();
         languageSelector.append('en-US', _('English'));
         languageSelector.append('pt-BR', _('Portuguese (Brazil)'));
         languageSelector.append('es', _('Spanish'));
         languageSelector.append('fr', _('French'));
 
-        // AZURE VOICE (ComboBoxText para seleção de voz)
+        // AZURE VOICE (ComboBoxText) to voice selection
         const labelVoice = new Gtk.Label({
             label: _('Select Voice'),
             halign: Gtk.Align.START,
         });
         const azureVoiceSelector = new Gtk.ComboBoxText();
 
-        // Mapeamento das opções de voz para cada linguagem
+        // Voice options
         const voiceOptions = {
             'en-US': [
                 {
@@ -390,7 +388,7 @@ class GeminiSettings {
                 },
                 {
                     voice: 'pt-BR-AntonioNeural',
-                    label: 'Antônio Neural',
+                    label: 'Antonio Neural',
                 },
                 {
                     voice: 'pt-BR-BrendaNeural',
@@ -406,7 +404,7 @@ class GeminiSettings {
                 },
                 {
                     voice: 'pt-BR-FabioNeural',
-                    label: 'Fábio Neural',
+                    label: 'Fabio Neural',
                 },
                 {
                     voice: 'pt-BR-GiovannaNeural',
@@ -418,7 +416,7 @@ class GeminiSettings {
                 },
                 {
                     voice: 'pt-BR-JulioNeural',
-                    label: 'Júlio Neural',
+                    label: 'Julio Neural',
                 },
                 {
                     voice: 'pt-BR-LeilaNeural',
@@ -426,7 +424,7 @@ class GeminiSettings {
                 },
                 {
                     voice: 'pt-BR-LeticiaNeural',
-                    label: 'Letícia Neural',
+                    label: 'Leticia Neural',
                 },
                 {
                     voice: 'pt-BR-ManuelaNeural',
@@ -442,7 +440,7 @@ class GeminiSettings {
                 },
                 {
                     voice: 'pt-BR-ValerioNeural',
-                    label: 'Valério Neural',
+                    label: 'Valerio Neural',
                 },
                 {
                     voice: 'pt-BR-YaraNeural',
@@ -450,7 +448,7 @@ class GeminiSettings {
                 },
                 {
                     voice: 'pt-BR-MacerioMultilingualNeural',
-                    label: 'Macério Multilingual Neural (1.4x)',
+                    label: 'Macerio Multilingual Neural (1.4x)',
                 },
                 {
                     voice: 'pt-BR-ThalitaMultilingualNeural',
@@ -464,7 +462,7 @@ class GeminiSettings {
                 },
                 {
                     voice: 'es-ES-AlvaroNeural',
-                    label: 'Álvaro Neural',
+                    label: 'Alvaro Neural',
                 },
                 {
                     voice: 'es-ES-AbrilNeural',
@@ -476,11 +474,11 @@ class GeminiSettings {
                 },
                 {
                     voice: 'es-ES-DarioNeural',
-                    label: 'Darío Neural',
+                    label: 'Dario Neural',
                 },
                 {
                     voice: 'es-ES-EliasNeural',
-                    label: 'Elías Neural',
+                    label: 'Elias Neural',
                 },
                 {
                     voice: 'es-ES-EstrellaNeural',
@@ -496,7 +494,7 @@ class GeminiSettings {
                 },
                 {
                     voice: 'es-ES-LiaNeural',
-                    label: 'Lía Neural',
+                    label: 'Lia Neural',
                 },
                 {
                     voice: 'es-ES-NilNeural',
@@ -504,7 +502,7 @@ class GeminiSettings {
                 },
                 {
                     voice: 'es-ES-SaulNeural',
-                    label: 'Saúl Neural',
+                    label: 'Saul Neural',
                 },
                 {
                     voice: 'es-ES-TeoNeural',
@@ -524,19 +522,19 @@ class GeminiSettings {
                 },
                 {
                     voice: 'es-ES-ArabellaMultilingualNeural',
-                    label: 'Arabella Multilingüe Neural (1.4x)',
+                    label: 'Arabella Multilingue Neural (1.4x)',
                 },
                 {
                     voice: 'es-ES-IsidoraMultilingualNeural',
-                    label: 'Isidora Multilingüe Neural (1.4x)',
+                    label: 'Isidora Multilingue Neural (1.4x)',
                 },
                 {
                     voice: 'es-ES-TristanMultilingualNeural',
-                    label: 'Tristan Multilingüe Neural (1.4x)',
+                    label: 'Tristan Multilingue Neural (1.4x)',
                 },
                 {
                     voice: 'es-ES-XimenaMultilingualNeural',
-                    label: 'Ximena Multilingüe Neural (1.4x)',
+                    label: 'Ximena Multilingue Neural (1.4x)',
                 },
             ],
             'fr-FR': [
@@ -558,7 +556,7 @@ class GeminiSettings {
                 },
                 {
                     voice: 'fr-FR-CelesteNeural',
-                    label: 'Céleste Neural',
+                    label: 'Celeste Neural',
                 },
                 {
                     voice: 'fr-FR-ClaudeNeural',
@@ -570,7 +568,7 @@ class GeminiSettings {
                 },
                 {
                     voice: 'fr-FR-EloiseNeural',
-                    label: 'Éloïse Neural',
+                    label: 'Eloise Neural',
                 },
                 {
                     voice: 'fr-FR-JacquelineNeural',
@@ -578,11 +576,11 @@ class GeminiSettings {
                 },
                 {
                     voice: 'fr-FR-JeromeNeural',
-                    label: 'Jérôme Neural',
+                    label: 'Jerome Neural',
                 },
                 {
                     voice: 'fr-FR-JosephineNeural',
-                    label: 'Joséphine Neural',
+                    label: 'Josephine Neural',
                 },
                 {
                     voice: 'fr-FR-MauriceNeural',
@@ -590,7 +588,7 @@ class GeminiSettings {
                 },
                 {
                     voice: 'fr-FR-RemyMultilingualNeural',
-                    label: 'Rémy Multilingue Neural (4x)',
+                    label: 'Remy Multilingue Neural (4x)',
                 },
                 {
                     voice: 'fr-FR-VivienneMultilingualNeural',
@@ -611,12 +609,12 @@ class GeminiSettings {
             ],
         };
 
-        // Função para atualizar as vozes com base na linguagem selecionada
+        // Update voice
         const updateVoices = (language) => {
-            azureVoiceSelector.remove_all(); // Limpa as opções atuais
+            azureVoiceSelector.remove_all();
             if (voiceOptions[language]) {
                 voiceOptions[language].forEach((option) => {
-                    azureVoiceSelector.append(option.voice, option.label); // Adiciona as novas opções
+                    azureVoiceSelector.append(option.voice, option.label);
                     if (option.voice === defaultVoice) {
                         azureVoiceSelector.set_active_id(option.voice);
                     }
@@ -624,13 +622,11 @@ class GeminiSettings {
             }
         };
 
-        // Atualiza as opções de voz quando a linguagem muda
+        // Update on change
         languageSelector.connect('changed', () => {
             const selectedLanguage = languageSelector.get_active_id();
-            updateVoices(selectedLanguage); // Chama a função para atualizar as vozes
+            updateVoices(selectedLanguage);
         });
-
-        // Inicializa o `azureVoiceSelector` com base na linguagem armazenada
         updateVoices(defaultLanguage);
 
         // AIVA Name
@@ -673,7 +669,7 @@ class GeminiSettings {
         assistName.set_text(defaultAssistName);
         historyButton.set_active(defaultLog);
 
-        // Adicionar eventos
+        // Actions
         save.connect('clicked', () => {
             this.schema.set_string(
                 'gemini-api-key',
@@ -688,14 +684,15 @@ class GeminiSettings {
                 azureRegion.get_buffer().get_text(),
             );
 
-            // Salva o valor selecionado da língua
+            // Save selected language
             const selectedLanguage = languageSelector.get_active_id();
             this.schema.set_string('azure-speech-language', selectedLanguage);
 
-            // Salva o valor selecionado da voz
+            // Save selected voice
             const selectedVoice = azureVoiceSelector.get_active_id();
             this.schema.set_string('azure-speech-voice', selectedVoice);
 
+            // Save history log
             this.schema.set_boolean('log-history', historyButton.state);
             this.schema.set_string(
                 'assist-name',
@@ -705,7 +702,7 @@ class GeminiSettings {
             statusLabel.set_markup(_('Your preferences have been saved'));
         });
 
-        // Adicionar elementos à grade
+        // Add to grid
         this.main.attach(apiKeyLabel, 0, 0, 1, 1);
         this.main.attach(apiKey, 2, 0, 2, 1);
         this.main.attach(howToButtonApiKey, 4, 0, 1, 1);
@@ -734,7 +731,7 @@ class GeminiSettings {
 
         this.main.attach(statusLabel, 1, 8, 3, 1);
 
-        // Adicionar a grade à página
+        // Add to main
         this.ui.add(this.main);
     }
 }

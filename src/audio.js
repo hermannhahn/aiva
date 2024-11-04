@@ -26,9 +26,9 @@ export class Audio {
             this.app.log('Playing audio... ' + audiofile);
             // Process sync, not async
             const process = GLib.spawn_async(
-                null, // pasta de trabalho
-                ['/bin/sh', '-c', `play ${audiofile}`], // comando e argumentos
-                null, // opções
+                null, // workspace folder
+                ['/bin/sh', '-c', `play ${audiofile}`], // commands and args
+                null, // options
                 GLib.SpawnFlags.SEARCH_PATH, // flags
                 null, // PID
             );
@@ -73,10 +73,10 @@ export class Audio {
         this.isRecording = true;
         this.app.log('Recording...');
 
-        // Definir o arquivo de saída no diretório da extensão
+        // Create temporary file for audio recording
         this.questionPath = 'gva_temp_audio_XXXXXX.wav';
 
-        // Pipeline GStreamer para capturar áudio do microfone e salvar como .wav
+        // Pipeline GStreamer
         this.pipeline = new Gio.Subprocess({
             argv: [
                 'gst-launch-1.0',
@@ -114,7 +114,7 @@ export class Audio {
         this.app.azure.transcribe(this.questionPath);
     }
 
-    // Função para converter arquivo de áudio em base64
+    // Convert audio
     encodeFileToBase64(filePath) {
         try {
             const file = Gio.File.new_for_path(filePath);

@@ -8,6 +8,10 @@
 # Main script starts here #
 ###########################
 
+# Build
+npm run build
+echo "Extension built."
+
 # Get version from package.json
 VERSION=$(jq -r .version package.json) # E.g. 1.0.0
 
