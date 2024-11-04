@@ -1,10 +1,7 @@
 import Gtk from 'gi://Gtk';
 import Adw from 'gi://Adw';
 
-import {
-    ExtensionPreferences,
-    gettext as _,
-} from 'resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js';
+import {ExtensionPreferences} from 'resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js';
 
 export default class ClipboardIndicatorPreferences extends ExtensionPreferences {
     fillPreferencesWindow(window) {
@@ -735,5 +732,50 @@ class AivaSettings {
 
         // Add to main
         this.ui.add(this.main);
+    }
+
+    translations(text, lang) {
+        if (lang === 'pt-BR') {
+            if (text === 'Settings:') {
+                return 'Preferências:';
+            }
+            if (text === 'Gemini API Key') {
+                return 'Chave da API Gemini';
+            }
+            if (text === 'How to get API key?') {
+                return 'Como obter a chave da API Gemini?';
+            }
+            if (text === 'Azure Speech API Key') {
+                return 'Chave da API Speech Azure';
+            }
+            if (text === 'How to get API key?') {
+                return 'Como obter a chave da API Speech Azure?';
+            }
+            if (text === 'Azure Speech Region') {
+                return 'Região da API Speech Azure';
+            }
+            if (text === 'e.g.: eastus, westus, ...') {
+                return 'Exemplo: eastus, westus, ...';
+            }
+            if (text === 'Select Language') {
+                return 'Selecione a língua';
+            }
+            if (text === 'Select Voice') {
+                return 'Selecione a voz';
+            }
+            if (text === 'Assistant Name') {
+                return 'Nome do assistente';
+            }
+            if (text === 'Remember talk history') {
+                return 'Lembrar conversas';
+            }
+            if (text === 'Save') {
+                return 'Salvar';
+            }
+            if (text === 'Your preferences have been saved') {
+                return 'Suas preferências foram salvas';
+            }
+        }
+        return text;
     }
 }
