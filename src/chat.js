@@ -84,10 +84,13 @@ export class Chat {
         this.app.utils.scrollToBottom();
 
         // Extract code and tts from response
-        let answer = this.app.utils.extractCodeAndTTS(text);
+        if (text === '...' && text === null) {
+            return;
+        }
 
         // Speech response
         this.app.log('Speech response...');
+        let answer = this.app.utils.extractCodeAndTTS(text);
         if (answer.tts !== null) {
             this.app.azure.tts(answer.tts);
         }
