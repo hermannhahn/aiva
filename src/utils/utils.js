@@ -221,7 +221,6 @@ export class Utils {
                 this.app.log(
                     `History file created. : ${this.app.userSettings.HISTORY_FILE}`,
                 );
-                // Save history.json
                 return this.loadHistoryFile();
             } catch (e) {
                 logError(
@@ -230,12 +229,8 @@ export class Utils {
                 );
                 return [];
             }
-        } else {
-            this.app.log(
-                `The history.json file already exists: ${this.app.userSettings.HISTORY_FILE}`,
-            );
-            return this.loadHistoryFile();
         }
+        return this.loadHistoryFile();
     }
 
     // Save to history file
@@ -269,7 +264,10 @@ export class Utils {
                     this.app.userSettings.HISTORY_FILE,
                 );
                 let [, contents] = file.load_contents(null);
+                this.app.log('Contents: ' + contents);
+                // Parse JSON
                 let chatHistory = JSON.parse(contents);
+                this.app.log('chatHistory: ' + chatHistory);
                 this.app.log(
                     `History loaded from: ${this.app.userSettings.HISTORY_FILE}`,
                 );
