@@ -62,6 +62,36 @@ export class Chat {
             `<b>${this.app.userSettings.ASSIST_NAME}:</b> ${text}`,
         );
         this.app.utils.scrollToBottom();
+        this.app.ui.searchEntry.clutter_text.reactive = true;
+
+        // Speech response
+        this.app.log('Speech response...');
+        let answer = this.app.utils.extractCodeAndTTS(text);
+        if (answer.tts !== null) {
+            this.app.azure.tts(answer.tts);
+        }
+
+        // If answer.code is not null, copy to clipboard
+        if (answer.code !== null) {
+            this.app.extension.clipboard.set_text(
+                St.ClipboardType.CLIPBOARD,
+                answer.code,
+            );
+            this.app.utils.gnomeNotify(_('Code example copied to clipboard'));
+        }
+
+        // Save history.json
+        this.app.chat.history.push({
+            role: 'model',
+            parts: [
+                {
+                    text,
+                },
+            ],
+        });
+        if (this.app.userSettings.RECURSIVE_TALK) {
+            this.app.utils.saveHistory();
+        }
     }
 
     addResponse(text) {
