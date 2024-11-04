@@ -57,6 +57,13 @@ export class Chat {
         this.app.utils.scrollToBottom();
     }
 
+    addtoResponse(text) {
+        this.responseChat.label.clutter_text.set_markup(
+            `<b>${this.app.userSettings.ASSIST_NAME}:</b> ${text}`,
+        );
+        this.app.utils.scrollToBottom();
+    }
+
     addResponse(text) {
         let responseChat = this.app.ui.response();
         let copyButton = this.app.ui.copy();
