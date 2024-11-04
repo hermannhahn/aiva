@@ -39,7 +39,6 @@ const Aiva = GObject.registerClass(
          * @description load and update settings
          */
         _loadSettings() {
-            this.log('Loading settings...');
             // fetch settings
             this._fetchSettings();
             // update settings if changed
@@ -49,7 +48,6 @@ const Aiva = GObject.registerClass(
                     this._fetchSettings();
                 },
             );
-            this.log('Settings loaded.');
         }
 
         /**
