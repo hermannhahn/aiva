@@ -1,4 +1,4 @@
-# Language es-ES translations for PACKAGE package.
+# Language en-US translations for PACKAGE package.
 # Copyright (C) 2024 THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Hermann <hermann.h.hahn@gmail.com>, 2024.
@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-11-04 16:40-0300\n"
-"PO-Revision-Date: 2024-11-04 16:41-0300\n"
+"PO-Revision-Date: 2024-11-04 16:40-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
-"Language-Team: Language es-ES\n"
-"Language: es-ES\n"
+"Language-Team: Language en-US\n"
+"Language: en-US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=ASCII\n"
 "Content-Transfer-Encoding: 8bit\n"
