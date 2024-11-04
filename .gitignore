@@ -45,7 +45,6 @@ __pycache__/
 *.shell-extension/
 dist/
 gschemas.compiled
-locale/
 *.wav
 *.db
 .gitconfig
