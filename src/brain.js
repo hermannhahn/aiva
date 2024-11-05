@@ -37,7 +37,7 @@ export class Brain {
             this.app.userSettings.ASSIST_NAME,
         ];
 
-        // Check if the three first words includes "computer"
+        // Check if the first three words includes "computer"
         const words = text.split(/\s+/).slice(0, 3);
         for (const word of words) {
             if (activationWords.includes(word)) {
