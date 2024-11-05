@@ -186,13 +186,6 @@ export class GoogleGemini {
                         .replace(/^`json\s*|\s*`$/g, '');
                     this.app.log('JSON RESPONSE: ' + jsonResponse.toString());
                     aiResponse = JSON.parse(jsonResponse.toString());
-                    let test = {
-                        success: true,
-                        response:
-                            'Pesquisando por videos engraçados no youtube...',
-                        commandline:
-                            'firefox https://www.youtube.com/results?search_query=videos+engra%C3%A7ados',
-                    };
                     this.app.log('Success getting response.');
                     if (aiResponse.success) {
                         this.app.log('Success getting commandline.');
