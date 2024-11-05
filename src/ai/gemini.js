@@ -140,7 +140,6 @@ export class GoogleGemini {
      *
      * @param {*} solicitation
      * @param {*} destroyLoop
-     * @returns command line
      */
     runCommand(solicitation, destroyLoop = false) {
         // Destroy loop if it exists
@@ -177,23 +176,20 @@ export class GoogleGemini {
                         this.app.logError(res.error);
                         this.app.chat.editResponse(response);
                         this.app.azure.tts(response);
-                        return false;
+                        return;
                     }
                     let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
                     this.app.log('Success getting response.');
                     this.app.log(aiResponse);
-                    return aiResponse;
                 },
             );
         } catch (error) {
             this.app.log('Error getting response.');
             this.app.logError(error);
-            this.app.chat.addResponse(
+            this.app.chat.editResponse(
                 _("Sorry, I'm having connection trouble. Please try again."),
             );
-            return false;
         }
-        return false;
     }
 
     /**
