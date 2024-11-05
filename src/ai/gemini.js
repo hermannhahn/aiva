@@ -180,9 +180,12 @@ export class GoogleGemini {
                         return;
                     }
                     let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
+                    this.app.log('Response: ' + aiResponse);
                     const jsonResponse = aiResponse
                         .toString()
                         .replace(/^`json\s*|\s*`$/g, '');
+
+                    this.app.log('JSON RESPONSE: ' + jsonResponse);
                     aiResponse = JSON.parse(jsonResponse);
                     this.app.log('Success getting response.');
                     if (aiResponse.success) {
