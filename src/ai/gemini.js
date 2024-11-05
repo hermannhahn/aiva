@@ -138,6 +138,66 @@ export class GoogleGemini {
 
     /**
      *
+     * @param {*} userSolicitation
+     * @param {*} destroyLoop
+     * @returns command line
+     */
+    commandLine(userSolicitation, destroyLoop = false) {
+        // Destroy loop if it exists
+        if (destroyLoop) {
+            this.destroyLoop();
+        }
+
+        this.app.azure.tts('Opening...');
+        this.app.chat.addResponse('Opening...');
+        this.app.ui.searchEntry.clutter_text.reactive = false;
+
+        try {
+            this.app.log('Getting response...');
+            // Create http session
+            let _httpSession = new Soup.Session();
+            let url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.0-pro:generateContent?key=${this.GEMINI_API_KEY}`;
+
+            // Send async request
+            var body = this.buildBody(userSolicitation);
+            let message = Soup.Message.new('POST', url);
+            let bytes = GLib.Bytes.new(body);
+            message.set_request_body_from_bytes('application/json', bytes);
+            _httpSession.send_and_read_async(
+                message,
+                GLib.PRIORITY_DEFAULT,
+                null,
+                (_httpSession, result) => {
+                    let bytes = _httpSession.send_and_read_finish(result);
+                    this.app.log('Response received.');
+                    let decoder = new TextDecoder('utf-8');
+                    // Get response
+                    let response = decoder.decode(bytes.get_data());
+                    let res = JSON.parse(response);
+                    if (res.error?.code !== 401 && res.error !== undefined) {
+                        this.app.logError(res.error);
+                        this.app.chat.editResponse(response);
+                        this.app.azure.tts(response);
+                        return false;
+                    }
+                    let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
+                    this.app.log('Success getting response.');
+                    return aiResponse;
+                },
+            );
+        } catch (error) {
+            this.app.log('Error getting response.');
+            this.app.logError(error);
+            this.app.chat.addResponse(
+                _("Sorry, I'm having connection trouble. Please try again."),
+            );
+            return false;
+        }
+        return false;
+    }
+
+    /**
+     *
      * @returns string
      *
      * get tune string
