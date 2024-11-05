@@ -148,7 +148,6 @@ export class GoogleGemini {
             this.destroyLoop();
         }
 
-        this.app.azure.tts('Opening...');
         this.app.chat.addResponse('Opening...');
         this.app.ui.searchEntry.clutter_text.reactive = false;
 
