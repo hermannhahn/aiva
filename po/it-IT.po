@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-05 00:52-0300\n"
+"POT-Creation-Date: 2024-11-05 00:57-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language it-IT\n"
@@ -211,74 +211,6 @@ msgstr ""
 
 #: src/utils/utils.js:415
 msgid "Give me a moment to sort this out..."
-msgstr ""
-
-#: src/actions/close.js:20 src/actions/close.js:50
-msgid "google"
-msgstr ""
-
-#: src/actions/close.js:21 src/actions/close.js:53
-msgid "chrome"
-msgstr ""
-
-#: src/actions/close.js:22 src/actions/close.js:56
-msgid "firefox"
-msgstr ""
-
-#: src/actions/close.js:23 src/actions/close.js:62
-msgid "vscode"
-msgstr ""
-
-#: src/actions/close.js:24 src/actions/close.js:65
-msgid "code editor"
-msgstr ""
-
-#: src/actions/close.js:25 src/actions/close.js:59
-msgid "youtube"
-msgstr ""
-
-#: src/actions/close.js:26 src/actions/close.js:68
-msgid "gmail"
-msgstr ""
-
-#: src/actions/close.js:27 src/actions/close.js:71
-msgid "outlook"
-msgstr ""
-
-#: src/actions/close.js:28 src/actions/close.js:74
-msgid "maps"
-msgstr ""
-
-#: src/actions/close.js:29 src/actions/close.js:77
-msgid "calculator"
-msgstr ""
-
-#: src/actions/close.js:30 src/actions/close.js:80
-msgid "calendar"
-msgstr ""
-
-#: src/actions/close.js:31 src/actions/close.js:85
-msgid "notepad"
-msgstr ""
-
-#: src/actions/close.js:32 src/actions/close.js:88
-msgid "snap store"
-msgstr ""
-
-#: src/actions/close.js:33 src/actions/close.js:91
-msgid "extensions manager"
-msgstr ""
-
-#: src/actions/close.js:34 src/actions/close.js:96
-msgid "settings"
-msgstr ""
-
-#: src/actions/close.js:35 src/actions/close.js:99
-msgid "emulator"
-msgstr ""
-
-#: src/actions/close.js:36 src/actions/close.js:104
-msgid "terminal"
 msgstr ""
 
 #: src/extension.js:140

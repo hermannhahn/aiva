@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-05 00:52-0300\n"
+"POT-Creation-Date: 2024-11-05 00:57-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -214,74 +214,6 @@ msgstr "Estou pensando nisso..."
 msgid "Give me a moment to sort this out..."
 msgstr "Me dê um momento para organizar isso..."
 
-#: src/actions/close.js:20 src/actions/close.js:50
-msgid "google"
-msgstr ""
-
-#: src/actions/close.js:21 src/actions/close.js:53
-msgid "chrome"
-msgstr ""
-
-#: src/actions/close.js:22 src/actions/close.js:56
-msgid "firefox"
-msgstr ""
-
-#: src/actions/close.js:23 src/actions/close.js:62
-msgid "vscode"
-msgstr ""
-
-#: src/actions/close.js:24 src/actions/close.js:65
-msgid "code editor"
-msgstr "editor de código"
-
-#: src/actions/close.js:25 src/actions/close.js:59
-msgid "youtube"
-msgstr ""
-
-#: src/actions/close.js:26 src/actions/close.js:68
-msgid "gmail"
-msgstr ""
-
-#: src/actions/close.js:27 src/actions/close.js:71
-msgid "outlook"
-msgstr ""
-
-#: src/actions/close.js:28 src/actions/close.js:74
-msgid "maps"
-msgstr "mapas"
-
-#: src/actions/close.js:29 src/actions/close.js:77
-msgid "calculator"
-msgstr "calculadora"
-
-#: src/actions/close.js:30 src/actions/close.js:80
-msgid "calendar"
-msgstr "calendario"
-
-#: src/actions/close.js:31 src/actions/close.js:85
-msgid "notepad"
-msgstr "bloco de notas"
-
-#: src/actions/close.js:32 src/actions/close.js:88
-msgid "snap store"
-msgstr "loja de aplicativos"
-
-#: src/actions/close.js:33 src/actions/close.js:91
-msgid "extensions manager"
-msgstr "gerenciador de extensões"
-
-#: src/actions/close.js:34 src/actions/close.js:96
-msgid "settings"
-msgstr "preferências"
-
-#: src/actions/close.js:35 src/actions/close.js:99
-msgid "emulator"
-msgstr "emulador"
-
-#: src/actions/close.js:36 src/actions/close.js:104
-msgid "terminal"
-msgstr ""
-
 #: src/extension.js:140
 msgid "AIVA"
 msgstr ""
@@ -354,6 +286,33 @@ msgstr "Salvar"
 #: src/prefs.js:705
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
+
+#~ msgid "code editor"
+#~ msgstr "editor de código"
+
+#~ msgid "maps"
+#~ msgstr "mapas"
+
+#~ msgid "calculator"
+#~ msgstr "calculadora"
+
+#~ msgid "calendar"
+#~ msgstr "calendario"
+
+#~ msgid "notepad"
+#~ msgstr "bloco de notas"
+
+#~ msgid "snap store"
+#~ msgstr "loja de aplicativos"
+
+#~ msgid "extensions manager"
+#~ msgstr "gerenciador de extensões"
+
+#~ msgid "settings"
+#~ msgstr "preferências"
+
+#~ msgid "emulator"
+#~ msgstr "emulador"
 
 #, fuzzy
 #~ msgid "Sorry, I can not open this application right now."
