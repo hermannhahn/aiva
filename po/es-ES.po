@@ -18,7 +18,7 @@ msgstr ""
 
 #: src/chat.js:79 src/chat.js:133
 msgid "Code example copied to clipboard"
-msgstr ""
+msgstr "Código copiado al portapapeles"
 
 #: src/ai/gemini.js:77
 msgid ""
