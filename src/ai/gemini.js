@@ -178,15 +178,28 @@ export class GoogleGemini {
                         return;
                     }
                     let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
+                    this.app.log('Success getting response.');
+                    this.app.log('aiResponse: ' + aiResponse);
                     let jsonResponse = {};
                     try {
                         jsonResponse = JSON.parse(aiResponse);
+                        this.app.log(
+                            'Error getting json, trying clean response...',
+                        );
                         // eslint-disable-next-line no-unused-vars
                     } catch (error) {
                         const cleanedResponse = aiResponse.match(/\{(.*)\}/)[1];
-                        jsonResponse = JSON.parse(cleanedResponse);
+                        try {
+                            jsonResponse = JSON.parse(cleanedResponse);
+                            this.app.log('Success getting json.');
+                            // eslint-disable-next-line no-unused-vars
+                        } catch (error) {
+                            this.app.chat.editResponse(
+                                _("Sorry, I can't do this now."),
+                            );
+                            return;
+                        }
                     }
-                    this.app.log('Success getting response.');
                     if (jsonResponse.success) {
                         this.app.log('Success getting commandline.');
                         this.app.utils.executeCommand(jsonResponse.commandline);
