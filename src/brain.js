@@ -2,12 +2,12 @@ import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js'
 import {Open} from './actions/open.js';
 import {Close} from './actions/close.js';
 
-export class Brain {
+export class Interpreter {
     constructor(app) {
         this.app = app;
         this.open = new Open(this.app);
         this.close = new Close(this.app);
-        this.app.log('Brain loaded.');
+        this.app.log('Interpreter loaded.');
     }
 
     proccess(question) {
