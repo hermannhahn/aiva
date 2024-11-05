@@ -147,7 +147,7 @@ export class GoogleGemini {
             this.destroyLoop();
         }
 
-        this.app.chat.add('Opening...');
+        this.app.chat.add('...');
         this.app.ui.searchEntry.clutter_text.reactive = false;
 
         try {
@@ -180,20 +180,16 @@ export class GoogleGemini {
                         return;
                     }
                     let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
-                    this.app.log('Response: ' + aiResponse);
                     const jsonResponse = aiResponse
                         .toString()
                         .replace(/^`json\s*|\s*`$/g, '');
-                    this.app.log('JSON Response: ' + jsonResponse);
                     aiResponse = JSON.parse(jsonResponse);
-                    this.app.log('Response Text: ' + aiResponse.response);
                     this.app.log('Success getting response.');
                     if (aiResponse.success) {
                         this.app.log('Success getting commandline.');
                         this.app.utils.executeCommand(aiResponse.commandline);
                     }
                     this.app.chat.editResponse(aiResponse.response);
-                    this.app.azure.tts(aiResponse.response);
                 },
             );
         } catch (error) {
