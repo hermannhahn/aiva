@@ -102,6 +102,7 @@ HELP
                 this.app.gemini.runCommand(
                     `My boss asked me to open an application. The computer's operating system is Linux Ubuntu. Interpret the following solicitation and respond with only one command line so that I can run it on his computer's terminal and achieve the objective of the request. Consider that the computer have the application the command line to run. Rules for responding: Respond with only one command line. Solicitation: ${text}`,
                 );
+                return;
             } else if (closeAppWords.includes(word)) {
                 this.close.software(text);
             } else {
