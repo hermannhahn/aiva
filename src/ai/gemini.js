@@ -171,9 +171,7 @@ export class GoogleGemini {
                     let decoder = new TextDecoder('utf-8');
                     // Get response
                     let response = decoder.decode(bytes.get_data());
-                    this.app.log('Response: ' + response);
                     let res = JSON.parse(response);
-                    this.app.log('RES: ' + res);
                     if (res.error?.code !== 401 && res.error !== undefined) {
                         this.app.logError(res.error);
                         this.app.chat.editResponse(response);
@@ -181,15 +179,19 @@ export class GoogleGemini {
                         return;
                     }
                     let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
+                    this.app.log('AI Response: ' + aiResponse);
+                    let parsedResponse = JSON.parse(aiResponse);
+                    this.app.log('Parsed Response: ' + parsedResponse);
+                    this.app.log('Parsed Text Response: ' + parsedResponse.response);)
                     this.app.log('Success getting response.');
-                    if (aiResponse.success) {
+                    if (parsedResponse.success) {
                         this.app.log('Success getting commandline.');
-                        this.app.utils.executeCommand(aiResponse.commandline);
+                        this.app.utils.executeCommand(parsedResponse.commandline);
                     }
-                    this.app.chat.editResponse(aiResponse.response);
-                    this.app.azure.tts(aiResponse.response.toString());
-                },
-            );
+                    this.app.chat.editResponse(parsedResponse.response);
+                    this.app.azure.tts(parsedResponse.response);
+                }
+                );
         } catch (error) {
             this.app.log('Error getting response.');
             this.app.logError(error);
