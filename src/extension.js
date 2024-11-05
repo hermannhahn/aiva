@@ -24,7 +24,7 @@ import * as PanelMenu from 'resource:///org/gnome/shell/ui/panelMenu.js';
 // App
 import {Logger} from './utils/logger.js';
 import {Audio} from './audio.js';
-import {Brain} from './brain.js';
+import {Interpreter} from './interpreter.js';
 import {Chat} from './chat.js';
 import {UI} from './ui.js';
 import {Utils} from './utils/utils.js';
@@ -125,7 +125,7 @@ const Aiva = GObject.registerClass(
             /**
              *
              */
-            this.brain = new Brain(this);
+            this.interpreter = new Interpreter(this);
         }
 
         /**
