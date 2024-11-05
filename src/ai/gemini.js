@@ -180,20 +180,14 @@ export class GoogleGemini {
                         return;
                     }
                     let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
-                    let parsedResponse = JSON.parse(aiResponse);
-                    this.app.log('Parsed Response: ' + parsedResponse);
-                    this.app.log(
-                        'Parsed Text Response: ' + parsedResponse.response,
-                    );
+                    this.app.log('Response: ' + aiResponse);
                     this.app.log('Success getting response.');
-                    if (parsedResponse.success) {
+                    if (aiResponse.success) {
                         this.app.log('Success getting commandline.');
-                        this.app.utils.executeCommand(
-                            parsedResponse.commandline,
-                        );
+                        this.app.utils.executeCommand(aiResponse.commandline);
                     }
-                    this.app.chat.editResponse(parsedResponse.response);
-                    this.app.azure.tts(parsedResponse.response);
+                    this.app.chat.editResponse(aiResponse.response);
+                    this.app.azure.tts(aiResponse.response);
                 },
             );
         } catch (error) {
