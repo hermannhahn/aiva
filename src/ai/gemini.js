@@ -35,7 +35,7 @@ export class GoogleGemini {
             let url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.0-pro:generateContent?key=${this.GEMINI_API_KEY}`;
 
             // Send async request
-            var body = this.buildBody(userQuestion);
+            var body = this.buildBody();
             let message = Soup.Message.new('POST', url);
             let bytes = GLib.Bytes.new(body);
             message.set_request_body_from_bytes('application/json', bytes);
@@ -138,11 +138,11 @@ export class GoogleGemini {
 
     /**
      *
-     * @param {*} userSolicitation
+     * @param {*} solicitation
      * @param {*} destroyLoop
      * @returns command line
      */
-    commandLine(userSolicitation, destroyLoop = false) {
+    runCommand(solicitation, destroyLoop = false) {
         // Destroy loop if it exists
         if (destroyLoop) {
             this.destroyLoop();
@@ -158,7 +158,7 @@ export class GoogleGemini {
             let url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.0-pro:generateContent?key=${this.GEMINI_API_KEY}`;
 
             // Send async request
-            var body = this.buildBody(userSolicitation);
+            var body = this.buildNoHistoryBody(solicitation);
             let message = Soup.Message.new('POST', url);
             let bytes = GLib.Bytes.new(body);
             message.set_request_body_from_bytes('application/json', bytes);
@@ -214,13 +214,32 @@ export class GoogleGemini {
     }
 
     /**
+     * @returns body contents
      *
      * build body for request
      */
     buildBody() {
-        console.log(this.app.chat.history);
         const stringfiedHistory = JSON.stringify(this.app.chat.history);
-        console.log(stringfiedHistory);
+        return `{"contents":${stringfiedHistory}}`;
+    }
+
+    /**
+     * @param {*} solicitation
+     *
+     * @returns body contents
+     */
+    buildNoHistoryBody(solicitation) {
+        let request = [
+            {
+                role: 'user',
+                parts: [
+                    {
+                        text: solicitation,
+                    },
+                ],
+            },
+        ];
+        const stringfiedHistory = JSON.stringify(request);
         return `{"contents":${stringfiedHistory}}`;
     }
 }
