@@ -193,6 +193,14 @@ export class Utils {
                         '. ' +
                         _('Who are you?'),
                 },
+                {
+                    role: 'system',
+                    parts: [
+                        {
+                            text: this.app.gemini.getTuneString(),
+                        },
+                    ],
+                },
             ],
         });
         history.push({
