@@ -179,17 +179,13 @@ export class GoogleGemini {
                         return;
                     }
                     let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
-                    aiResponse = aiResponse.toString();
                     this.app.log('Success getting response.');
-                    this.app.log(aiResponse);
-                    if (aiResponse === 'false') {
-                        this.app.chat.editResponse(
-                            _("Sorry, I can't do that."),
-                        );
-                        this.app.azure.tts(_("Sorry, I can't do that."));
-                        return;
+                    if (aiResponse.success) {
+                        this.app.log('Success getting commandline.');
+                        this.app.utils.executeCommand(aiResponse.commandline);
                     }
-                    this.app.utils.executeCommand(aiResponse);
+                    this.app.chat.editResponse(aiResponse.response);
+                    this.app.azure.tts(aiResponse.response.toString());
                 },
             );
         } catch (error) {
