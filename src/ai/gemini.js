@@ -181,6 +181,7 @@ export class GoogleGemini {
                     }
                     let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
                     this.app.log('Response: ' + aiResponse);
+                    this.app.log('Response Text: ' + aiResponse.response);
                     this.app.log('Success getting response.');
                     if (aiResponse.success) {
                         this.app.log('Success getting commandline.');
