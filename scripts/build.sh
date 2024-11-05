@@ -54,9 +54,9 @@ function update_pot_file {
 	rm -f po/messages.pot
 	find src -name "*.js" | xargs xgettext -k_ -kN_ -o po/messages.pot --package-name="$UUID" --from-code=UTF-8 --package-version="$VERSION" --msgid-bugs-address="$EMAIL"
 	# Replace Last-Translator value from messages.pot
-	sed -i -E 's|Last-Translator:.*$|Last-Translator: $USERNAME <$EMAIL>/\\n\"|g' po/messages.pot
+	sed -i -E 's|Last-Translator:.*$|Last-Translator: $USERNAME <$EMAIL>\\n\"|g' po/messages.pot
 	# Replace Content-Type value from messages.pot
-	sed -i -E 's|Content-Type:.*$|Content-Type: text/plain; charset=UTF-8/\\n\"|g' po/messages.pot
+	sed -i -E 's|Content-Type:.*$|Content-Type: text/plain; charset=UTF-8\\n\"|g' po/messages.pot
 	echo "POT file updated."
 }
 
