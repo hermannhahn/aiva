@@ -179,6 +179,7 @@ export class GoogleGemini {
                         return;
                     }
                     let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
+                    aiResponse = aiResponse.toString();
                     this.app.log('Success getting response.');
                     this.app.log(aiResponse);
                     if (aiResponse === 'false') {
