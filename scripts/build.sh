@@ -51,7 +51,6 @@ function update_pot_file {
 	USERNAME=$(git config user.name)
 	# Get git email
 	EMAIL=$(git config user.email)
-	rm -f po/messages.pot
 	find src -name "*.js" | xargs xgettext -k_ -kN_ -o po/messages.pot --package-name="$UUID" --from-code=UTF-8 --package-version="$VERSION" --msgid-bugs-address="$EMAIL"
 	# Replace Last-Translator value from messages.pot
 	sed -i -E 's|Last-Translator:.*$|Last-Translator: $USERNAME <$EMAIL>\\n\"|g' po/messages.pot
@@ -65,6 +64,8 @@ function update_po_files {
 	for PO_FILE in po/*.po; do
 		msgmerge --update "$PO_FILE" po/messages.pot
 	done
+	rm -rf po/messages.pot
+	rm -rf po/*.po~
 	echo "PO files updated."
 }
 
