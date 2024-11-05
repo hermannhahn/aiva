@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-04 23:38-0300\n"
+"POT-Creation-Date: 2024-11-04 23:39-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language es-ES\n"
@@ -16,43 +16,43 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/interpreter.js:35
+#: src/interpreter.js:36
 msgid "computer"
 msgstr ""
 
-#: src/interpreter.js:71
+#: src/interpreter.js:72
 msgid "open"
 msgstr ""
 
-#: src/interpreter.js:74
+#: src/interpreter.js:75
 msgid "start"
 msgstr ""
 
-#: src/interpreter.js:77
+#: src/interpreter.js:78
 msgid "launch"
 msgstr ""
 
-#: src/interpreter.js:78
+#: src/interpreter.js:79
 msgid "run"
 msgstr ""
 
-#: src/interpreter.js:81
+#: src/interpreter.js:82
 msgid "execute"
 msgstr ""
 
-#: src/interpreter.js:86
+#: src/interpreter.js:87
 msgid "close"
 msgstr ""
 
-#: src/interpreter.js:89
+#: src/interpreter.js:90
 msgid "terminate"
 msgstr ""
 
-#: src/interpreter.js:94
+#: src/interpreter.js:95
 msgid "exit"
 msgstr ""
 
-#: src/interpreter.js:97
+#: src/interpreter.js:98
 msgid "kill"
 msgstr ""
 

@@ -8,6 +8,7 @@ export class Interpreter {
         this.open = new Open(this.app);
         this.close = new Close(this.app);
         this.app.log('Interpreter loaded.');
+        this.pids = [];
     }
 
     proccess(question) {
