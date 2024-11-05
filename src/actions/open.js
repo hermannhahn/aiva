@@ -48,7 +48,10 @@ export class Open {
     _runSoftware(software) {
         switch (software) {
             case _('google'):
-                this.app.utils.executeCommand('google-chrome');
+                this.app.interpreter.pids.push({
+                    name: 'google-chrome',
+                    pid: this.app.utils.executeCommand('google-chrome'),
+                });
                 break;
             case _('chrome'):
                 this.app.utils.executeCommand('google-chrome');
