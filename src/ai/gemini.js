@@ -73,33 +73,53 @@ export class GoogleGemini {
                                     safetyRating.category ===
                                     'HARM_CATEGORY_SEXUALLY_EXPLICIT'
                                 ) {
-                                    aiResponse = _(
-                                        "Sorry, I can't answer this question. Possible sexually explicit content in the question or answer.",
-                                    );
+                                    aiResponse =
+                                        _(
+                                            "Sorry, I can't answer this question.",
+                                        ) +
+                                        ' ' +
+                                        _(
+                                            'Possible sexually explicit content in the question or answer.',
+                                        );
                                 }
                                 if (
                                     safetyRating.category ===
                                     'HARM_CATEGORY_HATE_SPEECH'
                                 ) {
-                                    aiResponse = _(
-                                        "Sorry, I can't answer this question. Possible hate speech in the question or answer.",
-                                    );
+                                    aiResponse =
+                                        _(
+                                            "Sorry, I can't answer this question.",
+                                        ) +
+                                        ' ' +
+                                        _(
+                                            'Possible hate speech in the question or answer.',
+                                        );
                                 }
                                 if (
                                     safetyRating.category ===
                                     'HARM_CATEGORY_HARASSMENT'
                                 ) {
-                                    aiResponse = _(
-                                        "Sorry, I can't answer this question. Possible harassment in the question or answer.",
-                                    );
+                                    aiResponse =
+                                        _(
+                                            "Sorry, I can't answer this question.",
+                                        ) +
+                                        ' ' +
+                                        _(
+                                            'Possible harassment in the question or answer.',
+                                        );
                                 }
                                 if (
                                     safetyRating.category ===
                                     'HARM_CATEGORY_DANGEROUS_CONTENT'
                                 ) {
-                                    aiResponse = _(
-                                        "Sorry, I can't answer this question. Possible dangerous content in the question or answer.",
-                                    );
+                                    aiResponse =
+                                        _(
+                                            "Sorry, I can't answer this question.",
+                                        ) +
+                                        ' ' +
+                                        _(
+                                            'Possible dangerous content in the question or answer.',
+                                        );
                                 }
                             }
                         }
