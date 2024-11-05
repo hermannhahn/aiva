@@ -65,7 +65,6 @@ function update_po_files {
 		msgmerge --update "$PO_FILE" po/messages.pot
 	done
 	rm -rf po/messages.pot
-	rm -rf po/*.po~
 	echo "PO files updated."
 }
 
