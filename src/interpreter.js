@@ -72,7 +72,7 @@ How to response examples: \n
 Request example 1: "computador pesquise por travessia balsa santos"\n
 Response example 1: "{success: true, response: 'Pesquisando por travessia balsa santos...', commandline: 'firefox https://www.google.com/search?q=travessia+balsa+santos'}"\n
 Request example 2: "computador, remova o fundo dessa imagem"\n
-Response example 2: "{success: true, response: 'Não consigo remover o fundo para você, porém você pode fazer isso utilizando aplicativos ou sites. Um exemplo é o site canvas. Envie a imagem que deseja remover o fundo no site que abri.', commandline: 'firefox https://www.canva.com/pt_br/recursos/remover-fundo/'}"\n
+Response example 2: "{success: true, response: 'Não consigo remover o fundo para você, porém você pode fazer isso utilizando aplicativos ou sites. Um exemplo é o site canvas. Estou abrindo para você.', commandline: 'firefox https://www.canva.com/pt_br/recursos/remover-fundo/'}"\n
 Request example 3: "computador, aplique o filtro de blur na imagem"\n
 Response example 3: "{success: false, response: 'Não consigo fazer isso para você, porém você pode utilizar o photoshop. Siga as instruções a seguir para aplicar o filtro de blur na imagem pelo photoshop. Instruções: Abra....', commandline: null}"\n
 Request example 4: "computador pesquise por videos de gatos no youtube"\n
