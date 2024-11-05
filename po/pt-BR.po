@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-05 09:19-0300\n"
+"POT-Creation-Date: 2024-11-05 10:06-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -19,42 +19,6 @@ msgstr ""
 #: src/interpreter.js:32
 msgid "computer"
 msgstr "computador"
-
-#: src/interpreter.js:68
-msgid "open"
-msgstr "abrir"
-
-#: src/interpreter.js:71
-msgid "start"
-msgstr "iniciar"
-
-#: src/interpreter.js:74
-msgid "launch"
-msgstr "iniciar"
-
-#: src/interpreter.js:75
-msgid "run"
-msgstr "rodar"
-
-#: src/interpreter.js:78
-msgid "execute"
-msgstr "executar"
-
-#: src/interpreter.js:83
-msgid "close"
-msgstr "fechar"
-
-#: src/interpreter.js:86
-msgid "terminate"
-msgstr "encerrar"
-
-#: src/interpreter.js:91
-msgid "exit"
-msgstr "sair"
-
-#: src/interpreter.js:94
-msgid "kill"
-msgstr ""
 
 #: src/chat.js:81 src/chat.js:135
 msgid "Code example copied to clipboard"
@@ -286,6 +250,30 @@ msgstr "Salvar"
 #: src/prefs.js:705
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
+
+#~ msgid "open"
+#~ msgstr "abrir"
+
+#~ msgid "start"
+#~ msgstr "iniciar"
+
+#~ msgid "launch"
+#~ msgstr "iniciar"
+
+#~ msgid "run"
+#~ msgstr "rodar"
+
+#~ msgid "execute"
+#~ msgstr "executar"
+
+#~ msgid "close"
+#~ msgstr "fechar"
+
+#~ msgid "terminate"
+#~ msgstr "encerrar"
+
+#~ msgid "exit"
+#~ msgstr "sair"
 
 #~ msgid "code editor"
 #~ msgstr "editor de código"
