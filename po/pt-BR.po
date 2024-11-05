@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-04 23:07-0300\n"
+"POT-Creation-Date: 2024-11-04 23:12-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -174,111 +174,111 @@ msgstr "Estou pensando nisso..."
 msgid "Give me a moment to sort this out..."
 msgstr "Me dê um momento para organizar isso..."
 
-#: src/brain.js:31
+#: src/brain.js:35
 msgid "computer"
 msgstr "computador"
 
-#: src/brain.js:66
+#: src/brain.js:70
 msgid "google"
 msgstr ""
 
-#: src/brain.js:67
+#: src/brain.js:71
 msgid "chrome"
 msgstr ""
 
-#: src/brain.js:68
+#: src/brain.js:72
 msgid "firefox"
 msgstr ""
 
-#: src/brain.js:69
+#: src/brain.js:73
 msgid "vscode"
 msgstr ""
 
-#: src/brain.js:70
+#: src/brain.js:74
 msgid "code editor"
 msgstr "editor de código"
 
-#: src/brain.js:71
+#: src/brain.js:75
 msgid "youtube"
 msgstr ""
 
-#: src/brain.js:72
+#: src/brain.js:76
 msgid "gmail"
 msgstr ""
 
-#: src/brain.js:73
+#: src/brain.js:77
 msgid "outlook"
 msgstr ""
 
-#: src/brain.js:74
+#: src/brain.js:78
 msgid "maps"
 msgstr "mapas"
 
-#: src/brain.js:75
+#: src/brain.js:79
 msgid "calculator"
 msgstr "calculadora"
 
-#: src/brain.js:76
+#: src/brain.js:80
 msgid "calendar"
 msgstr "calendario"
 
-#: src/brain.js:77
+#: src/brain.js:81
 msgid "notepad"
 msgstr "bloco de notas"
 
-#: src/brain.js:78
+#: src/brain.js:82
 msgid "snap store"
 msgstr "loja de aplicativos"
 
-#: src/brain.js:79
+#: src/brain.js:83
 msgid "extensions manager"
 msgstr "gerenciador de extensões"
 
-#: src/brain.js:80
+#: src/brain.js:84
 msgid "settings"
 msgstr "preferências"
 
-#: src/brain.js:81
+#: src/brain.js:85
 msgid "emulator"
 msgstr "emulador"
 
-#: src/brain.js:82
+#: src/brain.js:86
 msgid "terminal"
 msgstr ""
 
-#: src/brain.js:163
+#: src/brain.js:167
 msgid "open"
 msgstr "abrir"
 
-#: src/brain.js:166
+#: src/brain.js:170
 msgid "start"
 msgstr "iniciar"
 
-#: src/brain.js:168
+#: src/brain.js:173
 msgid "launch"
 msgstr "iniciar"
 
-#: src/brain.js:169
+#: src/brain.js:174
 msgid "run"
 msgstr "rodar"
 
-#: src/brain.js:171
+#: src/brain.js:177
 msgid "execute"
 msgstr "executar"
 
-#: src/brain.js:174
+#: src/brain.js:182
 msgid "close"
 msgstr "fechar"
 
-#: src/brain.js:175
+#: src/brain.js:185
 msgid "terminate"
 msgstr "encerrar"
 
-#: src/brain.js:176
+#: src/brain.js:190
 msgid "exit"
 msgstr "sair"
 
-#: src/brain.js:177
+#: src/brain.js:193
 msgid "kill"
 msgstr ""
 

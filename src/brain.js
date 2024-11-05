@@ -1,8 +1,12 @@
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
+import {Open} from './actions/open.js';
+import {Close} from './actions/close.js';
 
 export class Brain {
     constructor(app) {
         this.app = app;
+        this.open = new Open();
+        this.close = new Close();
         this.app.log('Brain loaded.');
     }
 
@@ -165,16 +169,30 @@ HELP
             'abra',
             _('start'),
             'inicie',
+            'inicia',
             _('launch'),
             _('run'),
             'rode',
+            'roda',
             _('execute'),
+            'execute',
+            'executa',
         ];
         const closeAppWords = [
             _('close'),
+            'feche',
+            'fecha',
             _('terminate'),
+            'termine',
+            'termina',
+            'encerra',
+            'encerre',
             _('exit'),
+            'saie',
+            'saia',
             _('kill'),
+            'mate',
+            'mata',
         ];
         // Dividir o texto em palavras e pegar as primeiras 'maxWords'
         const words = text.split(/\s+/).slice(0, maxWords);
