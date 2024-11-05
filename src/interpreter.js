@@ -67,7 +67,7 @@ HELP
 Please, folow the instructions below.\n
 Objective: Fulfill the request using a command line to be executed in the linux ubuntu terminal.\n
 Request: ${request}\n
-Response type: string\n
+Response type: json\n
 How to response examples: \n
 Request example 1: "computador pesquise por travessia balsa santos"\n
 Response example 1: "{success: true, response: 'Pesquisando por travessia balsa santos...', commandline: 'firefox https://www.google.com/search?q=travessia+balsa+santos'}"\n
