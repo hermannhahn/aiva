@@ -182,6 +182,14 @@ export class Utils {
             role: 'user',
             parts: [
                 {
+                    text: this.app.gemini.getTuneString(),
+                },
+            ],
+        });
+        history.push({
+            role: 'user',
+            parts: [
+                {
                     text:
                         _('Hi, I am') +
                         ' ' +
@@ -203,14 +211,6 @@ export class Utils {
                         _('Hi! I am ') +
                         this.app.userSettings.ASSIST_NAME +
                         _(', your helpfull assistant.'),
-                },
-            ],
-        });
-        history.push({
-            role: 'system',
-            parts: [
-                {
-                    text: this.app.gemini.getTuneString(),
                 },
             ],
         });
