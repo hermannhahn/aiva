@@ -62,7 +62,7 @@ HELP
     }
 
     _voiceCommandInterpreter(text) {
-        let solicitation = text.toLowerCase();
+        let request = text.toLowerCase();
         // const maxWords = 10;
         // const openAppWords = [
         //     _('open'),
@@ -99,9 +99,18 @@ HELP
         // const words = text.split(/\s+/).slice(0, maxWords);
         // for (const word of words) {
         //     if (openAppWords.includes(word)) {
-        this.app.gemini.runCommand(
-            `My boss asked me to do something in his computer. The computer's operating system is Linux Ubuntu. Interpret the following solicitation and respond with only one command line to do what he needs,so that I can run it on his computer's terminal and achieve the objective of the request. Consider that the computer have the application to run. Rules for responding: Respond only with command line to do what he needs. If the solicitation it is not possible to do in terminal respond only with word "false". Solicitation: ${solicitation}`,
-        );
+        this.app.gemini.runCommand(`
+Please, folow the instructions.
+Objective: Fulfill the request using a command line in the linux ubuntu terminal.
+Request: ${request}
+Response format: json
+Request example 1: "computador pesquise por travessia balsa santos"
+Response example 1: {success: true, response: 'Pesquisando por travessia balsa santos...', commandline: 'firefox https://www.google.com/search?q=travessia+balsa+santos'}
+Request example 2: "computador, remova o fundo dessa imagem"
+Response example 2: {success: true, response: 'Não consigo remover o fundo para você, porém você pode fazer isso utilizando aplicativos ou sites. Um exemplo é o site canvas. Envie a imagem que deseja remover o fundo no site que abri.', commandline: 'firefox https://www.canva.com/pt_br/recursos/remover-fundo/'}
+Request example 3: "computador, aplique o filtro de blur na imagem"
+Response example 3: {success: false, response: 'Não consigo fazer isso para você, porém você pode utilizar o photoshop. Siga as instruções a seguir para aplicar o filtro de blur na imagem pelo photoshop. Instruções: Abra....', commandline: null}
+`);
         // this.app.gemini.runCommand(
         //     `My boss asked me to open an application. The computer's operating system is Linux Ubuntu. Interpret the following solicitation and respond with only one command line so that I can run it on his computer's terminal and achieve the objective of the request. Consider that the computer have the application the command line to run. Rules for responding: Respond with only one command line. Solicitation: ${text}`,
         // );
