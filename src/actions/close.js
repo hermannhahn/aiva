@@ -3,7 +3,7 @@ export class Close {
         this.app = app;
     }
 
-    app(text) {
+    software(text) {
         const softwareName = this._getSoftwareName(text);
         if (softwareName) {
             this.app.log('Opening: ' + softwareName);
