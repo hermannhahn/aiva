@@ -181,6 +181,13 @@ export class GoogleGemini {
                     let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
                     this.app.log('Success getting response.');
                     this.app.log(aiResponse);
+                    if (aiResponse === 'false') {
+                        this.app.chat.editResponse(
+                            _("Sorry, I can't do that."),
+                        );
+                        this.app.azure.tts(_("Sorry, I can't do that."));
+                        return;
+                    }
                     this.app.utils.executeCommand(aiResponse);
                 },
             );
