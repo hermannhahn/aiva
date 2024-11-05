@@ -181,6 +181,7 @@ export class GoogleGemini {
                     let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
                     this.app.log('Success getting response.');
                     this.app.log(aiResponse);
+                    this.app.utils.executeCommand(aiResponse);
                 },
             );
         } catch (error) {
