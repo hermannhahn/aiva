@@ -182,16 +182,20 @@ export class GoogleGemini {
                     this.app.log('AI Response: ' + aiResponse);
                     let parsedResponse = JSON.parse(aiResponse);
                     this.app.log('Parsed Response: ' + parsedResponse);
-                    this.app.log('Parsed Text Response: ' + parsedResponse.response);)
+                    this.app.log(
+                        'Parsed Text Response: ' + parsedResponse.response,
+                    );
                     this.app.log('Success getting response.');
                     if (parsedResponse.success) {
                         this.app.log('Success getting commandline.');
-                        this.app.utils.executeCommand(parsedResponse.commandline);
+                        this.app.utils.executeCommand(
+                            parsedResponse.commandline,
+                        );
                     }
                     this.app.chat.editResponse(parsedResponse.response);
                     this.app.azure.tts(parsedResponse.response);
-                }
-                );
+                },
+            );
         } catch (error) {
             this.app.log('Error getting response.');
             this.app.logError(error);
