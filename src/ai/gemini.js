@@ -171,7 +171,9 @@ export class GoogleGemini {
                     let decoder = new TextDecoder('utf-8');
                     // Get response
                     let response = decoder.decode(bytes.get_data());
+                    this.app.log('Response: ' + response);
                     let res = JSON.parse(response);
+                    this.app.log('RES: ' + res);
                     if (res.error?.code !== 401 && res.error !== undefined) {
                         this.app.logError(res.error);
                         this.app.chat.editResponse(response);
