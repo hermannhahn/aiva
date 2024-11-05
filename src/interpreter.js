@@ -1,12 +1,8 @@
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
-import {Open} from './actions/open.js';
-import {Close} from './actions/close.js';
 
 export class Interpreter {
     constructor(app) {
         this.app = app;
-        this.open = new Open(this.app);
-        this.close = new Close(this.app);
         this.app.log('Interpreter loaded.');
         this.pids = [];
     }
@@ -103,7 +99,9 @@ HELP
         const words = text.split(/\s+/).slice(0, maxWords);
         for (const word of words) {
             if (openAppWords.includes(word)) {
-                this.open.software(text);
+                this.app.gemini.commandLine(
+                    `My boss asked me to open an application. The computer's operating system is Linux Ubuntu. Interpret the following solicitation and respond with only one command line so that I can run it on his computer's terminal and achieve the objective of the request. Consider that the computer may not have the application and it will be necessary to include the installation in the command line. Rules for responding: Respond with only one command line. Solicitation: ${text}`,
+                );
             } else if (closeAppWords.includes(word)) {
                 this.close.software(text);
             } else {
