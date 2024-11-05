@@ -3,6 +3,15 @@ export class Open {
         this.app = app;
     }
 
+    app(text) {
+        const softwareName = this._getSoftwareName(text);
+        if (softwareName) {
+            this._runSoftware(softwareName);
+        } else {
+            this.app.log('Software not found');
+        }
+    }
+
     _getSoftwareName(text) {
         // Get software name
         const softwareOptions = [
@@ -36,61 +45,61 @@ export class Open {
 
     _runSoftware(software) {
         switch (software) {
-            case 'google':
+            case _('google'):
                 this.app.utils.executeCommand('google-chrome');
                 break;
-            case 'chrome':
+            case _('chrome'):
                 this.app.utils.executeCommand('google-chrome');
                 break;
-            case 'firefox':
+            case _('firefox'):
                 this.app.utils.executeCommand('firefox');
                 break;
-            case 'youtube':
+            case _('youtube'):
                 this.app.utils.executeCommand('firefox youtube.com');
                 break;
-            case 'vscode':
+            case _('vscode'):
                 this.app.utils.executeCommand('code');
                 break;
-            case 'code editor':
+            case _('code editor'):
                 this.app.utils.executeCommand('code');
                 break;
-            case 'gmail':
+            case _('gmail'):
                 this.app.utils.executeCommand('google-chrome gmail.com');
                 break;
-            case 'outlook':
+            case _('outlook'):
                 this.app.utils.executeCommand('google-chrome outlook.com');
                 break;
-            case 'maps':
+            case _('maps'):
                 this.app.utils.executeCommand('google-chrome maps.google.com');
                 break;
-            case 'calculator':
+            case _('calculator'):
                 this.app.utils.executeCommand('google-chrome calculator.com');
                 break;
-            case 'calendar':
+            case _('calendar'):
                 this.app.utils.executeCommand(
                     'google-chrome calendar.google.com',
                 );
                 break;
-            case 'notepad':
+            case _('notepad'):
                 this.app.utils.executeCommand('google-chrome notepad.com');
                 break;
-            case 'snap store':
+            case _('snap store'):
                 this.app.utils.executeCommand('google-chrome snap.shop');
                 break;
-            case 'extensions manager':
+            case _('extensions manager'):
                 this.app.utils.executeCommand(
                     'google-chrome extensions.gnome.org',
                 );
                 break;
-            case 'settings':
+            case _('settings'):
                 this.app.openSettings();
                 break;
-            case 'emulator':
+            case _('emulator'):
                 this.app.utils.executeCommand(
                     'google-chrome emulator.google.com',
                 );
                 break;
-            case 'terminal':
+            case _('terminal'):
                 this.app.utils.executeCommand('gnome-terminal');
                 break;
             default:
