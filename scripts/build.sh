@@ -47,8 +47,16 @@ function update_pot_file {
 	echo "Updating POT file..."
 	# Get version from package.json
 	VERSION=$(jq -r .version package.json) # E.g. 1.0.0
+	# Get git username
+	USERNAME=$(git config user.name)
+	# Get git email
+	EMAIL=$(git config user.email)
 	rm -f po/messages.pot
-	xgettext -k_ -kN_ -o po/messages.pot src/*.js --package-name="$UUID" --from-code=UTF-8 --package-version="$VERSION" --msgid-bugs-address="hermann.h.hahn@gmail.com"
+	xgettext -k_ -kN_ -o po/messages.pot src/*.js --package-name="$UUID" --from-code=UTF-8 --package-version="$VERSION" --msgid-bugs-address="$EMAIL"
+	# Replace Last-Translator value from messages.pot
+	sed -i -E "s|Last-Translator:.*$|Last-Translator: $USERNAME <$EMAIL>|g" po/messages.pot
+	# Replace Content-Type value from messages.pot
+	sed -i -E "s|Content-Type:.*$|Content-Type: text/plain; charset=UTF-8|g" po/messages.pot
 	echo "POT file updated."
 }
 
