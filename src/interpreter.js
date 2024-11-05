@@ -63,8 +63,7 @@ HELP
 
     _voiceCommandInterpreter(text) {
         let request = text.toLowerCase();
-        this.app.gemini.runCommand(
-            `
+        this.app.gemini.runCommand(`
 Please, folow the instructions.
 Objective: Fulfill the request using a command line in the linux ubuntu terminal.
 Request: ${request}
@@ -75,7 +74,6 @@ Request example 2: "computador, remova o fundo dessa imagem"
 Response example 2: {success: true, response: 'Não consigo remover o fundo para você, porém você pode fazer isso utilizando aplicativos ou sites. Um exemplo é o site canvas. Envie a imagem que deseja remover o fundo no site que abri.', commandline: 'firefox https://www.canva.com/pt_br/recursos/remover-fundo/'}
 Request example 3: "computador, aplique o filtro de blur na imagem"
 Response example 3: {success: false, response: 'Não consigo fazer isso para você, porém você pode utilizar o photoshop. Siga as instruções a seguir para aplicar o filtro de blur na imagem pelo photoshop. Instruções: Abra....', commandline: null}
-`,
-        );
+`);
     }
 }
