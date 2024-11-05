@@ -172,7 +172,6 @@ export class GoogleGemini {
                     // Get response
                     let response = decoder.decode(bytes.get_data());
                     let res = JSON.parse(response.toString());
-                    this.app.log('RES: ' + res);
                     if (res.error?.code !== 401 && res.error !== undefined) {
                         this.app.logError(res.error);
                         this.app.chat.editResponse(response);
@@ -181,12 +180,19 @@ export class GoogleGemini {
                     }
                     let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
                     this.app.log('Response: ' + aiResponse);
+                    this.app.log('test: ' + aiResponse.success);
                     const jsonResponse = aiResponse
                         .toString()
                         .replace(/^`json\s*|\s*`$/g, '');
-
                     this.app.log('JSON RESPONSE: ' + jsonResponse.toString());
                     aiResponse = JSON.parse(jsonResponse.toString());
+                    let test = {
+                        success: true,
+                        response:
+                            'Pesquisando por videos engraçados no youtube...',
+                        commandline:
+                            'firefox https://www.youtube.com/results?search_query=videos+engra%C3%A7ados',
+                    };
                     this.app.log('Success getting response.');
                     if (aiResponse.success) {
                         this.app.log('Success getting commandline.');
