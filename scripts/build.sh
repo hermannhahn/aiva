@@ -52,7 +52,7 @@ function update_pot_file {
 	# Get git email
 	EMAIL=$(git config user.email)
 	rm -f po/messages.pot
-	xgettext -k_ -kN_ -o po/messages.pot src/**/*.js --package-name="$UUID" --from-code=UTF-8 --package-version="$VERSION" --msgid-bugs-address="$EMAIL"
+	find src -name "*.js" | xargs xgettext -k_ -kN_ -o po/messages.pot --package-name="$UUID" --from-code=UTF-8 --package-version="$VERSION" --msgid-bugs-address="$EMAIL"
 	# Replace Last-Translator value from messages.pot
 	sed -i -E "s|Last-Translator:.*$|Last-Translator: $USERNAME <$EMAIL>|g" po/messages.pot
 	# Replace Content-Type value from messages.pot
