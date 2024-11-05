@@ -1,4 +1,39 @@
 export class Open {
+    constructor(app) {
+        this.app = app;
+    }
+
+    _getSoftwareName(text) {
+        // Get software name
+        const softwareOptions = [
+            _('google'),
+            _('chrome'),
+            _('firefox'),
+            _('vscode'),
+            _('code editor'),
+            _('youtube'),
+            _('gmail'),
+            _('outlook'),
+            _('maps'),
+            _('calculator'),
+            _('calendar'),
+            _('notepad'),
+            _('snap store'),
+            _('extensions manager'),
+            _('settings'),
+            _('emulator'),
+            _('terminal'),
+        ];
+
+        // Check if software name is in softwareOptions
+        const maxWords = 10;
+        const words = text.split(/\s+/).slice(0, maxWords);
+        const softwareName = words.find((word) =>
+            softwareOptions.includes(word),
+        );
+        return softwareName;
+    }
+
     _runSoftware(software) {
         switch (software) {
             case 'google':
