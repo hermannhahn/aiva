@@ -22,45 +22,28 @@ msgstr "Código copiado para a área de transferência"
 
 #: src/ai/gemini.js:78 src/ai/gemini.js:91 src/ai/gemini.js:104
 #: src/ai/gemini.js:117
-#, fuzzy
 msgid "Sorry, I can't answer this question."
-msgstr ""
-"Peço desculpas, eu não posso responder a esta pergunta. Possível assédio na "
-"pergunta ou resposta."
+msgstr "Peço desculpas, eu não posso responder a esta pergunta."
 
 #: src/ai/gemini.js:82
-#, fuzzy
 msgid "Possible sexually explicit content in the question or answer."
-msgstr ""
-"Peço desculpas, eu não posso responder a esta pergunta. Possível conteúdo "
-"sexualmente explícito na pergunta ou resposta."
+msgstr "Possível conteúdo sexualmente explícito na pergunta ou resposta."
 
 #: src/ai/gemini.js:95
-#, fuzzy
 msgid "Possible hate speech in the question or answer."
-msgstr ""
-"Peço desculpas, eu não posso responder a esta pergunta. Possível discurso de "
-"ódio na pergunta ou resposta."
+msgstr "Possível discurso de ódio na pergunta ou resposta."
 
 #: src/ai/gemini.js:108
-#, fuzzy
 msgid "Possible harassment in the question or answer."
-msgstr ""
-"Peço desculpas, eu não posso responder a esta pergunta. Possível assédio na "
-"pergunta ou resposta."
+msgstr "Possível assédio na pergunta ou resposta."
 
 #: src/ai/gemini.js:121
-#, fuzzy
 msgid "Possible dangerous content in the question or answer."
-msgstr ""
-"Peço desculpas, eu não posso responder a esta pergunta. Possível conteúdo "
-"perigoso na pergunta ou resposta."
+msgstr "Possível conteúdo perigoso na pergunta ou resposta."
 
 #: src/ai/gemini.js:134
 msgid "Sorry, I'm having connection trouble. Please try again."
-msgstr ""
-"Peço desculpas, eu estou com problemas de conexão. Por favor, tente "
-"novamente."
+msgstr "Por favor, tente novamente."
 
 #: src/tmp/extension.js:80 src/extension.js:140
 msgid "AIVA"
