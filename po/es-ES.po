@@ -213,71 +213,71 @@ msgstr ""
 msgid "Give me a moment to sort this out..."
 msgstr ""
 
-#: src/actions/open.js:18 src/actions/open.js:48
+#: src/actions/open.js:20 src/actions/open.js:50
 msgid "google"
 msgstr ""
 
-#: src/actions/open.js:19 src/actions/open.js:51
+#: src/actions/open.js:21 src/actions/open.js:53
 msgid "chrome"
 msgstr ""
 
-#: src/actions/open.js:20 src/actions/open.js:54
+#: src/actions/open.js:22 src/actions/open.js:56
 msgid "firefox"
 msgstr ""
 
-#: src/actions/open.js:21 src/actions/open.js:60
+#: src/actions/open.js:23 src/actions/open.js:62
 msgid "vscode"
 msgstr ""
 
-#: src/actions/open.js:22 src/actions/open.js:63
+#: src/actions/open.js:24 src/actions/open.js:65
 msgid "code editor"
 msgstr ""
 
-#: src/actions/open.js:23 src/actions/open.js:57
+#: src/actions/open.js:25 src/actions/open.js:59
 msgid "youtube"
 msgstr ""
 
-#: src/actions/open.js:24 src/actions/open.js:66
+#: src/actions/open.js:26 src/actions/open.js:68
 msgid "gmail"
 msgstr ""
 
-#: src/actions/open.js:25 src/actions/open.js:69
+#: src/actions/open.js:27 src/actions/open.js:71
 msgid "outlook"
 msgstr ""
 
-#: src/actions/open.js:26 src/actions/open.js:72
+#: src/actions/open.js:28 src/actions/open.js:74
 msgid "maps"
 msgstr ""
 
-#: src/actions/open.js:27 src/actions/open.js:75
+#: src/actions/open.js:29 src/actions/open.js:77
 msgid "calculator"
 msgstr ""
 
-#: src/actions/open.js:28 src/actions/open.js:78
+#: src/actions/open.js:30 src/actions/open.js:80
 msgid "calendar"
 msgstr ""
 
-#: src/actions/open.js:29 src/actions/open.js:83
+#: src/actions/open.js:31 src/actions/open.js:85
 msgid "notepad"
 msgstr ""
 
-#: src/actions/open.js:30 src/actions/open.js:86
+#: src/actions/open.js:32 src/actions/open.js:88
 msgid "snap store"
 msgstr ""
 
-#: src/actions/open.js:31 src/actions/open.js:89
+#: src/actions/open.js:33 src/actions/open.js:91
 msgid "extensions manager"
 msgstr ""
 
-#: src/actions/open.js:32 src/actions/open.js:94
+#: src/actions/open.js:34 src/actions/open.js:96
 msgid "settings"
 msgstr ""
 
-#: src/actions/open.js:33 src/actions/open.js:97
+#: src/actions/open.js:35 src/actions/open.js:99
 msgid "emulator"
 msgstr ""
 
-#: src/actions/open.js:34 src/actions/open.js:102
+#: src/actions/open.js:36 src/actions/open.js:104
 msgid "terminal"
 msgstr ""
 

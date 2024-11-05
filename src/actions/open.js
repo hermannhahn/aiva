@@ -6,6 +6,8 @@ export class Open {
     app(text) {
         const softwareName = this._getSoftwareName(text);
         if (softwareName) {
+            this.app.log('Opening: ' + softwareName);
+            this.app.chat.add(`Opening: ${softwareName}`);
             this._runSoftware(softwareName);
         } else {
             this.app.log('Software not found');
