@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-04 23:14-0300\n"
+"POT-Creation-Date: 2024-11-04 23:15-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language es-ES\n"
@@ -177,108 +177,108 @@ msgstr ""
 msgid "computer"
 msgstr ""
 
-#: src/brain.js:70 src/actions/open.js:9
-msgid "google"
-msgstr ""
-
-#: src/brain.js:71 src/actions/open.js:10
-msgid "chrome"
-msgstr ""
-
-#: src/brain.js:72 src/actions/open.js:11
-msgid "firefox"
-msgstr ""
-
-#: src/brain.js:73 src/actions/open.js:12
-msgid "vscode"
-msgstr ""
-
-#: src/brain.js:74 src/actions/open.js:13
-msgid "code editor"
-msgstr ""
-
-#: src/brain.js:75 src/actions/open.js:14
-msgid "youtube"
-msgstr ""
-
-#: src/brain.js:76 src/actions/open.js:15
-msgid "gmail"
-msgstr ""
-
-#: src/brain.js:77 src/actions/open.js:16
-msgid "outlook"
-msgstr ""
-
-#: src/brain.js:78 src/actions/open.js:17
-msgid "maps"
-msgstr ""
-
-#: src/brain.js:79 src/actions/open.js:18
-msgid "calculator"
-msgstr ""
-
-#: src/brain.js:80 src/actions/open.js:19
-msgid "calendar"
-msgstr ""
-
-#: src/brain.js:81 src/actions/open.js:20
-msgid "notepad"
-msgstr ""
-
-#: src/brain.js:82 src/actions/open.js:21
-msgid "snap store"
-msgstr ""
-
-#: src/brain.js:83 src/actions/open.js:22
-msgid "extensions manager"
-msgstr ""
-
-#: src/brain.js:84 src/actions/open.js:23
-msgid "settings"
-msgstr ""
-
-#: src/brain.js:85 src/actions/open.js:24
-msgid "emulator"
-msgstr ""
-
-#: src/brain.js:86 src/actions/open.js:25
-msgid "terminal"
-msgstr ""
-
-#: src/brain.js:167
+#: src/brain.js:71
 msgid "open"
 msgstr ""
 
-#: src/brain.js:170
+#: src/brain.js:74
 msgid "start"
 msgstr ""
 
-#: src/brain.js:173
+#: src/brain.js:77
 msgid "launch"
 msgstr ""
 
-#: src/brain.js:174
+#: src/brain.js:78
 msgid "run"
 msgstr ""
 
-#: src/brain.js:177
+#: src/brain.js:81
 msgid "execute"
 msgstr ""
 
-#: src/brain.js:182
+#: src/brain.js:86
 msgid "close"
 msgstr ""
 
-#: src/brain.js:185
+#: src/brain.js:89
 msgid "terminate"
 msgstr ""
 
-#: src/brain.js:190
+#: src/brain.js:94
 msgid "exit"
 msgstr ""
 
-#: src/brain.js:193
+#: src/brain.js:97
 msgid "kill"
+msgstr ""
+
+#: src/actions/open.js:9
+msgid "google"
+msgstr ""
+
+#: src/actions/open.js:10
+msgid "chrome"
+msgstr ""
+
+#: src/actions/open.js:11
+msgid "firefox"
+msgstr ""
+
+#: src/actions/open.js:12
+msgid "vscode"
+msgstr ""
+
+#: src/actions/open.js:13
+msgid "code editor"
+msgstr ""
+
+#: src/actions/open.js:14
+msgid "youtube"
+msgstr ""
+
+#: src/actions/open.js:15
+msgid "gmail"
+msgstr ""
+
+#: src/actions/open.js:16
+msgid "outlook"
+msgstr ""
+
+#: src/actions/open.js:17
+msgid "maps"
+msgstr ""
+
+#: src/actions/open.js:18
+msgid "calculator"
+msgstr ""
+
+#: src/actions/open.js:19
+msgid "calendar"
+msgstr ""
+
+#: src/actions/open.js:20
+msgid "notepad"
+msgstr ""
+
+#: src/actions/open.js:21
+msgid "snap store"
+msgstr ""
+
+#: src/actions/open.js:22
+msgid "extensions manager"
+msgstr ""
+
+#: src/actions/open.js:23
+msgid "settings"
+msgstr ""
+
+#: src/actions/open.js:24
+msgid "emulator"
+msgstr ""
+
+#: src/actions/open.js:25
+msgid "terminal"
 msgstr ""
 
 #: src/extension.js:140
