@@ -148,7 +148,7 @@ export class GoogleGemini {
             this.destroyLoop();
         }
 
-        this.app.chat.addResponse('Opening...');
+        this.app.chat.add('Opening...');
         this.app.ui.searchEntry.clutter_text.reactive = false;
 
         try {
