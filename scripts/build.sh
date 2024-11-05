@@ -54,19 +54,16 @@ function update_pot_file {
 	rm -f po/messages.pot
 	find src -name "*.js" | xargs xgettext -k_ -kN_ -o po/messages.pot --package-name="$UUID" --from-code=UTF-8 --package-version="$VERSION" --msgid-bugs-address="$EMAIL"
 	# Replace Last-Translator value from messages.pot
-	sed -i -E "s|Last-Translator:.*$|Last-Translator: $USERNAME <$EMAIL>|g" po/messages.pot
+	sed -i -E 's|Last-Translator:.*$|Last-Translator: $USERNAME <$EMAIL>/\\n\"|g' po/messages.pot
 	# Replace Content-Type value from messages.pot
-	sed -i -E "s|Content-Type:.*$|Content-Type: text/plain; charset=UTF-8|g" po/messages.pot
+	sed -i -E 's|Content-Type:.*$|Content-Type: text/plain; charset=UTF-8/\\n\"|g' po/messages.pot
 	echo "POT file updated."
 }
 
 function update_po_files {
 	echo "Updating PO files..."
-	for LANG in de-DE fr-FR it-IT es-ES pt-BR; do
-        PO_FILE="po/$LANG.po"
-		if [[ ! -f "$PO_FILE" ]]; then
-			msgmerge --update "$PO_FILE" po/messages.pot
-		fi
+	for PO_FILE in po/*.po; do
+		msgmerge --update "$PO_FILE" po/messages.pot
 	done
 	echo "PO files updated."
 }
