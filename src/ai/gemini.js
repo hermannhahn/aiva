@@ -183,11 +183,13 @@ export class GoogleGemini {
                     let jsonResponse = {};
                     try {
                         jsonResponse = JSON.parse(aiResponse);
+                        this.app.log(jsonResponse);
+                        this.app.log('Success getting json.');
+                        // eslint-disable-next-line no-unused-vars
+                    } catch (error) {
                         this.app.log(
                             'Error getting json, trying clean response...',
                         );
-                        // eslint-disable-next-line no-unused-vars
-                    } catch (error) {
                         const cleanedResponse = aiResponse.match(/\{(.*)\}/)[1];
                         this.app.log(cleanedResponse);
                         try {
