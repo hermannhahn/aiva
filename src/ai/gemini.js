@@ -181,7 +181,8 @@ export class GoogleGemini {
                     }
                     let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
                     this.app.log('Response: ' + aiResponse);
-                    aiResponse = JSON.parse(aiResponse);
+                    const jsonResponse = res.replace(/^`json\s*|\s*`$/g, '');
+                    aiResponse = JSON.parse(jsonResponse);
                     this.app.log('Response Text: ' + aiResponse.response);
                     this.app.log('Success getting response.');
                     if (aiResponse.success) {
