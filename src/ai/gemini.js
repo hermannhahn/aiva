@@ -175,21 +175,25 @@ export class GoogleGemini {
                     if (res.error?.code !== 401 && res.error !== undefined) {
                         this.app.logError(res.error);
                         this.app.chat.editResponse(response);
-                        this.app.azure.tts(response);
                         return;
                     }
                     let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
-                    this.app.log('Response: ' + aiResponse);
-                    const cleanedResponse = aiResponse.match(/\{(.*)\}/)[1];
-                    this.app.log('Cleaned response: ' + cleanedResponse);
-                    const jsonResponse = JSON.parse(cleanedResponse);
-                    this.app.log('JSON test: ' + jsonResponse.success);
+                    let jsonResponse = {};
+                    try {
+                        jsonResponse = JSON.parse(aiResponse);
+                        // eslint-disable-next-line no-unused-vars
+                    } catch (error) {
+                        const cleanedResponse = aiResponse.match(/\{(.*)\}/)[1];
+                        jsonResponse = JSON.parse(cleanedResponse);
+                    }
                     this.app.log('Success getting response.');
                     if (jsonResponse.success) {
                         this.app.log('Success getting commandline.');
                         this.app.utils.executeCommand(jsonResponse.commandline);
+                        this.app.chat.editResponse(jsonResponse.response);
+                    } else {
+                        this.app.chat.editResponse(jsonResponse.response);
                     }
-                    this.app.chat.editResponse(jsonResponse.response);
                 },
             );
         } catch (error) {
