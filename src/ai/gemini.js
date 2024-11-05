@@ -189,6 +189,7 @@ export class GoogleGemini {
                         // eslint-disable-next-line no-unused-vars
                     } catch (error) {
                         const cleanedResponse = aiResponse.match(/\{(.*)\}/)[1];
+                        this.app.log(cleanedResponse);
                         try {
                             jsonResponse = JSON.parse(cleanedResponse);
                             this.app.log('Success getting json.');
