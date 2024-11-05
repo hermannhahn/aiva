@@ -6,9 +6,6 @@
 # Use `--help` for more information.
 # ==============================================================================
 
-# Get version from package.json
-VERSION=$(jq -r .version package.json) # E.g. 1.0.0
-
 function compile_resources() {
 	echo "Creating resource xml..."
 
@@ -48,6 +45,9 @@ function compile_translations() {
 
 function update_pot_file {
 	echo "Updating POT file..."
+	# Get version from package.json
+	VERSION=$(jq -r .version package.json) # E.g. 1.0.0
+	rm -f po/messages.pot
 	xgettext -k_ -kN_ -o po/messages.pot src/*.js --package-name="$UUID" --from-code=UTF-8 --package-version="$VERSION" --msgid-bugs-address="hermann.h.hahn@gmail.com"
 	echo "POT file updated."
 }
