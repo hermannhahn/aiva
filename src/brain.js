@@ -27,8 +27,18 @@ export class Brain {
 
     _isVoiceCommand(text) {
         text = text.toLowerCase();
-        if (text.startsWith(_('computer'))) {
-            return true;
+        let activationWords = [
+            _('computer'),
+            'aiva',
+            this.app.userSettings.ASSIST_NAME,
+        ];
+
+        // Check if the three first words includes "computer"
+        const words = text.split(/\s+/).slice(0, 3);
+        for (const word of words) {
+            if (activationWords.includes(word)) {
+                return true;
+            }
         }
         return false;
     }
@@ -48,38 +58,6 @@ HELP
                 this.app.openSettings();
             }
         }
-    }
-
-    _activationWord(text) {
-        const maxWords = 10;
-        const activationWords = [
-            _('open'),
-            _('start'),
-            _('launch'),
-            _('activate'),
-            _('close'),
-            _('stop'),
-            _('terminate'),
-            _('exit'),
-            _('run'),
-            _('execute'),
-            _('play'),
-            _('watch'),
-            _('search'),
-            _('find'),
-            _('read'),
-        ];
-        // Dividir o texto em palavras e pegar as primeiras 'maxWords'
-        const words = text.split(/\s+/).slice(0, maxWords);
-        const getActivationWord = () => {
-            for (const word of words) {
-                if (activationWords.includes(word)) {
-                    return word;
-                }
-            }
-            return false;
-        };
-        return getActivationWord();
     }
 
     _getSoftwareName(text) {
@@ -180,22 +158,33 @@ HELP
 
     _voiceCommandInterpreter(text) {
         text = text.toLowerCase();
-        const activationWordInText = this._activationWord(text);
-        if (activationWordInText) {
-            // If command is open
-            if (
-                activationWordInText === _('open') ||
-                activationWordInText === _('start') ||
-                activationWordInText === _('launch') ||
-                activationWordInText === _('run')
-            ) {
-                const softwareName = this._getSoftwareName(text);
-
-                if (softwareName) {
-                    this._runSoftware(softwareName);
-                } else {
-                    this.app.log('Software not found');
-                }
+        const maxWords = 10;
+        const openAppWords = [
+            _('open'),
+            'abre',
+            'abra',
+            _('start'),
+            'inicie',
+            _('launch'),
+            _('run'),
+            'rode',
+            _('execute'),
+        ];
+        const closeAppWords = [
+            _('close'),
+            _('terminate'),
+            _('exit'),
+            _('kill'),
+        ];
+        // Dividir o texto em palavras e pegar as primeiras 'maxWords'
+        const words = text.split(/\s+/).slice(0, maxWords);
+        for (const word of words) {
+            if (openAppWords.includes(word)) {
+                this.open.app(text);
+            } else if (closeAppWords.includes(word)) {
+                this.close.app(text);
+            } else {
+                this.app.log('Command not found');
             }
         }
     }

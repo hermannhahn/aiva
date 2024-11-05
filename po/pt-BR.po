@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-04 22:15-0300\n"
+"POT-Creation-Date: 2024-11-04 23:07-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -44,14 +44,6 @@ msgstr "Possível conteúdo perigoso na pergunta ou resposta."
 #: src/ai/gemini.js:134
 msgid "Sorry, I'm having connection trouble. Please try again."
 msgstr "Por favor, tente novamente."
-
-#: src/tmp/extension.js:80 src/extension.js:140
-msgid "AIVA"
-msgstr ""
-
-#: src/tmp/extension.js:153
-msgid "Me"
-msgstr "Eu"
 
 #: src/utils/utils.js:186
 msgid "Hi, I am"
@@ -182,136 +174,116 @@ msgstr "Estou pensando nisso..."
 msgid "Give me a moment to sort this out..."
 msgstr "Me dê um momento para organizar isso..."
 
-#: src/brain.js:30
+#: src/brain.js:31
 msgid "computer"
 msgstr "computador"
 
-#: src/brain.js:56 src/brain.js:187
-msgid "open"
-msgstr "abrir"
-
-#: src/brain.js:57 src/brain.js:188
-msgid "start"
-msgstr "iniciar"
-
-#: src/brain.js:58 src/brain.js:189
-msgid "launch"
-msgstr "iniciar"
-
-#: src/brain.js:59
-msgid "activate"
-msgstr "ativar"
-
-#: src/brain.js:60
-msgid "close"
-msgstr "fechar"
-
-#: src/brain.js:61
-msgid "stop"
-msgstr "parar"
-
-#: src/brain.js:62
-msgid "terminate"
-msgstr "encerrar"
-
-#: src/brain.js:63
-msgid "exit"
-msgstr "sair"
-
-#: src/brain.js:64 src/brain.js:190
-msgid "run"
-msgstr "rodar"
-
-#: src/brain.js:65
-msgid "execute"
-msgstr "executar"
-
 #: src/brain.js:66
-msgid "play"
-msgstr "tocar"
-
-#: src/brain.js:67
-msgid "watch"
-msgstr "assistir"
-
-#: src/brain.js:68
-msgid "search"
-msgstr "pesquisar"
-
-#: src/brain.js:69
-msgid "find"
-msgstr "procurar"
-
-#: src/brain.js:70
-msgid "read"
-msgstr "ler"
-
-#: src/brain.js:88
 msgid "google"
 msgstr ""
 
-#: src/brain.js:89
+#: src/brain.js:67
 msgid "chrome"
 msgstr ""
 
-#: src/brain.js:90
+#: src/brain.js:68
 msgid "firefox"
 msgstr ""
 
-#: src/brain.js:91
+#: src/brain.js:69
 msgid "vscode"
 msgstr ""
 
-#: src/brain.js:92
+#: src/brain.js:70
 msgid "code editor"
 msgstr "editor de código"
 
-#: src/brain.js:93
+#: src/brain.js:71
 msgid "youtube"
 msgstr ""
 
-#: src/brain.js:94
+#: src/brain.js:72
 msgid "gmail"
 msgstr ""
 
-#: src/brain.js:95
+#: src/brain.js:73
 msgid "outlook"
 msgstr ""
 
-#: src/brain.js:96
+#: src/brain.js:74
 msgid "maps"
 msgstr "mapas"
 
-#: src/brain.js:97
+#: src/brain.js:75
 msgid "calculator"
 msgstr "calculadora"
 
-#: src/brain.js:98
+#: src/brain.js:76
 msgid "calendar"
 msgstr "calendario"
 
-#: src/brain.js:99
+#: src/brain.js:77
 msgid "notepad"
 msgstr "bloco de notas"
 
-#: src/brain.js:100
+#: src/brain.js:78
 msgid "snap store"
 msgstr "loja de aplicativos"
 
-#: src/brain.js:101
+#: src/brain.js:79
 msgid "extensions manager"
 msgstr "gerenciador de extensões"
 
-#: src/brain.js:102
+#: src/brain.js:80
 msgid "settings"
 msgstr "preferências"
 
-#: src/brain.js:103
+#: src/brain.js:81
 msgid "emulator"
 msgstr "emulador"
 
-#: src/brain.js:104
+#: src/brain.js:82
 msgid "terminal"
+msgstr ""
+
+#: src/brain.js:163
+msgid "open"
+msgstr "abrir"
+
+#: src/brain.js:166
+msgid "start"
+msgstr "iniciar"
+
+#: src/brain.js:168
+msgid "launch"
+msgstr "iniciar"
+
+#: src/brain.js:169
+msgid "run"
+msgstr "rodar"
+
+#: src/brain.js:171
+msgid "execute"
+msgstr "executar"
+
+#: src/brain.js:174
+msgid "close"
+msgstr "fechar"
+
+#: src/brain.js:175
+msgid "terminate"
+msgstr "encerrar"
+
+#: src/brain.js:176
+msgid "exit"
+msgstr "sair"
+
+#: src/brain.js:177
+msgid "kill"
+msgstr ""
+
+#: src/extension.js:140
+msgid "AIVA"
 msgstr ""
 
 #: src/ui.js:31
@@ -382,3 +354,27 @@ msgstr "Salvar"
 #: src/prefs.js:705
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
+
+#~ msgid "Me"
+#~ msgstr "Eu"
+
+#~ msgid "activate"
+#~ msgstr "ativar"
+
+#~ msgid "stop"
+#~ msgstr "parar"
+
+#~ msgid "play"
+#~ msgstr "tocar"
+
+#~ msgid "watch"
+#~ msgstr "assistir"
+
+#~ msgid "search"
+#~ msgstr "pesquisar"
+
+#~ msgid "find"
+#~ msgstr "procurar"
+
+#~ msgid "read"
+#~ msgstr "ler"
