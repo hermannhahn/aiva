@@ -186,7 +186,7 @@ export class GoogleGemini {
                         .replace(/^`json\s*|\s*`$/g, '');
 
                     this.app.log('JSON RESPONSE: ' + jsonResponse);
-                    aiResponse = JSON.parse(jsonResponse);
+                    aiResponse = JSON.parse(jsonResponse.toString());
                     this.app.log('Success getting response.');
                     if (aiResponse.success) {
                         this.app.log('Success getting commandline.');
