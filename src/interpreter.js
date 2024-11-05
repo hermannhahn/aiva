@@ -103,9 +103,9 @@ HELP
         const words = text.split(/\s+/).slice(0, maxWords);
         for (const word of words) {
             if (openAppWords.includes(word)) {
-                this.open.app(text);
+                this.open.software(text);
             } else if (closeAppWords.includes(word)) {
-                this.close.app(text);
+                this.close.software(text);
             } else {
                 this.app.log('Command not found');
             }
