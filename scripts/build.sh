@@ -6,6 +6,9 @@
 # Use `--help` for more information.
 # ==============================================================================
 
+# Get version from package.json
+VERSION=$(jq -r .version package.json) # E.g. 1.0.0
+
 function compile_resources() {
 	echo "Creating resource xml..."
 
@@ -43,12 +46,29 @@ function compile_translations() {
 	echo "Translations compiled."
 }
 
+function update_pot_file {
+	echo "Updating POT file..."
+	xgettext -k_ -kN_ -o po/messages.pot src/*.js --package-name="$UUID" --from-code=UTF-8 --package-version="$VERSION" --msgid-bugs-address="hermann.h.hahn@gmail.com"
+	echo "POT file updated."
+}
+
+function update_po_files {
+	echo "Updating PO files..."
+	for LANG in de-DE fr-FR it-IT es-ES pt-BR; do
+        PO_FILE="po/$LANG.po"
+		if [[ ! -f "$PO_FILE" ]]; then
+			msgmerge --update "$PO_FILE" po/messages.pot
+		fi
+	done
+	echo "PO files updated."
+}
+
 function create_translations() {
     echo "Creating translations..."
     mkdir -p po
     xgettext -k_ -kN_ -o po/messages.pot src/*.js
 
-    for LANG in en-US de-DE fr-FR it-IT es-ES pt-BR; do
+    for LANG in de-DE fr-FR it-IT es-ES pt-BR; do
         PO_FILE="po/$LANG.po"
         
         # Cria o arquivo .po se não existir
@@ -104,6 +124,8 @@ function build_extension_package() {
 	# Compile translations, if there are any
 	if (find po/ -type f | grep ".po$") &> /dev/null; then
 		if command -v msgfmt &> /dev/null; then
+			update_pot_file
+			update_po_files
 			compile_translations
 		else
 			echo "WARNING: gettext isn't installed. Skipping compilation of translations..."
