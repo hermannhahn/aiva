@@ -212,7 +212,7 @@ export class MicrosoftAzure {
                         let transcription = response.DisplayText;
                         this.app.log('Transcrição: ' + transcription);
                         this.app.chat.addQuestion(transcription);
-                        this.app.brain.proccess(transcription);
+                        this.app.interpreter.proccess(transcription);
                     } else {
                         this.app.log('Nenhuma transcrição encontrada.');
                         this.app.chat.addQuestion('Transcribe error.');
