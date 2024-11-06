@@ -171,7 +171,7 @@ export class GoogleGemini {
                     let decoder = new TextDecoder('utf-8');
                     // Get response
                     let response = decoder.decode(bytes.get_data());
-                    let res = JSON.parse(response.toString());
+                    let res = JSON.parse(response);
                     if (res.error?.code !== 401 && res.error !== undefined) {
                         this.app.logError(res.error);
                         this.app.chat.editResponse(response, false);
@@ -195,32 +195,30 @@ export class GoogleGemini {
                         try {
                             jsonResponse = JSON.parse(cleanedResponse);
                             this.app.log('Success getting json.');
-                            if (jsonResponse.success) {
-                                this.app.log('Success getting commandline.');
-                                this.app.log(
-                                    'Running commandline: ' +
-                                        jsonResponse.commandline,
-                                );
-                                this.app.utils.executeCommand(
-                                    jsonResponse.commandline,
-                                );
-                                this.app.chat.editResponse(
-                                    jsonResponse.response,
-                                    false,
-                                );
-                            } else {
-                                this.app.chat.editResponse(
-                                    jsonResponse.response,
-                                    false,
-                                );
-                            }
                             // eslint-disable-next-line no-unused-vars
                         } catch (error) {
                             this.app.chat.editResponse(
                                 _("Sorry, I can't do this now."),
                                 false,
                             );
+                            return;
                         }
+                    }
+                    if (jsonResponse.success) {
+                        this.app.log('Success getting commandline.');
+                        this.app.log(
+                            'Running commandline: ' + jsonResponse.commandline,
+                        );
+                        this.app.utils.executeCommand(jsonResponse.commandline);
+                        this.app.chat.editResponse(
+                            jsonResponse.response,
+                            false,
+                        );
+                    } else {
+                        this.app.chat.editResponse(
+                            jsonResponse.response,
+                            false,
+                        );
                     }
                 },
             );
