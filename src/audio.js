@@ -111,6 +111,7 @@ export class Audio {
         this.app.log('Recording stopped successfully.');
 
         // Transcribe audio
+        this.app.chat.addQuestion(_('Transcribing...'));
         this.app.azure.transcribe(this.questionPath);
     }
 
