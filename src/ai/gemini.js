@@ -257,11 +257,13 @@ export class GoogleGemini {
      * build body for request
      */
     buildBody(userQuestion) {
+        let instructions =
+            'Respond to the request. If the request is to do something on the computer, respond that the word computer must be included at the beginning of the request so that you can fulfill the request. Request: ';
         this.app.chat.history.push({
             role: 'user',
             parts: [
                 {
-                    text: userQuestion,
+                    text: instructions + userQuestion,
                 },
             ],
         });
