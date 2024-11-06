@@ -59,15 +59,15 @@ msgstr "comando a ser executado no terminal"
 
 #: src/interpreter.js:75
 msgid "Rules for commandline value"
-msgstr ""
+msgstr "Regras para o valor da linha de comando"
 
 #: src/interpreter.js:75
 msgid "Do not use sudo"
-msgstr ""
+msgstr "Não use sudo"
 
 #: src/interpreter.js:75
 msgid "assume any application is already installed"
-msgstr ""
+msgstr "suponha que qualquer aplicativo já esteja instalado"
 
 #: src/interpreter.js:76
 msgid "Examples of responses"
@@ -167,8 +167,7 @@ msgstr "Por favor, tente novamente."
 
 #: src/ai/azure.js:204
 #, fuzzy
-msgid ""
-"Sorry, I'm having trouble to create a temporary audio file. Please try again."
+msgid "Sorry, I'm having trouble to create a temporary audio file. Please try again."
 msgstr "Por favor, tente novamente."
 
 #: src/ai/azure.js:221
