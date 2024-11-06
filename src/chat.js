@@ -89,7 +89,7 @@ export class Chat {
             `<b>${this.app.userSettings.ASSIST_NAME}:</b> ${formatedText}`,
         );
         this.app.ui.searchEntry.clutter_text.reactive = true;
-        if (voice) {
+        if (voice === true) {
             this.app.azure.tts(text);
         }
         this.app.utils.scrollToBottom();
