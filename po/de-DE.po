@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-06 14:31-0300\n"
+"POT-Creation-Date: 2024-11-06 14:47-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language de-DE\n"
@@ -150,24 +150,24 @@ msgstr ""
 msgid "Code example copied to clipboard"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini.js:92 src/ai/gemini.js:105 src/ai/gemini.js:118
-#: src/ai/gemini.js:131
+#: src/ai/gemini.js:82 src/ai/gemini.js:95 src/ai/gemini.js:108
+#: src/ai/gemini.js:121
 msgid "Sorry, I can't answer this question."
 msgstr ""
 
-#: src/ai/gemini.js:96
+#: src/ai/gemini.js:86
 msgid "Possible sexually explicit content in the question or answer."
 msgstr ""
 
-#: src/ai/gemini.js:109
+#: src/ai/gemini.js:99
 msgid "Possible hate speech in the question or answer."
 msgstr ""
 
-#: src/ai/gemini.js:122
+#: src/ai/gemini.js:112
 msgid "Possible harassment in the question or answer."
 msgstr ""
 
-#: src/ai/gemini.js:135
+#: src/ai/gemini.js:125
 msgid "Possible dangerous content in the question or answer."
 msgstr ""
 

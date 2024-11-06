@@ -62,16 +62,6 @@ export class GoogleGemini {
                         'Finish reason: ' + res.candidates[0].finishReason,
                     );
 
-                    // Command runner
-                    if (
-                        aiResponse
-                            .toLowerCase()
-                            .includes('execute local command')
-                    ) {
-                        this.app.interpreter.proccess(userQuestion);
-                        return;
-                    }
-
                     // SAFETY warning
                     if (res.candidates[0].finishReason === 'SAFETY') {
                         // get safety reason
@@ -138,6 +128,16 @@ export class GoogleGemini {
                             }
                         }
                     }
+                    // Command runner
+                    if (
+                        aiResponse
+                            .toLowerCase()
+                            .includes('execute local command')
+                    ) {
+                        this.app.interpreter.proccess(userQuestion);
+                        return;
+                    }
+
                     this.app.chat.editResponse(aiResponse);
                 },
             );
