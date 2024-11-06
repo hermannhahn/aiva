@@ -303,6 +303,15 @@ export class Utils {
 
     // Load history file
     loadHistoryFile() {
+        let chatHistory = [];
+        // Reset chatHistory if RECURSIVE_TALK is disabled
+        if (this.app.userSettings.RECURSIVE_TALK === false) {
+            this.app.log(
+                `History reset to empty array: ${this.app.userSettings.HISTORY_FILE}`,
+            );
+            return chatHistory;
+        }
+
         if (
             GLib.file_test(
                 this.app.userSettings.HISTORY_FILE,
@@ -319,18 +328,11 @@ export class Utils {
                 let decodedContents = new TextDecoder().decode(contents);
 
                 // Parse JSON
-                let chatHistory = JSON.parse(decodedContents);
+                chatHistory = JSON.parse(decodedContents);
                 this.app.log(
                     `History loaded from: ${this.app.userSettings.HISTORY_FILE}`,
                 );
 
-                // Reset chatHistory if RECURSIVE_TALK is disabled
-                if (this.app.userSettings.RECURSIVE_TALK === false) {
-                    chatHistory = [];
-                    this.app.log(
-                        `History reset to empty array: ${this.app.userSettings.HISTORY_FILE}`,
-                    );
-                }
                 return chatHistory;
             } catch (e) {
                 logError(
