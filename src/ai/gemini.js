@@ -127,7 +127,6 @@ export class GoogleGemini {
                             }
                         }
                         this.app.chat.editResponse(aiResponse);
-                        this.app.azure.tts(aiResponse);
                         return;
                     }
                     // Command runner
@@ -141,7 +140,6 @@ export class GoogleGemini {
                     }
 
                     this.app.chat.editResponse(aiResponse);
-                    this.app.azure.tts(aiResponse);
 
                     // Add to history
                     this.app.utils.addToHistory(userQuestion, aiResponse);
