@@ -191,11 +191,12 @@ export class GoogleGemini {
                             'Error getting json, trying clean response...',
                         );
                         // const cleanedString = responseString.replace(/`json\n|\n`/g, '');
-                        const cleanedResponse = aiResponse.replace(
+                        let cleanedResponse = aiResponse.replace(
                             /.*\{(.*)\}.*/s,
                             '$1',
                         );
                         // const cleanedResponse = aiResponse.match(/\{(.*)\}/)[1];
+                        cleanedResponse = `{${cleanedResponse}}`;
                         this.app.log(cleanedResponse);
                         try {
                             jsonResponse = JSON.parse(cleanedResponse);
