@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-06 13:29-0300\n"
+"POT-Creation-Date: 2024-11-06 13:42-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language it-IT\n"
@@ -53,84 +53,96 @@ msgid "command to be executed in the terminal"
 msgstr ""
 
 #: src/interpreter.js:74
-msgid "Examples of responses"
+msgid "Rules for commandline value"
 msgstr ""
 
-#: src/interpreter.js:75 src/interpreter.js:77 src/interpreter.js:79
-#: src/interpreter.js:81
-msgid "Request"
+#: src/interpreter.js:74
+msgid "Do not use sudo"
+msgstr ""
+
+#: src/interpreter.js:74
+msgid "assume any application is already installed"
 msgstr ""
 
 #: src/interpreter.js:75
-msgid "computer search for santos ferry crossing"
+msgid "Examples of responses"
 msgstr ""
 
 #: src/interpreter.js:76 src/interpreter.js:78 src/interpreter.js:80
 #: src/interpreter.js:82
+msgid "Request"
+msgstr ""
+
+#: src/interpreter.js:76
+msgid "computer search for santos ferry crossing"
+msgstr ""
+
+#: src/interpreter.js:77 src/interpreter.js:79 src/interpreter.js:81
+#: src/interpreter.js:83
 msgid "JSON Response"
 msgstr ""
 
-#: src/interpreter.js:76
+#: src/interpreter.js:77
 msgid "Searching for santos ferry crossing..."
 msgstr ""
 
-#: src/interpreter.js:76
+#: src/interpreter.js:77
 msgid "ferry+crossing+santos"
 msgstr ""
 
-#: src/interpreter.js:77
+#: src/interpreter.js:78
 msgid "search for cat videos on youtube"
 msgstr ""
 
-#: src/interpreter.js:78
+#: src/interpreter.js:79
 msgid "Searching for cat videos on youtube..."
 msgstr ""
 
-#: src/interpreter.js:78
+#: src/interpreter.js:79
 msgid "cat"
 msgstr ""
 
-#: src/interpreter.js:79
+#: src/interpreter.js:80
 msgid "remove the background of this image"
 msgstr ""
 
-#: src/interpreter.js:80
+#: src/interpreter.js:81
 msgid "I can't remove the background for you"
 msgstr ""
 
-#: src/interpreter.js:80
+#: src/interpreter.js:81
 msgid "but you can do it using apps or websites."
 msgstr ""
 
-#: src/interpreter.js:80
+#: src/interpreter.js:81
 msgid "One example is the canvas website."
 msgstr ""
 
-#: src/interpreter.js:80
+#: src/interpreter.js:81
 msgid "I'm opening it for you."
 msgstr ""
 
-#: src/interpreter.js:81
+#: src/interpreter.js:82
 msgid "apply the blur filter to the image"
 msgstr ""
 
-#: src/interpreter.js:82
+#: src/interpreter.js:83
 msgid "I can't do that for you"
 msgstr ""
 
-#: src/interpreter.js:82
+#: src/interpreter.js:83
 msgid "but you can use photoshop."
 msgstr ""
 
-#: src/interpreter.js:82
+#: src/interpreter.js:83
 msgid "Follow the instructions below to apply"
 msgstr ""
 
-#: src/interpreter.js:82
+#: src/interpreter.js:83
 msgid "the blur filter to the image using photoshop"
 msgstr ""
 
-#: src/interpreter.js:82
+#: src/interpreter.js:83
 msgid "Instructions: Open..."
 msgstr ""
 

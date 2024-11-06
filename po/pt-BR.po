@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-06 13:29-0300\n"
+"POT-Creation-Date: 2024-11-06 13:42-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -53,87 +53,99 @@ msgid "command to be executed in the terminal"
 msgstr "comando a ser executado no terminal"
 
 #: src/interpreter.js:74
+msgid "Rules for commandline value"
+msgstr ""
+
+#: src/interpreter.js:74
+msgid "Do not use sudo"
+msgstr ""
+
+#: src/interpreter.js:74
+msgid "assume any application is already installed"
+msgstr ""
+
+#: src/interpreter.js:75
 msgid "Examples of responses"
 msgstr "Exemplos de respostas"
 
-#: src/interpreter.js:75 src/interpreter.js:77 src/interpreter.js:79
-#: src/interpreter.js:81
+#: src/interpreter.js:76 src/interpreter.js:78 src/interpreter.js:80
+#: src/interpreter.js:82
 msgid "Request"
 msgstr "Solicitação"
 
-#: src/interpreter.js:75
+#: src/interpreter.js:76
 msgid "computer search for santos ferry crossing"
 msgstr "computador pesquise por cruzamento santos ferry"
 
-#: src/interpreter.js:76 src/interpreter.js:78 src/interpreter.js:80
-#: src/interpreter.js:82
+#: src/interpreter.js:77 src/interpreter.js:79 src/interpreter.js:81
+#: src/interpreter.js:83
 msgid "JSON Response"
 msgstr "Resposta JSON"
 
-#: src/interpreter.js:76
+#: src/interpreter.js:77
 msgid "Searching for santos ferry crossing..."
 msgstr "Pesquisando cruzamento santos ferry..."
 
-#: src/interpreter.js:76
+#: src/interpreter.js:77
 msgid "ferry+crossing+santos"
 msgstr "travessia+balsa+santos"
 
-#: src/interpreter.js:77
+#: src/interpreter.js:78
 msgid "search for cat videos on youtube"
 msgstr "pesquise por vídeos de gatos no youtube"
 
-#: src/interpreter.js:78
+#: src/interpreter.js:79
 msgid "Searching for cat videos on youtube..."
 msgstr "Pesquisando vídeos de gatos no youtube..."
 
-#: src/interpreter.js:78
+#: src/interpreter.js:79
 msgid "cat"
 msgstr "gato"
 
-#: src/interpreter.js:79
+#: src/interpreter.js:80
 msgid "remove the background of this image"
 msgstr "remova o fundo deste imagem"
 
-#: src/interpreter.js:80
+#: src/interpreter.js:81
 #, fuzzy
 msgid "I can't remove the background for you"
 msgstr "Peço desculpas, eu não posso responder a esta pergunta."
 
-#: src/interpreter.js:80
+#: src/interpreter.js:81
 msgid "but you can do it using apps or websites."
 msgstr "mas você pode fazer isso usando aplicativos ou sites."
 
-#: src/interpreter.js:80
+#: src/interpreter.js:81
 msgid "One example is the canvas website."
 msgstr "Um exemplo é o site do canvas."
 
-#: src/interpreter.js:80
+#: src/interpreter.js:81
 #, fuzzy
 msgid "I'm opening it for you."
 msgstr "Estou pensando nisso..."
 
-#: src/interpreter.js:81
+#: src/interpreter.js:82
 msgid "apply the blur filter to the image"
 msgstr "aplique o filtro de borramento na imagem"
 
-#: src/interpreter.js:82
+#: src/interpreter.js:83
 #, fuzzy
 msgid "I can't do that for you"
 msgstr "Peço desculpas, eu não posso responder a esta pergunta."
 
-#: src/interpreter.js:82
+#: src/interpreter.js:83
 msgid "but you can use photoshop."
 msgstr "mas você pode usar photoshop."
 
-#: src/interpreter.js:82
+#: src/interpreter.js:83
 msgid "Follow the instructions below to apply"
 msgstr "Siga as instruções abaixo para aplicar"
 
-#: src/interpreter.js:82
+#: src/interpreter.js:83
 msgid "the blur filter to the image using photoshop"
 msgstr "o filtro de borramento na imagem usando photoshop"
 
-#: src/interpreter.js:82
+#: src/interpreter.js:83
 msgid "Instructions: Open..."
 msgstr "Instruções: Abra..."
 
