@@ -250,11 +250,21 @@ export class GoogleGemini {
     }
 
     /**
+     * @param {*} userQuestion
+     *
      * @returns body contents
      *
      * build body for request
      */
-    buildBody() {
+    buildBody(userQuestion) {
+        this.app.chat.history.push({
+            role: 'user',
+            parts: [
+                {
+                    text: userQuestion,
+                },
+            ],
+        });
         const stringfiedHistory = JSON.stringify(this.app.chat.history);
         return `{"contents":${stringfiedHistory}}`;
     }
