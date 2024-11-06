@@ -25,9 +25,6 @@ export class GoogleGemini {
             this.destroyLoop();
         }
 
-        this.app.chat.addResponse('...');
-        this.app.ui.searchEntry.clutter_text.reactive = false;
-
         try {
             this.app.log('Getting response...');
             // Create http session
@@ -127,6 +124,9 @@ export class GoogleGemini {
                                 }
                             }
                         }
+                        this.app.chat.editResponse(aiResponse);
+                        this.app.azure.tts(aiResponse);
+                        return;
                     }
                     // Command runner
                     if (
@@ -273,15 +273,18 @@ export class GoogleGemini {
      * build body for request
      */
     buildBody(userQuestion) {
-        this.app.chat.history.push({
+        let question = {
             role: 'user',
             parts: [
                 {
                     text: userQuestion,
                 },
             ],
-        });
-        const stringfiedHistory = JSON.stringify(this.app.chat.history);
+        };
+        const stringfiedHistory = JSON.stringify(
+            ...this.app.utils.loadHistoryFile(),
+            question,
+        );
         return `{"contents":${stringfiedHistory}}`;
     }
 
