@@ -68,7 +68,7 @@ export class GoogleGemini {
                             .toLowerCase()
                             .includes('execute local command')
                     ) {
-                        this.runCommand(userQuestion, true);
+                        this.runCommand(userQuestion);
                         return;
                     }
 
@@ -158,7 +158,7 @@ export class GoogleGemini {
     runCommand(solicitation, destroyLoop = false) {
         // Destroy loop if it exists
         if (destroyLoop) {
-            this.destroyLoop();
+            this.app.destroyLoop();
         }
 
         this.app.chat.add('...');
