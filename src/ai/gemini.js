@@ -192,7 +192,7 @@ export class GoogleGemini {
                     let res = JSON.parse(response);
                     if (res.error?.code !== 401 && res.error !== undefined) {
                         this.app.logError(res.error);
-                        this.app.chat.editResponse(response);
+                        this.app.chat.editResponse(response, false);
                         this.app.azure.tts(
                             _("Sorry, I can't do this now. Try again later."),
                         );
@@ -223,11 +223,6 @@ export class GoogleGemini {
                                     "Sorry, I can't do this now. Try again later.",
                                 ),
                             );
-                            this.app.azure.tts(
-                                _(
-                                    "Sorry, I can't do this now. Try again later.",
-                                ),
-                            );
                             return;
                         }
                     }
@@ -237,11 +232,9 @@ export class GoogleGemini {
                             'Running commandline: ' + jsonResponse.commandline,
                         );
                         this.app.chat.editResponse(jsonResponse.response);
-                        this.app.azure.tts(jsonResponse.response);
                         this.app.utils.executeCommand(jsonResponse.commandline);
                     } else {
                         this.app.chat.editResponse(jsonResponse.response);
-                        this.app.azure.tts(jsonResponse.response);
                     }
                 },
             );
@@ -249,9 +242,6 @@ export class GoogleGemini {
             this.app.log('Error getting response.');
             this.app.logError(error);
             this.app.chat.editResponse(
-                _("Sorry, I'm having connection trouble. Please try again."),
-            );
-            this.app.azure.tts(
                 _("Sorry, I'm having connection trouble. Please try again."),
             );
         }
