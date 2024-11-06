@@ -258,7 +258,7 @@ export class GoogleGemini {
      */
     buildBody(userQuestion) {
         let instructions =
-            'Respond to the request. If the request is to do something on the computer, respond that the word computer must be included at the beginning of the request so that you can fulfill the request. Request: ';
+            'Response instructions: If the request is to do something on the computer, reply "execute local command", otherwise just respond to the request. Request: ';
         this.app.chat.history.push({
             role: 'user',
             parts: [
