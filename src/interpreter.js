@@ -13,7 +13,6 @@ export class Interpreter {
         } else if (this._isVoiceCommand(question)) {
             this._voiceCommandInterpreter(question);
         } else {
-            this.app.log('Normal text detected');
             this.app.gemini.response(question);
         }
         this.app.ui.searchEntry.clutter_text.reactive = true;
