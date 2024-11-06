@@ -34,7 +34,7 @@ export class Chat {
         this.app.utils.scrollToBottom();
     }
 
-    addQuestion(text, voice = true) {
+    addQuestion(text, voice = false) {
         const inputChat = this.app.ui.question();
         this.app.ui.chatSection.addMenuItem(inputChat);
         text = this.app.utils.inputformat(text);
@@ -49,7 +49,7 @@ export class Chat {
         this.app.utils.scrollToBottom();
     }
 
-    editQuestion(text, voice = true) {
+    editQuestion(text, voice = false) {
         let formatedText = this.app.utils.inputformat(text);
         this.app.ui.inputChat.label.clutter_text.set_markup(
             `<b>${this.app.userSettings.USERNAME}:</b> ${formatedText}`,
