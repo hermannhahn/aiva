@@ -174,7 +174,7 @@ export class GoogleGemini {
                     let res = JSON.parse(response.toString());
                     if (res.error?.code !== 401 && res.error !== undefined) {
                         this.app.logError(res.error);
-                        this.app.chat.editResponse(response);
+                        this.app.chat.editResponse(response, false);
                         return;
                     }
                     let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
@@ -208,10 +208,12 @@ export class GoogleGemini {
                                 );
                                 this.app.chat.editResponse(
                                     jsonResponse.response,
+                                    false,
                                 );
                             } else {
                                 this.app.chat.editResponse(
                                     jsonResponse.response,
+                                    false,
                                 );
                             }
                             // eslint-disable-next-line no-unused-vars
