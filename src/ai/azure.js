@@ -29,7 +29,12 @@ export class MicrosoftAzure {
      */
     tts(text) {
         // Extract code and tts from response
-        if (text === '...' || text === null) {
+        if (
+            text === '...' ||
+            text === null ||
+            text === '' ||
+            text === undefined
+        ) {
             return;
         }
 
@@ -71,6 +76,9 @@ export class MicrosoftAzure {
         );
         if (!success) {
             this.app.log('Error creating temporary audio file.');
+            this.app.chat.addResponse(
+                _("Sorry, I'm having connection trouble. Please try again."),
+            );
             return;
         }
 
@@ -82,6 +90,9 @@ export class MicrosoftAzure {
             this.app.log('SSML written to temporary audio file.');
         } catch (e) {
             this.app.log('Error writing to temporary audio file: ' + e.message);
+            this.app.chat.addResponse(
+                _("Sorry, I'm having connection trouble. Please try again."),
+            );
             return;
         }
 
@@ -121,9 +132,19 @@ export class MicrosoftAzure {
                     this.app.audio.play(tempFilePath);
                 } else {
                     this.app.log('Requisition error: ' + stderr);
+                    this.app.chat.addResponse(
+                        _(
+                            "Sorry, I'm having connection trouble. Please try again.",
+                        ),
+                    );
                 }
             } catch (e) {
                 this.app.log('Error processing response: ' + e.message);
+                this.app.chat.addResponse(
+                    _(
+                        "Sorry, I'm having connection trouble. Please try again.",
+                    ),
+                );
             } finally {
                 // GLib.unlink(tempFilePath);
             }
@@ -147,7 +168,12 @@ export class MicrosoftAzure {
          */
         let [, audioBinary] = file.load_contents(null);
         if (!audioBinary) {
-            this.app.log('Falha ao carregar o arquivo de áudio.');
+            this.app.log('Fail to load audio file.');
+            this.app.chat.addResponse(
+                _(
+                    "Sorry, I'm having trouble to load the audio file. Please try again.",
+                ),
+            );
             return;
         }
 
@@ -173,6 +199,11 @@ export class MicrosoftAzure {
         );
         if (!success) {
             this.app.log('Error creating temporary audio file.');
+            this.app.chat.addResponse(
+                _(
+                    "Sorry, I'm having trouble to create a temporary audio file. Please try again.",
+                ),
+            );
             return;
         }
 
@@ -184,6 +215,11 @@ export class MicrosoftAzure {
         } catch (e) {
             this.app.log(
                 'Erro ao escrever no arquivo temporário: ' + e.message,
+            );
+            this.app.chat.addResponse(
+                _(
+                    "Sorry, I'm having trouble to write the audio file. Please try again.",
+                ),
             );
             return;
         }
@@ -231,10 +267,12 @@ export class MicrosoftAzure {
                     }
                 } else {
                     this.app.log('Erro na requisição: ' + stderr);
+                    this.app.chat.editQuestion('Transcribe error.');
                     this.app.chat.addResponse(stderr);
                 }
             } catch (e) {
                 this.app.log('Erro ao processar resposta: ' + e.message);
+                this.app.chat.editQuestion(e.message);
                 this.app.chat.addResponse(e.message);
             }
         });
