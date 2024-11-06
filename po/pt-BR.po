@@ -22,7 +22,7 @@ msgstr "computador"
 
 #: src/interpreter.js:67
 msgid "For the request"
-msgstr ""
+msgstr "Para a solicitação"
 
 #: src/interpreter.js:68
 msgid "Retorne um JSON com as seguintes chaves"
