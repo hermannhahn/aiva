@@ -144,26 +144,8 @@ export class GoogleGemini {
                     this.app.chat.editResponse(aiResponse);
                     this.app.azure.tts(aiResponse);
 
-                    // Save history
-                    if (this.app.userSettings.RECURSIVE_TALK) {
-                        this.app.chat.history.push({
-                            role: 'user',
-                            parts: [
-                                {
-                                    userQuestion,
-                                },
-                            ],
-                        });
-                        this.app.chat.history.push({
-                            role: 'model',
-                            parts: [
-                                {
-                                    aiResponse,
-                                },
-                            ],
-                        });
-                        this.app.utils.saveHistory();
-                    }
+                    // Add to history
+                    this.app.utils.addToHistory(userQuestion, aiResponse);
                 },
             );
         } catch (error) {
