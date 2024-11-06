@@ -26,36 +26,35 @@ msgstr "Para a solicitação"
 
 #: src/interpreter.js:68
 msgid "Return a JSON with the following keys"
-msgstr ""
+msgstr "Retorne um JSON com as seguintes chaves"
 
 #: src/interpreter.js:69
 msgid "true if it can be executed"
-msgstr ""
+msgstr "true se for possível ser executado"
 
 #: src/interpreter.js:69
 msgid "on a Linux Ubuntu terminal"
-msgstr ""
+msgstr "em um terminal Linux Ubuntu"
 
 #: src/interpreter.js:69
 msgid "false otherwise"
-msgstr ""
+msgstr "false caso contrário"
 
 #: src/interpreter.js:70
 msgid "text to be spoken, informing success, failure or action"
-msgstr ""
+msgstr "texto para ser falado, informando sucesso, fracasso ou ação"
 
 #: src/interpreter.js:70
-#, fuzzy
 msgid "e"
-msgstr "Eu"
+msgstr "and"
 
 #: src/interpreter.js:71
 msgid "command to be executed in the terminal"
-msgstr ""
+msgstr "comando a ser executado no terminal"
 
 #: src/interpreter.js:72
 msgid "Examples of responses"
-msgstr ""
+msgstr "Exemplos de respostas"
 
 #: src/interpreter.js:73 src/interpreter.js:75 src/interpreter.js:77
 #: src/interpreter.js:79
