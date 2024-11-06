@@ -64,19 +64,20 @@ HELP
     _voiceCommandInterpreter(text) {
         let request = text.toLowerCase();
         this.app.gemini.runCommand(`
+Para a solicitação: "${request}"
 Retorne um JSON com as seguintes chaves: 
-'success' (true se possível executar no terminal Linux Ubuntu, false caso contrário), 
-'response' (texto a ser falado, informando sucesso ou fracasso) e 
+'success' (true se possível executar no terminal Linux Ubuntu, false caso contrário),
+'response' (texto a ser falado, informando sucesso, fracasso ou ação) e
 'commandline' (comando a ser executado no terminal).
-Exemplos: \n
-Soli 1: "computador pesquise por travessia balsa santos"\n
-Example 1: "{success: true, response: 'Pesquisando por travessia balsa santos...', commandline: 'firefox https://www.google.com/search?q=travessia+balsa+santos'}"\n
-Example 2: "computador, remova o fundo dessa imagem"\n
-Example 2: "{success: true, response: 'Não consigo remover o fundo para você, porém você pode fazer isso utilizando aplicativos ou sites. Um exemplo é o site canvas. Estou abrindo para você.', commandline: 'firefox https://www.canva.com/pt_br/recursos/remover-fundo/'}"\n
-Example 3: "computador, aplique o filtro de blur na imagem"\n
-Example 3: "{success: false, response: 'Não consigo fazer isso para você, porém você pode utilizar o photoshop. Siga as instruções a seguir para aplicar o filtro de blur na imagem pelo photoshop. Instruções: Abra....', commandline: null}"\n
-Example 4: "computador pesquise por videos de gatos no youtube"\n
-Example 4: "{success: true, response: 'Pesquisando por videos de gatos no youtube...', commandline: 'firefox https://www.youtube.com/results?search_query=videos+de+gatos'}"\n
+Exemplo:
+Solicitação: "computador pesquise por travessia balsa santos"
+Resposta JSON: "{success: true, response: 'Pesquisando por travessia balsa santos...', commandline: 'firefox https://www.google.com/search?q=travessia+balsa+santos'}"
 `);
     }
 }
+// Example 2: "computador, remova o fundo dessa imagem"\n
+// Example 2: "{success: true, response: 'Não consigo remover o fundo para você, porém você pode fazer isso utilizando aplicativos ou sites. Um exemplo é o site canvas. Estou abrindo para você.', commandline: 'firefox https://www.canva.com/pt_br/recursos/remover-fundo/'}"\n
+// Example 3: "computador, aplique o filtro de blur na imagem"\n
+// Example 3: "{success: false, response: 'Não consigo fazer isso para você, porém você pode utilizar o photoshop. Siga as instruções a seguir para aplicar o filtro de blur na imagem pelo photoshop. Instruções: Abra....', commandline: null}"\n
+// Example 4: "computador pesquise por videos de gatos no youtube"\n
+// Example 4: "{success: true, response: 'Pesquisando por videos de gatos no youtube...', commandline: 'firefox https://www.youtube.com/results?search_query=videos+de+gatos'}"\n
