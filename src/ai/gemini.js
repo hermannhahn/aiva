@@ -274,18 +274,13 @@ export class GoogleGemini {
      * build body for request
      */
     buildBody(userQuestion) {
-        let question = {
-            role: 'user',
-            parts: [
-                {
-                    text: userQuestion,
-                },
-            ],
-        };
-        const stringfiedHistory = JSON.stringify(
-            ...this.app.utils.loadHistoryFile(),
-            question,
-        );
+        const stringfiedHistory = JSON.stringify([
+            ...this.app.chat.recursiveHistory,
+            {
+                role: 'user',
+                parts: [{text: userQuestion}],
+            },
+        ]);
         return `{"contents":${stringfiedHistory}}`;
     }
 
