@@ -70,14 +70,14 @@ ${_('Return a JSON with the following keys')}:
 'response' (${_('text to be spoken, informing success, failure or action')}) ${_('e')}
 'commandline' (${_('command to be executed in the terminal')}).
 ${_('Examples of responses')}:
-${_('Solicitação')}: "${_('computer search for santos ferry crossing')}"
-${_('Resposta JSON')}: "{success: true, response: '${_('Searching for santos ferry crossing...')}', commandline: 'firefox https://www.google.com/search?q=${_('travessia+balsa+santos')}'}"
-${_('Solicitação')}: "${_('search for cat videos on youtube')}"
-${_('Resposta JSON')}: "{success: true, response: '${_('Searching for cat videos on youtube...')}', commandline: 'firefox firefox https://www.youtube.com/results?search_query=${_('cat')}'}"
-${_('Solicitação')}: "${_('remove the background of this image')}"
-${_('Resposta JSON')}: "{success: true, response: '${_("I can't remove the background for you")}, ${_('but you can do it using apps or websites.')}. ${_('One example is the canvas website.')}. ${_("I'm opening it for you.")}.', commandline: 'firefox https://www.canva.com/pt_br/recursos/remover-fundo/'}"
-${_('Solicitação')}: "${_('apply the blur filter to the image')}"
-${_('Resposta JSON')}: "{success: false, response: '${_("I can't do that for you")}, ${_('but you can use photoshop.')}. ${_('Follow the instructions below to apply')} ${_('the blur filter to the image using photoshop')}. ${_('Instructions: Open...')}', commandline: null}"
+${_('Request')}: "${_('computer search for santos ferry crossing')}"
+${_('JSON Response')}: "{success: true, response: '${_('Searching for santos ferry crossing...')}', commandline: 'firefox https://www.google.com/search?q=${_('travessia+balsa+santos')}'}"
+${_('Request')}: "${_('search for cat videos on youtube')}"
+${_('JSON Response')}: "{success: true, response: '${_('Searching for cat videos on youtube...')}', commandline: 'firefox firefox https://www.youtube.com/results?search_query=${_('cat')}'}"
+${_('Request')}: "${_('remove the background of this image')}"
+${_('JSON Response')}: "{success: true, response: '${_("I can't remove the background for you")}, ${_('but you can do it using apps or websites.')}. ${_('One example is the canvas website.')}. ${_("I'm opening it for you.")}.', commandline: 'firefox https://www.canva.com/pt_br/recursos/remover-fundo/'}"
+${_('Request')}: "${_('apply the blur filter to the image')}"
+${_('JSON Response')}: "{success: false, response: '${_("I can't do that for you")}, ${_('but you can use photoshop.')}. ${_('Follow the instructions below to apply')} ${_('the blur filter to the image using photoshop')}. ${_('Instructions: Open...')}', commandline: null}"
 `);
     }
 }
