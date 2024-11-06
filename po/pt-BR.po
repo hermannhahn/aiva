@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-06 16:17-0300\n"
+"POT-Creation-Date: 2024-11-06 16:23-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -176,12 +176,12 @@ msgstr "Possível assédio na pergunta ou resposta."
 msgid "Possible dangerous content in the question or answer."
 msgstr "Possível conteúdo perigoso na pergunta ou resposta."
 
-#: src/ai/gemini.js:155 src/ai/gemini.js:250
+#: src/ai/gemini.js:155 src/ai/gemini.js:240
 #, fuzzy
 msgid "Sorry, I'm having connection trouble. Please try again."
 msgstr "Por favor, tente novamente."
 
-#: src/ai/gemini.js:222
+#: src/ai/gemini.js:219
 #, fuzzy
 msgid "Sorry, I can't do this now."
 msgstr "Peço desculpas, eu não posso responder a esta pergunta."

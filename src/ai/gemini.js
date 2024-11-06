@@ -168,9 +168,6 @@ export class GoogleGemini {
             this.app.destroyLoop();
         }
 
-        this.app.chat.editResponse('...');
-        this.app.ui.searchEntry.clutter_text.reactive = false;
-
         try {
             this.app.log('Getting response...');
             // Create http session
@@ -195,7 +192,7 @@ export class GoogleGemini {
                     let res = JSON.parse(response);
                     if (res.error?.code !== 401 && res.error !== undefined) {
                         this.app.logError(res.error);
-                        this.app.chat.editResponse(response, false);
+                        this.app.chat.editResponse(response);
                         return;
                     }
                     let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
@@ -220,7 +217,6 @@ export class GoogleGemini {
                         } catch (error) {
                             this.app.chat.editResponse(
                                 _("Sorry, I can't do this now."),
-                                false,
                             );
                             return;
                         }
@@ -231,15 +227,9 @@ export class GoogleGemini {
                             'Running commandline: ' + jsonResponse.commandline,
                         );
                         this.app.utils.executeCommand(jsonResponse.commandline);
-                        this.app.chat.editResponse(
-                            jsonResponse.response,
-                            false,
-                        );
+                        this.app.chat.editResponse(jsonResponse.response);
                     } else {
-                        this.app.chat.editResponse(
-                            jsonResponse.response,
-                            false,
-                        );
+                        this.app.chat.editResponse(jsonResponse.response);
                     }
                 },
             );
