@@ -179,7 +179,7 @@ export class Utils {
     historyInitContent() {
         let history = [];
         let instructions =
-            'Response instructions: If the request is to do something on the computer, reply "execute local command", otherwise just respond to the request. Request: ';
+            'Instructions: If my request is to do something on the computer, just reply: "execute local command", otherwise answer the requests.';
         history.push({
             role: 'user',
             parts: [
