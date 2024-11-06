@@ -179,7 +179,7 @@ export class GoogleGemini {
                     }
                     let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
                     this.app.log('Success getting response.');
-                    this.app.log('aiResponse: ' + aiResponse);
+                    // this.app.log('aiResponse: ' + aiResponse);
                     let jsonResponse = {};
                     try {
                         jsonResponse = JSON.parse(aiResponse);
@@ -187,22 +187,20 @@ export class GoogleGemini {
                         this.app.log('Success getting json.');
                         // eslint-disable-next-line no-unused-vars
                     } catch (error) {
-                        this.app.log(
-                            'Error getting json, trying clean response...',
-                        );
-                        // const cleanedString = responseString.replace(/`json\n|\n`/g, '');
                         let cleanedResponse = aiResponse.replace(
                             /.*\{(.*)\}.*/s,
                             '$1',
                         );
-                        // const cleanedResponse = aiResponse.match(/\{(.*)\}/)[1];
                         cleanedResponse = `{${cleanedResponse}}`;
-                        this.app.log(cleanedResponse);
                         try {
                             jsonResponse = JSON.parse(cleanedResponse);
                             this.app.log('Success getting json.');
                             if (jsonResponse.success) {
                                 this.app.log('Success getting commandline.');
+                                this.app.log(
+                                    'Running commandline: ' +
+                                        jsonResponse.commandline,
+                                );
                                 this.app.utils.executeCommand(
                                     jsonResponse.commandline,
                                 );
