@@ -15,7 +15,7 @@ export class GoogleGemini {
     /**
      *
      * @param {*} userQuestion
-     * @param {*} destroyLoop [default is false]
+     * @param {boolean} [destroyLoop=false]
      *
      * get ai response for user question
      */
@@ -24,6 +24,8 @@ export class GoogleGemini {
         if (destroyLoop) {
             this.destroyLoop();
         }
+
+        this.app.chat.addResponse('...');
 
         try {
             this.app.log('Getting response...');
@@ -134,10 +136,7 @@ export class GoogleGemini {
                             .toLowerCase()
                             .includes('execute local command')
                     ) {
-                        this.app.chat.editResponse('Proccessing...');
-                        this.app.interpreter.proccess(
-                            _('computer') + ' ' + userQuestion,
-                        );
+                        this.runCommand(userQuestion, false, false);
                         return;
                     }
 
@@ -151,7 +150,7 @@ export class GoogleGemini {
         } catch (error) {
             this.app.log('Error getting response.');
             this.app.logError(error);
-            this.app.chat.addResponse(
+            this.app.chat.editResponse(
                 _("Sorry, I'm having connection trouble. Please try again."),
             );
         }
@@ -160,12 +159,17 @@ export class GoogleGemini {
     /**
      *
      * @param {*} solicitation
-     * @param {*} destroyLoop
+     * @param {boolean} [destroyLoop=false]
+     * @param {boolean} [waitResponse=true]
      */
-    runCommand(solicitation, destroyLoop = false) {
+    runCommand(solicitation, destroyLoop = false, waitResponse = true) {
         // Destroy loop if it exists
         if (destroyLoop) {
             this.app.destroyLoop();
+        }
+
+        if (waitResponse) {
+            this.app.chat.addResponse('...');
         }
 
         try {
