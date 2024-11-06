@@ -178,11 +178,21 @@ export class Utils {
 
     historyInitContent() {
         let history = [];
+        let instructions =
+            'Response instructions: If the request is to do something on the computer, reply "execute local command", otherwise just respond to the request. Request: ';
         history.push({
             role: 'user',
             parts: [
                 {
                     text: this.app.gemini.getTuneString(),
+                },
+            ],
+        });
+        history.push({
+            role: 'user',
+            parts: [
+                {
+                    text: instructions,
                 },
             ],
         });
