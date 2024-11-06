@@ -64,20 +64,20 @@ HELP
     _voiceCommandInterpreter(text) {
         let request = text.toLowerCase();
         this.app.gemini.runCommand(`
-Para a solicitação: "${request}"
-Retorne um JSON com as seguintes chaves: 
-'success' (true se possível executar no terminal Linux Ubuntu, false caso contrário),
-'response' (texto a ser falado, informando sucesso, fracasso ou ação) e
-'commandline' (comando a ser executado no terminal).
-Exemplos de respostas:
-Solicitação: "computador pesquise por travessia balsa santos"
-Resposta JSON: "{success: true, response: 'Pesquisando por travessia balsa santos...', commandline: 'firefox https://www.google.com/search?q=travessia+balsa+santos'}"
-Solicitação: "pesquise por videos de gatos no youtube"
-Resposta JSON: "{success: true, response: 'Pesquisando por travessia balsa santos...', commandline: 'firefox firefox https://www.youtube.com/results?search_query=videos+de+gatos'}"
-Solicitação: "remova o fundo dessa imagem"
-Resposta JSON: "{success: true, response: 'Não consigo remover o fundo para você, porém você pode fazer isso utilizando aplicativos ou sites. Um exemplo é o site canvas. Estou abrindo para você.', commandline: 'firefox https://www.canva.com/pt_br/recursos/remover-fundo/'}"
-Solicitação: "aplique o filtro de blur na imagem"
-Resposta JSON: "{success: false, response: 'Não consigo fazer isso para você, porém você pode utilizar o photoshop. Siga as instruções a seguir para aplicar o filtro de blur na imagem pelo photoshop. Instruções: Abra....', commandline: null}"
+"${_('For the request')}": "${request}"
+${_('Retorne um JSON com as seguintes chaves')}:
+'success' (${_('true se possível executar no terminal Linux Ubuntu, false caso contrário')}),
+'response' (${_('texto a ser falado, informando sucesso, fracasso ou ação')}) ${_('e')}
+'commandline' (${_('comando a ser executado no terminal')}).
+${_('Exemplos de respostas')}:
+${_('Solicitação')}: "${_('computador pesquise por travessia balsa santos')}"
+${_('Resposta JSON')}: "{success: true, response: '${_('Pesquisando por travessia balsa santos...')}', commandline: 'firefox https://www.google.com/search?q=${_('travessia+balsa+santos')}'}"
+${_('Solicitação')}: "${_('pesquise por videos de gatos no youtube')}"
+${_('Resposta JSON')}: "{success: true, response: '${_('Pesquisando por travessia balsa santos...')}', commandline: 'firefox firefox https://www.youtube.com/results?search_query=videos+de+gatos'}"
+${_('Solicitação')}: "${_('remova o fundo dessa imagem')}"
+${_('Resposta JSON')}: "{success: true, response: '${_('Não consigo remover o fundo para você')}, ${_('porém você pode fazer isso utilizando aplicativos ou sites')}. ${_('Um exemplo é o site canvas')}. ${_('Estou abrindo para você')}.', commandline: 'firefox https://www.canva.com/pt_br/recursos/remover-fundo/'}"
+${_('Solicitação')}: "${_('aplique o filtro de blur na imagem')}"
+${_('Resposta JSON')}: "{success: false, response: '${_('Não consigo fazer isso para você')}, ${_('porém você pode utilizar o photoshop')}. ${_('Siga as instruções a seguir para aplicar')} ${_('o filtro de blur na imagem pelo photoshop')}. ${_('Instruções: Abra....')}', commandline: null}"
 `);
     }
 }

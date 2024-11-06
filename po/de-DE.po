@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-06 00:05-0300\n"
+"POT-Creation-Date: 2024-11-06 00:23-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language de-DE\n"
@@ -18,6 +18,105 @@ msgstr ""
 
 #: src/interpreter.js:32
 msgid "computer"
+msgstr ""
+
+#: src/interpreter.js:67
+msgid "For the request"
+msgstr ""
+
+#: src/interpreter.js:68
+msgid "Retorne um JSON com as seguintes chaves"
+msgstr ""
+
+#: src/interpreter.js:69
+msgid ""
+"true se possível executar no terminal Linux Ubuntu, false caso contrário"
+msgstr ""
+
+#: src/interpreter.js:70
+msgid "texto a ser falado, informando sucesso, fracasso ou ação"
+msgstr ""
+
+#: src/interpreter.js:70
+msgid "e"
+msgstr ""
+
+#: src/interpreter.js:71
+msgid "comando a ser executado no terminal"
+msgstr ""
+
+#: src/interpreter.js:72
+msgid "Exemplos de respostas"
+msgstr ""
+
+#: src/interpreter.js:73 src/interpreter.js:75 src/interpreter.js:77
+#: src/interpreter.js:79
+msgid "Solicitação"
+msgstr ""
+
+#: src/interpreter.js:73
+msgid "computador pesquise por travessia balsa santos"
+msgstr ""
+
+#: src/interpreter.js:74 src/interpreter.js:76 src/interpreter.js:78
+#: src/interpreter.js:80
+msgid "Resposta JSON"
+msgstr ""
+
+#: src/interpreter.js:74 src/interpreter.js:76
+msgid "Pesquisando por travessia balsa santos..."
+msgstr ""
+
+#: src/interpreter.js:74
+msgid "travessia+balsa+santos"
+msgstr ""
+
+#: src/interpreter.js:75
+msgid "pesquise por videos de gatos no youtube"
+msgstr ""
+
+#: src/interpreter.js:77
+msgid "remova o fundo dessa imagem"
+msgstr ""
+
+#: src/interpreter.js:78
+msgid "Não consigo remover o fundo para você"
+msgstr ""
+
+#: src/interpreter.js:78
+msgid "porém você pode fazer isso utilizando aplicativos ou sites"
+msgstr ""
+
+#: src/interpreter.js:78
+msgid "Um exemplo é o site canvas"
+msgstr ""
+
+#: src/interpreter.js:78
+msgid "Estou abrindo para você"
+msgstr ""
+
+#: src/interpreter.js:79
+msgid "aplique o filtro de blur na imagem"
+msgstr ""
+
+#: src/interpreter.js:80
+msgid "Não consigo fazer isso para você"
+msgstr ""
+
+#: src/interpreter.js:80
+msgid "porém você pode utilizar o photoshop"
+msgstr ""
+
+#: src/interpreter.js:80
+msgid "Siga as instruções a seguir para aplicar"
+msgstr ""
+
+#: src/interpreter.js:80
+msgid "o filtro de blur na imagem pelo photoshop"
+msgstr ""
+
+#: src/interpreter.js:80
+msgid "Instruções: Abra...."
 msgstr ""
 
 #: src/chat.js:81 src/chat.js:137
