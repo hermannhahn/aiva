@@ -28,6 +28,18 @@ export class MicrosoftAzure {
      * Microsoft Text-to-Speech API
      */
     tts(text) {
+        // Extract code and tts from response
+        if (text === '...' || text === null) {
+            return;
+        }
+
+        // Speech response
+        this.app.log('Speech response...');
+        let answer = this.app.utils.extractCodeAndTTS(text);
+        if (answer.tts === null) {
+            return;
+        }
+
         /**
          * API URL
          */
