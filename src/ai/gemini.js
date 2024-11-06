@@ -57,6 +57,19 @@ export class GoogleGemini {
                     }
                     let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
                     this.app.log('Success getting response.');
+                    this.app.log(
+                        'Finish reason: ' + res.candidates[0].finishReason,
+                    );
+
+                    // Command runner
+                    if (
+                        aiResponse
+                            .toLowerCase()
+                            .includes('execute local command')
+                    ) {
+                        this.runCommand(userQuestion, true);
+                        return;
+                    }
 
                     // SAFETY warning
                     if (res.candidates[0].finishReason === 'SAFETY') {
@@ -257,13 +270,11 @@ export class GoogleGemini {
      * build body for request
      */
     buildBody(userQuestion) {
-        let instructions =
-            'Response instructions: If the request is to do something on the computer, reply "execute local command", otherwise just respond to the request. Request: ';
         this.app.chat.history.push({
             role: 'user',
             parts: [
                 {
-                    text: instructions + userQuestion,
+                    text: userQuestion,
                 },
             ],
         });
