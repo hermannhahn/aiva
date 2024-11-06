@@ -261,6 +261,28 @@ export class Utils {
         return this.loadHistoryFile();
     }
 
+    addToHistory(userQuestion, aiResponse) {
+        if (this.app.userSettings.RECURSIVE_TALK) {
+            this.app.chat.history.push({
+                role: 'user',
+                parts: [
+                    {
+                        userQuestion,
+                    },
+                ],
+            });
+            this.app.chat.history.push({
+                role: 'model',
+                parts: [
+                    {
+                        aiResponse,
+                    },
+                ],
+            });
+            this.saveHistory();
+        }
+    }
+
     // Save to history file
     saveHistory() {
         try {
