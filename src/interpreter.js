@@ -34,11 +34,13 @@ export class Interpreter {
             this.app.userSettings.ASSIST_NAME,
         ];
 
-        // Check if the first three words includes "computer"
-        const words = text.split(/\s+/).slice(0, 3);
+        // Check if the first four words is "computer", ignore special characters, ignore ",", ".", ":", "?", "!" etc..
+        const words = text.split(/\s+/).slice(0, 4);
         for (const word of words) {
-            if (activationWords.includes(word)) {
-                return true;
+            for (const activationWord of activationWords) {
+                if (word.includes(activationWord)) {
+                    return true;
+                }
             }
         }
         return false;
