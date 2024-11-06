@@ -41,15 +41,6 @@ export class Chat {
             `<b>${this.app.userSettings.USERNAME}:</b> ${text}`,
         );
 
-        // Add to chat
-        this.app.chat.history.push({
-            role: 'user',
-            parts: [
-                {
-                    text,
-                },
-            ],
-        });
         // Save history.json
         if (this.app.userSettings.RECURSIVE_TALK) {
             this.app.utils.saveHistory();

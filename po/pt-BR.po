@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-06 13:42-0300\n"
+"POT-Creation-Date: 2024-11-06 13:48-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -149,7 +149,7 @@ msgstr "o filtro de borramento na imagem usando photoshop"
 msgid "Instructions: Open..."
 msgstr "Instruções: Abra..."
 
-#: src/chat.js:81 src/chat.js:137
+#: src/chat.js:72 src/chat.js:128
 msgid "Code example copied to clipboard"
 msgstr "Código copiado para a área de transferência"
 
