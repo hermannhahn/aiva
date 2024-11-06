@@ -71,7 +71,7 @@ ${_('Return a JSON with the following keys')}:
 'commandline' (${_('command to be executed in the terminal')}).
 ${_('Examples of responses')}:
 ${_('Request')}: "${_('computer search for santos ferry crossing')}"
-${_('JSON Response')}: "{success: true, response: '${_('Searching for santos ferry crossing...')}', commandline: 'firefox https://www.google.com/search?q=${_('travessia+balsa+santos')}'}"
+${_('JSON Response')}: "{success: true, response: '${_('Searching for santos ferry crossing...')}', commandline: 'firefox https://www.google.com/search?q=${_('ferry+crossing+santos')}'}"
 ${_('Request')}: "${_('search for cat videos on youtube')}"
 ${_('JSON Response')}: "{success: true, response: '${_('Searching for cat videos on youtube...')}', commandline: 'firefox firefox https://www.youtube.com/results?search_query=${_('cat')}'}"
 ${_('Request')}: "${_('remove the background of this image')}"
