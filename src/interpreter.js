@@ -10,17 +10,18 @@ export class Interpreter {
     proccess(question) {
         if (this._isCommand(question)) {
             this._commandInterpreter(question);
-            this.app.ui.searchEntry.clutter_text.reactive = true;
         } else if (this._isVoiceCommand(question)) {
             this._voiceCommandInterpreter(question);
-            this.app.ui.searchEntry.clutter_text.reactive = true;
         } else {
+            this.app.log('Normal text detected');
             this.app.gemini.response(question);
         }
+        this.app.ui.searchEntry.clutter_text.reactive = true;
     }
 
     _isCommand(text) {
         if (text.startsWith('/')) {
+            this.app.log('Command detected.');
             return true;
         }
         return false;
@@ -39,6 +40,7 @@ export class Interpreter {
         for (const word of words) {
             for (const activationWord of activationWords) {
                 if (word.includes(activationWord)) {
+                    this.app.log('Voice command detected.');
                     return true;
                 }
             }
