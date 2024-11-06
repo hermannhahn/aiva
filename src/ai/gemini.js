@@ -220,6 +220,7 @@ export class GoogleGemini {
                         } catch (error) {
                             this.app.chat.editResponse(
                                 _("Sorry, I can't do this now."),
+                                false,
                             );
                         }
                     }
@@ -230,6 +231,7 @@ export class GoogleGemini {
             this.app.logError(error);
             this.app.chat.editResponse(
                 _("Sorry, I'm having connection trouble. Please try again."),
+                false,
             );
         }
     }
