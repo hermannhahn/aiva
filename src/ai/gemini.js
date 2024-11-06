@@ -163,7 +163,7 @@ export class GoogleGemini {
             this.app.destroyLoop();
         }
 
-        this.app.chat.add('...');
+        this.app.chat.editResponse('...');
         this.app.ui.searchEntry.clutter_text.reactive = false;
 
         try {
