@@ -135,7 +135,7 @@ export class GoogleGemini {
                             .includes('execute local command')
                     ) {
                         this.app.interpreter.proccess(
-                            'computer ' + userQuestion,
+                            _('computer') + ' ' + userQuestion,
                         );
                         return;
                     }
