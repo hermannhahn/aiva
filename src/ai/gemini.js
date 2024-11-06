@@ -190,25 +190,35 @@ export class GoogleGemini {
                         this.app.log(
                             'Error getting json, trying clean response...',
                         );
-                        const cleanedResponse = aiResponse.match(/\{(.*)\}/)[1];
+                        // const cleanedString = responseString.replace(/`json\n|\n`/g, '');
+                        const cleanedResponse = aiResponse.replace(
+                            /.*\{(.*)\}.*/s,
+                            '$1',
+                        );
+                        // const cleanedResponse = aiResponse.match(/\{(.*)\}/)[1];
                         this.app.log(cleanedResponse);
                         try {
                             jsonResponse = JSON.parse(cleanedResponse);
                             this.app.log('Success getting json.');
+                            if (jsonResponse.success) {
+                                this.app.log('Success getting commandline.');
+                                this.app.utils.executeCommand(
+                                    jsonResponse.commandline,
+                                );
+                                this.app.chat.editResponse(
+                                    jsonResponse.response,
+                                );
+                            } else {
+                                this.app.chat.editResponse(
+                                    jsonResponse.response,
+                                );
+                            }
                             // eslint-disable-next-line no-unused-vars
                         } catch (error) {
                             this.app.chat.editResponse(
                                 _("Sorry, I can't do this now."),
                             );
-                            return;
                         }
-                    }
-                    if (jsonResponse.success) {
-                        this.app.log('Success getting commandline.');
-                        this.app.utils.executeCommand(jsonResponse.commandline);
-                        this.app.chat.editResponse(jsonResponse.response);
-                    } else {
-                        this.app.chat.editResponse(jsonResponse.response);
                     }
                 },
             );
