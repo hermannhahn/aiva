@@ -134,6 +134,7 @@ export class GoogleGemini {
                             .toLowerCase()
                             .includes('execute local command')
                     ) {
+                        this.app.chat.editResponse('Proccessing...');
                         this.app.interpreter.proccess(
                             _('computer') + ' ' + userQuestion,
                         );

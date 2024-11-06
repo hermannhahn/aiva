@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-06 16:06-0300\n"
+"POT-Creation-Date: 2024-11-06 16:08-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language it-IT\n"
@@ -20,7 +20,7 @@ msgstr ""
 msgid "Transcribing..."
 msgstr ""
 
-#: src/interpreter.js:32 src/ai/gemini.js:138
+#: src/interpreter.js:32 src/ai/gemini.js:139
 msgid "computer"
 msgstr ""
 
@@ -171,11 +171,11 @@ msgstr ""
 msgid "Possible dangerous content in the question or answer."
 msgstr ""
 
-#: src/ai/gemini.js:150 src/ai/gemini.js:245
+#: src/ai/gemini.js:151 src/ai/gemini.js:246
 msgid "Sorry, I'm having connection trouble. Please try again."
 msgstr ""
 
-#: src/ai/gemini.js:217
+#: src/ai/gemini.js:218
 msgid "Sorry, I can't do this now."
 msgstr ""
 
