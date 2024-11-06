@@ -20,7 +20,7 @@ export class Chat {
         this.app.log('Chat initialized.');
     }
 
-    add(text) {
+    add(text, voice = true) {
         let chat = this.app.ui.chat();
         this.app.ui.chatSection.addMenuItem(chat);
         chat.label.clutter_text.set_markup(
@@ -28,10 +28,13 @@ export class Chat {
         );
         this.app.ui.responseChat = chat;
         this.app.ui.searchEntry.clutter_text.reactive = true;
+        if (voice) {
+            this.app.azure.tts(text);
+        }
         this.app.utils.scrollToBottom();
     }
 
-    addQuestion(text) {
+    addQuestion(text, voice = true) {
         const inputChat = this.app.ui.question();
         this.app.ui.chatSection.addMenuItem(inputChat);
         text = this.app.utils.inputformat(text);
@@ -39,18 +42,26 @@ export class Chat {
             `<b>${this.app.userSettings.USERNAME}:</b> ${text}`,
         );
         this.app.ui.inputChat = inputChat;
+        this.app.ui.searchEntry.clutter_text.reactive = false;
+        if (voice) {
+            this.app.azure.tts(text);
+        }
         this.app.utils.scrollToBottom();
     }
 
-    editQuestion(text) {
+    editQuestion(text, voice = true) {
         let formatedText = this.app.utils.inputformat(text);
         this.app.ui.inputChat.label.clutter_text.set_markup(
             `<b>${this.app.userSettings.USERNAME}:</b> ${formatedText}`,
         );
+        this.app.ui.searchEntry.clutter_text.reactive = false;
+        if (voice) {
+            this.app.azure.tts(text);
+        }
         this.app.utils.scrollToBottom();
     }
 
-    addResponse(text) {
+    addResponse(text, voice = false) {
         let responseChat = this.app.ui.response();
         let copyButton = this.app.ui.copy();
         this.app.ui.chatSection.addMenuItem(responseChat);
@@ -62,20 +73,25 @@ export class Chat {
         );
         this.app.ui.responseChat = responseChat;
 
-        this.app.ui.searchEntry.clutter_text.reactive = true;
         // add copy button
         copyButton.connect('activate', (_self) => {
             this.app.utils.copySelectedText(responseChat, copyButton);
         });
+        if (voice) {
+            this.app.azure.tts(text);
+        }
         this.app.utils.scrollToBottom();
     }
 
-    editResponse(text) {
+    editResponse(text, voice = true) {
         const formatedText = this.app.utils.insertLineBreaks(text);
         this.app.ui.responseChat.label.clutter_text.set_markup(
             `<b>${this.app.userSettings.ASSIST_NAME}:</b> ${formatedText}`,
         );
-        this.app.utils.scrollToBottom();
         this.app.ui.searchEntry.clutter_text.reactive = true;
+        if (voice) {
+            this.app.azure.tts(text);
+        }
+        this.app.utils.scrollToBottom();
     }
 }
