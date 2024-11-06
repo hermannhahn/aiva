@@ -68,7 +68,7 @@ export class GoogleGemini {
                             .toLowerCase()
                             .includes('execute local command')
                     ) {
-                        this.runCommand(userQuestion);
+                        this.app.interpreter.proccess(userQuestion);
                         return;
                     }
 
