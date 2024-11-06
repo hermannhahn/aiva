@@ -50,7 +50,7 @@ export class GoogleGemini {
                     let response = decoder.decode(bytes.get_data());
                     let res = JSON.parse(response);
                     if (res.error?.code !== 401 && res.error !== undefined) {
-                        this.app.logError(res.error);
+                        this.app.logError(res.error.message);
                         this.app.chat.editResponse(response);
                         return;
                     }
@@ -193,7 +193,7 @@ export class GoogleGemini {
                     let response = decoder.decode(bytes.get_data());
                     let res = JSON.parse(response);
                     if (res.error?.code !== 401 && res.error !== undefined) {
-                        this.app.logError(res.error);
+                        this.app.logError(res.error.message);
                         this.app.chat.editResponse(response, false);
                         this.app.azure.tts(
                             _("Sorry, I can't do this now. Try again later."),
@@ -267,36 +267,41 @@ export class GoogleGemini {
     }
 
     /**
-     * @param {*} userQuestion
+     * @param {*} text
      *
      * @returns body contents
      *
      * build body for request
      */
-    buildBody(userQuestion) {
-        const recursiveHistory = this.app.utils.loadHistoryFile();
-        const stringfiedHistory = JSON.stringify([
-            ...recursiveHistory,
-            {
-                role: 'user',
-                parts: [{text: userQuestion}],
-            },
-        ]);
+    buildBody(text) {
+        let request = this.app.utils.loadHistoryFile();
+        if (request.length === 0) {
+            return this.buildNoHistoryBody(text);
+        }
+        request.push({
+            role: 'user',
+            parts: [
+                {
+                    text,
+                },
+            ],
+        });
+        const stringfiedHistory = JSON.stringify(request);
         return `{"contents":${stringfiedHistory}}`;
     }
 
     /**
-     * @param {*} solicitation
+     * @param {*} text
      *
      * @returns body contents
      */
-    buildNoHistoryBody(solicitation) {
+    buildNoHistoryBody(text) {
         let request = [
             {
                 role: 'user',
                 parts: [
                     {
-                        text: solicitation,
+                        text,
                     },
                 ],
             },
