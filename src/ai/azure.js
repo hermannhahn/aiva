@@ -211,11 +211,11 @@ export class MicrosoftAzure {
                     if (response && response.DisplayText) {
                         let transcription = response.DisplayText;
                         this.app.log('Transcrição: ' + transcription);
-                        this.app.chat.addQuestion(transcription);
+                        this.app.chat.editQuestion(transcription);
                         this.app.interpreter.proccess(transcription);
                     } else {
                         this.app.log('Nenhuma transcrição encontrada.');
-                        this.app.chat.addQuestion('Transcribe error.');
+                        this.app.chat.editQuestion('Transcribe error.');
                     }
                 } else {
                     this.app.log('Erro na requisição: ' + stderr);
