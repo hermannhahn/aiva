@@ -276,6 +276,7 @@ export class GoogleGemini {
     buildBody(text) {
         let request = this.app.utils.loadHistoryFile();
         if (request.length === 0) {
+            this.app.log('No history found.');
             return this.buildNoHistoryBody(text);
         }
         request.push({
@@ -286,6 +287,7 @@ export class GoogleGemini {
                 },
             ],
         });
+        this.app.log('History loaded.');
         const stringfiedHistory = JSON.stringify(request);
         return `{"contents":${stringfiedHistory}}`;
     }
