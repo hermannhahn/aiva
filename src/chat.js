@@ -27,7 +27,6 @@ export class Chat {
             `<b>${this.app.userSettings.ASSIST_NAME}:</b> ${text}`,
         );
         this.app.ui.responseChat = chat;
-        this.app.azure.tts(text);
         this.app.ui.searchEntry.clutter_text.reactive = true;
         this.app.utils.scrollToBottom();
     }
