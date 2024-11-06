@@ -57,7 +57,7 @@ export class Chat {
         this.app.utils.scrollToBottom();
     }
 
-    editResponse(text) {
+    editResponse(text, save = true) {
         const formatedText = this.app.utils.insertLineBreaks(text);
         this.app.ui.responseChat.label.clutter_text.set_markup(
             `<b>${this.app.userSettings.ASSIST_NAME}:</b> ${formatedText}`,
@@ -90,8 +90,10 @@ export class Chat {
                 },
             ],
         });
-        if (this.app.userSettings.RECURSIVE_TALK) {
-            this.app.utils.saveHistory();
+        if (save) {
+            if (this.app.userSettings.RECURSIVE_TALK) {
+                this.app.utils.saveHistory();
+            }
         }
     }
 
