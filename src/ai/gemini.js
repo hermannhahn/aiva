@@ -56,6 +56,7 @@ export class GoogleGemini {
                         return;
                     }
                     let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
+                    this.app.log('aiResponse: ' + aiResponse);
                     this.app.log('Success getting response.');
                     this.app.log(
                         'Finish reason: ' + res.candidates[0].finishReason,
