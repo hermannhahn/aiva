@@ -176,6 +176,9 @@ const Aiva = GObject.registerClass(
             console.log('[AIVA] Initializing chat...');
             this.chat.init();
 
+            // Capture events
+            this.captureEvents();
+
             console.log('[AIVA] Extension initialized.');
         }
 
