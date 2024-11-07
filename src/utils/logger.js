@@ -2,8 +2,12 @@
  * @description app logger
  * @param {boolean} [debug=true]
  * @example
+ * [instance]
+ *
  * let logger = new Logger(true) - false to disable debug
- * @function
+ *
+ * [functions]
+ *
  * log(text) - return null - show console log
  * logError(text) - return null - show console log error
  */
@@ -18,6 +22,8 @@ export class Logger {
     /**
      *
      * @param {*} message
+     * @example
+     * log(text) - return null - show console log
      */
     log(message) {
         if (this.debug === true) {
