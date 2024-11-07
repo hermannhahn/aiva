@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-07 12:06-0300\n"
+"POT-Creation-Date: 2024-11-07 12:22-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -337,7 +337,7 @@ msgstr "Estou pensando nisso..."
 msgid "Give me a moment to sort this out..."
 msgstr "Me dê um momento para organizar isso..."
 
-#: src/extension.js:143
+#: src/extension.js:148
 msgid "AIVA"
 msgstr ""
 

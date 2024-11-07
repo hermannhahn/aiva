@@ -91,17 +91,17 @@ const Aiva = GObject.registerClass(
          */
         _createInstances() {
             /**
-             * logger
+             * log | logError
              */
             this.logger = new Logger(DEBUG);
 
             /**
-             * response
+             * response | runCommand
              */
             this.gemini = new GoogleGemini(this);
 
             /**
-             * tts | stt
+             * tts | transcribe
              */
             this.azure = new MicrosoftAzure(this);
 
@@ -111,7 +111,12 @@ const Aiva = GObject.registerClass(
             this.audio = new Audio(this);
 
             /**
-             * log | logError | inputformat | textformat | insertLineBreaks
+             * inputformat | textformat | insertLineBreaks | scrollToBottom
+             * createHistoryFile | addToHistory | saveHistory | loadHistoryFile
+             * gnomeNotify | copySelectedText | removeNotificationByTitle
+             * randomPhraseToShowOnScreen | randomPhraseToWaitResponse
+             * encodeFileToBase64 | extractCodeAndTTS | executeCommand
+             * removeWavFiles | curl
              */
             this.utils = new Utils(this);
 
