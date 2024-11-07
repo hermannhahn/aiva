@@ -55,13 +55,11 @@ export class GoogleGemini {
                         return;
                     }
                     let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
-                    this.app.log('aiResponse: ' + aiResponse);
-                    this.app.log('Success getting response.');
-                    this.app.log(
-                        'Finish reason: ' + res.candidates[0].finishReason,
-                    );
 
-                    if (!this.isSafety(res)) {
+                    // Safety
+                    let safetyReason = this.safetyReason(res);
+                    if (safetyReason) {
+                        this.app.chat.editResponse(safetyReason);
                         return;
                     }
 
@@ -92,7 +90,7 @@ export class GoogleGemini {
         }
     }
 
-    checkSafety(res) {
+    safetyReason(res) {
         let aiResponse = '';
         // SAFETY warning
         if (res.candidates[0].finishReason === 'SAFETY') {
@@ -138,10 +136,9 @@ export class GoogleGemini {
                     }
                 }
             }
-            this.app.chat.editResponse(aiResponse);
-            return false;
+            return aiResponse;
         }
-        return true;
+        return false;
     }
 
     /**
