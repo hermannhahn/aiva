@@ -10,11 +10,11 @@ import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js'
  * const ui = new UI(app);
  *
  * public function
- * init() - return null - initialize interfaces
- * chat() - return Object - create chat item
- * question() - return Object - create question item
- * response() - return Object - create response item
- * copy() - return Object - create copy button item
+ * init() - initialize interfaces
+ * chat() - return chat item
+ * question() - return new question item
+ * response() - return new response item
+ * copy() - return new copy button item
  *
  * private function
  * _createApp() - create app and tray
