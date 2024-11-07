@@ -14,6 +14,7 @@ import St from 'gi://St';
 import GObject from 'gi://GObject';
 import Soup from 'gi://Soup';
 import GLib from 'gi://GLib';
+import Gio from 'gi://Gio';
 import {
     Extension,
     gettext as _,
@@ -176,6 +177,38 @@ const Aiva = GObject.registerClass(
             this.chat.init();
 
             console.log('[AIVA] Extension initialized.');
+        }
+
+        captureEvents() {
+            const Gio = imports.gi.Gio;
+
+            // Crie um objeto de barramento do sistema
+            const bus = Gio.bus_get_sync(Gio.BusType.SYSTEM);
+
+            // Obtenha o objeto de serviço do gerenciador de atalhos de teclado
+            const service = bus.get_object_sync(
+                'org.gnome.SettingsDaemon.MediaKeys',
+                '/org/gnome/SettingsDaemon/MediaKeys',
+            );
+
+            // Obter a interface do objeto de serviço
+            const interfaceLocal = service.get_interface_sync(
+                'org.gnome.SettingsDaemon.MediaKeys',
+            );
+
+            // Defina um manipulador para o sinal "Atalho de Teclado Acionado"
+            const onShortcutActivated = (shortcut) => {
+                this.app.log(shortcut.name);
+                if (shortcut.name === 'F12') {
+                    // Faça algo quando F12 for pressionado
+                }
+            };
+
+            // Conecte o manipulador ao sinal
+            interfaceLocal.connect_signal(
+                'ShortcutActivated',
+                onShortcutActivated,
+            );
         }
 
         /**
