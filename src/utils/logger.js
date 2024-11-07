@@ -1,7 +1,7 @@
 /**
  * @example
- * log(text) - show console log
- * logError(text) - show console log error
+ * log(text) - return null - show console log
+ * logError(text) - return null - show console log error
  */
 export class Logger {
     constructor(debug = true) {
