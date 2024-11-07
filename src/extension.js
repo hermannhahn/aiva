@@ -11,9 +11,9 @@ const DEBUG = true;
  */
 
 import St from 'gi://St';
-import Meta from 'gi://Meta';
-import Shell from 'gi://Shell';
-import Gio from 'gi://Gio';
+// import Meta from 'gi://Meta';
+// import Shell from 'gi://Shell';
+// import Gio from 'gi://Gio';
 import GObject from 'gi://GObject';
 import Soup from 'gi://Soup';
 import GLib from 'gi://GLib';
@@ -238,19 +238,19 @@ export default class AivaExtension extends Extension {
      * Enable extension
      */
     enable() {
-        // Adiciona o atalho global para F12
-        Main.wm.addKeybinding(
-            'my-f12-keybinding', // Nome único para o atalho
-            new Gio.Settings({
-                schema: 'org.gnome.shell.extensions.aiva',
-            }), // Configurações do atalho
-            Meta.KeyBindingFlags.NONE, // Sem flags especiais
-            Shell.ActionMode.ALL, // Disponível em todos os modos de ação do Shell
-            () => {
-                // Função chamada quando F12 é pressionado
-                log('F12 foi pressionado!');
-            },
-        );
+        // // Adiciona o atalho global para F12
+        // Main.wm.addKeybinding(
+        //     'my-f12-keybinding', // Nome único para o atalho
+        //     new Gio.Settings({
+        //         schema: 'org.gnome.shell.extensions.aiva',
+        //     }), // Configurações do atalho
+        //     Meta.KeyBindingFlags.NONE, // Sem flags especiais
+        //     Shell.ActionMode.ALL, // Disponível em todos os modos de ação do Shell
+        //     () => {
+        //         // Função chamada quando F12 é pressionado
+        //         log('F12 foi pressionado!');
+        //     },
+        // );
         // Get IP
         let url = 'https://api.myip.com';
         let _httpSession = new Soup.Session();
@@ -290,7 +290,7 @@ export default class AivaExtension extends Extension {
      */
     disable() {
         // Remove o atalho global para F12 ao desativar a extensão
-        Main.wm.removeKeybinding('my-f12-keybinding');
+        // Main.wm.removeKeybinding('my-f12-keybinding');
         this._aiva.destroy();
         this._aiva = null;
     }
