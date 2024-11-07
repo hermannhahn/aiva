@@ -11,14 +11,28 @@ import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js'
 import {convertMD} from './md2pango.js';
 
 /**
- * log | logError | inputformat | textformat | insertLineBreaks
- *
  * @property {object} this
- *
  * @description app utilities
- *
- * @example const utils = new Utils(this);
- * utils.log("example");
+ * @example
+ * inputformat(text)
+ * @returns {string} formated text for the questions
+ * textformat(text)
+ * insertLineBreaks(text, maxWidth, font)
+ * scrollToBottom()
+ * createHistoryFile()
+ * addToHistory(question, response)
+ * saveHistory()
+ * loadHistoryFile()
+ * gnomeNotify(text, type)
+ * copySelectedText(responseChat, copyButton)
+ * removeNotificationByTitle(title)
+ * randomPhraseToShowOnScreen()
+ * randomPhraseToWaitResponse()
+ * encodeFileToBase64(path)
+ * extractCodeAndTTS(text, lang)
+ * executeCommand(cmd)
+ * removeWavFiles()
+ * curl(url)
  */
 export class Utils {
     constructor(app) {
