@@ -2,12 +2,10 @@
  * @description app logger
  * @param {boolean} [debug=true]
  * @example
- * [instance]
+ * instance >>
+ * const logger = new Logger(true) - false to disable debug
  *
- * let logger = new Logger(true) - false to disable debug
- *
- * [functions]
- *
+ * functions >>
  * log(text) - return null - show console log
  * logError(text) - return null - show console log error
  */
@@ -20,11 +18,11 @@ export class Logger {
     }
 
     /**
+     * @description show console log
      * @param {*} message
      * @example
      * log(text)
-     * @return null
-     * @description [show console log]
+     * @returns null
      */
     log(message) {
         if (this.debug === true) {
@@ -35,11 +33,11 @@ export class Logger {
     }
 
     /**
+     * @description show console log error
      * @param {*} message
      * @example
      * logError(text)
-     * @return null
-     * @description show console log error
+     * @returns null
      */
     logError(message) {
         if (this.debug === true) {
