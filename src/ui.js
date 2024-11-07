@@ -125,7 +125,8 @@ export class UI {
         //
 
         // If press keyboard
-        this.app.connect('key-press-event', (_self, event) => {
+        this.tray.connect('key-press-event', (_self, event) => {
+            this.app.log('Key pressed: ' + event.keyval);
             if (event.keyval === 0xff1b) {
                 // F12
                 this.app.audio.record();
