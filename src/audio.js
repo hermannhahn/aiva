@@ -7,10 +7,10 @@ import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js'
  * @description audio player and recorder
  * @param {object} app
  * @example
- * public class:
+ * instance:
  * const audio = new Audio(app);
  *
- * public functions:
+ * public function
  * record() - start record audio
  * stopRecord() - stop record audio
  * play() - play audio
