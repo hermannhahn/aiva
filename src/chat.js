@@ -2,7 +2,7 @@ import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js'
 
 /**
  * @description manage chat
- * @param {*} app
+ * @param {object} app
  */
 export class Chat {
     constructor(app) {
