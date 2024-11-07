@@ -7,7 +7,7 @@ import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js'
  * instance:
  * const chat = new Chat(app);
  *
- * public
+ * public function
  * init() - initialize chat
  * add() - add text to the chat
  * addQuestion(text, speech) - add question to the chat
