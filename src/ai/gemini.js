@@ -63,6 +63,13 @@ export class GoogleGemini {
                         return;
                     }
 
+                    if (aiResponse === undefined) {
+                        this.app.chat.editResponse(
+                            _("Sorry, I can't answer this question now."),
+                        );
+                        return;
+                    }
+
                     // Command runner
                     if (
                         aiResponse
@@ -182,6 +189,15 @@ export class GoogleGemini {
                         return;
                     }
                     let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
+
+                    if (aiResponse === undefined) {
+                        this.app.chat.editResponse(
+                            _("Sorry, I can't answer this question now."),
+                        );
+                        return;
+                    }
+
+                    // Command runner
                     let jsonResponse = {};
                     try {
                         jsonResponse = JSON.parse(aiResponse);
