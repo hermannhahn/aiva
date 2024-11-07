@@ -7,11 +7,11 @@ export class Interpreter {
         this.pids = [];
     }
 
-    proccess(question, type = 'question') {
-        if (type === 'cmd' || this._isCommand(question)) {
+    proccess(question) {
+        if (this._isCommand(question)) {
             this._commandInterpreter(question);
-        } else if (type === 'voicecmd' || this._isVoiceCommand(question)) {
-            this._voiceCommandInterpreter(question);
+        } else if (this._isVoiceCommand(question)) {
+            this.voiceCommandInterpreter(question);
         } else {
             this.app.gemini.response(question);
         }
@@ -64,7 +64,7 @@ HELP
         }
     }
 
-    _voiceCommandInterpreter(text) {
+    voiceCommandInterpreter(text) {
         let request = text.toLowerCase();
         this.app.gemini.runCommand(`
 "${_('For the request')}": "${request}"
