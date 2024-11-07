@@ -134,24 +134,15 @@ export class UI {
         });
         this.icon.connect('key-press-event', (_self, event) => {
             this.app.log('Icon Key pressed: ' + event.keyval);
-            if (event.keyval === 0xff1b) {
-                // F12
-                this.app.audio.record();
-            }
         });
-        this.menu.connect('key-press-event', (_self, event) => {
+        this.app.menu.connect('key-press-event', (_self, event) => {
             this.app.log('menu Key pressed: ' + event.keyval);
-            if (event.keyval === 0xff1b) {
-                // F12
-                this.app.audio.record();
-            }
         });
-        this.menu.box.connect('key-press-event', (_self, event) => {
+        this.app.menu.box.connect('key-press-event', (_self, event) => {
             this.app.log('menubox Key pressed: ' + event.keyval);
-            if (event.keyval === 0xff1b) {
-                // F12
-                this.app.audio.record();
-            }
+        });
+        this.app.connect('key-press-event', (_self, event) => {
+            this.app.log('app Key pressed: ' + event.keyval);
         });
 
         // If press enter on question input box
