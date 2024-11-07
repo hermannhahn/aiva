@@ -41,7 +41,6 @@ export class Chat {
             `<b>${this.app.userSettings.ASSIST_NAME}:</b> ${text}`,
         );
         this.app.ui.responseChat = chat;
-        this.app.ui.searchEntry.clutter_text.reactive = true;
         if (speech) {
             this.app.azure.tts(text);
         }
@@ -61,7 +60,6 @@ export class Chat {
             `<b>${this.app.userSettings.USERNAME}:</b> ${text}`,
         );
         this.app.ui.inputChat = inputChat;
-        this.app.ui.searchEntry.clutter_text.reactive = false;
         if (speech) {
             this.app.azure.tts(text);
         }
@@ -78,7 +76,6 @@ export class Chat {
         this.app.ui.inputChat.label.clutter_text.set_markup(
             `<b>${this.app.userSettings.USERNAME}:</b> ${formatedText}`,
         );
-        this.app.ui.searchEntry.clutter_text.reactive = false;
         if (speech) {
             this.app.azure.tts(text);
         }
@@ -122,7 +119,6 @@ export class Chat {
         this.app.ui.responseChat.label.clutter_text.set_markup(
             `<b>${this.app.userSettings.ASSIST_NAME}:</b> ${formatedText}`,
         );
-        this.app.ui.searchEntry.clutter_text.reactive = true;
         if (speech) {
             this.app.azure.tts(text);
         }
