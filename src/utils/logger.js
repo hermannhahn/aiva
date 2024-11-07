@@ -22,7 +22,9 @@ export class Logger {
     /**
      * @param {*} message
      * @example
-     * log(text) - return null - show console log
+     * log(text)
+     * @return null
+     * @description [show console log]
      */
     log(message) {
         if (this.debug === true) {
@@ -35,7 +37,9 @@ export class Logger {
     /**
      * @param {*} message
      * @example
-     * logError(text) - return null - show console log error
+     * logError(text)
+     * @return null
+     * @description show console log error
      */
     logError(message) {
         if (this.debug === true) {
