@@ -3,6 +3,17 @@ import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js'
 /**
  * @description manage chat
  * @param {object} app
+ * @example
+ * public class:
+ * const chat = new Chat(app);
+ *
+ * public functions:
+ * init() - initialize chat
+ * add() - add text to the chat
+ * addQuestion(text, speech) - add question to the chat
+ * editQuestion(text, speech) - edit last question
+ * addResponse(text, speech) - add response to the chat
+ * editResponse(text, speech) - edit last response
  */
 export class Chat {
     constructor(app) {
@@ -31,7 +42,7 @@ export class Chat {
 
     /**
      * @description add text to the chat
-     * @param {*} text - text to add
+     * @param {string} text - text to add
      * @param {boolean} [speech=true] - speech text
      */
     add(text, speech = true) {
@@ -49,7 +60,7 @@ export class Chat {
 
     /**
      * @description add question to the chat
-     * @param {*} text - text to add
+     * @param {string} text - text to add
      * @param {boolean} [speech=true] - speech text
      */
     addQuestion(text, speech = false) {
@@ -68,7 +79,7 @@ export class Chat {
 
     /**
      * @description edit last question
-     * @param {*} text - new text for the question
+     * @param {string} text - new text for the question
      * @param {boolean} [speech=true] - speech text
      */
     editQuestion(text, speech = false) {
@@ -84,7 +95,7 @@ export class Chat {
 
     /**
      * @description add response to the chat
-     * @param {*} text - text to add
+     * @param {string} text - text to add
      * @param {boolean} [speech=true] - speech text
      */
     addResponse(text, speech = false) {
@@ -111,7 +122,7 @@ export class Chat {
 
     /**
      * @description edit last response
-     * @param {*} text - new text for the response
+     * @param {string} text - new text for the response
      * @param {boolean} [speech=true] - speech text
      */
     editResponse(text, speech = true) {
