@@ -10,13 +10,14 @@ const DEBUG = true;
  *
  */
 
+// Extension
 import St from 'gi://St';
-// import Meta from 'gi://Meta';
-// import Shell from 'gi://Shell';
-// import Gio from 'gi://Gio';
 import GObject from 'gi://GObject';
 import Soup from 'gi://Soup';
 import GLib from 'gi://GLib';
+// import Meta from 'gi://Meta';
+// import Shell from 'gi://Shell';
+// import Gio from 'gi://Gio';
 import {
     Extension,
     gettext as _,
@@ -83,7 +84,6 @@ const Aiva = GObject.registerClass(
                 RECURSIVE_TALK: settings.get_boolean('log-history'),
                 USERNAME: GLib.get_real_name(),
             };
-            this.afterTune = null;
         }
 
         /**
