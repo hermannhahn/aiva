@@ -91,32 +91,32 @@ const Aiva = GObject.registerClass(
          */
         _createInstances() {
             /**
-             * log | logError
+             * @example log(text) | logError(text)
              */
             this.logger = new Logger(DEBUG);
 
             /**
-             * response | runCommand
+             * @example response(text) | runCommand(text)
              */
             this.gemini = new GoogleGemini(this);
 
             /**
-             * tts | transcribe
+             * @example tts(text) | transcribe(path)
              */
             this.azure = new MicrosoftAzure(this);
 
             /**
-             * play | stop | record | stopRecord
+             * @example play(path) | stop() | record() | stopRecord()
              */
             this.audio = new Audio(this);
 
             /**
-             * inputformat | textformat | insertLineBreaks | scrollToBottom |
-             * createHistoryFile | addToHistory | saveHistory | loadHistoryFile |
-             * gnomeNotify | copySelectedText | removeNotificationByTitle |
-             * randomPhraseToShowOnScreen | randomPhraseToWaitResponse |
-             * encodeFileToBase64 | extractCodeAndTTS | executeCommand |
-             * removeWavFiles | curl
+             * @example inputformat(text) | textformat(text) | insertLineBreaks(text, maxWidth, font) |
+             * scrollToBottom() | createHistoryFile() | addToHistory(question, response) | saveHistory() |
+             * loadHistoryFile() | gnomeNotify(text, type) | copySelectedText(responseChat, copyButton) |
+             * removeNotificationByTitle(title) | randomPhraseToShowOnScreen() | randomPhraseToWaitResponse() |
+             * encodeFileToBase64(path) | extractCodeAndTTS(text, lang) | executeCommand(cmd) | removeWavFiles() |
+             * curl(url)
              */
             this.utils = new Utils(this);
 
