@@ -2,6 +2,8 @@
  * @description app logger
  * @param {boolean} [debug=true]
  * @example
+ * let logger = new Logger(true) - false to disable debug
+ * @function
  * log(text) - return null - show console log
  * logError(text) - return null - show console log error
  */
