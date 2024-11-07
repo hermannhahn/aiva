@@ -183,8 +183,6 @@ const Aiva = GObject.registerClass(
         }
 
         captureEvents() {
-            const Gio = imports.gi.Gio;
-
             // Crie um objeto de barramento do sistema
             const bus = Gio.bus_get_sync(Gio.BusType.SYSTEM);
 
