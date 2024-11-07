@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-07 12:31-0300\n"
+"POT-Creation-Date: 2024-11-07 12:48-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -155,7 +155,7 @@ msgid "Instructions: Open..."
 msgstr "Instruções: Abra..."
 
 #: src/ai/azure.js:80 src/ai/azure.js:94 src/ai/azure.js:137
-#: src/ai/azure.js:145 src/ai/gemini.js:93 src/ai/gemini.js:181
+#: src/ai/azure.js:145 src/ai/gemini.js:98 src/ai/gemini.js:186
 #, fuzzy
 msgid "Sorry, I'm having connection trouble. Please try again."
 msgstr "Por favor, tente novamente."
@@ -176,35 +176,35 @@ msgstr "Por favor, tente novamente."
 msgid "Sorry, I'm having trouble to write the audio file. Please try again."
 msgstr "Por favor, tente novamente."
 
-#: src/ai/gemini.js:66 src/ai/gemini.js:142
+#: src/ai/gemini.js:71 src/ai/gemini.js:147
 #, fuzzy
 msgid "Sorry, I can't answer this question now."
 msgstr "Peço desculpas, eu não posso responder a esta pergunta."
 
-#: src/ai/gemini.js:134 src/ai/gemini.js:164
+#: src/ai/gemini.js:139 src/ai/gemini.js:169
 #, fuzzy
 msgid "Sorry, I can't do this now. Try again later."
 msgstr "Peço desculpas, eu não posso responder a esta pergunta."
 
-#: src/ai/gemini.js:204 src/ai/gemini.js:212 src/ai/gemini.js:220
-#: src/ai/gemini.js:229
+#: src/ai/gemini.js:209 src/ai/gemini.js:217 src/ai/gemini.js:225
+#: src/ai/gemini.js:234
 #, fuzzy
 msgid "Sorry, I can't answer this question."
 msgstr "Peço desculpas, eu não posso responder a esta pergunta."
 
-#: src/ai/gemini.js:207
+#: src/ai/gemini.js:212
 msgid "Possible sexually explicit content in the question or answer."
 msgstr "Possível conteúdo sexualmente explícito na pergunta ou resposta."
 
-#: src/ai/gemini.js:215
+#: src/ai/gemini.js:220
 msgid "Possible hate speech in the question or answer."
 msgstr "Possível discurso de ódio na pergunta ou resposta."
 
-#: src/ai/gemini.js:222
+#: src/ai/gemini.js:227
 msgid "Possible harassment in the question or answer."
 msgstr "Possível assédio na pergunta ou resposta."
 
-#: src/ai/gemini.js:232
+#: src/ai/gemini.js:237
 msgid "Possible dangerous content in the question or answer."
 msgstr "Possível conteúdo perigoso na pergunta ou resposta."
 

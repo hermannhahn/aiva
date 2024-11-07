@@ -3,6 +3,11 @@ import GLib from 'gi://GLib';
 
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
+/**
+ * @example
+ * response(text)
+ * runCommand(text)
+ */
 export class GoogleGemini {
     constructor(app) {
         this.app = app;
