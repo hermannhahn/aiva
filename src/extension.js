@@ -11,10 +11,10 @@ const DEBUG = true;
  */
 
 import St from 'gi://St';
+import Clutter from 'gi://Clutter';
 import GObject from 'gi://GObject';
 import Soup from 'gi://Soup';
 import GLib from 'gi://GLib';
-import Gio from 'gi://Gio';
 import {
     Extension,
     gettext as _,
@@ -33,6 +33,8 @@ import {Utils} from './utils/utils.js';
 // API
 import {GoogleGemini} from './ai/gemini.js';
 import {MicrosoftAzure} from './ai/azure.js';
+
+let keyEventHandler;
 
 const Aiva = GObject.registerClass(
     class Aiva extends PanelMenu.Button {
@@ -182,36 +184,6 @@ const Aiva = GObject.registerClass(
             console.log('[AIVA] Extension initialized.');
         }
 
-        captureEvents() {
-            // Crie um objeto de barramento do sistema
-            const bus = Gio.bus_get_sync(Gio.BusType.SESSION, null);
-
-            // Obtenha o objeto de serviço do gerenciador de atalhos de teclado
-            const service = bus.get_object_sync(
-                'org.gnome.SettingsDaemon.MediaKeys',
-                '/org/gnome/SettingsDaemon/MediaKeys',
-            );
-
-            // Obter a interface do objeto de serviço
-            const interfaceLocal = service.get_interface_sync(
-                'org.gnome.SettingsDaemon.MediaKeys',
-            );
-
-            // Defina um manipulador para o sinal "Atalho de Teclado Acionado"
-            const onShortcutActivated = (shortcut) => {
-                this.app.log(shortcut.name);
-                if (shortcut.name === 'F12') {
-                    // Faça algo quando F12 for pressionado
-                }
-            };
-
-            // Conecte o manipulador ao sinal
-            interfaceLocal.connect_signal(
-                'ShortcutActivated',
-                onShortcutActivated,
-            );
-        }
-
         /**
          * open settings
          */
@@ -266,6 +238,25 @@ export default class AivaExtension extends Extension {
      * Enable extension
      */
     enable() {
+        // Adiciona um evento global de escuta para pressionamento de teclas
+        keyEventHandler = global.display.connect(
+            'key-press-event',
+            (display, event) => {
+                const keySymbol = event.get_key_symbol();
+
+                // Verifica se a tecla pressionada é F12
+                if (keySymbol === Clutter.KEY_F12) {
+                    // Imprime no console quando F12 é pressionado
+                    log('F12 foi pressionado!');
+
+                    // Retorna true se quiser bloquear o evento para outras ações
+                    return Clutter.EVENT_STOP;
+                }
+
+                // Caso contrário, deixa passar o evento
+                return Clutter.EVENT_PROPAGATE;
+            },
+        );
         // Get IP
         let url = 'https://api.myip.com';
         let _httpSession = new Soup.Session();
@@ -303,6 +294,11 @@ export default class AivaExtension extends Extension {
      * Disable extension
      */
     disable() {
+        // Remove o evento de escuta de tecla quando a extensão é desativada
+        if (keyEventHandler) {
+            global.display.disconnect(keyEventHandler);
+            keyEventHandler = null;
+        }
         this._aiva.destroy();
         this._aiva = null;
     }
