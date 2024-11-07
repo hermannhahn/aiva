@@ -11,7 +11,9 @@ const DEBUG = true;
  */
 
 import St from 'gi://St';
-import Clutter from 'gi://Clutter';
+import Meta from 'gi://Meta';
+import Shell from 'gi://Shell';
+import Gio from 'gi://Gio';
 import GObject from 'gi://GObject';
 import Soup from 'gi://Soup';
 import GLib from 'gi://GLib';
@@ -33,8 +35,6 @@ import {Utils} from './utils/utils.js';
 // API
 import {GoogleGemini} from './ai/gemini.js';
 import {MicrosoftAzure} from './ai/azure.js';
-
-let keyEventHandler;
 
 const Aiva = GObject.registerClass(
     class Aiva extends PanelMenu.Button {
@@ -238,23 +238,15 @@ export default class AivaExtension extends Extension {
      * Enable extension
      */
     enable() {
-        // Conecta o evento de escuta de tecla ao stage global
-        keyEventHandler = global.stage.connect(
-            'key-press-event',
-            (actor, event) => {
-                const keySymbol = event.get_key_symbol();
-
-                // Verifica se a tecla pressionada é F12
-                if (keySymbol === Clutter.KEY_F12) {
-                    // Imprime no console quando F12 é pressionado
-                    log('F12 foi pressionado!');
-
-                    // Retorna true para impedir a propagação do evento
-                    return Clutter.EVENT_STOP;
-                }
-
-                // Propaga o evento se não for a tecla F12
-                return Clutter.EVENT_PROPAGATE;
+        // Adiciona o atalho global para F12
+        Main.wm.addKeybinding(
+            'my-f12-keybinding', // Nome único para o atalho
+            new Gio.Settings({schema: 'org.gnome.shell.extensions.aiva'}), // Configurações do atalho
+            Meta.KeyBindingFlags.NONE, // Sem flags especiais
+            Shell.ActionMode.ALL, // Disponível em todos os modos de ação do Shell
+            () => {
+                // Função chamada quando F12 é pressionado
+                log('F12 foi pressionado!');
             },
         );
         // Get IP
@@ -294,11 +286,8 @@ export default class AivaExtension extends Extension {
      * Disable extension
      */
     disable() {
-        // Remove o evento de escuta de tecla quando a extensão é desativada
-        if (keyEventHandler) {
-            global.stage.disconnect(keyEventHandler);
-            keyEventHandler = null;
-        }
+        // Remove o atalho global para F12 ao desativar a extensão
+        Main.wm.removeKeybinding('my-f12-keybinding');
         this._aiva.destroy();
         this._aiva = null;
     }
