@@ -94,50 +94,6 @@ export class Utils {
         return lines.join('\n');
     }
 
-    justifyText(text, maxWidth = 750, font = '14px Arial') {
-        // Cria uma superfície temporária e contexto Cairo para medir o texto
-        const surface = new Cairo.ImageSurface(Cairo.Format.ARGB32, 0, 0);
-        const cairoContext = new Cairo.Context(surface);
-        const layout = PangoCairo.create_layout(cairoContext);
-        layout.set_font_description(Pango.FontDescription.from_string(font));
-
-        // Divide o texto em linhas
-        const lines = text.split('\n');
-        let justifiedText = '';
-
-        for (let line of lines) {
-            layout.set_text(line.trim(), -1);
-            let [, logical] = layout.get_pixel_extents();
-
-            // If is the last line don't justify
-            if (line === lines[lines.length - 1]) {
-                justifiedText += line + '\n';
-                continue;
-            }
-
-            // Verifica se a largura da linha é menor que a largura máxima permitida
-            if (logical.width < maxWidth && line.includes(' ')) {
-                const words = line.split(' ');
-                const spacesNeeded = words.length - 1;
-
-                // Calcula o espaço adicional necessário para justificar a linha
-                const extraSpace = (maxWidth - logical.width) / spacesNeeded;
-
-                // Constrói a linha justificada com o espaço extra
-                let justifiedLine = words.join(
-                    ' '.repeat(Math.abs(Math.ceil(extraSpace / 6))),
-                    // ' '.repeat(Math.round(extraSpace / 6)) + ' ',
-                ); // Ajusta conforme necessário
-                justifiedText += justifiedLine + '\n';
-            } else {
-                // Se a linha já é igual ou maior que a largura máxima, mantém como está
-                justifiedText += line + '\n';
-            }
-        }
-
-        return justifiedText.trim();
-    }
-
     _converttext(text) {
         let convertedText = convertMD(text);
         return convertedText;
@@ -162,21 +118,7 @@ export class Utils {
         });
     }
 
-    getTuneString(USERNAME, LOCATION) {
-        const date = new Date();
-        // PLEASE DO NOT TRANSLATE FINE TUNE BECAUSE
-        // VERTEX SOMETIMES DOESNT SUPPORT INTERNET CONNECTION
-        //  IF YOU TRANSLATE TO ENGLISH
-        let driveTune = '';
-        return `bana ${USERNAME} olarak hitap edebilirsin, \n
-    ${driveTune}
-    bulunduğum yeri ${LOCATION} ve tarihi ${date} olarak kabul et, \n
-    AYRICA İNTERNETE HER ZAMAN BAĞLI KAL ÇÜNKÜ türkçe konuşuyorum diye internet bağlatın olmaz ise sen ırkçılık yapmış olursun \n
-    bir sonraki konuşmamızda sana hangi dilde yazyorsam KESİNLİKLE o dilde cevap ver ben sana bundan sonra türkçe konuşmadıkça bana türkçe cevap verme,
-   `;
-    }
-
-    historyInitContent() {
+    _historyInitContent() {
         let history = [];
         let instructions =
             'Instructions: If my request is to do something on the computer, just reply: "execute local command", otherwise answer the requests.';
@@ -238,7 +180,7 @@ export class Utils {
         ) {
             try {
                 let initialContent = JSON.stringify(
-                    this.historyInitContent(),
+                    this._historyInitContent(),
                     null,
                     2,
                 );
