@@ -26,6 +26,8 @@ export class UI {
      * @description initialize interfaces
      */
     init() {
+        this.app.log('Initializing UI...');
+
         // Create tray
         this.tray = new St.BoxLayout({
             style_class: 'panel-status-menu-box',
@@ -109,6 +111,8 @@ export class UI {
         this._createApp();
         this._addItems();
         this._itemsActions();
+
+        this.app.log('UI initialized.');
     }
 
     /**
