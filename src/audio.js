@@ -11,22 +11,15 @@ import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js'
  * const audio = new Audio(app);
  *
  * public function
- * record() - start record audio
- * stopRecord() - stop record audio and start transcription
- * play(path) - play audio
- * stop() - stop audio playing
+ * record() - start recording
+ * stopRecord() - stop recording and start transcription
+ * play(path) - play audio path
+ * stop() - stop playing
  * encodeFileToBase64() - encode file to base64
  */
 export class Audio {
     constructor(app) {
-        /**
-         * set/get app props
-         */
         this.app = app;
-
-        /**
-         * set/get player props
-         */
         this.isPlaying = false;
         this.isRecording = false;
         this.playingPid = 0;
@@ -34,14 +27,17 @@ export class Audio {
         this.questionPath = null;
     }
 
-    // Play audio
-    play(audiofile) {
+    /**
+     * @description play audio file
+     * @param {string} path
+     */
+    play(path) {
         if (!this.isPlaying) {
-            this.app.log('Playing audio... ' + audiofile);
+            this.app.log('Playing audio... ' + path);
             // Process sync, not async
             const process = GLib.spawn_async(
                 null, // workspace folder
-                ['/bin/sh', '-c', `play ${audiofile}`], // commands and args
+                ['/bin/sh', '-c', `play ${path}`], // commands and args
                 null, // options
                 GLib.SpawnFlags.SEARCH_PATH, // flags
                 null, // PID
@@ -56,11 +52,13 @@ export class Audio {
         } else {
             this.app.log('Audio already playing.');
             this.stop();
-            this.play(audiofile);
+            this.play(path);
         }
     }
 
-    // Stop audio
+    /**
+     * @description stop playing
+     */
     stop() {
         if (!this.isPlaying) {
             this.app.log('Audio not playing.');
@@ -76,7 +74,9 @@ export class Audio {
         );
     }
 
-    // Start record
+    /**
+     * @description start recording
+     */
     record() {
         if (this.isRecording) {
             // Stop recording
@@ -111,7 +111,9 @@ export class Audio {
         this.pipeline.init(null);
     }
 
-    // Stop record
+    /**
+     * @description stop recording and transcribe
+     */
     stopRecord() {
         if (!this.isRecording) {
             this.app.log('Recording not started.');
@@ -129,10 +131,14 @@ export class Audio {
         this.app.azure.transcribe(this.questionPath);
     }
 
-    // Convert audio
-    encodeFileToBase64(filePath) {
+    /**
+     * @description encode file to base64
+     * @param {string} path
+     * @returns
+     */
+    encodeFileToBase64(path) {
         try {
-            const file = Gio.File.new_for_path(filePath);
+            const file = Gio.File.new_for_path(path);
             const [, contents] = file.load_contents(null);
             return GLib.base64_encode(contents);
         } catch (error) {
