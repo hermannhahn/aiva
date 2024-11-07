@@ -151,7 +151,7 @@ msgid "Instructions: Open..."
 msgstr ""
 
 #: src/ai/azure.js:80 src/ai/azure.js:94 src/ai/azure.js:137
-#: src/ai/azure.js:145 src/ai/gemini.js:95 src/ai/gemini.js:234
+#: src/ai/azure.js:145 src/ai/gemini.js:93 src/ai/gemini.js:181
 msgid "Sorry, I'm having connection trouble. Please try again."
 msgstr ""
 
@@ -168,33 +168,33 @@ msgstr ""
 msgid "Sorry, I'm having trouble to write the audio file. Please try again."
 msgstr ""
 
-#: src/ai/gemini.js:68 src/ai/gemini.js:195
+#: src/ai/gemini.js:66 src/ai/gemini.js:142
 msgid "Sorry, I can't answer this question now."
 msgstr ""
 
-#: src/ai/gemini.js:113 src/ai/gemini.js:121 src/ai/gemini.js:129
-#: src/ai/gemini.js:138
+#: src/ai/gemini.js:134 src/ai/gemini.js:164
+msgid "Sorry, I can't do this now. Try again later."
+msgstr ""
+
+#: src/ai/gemini.js:204 src/ai/gemini.js:212 src/ai/gemini.js:220
+#: src/ai/gemini.js:229
 msgid "Sorry, I can't answer this question."
 msgstr ""
 
-#: src/ai/gemini.js:116
+#: src/ai/gemini.js:207
 msgid "Possible sexually explicit content in the question or answer."
 msgstr ""
 
-#: src/ai/gemini.js:124
+#: src/ai/gemini.js:215
 msgid "Possible hate speech in the question or answer."
 msgstr ""
 
-#: src/ai/gemini.js:131
+#: src/ai/gemini.js:222
 msgid "Possible harassment in the question or answer."
 msgstr ""
 
-#: src/ai/gemini.js:141
+#: src/ai/gemini.js:232
 msgid "Possible dangerous content in the question or answer."
-msgstr ""
-
-#: src/ai/gemini.js:187 src/ai/gemini.js:217
-msgid "Sorry, I can't do this now. Try again later."
 msgstr ""
 
 #: src/utils/utils.js:204

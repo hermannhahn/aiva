@@ -25,8 +25,6 @@ export class GoogleGemini {
             this.destroyLoop();
         }
 
-        this.app.chat.addResponse('...');
-
         try {
             this.app.log('Getting response...');
             // Create http session
@@ -95,57 +93,6 @@ export class GoogleGemini {
                 _("Sorry, I'm having connection trouble. Please try again."),
             );
         }
-    }
-
-    safetyReason(res) {
-        let aiResponse = '';
-        // SAFETY warning
-        if (res.candidates[0].finishReason === 'SAFETY') {
-            // get safety reason
-            for (let i = 0; i < res.candidates[0].safetyRatings.length; i++) {
-                let safetyRating = res.candidates[0].safetyRatings[i];
-                if (safetyRating.probability !== 'NEGLIGIBLE') {
-                    if (
-                        safetyRating.category ===
-                        'HARM_CATEGORY_SEXUALLY_EXPLICIT'
-                    ) {
-                        aiResponse =
-                            _("Sorry, I can't answer this question.") +
-                            ' ' +
-                            _(
-                                'Possible sexually explicit content in the question or answer.',
-                            );
-                    }
-                    if (safetyRating.category === 'HARM_CATEGORY_HATE_SPEECH') {
-                        aiResponse =
-                            _("Sorry, I can't answer this question.") +
-                            ' ' +
-                            _(
-                                'Possible hate speech in the question or answer.',
-                            );
-                    }
-                    if (safetyRating.category === 'HARM_CATEGORY_HARASSMENT') {
-                        aiResponse =
-                            _("Sorry, I can't answer this question.") +
-                            ' ' +
-                            _('Possible harassment in the question or answer.');
-                    }
-                    if (
-                        safetyRating.category ===
-                        'HARM_CATEGORY_DANGEROUS_CONTENT'
-                    ) {
-                        aiResponse =
-                            _("Sorry, I can't answer this question.") +
-                            ' ' +
-                            _(
-                                'Possible dangerous content in the question or answer.',
-                            );
-                    }
-                }
-            }
-            return aiResponse;
-        }
-        return false;
     }
 
     /**
@@ -234,6 +181,62 @@ export class GoogleGemini {
                 _("Sorry, I'm having connection trouble. Please try again."),
             );
         }
+    }
+
+    /**
+     *
+     * @param {*} res
+     * @returns string or false
+     */
+    safetyReason(res) {
+        let aiResponse = '';
+        // SAFETY warning
+        if (res.candidates[0].finishReason === 'SAFETY') {
+            // get safety reason
+            for (let i = 0; i < res.candidates[0].safetyRatings.length; i++) {
+                let safetyRating = res.candidates[0].safetyRatings[i];
+                if (safetyRating.probability !== 'NEGLIGIBLE') {
+                    if (
+                        safetyRating.category ===
+                        'HARM_CATEGORY_SEXUALLY_EXPLICIT'
+                    ) {
+                        aiResponse =
+                            _("Sorry, I can't answer this question.") +
+                            ' ' +
+                            _(
+                                'Possible sexually explicit content in the question or answer.',
+                            );
+                    }
+                    if (safetyRating.category === 'HARM_CATEGORY_HATE_SPEECH') {
+                        aiResponse =
+                            _("Sorry, I can't answer this question.") +
+                            ' ' +
+                            _(
+                                'Possible hate speech in the question or answer.',
+                            );
+                    }
+                    if (safetyRating.category === 'HARM_CATEGORY_HARASSMENT') {
+                        aiResponse =
+                            _("Sorry, I can't answer this question.") +
+                            ' ' +
+                            _('Possible harassment in the question or answer.');
+                    }
+                    if (
+                        safetyRating.category ===
+                        'HARM_CATEGORY_DANGEROUS_CONTENT'
+                    ) {
+                        aiResponse =
+                            _("Sorry, I can't answer this question.") +
+                            ' ' +
+                            _(
+                                'Possible dangerous content in the question or answer.',
+                            );
+                    }
+                }
+            }
+            return aiResponse;
+        }
+        return false;
     }
 
     /**
