@@ -238,22 +238,22 @@ export default class AivaExtension extends Extension {
      * Enable extension
      */
     enable() {
-        // Adiciona um evento global de escuta para pressionamento de teclas
-        keyEventHandler = global.display.connect(
+        // Conecta o evento de escuta de tecla ao stage global
+        keyEventHandler = global.stage.connect(
             'key-press-event',
-            (display, event) => {
+            (actor, event) => {
                 const keySymbol = event.get_key_symbol();
 
                 // Verifica se a tecla pressionada é F12
                 if (keySymbol === Clutter.KEY_F12) {
                     // Imprime no console quando F12 é pressionado
-                    this.app.log('F12 foi pressionado!');
+                    log('F12 foi pressionado!');
 
-                    // Retorna true se quiser bloquear o evento para outras ações
+                    // Retorna true para impedir a propagação do evento
                     return Clutter.EVENT_STOP;
                 }
 
-                // Caso contrário, deixa passar o evento
+                // Propaga o evento se não for a tecla F12
                 return Clutter.EVENT_PROPAGATE;
             },
         );
