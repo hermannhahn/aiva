@@ -111,11 +111,11 @@ const Aiva = GObject.registerClass(
             this.audio = new Audio(this);
 
             /**
-             * inputformat | textformat | insertLineBreaks | scrollToBottom
-             * createHistoryFile | addToHistory | saveHistory | loadHistoryFile
-             * gnomeNotify | copySelectedText | removeNotificationByTitle
-             * randomPhraseToShowOnScreen | randomPhraseToWaitResponse
-             * encodeFileToBase64 | extractCodeAndTTS | executeCommand
+             * inputformat | textformat | insertLineBreaks | scrollToBottom |
+             * createHistoryFile | addToHistory | saveHistory | loadHistoryFile |
+             * gnomeNotify | copySelectedText | removeNotificationByTitle |
+             * randomPhraseToShowOnScreen | randomPhraseToWaitResponse |
+             * encodeFileToBase64 | extractCodeAndTTS | executeCommand |
              * removeWavFiles | curl
              */
             this.utils = new Utils(this);
