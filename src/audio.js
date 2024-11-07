@@ -6,6 +6,16 @@ import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js'
 /**
  * @description audio player and recorder
  * @param {object} app
+ * @example
+ * public class:
+ * const audio = new Audio(app);
+ *
+ * public functions:
+ * record() - start record audio
+ * stopRecord() - stop record audio
+ * play() - play audio
+ * stop() - stop audio
+ * encodeFileToBase64() - encode file to base64
  */
 export class Audio {
     constructor(app) {
