@@ -7,10 +7,10 @@ export class Interpreter {
         this.pids = [];
     }
 
-    proccess(question) {
-        if (this._isCommand(question)) {
+    proccess(question, type = 'question') {
+        if (type === 'cmd' || this._isCommand(question)) {
             this._commandInterpreter(question);
-        } else if (this._isVoiceCommand(question)) {
+        } else if (type === 'voicecmd' || this._isVoiceCommand(question)) {
             this._voiceCommandInterpreter(question);
         } else {
             this.app.gemini.response(question);
