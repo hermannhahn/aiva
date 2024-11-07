@@ -13,24 +13,28 @@ import {convertMD} from './md2pango.js';
 /**
  * @description app utilities
  * @example
- * inputformat(text) - return String - format question
- * textformat(text) - return String - format response
- * insertLineBreaks(text, maxWidth, font) - return String
- * scrollToBottom() - return null - roll scroll to bottom
- * createHistoryFile() - return null - create history file
- * addToHistory(question, response) - return null - add to history
- * saveHistory() - return null - save history
- * loadHistoryFile() - return {Array} - return history array
- * gnomeNotify(text, type) - return null - send gnome notification
- * removeNotificationByTitle(title) - return null - remove gnome notification
- * copySelectedText(responseChat, copyButton) - return null - copy to clipboard
- * randomPhraseToShowOnScreen() - return String - random prhase for "Showing on screen..."
- * randomPhraseToWaitResponse() - return String - random phrase to wait for response
- * encodeFileToBase64(path) - return null - convert file to base64
- * extractCodeAndTTS(text, lang) - return Object - create object with text to speech and code examples
- * executeCommand(cmd) - return null - run terminal cmd
- * removeWavFiles() - return null - remove temporary wav files
- * curl(url) - return String - send curl
+ *
+ * public function
+ * questionFormat(text) - return formatted string
+ * responseFormat(text) - return formatted string
+ * scrollToBottom() - roll scroll to bottom
+ * addToHistory(question, response) - add to history
+ * loadHistoryFile() - return history array
+ * gnomeNotify(text, type) - send gnome notification
+ * removeNotificationByTitle(title) - remove gnome notification
+ * copySelectedText(responseChat, copyButton) - copy full or selected text
+ * randomPhraseToShowOnScreen() - return random prhase to long responses
+ * randomPhraseToWaitResponse() - return random phrase to wait for response
+ * encodeFileToBase64(path) - convert file to base64
+ * extractCodeAndTTS(text, lang) - return text to speech and code example
+ * executeCommand(cmd) - run terminal cmd
+ * removeWavFiles() - remove temporary wav files
+ * curl(url) - return curl response
+ *
+ * private function
+ * _insertLineBreaks(text, maxWidth, font) - insert line breaks
+ * _createHistoryFile() - create history file
+ * _saveHistory() - save history file
  */
 export class Utils {
     constructor(app) {
@@ -45,8 +49,8 @@ export class Utils {
      *
      * @description // Format input chat
      */
-    inputformat(text) {
-        text = this.insertLineBreaks(text);
+    questionFormat(text) {
+        text = this._insertLineBreaks(text);
         text = text
             .replace(/&/g, '\u0026')
             .replace(/</g, '\u003c')
@@ -68,47 +72,9 @@ export class Utils {
         return text;
     }
 
-    insertLineBreaks(text, maxWidth = 750, font = '14px Arial') {
-        // Convert text
-        text = this._converttext(text);
-
-        // Cria uma superfície temporária e contexto Cairo para medir o texto
-        const surface = new Cairo.ImageSurface(Cairo.Format.ARGB32, 0, 0);
-        const cairoContext = new Cairo.Context(surface);
-
-        // Obtém o contexto Pango a partir do contexto Cairo
-        const layout = PangoCairo.create_layout(cairoContext);
-        layout.set_font_description(Pango.FontDescription.from_string(font));
-
-        let lines = [];
-        let currentLine = '';
-
-        for (let word of text.split(' ')) {
-            // Adiciona a palavra à linha de teste
-            let testLine = currentLine ? currentLine + ' ' + word : word;
-            layout.set_text(testLine, -1);
-
-            // Obtém o tamanho da linha em pixels
-            let [, logical] = layout.get_pixel_extents();
-
-            if (logical.width > maxWidth) {
-                // Adiciona a linha atual à lista de linhas e inicia uma nova linha
-                lines.push(currentLine);
-                currentLine = word;
-            } else {
-                currentLine = testLine;
-            }
-        }
-
-        // Adiciona a última linha
-        lines.push(currentLine);
-
-        return lines.join('\n');
-    }
-
-    _converttext(text) {
-        let convertedText = convertMD(text);
-        return convertedText;
+    responseFormat(text) {
+        text = this._insertLineBreaks(text);
+        return text;
     }
 
     scrollToBottom() {
@@ -130,91 +96,6 @@ export class Utils {
         });
     }
 
-    _historyInitContent() {
-        let history = [];
-        let instructions =
-            'Instructions: If my request is to do something on the computer, just reply: "execute local command", otherwise answer the requests.';
-        history.push({
-            role: 'user',
-            parts: [
-                {
-                    text: this.app.gemini.getTuneString(),
-                },
-            ],
-        });
-        history.push({
-            role: 'user',
-            parts: [
-                {
-                    text: instructions,
-                },
-            ],
-        });
-        history.push({
-            role: 'user',
-            parts: [
-                {
-                    text:
-                        _('Hi, I am') +
-                        ' ' +
-                        this.app.userSettings.USERNAME +
-                        '. ' +
-                        _('I am from') +
-                        ' ' +
-                        this.app.userSettings.LOCATION +
-                        '. ' +
-                        _('Who are you?'),
-                },
-            ],
-        });
-        history.push({
-            role: 'model',
-            parts: [
-                {
-                    text:
-                        _('Hi! I am ') +
-                        this.app.userSettings.ASSIST_NAME +
-                        _(', your helpfull assistant.'),
-                },
-            ],
-        });
-
-        return history;
-    }
-
-    // Create history.json file if not exist
-    createHistoryFile() {
-        if (
-            !GLib.file_test(
-                this.app.userSettings.HISTORY_FILE,
-                GLib.FileTest.IS_REGULAR,
-            )
-        ) {
-            try {
-                let initialContent = JSON.stringify(
-                    this._historyInitContent(),
-                    null,
-                    2,
-                );
-                GLib.file_set_contents(
-                    this.app.userSettings.HISTORY_FILE,
-                    initialContent,
-                );
-                this.app.log(
-                    `History file created. : ${this.app.userSettings.HISTORY_FILE}`,
-                );
-                return this.loadHistoryFile();
-            } catch (e) {
-                logError(
-                    e,
-                    `Failed to create file: ${this.app.userSettings.HISTORY_FILE}`,
-                );
-                return [];
-            }
-        }
-        return this.loadHistoryFile();
-    }
-
     addToHistory(userQuestion, aiResponse) {
         if (this.app.userSettings.RECURSIVE_TALK) {
             this.app.chat.history.push({
@@ -234,24 +115,6 @@ export class Utils {
                 ],
             });
             this.saveHistory();
-        }
-    }
-
-    // Save to history file
-    saveHistory() {
-        try {
-            GLib.file_set_contents(
-                this.app.userSettings.HISTORY_FILE,
-                JSON.stringify(this.app.chat.history, null, 2),
-            );
-            this.app.log(
-                `History saved in: ${this.app.userSettings.HISTORY_FILE}`,
-            );
-        } catch (e) {
-            logError(
-                e,
-                `Failed to save history: ${this.app.userSettings.HISTORY_FILE}`,
-            );
         }
     }
 
@@ -296,7 +159,7 @@ export class Utils {
                 return [];
             }
         } else {
-            return this.createHistoryFile();
+            return this._createHistoryFile();
         }
     }
 
@@ -530,5 +393,151 @@ export class Utils {
                 return res;
             },
         );
+    }
+
+    _insertLineBreaks(text, maxWidth = 750, font = '14px Arial') {
+        // Convert text
+        text = this._converttext(text);
+
+        // Cria uma superfície temporária e contexto Cairo para medir o texto
+        const surface = new Cairo.ImageSurface(Cairo.Format.ARGB32, 0, 0);
+        const cairoContext = new Cairo.Context(surface);
+
+        // Obtém o contexto Pango a partir do contexto Cairo
+        const layout = PangoCairo.create_layout(cairoContext);
+        layout.set_font_description(Pango.FontDescription.from_string(font));
+
+        let lines = [];
+        let currentLine = '';
+
+        for (let word of text.split(' ')) {
+            // Adiciona a palavra à linha de teste
+            let testLine = currentLine ? currentLine + ' ' + word : word;
+            layout.set_text(testLine, -1);
+
+            // Obtém o tamanho da linha em pixels
+            let [, logical] = layout.get_pixel_extents();
+
+            if (logical.width > maxWidth) {
+                // Adiciona a linha atual à lista de linhas e inicia uma nova linha
+                lines.push(currentLine);
+                currentLine = word;
+            } else {
+                currentLine = testLine;
+            }
+        }
+
+        // Adiciona a última linha
+        lines.push(currentLine);
+
+        return lines.join('\n');
+    }
+
+    _converttext(text) {
+        let convertedText = convertMD(text);
+        return convertedText;
+    }
+
+    _historyInitContent() {
+        let history = [];
+        let instructions =
+            'Instructions: If my request is to do something on the computer, just reply: "execute local command", otherwise answer the requests.';
+        history.push({
+            role: 'user',
+            parts: [
+                {
+                    text: this.app.gemini.getTuneString(),
+                },
+            ],
+        });
+        history.push({
+            role: 'user',
+            parts: [
+                {
+                    text: instructions,
+                },
+            ],
+        });
+        history.push({
+            role: 'user',
+            parts: [
+                {
+                    text:
+                        _('Hi, I am') +
+                        ' ' +
+                        this.app.userSettings.USERNAME +
+                        '. ' +
+                        _('I am from') +
+                        ' ' +
+                        this.app.userSettings.LOCATION +
+                        '. ' +
+                        _('Who are you?'),
+                },
+            ],
+        });
+        history.push({
+            role: 'model',
+            parts: [
+                {
+                    text:
+                        _('Hi! I am ') +
+                        this.app.userSettings.ASSIST_NAME +
+                        _(', your helpfull assistant.'),
+                },
+            ],
+        });
+
+        return history;
+    }
+
+    // Create history.json file if not exist
+    _createHistoryFile() {
+        if (
+            !GLib.file_test(
+                this.app.userSettings.HISTORY_FILE,
+                GLib.FileTest.IS_REGULAR,
+            )
+        ) {
+            try {
+                let initialContent = JSON.stringify(
+                    this._historyInitContent(),
+                    null,
+                    2,
+                );
+                GLib.file_set_contents(
+                    this.app.userSettings.HISTORY_FILE,
+                    initialContent,
+                );
+                this.app.log(
+                    `History file created. : ${this.app.userSettings.HISTORY_FILE}`,
+                );
+                return this.loadHistoryFile();
+            } catch (e) {
+                logError(
+                    e,
+                    `Failed to create file: ${this.app.userSettings.HISTORY_FILE}`,
+                );
+                return [];
+            }
+        }
+        return this.loadHistoryFile();
+    }
+
+    // Save to history file
+    _saveHistory() {
+        try {
+            GLib.file_set_contents(
+                this.app.userSettings.HISTORY_FILE,
+                JSON.stringify(this.app.chat.history, null, 2),
+            );
+            this.app.log(
+                `History saved in: ${this.app.userSettings.HISTORY_FILE}`,
+            );
+        } catch (e) {
+            logError(
+                e,
+                `Failed to save history: ${this.app.userSettings.HISTORY_FILE}`,
+            );
+        }
     }
 }
