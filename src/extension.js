@@ -102,7 +102,7 @@ const Aiva = GObject.registerClass(
 
         /**
          * @description init extension
-         * @param {*} extension
+         * @param {*} extension - this.extension
          */
         _init(extension) {
             // initialize
@@ -168,7 +168,7 @@ const Aiva = GObject.registerClass(
 
         /**
          * @description log shortcut
-         * @param {*} message
+         * @param {string} message - string to log
          */
         log(message) {
             this.logger.log(message);
@@ -176,7 +176,7 @@ const Aiva = GObject.registerClass(
 
         /**
          * @description log error shortcut
-         * @param {*} message
+         * @param {string} message - string to log error
          */
         logError(message) {
             this.logger.logError(message);
