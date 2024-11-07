@@ -6,15 +6,20 @@ import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js'
  * @description app user interface
  * @param {object} app
  * @example
- * public class:
+ * instance:
  * const ui = new UI(app);
  *
- * public functions:
+ * public
  * init() - return null - initialize interfaces
  * chat() - return Object - create chat item
  * question() - return Object - create question item
  * response() - return Object - create response item
  * copy() - return Object - create copy button item
+ *
+ * private
+ * _createApp() - create app and tray
+ * _addItems() - add items to app
+ * _itemsActions() - event handlers
  */
 export class UI {
     constructor(app) {
