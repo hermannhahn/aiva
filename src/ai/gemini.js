@@ -172,7 +172,6 @@ export class GoogleGemini {
                 null,
                 (_httpSession, result) => {
                     let bytes = _httpSession.send_and_read_finish(result);
-                    this.app.log('Response received.');
                     let decoder = new TextDecoder('utf-8');
                     // Get response
                     let response = decoder.decode(bytes.get_data());
@@ -186,13 +185,9 @@ export class GoogleGemini {
                         return;
                     }
                     let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
-                    this.app.log('Success getting response.');
-                    this.app.log('aiResponse CMD: ' + aiResponse);
                     let jsonResponse = {};
                     try {
                         jsonResponse = JSON.parse(aiResponse);
-                        this.app.log(jsonResponse);
-                        this.app.log('Success getting json.');
                         // eslint-disable-next-line no-unused-vars
                     } catch (error) {
                         let cleanedResponse = aiResponse.replace(
@@ -202,7 +197,6 @@ export class GoogleGemini {
                         cleanedResponse = `{${cleanedResponse}}`;
                         try {
                             jsonResponse = JSON.parse(cleanedResponse);
-                            this.app.log('Success getting json.');
                             // eslint-disable-next-line no-unused-vars
                         } catch (error) {
                             this.app.chat.editResponse(
@@ -214,10 +208,6 @@ export class GoogleGemini {
                         }
                     }
                     if (jsonResponse.success) {
-                        this.app.log('Success getting commandline.');
-                        this.app.log(
-                            'Running commandline: ' + jsonResponse.commandline,
-                        );
                         this.app.chat.editResponse(jsonResponse.response);
                         this.app.utils.executeCommand(jsonResponse.commandline);
                     } else {
@@ -226,7 +216,6 @@ export class GoogleGemini {
                 },
             );
         } catch (error) {
-            this.app.log('Error getting response.');
             this.app.logError(error);
             this.app.chat.editResponse(
                 _("Sorry, I'm having connection trouble. Please try again."),
