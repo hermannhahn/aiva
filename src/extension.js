@@ -241,7 +241,9 @@ export default class AivaExtension extends Extension {
         // Adiciona o atalho global para F12
         Main.wm.addKeybinding(
             'my-f12-keybinding', // Nome único para o atalho
-            new Gio.Settings({schema: 'org.gnome.shell.extensions.aiva'}), // Configurações do atalho
+            new Gio.Settings({
+                schema: 'org.gnome.shell.extensions.aiva.gschema',
+            }), // Configurações do atalho
             Meta.KeyBindingFlags.NONE, // Sem flags especiais
             Shell.ActionMode.ALL, // Disponível em todos os modos de ação do Shell
             () => {
