@@ -260,6 +260,7 @@ export default class AivaExtension extends Extension {
             settings: this.getSettings(),
             openSettings: this.openPreferences,
             uuid: this.uuid,
+            userSettings: this.userSettings,
             log: (message) => {
                 console.log('[AIVA] ' + message);
             },
