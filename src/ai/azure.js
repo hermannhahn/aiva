@@ -3,6 +3,9 @@ import Gio from 'gi://Gio';
 
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
+/**
+ * @example tts(text) | transcribe(path)
+ */
 export class MicrosoftAzure {
     constructor(app) {
         /**

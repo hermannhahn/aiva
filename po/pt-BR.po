@@ -154,24 +154,24 @@ msgstr "o filtro de borramento na imagem usando photoshop"
 msgid "Instructions: Open..."
 msgstr "Instruções: Abra..."
 
-#: src/ai/azure.js:80 src/ai/azure.js:94 src/ai/azure.js:137
-#: src/ai/azure.js:145 src/ai/gemini.js:98 src/ai/gemini.js:186
+#: src/ai/azure.js:83 src/ai/azure.js:97 src/ai/azure.js:140
+#: src/ai/azure.js:148 src/ai/gemini.js:98 src/ai/gemini.js:186
 #, fuzzy
 msgid "Sorry, I'm having connection trouble. Please try again."
 msgstr "Por favor, tente novamente."
 
-#: src/ai/azure.js:174
+#: src/ai/azure.js:177
 #, fuzzy
 msgid "Sorry, I'm having trouble to load the audio file. Please try again."
 msgstr "Por favor, tente novamente."
 
-#: src/ai/azure.js:204
+#: src/ai/azure.js:207
 #, fuzzy
 msgid ""
 "Sorry, I'm having trouble to create a temporary audio file. Please try again."
 msgstr "Por favor, tente novamente."
 
-#: src/ai/azure.js:221
+#: src/ai/azure.js:224
 #, fuzzy
 msgid "Sorry, I'm having trouble to write the audio file. Please try again."
 msgstr "Por favor, tente novamente."

@@ -150,21 +150,21 @@ msgstr ""
 msgid "Instructions: Open..."
 msgstr ""
 
-#: src/ai/azure.js:80 src/ai/azure.js:94 src/ai/azure.js:137
-#: src/ai/azure.js:145 src/ai/gemini.js:98 src/ai/gemini.js:186
+#: src/ai/azure.js:83 src/ai/azure.js:97 src/ai/azure.js:140
+#: src/ai/azure.js:148 src/ai/gemini.js:98 src/ai/gemini.js:186
 msgid "Sorry, I'm having connection trouble. Please try again."
 msgstr ""
 
-#: src/ai/azure.js:174
+#: src/ai/azure.js:177
 msgid "Sorry, I'm having trouble to load the audio file. Please try again."
 msgstr ""
 
-#: src/ai/azure.js:204
+#: src/ai/azure.js:207
 msgid ""
 "Sorry, I'm having trouble to create a temporary audio file. Please try again."
 msgstr ""
 
-#: src/ai/azure.js:221
+#: src/ai/azure.js:224
 msgid "Sorry, I'm having trouble to write the audio file. Please try again."
 msgstr ""
 
