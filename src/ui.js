@@ -2,6 +2,20 @@ import St from 'gi://St';
 import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
+/**
+ * @description app user interface
+ * @param {*} app
+ * @example
+ * public class:
+ * const ui = new UI(app);
+ *
+ * public functions:
+ * init() - return null - initialize interfaces
+ * chat() - return Object - create chat item
+ * question() - return Object - create question item
+ * response() - return Object - create response item
+ * copy() - return Object - create copy button item
+ */
 export class UI {
     constructor(app) {
         this.app = app;
@@ -88,19 +102,19 @@ export class UI {
         // Separator
         this.newSeparator = new PopupMenu.PopupSeparatorMenuItem();
 
-        this.createApp();
-        this.addItems();
-        this.itemsActions();
+        this._createApp();
+        this._addItems();
+        this._itemsActions();
     }
 
-    createApp() {
+    _createApp() {
         // Icon tray
         this.tray.add_child(this.icon);
         this.app.add_child(this.tray);
         this.app.log('App tray initialized.');
     }
 
-    addItems() {
+    _addItems() {
         // Add items container to menu
         this.app.menu.addMenuItem(this.item);
         this.app.menu.style_class = 'menu';
@@ -119,7 +133,7 @@ export class UI {
         this.item.add_child(this.settingsButton);
     }
 
-    itemsActions() {
+    _itemsActions() {
         //
         // Actions
         //
