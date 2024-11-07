@@ -3,6 +3,9 @@ import Gio from 'gi://Gio';
 
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
+/**
+ * @example play(path) | stop() | record() | stopRecord()
+ */
 export class Audio {
     constructor(app) {
         /**
