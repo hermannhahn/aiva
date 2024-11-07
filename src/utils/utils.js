@@ -14,25 +14,24 @@ import {convertMD} from './md2pango.js';
  * @property {object} this
  * @description app utilities
  * @example
- * inputformat(text)
- * @returns {string} formated text for the questions
- * textformat(text)
- * insertLineBreaks(text, maxWidth, font)
- * scrollToBottom()
- * createHistoryFile()
- * addToHistory(question, response)
- * saveHistory()
- * loadHistoryFile()
- * gnomeNotify(text, type)
- * copySelectedText(responseChat, copyButton)
- * removeNotificationByTitle(title)
- * randomPhraseToShowOnScreen()
- * randomPhraseToWaitResponse()
- * encodeFileToBase64(path)
- * extractCodeAndTTS(text, lang)
- * executeCommand(cmd)
- * removeWavFiles()
- * curl(url)
+ * inputformat(text) - return String - format question
+ * textformat(text) - return String - format response
+ * insertLineBreaks(text, maxWidth, font) - return String
+ * scrollToBottom() - return null - roll scroll to bottom
+ * createHistoryFile() - return null - create history file
+ * addToHistory(question, response) - return null - add to history
+ * saveHistory() - return null - save history
+ * loadHistoryFile() - return {Array} - return history array
+ * gnomeNotify(text, type) - return null - send gnome notification
+ * removeNotificationByTitle(title) - return null - remove gnome notification
+ * copySelectedText(responseChat, copyButton) - return null - copy to clipboard
+ * randomPhraseToShowOnScreen() - return String - random prhase for "Showing on screen..."
+ * randomPhraseToWaitResponse() - return String - random phrase to wait for response
+ * encodeFileToBase64(path) - return null - convert file to base64
+ * extractCodeAndTTS(text, lang) - return Object - create object with text to speech and code examples
+ * executeCommand(cmd) - return null - run terminal cmd
+ * removeWavFiles() - return null - remove temporary wav files
+ * curl(url) - return String - send curl
  */
 export class Utils {
     constructor(app) {
