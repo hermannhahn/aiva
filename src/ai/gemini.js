@@ -135,7 +135,9 @@ export class GoogleGemini {
                             .toLowerCase()
                             .includes('execute local command')
                     ) {
-                        this.runCommand(userQuestion, false, false);
+                        this.app.interpreter.voiceCommandInterpreter(
+                            userQuestion,
+                        );
                         return;
                     }
 
@@ -160,14 +162,10 @@ export class GoogleGemini {
      * @param {boolean} [destroyLoop=false]
      * @param {boolean} [waitResponse=true]
      */
-    runCommand(solicitation, destroyLoop = false, waitResponse = true) {
+    runCommand(solicitation, destroyLoop = false) {
         // Destroy loop if it exists
         if (destroyLoop) {
             this.app.destroyLoop();
-        }
-
-        if (waitResponse) {
-            this.app.chat.addResponse('...');
         }
 
         try {
