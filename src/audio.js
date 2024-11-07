@@ -12,9 +12,9 @@ import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js'
  *
  * public function
  * record() - start record audio
- * stopRecord() - stop record audio
- * play() - play audio
- * stop() - stop audio
+ * stopRecord() - stop record audio and start transcription
+ * play(path) - play audio
+ * stop() - stop audio playing
  * encodeFileToBase64() - encode file to base64
  */
 export class Audio {
