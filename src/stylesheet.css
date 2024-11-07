@@ -40,6 +40,7 @@
     text-align: justify;
     word-wrap: break-word;
     margin-top: 10px;
+    overflow-y: auto;
     /* display: grid;
     grid-template-columns: repeat(
         auto-fill,
@@ -67,7 +68,7 @@
 .chat-scroll-section {
     max-width: 800px;
     max-height: 600px;
-    overflow: scroll;
+    overflow: auto;
     padding-right: 10px;
     padding-bottom: 10px;
 }
