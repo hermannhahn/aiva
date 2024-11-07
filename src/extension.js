@@ -247,7 +247,7 @@ export default class AivaExtension extends Extension {
                 // Verifica se a tecla pressionada é F12
                 if (keySymbol === Clutter.KEY_F12) {
                     // Imprime no console quando F12 é pressionado
-                    log('F12 foi pressionado!');
+                    this.app.log('F12 foi pressionado!');
 
                     // Retorna true se quiser bloquear o evento para outras ações
                     return Clutter.EVENT_STOP;
