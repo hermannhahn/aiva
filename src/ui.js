@@ -9,14 +9,14 @@ import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js'
  * instance:
  * const ui = new UI(app);
  *
- * public
+ * public function
  * init() - return null - initialize interfaces
  * chat() - return Object - create chat item
  * question() - return Object - create question item
  * response() - return Object - create response item
  * copy() - return Object - create copy button item
  *
- * private
+ * private function
  * _createApp() - create app and tray
  * _addItems() - add items to app
  * _itemsActions() - event handlers
