@@ -22,6 +22,9 @@ export class UI {
         this.app.log('UI loaded.');
     }
 
+    /**
+     * @description initialize interfaces
+     */
     init() {
         // Create tray
         this.tray = new St.BoxLayout({
@@ -102,11 +105,15 @@ export class UI {
         // Separator
         this.newSeparator = new PopupMenu.PopupSeparatorMenuItem();
 
+        // Initialize
         this._createApp();
         this._addItems();
         this._itemsActions();
     }
 
+    /**
+     * @description create app tray
+     */
     _createApp() {
         // Icon tray
         this.tray.add_child(this.icon);
@@ -114,6 +121,9 @@ export class UI {
         this.app.log('App tray initialized.');
     }
 
+    /**
+     * @description add items to app tray
+     */
     _addItems() {
         // Add items container to menu
         this.app.menu.addMenuItem(this.item);
@@ -133,32 +143,10 @@ export class UI {
         this.item.add_child(this.settingsButton);
     }
 
+    /**
+     * @description add items actions
+     */
     _itemsActions() {
-        //
-        // Actions
-        //
-
-        // If press keyboard
-        this.tray.connect('key-press-event', (_self, event) => {
-            this.app.log('Tray Key pressed: ' + event.keyval);
-            if (event.keyval === 0xff1b) {
-                // F12
-                this.app.audio.record();
-            }
-        });
-        this.icon.connect('key-press-event', (_self, event) => {
-            this.app.log('Icon Key pressed: ' + event.keyval);
-        });
-        this.app.menu.connect('key-press-event', (_self, event) => {
-            this.app.log('menu Key pressed: ' + event.keyval);
-        });
-        this.app.menu.box.connect('key-press-event', (_self, event) => {
-            this.app.log('menubox Key pressed: ' + event.keyval);
-        });
-        this.app.connect('key-press-event', (_self, event) => {
-            this.app.log('app Key pressed: ' + event.keyval);
-        });
-
         // If press enter on question input box
         this.searchEntry.clutter_text.connect('activate', (actor) => {
             const question = actor.text;
@@ -191,6 +179,10 @@ export class UI {
         });
     }
 
+    /**
+     * @description create chat item
+     * @returns {*} Object
+     */
     chat() {
         // Question
         let chat = new PopupMenu.PopupMenuItem('', {
@@ -206,6 +198,10 @@ export class UI {
         return chat;
     }
 
+    /**
+     * @description create question item
+     * @returns {*} Object
+     */
     question() {
         // Question
         let inputChat = new PopupMenu.PopupMenuItem('', {
@@ -219,6 +215,10 @@ export class UI {
         return inputChat;
     }
 
+    /**
+     * @description create response item
+     * @returns {*} Object
+     */
     response() {
         // Response
         let responseChat = new PopupMenu.PopupMenuItem('', {
@@ -233,6 +233,10 @@ export class UI {
         return responseChat;
     }
 
+    /**
+     * @description create copy button item
+     * @returns {*} Object
+     */
     copy() {
         // Copy Button
         let copyButton = new PopupMenu.PopupMenuItem('', {
