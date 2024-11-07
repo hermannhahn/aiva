@@ -184,8 +184,8 @@ export class UI {
     }
 
     /**
-     * @description create chat item
-     * @returns {object} Object
+     * @description create user chat item
+     * @returns {object} user chat item
      */
     chat() {
         // Question
@@ -204,7 +204,7 @@ export class UI {
 
     /**
      * @description create question item
-     * @returns {*} Object
+     * @returns {object} question item
      */
     question() {
         // Question
@@ -221,7 +221,7 @@ export class UI {
 
     /**
      * @description create response item
-     * @returns {*} Object
+     * @returns {object} response item
      */
     response() {
         // Response
@@ -239,7 +239,7 @@ export class UI {
 
     /**
      * @description create copy button item
-     * @returns {*} Object
+     * @returns {object} copy button item
      */
     copy() {
         // Copy Button
