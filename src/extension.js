@@ -296,7 +296,7 @@ export default class AivaExtension extends Extension {
     disable() {
         // Remove o evento de escuta de tecla quando a extensão é desativada
         if (keyEventHandler) {
-            global.display.disconnect(keyEventHandler);
+            global.stage.disconnect(keyEventHandler);
             keyEventHandler = null;
         }
         this._aiva.destroy();
