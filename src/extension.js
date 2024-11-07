@@ -58,6 +58,8 @@ const Aiva = GObject.registerClass(
          * @description fetch settings
          */
         _fetchSettings() {
+            // extension settings
+            const {settings} = this.extension;
             // extension directory
             const EXT_DIR = GLib.build_filenamev([
                 GLib.get_home_dir(),
@@ -65,10 +67,8 @@ const Aiva = GObject.registerClass(
                 'share',
                 'gnome-shell',
                 'extensions',
-                'aiva@gemini-assist.vercel.app',
+                this.uuid,
             ]);
-            // extension settings
-            const {settings} = this.extension;
             // user settings
             this.userSettings = {
                 ASSIST_NAME: settings.get_string('assist-name'),
@@ -87,7 +87,7 @@ const Aiva = GObject.registerClass(
         }
 
         /**
-         * @description create instances
+         * @description public instances
          */
         _createInstances() {
             this.logger = new Logger(DEBUG);
@@ -95,44 +95,25 @@ const Aiva = GObject.registerClass(
             this.azure = new MicrosoftAzure(this);
             this.audio = new Audio(this);
             this.utils = new Utils(this);
-
-            /**
-             * tray | icon | chatSection | scrollView | copyButton
-             */
             this.ui = new UI(this);
-
-            /**
-             * add | copy
-             */
             this.chat = new Chat(this);
-
-            /**
-             *
-             */
             this.interpreter = new Interpreter(this);
         }
 
         /**
-         * @param {*} extension
-         *
          * @description init extension
+         * @param {*} extension
          */
         _init(extension) {
-            console.log('[AIVA] Initializing extension...');
-
-            // initialize extension
-            super._init(0.0, _('AIVA'));
-
-            /**
-             * @description extension props
-             */
+            // initialize
+            super._init(0.0, 'aiva');
             this.extension = extension;
 
             // load settings
             this._loadSettings();
-            console.log('[AIVA] Settings loaded.');
+            this.log('Settings loaded.');
 
-            // set gettext language
+            // set language
             GLib.setenv(
                 'LANGUAGE',
                 this.userSettings.AZURE_SPEECH_LANGUAGE,
@@ -140,30 +121,27 @@ const Aiva = GObject.registerClass(
             );
 
             // create instances
-            console.log('[AIVA] Creating instances...');
+            this.log('Creating instances...');
             this._createInstances();
 
             // open settings if gemini api key is not configured
-            console.log('[AIVA] Checking API key...');
+            this.log('Checking API key...');
             if (this.userSettings.GEMINI_API_KEY === '') {
-                console.log('[AIVA] API key not configured.');
+                this.log('API key not configured.');
                 this.openSettings();
+            } else {
+                this.log('API key configured.');
             }
-            console.log('[AIVA] API key configured.');
 
             // initialize ui
-            console.log('[AIVA] Initializing UI...');
             this.ui.init();
 
             // initialize chat
-            console.log('[AIVA] Initializing chat...');
             this.chat.init();
-
-            console.log('[AIVA] Extension initialized.');
         }
 
         /**
-         * open settings
+         * @description open settings
          */
         openSettings() {
             this.log('Opening settings...');
@@ -171,39 +149,34 @@ const Aiva = GObject.registerClass(
         }
 
         /**
-         * destroy loop
+         * @description destroy loop
          */
         destroyLoop() {
-            if (this.afterTune) {
-                this.log('Destroying loop...');
-                clearTimeout(this.afterTune);
-                this.afterTune = null;
+            if (this.gemini.afterTune) {
+                clearTimeout(this.gemini.afterTune);
+                this.gemini.afterTune = null;
             }
         }
 
         /**
-         * destroy extension
+         * @description destroy extension
          */
         destroy() {
-            this.log('Destroying extension...');
             this.destroyLoop();
             super.destroy();
-            this.log('Extension destroyed.');
         }
 
         /**
+         * @description log shortcut
          * @param {*} message
-         *
-         * logger
          */
         log(message) {
             this.logger.log(message);
         }
 
         /**
+         * @description log error shortcut
          * @param {*} message
-         *
-         * log error
          */
         logError(message) {
             this.logger.logError(message);
@@ -211,28 +184,17 @@ const Aiva = GObject.registerClass(
     },
 );
 
+/**
+ *
+ */
 export default class AivaExtension extends Extension {
     /**
-     * Enable extension
+     * @description enable extension
      */
     enable() {
-        // // Adiciona o atalho global para F12
-        // Main.wm.addKeybinding(
-        //     'my-f12-keybinding', // Nome único para o atalho
-        //     new Gio.Settings({
-        //         schema: 'org.gnome.shell.extensions.aiva',
-        //     }), // Configurações do atalho
-        //     Meta.KeyBindingFlags.NONE, // Sem flags especiais
-        //     Shell.ActionMode.ALL, // Disponível em todos os modos de ação do Shell
-        //     () => {
-        //         // Função chamada quando F12 é pressionado
-        //         log('F12 foi pressionado!');
-        //     },
-        // );
-        // Get IP
-        let url = 'https://api.myip.com';
-        let _httpSession = new Soup.Session();
-        let message = Soup.Message.new('GET', url);
+        this._aiva.log('Starting AIVA...');
+
+        // aiva instance
         this._aiva = new Aiva({
             clipboard: St.Clipboard.get_default(),
             settings: this.getSettings(),
@@ -243,8 +205,15 @@ export default class AivaExtension extends Extension {
                 console.log('[AIVA] ' + message);
             },
         });
+
+        // add to status bar
         Main.panel.addToStatusArea('gvaGnomeExtension', this._aiva, 1);
-        this._aiva.log('[AIVA] Getting IP...');
+
+        // get and save location
+        this._aiva.log('Getting IP and location...');
+        let url = 'https://api.myip.com';
+        let _httpSession = new Soup.Session();
+        let message = Soup.Message.new('GET', url);
         _httpSession.send_and_read_async(
             message,
             GLib.PRIORITY_DEFAULT,
@@ -256,20 +225,22 @@ export default class AivaExtension extends Extension {
                 const res = JSON.parse(response);
                 const ip = res.ip;
                 const country = res.country;
-                this._aiva.log('[AIVA] IP: ' + ip);
-                this._aiva.log('[AIVA] Country: ' + country);
+                this._aiva.log('IP: ' + ip);
+                this._aiva.log('Country: ' + country);
                 this._aiva.userSettings.LOCATION = country;
             },
         );
+
+        this._aiva.log('AIVA started.');
     }
 
     /**
-     * Disable extension
+     * @description disable extension
      */
     disable() {
-        // Remove o atalho global para F12 ao desativar a extensão
-        // Main.wm.removeKeybinding('my-f12-keybinding');
+        this._aiva.log('Stopping AIVA...');
         this._aiva.destroy();
         this._aiva = null;
+        this._aiva.log('AIVA stopped.');
     }
 }
