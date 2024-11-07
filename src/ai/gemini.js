@@ -160,7 +160,6 @@ export class GoogleGemini {
      *
      * @param {*} solicitation
      * @param {boolean} [destroyLoop=false]
-     * @param {boolean} [waitResponse=true]
      */
     runCommand(solicitation, destroyLoop = false) {
         // Destroy loop if it exists

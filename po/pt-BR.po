@@ -155,7 +155,7 @@ msgid "Instructions: Open..."
 msgstr "Instruções: Abra..."
 
 #: src/ai/azure.js:80 src/ai/azure.js:94 src/ai/azure.js:137
-#: src/ai/azure.js:145 src/ai/gemini.js:154 src/ai/gemini.js:245
+#: src/ai/azure.js:145 src/ai/gemini.js:154 src/ai/gemini.js:244
 #, fuzzy
 msgid "Sorry, I'm having connection trouble. Please try again."
 msgstr "Por favor, tente novamente."
@@ -198,7 +198,7 @@ msgstr "Possível assédio na pergunta ou resposta."
 msgid "Possible dangerous content in the question or answer."
 msgstr "Possível conteúdo perigoso na pergunta ou resposta."
 
-#: src/ai/gemini.js:197 src/ai/gemini.js:223
+#: src/ai/gemini.js:196 src/ai/gemini.js:222
 #, fuzzy
 msgid "Sorry, I can't do this now. Try again later."
 msgstr "Peço desculpas, eu não posso responder a esta pergunta."

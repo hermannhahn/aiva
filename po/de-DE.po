@@ -151,7 +151,7 @@ msgid "Instructions: Open..."
 msgstr ""
 
 #: src/ai/azure.js:80 src/ai/azure.js:94 src/ai/azure.js:137
-#: src/ai/azure.js:145 src/ai/gemini.js:154 src/ai/gemini.js:245
+#: src/ai/azure.js:145 src/ai/gemini.js:154 src/ai/gemini.js:244
 msgid "Sorry, I'm having connection trouble. Please try again."
 msgstr ""
 
@@ -189,7 +189,7 @@ msgstr ""
 msgid "Possible dangerous content in the question or answer."
 msgstr ""
 
-#: src/ai/gemini.js:197 src/ai/gemini.js:223
+#: src/ai/gemini.js:196 src/ai/gemini.js:222
 msgid "Sorry, I can't do this now. Try again later."
 msgstr ""
 
