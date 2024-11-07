@@ -184,7 +184,7 @@ const Aiva = GObject.registerClass(
 
         captureEvents() {
             // Crie um objeto de barramento do sistema
-            const bus = Gio.bus_get_sync(Gio.BusType.SYSTEM);
+            const bus = Gio.bus_get_sync(Gio.BusType.SYSTEM, null);
 
             // Obtenha o objeto de serviço do gerenciador de atalhos de teclado
             const service = bus.get_object_sync(
