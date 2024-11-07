@@ -2,12 +2,12 @@
  * @description app logger
  * @param {boolean} [debug=true]
  * @example
- * instance >>
- * const logger = new Logger(true) - false to disable debug
+ * instance:
+ *  const logger = new Logger(true) - false to disable debug
  *
- * functions >>
- * log(text) - return null - show console log
- * logError(text) - return null - show console log error
+ * functions:
+ *  log(text) - return null - log
+ *  logError(text) - return null - log error
  */
 export class Logger {
     constructor(debug = true) {
