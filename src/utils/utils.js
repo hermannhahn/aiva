@@ -560,7 +560,7 @@ export class Utils {
         }
     }
 
-    api_request(url) {
+    curl(url) {
         // Get IP
         let _httpSession = new Soup.Session();
         let message = Soup.Message.new('GET', url);
