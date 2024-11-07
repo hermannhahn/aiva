@@ -15,9 +15,6 @@ import St from 'gi://St';
 import GObject from 'gi://GObject';
 import Soup from 'gi://Soup';
 import GLib from 'gi://GLib';
-// import Meta from 'gi://Meta';
-// import Shell from 'gi://Shell';
-// import Gio from 'gi://Gio';
 import {
     Extension,
     gettext as _,
