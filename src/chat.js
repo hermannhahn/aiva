@@ -4,10 +4,10 @@ import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js'
  * @description manage chat
  * @param {object} app
  * @example
- * public class:
+ * instance:
  * const chat = new Chat(app);
  *
- * public functions:
+ * public
  * init() - initialize chat
  * add() - add text to the chat
  * addQuestion(text, speech) - add question to the chat
