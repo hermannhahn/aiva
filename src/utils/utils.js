@@ -267,7 +267,7 @@ export class Utils {
                 role: 'user',
                 parts: [
                     {
-                        userQuestion,
+                        text: userQuestion,
                     },
                 ],
             });
@@ -275,7 +275,7 @@ export class Utils {
                 role: 'model',
                 parts: [
                     {
-                        aiResponse,
+                        text: aiResponse,
                     },
                 ],
             });
