@@ -4,7 +4,7 @@ import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js'
 
 /**
  * @description app user interface
- * @param {*} app
+ * @param {object} app
  * @example
  * public class:
  * const ui = new UI(app);
