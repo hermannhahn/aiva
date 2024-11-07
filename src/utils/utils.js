@@ -11,7 +11,7 @@ import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js'
 import {convertMD} from './md2pango.js';
 
 /**
- * @property {object} this
+ * @name Utils
  * @description app utilities
  * @example
  * inputformat(text) - return String - format question
