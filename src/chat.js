@@ -31,7 +31,7 @@ export class Chat {
         // if recursive talk is enabled
         if (this.app.userSettings.RECURSIVE_TALK) {
             // load history file
-            this.app.chat.history = this.app.utils.loadHistoryFile();
+            this.history = this.app.utils.loadHistoryFile();
             this.app.log('Recursive talk history loaded.');
         } else {
             this.app.log('Recursive talk is disabled.');
@@ -109,8 +109,6 @@ export class Chat {
             `<b>${this.app.userSettings.ASSIST_NAME}:</b> ${formatedText}`,
         );
         this.app.ui.responseChat = responseChat;
-
-        // add copy button
         copyButton.connect('activate', (_self) => {
             this.app.utils.copySelectedText(responseChat, copyButton);
         });
