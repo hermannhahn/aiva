@@ -1,4 +1,5 @@
 /**
+ * @description app logger
  * @example
  * log(text) - return null - show console log
  * logError(text) - return null - show console log error
