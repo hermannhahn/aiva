@@ -185,7 +185,7 @@ export class UI {
 
     /**
      * @description create chat item
-     * @returns {*} Object
+     * @returns {object} Object
      */
     chat() {
         // Question
