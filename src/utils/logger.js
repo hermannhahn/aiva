@@ -1,6 +1,6 @@
 /**
  * @description app logger
- * @param debug [boolean = true]
+ * @param {Bollean} [debug = true]
  * @example
  * log(text) - return null - show console log
  * logError(text) - return null - show console log error
