@@ -4,19 +4,20 @@ import Gio from 'gi://Gio';
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 /**
- * @example tts(text) | transcribe(path)
+ * @description Microsoft Azure Speech API
+ * @param {object} app
+ * @example
+ * instance:
+ * const azure = new MicrosoftAzure(app)
+ *
+ * public function
+ * tts(text) - text to speech
+ * transcribe(path) - audio transcription
  */
 export class MicrosoftAzure {
     constructor(app) {
-        /**
-         * set/get app props
-         */
         this.app = app;
         this.app.log('Microsoft Azure API loaded.');
-
-        /**
-         * get azure api settings
-         */
         this.AZURE_SPEECH_KEY = app.userSettings.AZURE_SPEECH_KEY;
         this.AZURE_SPEECH_REGION = app.userSettings.AZURE_SPEECH_REGION;
         this.AZURE_SPEECH_LANGUAGE = app.userSettings.AZURE_SPEECH_LANGUAGE;
@@ -24,14 +25,11 @@ export class MicrosoftAzure {
     }
 
     /**
-     *
-     * @param {*} text
-     * @returns Audio file path
-     *
-     * Microsoft Text-to-Speech API
+     * @description Microsoft Text-to-Speech API
+     * @param {string} text
+     * @returns {path} audio file path
      */
     tts(text) {
-        // Extract code and tts from response
         if (
             text === '...' ||
             text === null ||
@@ -42,38 +40,29 @@ export class MicrosoftAzure {
         }
 
         // Speech response
-        this.app.log('Speech response...');
         let answer = this.app.utils.extractCodeAndTTS(text);
         if (answer.tts === null) {
             return;
         }
 
-        /**
-         * API URL
-         */
+        // API URL
         const apiUrl = `https://${this.AZURE_SPEECH_REGION}.tts.speech.microsoft.com/cognitiveservices/v1`;
 
-        /**
-         * Requisition headers
-         */
+        // Requisition headers
         const headers = [
             'Content-Type: application/ssml+xml', // O conteúdo será enviado em formato SSML
             'X-Microsoft-OutputFormat: riff-24khz-16bit-mono-pcm', // Especifica o formato do áudio
             'Ocp-Apim-Subscription-Key: ' + this.AZURE_SPEECH_KEY, // Chave da API da Azure
         ];
 
-        /**
-         * Set text and voice language
-         */
+        // Set text and voice language
         const ssml = `
         <speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis' xml:lang='${this.AZURE_SPEECH_LANGUAGE}'>
             <voice name='${this.AZURE_SPEECH_VOICE}'>${text}</voice>
         </speak>
     `;
 
-        /**
-         * Create temporary audio file
-         */
+        // Create temporary audio file
         const [success, tempFilePath] = GLib.file_open_tmp(
             'gva_azure_tts_audio_XXXXXX.wav',
         );
@@ -85,9 +74,7 @@ export class MicrosoftAzure {
             return;
         }
 
-        /**
-         * Write SSML to temporary file
-         */
+        // Write SSML to temporary file
         try {
             GLib.file_set_contents(tempFilePath, ssml);
             this.app.log('SSML written to temporary audio file.');
@@ -99,9 +86,7 @@ export class MicrosoftAzure {
             return;
         }
 
-        /**
-         * Use subprocess to send HTTP request with curl, and save the response (audio) to a file
-         */
+        // Use subprocess to send HTTP request with curl, and save the response (audio) to a file
         let subprocess = new Gio.Subprocess({
             argv: [
                 'curl',
@@ -155,20 +140,15 @@ export class MicrosoftAzure {
     }
 
     /**
-     *
-     * @param {*} audioPath
-     * @returns text
-     *
-     * Microsoft Speech-to-Text API
+     * @description Microsoft Speech-to-Text API
+     * @param {string} path
+     * @returns {string} text
      */
-    transcribe(audioPath) {
-        /**
-         * Load audio file
-         */
-        let file = Gio.File.new_for_path(audioPath);
-        /**
-         * convert file to binary
-         */
+    transcribe(path) {
+        // Load audio file
+        let file = Gio.File.new_for_path(path);
+
+        // convert file to binary
         let [, audioBinary] = file.load_contents(null);
         if (!audioBinary) {
             this.app.log('Fail to load audio file.');
@@ -180,23 +160,17 @@ export class MicrosoftAzure {
             return;
         }
 
-        /**
-         * API URL
-         */
+        // API URL
         const apiUrl = `https://${this.AZURE_SPEECH_REGION}.stt.speech.microsoft.com/speech/recognition/conversation/cognitiveservices/v1?language=${this.AZURE_SPEECH_LANGUAGE}`;
 
-        /**
-         * Requisition headers
-         */
+        // Requisition headers
         const headers = [
             'Content-Type: audio/wav', // O arquivo será enviado em formato .wav
             'Ocp-Apim-Subscription-Key: ' + this.AZURE_SPEECH_KEY, // Chave de autenticação
             'Accept: application/json', // A resposta será em JSON
         ];
 
-        /**
-         * Create temporary audio file
-         */
+        // Create temporary audio file
         const [success, tempFilePath] = GLib.file_open_tmp(
             'gva_azure_att_audio_XXXXXX.wav',
         );
@@ -210,9 +184,7 @@ export class MicrosoftAzure {
             return;
         }
 
-        /**
-         * Write audio to temporary file
-         */
+        // Write audio to temporary file
         try {
             GLib.file_set_contents(tempFilePath, audioBinary);
         } catch (e) {
@@ -227,9 +199,7 @@ export class MicrosoftAzure {
             return;
         }
 
-        /**
-         * Use subprocess to send HTTP request with curl, reading the audio from the file
-         */
+        // Use subprocess to send HTTP request with curl, reading the audio from the file
         let subprocess = new Gio.Subprocess({
             argv: [
                 'curl',

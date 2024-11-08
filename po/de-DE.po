@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-08 01:43-0300\n"
+"POT-Creation-Date: 2024-11-08 01:55-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language de-DE\n"
@@ -150,21 +150,21 @@ msgstr ""
 msgid "Instructions: Open..."
 msgstr ""
 
-#: src/ai/azure.js:83 src/ai/azure.js:97 src/ai/azure.js:140
-#: src/ai/azure.js:148 src/ai/gemini.js:100 src/ai/gemini.js:188
+#: src/ai/azure.js:72 src/ai/azure.js:84 src/ai/azure.js:125
+#: src/ai/azure.js:133 src/ai/gemini.js:100 src/ai/gemini.js:188
 msgid "Sorry, I'm having connection trouble. Please try again."
 msgstr ""
 
-#: src/ai/azure.js:177
+#: src/ai/azure.js:157
 msgid "Sorry, I'm having trouble to load the audio file. Please try again."
 msgstr ""
 
-#: src/ai/azure.js:207
+#: src/ai/azure.js:181
 msgid ""
 "Sorry, I'm having trouble to create a temporary audio file. Please try again."
 msgstr ""
 
-#: src/ai/azure.js:224
+#: src/ai/azure.js:196
 msgid "Sorry, I'm having trouble to write the audio file. Please try again."
 msgstr ""
 
