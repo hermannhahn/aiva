@@ -1,5 +1,10 @@
 ```mermaid
 graph TD
+    %% App
+    APP[APP] --> UI[ui]
+    UI --> A
+    UI --> D
+
     %% Entry
     A[ui.searchEntry] --> B[chat.addQuestion]
     A --> C[interpreter.proccess]
