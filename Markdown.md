@@ -1,22 +1,22 @@
 ```mermaid
 graph TD
-    %% Entradas principais
+    %% Entry
     A[ui.searchEntry] --> B[chat.addQuestion]
     A --> C[interpreter.proccess]
 
     D[ui.micButton] --> E[audio.record]
     D --> F[audio.stopRecord]
 
-    %% Fluxo de processamento de áudio
+    %% Audio
     F --> G[azure.transcribe]
     G --> B
     G --> C
 
-    %% Fluxo de interpretação
+    %% Interpreter
     C --> H{interpreter.isCommand?}
-    H -- Sim --> I[interpreter.command] --> J[utils.executeCommand]
-    H -- Não --> K{interpreter.isVoiceCommand?}
+    H -- true --> I[interpreter.command] --> J[utils.executeCommand]
+    H -- false --> K{interpreter.isVoiceCommand?}
 
-    K -- Sim --> L[interpreter.voiceCommand] --> M[gemini.runCommand]
-    K -- Não --> N[gemini.response] --> O[chat.editResponse]
+    K -- true --> L[interpreter.voiceCommand] --> M[gemini.runCommand]
+    K -- false --> N[gemini.response] --> O[chat.editResponse]
 ```
