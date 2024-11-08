@@ -130,6 +130,7 @@ function build_extension_package() {
 	# Compile translations, if there are any
 	if (find po/ -type f | grep ".po$") &> /dev/null; then
 		if command -v msgfmt &> /dev/null; then
+			echo "Creating translations..."
 			update_pot_file
 			update_po_files
 			compile_translations
