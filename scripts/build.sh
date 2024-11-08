@@ -64,8 +64,8 @@ function update_po_files {
 	for PO_FILE in po/*.po; do
 		msgmerge --update "$PO_FILE" po/messages.pot
 	done
-	rm -rf po/*.po~
-	rm -rf po/messages.pot
+	#rm -rf po/*.po~
+	#rm -rf po/messages.pot
 	echo "PO files updated."
 }
 
@@ -130,7 +130,6 @@ function build_extension_package() {
 	# Compile translations, if there are any
 	if (find po/ -type f | grep ".po$") &> /dev/null; then
 		if command -v msgfmt &> /dev/null; then
-			echo "Creating translations..."
 			update_pot_file
 			update_po_files
 			compile_translations
