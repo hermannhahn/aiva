@@ -4,9 +4,15 @@ import GLib from 'gi://GLib';
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 /**
+ * @description Google Gemini API
+ * @param {object} app
  * @example
- * response(text)
- * runCommand(text)
+ * instance:
+ * const gemini = new GoogleGemini(app)
+ *
+ * public function
+ * response(text) - send question to API, get response and add to chat
+ * runCommand(text) - send request to API, speech response and run command
  */
 export class GoogleGemini {
     constructor(app) {
@@ -18,13 +24,11 @@ export class GoogleGemini {
     }
 
     /**
-     *
-     * @param {*} userQuestion
+     * @description send question to API, get response and add to chat
+     * @param {string} question
      * @param {boolean} [destroyLoop=false]
-     *
-     * get ai response for user question
      */
-    response(userQuestion, destroyLoop = false) {
+    response(question, destroyLoop = false) {
         // Destroy loop if it exists
         if (destroyLoop) {
             this.destroyLoop();
@@ -37,7 +41,7 @@ export class GoogleGemini {
             let url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.0-pro:generateContent?key=${this.GEMINI_API_KEY}`;
 
             // Send async request
-            var body = this.buildBody(userQuestion);
+            var body = this.buildBody(question);
             let message = Soup.Message.new('POST', url);
             let bytes = GLib.Bytes.new(body);
             message.set_request_body_from_bytes('application/json', bytes);
@@ -79,16 +83,14 @@ export class GoogleGemini {
                             .toLowerCase()
                             .includes('execute local command')
                     ) {
-                        this.app.interpreter.voiceCommandInterpreter(
-                            userQuestion,
-                        );
+                        this.app.interpreter.voiceCommandInterpreter(question);
                         return;
                     }
 
                     this.app.chat.editResponse(aiResponse);
 
                     // Add to history
-                    this.app.utils.addToHistory(userQuestion, aiResponse);
+                    this.app.utils.addToHistory(question, aiResponse);
                 },
             );
         } catch (error) {
@@ -101,11 +103,11 @@ export class GoogleGemini {
     }
 
     /**
-     *
-     * @param {*} solicitation
+     * @description send request to API, speech response and run command
+     * @param {string} request
      * @param {boolean} [destroyLoop=false]
      */
-    runCommand(solicitation, destroyLoop = false) {
+    runCommand(request, destroyLoop = false) {
         // Destroy loop if it exists
         if (destroyLoop) {
             this.app.destroyLoop();
@@ -118,7 +120,7 @@ export class GoogleGemini {
             let url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.0-pro:generateContent?key=${this.GEMINI_API_KEY}`;
 
             // Send async request
-            var body = this.buildNoHistoryBody(solicitation);
+            var body = this.buildNoHistoryBody(request);
             let message = Soup.Message.new('POST', url);
             let bytes = GLib.Bytes.new(body);
             message.set_request_body_from_bytes('application/json', bytes);
@@ -189,9 +191,9 @@ export class GoogleGemini {
     }
 
     /**
-     *
-     * @param {*} res
-     * @returns string or false
+     * @description check safety result
+     * @param {object} res
+     * @returns {string|false} safety reason or false
      */
     safetyReason(res) {
         let aiResponse = '';
@@ -245,10 +247,8 @@ export class GoogleGemini {
     }
 
     /**
-     *
-     * @returns string
-     *
-     * get tune string
+     * @description create tune string
+     * @returns {string} tune text
      */
     getTuneString() {
         const date = new Date();
@@ -262,11 +262,9 @@ export class GoogleGemini {
     }
 
     /**
-     * @param {*} text
-     *
-     * @returns body contents
-     *
-     * build body for request
+     * @description build body for request
+     * @param {string} text
+     * @returns {string} body contents
      */
     buildBody(text) {
         let request = this.app.utils.loadHistoryFile();
@@ -288,9 +286,9 @@ export class GoogleGemini {
     }
 
     /**
-     * @param {*} text
-     *
-     * @returns body contents
+     * @description build body without history
+     * @param {string} text
+     * @returns {string} body contents
      */
     buildNoHistoryBody(text) {
         let request = [
