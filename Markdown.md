@@ -9,12 +9,12 @@ graph TD
     APP[app] --> GEMINI[gemini]
 
     %% UI
-    UI --> SE
+    UI --> A
     UI --> D
 
     %% Entry
-    SE[ui.searchEntry] --> B[chat.addQuestion]
-    SE --> C[interpreter.proccess]
+    A[ui.searchEntry] --> B[chat.addQuestion]
+    A --> C[interpreter.proccess]
 
     D[ui.micButton] --> E[audio.record]
     D --> F[audio.stopRecord]
