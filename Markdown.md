@@ -9,26 +9,50 @@ graph TD
     APP[app] --> GEMINI[gemini]
 
     %% UI
-    UI --> A
-    UI --> D
+    UI --> SEARCHENTRY[searchEntry]
+    UI --> MICBUTTON[micButton]
+    MICBUTTON --> RECORD
+    MICBUTTON --> STOPRECORD
 
-    %% Entry
-    A[ui.searchEntry] --> B[chat.addQuestion]
-    A --> C[interpreter.proccess]
+    %% CHAT
+    CHAT --> ADDQUESTION[addQuestion]
+    CHAT --> EDITQUESTION[editQuestion]
+    CHAT --> ADDRESPONSE[addResponse]
+    CHAT --> EDITRESPONSE[editResponse]
+    CHAT --> CHATCOMMAND[chatCommand]
+    CHAT --> CLEAR[clear]
+    CHAT --> CLEARHISTORY[clearHistory]
 
-    D[ui.micButton] --> E[audio.record]
-    D --> F[audio.stopRecord]
+    %% INTERPRETER
+    INTERPRETER --> PROCCESS[proccess]
+    INTERPRETER --> ISCOMMAND[isCommand]
+    INTERPRETER --> ISVOICECOMMAND[isVoiceCommand]
+    INTERPRETER --> COMMAND[command]
+    INTERPRETER --> VOICECOMMAND[voiceCommand]
 
-    %% Audio
-    F --> G[azure.transcribe]
-    G --> B
-    G --> C
+    %% AUDIO
+    AUDIO --> RECORD[record]
+    AUDIO --> STOPRECORD[stopRecord]
+    STOPRECORD --> TRANSCRIBE
 
-    %% Interpreter
-    C --> H{interpreter.isCommand?}
-    H -- true --> I[interpreter.command] --> J[chat.runCommand]
-    H -- false --> K{interpreter.isVoiceCommand?}
+    %% AZURE
+    AZURE --> TRANSCRIBE[transcribe]
 
-    K -- true --> L[interpreter.voiceCommand] --> M[gemini.runCommand]
-    K -- false --> N[gemini.response] --> O[chat.editResponse]
+    %% GEMINI
+    GEMINI --> RUNCOMMAND[runCommand]
+    GEMINI --> RESPONSE[response]
+
+    SEARCHENTRY --> ADDQUESTION
+    SEARCHENTRY --> PROCCESS
+
+
+    TRANSCRIBE --> ADDQUESTION
+    TRANSCRIBE --> PROCCESS
+
+    PROCCESS --> ISCOMMAND
+    ISCOMMAND -- true --> COMMAND --> CHATCOMMAND
+    ISCOMMAND -- false --> ISVOICECOMMAND
+
+    ISVOICECOMMAND -- true --> VOICECOMMAND --> RUNCOMMAND
+    ISVOICECOMMAND -- false --> RESPONSE --> EDITRESPONSE
 ```
