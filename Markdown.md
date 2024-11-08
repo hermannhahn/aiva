@@ -1,13 +1,20 @@
 ```mermaid
 graph TD
     %% App
-    APP[APP] --> UI[ui]
-    UI --> A
+    APP[app] --> UI[ui]
+    APP[app] --> CHAT[chat]
+    APP[app] --> INTERPRETER[interpreter]
+    APP[app] --> AUDIO[audio]
+    APP[app] --> AZURE[azure]
+    APP[app] --> GEMINI[gemini]
+
+    %% UI
+    UI --> SE
     UI --> D
 
     %% Entry
-    A[ui.searchEntry] --> B[chat.addQuestion]
-    A --> C[interpreter.proccess]
+    SE[ui.searchEntry] --> B[chat.addQuestion]
+    SE --> C[interpreter.proccess]
 
     D[ui.micButton] --> E[audio.record]
     D --> F[audio.stopRecord]
