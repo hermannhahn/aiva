@@ -14,7 +14,7 @@ graph TD
 
     %% Interpreter
     C --> H{interpreter.isCommand?}
-    H -- true --> I[interpreter.command] --> J[utils.executeCommand]
+    H -- true --> I[interpreter.command] --> J[chat.runCommand]
     H -- false --> K{interpreter.isVoiceCommand?}
 
     K -- true --> L[interpreter.voiceCommand] --> M[gemini.runCommand]
