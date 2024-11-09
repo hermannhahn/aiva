@@ -1,16 +1,16 @@
 ```mermaid
 graph TD
     %% INPUT
-    INPUT[INPUT] --> INPUT_TEXT
+    INPUT[user 👤] --> INPUT_TEXT
     INPUT --> INPUT_VOICE
 
     %% TEXT
-    INPUT_TEXT[🔡text] --> SEARCH_ENTRY[ui.searchEntry]
+    INPUT_TEXT[text  🔡] --> SEARCH_ENTRY[ui.searchEntry ⌨️]
     SEARCH_ENTRY --> ADD_QUESTION[chat.addQuestion]
     SEARCH_ENTRY --> PROCCESS[interpreter.proccess]
 
     %% VOICE
-    INPUT_VOICE[🎙️voice] --> MIC_BUTTON[ui.micButton]
+    INPUT_VOICE[voice 🗣️] --> MIC_BUTTON[ui.micButton 🎤]
     MIC_BUTTON --> RECORD[audio.record]
     MIC_BUTTON --> STOP_RECORD[audio.stopRecord]
 
