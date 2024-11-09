@@ -297,9 +297,7 @@ export class Utils {
 
     extractCodeAndTTS(text) {
         // Expressão regular para capturar o código entre triplo acento grave
-        const regex = /`{3}([\s\S]*?)`{3}/;
-        const match = text.match(regex);
-        let tts = tts.split('*').join('');
+        let tts = text.split('*').join('');
         tts = tts
             .replace(/&/g, '')
             .replace(/</g, '')
@@ -321,6 +319,9 @@ export class Utils {
         if (tts.length > 1000) {
             tts = this.randomPhraseToShowOnScreen();
         }
+
+        const regex = /`{3}([\s\S]*?)`{3}/;
+        const match = text.match(regex);
 
         if (match) {
             // const code = match[1]; // Captura o conteúdo entre os acentos graves
