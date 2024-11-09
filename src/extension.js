@@ -108,7 +108,7 @@ const Aiva = GObject.registerClass(
 
             // load settings
             this._loadSettings();
-            this.log('Settings loaded.');
+            console.log('[AIVA] Settings loaded.');
 
             // set language
             GLib.setenv(
@@ -118,7 +118,7 @@ const Aiva = GObject.registerClass(
             );
 
             // create instances
-            this.log('Creating instances...');
+            console.log('[AIVA] Creating instances...');
             this._createInstances();
 
             // open settings if gemini api key is not configured
