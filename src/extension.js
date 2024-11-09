@@ -189,8 +189,6 @@ export default class AivaExtension extends Extension {
      * @description enable extension
      */
     enable() {
-        this._aiva.log('Starting AIVA...');
-
         // aiva instance
         this._aiva = new Aiva({
             clipboard: St.Clipboard.get_default(),
@@ -202,6 +200,7 @@ export default class AivaExtension extends Extension {
                 console.log('[AIVA] ' + message);
             },
         });
+        this._aiva.log('Starting AIVA...');
 
         // add to status bar
         Main.panel.addToStatusArea('gvaGnomeExtension', this._aiva, 1);
