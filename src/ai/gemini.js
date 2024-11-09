@@ -252,10 +252,30 @@ export class GoogleGemini {
      * @returns {string} tune text
      */
     getTuneString() {
+        const date = new Date();
+        const introduction =
+            _("Hi, I'm") +
+            ' ' +
+            this.app.userSettings.USERNAME +
+            '. ' +
+            _("I'm in") +
+            ' ' +
+            this.app.userSettings.LOCATION +
+            ' ' +
+            'and today is' +
+            ' ' +
+            date +
+            '. ' +
+            _('Who are you?') +
+            ' ' +
+            _('and') +
+            ' ' +
+            _('How are you?') +
+            '. ';
         const instructions = _(
             "If any of my interactions include a request to run something on my computer or search for something, respond only and exactly with the word: 'executeLocalCommand', otherwise respond normally.",
         );
-        return instructions;
+        return introduction + instructions;
     }
 
     commandRequest(request) {

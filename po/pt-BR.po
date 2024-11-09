@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-09 16:07-0300\n"
+"POT-Creation-Date: 2024-11-09 16:18-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -74,7 +74,29 @@ msgstr "Possível assédio na pergunta ou resposta."
 msgid "Possible dangerous content in the question or answer."
 msgstr "Possível conteúdo perigoso na pergunta ou resposta."
 
-#: src/ai/gemini.js:256
+#: src/ai/gemini.js:257 src/utils/utils.js:446
+#, fuzzy
+msgid "Hi, I'm"
+msgstr "Olá, eu sou"
+
+#: src/ai/gemini.js:261 src/utils/utils.js:450
+msgid "I'm in"
+msgstr ""
+
+#: src/ai/gemini.js:269 src/utils/utils.js:458
+msgid "Who are you?"
+msgstr "Quem é você?"
+
+#: src/ai/gemini.js:271
+msgid "and"
+msgstr ""
+
+#: src/ai/gemini.js:273
+#, fuzzy
+msgid "How are you?"
+msgstr "Quem é você?"
+
+#: src/ai/gemini.js:276
 msgid ""
 "If any of my interactions include a request to run something on my computer "
 "or search for something, respond only and exactly with the word: "
@@ -84,135 +106,135 @@ msgstr ""
 "no meu computador ou pesquisar algo, responda somente e exatamente com a "
 "palavra: 'executeLocalCommand', caso contrário, responda normalmente."
 
-#: src/ai/gemini.js:263
+#: src/ai/gemini.js:283
 msgid "For the request"
 msgstr "Para a solicitação"
 
-#: src/ai/gemini.js:264
+#: src/ai/gemini.js:284
 msgid "Return a JSON with the following keys"
 msgstr "Retorne um JSON com as seguintes chaves"
 
-#: src/ai/gemini.js:265
+#: src/ai/gemini.js:285
 msgid "true if it can be executed"
 msgstr "true se for possível ser executado"
 
-#: src/ai/gemini.js:265
+#: src/ai/gemini.js:285
 msgid "on a Linux Ubuntu terminal"
 msgstr "em um terminal Linux Ubuntu"
 
-#: src/ai/gemini.js:265
+#: src/ai/gemini.js:285
 msgid "false otherwise"
 msgstr "false caso contrário"
 
-#: src/ai/gemini.js:266
+#: src/ai/gemini.js:286
 msgid "text to be spoken, informing success, failure or action"
 msgstr "texto para ser falado, informando sucesso, fracasso ou ação"
 
-#: src/ai/gemini.js:266
+#: src/ai/gemini.js:286
 msgid "e"
 msgstr "and"
 
-#: src/ai/gemini.js:267
+#: src/ai/gemini.js:287
 msgid "command to be executed in the terminal"
 msgstr "comando a ser executado no terminal"
 
-#: src/ai/gemini.js:268
+#: src/ai/gemini.js:288
 msgid "Rules for commandline value"
 msgstr "Regras para o valor da linha de comando"
 
-#: src/ai/gemini.js:268
+#: src/ai/gemini.js:288
 msgid "Do not use sudo"
 msgstr "Não use sudo"
 
-#: src/ai/gemini.js:268
+#: src/ai/gemini.js:288
 msgid "assume any application is already installed"
 msgstr "suponha que qualquer aplicativo já esteja instalado"
 
-#: src/ai/gemini.js:269
+#: src/ai/gemini.js:289
 msgid "Examples of responses"
 msgstr "Exemplos de respostas"
 
-#: src/ai/gemini.js:270 src/ai/gemini.js:272 src/ai/gemini.js:274
-#: src/ai/gemini.js:276
+#: src/ai/gemini.js:290 src/ai/gemini.js:292 src/ai/gemini.js:294
+#: src/ai/gemini.js:296
 msgid "Request"
 msgstr "Solicitação"
 
-#: src/ai/gemini.js:270
+#: src/ai/gemini.js:290
 #, fuzzy
 msgid "computer search for santos ferry crossing"
 msgstr "computador pesquise por cruzamento de balsa de santos"
 
-#: src/ai/gemini.js:271 src/ai/gemini.js:273 src/ai/gemini.js:275
-#: src/ai/gemini.js:277
+#: src/ai/gemini.js:291 src/ai/gemini.js:293 src/ai/gemini.js:295
+#: src/ai/gemini.js:297
 msgid "JSON Response"
 msgstr "Resposta JSON"
 
-#: src/ai/gemini.js:271
+#: src/ai/gemini.js:291
 #, fuzzy
 msgid "Searching for santos ferry crossing..."
 msgstr "Pesquisando cruzamento de balsa de santos..."
 
-#: src/ai/gemini.js:271
+#: src/ai/gemini.js:291
 #, fuzzy
 msgid "ferry+crossing+santos"
 msgstr "travessia+balsa+santos"
 
-#: src/ai/gemini.js:272
+#: src/ai/gemini.js:292
 msgid "search for cat videos on youtube"
 msgstr "pesquise por vídeos de gatos no youtube"
 
-#: src/ai/gemini.js:273
+#: src/ai/gemini.js:293
 msgid "Searching for cat videos on youtube..."
 msgstr "Pesquisando vídeos de gatos no youtube..."
 
-#: src/ai/gemini.js:273
+#: src/ai/gemini.js:293
 msgid "cat"
 msgstr "gato"
 
-#: src/ai/gemini.js:274
+#: src/ai/gemini.js:294
 msgid "remove the background of this image"
 msgstr "remova o fundo deste imagem"
 
-#: src/ai/gemini.js:275
+#: src/ai/gemini.js:295
 #, fuzzy
 msgid "I can't remove the background for you"
 msgstr "Peço desculpas, eu não posso responder a esta pergunta."
 
-#: src/ai/gemini.js:275
+#: src/ai/gemini.js:295
 msgid "but you can do it using apps or websites."
 msgstr "mas você pode fazer isso usando aplicativos ou sites."
 
-#: src/ai/gemini.js:275
+#: src/ai/gemini.js:295
 msgid "One example is the canvas website."
 msgstr "Um exemplo é o site do canvas."
 
-#: src/ai/gemini.js:275
+#: src/ai/gemini.js:295
 #, fuzzy
 msgid "I'm opening it for you."
 msgstr "Estou pensando nisso..."
 
-#: src/ai/gemini.js:276
+#: src/ai/gemini.js:296
 msgid "apply the blur filter to the image"
 msgstr "aplique o filtro de borramento na imagem"
 
-#: src/ai/gemini.js:277
+#: src/ai/gemini.js:297
 #, fuzzy
 msgid "I can't do that for you"
 msgstr "Peço desculpas, eu não posso responder a esta pergunta."
 
-#: src/ai/gemini.js:277
+#: src/ai/gemini.js:297
 msgid "but you can use photoshop."
 msgstr "mas você pode usar photoshop."
 
-#: src/ai/gemini.js:277
+#: src/ai/gemini.js:297
 msgid "Follow the instructions below to apply"
 msgstr "Siga as instruções abaixo para aplicar"
 
-#: src/ai/gemini.js:277
+#: src/ai/gemini.js:297
 msgid "the blur filter to the image using photoshop"
 msgstr "o filtro de borramento na imagem usando photoshop"
 
-#: src/ai/gemini.js:277
+#: src/ai/gemini.js:297
 msgid "Instructions: Open..."
 msgstr "Instruções: Abra..."
 
@@ -324,19 +346,6 @@ msgstr "Estou pensando nisso..."
 #: src/utils/utils.js:278
 msgid "Give me a moment to sort this out..."
 msgstr "Me dê um momento para organizar isso..."
-
-#: src/utils/utils.js:446
-#, fuzzy
-msgid "Hi, I'm"
-msgstr "Olá, eu sou"
-
-#: src/utils/utils.js:450
-msgid "I'm in"
-msgstr ""
-
-#: src/utils/utils.js:458
-msgid "Who are you?"
-msgstr "Quem é você?"
 
 #: src/utils/utils.js:481
 msgid "Hi! I am "
