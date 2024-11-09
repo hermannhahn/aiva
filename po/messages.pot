@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-09 14:48-0300\n"
+"POT-Creation-Date: 2024-11-09 15:07-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -302,43 +302,23 @@ msgstr ""
 msgid "Give me a moment to sort this out..."
 msgstr ""
 
-#: src/utils/utils.js:445
-msgid "Instructions"
-msgstr ""
-
-#: src/utils/utils.js:447
-msgid "If my request is to do something on my computer"
-msgstr ""
-
-#: src/utils/utils.js:449
-msgid "just answer"
-msgstr ""
-
-#: src/utils/utils.js:452
-msgid "execute local command"
-msgstr ""
-
-#: src/utils/utils.js:455
-msgid "otherwise answer the question normally"
-msgstr ""
-
-#: src/utils/utils.js:477
+#: src/utils/utils.js:467
 msgid "Hi, I am"
 msgstr ""
 
-#: src/utils/utils.js:481
+#: src/utils/utils.js:471
 msgid "I am from"
 msgstr ""
 
-#: src/utils/utils.js:485
+#: src/utils/utils.js:475
 msgid "Who are you?"
 msgstr ""
 
-#: src/utils/utils.js:494
+#: src/utils/utils.js:484
 msgid "Hi! I am "
 msgstr ""
 
-#: src/utils/utils.js:496
+#: src/utils/utils.js:486
 msgid ", your helpfull assistant."
 msgstr ""
 

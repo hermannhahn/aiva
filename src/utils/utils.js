@@ -442,17 +442,7 @@ export class Utils {
     _historyInitContent() {
         let history = [];
         let instructions =
-            _('Instructions') +
-            ': ' +
-            _('If my request is to do something on my computer') +
-            ', ' +
-            _('just answer') +
-            ': ' +
-            '"' +
-            _('execute local command') +
-            '"' +
-            ', ' +
-            _('otherwise answer the question normally');
+            "If any of my interactions include a request to run something on my computer or search for something, respond only and exactly with the word: 'executeLocalCommand', otherwise respond normally.";
         history.push({
             role: 'user',
             parts: [
