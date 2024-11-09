@@ -177,9 +177,7 @@ export class MicrosoftAzure {
             this.app.log('Error creating temporary audio file.');
             this.app.chat.editQuestion(_('Transcribe error!'));
             this.app.chat.addResponse(
-                _(
-                    "Sorry, I'm having trouble to create a temporary audio file. Please try again.",
-                ),
+                _("Sorry, I'm having trouble to listen you. Please try again."),
             );
             return;
         }
@@ -191,10 +189,9 @@ export class MicrosoftAzure {
             this.app.log(
                 'Erro ao escrever no arquivo temporário: ' + e.message,
             );
+            this.app.chat.editQuestion(_('Transcribe error!'));
             this.app.chat.addResponse(
-                _(
-                    "Sorry, I'm having trouble to write the audio file. Please try again.",
-                ),
+                _("Sorry, I'm having trouble to listen you. Please try again."),
             );
             return;
         }
@@ -226,17 +223,20 @@ export class MicrosoftAzure {
             try {
                 let [ok, stdout, stderr] = proc.communicate_utf8_finish(res);
                 if (ok && stdout) {
-                    this.app.log('Resposta da API: ' + stdout);
                     let response = JSON.parse(stdout);
 
                     if (response && response.DisplayText) {
                         let transcription = response.DisplayText;
-                        this.app.log('Transcrição: ' + transcription);
                         this.app.chat.editQuestion(transcription);
                         this.app.interpreter.proccess(transcription);
                     } else {
                         this.app.log('Nenhuma transcrição encontrada.');
-                        this.app.chat.editQuestion('Transcribe error.');
+                        this.app.chat.editQuestion('Transcribe error!');
+                        this.app.chat.addResponse(
+                            _(
+                                "Sorry, I'm having trouble to listen you. Please try again.",
+                            ),
+                        );
                     }
                 } else {
                     this.app.log('Erro na requisição: ' + stderr);

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-09 14:01-0300\n"
+"POT-Creation-Date: 2024-11-09 14:04-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -160,24 +160,14 @@ msgstr "Instruções: Abra..."
 msgid "Sorry, I'm having connection trouble. Please try again."
 msgstr "Por favor, tente novamente."
 
-#: src/ai/azure.js:155 src/ai/azure.js:178
+#: src/ai/azure.js:155 src/ai/azure.js:178 src/ai/azure.js:192
 msgid "Transcribe error!"
 msgstr ""
 
-#: src/ai/azure.js:157
+#: src/ai/azure.js:157 src/ai/azure.js:180 src/ai/azure.js:194
+#: src/ai/azure.js:237
 #, fuzzy
 msgid "Sorry, I'm having trouble to listen you. Please try again."
-msgstr "Por favor, tente novamente."
-
-#: src/ai/azure.js:181
-#, fuzzy
-msgid ""
-"Sorry, I'm having trouble to create a temporary audio file. Please try again."
-msgstr "Por favor, tente novamente."
-
-#: src/ai/azure.js:196
-#, fuzzy
-msgid "Sorry, I'm having trouble to write the audio file. Please try again."
 msgstr "Por favor, tente novamente."
 
 #: src/ai/gemini.js:76 src/ai/gemini.js:150
@@ -431,6 +421,16 @@ msgstr "Salvar"
 #: src/prefs.js:705
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
+
+#, fuzzy
+#~ msgid ""
+#~ "Sorry, I'm having trouble to create a temporary audio file. Please try "
+#~ "again."
+#~ msgstr "Por favor, tente novamente."
+
+#, fuzzy
+#~ msgid "Sorry, I'm having trouble to write the audio file. Please try again."
+#~ msgstr "Por favor, tente novamente."
 
 #~ msgid "Code example copied to clipboard"
 #~ msgstr "Código copiado para a área de transferência"
