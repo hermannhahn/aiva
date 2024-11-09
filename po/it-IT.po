@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-09 12:55-0300\n"
+"POT-Creation-Date: 2024-11-09 13:05-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language it-IT\n"
@@ -305,43 +305,43 @@ msgstr ""
 msgid "Give me a moment to sort this out..."
 msgstr ""
 
-#: src/utils/utils.js:453
+#: src/utils/utils.js:449
 msgid "Instructions"
 msgstr ""
 
-#: src/utils/utils.js:455
+#: src/utils/utils.js:451
 msgid "If my request is to do something on my computer"
 msgstr ""
 
-#: src/utils/utils.js:457
+#: src/utils/utils.js:453
 msgid "just answer"
 msgstr ""
 
-#: src/utils/utils.js:460
+#: src/utils/utils.js:456
 msgid "execute local command"
 msgstr ""
 
-#: src/utils/utils.js:463
+#: src/utils/utils.js:459
 msgid "otherwise answer the question normally"
 msgstr ""
 
-#: src/utils/utils.js:485
+#: src/utils/utils.js:481
 msgid "Hi, I am"
 msgstr ""
 
-#: src/utils/utils.js:489
+#: src/utils/utils.js:485
 msgid "I am from"
 msgstr ""
 
-#: src/utils/utils.js:493
+#: src/utils/utils.js:489
 msgid "Who are you?"
 msgstr ""
 
-#: src/utils/utils.js:502
+#: src/utils/utils.js:498
 msgid "Hi! I am "
 msgstr ""
 
-#: src/utils/utils.js:504
+#: src/utils/utils.js:500
 msgid ", your helpfull assistant."
 msgstr ""
 
