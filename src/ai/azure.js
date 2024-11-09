@@ -152,10 +152,9 @@ export class MicrosoftAzure {
         let [, audioBinary] = file.load_contents(null);
         if (!audioBinary) {
             this.app.log('Fail to load audio file.');
+            this.app.chat.editQuestion(_('Transcribe error!'));
             this.app.chat.addResponse(
-                _(
-                    "Sorry, I'm having trouble to load the audio file. Please try again.",
-                ),
+                _("Sorry, I'm having trouble to listen you. Please try again."),
             );
             return;
         }
@@ -176,6 +175,7 @@ export class MicrosoftAzure {
         );
         if (!success) {
             this.app.log('Error creating temporary audio file.');
+            this.app.chat.editQuestion(_('Transcribe error!'));
             this.app.chat.addResponse(
                 _(
                     "Sorry, I'm having trouble to create a temporary audio file. Please try again.",
