@@ -326,6 +326,7 @@ export class Utils {
                 nextMatch = text.match(regex);
             }
             // Remove o bloco de código do texto original para formar o TTS
+            this.app.log('code detected!');
             return {code, tts};
         } else {
             // Se não encontrar código, retorna apenas o texto original no campo tts
