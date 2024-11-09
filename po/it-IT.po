@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-09 15:18-0300\n"
+"POT-Creation-Date: 2024-11-09 15:19-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language it-IT\n"
@@ -308,23 +308,23 @@ msgid ""
 "'executeLocalCommand', otherwise respond normally."
 msgstr ""
 
-#: src/utils/utils.js:467
+#: src/utils/utils.js:468
 msgid "Hi, I am"
 msgstr ""
 
-#: src/utils/utils.js:471
+#: src/utils/utils.js:472
 msgid "I am from"
 msgstr ""
 
-#: src/utils/utils.js:475
+#: src/utils/utils.js:476
 msgid "Who are you?"
 msgstr ""
 
-#: src/utils/utils.js:484
+#: src/utils/utils.js:485
 msgid "Hi! I am "
 msgstr ""
 
-#: src/utils/utils.js:486
+#: src/utils/utils.js:487
 msgid ", your helpfull assistant."
 msgstr ""
 
