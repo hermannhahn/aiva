@@ -1,28 +1,28 @@
 ```mermaid
 graph TD
     %% INPUT
-    INPUT[INPUT] --> TEXTENTRY
-    INPUT --> VOICEENTRY
+    INPUT[INPUT] --> INPUT_TEXT
+    INPUT --> INPUT_VOICE
 
     %% TEXT
-    TEXTENTRY[text] --> A[ui.searchEntry]
-    A --> B[chat.addQuestion]
-    A --> C[interpreter.proccess]
+    INPUT_TEXT[text] --> SEARCH_ENTRY[ui.searchEntry]
+    SEARCH_ENTRY --> ADD_QUESTION[chat.addQuestion]
+    SEARCH_ENTRY --> PROCCESS[interpreter.proccess]
 
     %% VOICE
-    VOICEENTRY[voice] --> D[ui.micButton]
-    D --> E[audio.record]
-    D --> F[audio.stopRecord]
+    INPUT_VOICE[voice] --> MIC_BUTTON[ui.micButton]
+    MIC_BUTTON --> RECORD[audio.record]
+    MIC_BUTTON --> STOP_RECORD[audio.stopRecord]
 
     %% Audio
-    F --> G[azure.transcribe]
-    G --> B
-    G --> C
+    STOP_RECORD --> TRANSCRIBE[azure.transcribe]
+    TRANSCRIBE --> ADD_QUESTION
+    TRANSCRIBE --> PROCCESS
 
     %% Interpreter
-    C --> H{interpreter.isCommand?}
-    H -- true --> I[interpreter.command] --> J[chat.command]
-    H -- false --> K{interpreter.isVoiceCommand?}
-    K -- true --> L[interpreter.voiceCommand] --> M[gemini.runCommand]
-    K -- false --> N[gemini.response] --> O[chat.editResponse]
+    PROCCESS --> IS_COMMAND{interpreter.isCommand?}
+    IS_COMMAND -- true --> COMMAND[interpreter.command] --> CHAT_COMMAND[chat.command]
+    IS_COMMAND -- false --> IS_VOICE_COMMAND{interpreter.isVoiceCommand?}
+    IS_VOICE_COMMAND -- true --> VOICE_COMMAND[interpreter.voiceCommand] --> RUN_COMMAND[gemini.runCommand]
+    IS_VOICE_COMMAND -- false --> RESPONSE[gemini.response] --> EDIT_RESPONSE[chat.editResponse]
 ```
