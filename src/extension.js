@@ -234,9 +234,9 @@ export default class AivaExtension extends Extension {
      * @description disable extension
      */
     disable() {
-        this._aiva.log('Stopping AIVA...');
+        this._aiva.log('Disabling extension...');
         this._aiva.destroy();
         this._aiva = null;
-        this._aiva.log('AIVA stopped.');
+        console.log('Extension disabled.');
     }
 }
