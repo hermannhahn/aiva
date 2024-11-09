@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-09 16:05-0300\n"
+"POT-Creation-Date: 2024-11-09 16:07-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -83,6 +83,138 @@ msgstr ""
 "Se alguma das minhas interações incluir uma solicitação para executar algo "
 "no meu computador ou pesquisar algo, responda somente e exatamente com a "
 "palavra: 'executeLocalCommand', caso contrário, responda normalmente."
+
+#: src/ai/gemini.js:263
+msgid "For the request"
+msgstr "Para a solicitação"
+
+#: src/ai/gemini.js:264
+msgid "Return a JSON with the following keys"
+msgstr "Retorne um JSON com as seguintes chaves"
+
+#: src/ai/gemini.js:265
+msgid "true if it can be executed"
+msgstr "true se for possível ser executado"
+
+#: src/ai/gemini.js:265
+msgid "on a Linux Ubuntu terminal"
+msgstr "em um terminal Linux Ubuntu"
+
+#: src/ai/gemini.js:265
+msgid "false otherwise"
+msgstr "false caso contrário"
+
+#: src/ai/gemini.js:266
+msgid "text to be spoken, informing success, failure or action"
+msgstr "texto para ser falado, informando sucesso, fracasso ou ação"
+
+#: src/ai/gemini.js:266
+msgid "e"
+msgstr "and"
+
+#: src/ai/gemini.js:267
+msgid "command to be executed in the terminal"
+msgstr "comando a ser executado no terminal"
+
+#: src/ai/gemini.js:268
+msgid "Rules for commandline value"
+msgstr "Regras para o valor da linha de comando"
+
+#: src/ai/gemini.js:268
+msgid "Do not use sudo"
+msgstr "Não use sudo"
+
+#: src/ai/gemini.js:268
+msgid "assume any application is already installed"
+msgstr "suponha que qualquer aplicativo já esteja instalado"
+
+#: src/ai/gemini.js:269
+msgid "Examples of responses"
+msgstr "Exemplos de respostas"
+
+#: src/ai/gemini.js:270 src/ai/gemini.js:272 src/ai/gemini.js:274
+#: src/ai/gemini.js:276
+msgid "Request"
+msgstr "Solicitação"
+
+#: src/ai/gemini.js:270
+#, fuzzy
+msgid "computer search for santos ferry crossing"
+msgstr "computador pesquise por cruzamento de balsa de santos"
+
+#: src/ai/gemini.js:271 src/ai/gemini.js:273 src/ai/gemini.js:275
+#: src/ai/gemini.js:277
+msgid "JSON Response"
+msgstr "Resposta JSON"
+
+#: src/ai/gemini.js:271
+#, fuzzy
+msgid "Searching for santos ferry crossing..."
+msgstr "Pesquisando cruzamento de balsa de santos..."
+
+#: src/ai/gemini.js:271
+#, fuzzy
+msgid "ferry+crossing+santos"
+msgstr "travessia+balsa+santos"
+
+#: src/ai/gemini.js:272
+msgid "search for cat videos on youtube"
+msgstr "pesquise por vídeos de gatos no youtube"
+
+#: src/ai/gemini.js:273
+msgid "Searching for cat videos on youtube..."
+msgstr "Pesquisando vídeos de gatos no youtube..."
+
+#: src/ai/gemini.js:273
+msgid "cat"
+msgstr "gato"
+
+#: src/ai/gemini.js:274
+msgid "remove the background of this image"
+msgstr "remova o fundo deste imagem"
+
+#: src/ai/gemini.js:275
+#, fuzzy
+msgid "I can't remove the background for you"
+msgstr "Peço desculpas, eu não posso responder a esta pergunta."
+
+#: src/ai/gemini.js:275
+msgid "but you can do it using apps or websites."
+msgstr "mas você pode fazer isso usando aplicativos ou sites."
+
+#: src/ai/gemini.js:275
+msgid "One example is the canvas website."
+msgstr "Um exemplo é o site do canvas."
+
+#: src/ai/gemini.js:275
+#, fuzzy
+msgid "I'm opening it for you."
+msgstr "Estou pensando nisso..."
+
+#: src/ai/gemini.js:276
+msgid "apply the blur filter to the image"
+msgstr "aplique o filtro de borramento na imagem"
+
+#: src/ai/gemini.js:277
+#, fuzzy
+msgid "I can't do that for you"
+msgstr "Peço desculpas, eu não posso responder a esta pergunta."
+
+#: src/ai/gemini.js:277
+msgid "but you can use photoshop."
+msgstr "mas você pode usar photoshop."
+
+#: src/ai/gemini.js:277
+msgid "Follow the instructions below to apply"
+msgstr "Siga as instruções abaixo para aplicar"
+
+#: src/ai/gemini.js:277
+msgid "the blur filter to the image using photoshop"
+msgstr "o filtro de borramento na imagem usando photoshop"
+
+#: src/ai/gemini.js:277
+msgid "Instructions: Open..."
+msgstr "Instruções: Abra..."
 
 #: src/utils/utils.js:197
 #, fuzzy
@@ -282,105 +414,6 @@ msgstr "Salvar"
 #: src/prefs.js:705
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
-
-#~ msgid "For the request"
-#~ msgstr "Para a solicitação"
-
-#~ msgid "Return a JSON with the following keys"
-#~ msgstr "Retorne um JSON com as seguintes chaves"
-
-#~ msgid "true if it can be executed"
-#~ msgstr "true se for possível ser executado"
-
-#~ msgid "on a Linux Ubuntu terminal"
-#~ msgstr "em um terminal Linux Ubuntu"
-
-#~ msgid "false otherwise"
-#~ msgstr "false caso contrário"
-
-#~ msgid "text to be spoken, informing success, failure or action"
-#~ msgstr "texto para ser falado, informando sucesso, fracasso ou ação"
-
-#~ msgid "e"
-#~ msgstr "and"
-
-#~ msgid "command to be executed in the terminal"
-#~ msgstr "comando a ser executado no terminal"
-
-#~ msgid "Rules for commandline value"
-#~ msgstr "Regras para o valor da linha de comando"
-
-#~ msgid "Do not use sudo"
-#~ msgstr "Não use sudo"
-
-#~ msgid "assume any application is already installed"
-#~ msgstr "suponha que qualquer aplicativo já esteja instalado"
-
-#~ msgid "Examples of responses"
-#~ msgstr "Exemplos de respostas"
-
-#~ msgid "Request"
-#~ msgstr "Solicitação"
-
-#, fuzzy
-#~ msgid "computer search for santos ferry crossing"
-#~ msgstr "computador pesquise por cruzamento de balsa de santos"
-
-#~ msgid "JSON Response"
-#~ msgstr "Resposta JSON"
-
-#, fuzzy
-#~ msgid "Searching for santos ferry crossing..."
-#~ msgstr "Pesquisando cruzamento de balsa de santos..."
-
-#, fuzzy
-#~ msgid "ferry+crossing+santos"
-#~ msgstr "travessia+balsa+santos"
-
-#~ msgid "search for cat videos on youtube"
-#~ msgstr "pesquise por vídeos de gatos no youtube"
-
-#~ msgid "Searching for cat videos on youtube..."
-#~ msgstr "Pesquisando vídeos de gatos no youtube..."
-
-#~ msgid "cat"
-#~ msgstr "gato"
-
-#~ msgid "remove the background of this image"
-#~ msgstr "remova o fundo deste imagem"
-
-#, fuzzy
-#~ msgid "I can't remove the background for you"
-#~ msgstr "Peço desculpas, eu não posso responder a esta pergunta."
-
-#~ msgid "but you can do it using apps or websites."
-#~ msgstr "mas você pode fazer isso usando aplicativos ou sites."
-
-#~ msgid "One example is the canvas website."
-#~ msgstr "Um exemplo é o site do canvas."
-
-#, fuzzy
-#~ msgid "I'm opening it for you."
-#~ msgstr "Estou pensando nisso..."
-
-#~ msgid "apply the blur filter to the image"
-#~ msgstr "aplique o filtro de borramento na imagem"
-
-#, fuzzy
-#~ msgid "I can't do that for you"
-#~ msgstr "Peço desculpas, eu não posso responder a esta pergunta."
-
-#~ msgid "but you can use photoshop."
-#~ msgstr "mas você pode usar photoshop."
-
-#~ msgid "Follow the instructions below to apply"
-#~ msgstr "Siga as instruções abaixo para aplicar"
-
-#~ msgid "the blur filter to the image using photoshop"
-#~ msgstr "o filtro de borramento na imagem usando photoshop"
-
-#~ msgid "Instructions: Open..."
-#~ msgstr "Instruções: Abra..."
 
 #~ msgid "I am from"
 #~ msgstr "Sou de"
