@@ -484,7 +484,6 @@ export class Utils {
                 },
             ],
         });
-
         return initContent;
     }
 
