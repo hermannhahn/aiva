@@ -80,9 +80,7 @@ export class GoogleGemini {
 
                     // Command runner
                     if (
-                        aiResponse
-                            .toLowerCase()
-                            .includes('execute local command')
+                        aiResponse.toLowerCase().includes('executeLocalCommand')
                     ) {
                         this.app.interpreter.voiceCommandInterpreter(question);
                         return;
