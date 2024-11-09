@@ -285,7 +285,7 @@ ${_('Return a JSON with the following keys')}:
 'success' (${_('true if it can be executed')} ${_('on a Linux Ubuntu terminal')}, ${_('false otherwise')}),
 'response' (${_('text to be spoken, informing success, failure or action')}) ${_('e')}
 'commandline' (${_('command to be executed in the terminal')}).
-${_('Rules for commandline value')}: ${_('Do not use sudo')}, ${_('assume any application is already installed')}, ${_('Always use firefox to open sites, videos, music, and images.')}, ${_('Create, edit or open documents with Google Docs, sheets with Google Sheets, and slides with Google Slides')}.
+${_('Rules for commandline value')}: ${_('Do not use sudo')}, ${_('assume any application is already installed')}, ${_('Always use firefox to open sites, videos, music, and images.')}, ${_('Create, edit or open documents with Google Docs, sheets with Google Sheets, and slides with Google Slides')}, ${_('Use the Google Drive website to search for and open files that I request')}.
 ${_('Examples of responses')}:
 ${_('Request')}: "${_('computer search for santos ferry crossing')}"
 ${_('JSON Response')}: "{success: true, response: '${_('Searching for santos ferry crossing...')}', commandline: 'firefox https://www.google.com/search?q=${_('ferry+crossing+santos')}'}"
