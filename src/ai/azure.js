@@ -241,7 +241,11 @@ export class MicrosoftAzure {
                 } else {
                     this.app.log('Erro na requisição: ' + stderr);
                     this.app.chat.editQuestion('Transcribe error!');
-                    this.app.chat.addResponse(stderr);
+                    this.app.chat.addResponse(
+                        _(
+                            "Sorry, I'm having trouble to listen you. Please try again.",
+                        ),
+                    );
                 }
             } catch (e) {
                 this.app.log('Erro ao processar resposta: ' + e.message);

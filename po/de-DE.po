@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-09 14:04-0300\n"
+"POT-Creation-Date: 2024-11-09 14:05-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language de-DE\n"
@@ -160,7 +160,7 @@ msgid "Transcribe error!"
 msgstr ""
 
 #: src/ai/azure.js:157 src/ai/azure.js:180 src/ai/azure.js:194
-#: src/ai/azure.js:237
+#: src/ai/azure.js:237 src/ai/azure.js:246
 msgid "Sorry, I'm having trouble to listen you. Please try again."
 msgstr ""
 
