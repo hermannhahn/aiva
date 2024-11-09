@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-09 15:19-0300\n"
+"POT-Creation-Date: 2024-11-09 15:25-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -19,7 +19,7 @@ msgstr ""
 #: src/audio.js:130
 #, fuzzy
 msgid "Transcribing..."
-msgstr "Pensando..."
+msgstr "Transcrevendo..."
 
 #: src/interpreter.js:38
 msgid "computer"
@@ -79,8 +79,9 @@ msgid "Request"
 msgstr "Solicitação"
 
 #: src/interpreter.js:80
+#, fuzzy
 msgid "computer search for santos ferry crossing"
-msgstr "computador pesquise por cruzamento santos ferry"
+msgstr "computador pesquise por cruzamento de balsa de santos"
 
 #: src/interpreter.js:81 src/interpreter.js:83 src/interpreter.js:85
 #: src/interpreter.js:87
@@ -88,10 +89,12 @@ msgid "JSON Response"
 msgstr "Resposta JSON"
 
 #: src/interpreter.js:81
+#, fuzzy
 msgid "Searching for santos ferry crossing..."
-msgstr "Pesquisando cruzamento santos ferry..."
+msgstr "Pesquisando cruzamento de balsa de santos..."
 
 #: src/interpreter.js:81
+#, fuzzy
 msgid "ferry+crossing+santos"
 msgstr "travessia+balsa+santos"
 
@@ -162,7 +165,7 @@ msgstr "Por favor, tente novamente."
 
 #: src/ai/azure.js:155 src/ai/azure.js:178 src/ai/azure.js:192
 msgid "Transcribe error!"
-msgstr ""
+msgstr "Erro na transcrição!"
 
 #: src/ai/azure.js:157 src/ai/azure.js:180 src/ai/azure.js:194
 #: src/ai/azure.js:237 src/ai/azure.js:246
@@ -178,7 +181,8 @@ msgstr "Peço desculpas, eu não posso responder a esta pergunta."
 #: src/ai/gemini.js:141 src/ai/gemini.js:172
 #, fuzzy
 msgid "Sorry, I can't do this now. Try again later."
-msgstr "Peço desculpas, eu não posso responder a esta pergunta."
+msgstr ""
+"Peço desculpas, eu não posso fazer isso agora. Tente novamente mais tarde."
 
 #: src/ai/gemini.js:212 src/ai/gemini.js:220 src/ai/gemini.js:228
 #: src/ai/gemini.js:237
@@ -317,6 +321,9 @@ msgid ""
 "or search for something, respond only and exactly with the word: "
 "'executeLocalCommand', otherwise respond normally."
 msgstr ""
+"Se alguma das minhas interações incluir uma solicitação para executar algo "
+"no meu computador ou pesquisar algo, responda somente e exatamente com a "
+"palavra: 'executeLocalCommand', caso contrário, responda normalmente."
 
 #: src/utils/utils.js:468
 msgid "Hi, I am"
@@ -419,7 +426,9 @@ msgstr "Suas preferências foram salvas"
 #~ msgid ""
 #~ "Sorry, I'm having trouble to create a temporary audio file. Please try "
 #~ "again."
-#~ msgstr "Por favor, tente novamente."
+#~ msgstr ""
+#~ "Estou tendo dificuldades em criar um arquivo de áudio temporário. Por "
+#~ "favor, tente novamente."
 
 #, fuzzy
 #~ msgid "Sorry, I'm having trouble to write the audio file. Please try again."
