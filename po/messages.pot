@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-09 16:21-0300\n"
+"POT-Creation-Date: 2024-11-09 16:33-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -137,6 +137,16 @@ msgstr ""
 
 #: src/ai/gemini.js:288
 msgid "assume any application is already installed"
+msgstr ""
+
+#: src/ai/gemini.js:288
+msgid "Always use firefox to open sites, videos, music, and images."
+msgstr ""
+
+#: src/ai/gemini.js:288
+msgid ""
+"Create, edit or open documents with Google Docs, sheets with Google Sheets, "
+"and slides with Google Slides"
 msgstr ""
 
 #: src/ai/gemini.js:289
