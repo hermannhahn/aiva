@@ -240,7 +240,7 @@ export class MicrosoftAzure {
                     }
                 } else {
                     this.app.log('Erro na requisição: ' + stderr);
-                    this.app.chat.editQuestion('Transcribe error.');
+                    this.app.chat.editQuestion('Transcribe error!');
                     this.app.chat.addResponse(stderr);
                 }
             } catch (e) {
