@@ -9,14 +9,17 @@ export class Interpreter {
 
     proccess(question) {
         this.app.ui.searchEntry.clutter_text.reactive = false;
-        this.app.log('Processing question...');
         this.app.log('Question: ' + question);
+        this.app.log('Processing question...');
         this.app.chat.addResponse('...');
         if (this._isCommand(question)) {
+            this.app.log('Command detected.');
             this._commandInterpreter(question);
         } else if (this._isVoiceCommand(question)) {
+            this.app.log('Voice command detected.');
             this.voiceCommandInterpreter(question);
         } else {
+            this.app.log('Sending question to API...');
             this.app.gemini.response(question);
         }
         this.app.ui.searchEntry.clutter_text.reactive = true;
@@ -24,7 +27,6 @@ export class Interpreter {
 
     _isCommand(text) {
         if (text.startsWith('/')) {
-            this.app.log('Command detected.');
             return true;
         }
         return false;
@@ -43,7 +45,6 @@ export class Interpreter {
         for (const word of words) {
             for (const activationWord of activationWords) {
                 if (word.includes(activationWord)) {
-                    this.app.log('Voice command detected.');
                     return true;
                 }
             }
