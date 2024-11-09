@@ -282,7 +282,7 @@ export class GoogleGemini {
         const response = `
 "${_('For the request')}": "${request}"
 ${_('Return a JSON with the following keys')}:
-'success' (${_('true if it can be executed')} ${_('on a Linux Ubuntu terminal')}, ${_('false otherwise')}),
+'success' (${_('true if it possible to generate')} ${_('a Linux Ubuntu terminal command line to this request')}, ${_('false otherwise')}),
 'response' (${_('simulate a text to be spoken, informing success, failure or action')}),
 'commandline' (${_('generate a command line for linux ubuntu that fulfills the request.')}).
 ${_('Rules for commandline value')}: ${_('Do not use sudo')}, ${_('Always use firefox to sites, videos, music, and images.')}, ${_('Use firefox for search, create, edit or open documents. Use Google Drive, Google Docs and Google Sheets websites.')}.
