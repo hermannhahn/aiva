@@ -66,8 +66,14 @@ export class GoogleGemini {
                     this.app.log('Response: ' + aiResponse);
 
                     // Safety
-                    let safetyReason = this.safetyReason(res);
+                    let safetyReason = this.safetyReason(question, res);
                     if (safetyReason) {
+                        if (safetyReason === 'executeLocalCommand') {
+                            this.app.interpreter.voiceCommandInterpreter(
+                                question,
+                            );
+                            return;
+                        }
                         this.app.chat.editResponse(safetyReason);
                         return;
                     }
@@ -193,10 +199,11 @@ export class GoogleGemini {
 
     /**
      * @description check safety result
+     * @param {string} question user question
      * @param {object} res
      * @returns {string|false} safety reason or false
      */
-    safetyReason(res) {
+    safetyReason(question, res) {
         let aiResponse = '';
         // SAFETY warning
         if (res.candidates[0].finishReason === 'SAFETY') {
@@ -233,12 +240,13 @@ export class GoogleGemini {
                         safetyRating.category ===
                         'HARM_CATEGORY_DANGEROUS_CONTENT'
                     ) {
-                        aiResponse =
-                            _("Sorry, I can't answer this question.") +
-                            ' ' +
-                            _(
-                                'Possible dangerous content in the question or answer.',
-                            );
+                        aiResponse = 'executeLocalCommand';
+                        // aiResponse =
+                        //     _("Sorry, I can't answer this question.") +
+                        //     ' ' +
+                        //     _(
+                        //         'Possible dangerous content in the question or answer.',
+                        //     );
                     }
                 }
             }
