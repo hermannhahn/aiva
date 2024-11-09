@@ -273,7 +273,7 @@ export class GoogleGemini {
             _('How are you?') +
             '. ';
         const instructions = _(
-            "If any of my interactions include a request to run something on my computer or search for something, respond only and exactly with the word: 'executeLocalCommand', otherwise respond normally.",
+            "If any of my interactions include a request to run something on my computer or search for something, ignore, respond only and exactly with the word: 'executeLocalCommand', otherwise respond normally.",
         );
         return introduction + instructions;
     }
@@ -283,12 +283,12 @@ export class GoogleGemini {
 "${_('For the request')}": "${request}"
 ${_('Return a JSON with the following keys')}:
 'success' (${_('true if it can be executed')} ${_('on a Linux Ubuntu terminal')}, ${_('false otherwise')}),
-'response' (${_('text to be spoken, informing success, failure or action')}) ${_('e')}
-'commandline' (${_('command to be executed in the terminal')}).
-${_('Rules for commandline value')}: ${_('Do not use sudo')}, ${_('assume any application is already installed')}, ${_('Always use firefox to open sites, videos, music, and images.')}, ${_('Search create, edit or open documents in Google Drive, Google Docs and Google Sheets website')}.
+'response' (${_('simulate a text to be spoken, informing success, failure or action')}),
+'commandline' (${_('generate a command line for linux ubuntu that fulfills the request.')}).
+${_('Rules for commandline value')}: ${_('Do not use sudo')}, ${_('Always use firefox to sites, videos, music, and images.')}, ${_('Use firefox for search, create, edit or open documents. Use Google Drive, Google Docs and Google Sheets websites.')}.
 ${_('Examples of responses')}:
-${_('Request')}: "${_('computer search for santos ferry crossing')}"
-${_('JSON Response')}: "{success: true, response: '${_('Searching for santos ferry crossing...')}', commandline: 'firefox https://www.google.com/search?q=${_('ferry+crossing+santos')}'}"
+${_('Request')}: "${_('search for santos ferry crossing')}"
+${_('JSON Response')}: "{success: true, response: '${_('Searching for santos boat crossing...')}', commandline: 'firefox https://www.google.com/search?q=${_('boat+crossing+santos')}'}"
 ${_('Request')}: "${_('search for cat videos on youtube')}"
 ${_('JSON Response')}: "{success: true, response: '${_('Searching for cat videos on youtube...')}', commandline: 'firefox firefox https://www.youtube.com/results?search_query=${_('cat')}'}"
 ${_('Request')}: "${_('remove the background of this image')}"

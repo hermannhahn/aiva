@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-09 16:47-0300\n"
+"POT-Creation-Date: 2024-11-09 17:33-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language es-ES\n"
@@ -90,7 +90,7 @@ msgstr ""
 #: src/ai/gemini.js:276
 msgid ""
 "If any of my interactions include a request to run something on my computer "
-"or search for something, respond only and exactly with the word: "
+"or search for something, ignore, respond only and exactly with the word: "
 "'executeLocalCommand', otherwise respond normally."
 msgstr ""
 
@@ -115,15 +115,11 @@ msgid "false otherwise"
 msgstr ""
 
 #: src/ai/gemini.js:286
-msgid "text to be spoken, informing success, failure or action"
-msgstr ""
-
-#: src/ai/gemini.js:286
-msgid "e"
+msgid "simulate a text to be spoken, informing success, failure or action"
 msgstr ""
 
 #: src/ai/gemini.js:287
-msgid "command to be executed in the terminal"
+msgid "generate a command line for linux ubuntu that fulfills the request."
 msgstr ""
 
 #: src/ai/gemini.js:288
@@ -135,17 +131,13 @@ msgid "Do not use sudo"
 msgstr ""
 
 #: src/ai/gemini.js:288
-msgid "assume any application is already installed"
-msgstr ""
-
-#: src/ai/gemini.js:288
-msgid "Always use firefox to open sites, videos, music, and images."
+msgid "Always use firefox to sites, videos, music, and images."
 msgstr ""
 
 #: src/ai/gemini.js:288
 msgid ""
-"Search create, edit or open documents in Google Drive, Google Docs and "
-"Google Sheets website"
+"Use firefox for search, create, edit or open documents. Use Google Drive, "
+"Google Docs and Google Sheets websites."
 msgstr ""
 
 #: src/ai/gemini.js:289
@@ -158,7 +150,7 @@ msgid "Request"
 msgstr ""
 
 #: src/ai/gemini.js:290
-msgid "computer search for santos ferry crossing"
+msgid "search for santos ferry crossing"
 msgstr ""
 
 #: src/ai/gemini.js:291 src/ai/gemini.js:293 src/ai/gemini.js:295
@@ -167,11 +159,11 @@ msgid "JSON Response"
 msgstr ""
 
 #: src/ai/gemini.js:291
-msgid "Searching for santos ferry crossing..."
+msgid "Searching for santos boat crossing..."
 msgstr ""
 
 #: src/ai/gemini.js:291
-msgid "ferry+crossing+santos"
+msgid "boat+crossing+santos"
 msgstr ""
 
 #: src/ai/gemini.js:292
