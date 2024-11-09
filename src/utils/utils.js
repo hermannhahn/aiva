@@ -288,7 +288,7 @@ export class Utils {
         // Expressão regular para capturar o código entre triplo acento grave
         const regex = /`{3}([\s\S]*?)`{3}/;
         const match = text.match(regex);
-        let tts = text;
+        let tts = this._converttext(text);
         // tts = text.replace(regex, '').trim();
         // Replace * char with space
         // tts = tts.split('*').join(' ');
