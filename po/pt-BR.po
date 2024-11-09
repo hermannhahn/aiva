@@ -159,7 +159,8 @@ msgstr "Sempre use o firefox para abrir sites, vídeos, música e imagens."
 msgid ""
 "Search create, edit or open documents in Google Drive, Google Docs and "
 "Google Sheets website"
-msgstr "Crie, edite ou abra documentos com o site"
+msgstr "Crie, edite ou abra documentos no website do Google Drive, Google Docs e "
+"Google Sheets"
 
 #: src/ai/gemini.js:288
 msgid ""
