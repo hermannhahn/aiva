@@ -1,16 +1,16 @@
 ```mermaid
 graph TD
     %% INPUT
-    INPUT[INPUT] --> TEXTENTRY[textEntry]
-    INPUT --> VOICEENTRY[voiceEntry]
+    INPUT[INPUT] --> TEXTENTRY
+    INPUT --> VOICEENTRY
 
     %% TEXT
-    TEXTENTRY[Text Entry] --> A[ui.searchEntry]
+    TEXTENTRY[text] --> A[ui.searchEntry]
     A --> B[chat.addQuestion]
     A --> C[interpreter.proccess]
 
     %% VOICE
-    VOICEENTRY[Voice Entry] --> D[ui.micButton]
+    VOICEENTRY[voice] --> D[ui.micButton]
     D --> E[audio.record]
     D --> F[audio.stopRecord]
 
