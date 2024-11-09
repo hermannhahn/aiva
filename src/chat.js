@@ -117,8 +117,13 @@ export class Chat {
         copyButton.connect('activate', (_self) => {
             this.app.utils.copySelectedText(responseChat, copyButton);
         });
+        let response = this.app.utils.extractCodeAndTTS(text);
         if (speech) {
-            this.app.azure.tts(text);
+            this.app.azure.tts(response.tts);
+        }
+        if (response.code) {
+            this.app.utils.copyToClipboard(response.code);
+            this.app.log('Code copied to clipboard.');
         }
         this.app.utils.scrollToBottom();
     }
