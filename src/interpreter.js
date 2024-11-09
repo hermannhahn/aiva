@@ -52,19 +52,17 @@ export class Interpreter {
     }
 
     _commandInterpreter(text) {
-        if (text.startsWith('/')) {
-            if (text.startsWith('/help')) {
-                this.app.chat.add(`
+        if (text.startsWith('/help')) {
+            this.app.chat.add(`
 HELP
 
 /settings   - Open settings
 /help       - Show this help
                 `);
-            }
+        }
 
-            if (text.startsWith('/settings')) {
-                this.app.openSettings();
-            }
+        if (text.startsWith('/settings')) {
+            this.app.openSettings();
         }
     }
 
