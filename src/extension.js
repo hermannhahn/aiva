@@ -64,7 +64,7 @@ const Aiva = GObject.registerClass(
                 'share',
                 'gnome-shell',
                 'extensions',
-                this.uuid,
+                this.extension.uuid,
             ]);
             // user settings
             this.userSettings = {
