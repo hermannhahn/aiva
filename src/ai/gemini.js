@@ -63,6 +63,7 @@ export class GoogleGemini {
                         return;
                     }
                     let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
+                    this.app.log('Response: ' + aiResponse);
 
                     // Safety
                     let safetyReason = this.safetyReason(res);
@@ -113,7 +114,7 @@ export class GoogleGemini {
         }
 
         try {
-            this.app.log('Getting response...');
+            this.app.log('Getting command response...');
             // Create http session
             let _httpSession = new Soup.Session();
             let url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.0-pro:generateContent?key=${this.GEMINI_API_KEY}`;
