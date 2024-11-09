@@ -441,35 +441,11 @@ export class Utils {
 
     _historyInitContent() {
         let initContent = [];
-        const date = new Date();
-        let introduction =
-            _("Hi, I'm") +
-            ' ' +
-            this.app.userSettings.USERNAME +
-            '. ' +
-            _("I'm in") +
-            ' ' +
-            this.app.userSettings.LOCATION +
-            ' ' +
-            'and today is' +
-            ' ' +
-            date +
-            '. ' +
-            _('Who are you?');
-
         initContent.push({
             role: 'user',
             parts: [
                 {
                     text: this.app.gemini.getTuneString(),
-                },
-            ],
-        });
-        initContent.push({
-            role: 'user',
-            parts: [
-                {
-                    text: introduction,
                 },
             ],
         });

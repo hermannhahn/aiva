@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-09 16:18-0300\n"
+"POT-Creation-Date: 2024-11-09 16:21-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language de-DE\n"
@@ -67,15 +67,15 @@ msgstr ""
 msgid "Possible dangerous content in the question or answer."
 msgstr ""
 
-#: src/ai/gemini.js:257 src/utils/utils.js:446
+#: src/ai/gemini.js:257
 msgid "Hi, I'm"
 msgstr ""
 
-#: src/ai/gemini.js:261 src/utils/utils.js:450
+#: src/ai/gemini.js:261
 msgid "I'm in"
 msgstr ""
 
-#: src/ai/gemini.js:269 src/utils/utils.js:458
+#: src/ai/gemini.js:269
 msgid "Who are you?"
 msgstr ""
 
@@ -328,11 +328,11 @@ msgstr ""
 msgid "Give me a moment to sort this out..."
 msgstr ""
 
-#: src/utils/utils.js:481
+#: src/utils/utils.js:457
 msgid "Hi! I am "
 msgstr ""
 
-#: src/utils/utils.js:483
+#: src/utils/utils.js:459
 msgid ", your helpfull assistant."
 msgstr ""
 
