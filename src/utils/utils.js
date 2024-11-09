@@ -442,7 +442,7 @@ export class Utils {
     _historyInitContent() {
         let history = [];
         let instructions =
-            "If any of my interactions include a request to run something on my computer or search for something, respond only and exactly with the word: 'executeLocalCommand', otherwise respond normally.";
+            _("If any of my interactions include a request to run something on my computer or search for something, respond only and exactly with the word: 'executeLocalCommand', otherwise respond normally.");
         history.push({
             role: 'user',
             parts: [
