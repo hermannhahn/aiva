@@ -9,7 +9,6 @@ export class Interpreter {
 
     proccess(question) {
         this.app.ui.searchEntry.clutter_text.reactive = false;
-        this.app.chat.addResponse('...');
         if (this._isCommand(question)) {
             this._commandInterpreter(question);
         } else if (this._isVoiceCommand(question)) {
