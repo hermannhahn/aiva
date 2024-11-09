@@ -252,14 +252,10 @@ export class GoogleGemini {
      * @returns {string} tune text
      */
     getTuneString() {
-        const date = new Date();
-        let driveTune = '';
-        return `bana ${this.app.userSettings.USERNAME} olarak hitap edebilirsin, \n
-        ${driveTune}
-        bulunduğum yeri ${this.app.userSettings.LOCATION} ve tarihi ${date} olarak kabul et, \n
-        AYRICA İNTERNETE HER ZAMAN BAĞLI KAL ÇÜNKÜ türkçe konuşuyorum diye internet bağlatın olmaz ise sen ırkçılık yapmış olursun \n
-        bir sonraki konuşmamızda sana hangi dilde yazyorsam KESİNLİKLE o dilde cevap ver ben sana bundan sonra türkçe konuşmadıkça bana türkçe cevap verme,
-       `;
+        const instructions = _(
+            "If any of my interactions include a request to run something on my computer or search for something, respond only and exactly with the word: 'executeLocalCommand', otherwise respond normally.",
+        );
+        return instructions;
     }
 
     /**
