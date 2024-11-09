@@ -444,7 +444,7 @@ export class Utils {
         let instructions =
             _('Instructions') +
             ': ' +
-            _('If my request is to do something on my computer') +
+            _("If my request it's to do something on my computer") +
             ', ' +
             _('just answer') +
             ': ' +
