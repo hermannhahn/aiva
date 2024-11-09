@@ -9,7 +9,7 @@ export default class ClipboardIndicatorPreferences extends ExtensionPreferences 
         const settingsUI = new AivaSettings(window._settings);
         const page = new Adw.PreferencesPage();
         page.add(settingsUI.ui);
-        // Set window size to 800x600
+        // Set window size to 750x600
         window.set_default_size(750, 600);
         window.add(page);
     }
