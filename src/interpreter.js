@@ -68,7 +68,7 @@ HELP
     }
 
     voiceCommandInterpreter(text) {
-        let request = text.toLowerCase();
+        let request = this.app.gemini.getCommandRequest(text);
         this.app.gemini.runCommand(request);
     }
 }
