@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-09 17:54-0300\n"
+"POT-Creation-Date: 2024-11-09 20:37-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -111,53 +111,58 @@ msgstr ""
 msgid "For the request"
 msgstr "Para a solicitação"
 
+#: src/ai/gemini.js:283
+#, fuzzy
+msgid "Generate a command line that"
+msgstr "computador pesquise por cruzamento de balsa de santos"
+
 #: src/ai/gemini.js:284
+msgid "Return a JSON with the following keys"
+msgstr "Retorne um JSON com as seguintes chaves"
+
+#: src/ai/gemini.js:285
+#, fuzzy
+msgid "true if it possible to generate"
+msgstr "true se for possível ser executado"
+
+#: src/ai/gemini.js:285
+msgid "a Linux Ubuntu terminal command line to this request"
+msgstr "uma linha de comando Linux Ubuntu para esta solicitação"
+
+#: src/ai/gemini.js:285
+msgid "false otherwise"
+msgstr "false caso contrário"
+
+#: src/ai/gemini.js:286
+#, fuzzy
+msgid "generate a text to be spoken, informing success, failure or action"
+msgstr "texto para ser falado, informando sucesso, fracasso ou ação"
+
+#: src/ai/gemini.js:287
+msgid "generate a command line for linux ubuntu that fulfills the request."
+msgstr "gerar uma linha de comando Linux Ubuntu que atenda a solicitação."
+
+#: src/ai/gemini.js:288
 msgid "Rules for commandline value"
 msgstr "Regras para o valor da linha de comando"
 
-#: src/ai/gemini.js:284
+#: src/ai/gemini.js:288
 msgid "Do not use sudo"
 msgstr "Não use sudo"
 
-#: src/ai/gemini.js:284
+#: src/ai/gemini.js:288
 #, fuzzy
 msgid "Always use firefox to sites, videos, music, and images."
 msgstr "Sempre use o firefox para abrir sites, vídeos, música e imagens."
 
-#: src/ai/gemini.js:284
+#: src/ai/gemini.js:288
 #, fuzzy
 msgid ""
 "Use firefox for search, create, edit or open documents. Use Google Drive, "
 "Google Docs and Google Sheets websites."
 msgstr ""
-"Use o firefox para abrir sites, vídeos, música e imagens. Use o Google Drive, Google Docs e "
-"Google Sheets."
-
-#: src/ai/gemini.js:285
-msgid "Return a JSON with the following keys"
-msgstr "Retorne um JSON com as seguintes chaves"
-
-#: src/ai/gemini.js:286
-#, fuzzy
-msgid "true if it possible to generate"
-msgstr "true se for possível ser executado"
-
-#: src/ai/gemini.js:286
-msgid "a Linux Ubuntu terminal command line to this request"
-msgstr "uma linha de comando Linux Ubuntu para esta solicitação"
-
-#: src/ai/gemini.js:286
-msgid "false otherwise"
-msgstr "false caso contrário"
-
-#: src/ai/gemini.js:287
-#, fuzzy
-msgid "generate a text to be spoken, informing success, failure or action"
-msgstr "texto para ser falado, informando sucesso, fracasso ou ação"
-
-#: src/ai/gemini.js:288
-msgid "generate a command line for linux ubuntu that fulfills the request."
-msgstr "gerar uma linha de comando Linux Ubuntu que atenda a solicitação."
+"Use o firefox para abrir sites, vídeos, música e imagens. Use o Google "
+"Drive, Google Docs e Google Sheets."
 
 #: src/ai/gemini.js:289
 #, fuzzy
