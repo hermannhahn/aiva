@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-09 17:37-0300\n"
+"POT-Creation-Date: 2024-11-09 17:54-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language es-ES\n"
@@ -99,62 +99,60 @@ msgid "For the request"
 msgstr ""
 
 #: src/ai/gemini.js:284
-msgid "Return a JSON with the following keys"
-msgstr ""
-
-#: src/ai/gemini.js:285
-msgid "true if it possible to generate"
-msgstr ""
-
-#: src/ai/gemini.js:285
-msgid "a Linux Ubuntu terminal command line to this request"
-msgstr ""
-
-#: src/ai/gemini.js:285
-msgid "false otherwise"
-msgstr ""
-
-#: src/ai/gemini.js:286
-msgid "simulate a text to be spoken, informing success, failure or action"
-msgstr ""
-
-#: src/ai/gemini.js:287
-msgid "generate a command line for linux ubuntu that fulfills the request."
-msgstr ""
-
-#: src/ai/gemini.js:288
 msgid "Rules for commandline value"
 msgstr ""
 
-#: src/ai/gemini.js:288
+#: src/ai/gemini.js:284
 msgid "Do not use sudo"
 msgstr ""
 
-#: src/ai/gemini.js:288
+#: src/ai/gemini.js:284
 msgid "Always use firefox to sites, videos, music, and images."
 msgstr ""
 
-#: src/ai/gemini.js:288
+#: src/ai/gemini.js:284
 msgid ""
 "Use firefox for search, create, edit or open documents. Use Google Drive, "
 "Google Docs and Google Sheets websites."
 msgstr ""
 
-#: src/ai/gemini.js:289
-msgid "Examples of responses"
+#: src/ai/gemini.js:285
+msgid "Return a JSON with the following keys"
 msgstr ""
 
-#: src/ai/gemini.js:290 src/ai/gemini.js:292 src/ai/gemini.js:294
-#: src/ai/gemini.js:296
+#: src/ai/gemini.js:286
+msgid "true if it possible to generate"
+msgstr ""
+
+#: src/ai/gemini.js:286
+msgid "a Linux Ubuntu terminal command line to this request"
+msgstr ""
+
+#: src/ai/gemini.js:286
+msgid "false otherwise"
+msgstr ""
+
+#: src/ai/gemini.js:287
+msgid "generate a text to be spoken, informing success, failure or action"
+msgstr ""
+
+#: src/ai/gemini.js:288
+msgid "generate a command line for linux ubuntu that fulfills the request."
+msgstr ""
+
+#: src/ai/gemini.js:289
+msgid "Examples of response"
+msgstr ""
+
+#: src/ai/gemini.js:290
 msgid "Request"
 msgstr ""
 
 #: src/ai/gemini.js:290
-msgid "search for santos ferry crossing"
+msgid "Generate a command line that search for santos ferry crossing"
 msgstr ""
 
-#: src/ai/gemini.js:291 src/ai/gemini.js:293 src/ai/gemini.js:295
-#: src/ai/gemini.js:297
+#: src/ai/gemini.js:291
 msgid "JSON Response"
 msgstr ""
 
@@ -164,62 +162,6 @@ msgstr ""
 
 #: src/ai/gemini.js:291
 msgid "boat+crossing+santos"
-msgstr ""
-
-#: src/ai/gemini.js:292
-msgid "search for cat videos on youtube"
-msgstr ""
-
-#: src/ai/gemini.js:293
-msgid "Searching for cat videos on youtube..."
-msgstr ""
-
-#: src/ai/gemini.js:293
-msgid "cat"
-msgstr ""
-
-#: src/ai/gemini.js:294
-msgid "remove the background of this image"
-msgstr ""
-
-#: src/ai/gemini.js:295
-msgid "I can't remove the background for you"
-msgstr ""
-
-#: src/ai/gemini.js:295
-msgid "but you can do it using apps or websites."
-msgstr ""
-
-#: src/ai/gemini.js:295
-msgid "One example is the canvas website."
-msgstr ""
-
-#: src/ai/gemini.js:295
-msgid "I'm opening it for you."
-msgstr ""
-
-#: src/ai/gemini.js:296
-msgid "apply the blur filter to the image"
-msgstr ""
-
-#: src/ai/gemini.js:297
-msgid "I can't do that for you"
-msgstr ""
-
-#: src/ai/gemini.js:297
-msgid "but you can use photoshop."
-msgstr ""
-
-#: src/ai/gemini.js:297
-msgid "Follow the instructions below to apply"
-msgstr ""
-
-#: src/ai/gemini.js:297
-msgid "the blur filter to the image using photoshop"
-msgstr ""
-
-#: src/ai/gemini.js:297
-msgid "Instructions: Open..."
 msgstr ""
 
 #: src/utils/utils.js:197

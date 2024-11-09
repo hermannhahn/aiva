@@ -280,21 +280,15 @@ export class GoogleGemini {
 
     commandRequest(request) {
         const response = `
-"${_('For the request')}": "${request}"
+${_('For the request')}: "Generate a command line that ${request}"
+${_('Rules for commandline value')}: ${_('Do not use sudo')}, ${_('Always use firefox to sites, videos, music, and images.')}, ${_('Use firefox for search, create, edit or open documents. Use Google Drive, Google Docs and Google Sheets websites.')}.
 ${_('Return a JSON with the following keys')}:
 'success' (${_('true if it possible to generate')} ${_('a Linux Ubuntu terminal command line to this request')}, ${_('false otherwise')}),
-'response' (${_('simulate a text to be spoken, informing success, failure or action')}),
+'response' (${_('generate a text to be spoken, informing success, failure or action')}),
 'commandline' (${_('generate a command line for linux ubuntu that fulfills the request.')}).
-${_('Rules for commandline value')}: ${_('Do not use sudo')}, ${_('Always use firefox to sites, videos, music, and images.')}, ${_('Use firefox for search, create, edit or open documents. Use Google Drive, Google Docs and Google Sheets websites.')}.
-${_('Examples of responses')}:
-${_('Request')}: "${_('search for santos ferry crossing')}"
-${_('JSON Response')}: "{success: true, response: '${_('Searching for santos boat crossing...')}', commandline: 'firefox https://www.google.com/search?q=${_('boat+crossing+santos')}'}"
-${_('Request')}: "${_('search for cat videos on youtube')}"
-${_('JSON Response')}: "{success: true, response: '${_('Searching for cat videos on youtube...')}', commandline: 'firefox firefox https://www.youtube.com/results?search_query=${_('cat')}'}"
-${_('Request')}: "${_('remove the background of this image')}"
-${_('JSON Response')}: "{success: true, response: '${_("I can't remove the background for you")}, ${_('but you can do it using apps or websites.')}. ${_('One example is the canvas website.')}. ${_("I'm opening it for you.")}.', commandline: 'firefox https://www.canva.com/pt_br/recursos/remover-fundo/'}"
-${_('Request')}: "${_('apply the blur filter to the image')}"
-${_('JSON Response')}: "{success: false, response: '${_("I can't do that for you")}, ${_('but you can use photoshop.')}. ${_('Follow the instructions below to apply')} ${_('the blur filter to the image using photoshop')}. ${_('Instructions: Open...')}', commandline: null}"
+${_('Examples of response')}:
+${_('Request')}: "${_('Generate a command line that search for santos ferry crossing')}"
+${_('JSON Response')}: {success: true, response: "${_('Searching for santos boat crossing...')}", commandline: "firefox https://www.google.com/search?q=${_('boat+crossing+santos')}"}
 `;
         return response;
     }
