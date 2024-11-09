@@ -138,8 +138,13 @@ export class Chat {
         this.app.ui.responseChat.label.clutter_text.set_markup(
             `<b>${this.app.userSettings.ASSIST_NAME}:</b> ${formatedText}`,
         );
+        let response = this.app.utils.extractCodeAndTTS(text);
         if (speech) {
-            this.app.azure.tts(text);
+            this.app.azure.tts(response.tts);
+        }
+        if (response.code) {
+            this.app.utils.copyToClipboard(response.code);
+            this.app.log('Code copied to clipboard.');
         }
         this.app.utils.scrollToBottom();
     }
