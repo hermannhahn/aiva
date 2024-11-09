@@ -66,7 +66,7 @@ export class Chat {
     addQuestion(text, speech = false) {
         const inputChat = this.app.ui.question();
         this.app.ui.chatSection.addMenuItem(inputChat);
-        text = this.app.utils.inputformat(text);
+        text = this.app.utils.questionFormat(text);
         inputChat.label.clutter_text.set_markup(
             `<b>${this.app.userSettings.USERNAME}:</b> ${text}`,
         );
@@ -83,7 +83,7 @@ export class Chat {
      * @param {boolean} [speech=true] - speech text
      */
     editQuestion(text, speech = false) {
-        let formatedText = this.app.utils.inputformat(text);
+        let formatedText = this.app.utils.questionFormat(text);
         this.app.ui.inputChat.label.clutter_text.set_markup(
             `<b>${this.app.userSettings.USERNAME}:</b> ${formatedText}`,
         );
@@ -104,7 +104,7 @@ export class Chat {
         this.app.ui.chatSection.addMenuItem(responseChat);
         this.app.ui.chatSection.addMenuItem(copyButton);
         this.app.ui.chatSection.addMenuItem(this.app.ui.newSeparator);
-        const formatedText = this.app.utils.insertLineBreaks(text);
+        const formatedText = this.app.utils.responseFormat(text);
         responseChat.label.clutter_text.set_markup(
             `<b>${this.app.userSettings.ASSIST_NAME}:</b> ${formatedText}`,
         );
@@ -124,7 +124,7 @@ export class Chat {
      * @param {boolean} [speech=true] - speech text
      */
     editResponse(text, speech = true) {
-        const formatedText = this.app.utils.insertLineBreaks(text);
+        const formatedText = this.app.utils.responseFormat(text);
         this.app.ui.responseChat.label.clutter_text.set_markup(
             `<b>${this.app.userSettings.ASSIST_NAME}:</b> ${formatedText}`,
         );
