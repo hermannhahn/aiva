@@ -401,9 +401,6 @@ export class Utils {
     }
 
     _insertLineBreaks(text, maxWidth = 750, font = '14px Arial') {
-        // Convert text
-        text = this._converttext(text);
-
         // Cria uma superfície temporária e contexto Cairo para medir o texto
         const surface = new Cairo.ImageSurface(Cairo.Format.ARGB32, 0, 0);
         const cairoContext = new Cairo.Context(surface);
@@ -436,11 +433,6 @@ export class Utils {
         lines.push(currentLine);
 
         return lines.join('\n');
-    }
-
-    _converttext(text) {
-        let convertedText = convertMD(text);
-        return convertedText;
     }
 
     _historyInitContent() {
