@@ -17,6 +17,8 @@ graph TD
     %% Audio
     STOP_RECORD --> ADD_QUESTION
     STOP_RECORD --> TRANSCRIBE[azure.transcribe]
+
+    %% Azure
     TRANSCRIBE --> EDIT_QUESTION[chat.editQuestion]
     TRANSCRIBE --> PROCCESS
 
@@ -26,5 +28,7 @@ graph TD
     IS_COMMAND -- false --> IS_VOICE_COMMAND{interpreter.isVoiceCommand}
     IS_VOICE_COMMAND -- true --> VOICE_COMMAND[interpreter.voiceCommand] --> ADD_RESPONSE
     IS_VOICE_COMMAND -- false --> QUESTION[interpreter.question] --> ADD_RESPONSE
+
+    %% Gemini
     QUESTION --> RESPONSE[gemini.response] --> EDIT_RESPONSE[chat.editResponse]
 ```
