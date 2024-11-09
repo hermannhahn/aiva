@@ -81,7 +81,7 @@ export class GoogleGemini {
 
                     // Command runner
                     if (
-                        aiResponse.toLowerCase().includes('executeLocalCommand')
+                        aiResponse.toLowerCase().includes('executelocalcommand')
                     ) {
                         this.app.interpreter.voiceCommandInterpreter(question);
                         return;
@@ -143,7 +143,7 @@ export class GoogleGemini {
                         return;
                     }
                     let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
-                    this.app.log('Response: ' + aiResponse);
+                    this.app.log('Command: ' + aiResponse);
 
                     if (aiResponse === undefined) {
                         this.app.chat.editResponse(
