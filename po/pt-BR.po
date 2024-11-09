@@ -130,8 +130,8 @@ msgid ""
 "Use firefox for search, create, edit or open documents. Use Google Drive, "
 "Google Docs and Google Sheets websites."
 msgstr ""
-"Crie, edite ou abra documentos no website do Google Drive, Google Docs e "
-"Google Sheets"
+"Use o firefox para abrir sites, vídeos, música e imagens. Use o Google Drive, Google Docs e "
+"Google Sheets."
 
 #: src/ai/gemini.js:285
 msgid "Return a JSON with the following keys"
