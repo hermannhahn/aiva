@@ -68,7 +68,7 @@ HELP
     }
 
     voiceCommandInterpreter(text) {
-        let request = this.app.gemini.getCommandRequest(text);
+        let request = this.app.gemini.commandRequest(text);
         this.app.gemini.runCommand(request);
     }
 }
