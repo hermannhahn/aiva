@@ -143,6 +143,7 @@ export class GoogleGemini {
                         return;
                     }
                     let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
+                    this.app.log('Response: ' + aiResponse);
 
                     if (aiResponse === undefined) {
                         this.app.chat.editResponse(
