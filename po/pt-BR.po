@@ -81,7 +81,7 @@ msgstr "Olá, eu sou"
 
 #: src/ai/gemini.js:261
 msgid "I'm in"
-msgstr ""
+msgstr "Eu estou em"
 
 #: src/ai/gemini.js:269
 msgid "Who are you?"
@@ -89,7 +89,7 @@ msgstr "Quem é você?"
 
 #: src/ai/gemini.js:271
 msgid "and"
-msgstr ""
+msgstr "e"
 
 #: src/ai/gemini.js:273
 #, fuzzy
