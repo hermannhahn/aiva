@@ -25,6 +25,6 @@ graph TD
     IS_COMMAND -- true --> COMMAND[interpreter.command] --> ADD_RESPONSE[chat.addResponse]
     IS_COMMAND -- false --> IS_VOICE_COMMAND{interpreter.isVoiceCommand}
     IS_VOICE_COMMAND -- true --> VOICE_COMMAND[interpreter.voiceCommand] --> ADD_RESPONSE
-    IS_VOICE_COMMAND -- false --> RESPONSE[gemini.response] --> ADD_RESPONSE[chat.addResponse]
-    RESPONSE --> EDIT_RESPONSE[chat.editResponse]
+    IS_VOICE_COMMAND -- false --> QUESTION[interpreter.question] --> ADD_RESPONSE
+    QUESTION --> RESPONSE[gemini.response] --> EDIT_RESPONSE
 ```
