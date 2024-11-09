@@ -114,7 +114,7 @@ export class Utils {
                     },
                 ],
             });
-            this.saveHistory();
+            this._saveHistory();
         }
     }
 
