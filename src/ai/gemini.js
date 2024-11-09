@@ -258,7 +258,7 @@ export class GoogleGemini {
         return instructions;
     }
 
-    getCommandRequest(request) {
+    commandRequest(request) {
         const response = `
 "${_('For the request')}": "${request}"
 ${_('Return a JSON with the following keys')}:
