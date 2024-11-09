@@ -104,7 +104,7 @@ msgid ""
 "'executeLocalCommand', otherwise respond normally."
 msgstr ""
 "Se alguma das minhas interações incluir uma solicitação para executar algo "
-"no meu computador ou pesquisar algo, responda somente e exatamente com a "
+"no meu computador ou pesquisar algo, ignore, responda somente e exatamente com a "
 "palavra: 'executeLocalCommand', caso contrário, responda normalmente."
 
 #: src/ai/gemini.js:283
@@ -122,7 +122,8 @@ msgstr "true se for possível ser executado"
 
 #: src/ai/gemini.js:285
 msgid "a Linux Ubuntu terminal command line to this request"
-msgstr ""
+msgstr "uma linha de comando Linux Ubuntu para esta solicitação"
+
 
 #: src/ai/gemini.js:285
 msgid "false otherwise"
@@ -135,7 +136,7 @@ msgstr "texto para ser falado, informando sucesso, fracasso ou ação"
 
 #: src/ai/gemini.js:287
 msgid "generate a command line for linux ubuntu that fulfills the request."
-msgstr ""
+msgstr "gerar uma linha de comando Linux Ubuntu que atenda a solicitação."
 
 #: src/ai/gemini.js:288
 msgid "Rules for commandline value"
