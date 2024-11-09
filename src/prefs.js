@@ -10,7 +10,7 @@ export default class ClipboardIndicatorPreferences extends ExtensionPreferences 
         const page = new Adw.PreferencesPage();
         page.add(settingsUI.ui);
         // Set window size to 800x600
-        window.set_default_size(800, 550);
+        window.set_default_size(750, 600);
         window.add(page);
     }
 }
