@@ -29,7 +29,7 @@ msgstr "computador"
 #: src/ai/azure.js:133 src/ai/gemini.js:100 src/ai/gemini.js:189
 #, fuzzy
 msgid "Sorry, I'm having connection trouble. Please try again."
-msgstr "Por favor, tente novamente."
+msgstr "Estou tendo problemas de conexão. Por favor, tente novamente."
 
 #: src/ai/azure.js:155 src/ai/azure.js:178 src/ai/azure.js:192
 msgid "Transcribe error!"
@@ -39,7 +39,7 @@ msgstr "Erro na transcrição!"
 #: src/ai/azure.js:237 src/ai/azure.js:246
 #, fuzzy
 msgid "Sorry, I'm having trouble to listen you. Please try again."
-msgstr "Por favor, tente novamente."
+msgstr "Estou tendo dificuldade de te escutar. Por favor, tente novamente."
 
 #: src/ai/gemini.js:77 src/ai/gemini.js:150
 #, fuzzy
@@ -114,7 +114,7 @@ msgstr "Para a solicitação"
 #: src/ai/gemini.js:283
 #, fuzzy
 msgid "Generate a command line that"
-msgstr "computador pesquise por cruzamento de balsa de santos"
+msgstr "Gerar uma linha de comando que"
 
 #: src/ai/gemini.js:284
 msgid "Return a JSON with the following keys"
@@ -123,7 +123,7 @@ msgstr "Retorne um JSON com as seguintes chaves"
 #: src/ai/gemini.js:285
 #, fuzzy
 msgid "true if it possible to generate"
-msgstr "true se for possível ser executado"
+msgstr "true se for possível ser gerado"
 
 #: src/ai/gemini.js:285
 msgid "a Linux Ubuntu terminal command line to this request"
@@ -161,7 +161,7 @@ msgid ""
 "Use firefox for search, create, edit or open documents. Use Google Drive, "
 "Google Docs and Google Sheets websites."
 msgstr ""
-"Use o firefox para abrir sites, vídeos, música e imagens. Use o Google "
+"Use o firefox para pesquisar, criar, editar ou abrir documentos. Use o Google "
 "Drive, Google Docs e Google Sheets."
 
 #: src/ai/gemini.js:289
@@ -176,7 +176,7 @@ msgstr "Solicitação"
 #: src/ai/gemini.js:290
 #, fuzzy
 msgid "Generate a command line that search for santos ferry crossing"
-msgstr "computador pesquise por cruzamento de balsa de santos"
+msgstr "Gere uma linha de comando que pesquise pelo travessia de balsa de santos"
 
 #: src/ai/gemini.js:291
 msgid "JSON Response"
@@ -185,7 +185,7 @@ msgstr "Resposta JSON"
 #: src/ai/gemini.js:291
 #, fuzzy
 msgid "Searching for santos boat crossing..."
-msgstr "Pesquisando cruzamento de balsa de santos..."
+msgstr "Pesquisando travessia de balsa de santos..."
 
 #: src/ai/gemini.js:291
 #, fuzzy
