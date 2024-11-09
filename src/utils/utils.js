@@ -39,6 +39,7 @@ import {convertMD} from './md2pango.js';
 export class Utils {
     constructor(app) {
         this.app = app;
+        this._pangoConvert = convertMD;
         this.app.log('Utils loaded.');
     }
 
@@ -50,6 +51,7 @@ export class Utils {
      * @description // Format input chat
      */
     questionFormat(text) {
+        text = this._pangoConvert(text);
         text = this._insertLineBreaks(text);
         text = text
             .replace(/&/g, '\u0026')
@@ -73,6 +75,7 @@ export class Utils {
     }
 
     responseFormat(text) {
+        text = this._pangoConvert(text);
         text = this._insertLineBreaks(text);
         return text;
     }
