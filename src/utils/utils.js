@@ -172,6 +172,14 @@ export class Utils {
         this.executeCommand(command);
     }
 
+    copyToClipboard(text) {
+        this.app.extension.clipboard.set_text(
+            St.ClipboardType.CLIPBOARD,
+            // Get text selection
+            text,
+        );
+    }
+
     copySelectedText(responseChat, copyButton) {
         let selectedText = responseChat.label.clutter_text.get_selection();
         if (selectedText) {
