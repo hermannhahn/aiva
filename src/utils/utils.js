@@ -440,11 +440,8 @@ export class Utils {
     }
 
     _historyInitContent() {
-        let history = [];
-        let instructions = _(
-            "If any of my interactions include a request to run something on my computer or search for something, respond only and exactly with the word: 'executeLocalCommand', otherwise respond normally.",
-        );
-        history.push({
+        let initContent = [];
+        initContent.push({
             role: 'user',
             parts: [
                 {
@@ -452,44 +449,8 @@ export class Utils {
                 },
             ],
         });
-        history.push({
-            role: 'user',
-            parts: [
-                {
-                    text: instructions,
-                },
-            ],
-        });
-        history.push({
-            role: 'user',
-            parts: [
-                {
-                    text:
-                        _('Hi, I am') +
-                        ' ' +
-                        this.app.userSettings.USERNAME +
-                        '. ' +
-                        _('I am from') +
-                        ' ' +
-                        this.app.userSettings.LOCATION +
-                        '. ' +
-                        _('Who are you?'),
-                },
-            ],
-        });
-        history.push({
-            role: 'model',
-            parts: [
-                {
-                    text:
-                        _('Hi! I am ') +
-                        this.app.userSettings.ASSIST_NAME +
-                        _(', your helpfull assistant.'),
-                },
-            ],
-        });
 
-        return history;
+        return initContent;
     }
 
     // Create history.json file if not exist

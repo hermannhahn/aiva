@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-09 15:19-0300\n"
+"POT-Creation-Date: 2024-11-09 15:37-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language it-IT\n"
@@ -299,33 +299,6 @@ msgstr ""
 
 #: src/utils/utils.js:278
 msgid "Give me a moment to sort this out..."
-msgstr ""
-
-#: src/utils/utils.js:445
-msgid ""
-"If any of my interactions include a request to run something on my computer "
-"or search for something, respond only and exactly with the word: "
-"'executeLocalCommand', otherwise respond normally."
-msgstr ""
-
-#: src/utils/utils.js:468
-msgid "Hi, I am"
-msgstr ""
-
-#: src/utils/utils.js:472
-msgid "I am from"
-msgstr ""
-
-#: src/utils/utils.js:476
-msgid "Who are you?"
-msgstr ""
-
-#: src/utils/utils.js:485
-msgid "Hi! I am "
-msgstr ""
-
-#: src/utils/utils.js:487
-msgid ", your helpfull assistant."
 msgstr ""
 
 #: src/ui.js:55
