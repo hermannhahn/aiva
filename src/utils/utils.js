@@ -253,9 +253,7 @@ export class Utils {
                             );
                             let title = titleMatch ? titleMatch[1] : 'No title';
 
-                            newsItems.push({
-                                title,
-                            });
+                            newsItems.push(title);
                         }
 
                         resolve(newsItems);
@@ -275,9 +273,7 @@ export class Utils {
     async readNews() {
         try {
             const fetchNews = await this.fetchGoogleNewsRSS();
-            const jsonNews = JSON.stringify(fetchNews, null, 2);
-            const news = JSON.parse(jsonNews);
-
+            const news = JSON.stringify(fetchNews, null, 2);
             this.app.log(`News: ${news}`);
             // Use this.app.azure.tts to read all news in json
             this.app.azure.tts(news);
