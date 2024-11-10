@@ -94,7 +94,6 @@ HELP
     }
 
     _readerCommandInterpreter(text) {
-        this.app.chat.editResponse(_('Searching for news...'), true);
         let readNews = false;
         const newsActivationWords = [_('news'), _('main events'), _('events')];
         const words = text.split(/\s+/).slice(0, 10);
