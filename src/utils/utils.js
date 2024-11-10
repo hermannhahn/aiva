@@ -276,6 +276,10 @@ export class Utils {
             const url = `https://news.google.com/rss?hl=${lang}&gl=${countryLang}&ceid=${countryLang}`;
             const fetchNews = await this.fetchRSS(url);
             const news = JSON.stringify(fetchNews, null, 2);
+            this.app.chat.editResponse(
+                _('The main news of the day are') + ':\n',
+            );
+
             const stringNews = news
                 .replace(/",/g, '\n')
                 .replace(/"/g, '')
