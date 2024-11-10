@@ -113,10 +113,10 @@ export class Chat {
         responseChat.label.clutter_text.set_markup(
             `<b>${this.app.userSettings.ASSIST_NAME}:</b> ${formatedText}`,
         );
-        this.app.ui.responseChat = responseChat;
         copyButton.connect('activate', (_self) => {
             this.app.utils.copySelectedText(responseChat, copyButton);
         });
+        this.app.ui.responseChat = responseChat;
         let response = this.app.utils.extractCodeAndTTS(text);
         if (speech) {
             this.app.azure.tts(response.tts);
