@@ -349,22 +349,4 @@ ${_('JSON Response')}: {success: true, response: "${_('Searching for santos boat
         const stringfiedHistory = JSON.stringify(request);
         return `{"contents":${stringfiedHistory}}`;
     }
-
-    async getRssFrom() {
-        // Carrega o feed RSS
-        const url = 'https://news.google.com/rss';
-        const feed = await this.reader.parseUrl(url);
-
-        // Obtém as 10 primeiras notícias do feed
-        const noticias = feed.entries.slice(0, 10);
-
-        // Armazena as notícias em um array
-        const noticiasArray = [];
-        noticias.forEach((noticia) => {
-            noticiasArray.push(noticia.title);
-        });
-
-        // Imprime o array de notícias no console
-        console.log(noticiasArray);
-    }
 }
