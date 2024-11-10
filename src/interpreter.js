@@ -18,6 +18,9 @@ export class Interpreter {
         } else if (this._isVoiceCommand(question)) {
             this.app.log('Voice command detected.');
             this.voiceCommandInterpreter(question);
+        } else if (this._isReaderCommand(question)) {
+            this.app.log('Reader command detected.');
+            this._readerCommandInterpreter(question);
         } else {
             this.app.log('Sending question to API...');
             this.app.gemini.response(question);
@@ -52,6 +55,24 @@ export class Interpreter {
         return false;
     }
 
+    _isReaderCommand(text) {
+        const activationWords = [
+            _('read'),
+            'leia',
+            _('speech'),
+            'fale',
+            'fala',
+            _('tell me'),
+            'diga',
+        ];
+        for (const activationWord of activationWords) {
+            if (text.includes(activationWord)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     _commandInterpreter(text) {
         if (text.startsWith('/help')) {
             this.app.chat.add(`
@@ -68,6 +89,24 @@ HELP
     }
 
     voiceCommandInterpreter(text) {
+        let request = this.app.gemini.commandRequest(text);
+        this.app.gemini.runCommand(request);
+    }
+
+    _readerCommandInterpreter(text) {
+        let readNews = false;
+        const newsActivationWords = [_('news'), _('main events'), _('events')];
+        for (const activationWord of newsActivationWords) {
+            if (text.includes(activationWord)) {
+                readNews = true;
+                break;
+            }
+        }
+        if (readNews) {
+            const news = this.app.utils.getRssFrom();
+            this.app.chat.addResponse(news, true);
+            return;
+        }
         let request = this.app.gemini.commandRequest(text);
         this.app.gemini.runCommand(request);
     }
