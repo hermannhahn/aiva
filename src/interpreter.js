@@ -161,7 +161,7 @@ HELP
             const topic = text.split(activationTopic)[1].split(' ')[0];
             this.app.log('Searching for news for ' + topic + '...');
             this.app.topict.editResponse(_('Searching for news...'));
-            GLib.timeout_add(GLib.PRIORITY_DEFAULT, 3000, () => {
+            GLib.timeout_add(GLib.PRIORITY_DEFAULT, 5000, () => {
                 this.app.utils.readNews(topic);
                 return false; // Para garantir que o timeout execute apenas uma vez
             });
