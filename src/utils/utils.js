@@ -277,7 +277,8 @@ export class Utils {
             const fetchNews = await this.fetchRSS(url);
             const news = JSON.stringify(fetchNews, null, 2);
             const stringNews = news
-                .replace(/"/g, '\n')
+                .replace(/",/g, '\n')
+                .replace(/"/g, '')
                 .replace(/\[/g, '')
                 .replace(/\]/g, '');
             this.app.azure.tts(stringNews);
