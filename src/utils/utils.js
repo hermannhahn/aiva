@@ -281,7 +281,7 @@ export class Utils {
     }
 
     // Exemplo de como usar essa função para guardar as 10 primeiras notícias
-    async getNews() {
+    async readNews() {
         try {
             let news = await this.fetchGoogleNewsRSS();
             this.app.log(JSON.stringify(news, null, 2));
