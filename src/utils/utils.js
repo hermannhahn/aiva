@@ -220,7 +220,8 @@ export class Utils {
 
     fetchGoogleNewsRSS() {
         return new Promise((resolve, reject) => {
-            const url = 'https://news.google.com/rss';
+            const url =
+                'https://news.google.com/rss?hl=pt-BR&gl=BR&ceid=BR:pt-419';
             let session = new Soup.Session();
             let message = Soup.Message.new('GET', url);
 

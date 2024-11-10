@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-10 03:35-0300\n"
+"POT-Creation-Date: 2024-11-10 03:36-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -221,111 +221,111 @@ msgstr "Selecione a voz"
 msgid "[ Copied ]"
 msgstr "[ Copiado ]"
 
-#: src/utils/utils.js:324
+#: src/utils/utils.js:325
 msgid "I will show it on screen."
 msgstr "Eu vou mostrar na tela."
 
-#: src/utils/utils.js:325
+#: src/utils/utils.js:326
 msgid "Displaying now."
 msgstr "Exibindo agora."
 
-#: src/utils/utils.js:326
+#: src/utils/utils.js:327
 msgid "Here it is on screen."
 msgstr "Aqui está na tela."
 
-#: src/utils/utils.js:327
+#: src/utils/utils.js:328
 msgid "Showing on screen."
 msgstr "Exibindo na tela."
 
-#: src/utils/utils.js:328
+#: src/utils/utils.js:329
 msgid "On the screen now."
 msgstr "Na tela agora."
 
-#: src/utils/utils.js:338
+#: src/utils/utils.js:339
 msgid "Thinking..."
 msgstr "Pensando..."
 
-#: src/utils/utils.js:339
+#: src/utils/utils.js:340
 msgid "Let me see..."
 msgstr "Vou ver isso..."
 
-#: src/utils/utils.js:340
+#: src/utils/utils.js:341
 msgid "Just a moment..."
 msgstr "Só um momento..."
 
-#: src/utils/utils.js:341
+#: src/utils/utils.js:342
 msgid "Hmm, let me think about that..."
 msgstr "Hmm, vou pensar nisso..."
 
-#: src/utils/utils.js:342
+#: src/utils/utils.js:343
 msgid "Give me a second..."
 msgstr "Me dê um segundo..."
 
-#: src/utils/utils.js:343
+#: src/utils/utils.js:344
 msgid "Let me check..."
 msgstr "Vou verificar..."
 
-#: src/utils/utils.js:344
+#: src/utils/utils.js:345
 msgid "Working on it..."
 msgstr "Trabalhando nisso..."
 
-#: src/utils/utils.js:345
+#: src/utils/utils.js:346
 msgid "Hold on a sec..."
 msgstr "Por favor, aguarde..."
 
-#: src/utils/utils.js:346
+#: src/utils/utils.js:347
 msgid "One moment, please..."
 msgstr "Um momento, por favor..."
 
-#: src/utils/utils.js:347
+#: src/utils/utils.js:348
 msgid "Let me figure this out..."
 msgstr "Vou tentar isso..."
 
-#: src/utils/utils.js:348
+#: src/utils/utils.js:349
 msgid "I'll get back to you in a sec..."
 msgstr "Vou te responder em um segundo..."
 
-#: src/utils/utils.js:349
+#: src/utils/utils.js:350
 msgid "Just thinking this through..."
 msgstr "Vou pensar nisso..."
 
-#: src/utils/utils.js:350
+#: src/utils/utils.js:351
 msgid "Let's see what I can find..."
 msgstr "Vou ver o que posso encontrar..."
 
-#: src/utils/utils.js:351
+#: src/utils/utils.js:352
 msgid "Give me a moment to process this..."
 msgstr "Me dê um momento para processar isso..."
 
-#: src/utils/utils.js:352
+#: src/utils/utils.js:353
 msgid "Let me look into that..."
 msgstr "Vou olhar nisso..."
 
-#: src/utils/utils.js:353
+#: src/utils/utils.js:354
 msgid "I'm on it..."
 msgstr "Estou nisso..."
 
-#: src/utils/utils.js:354
+#: src/utils/utils.js:355
 msgid "I'll need a moment for that..."
 msgstr "Vou precisar de um momento para isso..."
 
-#: src/utils/utils.js:355
+#: src/utils/utils.js:356
 msgid "Let me dig deeper..."
 msgstr "Vou me aprofundar..."
 
-#: src/utils/utils.js:356
+#: src/utils/utils.js:357
 msgid "I'm thinking it over..."
 msgstr "Estou pensando nisso..."
 
-#: src/utils/utils.js:357
+#: src/utils/utils.js:358
 msgid "Give me a moment to sort this out..."
 msgstr "Me dê um momento para organizar isso..."
 
-#: src/utils/utils.js:536
+#: src/utils/utils.js:537
 msgid "Hi! I am "
 msgstr "Olá, eu sou "
 
-#: src/utils/utils.js:538
+#: src/utils/utils.js:539
 msgid ", your helpfull assistant."
 msgstr ", sua assistente útil."
 
