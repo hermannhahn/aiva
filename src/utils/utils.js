@@ -285,7 +285,7 @@ export class Utils {
         } catch (error) {
             this.app.log(`Error fetching news: ${error}`);
             this.app.chat.editResponse(
-                _("Sorry, I'm having connection trouble."),
+                _("Sorry, I'm having connection trouble. Please try again."),
             );
         }
     }

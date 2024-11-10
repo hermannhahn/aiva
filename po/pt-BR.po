@@ -56,6 +56,7 @@ msgstr "Pesquisando notícias..."
 
 #: src/ai/azure.js:72 src/ai/azure.js:84 src/ai/azure.js:125
 #: src/ai/azure.js:133 src/ai/gemini.js:106 src/ai/gemini.js:197
+#: src/utils/utils.js:288
 #, fuzzy
 msgid "Sorry, I'm having connection trouble. Please try again."
 msgstr "Estou tendo problemas de conexão. Por favor, tente novamente."
@@ -225,11 +226,6 @@ msgstr "Selecione a voz"
 #: src/utils/utils.js:211
 msgid "[ Copied ]"
 msgstr "[ Copiado ]"
-
-#: src/utils/utils.js:288
-#, fuzzy
-msgid "Sorry, I'm having connection trouble."
-msgstr "Estou tendo problemas de conexão. Por favor, tente novamente."
 
 #: src/utils/utils.js:317
 msgid "I will show it on screen."
@@ -407,6 +403,10 @@ msgstr "Salvar"
 #: src/prefs.js:705
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
+
+#, fuzzy
+#~ msgid "Sorry, I'm having connection trouble."
+#~ msgstr "Estou tendo problemas de conexão. Por favor, tente novamente."
 
 #~ msgid "Possible dangerous content in the question or answer."
 #~ msgstr "Possível conteúdo perigoso na pergunta ou resposta."
