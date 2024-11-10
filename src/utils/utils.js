@@ -267,13 +267,18 @@ export class Utils {
     }
 
     // Exemplo de uso da função
-    async readNews() {
+    async readNews(topic = undefined) {
         try {
+            let url = '';
             const lang = this.app.userSettings.AZURE_SPEECH_LANGUAGE;
             const countryLang = lang.split('-')[1];
             this.app.log('Language: ' + lang);
             this.app.log('Country: ' + countryLang);
-            const url = `https://news.google.com/rss?hl=${lang}&gl=${countryLang}&ceid=${countryLang}`;
+            if (topic !== undefined) {
+                url = `https://news.google.com/rss/search?q=${topic}&hl=${lang}&gl=${countryLang}&ceid=${countryLang}`;
+            } else {
+                url = `https://news.google.com/rss?hl=${lang}&gl=${countryLang}&ceid=${countryLang}`;
+            }
             const fetchNews = await this.fetchRSS(url);
             const news = JSON.stringify(fetchNews, null, 2);
             this.app.chat.editResponse(
