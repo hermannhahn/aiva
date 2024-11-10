@@ -1,3 +1,5 @@
+import GLib from 'gi://GLib';
+
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 export class Interpreter {
@@ -176,7 +178,10 @@ HELP
             const topic = text.split(activationTopic)[1].split(' ')[0];
             this.app.log('Searching for news for ' + topic + '...');
             this.app.topict.editResponse(_('Searching for news...'));
-            this.app.utils.readNews(topic);
+            GLib.timeout_add(GLib.PRIORITY_DEFAULT, 3000, () => {
+                this.app.utils.readNews(topic);
+                return false; // Para garantir que o timeout execute apenas uma vez
+            });
             return;
         }
         if (readNews) {

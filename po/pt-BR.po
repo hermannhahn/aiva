@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-10 16:35-0300\n"
+"POT-Creation-Date: 2024-11-10 16:37-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -21,238 +21,238 @@ msgstr ""
 msgid "Transcribing..."
 msgstr "Transcrevendo..."
 
-#: src/interpreter.js:41
+#: src/interpreter.js:43
 msgid "computer"
 msgstr "computador"
 
-#: src/interpreter.js:60
+#: src/interpreter.js:62
 msgid "read"
 msgstr "ler"
 
-#: src/interpreter.js:62
+#: src/interpreter.js:64
 msgid "speech"
 msgstr "fala"
 
-#: src/interpreter.js:65
+#: src/interpreter.js:67
 msgid "tell me"
 msgstr "me fale"
 
-#: src/interpreter.js:104
+#: src/interpreter.js:106
 #, fuzzy
 msgid "news in"
 msgstr "notícias de"
 
-#: src/interpreter.js:105
+#: src/interpreter.js:107
 msgid "news in the"
 msgstr "notícias em"
 
-#: src/interpreter.js:106
+#: src/interpreter.js:108
 #, fuzzy
 msgid "news on"
 msgstr "notícias no"
 
-#: src/interpreter.js:107
+#: src/interpreter.js:109
 msgid "news on the"
 msgstr "notícias na"
 
-#: src/interpreter.js:108
+#: src/interpreter.js:110
 #, fuzzy
 msgid "news of"
 msgstr "notícias no"
 
-#: src/interpreter.js:109
+#: src/interpreter.js:111
 #, fuzzy
 msgid "news about"
 msgstr "notícias no"
 
-#: src/interpreter.js:110
+#: src/interpreter.js:112
 #, fuzzy
 msgid "news about the"
 msgstr "notícias na"
 
-#: src/interpreter.js:111
+#: src/interpreter.js:113
 #, fuzzy
 msgid "news about on"
 msgstr "notícias no"
 
-#: src/interpreter.js:112
+#: src/interpreter.js:114
 #, fuzzy
 msgid "news about on the"
 msgstr "notícias na"
 
-#: src/interpreter.js:113
+#: src/interpreter.js:115
 #, fuzzy
 msgid "news about of"
 msgstr "notícias no"
 
-#: src/interpreter.js:114
+#: src/interpreter.js:116
 #, fuzzy
 msgid "main events in"
 msgstr "principais acontecimentos de"
 
-#: src/interpreter.js:115
+#: src/interpreter.js:117
 #, fuzzy
 msgid "main events in the"
 msgstr "principais acontecimentos em"
 
-#: src/interpreter.js:116
+#: src/interpreter.js:118
 #, fuzzy
 msgid "main events on"
 msgstr "principais acontecimentos no"
 
-#: src/interpreter.js:117
+#: src/interpreter.js:119
 #, fuzzy
 msgid "main events on the"
 msgstr "principais acontecimentos na"
 
-#: src/interpreter.js:118
+#: src/interpreter.js:120
 #, fuzzy
 msgid "main events of"
 msgstr "principais acontecimentos no"
 
-#: src/interpreter.js:119
+#: src/interpreter.js:121
 #, fuzzy
 msgid "main events about"
 msgstr "principais acontecimentos no"
 
-#: src/interpreter.js:120
+#: src/interpreter.js:122
 #, fuzzy
 msgid "main events about the"
 msgstr "principais acontecimentos na"
 
-#: src/interpreter.js:121
+#: src/interpreter.js:123
 #, fuzzy
 msgid "main events about on"
 msgstr "principais acontecimentos no"
 
-#: src/interpreter.js:122
+#: src/interpreter.js:124
 #, fuzzy
 msgid "main events about on the"
 msgstr "principais acontecimentos na"
 
-#: src/interpreter.js:123
+#: src/interpreter.js:125
 #, fuzzy
 msgid "main events about of"
 msgstr "principais acontecimentos no"
 
-#: src/interpreter.js:124
+#: src/interpreter.js:126
 #, fuzzy
 msgid "events in"
 msgstr "acontecimentos de"
 
-#: src/interpreter.js:125
+#: src/interpreter.js:127
 #, fuzzy
 msgid "events in the"
 msgstr "principais acontecimentos em"
 
-#: src/interpreter.js:126
+#: src/interpreter.js:128
 #, fuzzy
 msgid "events on"
 msgstr "acontecimentos no"
 
-#: src/interpreter.js:127
+#: src/interpreter.js:129
 #, fuzzy
 msgid "events on the"
 msgstr "principais acontecimentos na"
 
-#: src/interpreter.js:128
+#: src/interpreter.js:130
 #, fuzzy
 msgid "events of"
 msgstr "acontecimentos no"
 
-#: src/interpreter.js:129
+#: src/interpreter.js:131
 #, fuzzy
 msgid "events about"
 msgstr "acontecimentos no"
 
-#: src/interpreter.js:130
+#: src/interpreter.js:132
 #, fuzzy
 msgid "events about the"
 msgstr "principais acontecimentos na"
 
-#: src/interpreter.js:131
+#: src/interpreter.js:133
 #, fuzzy
 msgid "events about on"
 msgstr "acontecimentos no"
 
-#: src/interpreter.js:132
+#: src/interpreter.js:134
 #, fuzzy
 msgid "events about on the"
 msgstr "principais acontecimentos na"
 
-#: src/interpreter.js:133
+#: src/interpreter.js:135
 #, fuzzy
 msgid "events about of"
 msgstr "acontecimentos no"
 
-#: src/interpreter.js:134
+#: src/interpreter.js:136
 #, fuzzy
 msgid "main news in"
 msgstr "principais acontecimentos de"
 
-#: src/interpreter.js:135
+#: src/interpreter.js:137
 #, fuzzy
 msgid "main news in the"
 msgstr "principais acontecimentos em"
 
-#: src/interpreter.js:136
+#: src/interpreter.js:138
 #, fuzzy
 msgid "main news on"
 msgstr "principais acontecimentos no"
 
-#: src/interpreter.js:137
+#: src/interpreter.js:139
 #, fuzzy
 msgid "main news on the"
 msgstr "principais acontecimentos na"
 
-#: src/interpreter.js:138
+#: src/interpreter.js:140
 #, fuzzy
 msgid "main news of"
 msgstr "principais acontecimentos no"
 
-#: src/interpreter.js:139
+#: src/interpreter.js:141
 #, fuzzy
 msgid "main news about"
 msgstr "principais acontecimentos no"
 
-#: src/interpreter.js:140
+#: src/interpreter.js:142
 #, fuzzy
 msgid "main news about the"
 msgstr "principais acontecimentos na"
 
-#: src/interpreter.js:141
+#: src/interpreter.js:143
 #, fuzzy
 msgid "main news about on"
 msgstr "principais acontecimentos no"
 
-#: src/interpreter.js:142
+#: src/interpreter.js:144
 #, fuzzy
 msgid "main news about on the"
 msgstr "principais acontecimentos na"
 
-#: src/interpreter.js:143
+#: src/interpreter.js:145
 #, fuzzy
 msgid "main news about of"
 msgstr "principais acontecimentos no"
 
-#: src/interpreter.js:147
+#: src/interpreter.js:149
 msgid "news"
 msgstr "notícias"
 
-#: src/interpreter.js:148
+#: src/interpreter.js:150
 msgid "main events"
 msgstr "principais acontecimentos"
 
-#: src/interpreter.js:149
+#: src/interpreter.js:151
 msgid "events"
 msgstr "acontecimentos"
 
-#: src/interpreter.js:150
+#: src/interpreter.js:152
 #, fuzzy
 msgid "main news"
 msgstr "principais acontecimentos"
 
-#: src/interpreter.js:178 src/interpreter.js:184
+#: src/interpreter.js:180 src/interpreter.js:189
 #, fuzzy
 msgid "Searching for news..."
 msgstr "Pesquisando noticias..."
