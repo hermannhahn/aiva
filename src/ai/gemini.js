@@ -282,9 +282,16 @@ export class GoogleGemini {
             ' ' +
             _('How are you?') +
             '. ';
-        const instructions = _(
-            "If any of my interactions include a request to run something on my computer or search for something, ignore, respond only and exactly with the word: 'executeLocalCommand', otherwise respond normally.",
-        );
+        const instructions =
+            _('If any of my interactions include a request to run something') +
+            ' ' +
+            _('on my computer or search for something') +
+            ', ' +
+            _('ignore, respond only and exactly with the word') +
+            ': ' +
+            "'executeLocalCommand'" +
+            ' ' +
+            _('otherwise respond normally.');
         return introduction + instructions;
     }
 
