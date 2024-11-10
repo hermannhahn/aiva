@@ -255,7 +255,6 @@ export class Utils {
 
                             newsItems.push(title);
                         }
-
                         resolve(newsItems);
                     } catch (error) {
                         reject(
