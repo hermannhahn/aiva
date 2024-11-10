@@ -110,6 +110,7 @@ HELP
             this.app.utils.readNews();
             return;
         }
+        this.app.chat.addResponse('...');
         this.app.log('Sending question to API...');
         this.app.gemini.response(text);
     }
