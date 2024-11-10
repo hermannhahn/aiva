@@ -276,15 +276,15 @@ export class Utils {
             this.app.log('Country: ' + countryLang);
             if (topic !== undefined) {
                 url = `https://news.google.com/rss/search?q=${topic}&hl=${lang}&gl=${countryLang}&ceid=${countryLang}`;
+                this.app.chat.editResponse(_('The news are') + ':\n');
             } else {
                 url = `https://news.google.com/rss?hl=${lang}&gl=${countryLang}&ceid=${countryLang}`;
+                this.app.chat.editResponse(
+                    _('The main news of the day are') + ':\n',
+                );
             }
             const fetchNews = await this.fetchRSS(url);
             const news = JSON.stringify(fetchNews, null, 2);
-            this.app.chat.editResponse(
-                _('The main news of the day are') + ':\n',
-            );
-
             const stringNews = news
                 .replace(/",/g, '\n')
                 .replace(/"/g, '')
