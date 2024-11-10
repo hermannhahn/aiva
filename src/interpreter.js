@@ -96,10 +96,12 @@ HELP
     _readerCommandInterpreter(text) {
         let readNews = false;
         const newsActivationWords = [_('news'), _('main events'), _('events')];
-        for (const activationWord of newsActivationWords) {
-            if (text.includes(activationWord)) {
-                readNews = true;
-                break;
+        const words = text.split(/\s+/).slice(0, 10);
+        for (const word of words) {
+            for (const activationWord of newsActivationWords) {
+                if (word.includes(activationWord)) {
+                    readNews = true;
+                }
             }
         }
         if (readNews) {
@@ -107,7 +109,7 @@ HELP
             this.app.chat.addResponse(news, true);
             return;
         }
-        let request = this.app.gemini.commandRequest(text);
-        this.app.gemini.runCommand(request);
+        this.app.log('Sending question to API...');
+        this.app.gemini.response(text);
     }
 }
