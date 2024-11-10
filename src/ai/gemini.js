@@ -149,7 +149,7 @@ export class GoogleGemini {
                         return;
                     }
                     let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
-                    this.app.log('Command: ' + aiResponse);
+                    this.app.log('Response: ' + aiResponse);
 
                     if (aiResponse === undefined) {
                         this.app.chat.editResponse(
@@ -162,6 +162,7 @@ export class GoogleGemini {
                     let jsonResponse = {};
                     try {
                         jsonResponse = JSON.parse(aiResponse);
+                        this.app.log('Parsed Response: ' + aiResponse);
                         // eslint-disable-next-line no-unused-vars
                     } catch (error) {
                         let cleanedResponse = aiResponse.replace(
@@ -169,6 +170,7 @@ export class GoogleGemini {
                             '$1',
                         );
                         cleanedResponse = `{${cleanedResponse}}`;
+                        this.app.log('Cleaned Response: ' + cleanedResponse);
                         try {
                             jsonResponse = JSON.parse(cleanedResponse);
                             // eslint-disable-next-line no-unused-vars
@@ -200,7 +202,7 @@ export class GoogleGemini {
     /**
      * @description check safety result
      * @param {string} question user question
-     * @param {object} res
+     * @param {object} res gemini response object
      * @returns {string|false} safety reason or false
      */
     safetyReason(question, res) {
