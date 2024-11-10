@@ -218,6 +218,24 @@ export class Utils {
         }
     }
 
+    async getRssFrom() {
+        // Carrega o feed RSS
+        const url = 'https://news.google.com/rss';
+        const feed = await this.reader.parseUrl(url);
+
+        // Obtém as 10 primeiras notícias do feed
+        const noticias = feed.entries.slice(0, 10);
+
+        // Armazena as notícias em um array
+        const noticiasArray = [];
+        noticias.forEach((noticia) => {
+            noticiasArray.push(noticia.title);
+        });
+
+        // Imprime o array de notícias no console
+        console.log(noticiasArray);
+    }
+
     removeNotificationByTitle(title) {
         // Obtenha todas as notificações ativas
         // eslint-disable-next-line no-unused-vars
