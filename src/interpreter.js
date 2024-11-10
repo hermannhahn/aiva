@@ -95,7 +95,12 @@ HELP
 
     _readerCommandInterpreter(text) {
         let readNews = false;
-        const newsActivationWords = [_('news'), _('main events'), _('events')];
+        const newsActivationWords = [
+            _('news'),
+            _('main events'),
+            _('events'),
+            _('main news'),
+        ];
         const words = text.split(/\s+/).slice(0, 10);
         for (const word of words) {
             for (const activationWord of newsActivationWords) {
@@ -105,6 +110,16 @@ HELP
             }
         }
         if (readNews) {
+            const placeNewsActivationWords = [
+                _('news in'),
+                _('news in the'),
+                _('news on'),
+                _('news on the'),
+                _('main events in'),
+                _('main events in the'),
+                _('main events on'),
+                _('main events on the'),
+            ];
             this.app.log('Searching for news...');
             this.app.chat.editResponse(_('Searching for news...'));
             this.app.utils.readNews();
