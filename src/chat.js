@@ -104,6 +104,7 @@ export class Chat {
      * @param {boolean} [speech=true] - speech text
      */
     addResponse(text, speech = false) {
+        this.app.log('debug: ' + text);
         let responseChat = this.app.ui.response();
         let copyButton = this.app.ui.copy();
         this.app.ui.chatSection.addMenuItem(responseChat);
