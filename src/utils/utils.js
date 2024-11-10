@@ -222,7 +222,7 @@ export class Utils {
     fetchGoogleNewsRSS() {
         return new Promise((resolve, reject) => {
             const url = 'https://news.google.com/rss';
-            let session = new Soup.Session(); // Cria uma nova sessão
+            let session = new Soup.Session();
             let message = Soup.Message.new('GET', url);
 
             // Envia a requisição de forma assíncrona e lê a resposta
@@ -237,39 +237,31 @@ export class Utils {
                             responseBytes.get_data(),
                         );
 
-                        // Parse XML response usando Libxml2
-                        let parserContext =
-                            Libxml2.ParserContext.new_from_string(
-                                responseText,
-                                GLib.Utf8,
-                            );
-                        let doc = parserContext.parse();
-
-                        if (!doc) {
-                            reject(new Error('Failed to parse XML'));
-                            return;
-                        }
-
+                        // Extrai as 10 primeiras notícias usando regex
                         let newsItems = [];
-                        let items =
-                            doc.root_element.get_elements_by_tag_name('item');
+                        let itemRegex = /<item>(.*?)<\/item>/g;
+                        let match;
 
-                        for (let i = 0; i < Math.min(10, items.length); i++) {
-                            let titleElement =
-                                items[i].get_elements_by_tag_name('title')[0];
-                            let linkElement =
-                                items[i].get_elements_by_tag_name('link')[0];
-                            let pubDateElement =
-                                items[i].get_elements_by_tag_name('pubDate')[0];
+                        while (
+                            (match = itemRegex.exec(responseText)) !== null &&
+                            newsItems.length < 10
+                        ) {
+                            let itemContent = match[1];
 
-                            let title = titleElement
-                                ? titleElement.get_content()
-                                : 'No title';
-                            let link = linkElement
-                                ? linkElement.get_content()
-                                : 'No link';
-                            let pubDate = pubDateElement
-                                ? pubDateElement.get_content()
+                            let titleMatch = /<title>(.*?)<\/title>/.exec(
+                                itemContent,
+                            );
+                            let linkMatch = /<link>(.*?)<\/link>/.exec(
+                                itemContent,
+                            );
+                            let pubDateMatch = /<pubDate>(.*?)<\/pubDate>/.exec(
+                                itemContent,
+                            );
+
+                            let title = titleMatch ? titleMatch[1] : 'No title';
+                            let link = linkMatch ? linkMatch[1] : 'No link';
+                            let pubDate = pubDateMatch
+                                ? pubDateMatch[1]
                                 : 'No date';
 
                             newsItems.push({
