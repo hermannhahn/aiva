@@ -223,10 +223,6 @@ export class Utils {
         return new Promise((resolve, reject) => {
             const url = 'https://news.google.com/rss';
             let session = new Soup.Session(); // Cria uma nova sessão
-            Soup.Session.prototype.add_feature.call(
-                session,
-                new Soup.ProxyResolverDefault(),
-            ); // Configura para lidar com proxies
 
             let message = Soup.Message.new('GET', url);
 
