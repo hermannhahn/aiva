@@ -160,7 +160,7 @@ HELP
             // Get the 3 first words after activationWord
             const topic = text.split(activationTopic)[1].split(' ')[0];
             this.app.log('Searching for news for ' + topic + '...');
-            this.app.topict.editResponse(_('Searching for news...'));
+            this.app.topict.editResponse(_('Searching for news...'), true);
             GLib.timeout_add(GLib.PRIORITY_DEFAULT, 5000, () => {
                 this.app.utils.readNews(topic);
                 return false; // Para garantir que o timeout execute apenas uma vez
@@ -168,7 +168,9 @@ HELP
             return;
         }
 
-        if (!readTopicNews) {
+        if (readNews) {
+            this.app.log('Searching for news...');
+            this.app.chat.editResponse(_('Searching for news...'), true);
             for (const word of words) {
                 for (const activationWord of newsActivationWords) {
                     if (word.includes(activationWord)) {
@@ -177,10 +179,6 @@ HELP
                     }
                 }
             }
-        }
-        if (readNews) {
-            this.app.log('Searching for news...');
-            this.app.chat.editResponse(_('Searching for news...'));
             this.app.utils.readNews();
             return;
         }

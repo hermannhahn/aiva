@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-10 18:47-0300\n"
+"POT-Creation-Date: 2024-11-10 18:50-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -149,7 +149,7 @@ msgstr ""
 msgid "main news"
 msgstr ""
 
-#: src/interpreter.js:163 src/interpreter.js:183
+#: src/interpreter.js:163 src/interpreter.js:173
 msgid "Searching for news..."
 msgstr ""
 
