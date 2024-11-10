@@ -281,7 +281,6 @@ export class Utils {
                 .replace(/"/g, '')
                 .replace(/\[/g, '')
                 .replace(/\]/g, '');
-            this.app.azure.tts(stringNews);
             this.app.chat.editResponse(stringNews);
         } catch (error) {
             this.app.log(`Error fetching news: ${error}`);
