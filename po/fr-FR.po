@@ -20,7 +20,7 @@ msgstr ""
 msgid "Transcribing..."
 msgstr ""
 
-#: src/interpreter.js:40
+#: src/interpreter.js:38
 msgid "computer"
 msgstr ""
 
