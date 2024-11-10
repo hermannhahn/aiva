@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-09 22:48-0300\n"
+"POT-Creation-Date: 2024-11-09 22:54-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language es-ES\n"
@@ -187,119 +187,119 @@ msgstr ""
 msgid "boat+crossing+santos"
 msgstr ""
 
-#: src/utils/utils.js:198
+#: src/utils/utils.js:199
 msgid "[ Selected Copied ]"
 msgstr ""
 
-#: src/utils/utils.js:212
+#: src/utils/utils.js:213
 msgid "[ Copied ]"
 msgstr ""
 
-#: src/utils/utils.js:267
+#: src/utils/utils.js:268
 msgid "I will show it on screen."
 msgstr ""
 
-#: src/utils/utils.js:268
+#: src/utils/utils.js:269
 msgid "Displaying now."
 msgstr ""
 
-#: src/utils/utils.js:269
+#: src/utils/utils.js:270
 msgid "Here it is on screen."
 msgstr ""
 
-#: src/utils/utils.js:270
+#: src/utils/utils.js:271
 msgid "Showing on screen."
 msgstr ""
 
-#: src/utils/utils.js:271
+#: src/utils/utils.js:272
 msgid "On the screen now."
 msgstr ""
 
-#: src/utils/utils.js:281
+#: src/utils/utils.js:282
 msgid "Thinking..."
 msgstr ""
 
-#: src/utils/utils.js:282
+#: src/utils/utils.js:283
 msgid "Let me see..."
 msgstr ""
 
-#: src/utils/utils.js:283
+#: src/utils/utils.js:284
 msgid "Just a moment..."
 msgstr ""
 
-#: src/utils/utils.js:284
+#: src/utils/utils.js:285
 msgid "Hmm, let me think about that..."
 msgstr ""
 
-#: src/utils/utils.js:285
+#: src/utils/utils.js:286
 msgid "Give me a second..."
 msgstr ""
 
-#: src/utils/utils.js:286
+#: src/utils/utils.js:287
 msgid "Let me check..."
 msgstr ""
 
-#: src/utils/utils.js:287
+#: src/utils/utils.js:288
 msgid "Working on it..."
 msgstr ""
 
-#: src/utils/utils.js:288
+#: src/utils/utils.js:289
 msgid "Hold on a sec..."
 msgstr ""
 
-#: src/utils/utils.js:289
+#: src/utils/utils.js:290
 msgid "One moment, please..."
 msgstr ""
 
-#: src/utils/utils.js:290
+#: src/utils/utils.js:291
 msgid "Let me figure this out..."
 msgstr ""
 
-#: src/utils/utils.js:291
+#: src/utils/utils.js:292
 msgid "I'll get back to you in a sec..."
 msgstr ""
 
-#: src/utils/utils.js:292
+#: src/utils/utils.js:293
 msgid "Just thinking this through..."
 msgstr ""
 
-#: src/utils/utils.js:293
+#: src/utils/utils.js:294
 msgid "Let's see what I can find..."
 msgstr ""
 
-#: src/utils/utils.js:294
+#: src/utils/utils.js:295
 msgid "Give me a moment to process this..."
 msgstr ""
 
-#: src/utils/utils.js:295
+#: src/utils/utils.js:296
 msgid "Let me look into that..."
 msgstr ""
 
-#: src/utils/utils.js:296
+#: src/utils/utils.js:297
 msgid "I'm on it..."
 msgstr ""
 
-#: src/utils/utils.js:297
+#: src/utils/utils.js:298
 msgid "I'll need a moment for that..."
 msgstr ""
 
-#: src/utils/utils.js:298
+#: src/utils/utils.js:299
 msgid "Let me dig deeper..."
 msgstr ""
 
-#: src/utils/utils.js:299
+#: src/utils/utils.js:300
 msgid "I'm thinking it over..."
 msgstr ""
 
-#: src/utils/utils.js:300
+#: src/utils/utils.js:301
 msgid "Give me a moment to sort this out..."
 msgstr ""
 
-#: src/utils/utils.js:479
+#: src/utils/utils.js:480
 msgid "Hi! I am "
 msgstr ""
 
-#: src/utils/utils.js:481
+#: src/utils/utils.js:482
 msgid ", your helpfull assistant."
 msgstr ""
 

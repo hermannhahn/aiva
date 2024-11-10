@@ -9,7 +9,8 @@ import Soup from 'gi://Soup';
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 import {convertMD} from './md2pango.js';
-import * as FeedReader from 'feed-reader';
+
+import FeedReader from 'feedreader';
 
 /**
  * @description app utilities
