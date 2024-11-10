@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-10 12:32-0300\n"
+"POT-Creation-Date: 2024-11-10 12:35-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -48,6 +48,11 @@ msgstr "principais acontecimentos"
 #: src/interpreter.js:98
 msgid "events"
 msgstr "acontecimentos"
+
+#: src/interpreter.js:109
+#, fuzzy
+msgid "Searching for news..."
+msgstr "Pesquisando notícias..."
 
 #: src/ai/azure.js:72 src/ai/azure.js:84 src/ai/azure.js:125
 #: src/ai/azure.js:133 src/ai/gemini.js:106 src/ai/gemini.js:197
@@ -398,10 +403,6 @@ msgstr "Salvar"
 #: src/prefs.js:705
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
-
-#, fuzzy
-#~ msgid "Searching for news..."
-#~ msgstr "Pesquisando notícias..."
 
 #, fuzzy
 #~ msgid "Sorry, I'm having connection trouble."
