@@ -5,7 +5,7 @@ import Pango from 'gi://Pango';
 import PangoCairo from 'gi://PangoCairo';
 import Cairo from 'gi://cairo';
 import Soup from 'gi://Soup';
-import {DOMParser} from 'xmldom';
+import DOMParser from 'gi://DOMParser';
 
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
