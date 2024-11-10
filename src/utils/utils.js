@@ -218,13 +218,8 @@ export class Utils {
         }
     }
 
-    fetchGoogleNewsRSS() {
+    fetchRSS(url) {
         return new Promise((resolve, reject) => {
-            const lang = this.app.userSettings.AZURE_SPEECH_LANGUAGE;
-            const countryLang = lang.split('-')[1];
-            this.app.log('Language: ' + lang);
-            this.app.log('Country: ' + countryLang);
-            const url = `https://news.google.com/rss?hl=${lang}&gl=${countryLang}&ceid=${countryLang}`;
             let session = new Soup.Session();
             let message = Soup.Message.new('GET', url);
 
@@ -274,9 +269,13 @@ export class Utils {
     // Exemplo de uso da função
     async readNews() {
         try {
-            const fetchNews = await this.fetchGoogleNewsRSS();
+            const lang = this.app.userSettings.AZURE_SPEECH_LANGUAGE;
+            const countryLang = lang.split('-')[1];
+            this.app.log('Language: ' + lang);
+            this.app.log('Country: ' + countryLang);
+            const url = `https://news.google.com/rss?hl=${lang}&gl=${countryLang}&ceid=${countryLang}`;
+            const fetchNews = await this.fetchRSS(url);
             const news = JSON.stringify(fetchNews, null, 2);
-            this.app.log(`News: ${news}`);
             // Use this.app.azure.tts to read all news in json
             this.app.azure.tts(news);
         } catch (error) {
