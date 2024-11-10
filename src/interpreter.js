@@ -96,11 +96,11 @@ HELP
     _readerCommandInterpreter(text) {
         let readNews = false;
         let readTopicNews = false;
-        let activation = '';
+        let activationTopic = '';
         text = text.toLowerCase();
         const words = text.split(/\s+/).slice(0, 10);
 
-        const placeNewsActivationWords = [
+        const topicNewsActivationWords = [
             _('news in'),
             _('news in the'),
             _('news on'),
@@ -127,27 +127,32 @@ HELP
         ];
 
         for (const word of words) {
-            for (const activationWord of placeNewsActivationWords) {
+            for (const activationWord of topicNewsActivationWords) {
                 if (word.includes(activationWord)) {
-                    activation = activationWord;
+                    activationTopic = activationWord;
                     readNews = true;
                     readTopicNews = true;
                     break;
                 }
+                if (readTopicNews) {
+                    break;
+                }
+            }
+            if (readTopicNews) {
+                break;
             }
             for (const activationWord of newsActivationWords) {
                 if (word.includes(activationWord)) {
-                    activation = activationWord;
                     readNews = true;
                 }
             }
         }
         if (readTopicNews) {
             // Get the 3 first words after activationWord
-            let location = text.split(activation)[1].split(' ')[0];
-            this.app.log('Searching for news...');
-            this.app.chat.editResponse(_('Searching for news...'));
-            this.app.utils.readNews(location);
+            const topic = text.split(activationTopic)[1].split(' ')[0];
+            this.app.topic('Searching for news...');
+            this.app.topict.editResponse(_('Searching for news...'));
+            this.app.utils.readNews(topic);
             return;
         }
         if (readNews) {
