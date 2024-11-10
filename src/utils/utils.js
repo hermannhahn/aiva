@@ -10,7 +10,15 @@ import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js'
 
 import {convertMD} from './md2pango.js';
 
-import FeedReader from 'feedreader';
+import Parser from 'rss-parser';
+
+// const parser = new Parser({
+//   customFields: {
+//     feed: ['foo', 'baz'],
+//     //            ^ will error because `baz` is not a key of CustomFeed
+//     item: ['bar']
+//   }
+// });
 
 /**
  * @description app utilities
@@ -221,24 +229,14 @@ export class Utils {
     }
 
     async getRssFrom() {
-        const reader = new FeedReader();
-
-        // Carrega o feed RSS
+        const parser = new Parser();
         const url = 'https://news.google.com/rss';
-        const feed = await reader.parseUrl(url);
+        const feed = await parser.parseURL(url);
+        console.log(feed.title); // feed will have a `foo` property, type as a string
 
-        // Obtém as 10 primeiras notícias do feed
-        const noticias = feed.entries.slice(0, 10);
-
-        // Armazena as notícias em um array
-        const noticiasArray = [];
-        noticias.forEach((noticia) => {
-            noticiasArray.push(noticia.title);
+        feed.items.forEach((item) => {
+            console.log(item.title + ':' + item.link); // item will have a `bar` property type as a number
         });
-
-        // Imprime o array de notícias no console
-        console.log(noticiasArray);
-        return noticiasArray;
     }
 
     removeNotificationByTitle(title) {
