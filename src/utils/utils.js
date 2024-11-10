@@ -222,11 +222,16 @@ export class Utils {
     fetchGoogleNewsRSS() {
         return new Promise((resolve, reject) => {
             const url = 'https://news.google.com/rss';
-            let session = new Soup.SessionAsync();
+            let session = new Soup.Session(); // Cria uma nova sessão
+            Soup.Session.prototype.add_feature.call(
+                session,
+                new Soup.ProxyResolverDefault(),
+            ); // Configura para lidar com proxies
+
             let message = Soup.Message.new('GET', url);
 
             session.queue_message(message, (session, response) => {
-                if (response.status_code !== 200) {
+                if (response.status_code !== Soup.Status.OK) {
                     const error = new Error(
                         `Request failed with status code ${response.status_code}`,
                     );
@@ -234,7 +239,7 @@ export class Utils {
                     return;
                 }
 
-                // Parse XML response
+                // Parse XML response usando Libxml2
                 let parserContext = Libxml2.ParserContext.new_from_string(
                     response.response_body.data,
                     GLib.Utf8,
@@ -280,12 +285,11 @@ export class Utils {
         });
     }
 
-    // Exemplo de como usar essa função para guardar as 10 primeiras notícias
+    // Exemplo de uso da função
     async readNews() {
         try {
             let news = await this.fetchGoogleNewsRSS();
             this.app.log(JSON.stringify(news, null, 2));
-            // Aqui você pode armazenar `news` em um local acessível para a extensão
         } catch (error) {
             this.app.log(`Error fetching news: ${error}`);
         }
