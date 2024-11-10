@@ -9,6 +9,7 @@ import Soup from 'gi://Soup';
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 import {convertMD} from './md2pango.js';
+import * as FeedReader from 'feed-reader';
 
 /**
  * @description app utilities
@@ -219,9 +220,11 @@ export class Utils {
     }
 
     async getRssFrom() {
+        const reader = new FeedReader();
+
         // Carrega o feed RSS
         const url = 'https://news.google.com/rss';
-        const feed = await this.reader.parseUrl(url);
+        const feed = await reader.parseUrl(url);
 
         // Obtém as 10 primeiras notícias do feed
         const noticias = feed.entries.slice(0, 10);
@@ -234,6 +237,7 @@ export class Utils {
 
         // Imprime o array de notícias no console
         console.log(noticiasArray);
+        return noticiasArray;
     }
 
     removeNotificationByTitle(title) {
