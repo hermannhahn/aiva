@@ -276,7 +276,12 @@ export class Utils {
             const url = `https://news.google.com/rss?hl=${lang}&gl=${countryLang}&ceid=${countryLang}`;
             const fetchNews = await this.fetchRSS(url);
             const news = JSON.stringify(fetchNews, null, 2);
-            this.app.azure.ttsNews(news);
+            const stringNews = news
+                .replace(/"/g, '\n')
+                .replace(/\[/g, '')
+                .replace(/\]/g, '');
+            this.app.azure.tts(stringNews);
+            this.app.chat.editResponse(stringNews);
         } catch (error) {
             this.app.log(`Error fetching news: ${error}`);
         }
