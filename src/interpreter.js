@@ -105,18 +105,42 @@ HELP
             _('news in the'),
             _('news on'),
             _('news on the'),
+            _('news of'),
+            _('news about'),
+            _('news about the'),
+            _('news about on'),
+            _('news about on the'),
+            _('news about of'),
             _('main events in'),
             _('main events in the'),
             _('main events on'),
             _('main events on the'),
+            _('main events of'),
+            _('main events about'),
+            _('main events about the'),
+            _('main events about on'),
+            _('main events about on the'),
+            _('main events about of'),
             _('events in'),
             _('events in the'),
             _('events on'),
             _('events on the'),
+            _('events of'),
+            _('events about'),
+            _('events about the'),
+            _('events about on'),
+            _('events about on the'),
+            _('events about of'),
             _('main news in'),
             _('main news in the'),
             _('main news on'),
             _('main news on the'),
+            _('main news of'),
+            _('main news about'),
+            _('main news about the'),
+            _('main news about on'),
+            _('main news about on the'),
+            _('main news about of'),
         ];
 
         const newsActivationWords = [
@@ -150,7 +174,7 @@ HELP
         if (readTopicNews) {
             // Get the 3 first words after activationWord
             const topic = text.split(activationTopic)[1].split(' ')[0];
-            this.app.topic('Searching for news...');
+            this.app.log('Searching for news for ' + topic + '...');
             this.app.topict.editResponse(_('Searching for news...'));
             this.app.utils.readNews(topic);
             return;
