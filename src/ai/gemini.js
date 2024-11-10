@@ -3,8 +3,6 @@ import GLib from 'gi://GLib';
 
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
-import * as FeedReader from 'feed-reader';
-
 /**
  * @description Google Gemini API
  * @param {object} app
@@ -22,7 +20,6 @@ export class GoogleGemini {
         this.USERNAME = app.userSettings.USERNAME;
         this.LOCATION = app.userSettings.LOCATION;
         this.GEMINI_API_KEY = app.userSettings.GEMINI_API_KEY;
-        this.reader = new FeedReader();
         this.afterTune = null;
         this.app.log('Google Gemini API loaded');
     }
