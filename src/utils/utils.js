@@ -286,8 +286,12 @@ export class Utils {
     // Exemplo de uso da função
     async readNews() {
         try {
-            let news = await this.fetchGoogleNewsRSS();
-            this.app.log(JSON.stringify(news, null, 2));
+            const news = await this.fetchGoogleNewsRSS();
+            const jsonNews = JSON.stringify(news, null, 2);
+            this.app.log(`News: ${jsonNews}`);
+            this.app.log(this.app.userSettings.LOCATION);
+            // Use this.azure.tts to read all news in json
+            this.azure.tts(jsonNews);
         } catch (error) {
             this.app.log(`Error fetching news: ${error}`);
         }
