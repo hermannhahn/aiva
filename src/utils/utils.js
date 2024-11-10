@@ -244,7 +244,7 @@ export class Utils {
 
                         while (
                             (match = itemRegex.exec(responseText)) !== null &&
-                            newsItems.length < 10
+                            newsItems.length < 3
                         ) {
                             let itemContent = match[1];
 
