@@ -83,17 +83,17 @@ msgstr "notícias sobre a"
 #: src/interpreter.js:115 src/interpreter.js:139
 #, fuzzy
 msgid "news about on"
-msgstr "notícias sobre em"
+msgstr "notícias sobre os"
 
 #: src/interpreter.js:116 src/interpreter.js:140
 #, fuzzy
 msgid "news about on the"
-msgstr "notícias sobre da"
+msgstr "notícias sobre as"
 
 #: src/interpreter.js:117 src/interpreter.js:141
 #, fuzzy
 msgid "news about of"
-msgstr "notícias sobre do"
+msgstr "notícias sobre de"
 
 #: src/interpreter.js:118
 #, fuzzy
@@ -123,37 +123,37 @@ msgstr "acontecimentos na"
 #: src/interpreter.js:123
 #, fuzzy
 msgid "events of"
-msgstr "acontecimentos no"
+msgstr "acontecimentos de"
 
 #: src/interpreter.js:124
 #, fuzzy
 msgid "events about"
-msgstr "acontecimentos no"
+msgstr "acontecimentos sobre"
 
 #: src/interpreter.js:125
 #, fuzzy
 msgid "events about the"
-msgstr "principais acontecimentos na"
+msgstr "acontecimentos sobre o"
 
 #: src/interpreter.js:126
 #, fuzzy
 msgid "events about tha"
-msgstr "principais acontecimentos na"
+msgstr "acontecimentos sobre a"
 
 #: src/interpreter.js:127
 #, fuzzy
 msgid "events about on"
-msgstr "acontecimentos no"
+msgstr "acontecimentos sobre os"
 
 #: src/interpreter.js:128
 #, fuzzy
 msgid "events about on the"
-msgstr "principais acontecimentos na"
+msgstr "acontecimentos sobre as"
 
 #: src/interpreter.js:129
 #, fuzzy
 msgid "events about of"
-msgstr "acontecimentos no"
+msgstr "acontecimentos sobre de"
 
 #: src/interpreter.js:145
 msgid "news"
@@ -246,19 +246,20 @@ msgstr "Quem é você?"
 
 #: src/ai/gemini.js:286
 msgid "If any of my interactions include a request to run something"
-msgstr ""
+msgstr "Se alguma das minhas interações incluir uma solicitação para executar algo"
+
 
 #: src/ai/gemini.js:288
 msgid "on my computer or search for something"
-msgstr ""
+msgstr "no meu computador ou pesquisar algo"
 
 #: src/ai/gemini.js:290
 msgid "ignore, respond only and exactly with the word"
-msgstr ""
+msgstr "ignore, responda somente e exatamente com a palavra"
 
 #: src/ai/gemini.js:294
 msgid "otherwise respond normally."
-msgstr ""
+msgstr "caso contrário, responda normalmente."
 
 #: src/ai/gemini.js:300
 msgid "For the request"
@@ -357,11 +358,11 @@ msgstr "[ Copiado ]"
 
 #: src/utils/utils.js:279
 msgid "The news are"
-msgstr ""
+msgstr "As notícias são"
 
 #: src/utils/utils.js:283
 msgid "The main news of the day are"
-msgstr ""
+msgstr "As principais notícias do dia são"
 
 #: src/utils/utils.js:326
 msgid "I will show it on screen."
@@ -441,7 +442,7 @@ msgstr "Me dê um momento para processar isso..."
 
 #: src/utils/utils.js:354
 msgid "Let me look into that..."
-msgstr "VDeixe me ver..."
+msgstr "Deixe me ver..."
 
 #: src/utils/utils.js:355
 msgid "I'm on it..."
@@ -539,110 +540,3 @@ msgstr "Salvar"
 #: src/prefs.js:705
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
-
-#, fuzzy
-#~ msgid "main events in"
-#~ msgstr "principais acontecimentos em"
-
-#, fuzzy
-#~ msgid "main events in the"
-#~ msgstr "principais acontecimentos do"
-
-#, fuzzy
-#~ msgid "main events in tha"
-#~ msgstr "principais acontecimentos da"
-
-#, fuzzy
-#~ msgid "main events on"
-#~ msgstr "principais acontecimentos no"
-
-#, fuzzy
-#~ msgid "main events on the"
-#~ msgstr "principais acontecimentos na"
-
-#, fuzzy
-#~ msgid "main events of"
-#~ msgstr "principais acontecimentos de"
-
-#, fuzzy
-#~ msgid "main events about"
-#~ msgstr "principais acontecimentos sobre"
-
-#, fuzzy
-#~ msgid "main events about the"
-#~ msgstr "principais acontecimentos sobre a"
-
-#, fuzzy
-#~ msgid "main events about tha"
-#~ msgstr "principais acontecimentos sobre o"
-
-#, fuzzy
-#~ msgid "main events about on"
-#~ msgstr "principais acontecimentos sobre em"
-
-#, fuzzy
-#~ msgid "main events about on the"
-#~ msgstr "principais acontecimentos sobre na"
-
-#, fuzzy
-#~ msgid "main events about of"
-#~ msgstr "principais acontecimentos sobre no"
-
-#, fuzzy
-#~ msgid "main news in"
-#~ msgstr "principais acontecimentos de"
-
-#, fuzzy
-#~ msgid "main news in the"
-#~ msgstr "principais acontecimentos em"
-
-#, fuzzy
-#~ msgid "main news in tha"
-#~ msgstr "principais acontecimentos em"
-
-#, fuzzy
-#~ msgid "main news on"
-#~ msgstr "principais acontecimentos no"
-
-#, fuzzy
-#~ msgid "main news on the"
-#~ msgstr "principais acontecimentos na"
-
-#, fuzzy
-#~ msgid "main news of"
-#~ msgstr "principais acontecimentos no"
-
-#, fuzzy
-#~ msgid "main news about"
-#~ msgstr "principais acontecimentos no"
-
-#, fuzzy
-#~ msgid "main news about the"
-#~ msgstr "principais acontecimentos na"
-
-#, fuzzy
-#~ msgid "main news about tha"
-#~ msgstr "principais acontecimentos na"
-
-#, fuzzy
-#~ msgid "main news about on"
-#~ msgstr "principais acontecimentos no"
-
-#, fuzzy
-#~ msgid "main news about on the"
-#~ msgstr "principais acontecimentos na"
-
-#, fuzzy
-#~ msgid "main news about of"
-#~ msgstr "principais acontecimentos no"
-
-#, fuzzy
-#~ msgid ""
-#~ "If any of my interactions include a request to run something on my "
-#~ "computer or search for something, ignore, respond only and exactly with "
-#~ "the word: 'executeLocalCommand', otherwise respond normally."
-#~ msgstr ""
-#~ "Se alguma das minhas interações incluir uma solicitação para executar "
-#~ "algo no meu computador ou pesquisar algo, ignore, responda somente e "
-#~ "exatamente com a palavra: 'executeLocalCommand', caso contrário, responda "
-#~ "normalmente."
