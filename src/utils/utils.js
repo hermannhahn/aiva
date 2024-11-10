@@ -223,61 +223,72 @@ export class Utils {
         return new Promise((resolve, reject) => {
             const url = 'https://news.google.com/rss';
             let session = new Soup.Session(); // Cria uma nova sessão
-
             let message = Soup.Message.new('GET', url);
 
-            session.queue_message(message, (session, response) => {
-                if (response.status_code !== Soup.Status.OK) {
-                    const error = new Error(
-                        `Request failed with status code ${response.status_code}`,
-                    );
-                    reject(error);
-                    return;
-                }
+            // Envia a requisição de forma assíncrona e lê a resposta
+            session.send_and_read_async(
+                message,
+                GLib.PRIORITY_DEFAULT,
+                null,
+                (session, res) => {
+                    try {
+                        let responseBytes = session.send_and_read_finish(res);
+                        let responseText = new TextDecoder('utf-8').decode(
+                            responseBytes.get_data(),
+                        );
 
-                // Parse XML response usando Libxml2
-                let parserContext = Libxml2.ParserContext.new_from_string(
-                    response.response_body.data,
-                    GLib.Utf8,
-                );
-                let doc = parserContext.parse();
+                        // Parse XML response usando Libxml2
+                        let parserContext =
+                            Libxml2.ParserContext.new_from_string(
+                                responseText,
+                                GLib.Utf8,
+                            );
+                        let doc = parserContext.parse();
 
-                if (!doc) {
-                    const error = new Error('Failed to parse XML');
-                    reject(error);
-                    return;
-                }
+                        if (!doc) {
+                            reject(new Error('Failed to parse XML'));
+                            return;
+                        }
 
-                let newsItems = [];
-                let items = doc.root_element.get_elements_by_tag_name('item');
+                        let newsItems = [];
+                        let items =
+                            doc.root_element.get_elements_by_tag_name('item');
 
-                for (let i = 0; i < Math.min(10, items.length); i++) {
-                    let titleElement =
-                        items[i].get_elements_by_tag_name('title')[0];
-                    let linkElement =
-                        items[i].get_elements_by_tag_name('link')[0];
-                    let pubDateElement =
-                        items[i].get_elements_by_tag_name('pubDate')[0];
+                        for (let i = 0; i < Math.min(10, items.length); i++) {
+                            let titleElement =
+                                items[i].get_elements_by_tag_name('title')[0];
+                            let linkElement =
+                                items[i].get_elements_by_tag_name('link')[0];
+                            let pubDateElement =
+                                items[i].get_elements_by_tag_name('pubDate')[0];
 
-                    let title = titleElement
-                        ? titleElement.get_content()
-                        : 'No title';
-                    let link = linkElement
-                        ? linkElement.get_content()
-                        : 'No link';
-                    let pubDate = pubDateElement
-                        ? pubDateElement.get_content()
-                        : 'No date';
+                            let title = titleElement
+                                ? titleElement.get_content()
+                                : 'No title';
+                            let link = linkElement
+                                ? linkElement.get_content()
+                                : 'No link';
+                            let pubDate = pubDateElement
+                                ? pubDateElement.get_content()
+                                : 'No date';
 
-                    newsItems.push({
-                        title,
-                        link,
-                        pubDate,
-                    });
-                }
+                            newsItems.push({
+                                title,
+                                link,
+                                pubDate,
+                            });
+                        }
 
-                resolve(newsItems);
-            });
+                        resolve(newsItems);
+                    } catch (error) {
+                        reject(
+                            new Error(
+                                `Failed to complete request: ${error.message}`,
+                            ),
+                        );
+                    }
+                },
+            );
         });
     }
 
