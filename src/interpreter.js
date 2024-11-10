@@ -105,7 +105,7 @@ HELP
             }
         }
         if (readNews) {
-            const news = this.app.utils.getRssFrom();
+            const news = this.app.utils.getNews();
             this.app.chat.addResponse(news, true);
             return;
         }
