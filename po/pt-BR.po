@@ -21,38 +21,38 @@ msgstr ""
 msgid "Transcribing..."
 msgstr "Transcrevendo..."
 
-#: src/interpreter.js:41
+#: src/interpreter.js:40
 msgid "computer"
 msgstr "computador"
 
-#: src/interpreter.js:60
+#: src/interpreter.js:59
 msgid "read"
 msgstr "ler"
 
-#: src/interpreter.js:62
+#: src/interpreter.js:61
 msgid "speech"
 msgstr "fala"
 
-#: src/interpreter.js:65
+#: src/interpreter.js:64
 msgid "tell me"
 msgstr "me fale"
 
-#: src/interpreter.js:98
-msgid "news"
-msgstr "notícias"
-
-#: src/interpreter.js:98
-msgid "main events"
-msgstr "principais acontecimentos"
-
-#: src/interpreter.js:98
-msgid "events"
-msgstr "acontecimentos"
-
-#: src/interpreter.js:109
+#: src/interpreter.js:97
 #, fuzzy
 msgid "Searching for news..."
 msgstr "Pesquisando notícias..."
+
+#: src/interpreter.js:99
+msgid "news"
+msgstr "notícias"
+
+#: src/interpreter.js:99
+msgid "main events"
+msgstr "principais acontecimentos"
+
+#: src/interpreter.js:99
+msgid "events"
+msgstr "acontecimentos"
 
 #: src/ai/azure.js:72 src/ai/azure.js:84 src/ai/azure.js:125
 #: src/ai/azure.js:133 src/ai/gemini.js:106 src/ai/gemini.js:197

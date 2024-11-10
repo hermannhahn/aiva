@@ -11,7 +11,6 @@ export class Interpreter {
         this.app.ui.searchEntry.clutter_text.reactive = false;
         this.app.log('Question: ' + question);
         this.app.log('Processing question...');
-        this.app.chat.addResponse('...');
         if (this._isCommand(question)) {
             this.app.log('Command detected.');
             this._commandInterpreter(question);
@@ -89,11 +88,13 @@ HELP
     }
 
     voiceCommandInterpreter(text) {
+        this.app.chat.addResponse('...');
         let request = this.app.gemini.commandRequest(text);
         this.app.gemini.runCommand(request);
     }
 
     _readerCommandInterpreter(text) {
+        this.app.chat.addResponse(_('Searching for news...'), true);
         let readNews = false;
         const newsActivationWords = [_('news'), _('main events'), _('events')];
         const words = text.split(/\s+/).slice(0, 10);
@@ -106,7 +107,6 @@ HELP
         }
         if (readNews) {
             this.app.log('Reading news...');
-            this.app.chat.addResponse(_('Searching for news...'), true);
             this.app.utils.readNews();
             return;
         }
