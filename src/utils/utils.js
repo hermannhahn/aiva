@@ -5,7 +5,7 @@ import Pango from 'gi://Pango';
 import PangoCairo from 'gi://PangoCairo';
 import Cairo from 'gi://cairo';
 import Soup from 'gi://Soup';
-import DOMParser from 'gi://DOMParser';
+import Libxml2 from 'gi://libxml2';
 
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
@@ -235,19 +235,38 @@ export class Utils {
                 }
 
                 // Parse XML response
-                let xmlParser = new DOMParser();
-                let doc = xmlParser.parseFromString(
+                let parserContext = Libxml2.ParserContext.new_from_string(
                     response.response_body.data,
-                    'text/xml',
+                    GLib.Utf8,
                 );
+                let doc = parserContext.parse();
+
+                if (!doc) {
+                    const error = new Error('Failed to parse XML');
+                    reject(error);
+                    return;
+                }
 
                 let newsItems = [];
-                let items = doc.querySelectorAll('item');
+                let items = doc.root_element.get_elements_by_tag_name('item');
 
                 for (let i = 0; i < Math.min(10, items.length); i++) {
-                    let title = items[i].querySelector('title').textContent;
-                    let link = items[i].querySelector('link').textContent;
-                    let pubDate = items[i].querySelector('pubDate').textContent;
+                    let titleElement =
+                        items[i].get_elements_by_tag_name('title')[0];
+                    let linkElement =
+                        items[i].get_elements_by_tag_name('link')[0];
+                    let pubDateElement =
+                        items[i].get_elements_by_tag_name('pubDate')[0];
+
+                    let title = titleElement
+                        ? titleElement.get_content()
+                        : 'No title';
+                    let link = linkElement
+                        ? linkElement.get_content()
+                        : 'No link';
+                    let pubDate = pubDateElement
+                        ? pubDateElement.get_content()
+                        : 'No date';
 
                     newsItems.push({
                         title,
