@@ -105,8 +105,7 @@ HELP
             }
         }
         if (readNews) {
-            const news = this.app.utils.getNews();
-            this.app.chat.addResponse(news, true);
+            this.app.utils.readNews();
             return;
         }
         this.app.log('Sending question to API...');
