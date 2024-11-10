@@ -52,7 +52,7 @@ msgstr "acontecimentos"
 #: src/interpreter.js:109
 #, fuzzy
 msgid "Searching for news..."
-msgstr "Pesquisando travessia de balsa de santos..."
+msgstr "Pesquisando notícias..."
 
 #: src/ai/azure.js:72 src/ai/azure.js:84 src/ai/azure.js:125
 #: src/ai/azure.js:133 src/ai/gemini.js:106 src/ai/gemini.js:197
