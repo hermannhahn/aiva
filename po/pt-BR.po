@@ -40,80 +40,80 @@ msgstr "me fale"
 #: src/interpreter.js:104
 #, fuzzy
 msgid "news in"
-msgstr "notícias"
+msgstr "notícias de"
 
 #: src/interpreter.js:105
 msgid "news in the"
-msgstr ""
+msgstr "notícias em"
 
 #: src/interpreter.js:106
 #, fuzzy
 msgid "news on"
-msgstr "notícias"
+msgstr "notícias no"
 
 #: src/interpreter.js:107
 msgid "news on the"
-msgstr ""
+msgstr "notícias na"
 
 #: src/interpreter.js:108
 #, fuzzy
 msgid "main events in"
-msgstr "principais acontecimentos"
+msgstr "principais acontecimentos de"
 
 #: src/interpreter.js:109
 #, fuzzy
 msgid "main events in the"
-msgstr "principais acontecimentos"
+msgstr "principais acontecimentos em"
 
 #: src/interpreter.js:110
 #, fuzzy
 msgid "main events on"
-msgstr "principais acontecimentos"
+msgstr "principais acontecimentos no"
 
 #: src/interpreter.js:111
 #, fuzzy
 msgid "main events on the"
-msgstr "principais acontecimentos"
+msgstr "principais acontecimentos na"
 
 #: src/interpreter.js:112
 #, fuzzy
 msgid "events in"
-msgstr "acontecimentos"
+msgstr "acontecimentos de"
 
 #: src/interpreter.js:113
 #, fuzzy
 msgid "events in the"
-msgstr "principais acontecimentos"
+msgstr "principais acontecimentos em"
 
 #: src/interpreter.js:114
 #, fuzzy
 msgid "events on"
-msgstr "acontecimentos"
+msgstr "acontecimentos no"
 
 #: src/interpreter.js:115
 #, fuzzy
 msgid "events on the"
-msgstr "principais acontecimentos"
+msgstr "principais acontecimentos na"
 
 #: src/interpreter.js:116
 #, fuzzy
 msgid "main news in"
-msgstr "principais acontecimentos"
+msgstr "principais acontecimentos de"
 
 #: src/interpreter.js:117
 #, fuzzy
 msgid "main news in the"
-msgstr "principais acontecimentos"
+msgstr "principais acontecimentos em"
 
 #: src/interpreter.js:118
 #, fuzzy
 msgid "main news on"
-msgstr "principais acontecimentos"
+msgstr "principais acontecimentos no"
 
 #: src/interpreter.js:119
 #, fuzzy
 msgid "main news on the"
-msgstr "principais acontecimentos"
+msgstr "principais acontecimentos na"
 
 #: src/interpreter.js:123
 msgid "news"
