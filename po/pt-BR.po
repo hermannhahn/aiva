@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-10 18:50-0300\n"
+"POT-Creation-Date: 2024-11-10 18:55-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -21,161 +21,9 @@ msgstr ""
 msgid "Transcribing..."
 msgstr "Transcrevendo..."
 
-#: src/interpreter.js:43
+#: src/interpreter.js:40
 msgid "computer"
 msgstr "computador"
-
-#: src/interpreter.js:62
-msgid "read"
-msgstr "ler"
-
-#: src/interpreter.js:64
-msgid "speech"
-msgstr "fala"
-
-#: src/interpreter.js:67
-msgid "tell me"
-msgstr "me fale"
-
-#: src/interpreter.js:106 src/interpreter.js:130
-#, fuzzy
-msgid "news in"
-msgstr "notícias em"
-
-#: src/interpreter.js:107 src/interpreter.js:131
-msgid "news in the"
-msgstr "notícias do"
-
-#: src/interpreter.js:108 src/interpreter.js:132
-#, fuzzy
-msgid "news in tha"
-msgstr "notícias da"
-
-#: src/interpreter.js:109 src/interpreter.js:133
-#, fuzzy
-msgid "news on"
-msgstr "notícias no"
-
-#: src/interpreter.js:110 src/interpreter.js:134
-msgid "news on the"
-msgstr "notícias na"
-
-#: src/interpreter.js:111 src/interpreter.js:135
-#, fuzzy
-msgid "news of"
-msgstr "notícias de"
-
-#: src/interpreter.js:112 src/interpreter.js:136
-#, fuzzy
-msgid "news about"
-msgstr "notícias sobre"
-
-#: src/interpreter.js:113 src/interpreter.js:137
-#, fuzzy
-msgid "news about the"
-msgstr "notícias sobre o"
-
-#: src/interpreter.js:114 src/interpreter.js:138
-#, fuzzy
-msgid "news about tha"
-msgstr "notícias sobre a"
-
-#: src/interpreter.js:115 src/interpreter.js:139
-#, fuzzy
-msgid "news about on"
-msgstr "notícias sobre os"
-
-#: src/interpreter.js:116 src/interpreter.js:140
-#, fuzzy
-msgid "news about on the"
-msgstr "notícias sobre as"
-
-#: src/interpreter.js:117 src/interpreter.js:141
-#, fuzzy
-msgid "news about of"
-msgstr "notícias sobre de"
-
-#: src/interpreter.js:118
-#, fuzzy
-msgid "events in"
-msgstr "acontecimentos em"
-
-#: src/interpreter.js:119
-#, fuzzy
-msgid "events in the"
-msgstr "acontecimentos do"
-
-#: src/interpreter.js:120
-#, fuzzy
-msgid "events in tha"
-msgstr "acontecimentos da"
-
-#: src/interpreter.js:121
-#, fuzzy
-msgid "events on"
-msgstr "acontecimentos no"
-
-#: src/interpreter.js:122
-#, fuzzy
-msgid "events on the"
-msgstr "acontecimentos na"
-
-#: src/interpreter.js:123
-#, fuzzy
-msgid "events of"
-msgstr "acontecimentos de"
-
-#: src/interpreter.js:124
-#, fuzzy
-msgid "events about"
-msgstr "acontecimentos sobre"
-
-#: src/interpreter.js:125
-#, fuzzy
-msgid "events about the"
-msgstr "acontecimentos sobre o"
-
-#: src/interpreter.js:126
-#, fuzzy
-msgid "events about tha"
-msgstr "acontecimentos sobre a"
-
-#: src/interpreter.js:127
-#, fuzzy
-msgid "events about on"
-msgstr "acontecimentos sobre os"
-
-#: src/interpreter.js:128
-#, fuzzy
-msgid "events about on the"
-msgstr "acontecimentos sobre as"
-
-#: src/interpreter.js:129
-#, fuzzy
-msgid "events about of"
-msgstr "acontecimentos sobre de"
-
-#: src/interpreter.js:145
-msgid "news"
-msgstr "notícias"
-
-#: src/interpreter.js:146
-msgid "main events"
-msgstr "principais acontecimentos"
-
-#: src/interpreter.js:147
-msgid "events"
-msgstr "acontecimentos"
-
-#: src/interpreter.js:148
-#, fuzzy
-msgid "main news"
-msgstr "principais acontecimentos"
-
-#: src/interpreter.js:163 src/interpreter.js:173
-#, fuzzy
-msgid "Searching for news..."
-msgstr "Pesquisando noticias..."
 
 #: src/ai/azure.js:72 src/ai/azure.js:84 src/ai/azure.js:125
 #: src/ai/azure.js:133 src/ai/gemini.js:106 src/ai/gemini.js:197
@@ -540,3 +388,123 @@ msgstr "Salvar"
 #: src/prefs.js:705
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
+
+#~ msgid "read"
+#~ msgstr "ler"
+
+#~ msgid "speech"
+#~ msgstr "fala"
+
+#~ msgid "tell me"
+#~ msgstr "me fale"
+
+#, fuzzy
+#~ msgid "news in"
+#~ msgstr "notícias em"
+
+#~ msgid "news in the"
+#~ msgstr "notícias do"
+
+#, fuzzy
+#~ msgid "news in tha"
+#~ msgstr "notícias da"
+
+#, fuzzy
+#~ msgid "news on"
+#~ msgstr "notícias no"
+
+#~ msgid "news on the"
+#~ msgstr "notícias na"
+
+#, fuzzy
+#~ msgid "news of"
+#~ msgstr "notícias de"
+
+#, fuzzy
+#~ msgid "news about"
+#~ msgstr "notícias sobre"
+
+#, fuzzy
+#~ msgid "news about the"
+#~ msgstr "notícias sobre o"
+
+#, fuzzy
+#~ msgid "news about tha"
+#~ msgstr "notícias sobre a"
+
+#, fuzzy
+#~ msgid "news about on"
+#~ msgstr "notícias sobre os"
+
+#, fuzzy
+#~ msgid "news about on the"
+#~ msgstr "notícias sobre as"
+
+#, fuzzy
+#~ msgid "news about of"
+#~ msgstr "notícias sobre de"
+
+#, fuzzy
+#~ msgid "events in"
+#~ msgstr "acontecimentos em"
+
+#, fuzzy
+#~ msgid "events in the"
+#~ msgstr "acontecimentos do"
+
+#, fuzzy
+#~ msgid "events in tha"
+#~ msgstr "acontecimentos da"
+
+#, fuzzy
+#~ msgid "events on"
+#~ msgstr "acontecimentos no"
+
+#, fuzzy
+#~ msgid "events on the"
+#~ msgstr "acontecimentos na"
+
+#, fuzzy
+#~ msgid "events of"
+#~ msgstr "acontecimentos de"
+
+#, fuzzy
+#~ msgid "events about"
+#~ msgstr "acontecimentos sobre"
+
+#, fuzzy
+#~ msgid "events about the"
+#~ msgstr "acontecimentos sobre o"
+
+#, fuzzy
+#~ msgid "events about tha"
+#~ msgstr "acontecimentos sobre a"
+
+#, fuzzy
+#~ msgid "events about on"
+#~ msgstr "acontecimentos sobre os"
+
+#, fuzzy
+#~ msgid "events about on the"
+#~ msgstr "acontecimentos sobre as"
+
+#, fuzzy
+#~ msgid "events about of"
+#~ msgstr "acontecimentos sobre de"
+
+#~ msgid "news"
+#~ msgstr "notícias"
+
+#~ msgid "main events"
+#~ msgstr "principais acontecimentos"
+
+#~ msgid "events"
+#~ msgstr "acontecimentos"
+
+#, fuzzy
+#~ msgid "main news"
+#~ msgstr "principais acontecimentos"
+
+#, fuzzy
+#~ msgid "Searching for news..."
+#~ msgstr "Pesquisando noticias..."
