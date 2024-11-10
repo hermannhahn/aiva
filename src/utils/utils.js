@@ -220,8 +220,9 @@ export class Utils {
 
     fetchGoogleNewsRSS() {
         return new Promise((resolve, reject) => {
-            const url =
-                'https://news.google.com/rss?hl=pt-BR&gl=BR&ceid=BR:pt-419';
+            const lang = this.app.userSettings.AZURE_SPEECH_LANGUAGE;
+            const countryLang = lang.split('-')[1];
+            const url = `https://news.google.com/rss?hl=${lang}&gl=${countryLang}&ceid=${countryLang}:pt-419`;
             let session = new Soup.Session();
             let message = Soup.Message.new('GET', url);
 
@@ -244,7 +245,7 @@ export class Utils {
 
                         while (
                             (match = itemRegex.exec(responseText)) !== null &&
-                            newsItems.length < 3
+                            newsItems.length < 10
                         ) {
                             let itemContent = match[1];
 
