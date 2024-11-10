@@ -152,21 +152,12 @@ HELP
             _('main news'),
         ];
 
-        for (const word of words) {
-            for (const activationWord of topicNewsActivationWords) {
-                if (word.includes(activationWord)) {
-                    activationTopic = activationWord;
-                    readNews = true;
-                    readTopicNews = true;
-                    break;
-                }
-            }
-            if (!readTopicNews) {
-                for (const activationWord of newsActivationWords) {
-                    if (word.includes(activationWord)) {
-                        readNews = true;
-                    }
-                }
+        for (const activationWord of topicNewsActivationWords) {
+            if (text.includes(activationWord)) {
+                activationTopic = activationWord;
+                readNews = true;
+                readTopicNews = true;
+                break;
             }
         }
         if (readTopicNews) {
@@ -179,6 +170,17 @@ HELP
                 return false; // Para garantir que o timeout execute apenas uma vez
             });
             return;
+        }
+
+        if (!readTopicNews) {
+            for (const word of words) {
+                for (const activationWord of newsActivationWords) {
+                    if (word.includes(activationWord)) {
+                        readNews = true;
+                        break;
+                    }
+                }
+            }
         }
         if (readNews) {
             this.app.log('Searching for news...');
