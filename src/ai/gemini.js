@@ -300,6 +300,7 @@ ${_('Examples of response')}:
 ${_('Request')}: "${_('Generate a command line that search for santos ferry crossing')}"
 ${_('JSON Response')}: {success: true, response: "${_('Searching for santos boat crossing...')}", commandline: "firefox https://www.google.com/search?q=${_('boat+crossing+santos')}"}
 `;
+        this.app.log('Command Request: ' + response);
         return response;
     }
 
