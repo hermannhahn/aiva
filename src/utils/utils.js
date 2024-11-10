@@ -284,10 +284,10 @@ export class Utils {
     async getNews() {
         try {
             let news = await this.fetchGoogleNewsRSS();
-            log(JSON.stringify(news, null, 2));
+            this.app.log(JSON.stringify(news, null, 2));
             // Aqui você pode armazenar `news` em um local acessível para a extensão
         } catch (error) {
-            log(`Error fetching news: ${error}`);
+            this.app.log(`Error fetching news: ${error}`);
         }
     }
 
