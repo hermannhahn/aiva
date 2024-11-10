@@ -58,32 +58,32 @@ msgstr "notícias na"
 #: src/interpreter.js:110
 #, fuzzy
 msgid "news of"
-msgstr "notícias no"
+msgstr "notícias do"
 
 #: src/interpreter.js:111
 #, fuzzy
 msgid "news about"
-msgstr "notícias no"
+msgstr "notícias sobre"
 
 #: src/interpreter.js:112
 #, fuzzy
 msgid "news about the"
-msgstr "notícias na"
+msgstr "notícias sobre o"
 
 #: src/interpreter.js:113
 #, fuzzy
 msgid "news about on"
-msgstr "notícias no"
+msgstr "notícias sobre a"
 
 #: src/interpreter.js:114
 #, fuzzy
 msgid "news about on the"
-msgstr "notícias na"
+msgstr "notícias da"
 
 #: src/interpreter.js:115
 #, fuzzy
 msgid "news about of"
-msgstr "notícias no"
+msgstr "notícias sobre"
 
 #: src/interpreter.js:116
 #, fuzzy
