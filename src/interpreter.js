@@ -105,6 +105,8 @@ HELP
             }
         }
         if (readNews) {
+            this.app.log('Reading news...');
+            this.app.chat.addResponse(_('Searching for news...'), true);
             this.app.utils.readNews();
             return;
         }
