@@ -95,31 +95,62 @@ HELP
 
     _readerCommandInterpreter(text) {
         let readNews = false;
+        let readTopicNews = false;
+        let activation = '';
+        text = text.toLowerCase();
+        const words = text.split(/\s+/).slice(0, 10);
+
+        const placeNewsActivationWords = [
+            _('news in'),
+            _('news in the'),
+            _('news on'),
+            _('news on the'),
+            _('main events in'),
+            _('main events in the'),
+            _('main events on'),
+            _('main events on the'),
+            _('events in'),
+            _('events in the'),
+            _('events on'),
+            _('events on the'),
+            _('main news in'),
+            _('main news in the'),
+            _('main news on'),
+            _('main news on the'),
+        ];
+
         const newsActivationWords = [
             _('news'),
             _('main events'),
             _('events'),
             _('main news'),
         ];
-        const words = text.split(/\s+/).slice(0, 10);
+
         for (const word of words) {
+            for (const activationWord of placeNewsActivationWords) {
+                if (word.includes(activationWord)) {
+                    activation = activationWord;
+                    readNews = true;
+                    readTopicNews = true;
+                    break;
+                }
+            }
             for (const activationWord of newsActivationWords) {
                 if (word.includes(activationWord)) {
+                    activation = activationWord;
                     readNews = true;
                 }
             }
         }
+        if (readTopicNews) {
+            // Get the 3 first words after activationWord
+            let location = text.split(activation)[1].split(' ')[0];
+            this.app.log('Searching for news...');
+            this.app.chat.editResponse(_('Searching for news...'));
+            this.app.utils.readNews(location);
+            return;
+        }
         if (readNews) {
-            const placeNewsActivationWords = [
-                _('news in'),
-                _('news in the'),
-                _('news on'),
-                _('news on the'),
-                _('main events in'),
-                _('main events in the'),
-                _('main events on'),
-                _('main events on the'),
-            ];
             this.app.log('Searching for news...');
             this.app.chat.editResponse(_('Searching for news...'));
             this.app.utils.readNews();

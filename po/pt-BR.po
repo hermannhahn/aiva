@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-10 14:25-0300\n"
+"POT-Creation-Date: 2024-11-10 15:36-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -37,62 +37,102 @@ msgstr "fala"
 msgid "tell me"
 msgstr "me fale"
 
-#: src/interpreter.js:99
-msgid "news"
-msgstr "notícias"
-
-#: src/interpreter.js:100
-msgid "main events"
-msgstr "principais acontecimentos"
-
-#: src/interpreter.js:101
-msgid "events"
-msgstr "acontecimentos"
-
-#: src/interpreter.js:102
-#, fuzzy
-msgid "main news"
-msgstr "principais acontecimentos"
-
-#: src/interpreter.js:114
+#: src/interpreter.js:104
 #, fuzzy
 msgid "news in"
 msgstr "notícias"
 
-#: src/interpreter.js:115
+#: src/interpreter.js:105
 msgid "news in the"
 msgstr ""
 
-#: src/interpreter.js:116
+#: src/interpreter.js:106
 #, fuzzy
 msgid "news on"
 msgstr "notícias"
 
-#: src/interpreter.js:117
+#: src/interpreter.js:107
 msgid "news on the"
 msgstr ""
 
-#: src/interpreter.js:118
+#: src/interpreter.js:108
 #, fuzzy
 msgid "main events in"
 msgstr "principais acontecimentos"
 
-#: src/interpreter.js:119
+#: src/interpreter.js:109
 #, fuzzy
 msgid "main events in the"
 msgstr "principais acontecimentos"
 
-#: src/interpreter.js:120
+#: src/interpreter.js:110
 #, fuzzy
 msgid "main events on"
 msgstr "principais acontecimentos"
 
-#: src/interpreter.js:121
+#: src/interpreter.js:111
 #, fuzzy
 msgid "main events on the"
 msgstr "principais acontecimentos"
 
+#: src/interpreter.js:112
+#, fuzzy
+msgid "events in"
+msgstr "acontecimentos"
+
+#: src/interpreter.js:113
+#, fuzzy
+msgid "events in the"
+msgstr "principais acontecimentos"
+
+#: src/interpreter.js:114
+#, fuzzy
+msgid "events on"
+msgstr "acontecimentos"
+
+#: src/interpreter.js:115
+#, fuzzy
+msgid "events on the"
+msgstr "principais acontecimentos"
+
+#: src/interpreter.js:116
+#, fuzzy
+msgid "main news in"
+msgstr "principais acontecimentos"
+
+#: src/interpreter.js:117
+#, fuzzy
+msgid "main news in the"
+msgstr "principais acontecimentos"
+
+#: src/interpreter.js:118
+#, fuzzy
+msgid "main news on"
+msgstr "principais acontecimentos"
+
+#: src/interpreter.js:119
+#, fuzzy
+msgid "main news on the"
+msgstr "principais acontecimentos"
+
+#: src/interpreter.js:123
+msgid "news"
+msgstr "notícias"
+
 #: src/interpreter.js:124
+msgid "main events"
+msgstr "principais acontecimentos"
+
+#: src/interpreter.js:125
+msgid "events"
+msgstr "acontecimentos"
+
+#: src/interpreter.js:126
+#, fuzzy
+msgid "main news"
+msgstr "principais acontecimentos"
+
+#: src/interpreter.js:149 src/interpreter.js:155
 #, fuzzy
 msgid "Searching for news..."
 msgstr "Pesquisando noticias..."
