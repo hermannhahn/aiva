@@ -31,23 +31,23 @@ msgstr "ler"
 
 #: src/interpreter.js:62
 msgid "speech"
-msgstr ""
+msgstr "fala"
 
 #: src/interpreter.js:65
 msgid "tell me"
-msgstr ""
+msgstr "me fale"
 
 #: src/interpreter.js:98
 msgid "news"
-msgstr ""
+msgstr "notícias"
 
 #: src/interpreter.js:98
 msgid "main events"
-msgstr ""
+msgstr "principais acontecimentos"
 
 #: src/interpreter.js:98
 msgid "events"
-msgstr ""
+msgstr "acontecimentos"
 
 #: src/ai/azure.js:72 src/ai/azure.js:84 src/ai/azure.js:125
 #: src/ai/azure.js:133 src/ai/gemini.js:109 src/ai/gemini.js:200
