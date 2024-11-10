@@ -397,7 +397,7 @@ export class Utils {
             .replace(/\[blue\](.*?)\[\/blue\]/g, '');
 
         // If tts is more then 100 characters, change tts text
-        if (tts.length > 1000) {
+        if (tts.length > 2000) {
             tts = this.randomPhraseToShowOnScreen();
         }
 
