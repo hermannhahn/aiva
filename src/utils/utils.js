@@ -251,23 +251,10 @@ export class Utils {
                             let titleMatch = /<title>(.*?)<\/title>/.exec(
                                 itemContent,
                             );
-                            let linkMatch = /<link>(.*?)<\/link>/.exec(
-                                itemContent,
-                            );
-                            let pubDateMatch = /<pubDate>(.*?)<\/pubDate>/.exec(
-                                itemContent,
-                            );
-
                             let title = titleMatch ? titleMatch[1] : 'No title';
-                            let link = linkMatch ? linkMatch[1] : 'No link';
-                            let pubDate = pubDateMatch
-                                ? pubDateMatch[1]
-                                : 'No date';
 
                             newsItems.push({
                                 title,
-                                link,
-                                pubDate,
                             });
                         }
 
@@ -289,11 +276,7 @@ export class Utils {
         try {
             const fetchNews = await this.fetchGoogleNewsRSS();
             const jsonNews = JSON.stringify(fetchNews, null, 2);
-            const parsedNews = JSON.parse(jsonNews);
-            const news = [];
-            for (let i = 0; i < parsedNews.length; i++) {
-                news.push(parsedNews[i].title);
-            }
+            const news = JSON.parse(jsonNews);
 
             this.app.log(`News: ${news}`);
             // Use this.app.azure.tts to read all news in json
