@@ -160,16 +160,12 @@ HELP
                     readTopicNews = true;
                     break;
                 }
-                if (readTopicNews) {
-                    break;
-                }
             }
-            if (readTopicNews) {
-                break;
-            }
-            for (const activationWord of newsActivationWords) {
-                if (word.includes(activationWord)) {
-                    readNews = true;
+            if (!readTopicNews) {
+                for (const activationWord of newsActivationWords) {
+                    if (word.includes(activationWord)) {
+                        readNews = true;
+                    }
                 }
             }
         }
