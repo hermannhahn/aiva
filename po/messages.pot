@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-09 22:41-0300\n"
+"POT-Creation-Date: 2024-11-09 22:43-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,31 +21,31 @@ msgstr ""
 msgid "Transcribing..."
 msgstr ""
 
-#: src/interpreter.js:43
+#: src/interpreter.js:41
 msgid "computer"
 msgstr ""
 
-#: src/interpreter.js:62
+#: src/interpreter.js:60
 msgid "read"
 msgstr ""
 
-#: src/interpreter.js:64
+#: src/interpreter.js:62
 msgid "speech"
 msgstr ""
 
-#: src/interpreter.js:67
+#: src/interpreter.js:65
 msgid "tell me"
 msgstr ""
 
-#: src/interpreter.js:100
+#: src/interpreter.js:98
 msgid "news"
 msgstr ""
 
-#: src/interpreter.js:100
+#: src/interpreter.js:98
 msgid "main events"
 msgstr ""
 
-#: src/interpreter.js:100
+#: src/interpreter.js:98
 msgid "events"
 msgstr ""
 

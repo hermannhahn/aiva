@@ -1,12 +1,10 @@
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
-import * as FeedReader from 'feed-reader';
 
 export class Interpreter {
     constructor(app) {
         this.app = app;
         this.app.log('Interpreter loaded.');
         this.pids = [];
-        this.reader = new FeedReader();
     }
 
     proccess(question) {
