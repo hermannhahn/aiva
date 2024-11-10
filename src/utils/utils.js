@@ -289,10 +289,12 @@ export class Utils {
         try {
             const fetchNews = await this.fetchGoogleNewsRSS();
             const jsonNews = JSON.stringify(fetchNews, null, 2);
+            const parsedNews = JSON.parse(jsonNews);
             const news = [];
-            for (const item of jsonNews) {
-                news.push(item.title);
+            for (let i = 0; i < parsedNews.length; i++) {
+                news.push(parsedNews[i].title);
             }
+
             this.app.log(`News: ${news}`);
             // Use this.app.azure.tts to read all news in json
             this.app.azure.tts(news);
