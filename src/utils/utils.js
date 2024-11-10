@@ -5,20 +5,11 @@ import Pango from 'gi://Pango';
 import PangoCairo from 'gi://PangoCairo';
 import Cairo from 'gi://cairo';
 import Soup from 'gi://Soup';
+import {DOMParser} from 'xmldom';
 
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 import {convertMD} from './md2pango.js';
-
-import Parser from 'rss-parser';
-
-// const parser = new Parser({
-//   customFields: {
-//     feed: ['foo', 'baz'],
-//     //            ^ will error because `baz` is not a key of CustomFeed
-//     item: ['bar']
-//   }
-// });
 
 /**
  * @description app utilities
@@ -228,15 +219,57 @@ export class Utils {
         }
     }
 
-    async getRssFrom() {
-        const parser = new Parser();
-        const url = 'https://news.google.com/rss';
-        const feed = await parser.parseURL(url);
-        console.log(feed.title); // feed will have a `foo` property, type as a string
+    fetchGoogleNewsRSS() {
+        return new Promise((resolve, reject) => {
+            const url = 'https://news.google.com/rss';
+            let session = new Soup.SessionAsync();
+            let message = Soup.Message.new('GET', url);
 
-        feed.items.forEach((item) => {
-            console.log(item.title + ':' + item.link); // item will have a `bar` property type as a number
+            session.queue_message(message, (session, response) => {
+                if (response.status_code !== 200) {
+                    const error = new Error(
+                        `Request failed with status code ${response.status_code}`,
+                    );
+                    reject(error);
+                    return;
+                }
+
+                // Parse XML response
+                let xmlParser = new DOMParser();
+                let doc = xmlParser.parseFromString(
+                    response.response_body.data,
+                    'text/xml',
+                );
+
+                let newsItems = [];
+                let items = doc.querySelectorAll('item');
+
+                for (let i = 0; i < Math.min(10, items.length); i++) {
+                    let title = items[i].querySelector('title').textContent;
+                    let link = items[i].querySelector('link').textContent;
+                    let pubDate = items[i].querySelector('pubDate').textContent;
+
+                    newsItems.push({
+                        title,
+                        link,
+                        pubDate,
+                    });
+                }
+
+                resolve(newsItems);
+            });
         });
+    }
+
+    // Exemplo de como usar essa função para guardar as 10 primeiras notícias
+    async getNews() {
+        try {
+            let news = await this.fetchGoogleNewsRSS();
+            log(JSON.stringify(news, null, 2));
+            // Aqui você pode armazenar `news` em um local acessível para a extensão
+        } catch (error) {
+            log(`Error fetching news: ${error}`);
+        }
     }
 
     removeNotificationByTitle(title) {
