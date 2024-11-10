@@ -222,6 +222,8 @@ export class Utils {
         return new Promise((resolve, reject) => {
             const lang = this.app.userSettings.AZURE_SPEECH_LANGUAGE;
             const countryLang = lang.split('-')[1];
+            this.app.log('Language: ' + lang);
+            this.app.log('Country: ' + countryLang);
             const url = `https://news.google.com/rss?hl=${lang}&gl=${countryLang}&ceid=${countryLang}`;
             let session = new Soup.Session();
             let message = Soup.Message.new('GET', url);
