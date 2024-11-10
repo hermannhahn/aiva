@@ -40,16 +40,16 @@ msgstr "me fale"
 #: src/interpreter.js:106
 #, fuzzy
 msgid "news in"
-msgstr "notícias de"
+msgstr "notícias em"
 
 #: src/interpreter.js:107
 msgid "news in the"
-msgstr "notícias em"
+msgstr "notícias do"
 
 #: src/interpreter.js:108
 #, fuzzy
 msgid "news in tha"
-msgstr "notícias em"
+msgstr "notícias da"
 
 #: src/interpreter.js:109
 #, fuzzy
@@ -63,7 +63,7 @@ msgstr "notícias na"
 #: src/interpreter.js:111
 #, fuzzy
 msgid "news of"
-msgstr "notícias do"
+msgstr "notícias de"
 
 #: src/interpreter.js:112
 #, fuzzy
