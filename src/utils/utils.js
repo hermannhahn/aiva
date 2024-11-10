@@ -291,8 +291,8 @@ export class Utils {
             const jsonNews = JSON.stringify(news, null, 2);
             this.app.log(`News: ${jsonNews}`);
             this.app.log(this.app.userSettings.LOCATION);
-            // Use this.azure.tts to read all news in json
-            this.azure.tts(jsonNews);
+            // Use this.app.azure.tts to read all news in json
+            this.app.azure.tts(jsonNews);
         } catch (error) {
             this.app.log(`Error fetching news: ${error}`);
         }
