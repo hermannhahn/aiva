@@ -59,6 +59,7 @@ const Aiva = GObject.registerClass(
             // extension settings
             const {settings} = this.extension;
             this._shortcutBinding = null;
+            this._spamProtection = 5000;
             // extension directory
             const EXT_DIR = GLib.build_filenamev([
                 GLib.get_home_dir(),
@@ -254,19 +255,25 @@ export default class AivaExtension extends Extension {
 
     _onKeyPress(display, event) {
         const symbol = event.get_key_symbol();
-        let wait = 0;
-        if (symbol === Clutter.KEY_F12 && wait === 0) {
-            wait = 2000;
+        if (symbol === Clutter.KEY_F12 && this._aiva._spamProtection === 0) {
+            this._aiva._spamProtection = 5000;
             // Verifica se o menu está aberto e alterna o estado
-            GLib.timeout_add(GLib.PRIORITY_DEFAULT, wait, () => {
-                wait = 0;
-                if (this._aiva.audio.isRecording) {
-                    this._aiva.audio.stopRecord();
-                } else {
-                    this._aiva.audio.record();
-                }
-                return Clutter.EVENT_STOP; // Impede a propagação do evento
-            });
+            GLib.timeout_add(
+                GLib.PRIORITY_DEFAULT,
+                this._aiva._spamProtection,
+                () => {
+                    if (this._aiva.audio.isRecording) {
+                        this._aiva.audio.stopRecord();
+                        GLib.timeout_add(GLib.PRIORITY_DEFAULT, 5000, () => {
+                            this._aiva._spamProtection = 0;
+                        });
+                    } else {
+                        this._aiva.audio.record();
+                    }
+                    return Clutter.EVENT_STOP; // Impede a propagação do evento
+                },
+            );
+            return Clutter.EVENT_STOP; // Impede a propagação do evento
         }
         return Clutter.EVENT_PROPAGATE;
     }
