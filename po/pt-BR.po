@@ -27,7 +27,7 @@ msgstr "computador"
 
 #: src/interpreter.js:62
 msgid "read this text"
-msgstr "leia este texto"
+msgstr "leia esse texto"
 
 #: src/interpreter.js:63
 msgid "read the text"
