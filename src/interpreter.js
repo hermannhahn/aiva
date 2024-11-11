@@ -113,8 +113,5 @@ HELP
         if (command === 'read') {
             this.app.azure.tss(this.app.utils.getClipboardText());
         }
-
-        let request = this.app.gemini.commandRequest(text);
-        this.app.gemini.runCommand(request);
     }
 }
