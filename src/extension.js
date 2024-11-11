@@ -196,6 +196,7 @@ const Aiva = GObject.registerClass(
                     this.app.menu.close();
                 } else {
                     this.app.menu.open();
+                    this.app.menu.box.show_all();
                 }
                 return Clutter.EVENT_STOP; // Impede a propagação do evento
             }
