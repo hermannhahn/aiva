@@ -59,7 +59,7 @@ const Aiva = GObject.registerClass(
             // extension settings
             const {settings} = this.extension;
             this._shortcutBinding = null;
-            this._spamProtection = 0;
+            this._spamProtection = false;
             // extension directory
             const EXT_DIR = GLib.build_filenamev([
                 GLib.get_home_dir(),
@@ -256,14 +256,14 @@ export default class AivaExtension extends Extension {
     _onKeyPress(display, event) {
         const symbol = event.get_key_symbol();
         this._aiva.log('Key pressed: ' + symbol);
-        if (symbol === Clutter.KEY_F12 && this._aiva._spamProtection === 0) {
-            this._aiva._spamProtection = 5;
+        if (symbol === Clutter.KEY_F12 && !this._aiva._spamProtection) {
+            this._aiva._spamProtection = true;
             // Verifica se o menu está aberto e alterna o estado
             if (this._aiva.audio.isRecording) {
                 this._aiva.audio.stopRecord();
             } else {
-                GLib.timeout_add(GLib.PRIORITY_DEFAULT, 5000, () => {
-                    this._aiva._spamProtection = 0;
+                GLib.timeout_add(GLib.PRIORITY_DEFAULT, 7000, () => {
+                    this._aiva._spamProtection = false;
                 });
                 this._aiva.audio.record();
             }
