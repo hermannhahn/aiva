@@ -107,6 +107,7 @@ HELP
     async localVoiceCommandInterpreter(command) {
         if (command === 'readClipboard') {
             try {
+                this.app.chat.editResponse(_('Starting reading...'));
                 await this.app.utils.getClipboardText();
             } catch (error) {
                 this.app.logError(
