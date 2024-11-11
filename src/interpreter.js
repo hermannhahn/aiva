@@ -107,7 +107,7 @@ HELP
     async localVoiceCommandInterpreter(command) {
         if (command === 'readClipboard') {
             try {
-                let text = await this.getClipboardText();
+                let text = await this.app.utils.getClipboardText();
                 this.app.log('Texto copiado:', text);
                 this.app.azure.tts(text);
             } catch (error) {
