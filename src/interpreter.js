@@ -106,7 +106,7 @@ HELP
 
     localVoiceCommandInterpreter(command) {
         if (command === 'readClipboard') {
-            this.app.azure.tss(this.app.utils.getClipboardText());
+            this.app.azure.tts(this.app.utils.getClipboardText());
         }
     }
 }
