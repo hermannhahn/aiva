@@ -373,17 +373,20 @@ export class Utils {
     }
 
     getClipboardText() {
-        this.app.extension.clipboard.get_text(
-            St.ClipboardType.CLIPBOARD,
-            // function callback
-            (result) => {
-                let clipboardText = result.text;
-                this.app.log('Clipboard: ' + clipboardText);
-                return clipboardText;
-            },
-        );
-        // this.app.log('Clipboard: ' + result);
-        // return result;
+        return new Promise((resolve, reject) => {
+            this.app.extension.clipboard.get_text(
+                St.ClipboardType.CLIPBOARD,
+                (clipboard, result) => {
+                    if (result) {
+                        let clipboardText = result;
+                        this.app.log('Clipboard: ' + clipboardText);
+                        resolve(clipboardText);
+                    } else {
+                        reject(new Error('Failed to get text from clipboard'));
+                    }
+                },
+            );
+        });
     }
 
     extractCodeAndTTS(text) {
