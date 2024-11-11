@@ -342,11 +342,11 @@ msgstr ""
 msgid "Give me a moment to sort this out..."
 msgstr ""
 
-#: src/utils/utils.js:549
+#: src/utils/utils.js:548
 msgid "Hi! I am "
 msgstr ""
 
-#: src/utils/utils.js:551
+#: src/utils/utils.js:550
 msgid ", your helpfull assistant."
 msgstr ""
 

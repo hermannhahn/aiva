@@ -376,7 +376,6 @@ export class Utils {
         this.app.extension.clipboard.get_text(
             St.ClipboardType.CLIPBOARD,
             // function callback
-
             (result) => {
                 let clipboardText = result;
                 this.app.log('Clipboard: ' + clipboardText);
