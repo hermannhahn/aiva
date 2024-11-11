@@ -281,9 +281,16 @@ export default class AivaExtension extends Extension {
             if (this._aiva.audio.isRecording) {
                 this._aiva.audio.stopRecord();
             } else {
-                GLib.timeout_add(GLib.PRIORITY_DEFAULT, 3000, () => {
-                    this._aiva.spamProtection = false;
-                });
+                clearTimeout(this._aiva.spamProtectionTimeout);
+                this._aiva.spamProtectionTimeout = null;
+                // set timeout to disable spam protection
+                this._aiva.spamProtectionTimeout = GLib.timeout_add(
+                    GLib.PRIORITY_DEFAULT,
+                    3000,
+                    () => {
+                        this._aiva.spamProtection = false;
+                    },
+                );
                 this._aiva.audio.record();
             }
             return Clutter.EVENT_STOP; // Impede a propagação do evento
