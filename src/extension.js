@@ -140,7 +140,7 @@ const Aiva = GObject.registerClass(
 
             this._shortcutBinding = global.stage.connect(
                 'key-press-event',
-                this.app._onKeyPress.bind(this),
+                this._onKeyPress.bind(this),
             );
 
             this.log('Extension initialized.');
@@ -192,11 +192,11 @@ const Aiva = GObject.registerClass(
             const symbol = event.get_key_symbol();
             if (symbol === Clutter.KEY_F12) {
                 // Verifica se o menu está aberto e alterna o estado
-                if (this.app.menu.isOpen) {
-                    this.app.menu.close();
+                if (this.app.ui.menu.isOpen) {
+                    this.app.ui.menu.close();
                 } else {
-                    this.app.menu.open();
-                    this.app.menu.box.show_all();
+                    this.app.ui.menu.open();
+                    this.app.ui.menu.box.show_all();
                 }
                 return Clutter.EVENT_STOP; // Impede a propagação do evento
             }
