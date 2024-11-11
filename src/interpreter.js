@@ -104,20 +104,18 @@ HELP
         this.app.gemini.runCommand(request);
     }
 
-    localVoiceCommandInterpreter(command) {
+    async localVoiceCommandInterpreter(command) {
         if (command === 'readClipboard') {
-            (async () => {
-                try {
-                    let text = await this.getClipboardText();
-                    this.app.log('Texto copiado:', text);
-                    this.app.azure.tts(text);
-                } catch (error) {
-                    this.app.logError(
-                        'Erro ao obter texto da área de transferência:',
-                        error,
-                    );
-                }
-            })();
+            try {
+                let text = await this.getClipboardText();
+                this.app.log('Texto copiado:', text);
+                this.app.azure.tts(text);
+            } catch (error) {
+                this.app.logError(
+                    'Erro ao obter texto da área de transferência:',
+                    error,
+                );
+            }
         }
     }
 }
