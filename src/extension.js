@@ -138,11 +138,6 @@ const Aiva = GObject.registerClass(
             // initialize chat
             this.chat.init();
 
-            this._shortcutBinding = global.stage.connect(
-                'key-press-event',
-                this._onKeyPress.bind(this),
-            );
-
             this.log('Extension initialized.');
         }
 
@@ -187,22 +182,6 @@ const Aiva = GObject.registerClass(
         logError(message) {
             this.logger.logError(message);
         }
-
-        _onKeyPress(display, event) {
-            console.log('[DEBUG] Key pressed' + event.keyval);
-            const symbol = event.get_key_symbol();
-            if (symbol === Clutter.KEY_F12) {
-                // Verifica se o menu está aberto e alterna o estado
-                if (this.app.ui.menu.isOpen) {
-                    this.app.ui.menu.close();
-                } else {
-                    this.app.ui.menu.open();
-                    this.app.ui.menu.box.show_all();
-                }
-                return Clutter.EVENT_STOP; // Impede a propagação do evento
-            }
-            return Clutter.EVENT_PROPAGATE;
-        }
     },
 );
 
@@ -232,6 +211,10 @@ export default class AivaExtension extends Extension {
 
         // get and save location
         this._aiva.log('Getting IP and location...');
+        this._shortcutBinding = global.stage.connect(
+            'key-press-event',
+            this._onKeyPress.bind(this),
+        );
         let url = 'https://api.myip.com';
         let _httpSession = new Soup.Session();
         let message = Soup.Message.new('GET', url);
@@ -267,5 +250,21 @@ export default class AivaExtension extends Extension {
         this._aiva.destroy();
         this._aiva = null;
         console.log('Extension disabled.');
+    }
+
+    _onKeyPress(display, event) {
+        console.log('[DEBUG] Key pressed' + event.keyval);
+        const symbol = event.get_key_symbol();
+        if (symbol === Clutter.KEY_F12) {
+            // Verifica se o menu está aberto e alterna o estado
+            if (this.app.ui.menu.isOpen) {
+                this.app.ui.menu.close();
+            } else {
+                this.app.ui.menu.open();
+                this.app.ui.menu.box.show_all();
+            }
+            return Clutter.EVENT_STOP; // Impede a propagação do evento
+        }
+        return Clutter.EVENT_PROPAGATE;
     }
 }
