@@ -255,7 +255,7 @@ export default class AivaExtension extends Extension {
 
     _onKeyPress(display, event) {
         const symbol = event.get_key_symbol();
-        this._aiva.log('Key pressed: ' + symbol);
+        this._aiva.log('Key pressed: ' + Clutter.key_get_name(symbol));
         if (this._aiva._spamProtection) {
             return Clutter.EVENT_STOP;
         }
