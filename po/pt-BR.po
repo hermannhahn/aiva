@@ -79,7 +79,7 @@ msgstr "pode ler agora"
 
 #: src/interpreter.js:110
 msgid "Starting reading..."
-msgstr ""
+msgstr "Iniciando a leitura..."
 
 #: src/ai/azure.js:72 src/ai/azure.js:84 src/ai/azure.js:125
 #: src/ai/azure.js:133 src/ai/gemini.js:106 src/ai/gemini.js:197
