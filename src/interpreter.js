@@ -20,7 +20,7 @@ export class Interpreter {
             this.app.log('Voice command detected.');
             this.voiceCommandInterpreter(question);
         } else if (isLocalVoiceCommand.success) {
-            this.app.log('Voice command detected.');
+            this.app.log('Local Voice command detected.');
             this.localVoiceCommandInterpreter(isLocalVoiceCommand.command);
         } else {
             this.app.log('Sending question to API...');
@@ -58,7 +58,7 @@ export class Interpreter {
 
     _isLocalVoiceCommand(text) {
         text = text.toLowerCase();
-        let readCommand = [
+        const readCommand = [
             _('read this text'),
             _('read the text'),
             _('read the clipboard'),
