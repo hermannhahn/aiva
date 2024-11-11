@@ -262,7 +262,10 @@ export default class AivaExtension extends Extension {
         }
         // Keybind: ESC [65307]
         // Clutter.KEY_ESC
-        if (symbol === Clutter.KEY_ESC && this._aiva.spamProtection === false) {
+        if (
+            (symbol === Clutter.KEY_ESC || symbol === Clutter.KEY_F1) &&
+            this._aiva.spamProtection === false
+        ) {
             this._aiva.spamProtection = true;
             // Verifica se o menu está aberto e alterna o estado
             if (this._aiva.audio.isRecording) {
