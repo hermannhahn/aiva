@@ -380,7 +380,6 @@ export class Utils {
                     if (result) {
                         let clipboardText = result;
                         this.app.log('Clipboard: ' + clipboardText);
-                        this.app.chat.editResponse(_('Starting reading...'));
                         resolve(clipboardText);
                     } else {
                         this.app.log(_('Failed to get text from clipboard'));

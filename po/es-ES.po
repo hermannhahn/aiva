@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-11 00:41-0300\n"
+"POT-Creation-Date: 2024-11-11 00:42-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language es-ES\n"
@@ -342,19 +342,15 @@ msgstr ""
 msgid "Give me a moment to sort this out..."
 msgstr ""
 
-#: src/utils/utils.js:383
-msgid "Starting reading..."
-msgstr ""
-
-#: src/utils/utils.js:386 src/utils/utils.js:388
+#: src/utils/utils.js:385 src/utils/utils.js:387
 msgid "Failed to get text from clipboard"
 msgstr ""
 
-#: src/utils/utils.js:556
+#: src/utils/utils.js:555
 msgid "Hi! I am "
 msgstr ""
 
-#: src/utils/utils.js:558
+#: src/utils/utils.js:557
 msgid ", your helpfull assistant."
 msgstr ""
 
