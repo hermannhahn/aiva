@@ -256,13 +256,16 @@ export default class AivaExtension extends Extension {
     _onKeyPress(display, event) {
         const symbol = event.get_key_symbol();
         this._aiva.log('Key pressed: ' + symbol);
+        if (this._aiva._spamProtection) {
+            return Clutter.EVENT_STOP;
+        }
         if (symbol === Clutter.KEY_F12 && !this._aiva._spamProtection) {
             this._aiva._spamProtection = true;
             // Verifica se o menu está aberto e alterna o estado
             if (this._aiva.audio.isRecording) {
                 this._aiva.audio.stopRecord();
             } else {
-                GLib.timeout_add(GLib.PRIORITY_DEFAULT, 7000, () => {
+                GLib.timeout_add(GLib.PRIORITY_DEFAULT, 10000, () => {
                     this._aiva._spamProtection = false;
                 });
                 this._aiva.audio.record();
