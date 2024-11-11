@@ -189,7 +189,7 @@ export class UI {
 
         this.app._shortcutBinding = global.display.connect(
             'key-press-event',
-            this._onKeyPress.bind(this),
+            this.app._onKeyPress.bind(this),
         );
     }
 
