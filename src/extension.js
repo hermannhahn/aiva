@@ -257,6 +257,7 @@ export default class AivaExtension extends Extension {
         const symbol = event.get_key_symbol();
         this._aiva.log('Key pressed: ' + symbol);
         if (this._aiva.spamProtection === true) {
+            this._aiva.log('Spam protection activated.');
             return Clutter.EVENT_STOP;
         }
         if (symbol === Clutter.KEY_F12 && this._aiva.spamProtection === false) {
@@ -268,6 +269,18 @@ export default class AivaExtension extends Extension {
                 GLib.timeout_add(GLib.PRIORITY_DEFAULT, 10000, () => {
                     this._aiva.spamProtection = false;
                 });
+                // cancel older timeout
+                clearTimeout(this._aiva.spamProtectionTimeout);
+                this._aiva.spamProtectionTimeout = null;
+                // set timeout to disable spam protection
+                this._aiva.spamProtectionTimeout = GLib.timeout_add(
+                    GLib.PRIORITY_DEFAULT,
+                    2000,
+                    () => {
+                        this._aiva.spamProtection = false;
+                    },
+                );
+
                 this._aiva.audio.record();
             }
             return Clutter.EVENT_STOP; // Impede a propagação do evento
