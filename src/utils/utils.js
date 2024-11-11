@@ -372,7 +372,7 @@ export class Utils {
         }
     }
 
-    getClipboardText() {
+    readClipboardText() {
         return new Promise((resolve, reject) => {
             this.app.extension.clipboard.get_text(
                 St.ClipboardType.CLIPBOARD,
