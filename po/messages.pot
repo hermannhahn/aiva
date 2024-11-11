@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-11 00:54-0300\n"
+"POT-Creation-Date: 2024-11-11 00:59-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -346,15 +346,19 @@ msgstr ""
 msgid "Give me a moment to sort this out..."
 msgstr ""
 
-#: src/utils/utils.js:386 src/utils/utils.js:388
+#: src/utils/utils.js:384
+msgid "Leitura finalizada!"
+msgstr ""
+
+#: src/utils/utils.js:388 src/utils/utils.js:390
 msgid "Failed to get text from clipboard"
 msgstr ""
 
-#: src/utils/utils.js:556
+#: src/utils/utils.js:558
 msgid "Hi! I am "
 msgstr ""
 
-#: src/utils/utils.js:558
+#: src/utils/utils.js:560
 msgid ", your helpfull assistant."
 msgstr ""
 
