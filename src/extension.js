@@ -58,10 +58,7 @@ const Aiva = GObject.registerClass(
         _fetchSettings() {
             // extension settings
             const {settings} = this.extension;
-            this._shortcutBinding = global.display.connect(
-                'key-press-event',
-                this._onKeyPress.bind(this),
-            );
+            this._shortcutBinding = null;
             // extension directory
             const EXT_DIR = GLib.build_filenamev([
                 GLib.get_home_dir(),
