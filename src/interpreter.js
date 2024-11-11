@@ -81,7 +81,7 @@ export class Interpreter {
             for (const activationWord of readCommand) {
                 if (word.includes(activationWord)) {
                     result.success = true;
-                    result.command = 'read';
+                    result.command = 'readClipboard';
                     return result;
                 }
             }
@@ -110,7 +110,7 @@ HELP
     }
 
     localVoiceCommandInterpreter(command) {
-        if (command === 'read') {
+        if (command === 'readClipboard') {
             this.app.azure.tss(this.app.utils.getClipboardText());
         }
     }
