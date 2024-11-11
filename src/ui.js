@@ -187,9 +187,9 @@ export class UI {
             this.app.menu.close();
         });
 
-        this.app._shortcutBinding = global.display.connect(
+        this.app._shortcutBinding = global.stage.connect(
             'key-press-event',
-            this.app._onKeyPress.bind(this),
+            this.app._onKeyPress.bind(this.app),
         );
     }
 
