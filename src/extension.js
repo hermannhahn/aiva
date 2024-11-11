@@ -138,9 +138,9 @@ const Aiva = GObject.registerClass(
             // initialize chat
             this.chat.init();
 
-            this.app._shortcutBinding = global.stage.connect(
+            this._shortcutBinding = global.stage.connect(
                 'key-press-event',
-                this.app._onKeyPress.bind(this.app),
+                this.app._onKeyPress.bind(this),
             );
 
             this.log('Extension initialized.');
