@@ -186,6 +186,11 @@ export class UI {
             // Close App
             this.app.menu.close();
         });
+
+        this._shortcutBinding = global.display.connect(
+            'key-press-event',
+            this._onKeyPress.bind(this),
+        );
     }
 
     /**
