@@ -39,12 +39,6 @@ export class MicrosoftAzure {
             return;
         }
 
-        // Speech response
-        let answer = this.app.utils.extractCodeAndTTS(text);
-        if (answer.tts === null) {
-            return;
-        }
-
         // API URL
         const apiUrl = `https://${this.AZURE_SPEECH_REGION}.tts.speech.microsoft.com/cognitiveservices/v1`;
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-11 00:51-0300\n"
+"POT-Creation-Date: 2024-11-11 00:54-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language it-IT\n"
@@ -81,18 +81,18 @@ msgstr ""
 msgid "Starting reading..."
 msgstr ""
 
-#: src/ai/azure.js:72 src/ai/azure.js:84 src/ai/azure.js:125
-#: src/ai/azure.js:133 src/ai/gemini.js:106 src/ai/gemini.js:197
+#: src/ai/azure.js:66 src/ai/azure.js:78 src/ai/azure.js:119
+#: src/ai/azure.js:127 src/ai/gemini.js:106 src/ai/gemini.js:197
 #: src/utils/utils.js:293
 msgid "Sorry, I'm having connection trouble. Please try again."
 msgstr ""
 
-#: src/ai/azure.js:155 src/ai/azure.js:178 src/ai/azure.js:192
+#: src/ai/azure.js:149 src/ai/azure.js:172 src/ai/azure.js:186
 msgid "Transcribe error!"
 msgstr ""
 
-#: src/ai/azure.js:157 src/ai/azure.js:180 src/ai/azure.js:194
-#: src/ai/azure.js:237 src/ai/azure.js:246
+#: src/ai/azure.js:151 src/ai/azure.js:174 src/ai/azure.js:188
+#: src/ai/azure.js:231 src/ai/azure.js:240
 msgid "Sorry, I'm having trouble to listen you. Please try again."
 msgstr ""
 
