@@ -376,7 +376,7 @@ export class Utils {
         }
     }
 
-    readClipboardText() {
+    getClipboardText() {
         return this.app.extension.clipboard.get_text(
             St.ClipboardType.CLIPBOARD,
         );
