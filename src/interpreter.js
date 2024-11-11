@@ -78,8 +78,8 @@ export class Interpreter {
         const words = text.split(/\s+/).slice(0, 8);
         let result = {success: false, word: ''};
         for (const word of words) {
-            for (const activationWord of readCommand) {
-                if (word.includes(activationWord)) {
+            for (const command of readCommand) {
+                if (word.includes(command)) {
                     result.success = true;
                     result.command = 'readClipboard';
                     return result;
