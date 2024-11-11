@@ -364,11 +364,11 @@ msgstr "Estou pensando nisso..."
 msgid "Give me a moment to sort this out..."
 msgstr "Me dê um momento para organizar isso..."
 
-#: src/utils/utils.js:543
+#: src/utils/utils.js:544
 msgid "Hi! I am "
 msgstr "Olá, eu sou "
 
-#: src/utils/utils.js:545
+#: src/utils/utils.js:546
 msgid ", your helpfull assistant."
 msgstr ", sua assistente útil."
 

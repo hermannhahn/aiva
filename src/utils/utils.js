@@ -378,6 +378,7 @@ export class Utils {
             St.ClipboardType.CLIPBOARD,
             result,
         );
+        this.app.log('Clipboard: ' + result);
         return result;
     }
 
