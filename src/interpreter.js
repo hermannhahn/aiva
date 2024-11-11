@@ -108,7 +108,7 @@ HELP
         if (command === 'readClipboard') {
             try {
                 this.app.chat.editResponse(_('Starting reading...'));
-                await this.app.utils.getClipboardText();
+                await this.app.utils.readClipboardText();
             } catch (error) {
                 this.app.logError(
                     'Erro ao obter texto da área de transferência:',
