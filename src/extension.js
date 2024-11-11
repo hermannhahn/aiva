@@ -253,16 +253,13 @@ export default class AivaExtension extends Extension {
     }
 
     _onKeyPress(display, event) {
-        console.log('[DEBUG] Key pressed' + event);
-        console.log('[DEBUG] dKey pressed' + display);
         const symbol = event.get_key_symbol();
         if (symbol === Clutter.KEY_F12) {
             // Verifica se o menu está aberto e alterna o estado
-            if (this.app.ui.menu.isOpen) {
-                this.app.ui.menu.close();
+            if (this._aiva.audio.isRecording) {
+                this._aiva.audio.stopRecord();
             } else {
-                this.app.ui.menu.open();
-                this.app.ui.menu.box.show_all();
+                this._aiva.audio.record();
             }
             return Clutter.EVENT_STOP; // Impede a propagação do evento
         }
