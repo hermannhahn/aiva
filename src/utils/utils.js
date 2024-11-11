@@ -377,7 +377,7 @@ export class Utils {
             St.ClipboardType.CLIPBOARD,
             // function callback
             (result) => {
-                let clipboardText = result;
+                let clipboardText = result.text;
                 this.app.log('Clipboard: ' + clipboardText);
                 return clipboardText;
             },
