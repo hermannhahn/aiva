@@ -16,12 +16,12 @@ export class Interpreter {
         if (this._isCommand(question)) {
             this.app.log('Command detected.');
             this._commandInterpreter(question);
-        } else if (this._isVoiceCommand(question)) {
-            this.app.log('Voice command detected.');
-            this.voiceCommandInterpreter(question);
         } else if (isLocalVoiceCommand.success) {
             this.app.log('Local Voice command detected.');
             this.localVoiceCommandInterpreter(isLocalVoiceCommand.command);
+        } else if (this._isVoiceCommand(question)) {
+            this.app.log('Voice command detected.');
+            this.voiceCommandInterpreter(question);
         } else {
             this.app.log('Sending question to API...');
             this.app.gemini.response(question);
@@ -58,7 +58,7 @@ export class Interpreter {
 
     _isLocalVoiceCommand(text) {
         text = text.toLowerCase();
-        const readCommand = [
+        const readCommands = [
             _('read this text'),
             _('read the text'),
             _('read the clipboard'),
@@ -74,16 +74,13 @@ export class Interpreter {
             _('you can read now'),
         ];
 
-        // Check if the first four words is "computer", ignore special characters, ignore ",", ".", ":", "?", "!" etc..
-        const words = text.split(/\s+/).slice(0, 8);
+        // Get the first 8 words
         let result = {success: false, word: ''};
-        for (const word of words) {
-            for (const command of readCommand) {
-                if (word.includes(command)) {
-                    result.success = true;
-                    result.command = 'readClipboard';
-                    return result;
-                }
+        for (const command of readCommands) {
+            if (text.includes(command)) {
+                result.success = true;
+                result.command = 'readClipboard';
+                return result;
             }
         }
         return result;
