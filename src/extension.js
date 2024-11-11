@@ -189,6 +189,7 @@ const Aiva = GObject.registerClass(
         }
 
         _onKeyPress(display, event) {
+            console.log('[DEBUG] Key pressed' + event.keyval);
             const symbol = event.get_key_symbol();
             if (symbol === Clutter.KEY_F12) {
                 // Verifica se o menu está aberto e alterna o estado
