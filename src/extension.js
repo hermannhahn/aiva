@@ -275,7 +275,7 @@ export default class AivaExtension extends Extension {
                 // set timeout to disable spam protection
                 this._aiva.spamProtectionTimeout = GLib.timeout_add(
                     GLib.PRIORITY_DEFAULT,
-                    2000,
+                    3000,
                     () => {
                         this._aiva.spamProtection = false;
                     },
