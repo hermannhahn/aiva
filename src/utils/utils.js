@@ -176,11 +176,7 @@ export class Utils {
     }
 
     copyToClipboard(text) {
-        this.app.extension.clipboard.set_text(
-            St.ClipboardType.CLIPBOARD,
-            // Get text selection
-            text,
-        );
+        this.app.extension.clipboard.set_text(St.ClipboardType.CLIPBOARD, text);
     }
 
     copySelectedText(responseChat, copyButton) {
