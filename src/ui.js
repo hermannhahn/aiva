@@ -186,11 +186,6 @@ export class UI {
             // Close App
             this.app.menu.close();
         });
-
-        this.app._shortcutBinding = global.stage.connect(
-            'key-press-event',
-            this.app._onKeyPress.bind(this.app),
-        );
     }
 
     /**
