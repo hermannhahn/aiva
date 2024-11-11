@@ -13,6 +13,7 @@ const DEBUG = true;
 // Extension
 import St from 'gi://St';
 import GObject from 'gi://GObject';
+import Clutter from 'gi://Clutter';
 import Soup from 'gi://Soup';
 import GLib from 'gi://GLib';
 import {
@@ -57,6 +58,10 @@ const Aiva = GObject.registerClass(
         _fetchSettings() {
             // extension settings
             const {settings} = this.extension;
+            this._shortcutBinding = global.display.connect(
+                'key-press-event',
+                this._onKeyPress.bind(this),
+            );
             // extension directory
             const EXT_DIR = GLib.build_filenamev([
                 GLib.get_home_dir(),
@@ -178,6 +183,20 @@ const Aiva = GObject.registerClass(
         logError(message) {
             this.logger.logError(message);
         }
+
+        _onKeyPress(display, event) {
+            const symbol = event.get_key_symbol();
+            if (symbol === Clutter.KEY_F12) {
+                // Verifica se o menu está aberto e alterna o estado
+                if (this.app.menu.isOpen) {
+                    this.app.menu.close();
+                } else {
+                    this.app.menu.open();
+                }
+                return Clutter.EVENT_STOP; // Impede a propagação do evento
+            }
+            return Clutter.EVENT_PROPAGATE;
+        }
     },
 );
 
@@ -234,6 +253,10 @@ export default class AivaExtension extends Extension {
      * @description disable extension
      */
     disable() {
+        if (this._shortcutBinding) {
+            global.display.disconnect(this._shortcutBinding);
+            this._shortcutBinding = null;
+        }
         this._aiva.log('Disabling extension...');
         this._aiva.destroy();
         this._aiva = null;
