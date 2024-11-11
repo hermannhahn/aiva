@@ -255,7 +255,7 @@ export default class AivaExtension extends Extension {
     _onKeyPress(display, event) {
         const symbol = event.get_key_symbol();
         let wait = 0;
-        if (symbol === Clutter.KEY_F12) {
+        if (symbol === Clutter.KEY_F12 && wait === 0) {
             wait = 2000;
             // Verifica se o menu está aberto e alterna o estado
             GLib.timeout_add(GLib.PRIORITY_DEFAULT, wait, () => {
