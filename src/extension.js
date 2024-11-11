@@ -275,7 +275,6 @@ export default class AivaExtension extends Extension {
             }
             return Clutter.EVENT_STOP; // Impede a propagação do evento
         }
-        this._aiva._spamProtection -= 1;
         return Clutter.EVENT_PROPAGATE;
     }
 }
