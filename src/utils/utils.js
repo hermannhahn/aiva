@@ -376,6 +376,12 @@ export class Utils {
         }
     }
 
+    readClipboardText() {
+        return this.app.extension.clipboard.get_text(
+            St.ClipboardType.CLIPBOARD,
+        );
+    }
+
     extractCodeAndTTS(text) {
         // Expressão regular para capturar o código entre triplo acento grave
         let tts = text.split('*').join('');
