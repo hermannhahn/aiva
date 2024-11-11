@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-10 21:48-0300\n"
+"POT-Creation-Date: 2024-11-10 22:00-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language de-DE\n"
@@ -20,8 +20,61 @@ msgstr ""
 msgid "Transcribing..."
 msgstr ""
 
-#: src/interpreter.js:38
+#: src/interpreter.js:41
 msgid "computer"
+msgstr ""
+
+#: src/interpreter.js:61
+msgid "read this text"
+msgstr ""
+
+#: src/interpreter.js:62
+msgid "read the text"
+msgstr ""
+
+#: src/interpreter.js:63
+#, fuzzy
+msgid "read the clipboard"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/interpreter.js:64
+msgid "read copied text"
+msgstr ""
+
+#: src/interpreter.js:65
+msgid "read clipboard text"
+msgstr ""
+
+#: src/interpreter.js:66
+msgid "read this clipboard"
+msgstr ""
+
+#: src/interpreter.js:67
+msgid "read text in memory"
+msgstr ""
+
+#: src/interpreter.js:68
+msgid "read memorised text"
+msgstr ""
+
+#: src/interpreter.js:69
+msgid "read for me"
+msgstr ""
+
+#: src/interpreter.js:70
+msgid "read this for me"
+msgstr ""
+
+#: src/interpreter.js:71
+msgid "read text for me"
+msgstr ""
+
+#: src/interpreter.js:72
+msgid "read this please"
+msgstr ""
+
+#: src/interpreter.js:73
+msgid "you can read now"
 msgstr ""
 
 #: src/ai/azure.js:72 src/ai/azure.js:84 src/ai/azure.js:125
@@ -364,6 +417,3 @@ msgstr ""
 #: src/prefs.js:705
 msgid "Your preferences have been saved"
 msgstr ""
-
-#~ msgid "Code example copied to clipboard"
-#~ msgstr "Code kopiert in die Zwischenablage"

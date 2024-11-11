@@ -18,6 +18,9 @@ export class Interpreter {
         } else if (this._isVoiceCommand(question)) {
             this.app.log('Voice command detected.');
             this.voiceCommandInterpreter(question);
+        } else if (this._isLocalVoiceCommand(question)) {
+            this.app.log('Voice command detected.');
+            this.localVoiceCommandInterpreter(question);
         } else {
             this.app.log('Sending question to API...');
             this.app.gemini.response(question);
@@ -38,6 +41,36 @@ export class Interpreter {
             _('computer'),
             'aiva',
             this.app.userSettings.ASSIST_NAME,
+        ];
+
+        // Check if the first four words is "computer", ignore special characters, ignore ",", ".", ":", "?", "!" etc..
+        const words = text.split(/\s+/).slice(0, 4);
+        for (const word of words) {
+            for (const activationWord of activationWords) {
+                if (word.includes(activationWord)) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    _isLocalVoiceCommand(text) {
+        text = text.toLowerCase();
+        let activationWords = [
+            _('read this text'),
+            _('read the text'),
+            _('read the clipboard'),
+            _('read copied text'),
+            _('read clipboard text'),
+            _('read this clipboard'),
+            _('read text in memory'),
+            _('read memorised text'),
+            _('read for me'),
+            _('read this for me'),
+            _('read text for me'),
+            _('read this please'),
+            _('you can read now'),
         ];
 
         // Check if the first four words is "computer", ignore special characters, ignore ",", ".", ":", "?", "!" etc..
