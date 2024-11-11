@@ -73,8 +73,6 @@ export class Interpreter {
             _('read this please'),
             _('you can read now'),
         ];
-
-        // Get the first 8 words
         let result = {success: false, word: ''};
         for (const command of readCommands) {
             if (text.includes(command)) {
