@@ -373,10 +373,12 @@ export class Utils {
     }
 
     getClipboardText() {
-        return this.app.extension.clipboard.get_text(
+        let result = '';
+        this.app.extension.clipboard.get_text(
             St.ClipboardType.CLIPBOARD,
-            null,
+            result,
         );
+        return result;
     }
 
     extractCodeAndTTS(text) {
