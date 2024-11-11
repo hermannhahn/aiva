@@ -106,7 +106,18 @@ HELP
 
     localVoiceCommandInterpreter(command) {
         if (command === 'readClipboard') {
-            this.app.azure.tts(this.app.utils.getClipboardText());
+            (async () => {
+                try {
+                    let text = await this.getClipboardText();
+                    this.app.log('Texto copiado:', text);
+                    this.app.azure.tts(text);
+                } catch (error) {
+                    this.app.logError(
+                        'Erro ao obter texto da área de transferência:',
+                        error,
+                    );
+                }
+            })();
         }
     }
 }
