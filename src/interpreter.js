@@ -12,15 +12,16 @@ export class Interpreter {
         this.app.log('Question: ' + question);
         this.app.log('Processing question...');
         this.app.chat.addResponse('...');
+        const isLocalVoiceCommand = this._isLocalVoiceCommand(question);
         if (this._isCommand(question)) {
             this.app.log('Command detected.');
             this._commandInterpreter(question);
         } else if (this._isVoiceCommand(question)) {
             this.app.log('Voice command detected.');
             this.voiceCommandInterpreter(question);
-        } else if (this._isLocalVoiceCommand(question)) {
+        } else if (isLocalVoiceCommand.success) {
             this.app.log('Voice command detected.');
-            this.localVoiceCommandInterpreter(question);
+            this.localVoiceCommandInterpreter(isLocalVoiceCommand.command);
         } else {
             this.app.log('Sending question to API...');
             this.app.gemini.response(question);
@@ -57,7 +58,7 @@ export class Interpreter {
 
     _isLocalVoiceCommand(text) {
         text = text.toLowerCase();
-        let activationWords = [
+        let readCommand = [
             _('read this text'),
             _('read the text'),
             _('read the clipboard'),
@@ -74,15 +75,18 @@ export class Interpreter {
         ];
 
         // Check if the first four words is "computer", ignore special characters, ignore ",", ".", ":", "?", "!" etc..
-        const words = text.split(/\s+/).slice(0, 4);
+        const words = text.split(/\s+/).slice(0, 8);
+        let result = {success: false, word: ''};
         for (const word of words) {
-            for (const activationWord of activationWords) {
+            for (const activationWord of readCommand) {
                 if (word.includes(activationWord)) {
-                    return true;
+                    result.success = true;
+                    result.command = 'read';
+                    return result;
                 }
             }
         }
-        return false;
+        return result;
     }
 
     _commandInterpreter(text) {
@@ -101,6 +105,15 @@ HELP
     }
 
     voiceCommandInterpreter(text) {
+        let request = this.app.gemini.commandRequest(text);
+        this.app.gemini.runCommand(request);
+    }
+
+    localVoiceCommandInterpreter(command) {
+        if (command === 'read') {
+            this.app.azure.tss(this.app.utils.getClipboardText());
+        }
+
         let request = this.app.gemini.commandRequest(text);
         this.app.gemini.runCommand(request);
     }
