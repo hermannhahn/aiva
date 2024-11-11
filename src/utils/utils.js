@@ -384,6 +384,9 @@ export class Utils {
                         resolve(clipboardText);
                     } else {
                         this.app.log(_('Failed to get text from clipboard'));
+                        this.app.chat.editResponse(
+                            _('Failed to get text from clipboard'),
+                        );
                         reject(new Error('Failed to get text from clipboard'));
                     }
                 },
