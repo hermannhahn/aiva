@@ -258,6 +258,17 @@ export default class AivaExtension extends Extension {
         this._aiva.log('Key pressed: ' + symbol);
         if (this._aiva.spamProtection === true) {
             this._aiva.log('Spam protection activated.');
+            // clear timeout
+            clearTimeout(this._aiva.spamProtectionTimeout);
+            this._aiva.spamProtectionTimeout = null;
+            // set timeout to disable spam protection
+            this._aiva.spamProtectionTimeout = GLib.timeout_add(
+                GLib.PRIORITY_DEFAULT,
+                3000,
+                () => {
+                    this._aiva.spamProtection = false;
+                },
+            );
             return Clutter.EVENT_STOP;
         }
         // Keybind: ESC [65307]
@@ -267,25 +278,12 @@ export default class AivaExtension extends Extension {
             this._aiva.spamProtection === false
         ) {
             this._aiva.spamProtection = true;
-            // Verifica se o menu está aberto e alterna o estado
             if (this._aiva.audio.isRecording) {
                 this._aiva.audio.stopRecord();
             } else {
-                GLib.timeout_add(GLib.PRIORITY_DEFAULT, 10000, () => {
+                GLib.timeout_add(GLib.PRIORITY_DEFAULT, 3000, () => {
                     this._aiva.spamProtection = false;
                 });
-                // cancel older timeout
-                clearTimeout(this._aiva.spamProtectionTimeout);
-                this._aiva.spamProtectionTimeout = null;
-                // set timeout to disable spam protection
-                this._aiva.spamProtectionTimeout = GLib.timeout_add(
-                    GLib.PRIORITY_DEFAULT,
-                    3000,
-                    () => {
-                        this._aiva.spamProtection = false;
-                    },
-                );
-
                 this._aiva.audio.record();
             }
             return Clutter.EVENT_STOP; // Impede a propagação do evento
