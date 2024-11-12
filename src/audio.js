@@ -37,7 +37,8 @@ export class Audio {
      */
     play(path) {
         if (!this.isPlaying) {
-            this.speechStatusBar = this.app.ui.addStatusIcon('🗣️');
+            this.speechStatusBar = this.app.ui.addStatusIcon('🔊');
+
             this.app.log('Playing audio... ' + path);
             // Process sync, not async
             const process = GLib.spawn_async(
