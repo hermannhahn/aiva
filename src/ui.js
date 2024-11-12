@@ -119,11 +119,11 @@ export class UI {
         // Separator
         this.newSeparator = new PopupMenu.PopupSeparatorMenuItem();
 
-        this.statusBar = new PopupMenu.PopupMenuItem('', {
+        this.waitStatusBar = new PopupMenu.PopupMenuItem('', {
             style_class: 'status-bar',
             can_focus: false,
+            label: '⌛',
         });
-        this.statusBar.label.clutter_text.set_markup('⌛');
 
         // Initialize
         this._createApp();
@@ -166,7 +166,7 @@ export class UI {
 
         // Add statusBarSection
         this.app.menu.box.add_child(this.statusBarSection);
-        this.statusBarSection.add_child(this.statusBar);
+        // this.statusBarSection.add_child(this.statusBar);
     }
 
     /**
@@ -274,5 +274,19 @@ export class UI {
         copyButton.label.clutter_text.hover = true;
         this.copyButton = copyButton;
         return copyButton;
+    }
+
+    addStatusIcon(label) {
+        let icon = new PopupMenu.PopupMenuItem('', {
+            style_class: 'status-bar',
+            can_focus: false,
+            label,
+        });
+        this.statusBarSection.add_child(icon);
+        return icon;
+    }
+
+    removeStatusIcon(icon) {
+        this.statusBarSection.remove_child(icon);
     }
 }
