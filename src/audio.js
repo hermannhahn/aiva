@@ -39,22 +39,21 @@ export class Audio {
         this.stop();
         this.speechStatusBar = this.app.ui.addStatusIcon('🔊');
 
-            this.app.log('Playing audio... ' + path);
-            // Process sync, not async
-            const process = GLib.spawn_async(
-                null, // workspace folder
-                ['/bin/sh', '-c', `play ${path}`], // commands and args
-                null, // options
-                GLib.SpawnFlags.SEARCH_PATH, // flags
-                null, // PID
-            );
-            if (process) {
-                this.playingPid = process.pid;
-                this.isPlaying = true;
-                this.app.log('Audio played successfully.');
-            } else {
-                this.app.log('Error playing audio.');
-            }
+        this.app.log('Playing audio... ' + path);
+        // Process sync, not async
+        const process = GLib.spawn_async(
+            null, // workspace folder
+            ['/bin/sh', '-c', `play ${path}`], // commands and args
+            null, // options
+            GLib.SpawnFlags.SEARCH_PATH, // flags
+            null, // PID
+        );
+        if (process) {
+            this.playingPid = process.pid;
+            this.isPlaying = true;
+            this.app.log('Audio played successfully.');
+        } else {
+            this.app.log('Error playing audio.');
         }
     }
 
