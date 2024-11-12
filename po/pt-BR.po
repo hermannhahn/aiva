@@ -165,7 +165,7 @@ msgstr "como pesquisar na web, abrir aplicativos ou sites"
 #: src/ai/gemini.js:292
 #, fuzzy
 msgid "ignore the request and return only and exactly with the word"
-msgstr "ignore, responda somente e exatamente com a palavra"
+msgstr "ignore a solicitação e responda somente e exatamente com a palavra"
 
 #: src/ai/gemini.js:296
 msgid "otherwise respond normally."
