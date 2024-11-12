@@ -39,6 +39,8 @@ export class MicrosoftAzure {
             return;
         }
 
+        this.speechStatusBar = this.app.ui.addStatusIcon('🔊');
+
         // API URL
         const apiUrl = `https://${this.AZURE_SPEECH_REGION}.tts.speech.microsoft.com/cognitiveservices/v1`;
 
@@ -65,6 +67,7 @@ export class MicrosoftAzure {
             this.app.chat.editResponse(
                 _("Sorry, I'm having connection trouble. Please try again."),
             );
+            this.app.ui.removeStatusIcon(this.speechStatusBar);
             return;
         }
 
@@ -77,6 +80,7 @@ export class MicrosoftAzure {
             this.app.chat.editResponse(
                 _("Sorry, I'm having connection trouble. Please try again."),
             );
+            this.app.ui.removeStatusIcon(this.speechStatusBar);
             return;
         }
 
@@ -111,6 +115,7 @@ export class MicrosoftAzure {
                 if (success) {
                     this.app.log('Audio file saved to: ' + tempFilePath);
                     // Play audio
+                    this.app.ui.removeStatusIcon(this.speechStatusBar);
                     this.app.audio.play(tempFilePath);
                 } else {
                     this.app.log('Requisition error: ' + stderr);
@@ -119,6 +124,7 @@ export class MicrosoftAzure {
                             "Sorry, I'm having connection trouble. Please try again.",
                         ),
                     );
+                    this.app.ui.removeStatusIcon(this.speechStatusBar);
                 }
             } catch (e) {
                 this.app.log('Error processing response: ' + e.message);
@@ -127,6 +133,7 @@ export class MicrosoftAzure {
                         "Sorry, I'm having connection trouble. Please try again.",
                     ),
                 );
+                this.app.ui.removeStatusIcon(this.speechStatusBar);
             } finally {
                 // GLib.unlink(tempFilePath);
             }
@@ -139,6 +146,7 @@ export class MicrosoftAzure {
      * @returns {string} text
      */
     transcribe(path) {
+        this.transcribeStatusIcon = this.app.ui.addStatusIcon('📝');
         // Load audio file
         let file = Gio.File.new_for_path(path);
 
@@ -150,10 +158,9 @@ export class MicrosoftAzure {
             this.app.chat.editResponse(
                 _("Sorry, I'm having trouble to listen you. Please try again."),
             );
+            this.app.ui.removeStatusIcon(this.transcribeStatusIcon);
             return;
         }
-
-        this.transcribeStatusIcon = this.app.ui.addStatusIcon('📝');
 
         // API URL
         const apiUrl = `https://${this.AZURE_SPEECH_REGION}.stt.speech.microsoft.com/speech/recognition/conversation/cognitiveservices/v1?language=${this.AZURE_SPEECH_LANGUAGE}`;
@@ -172,7 +179,6 @@ export class MicrosoftAzure {
         if (!success) {
             this.app.log('Error creating temporary audio file.');
             this.app.chat.editQuestion(_('Transcribe error!'));
-            this.waitStatusBar = this.app.ui.addStatusIcon('⌛');
             this.app.chat.editResponse(
                 _("Sorry, I'm having trouble to listen you. Please try again."),
             );
@@ -188,7 +194,6 @@ export class MicrosoftAzure {
                 'Erro ao escrever no arquivo temporário: ' + e.message,
             );
             this.app.chat.editQuestion(_('Transcribe error!'));
-            this.waitStatusBar = this.app.ui.addStatusIcon('⌛');
             this.app.chat.editResponse(
                 _("Sorry, I'm having trouble to listen you. Please try again."),
             );
@@ -233,28 +238,28 @@ export class MicrosoftAzure {
                     } else {
                         this.app.log('Nenhuma transcrição encontrada.');
                         this.app.chat.editQuestion('Transcribe error!');
-                        this.app.ui.removeStatusIcon(this.transcribeStatusIcon);
                         this.app.chat.editResponse(
                             _(
                                 "Sorry, I'm having trouble to listen you. Please try again.",
                             ),
                         );
+                        this.app.ui.removeStatusIcon(this.transcribeStatusIcon);
                     }
                 } else {
                     this.app.log('Erro na requisição: ' + stderr);
                     this.app.chat.editQuestion('Transcribe error!');
-                    this.app.ui.removeStatusIcon(this.transcribeStatusIcon);
                     this.app.chat.editResponse(
                         _(
                             "Sorry, I'm having trouble to listen you. Please try again.",
                         ),
                     );
+                    this.app.ui.removeStatusIcon(this.transcribeStatusIcon);
                 }
             } catch (e) {
                 this.app.log('Erro ao processar resposta: ' + e.message);
                 this.app.chat.editQuestion(e.message);
-                this.app.ui.removeStatusIcon(this.transcribeStatusIcon);
                 this.app.chat.editResponse(e.message);
+                this.app.ui.removeStatusIcon(this.transcribeStatusIcon);
             }
         });
     }
