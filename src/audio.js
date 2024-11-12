@@ -84,6 +84,7 @@ export class Audio {
     record() {
         if (this.isRecording && !this.spamProtection) {
             // Stop recording
+            this.spamProtection = true;
             this.stopRecord();
             this.app.log('Recording stopped.');
             return;
