@@ -152,12 +152,10 @@ msgid "How are you"
 msgstr "Como vai você"
 
 #: src/ai/gemini.js:286
-#, fuzzy
 msgid "If any of my interactions includes"
 msgstr "Se alguma das minhas interações incluir"
 
 #: src/ai/gemini.js:288
-#, fuzzy
 msgid "a request to run something"
 msgstr "uma solicitação para executar algo"
 
