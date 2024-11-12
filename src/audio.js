@@ -80,11 +80,12 @@ export class Audio {
     }
 
     /**
+     * @param {boolean} [keybind=false]
      * @description start recording
      */
-    record() {
+    record(keybind = false) {
         // spam protection
-        if (this.spamProtection === true) {
+        if (this.spamProtection === true && keybind) {
             this.spamBlock();
             return;
         }
