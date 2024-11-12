@@ -87,6 +87,7 @@ export class Audio {
     record() {
         // active spam protection
         this.spamProtection = true;
+        // limit recording time
         this.limitProtection = true;
 
         // Stop recording if recording
@@ -101,20 +102,15 @@ export class Audio {
             return;
         }
 
+        // afk protection
+        if (this.limitProtection) {
+            this.recodingTimeout();
+        }
+
+        // Start recording
         this.app.log('Recording...');
         this.isRecording = true;
         this.recordStatusBar = this.app.ui.addStatusIcon('🎤');
-
-        // afk protection
-        clearTimeout(this.limitTimeout);
-        this.limitTimeout = null;
-        this.limitTimeout = GLib.timeout_add(
-            GLib.PRIORITY_DEFAULT,
-            100000,
-            () => {
-                this.stopRecord(false);
-            },
-        );
 
         // Create temporary file for audio recording
         this.questionPath = 'gva_temp_audio_XXXXXX.wav';
@@ -184,24 +180,20 @@ export class Audio {
     }
 
     recodingTimeout() {
-        if (this.limitProtection) {
-            this.limitProtection = false;
-
-            // clear timeout
-            if (this.limitTimeout !== null) {
-                GLib.Source.remove(this.limitTimeout);
-                this.limitTimeout = null;
-            }
-            // set timeout to disable spam protection
-            this.limitTimeout = GLib.timeout_add(
-                GLib.PRIORITY_DEFAULT,
-                3000,
-                () => {
-                    this.limitProtection = true;
-                    return GLib.SOURCE_REMOVE;
-                },
-            );
+        // clear timeout
+        if (this.limitTimeout !== null) {
+            GLib.Source.remove(this.limitTimeout);
+            this.limitTimeout = null;
         }
+        // set timeout to disable spam protection
+        this.limitTimeout = GLib.timeout_add(
+            GLib.PRIORITY_DEFAULT,
+            100000,
+            () => {
+                this.stopRecord(false);
+                return GLib.SOURCE_REMOVE;
+            },
+        );
     }
 
     /**
