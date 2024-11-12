@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-12 17:02-0300\n"
+"POT-Creation-Date: 2024-11-12 17:04-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -128,6 +128,10 @@ msgstr ""
 msgid "I'm in"
 msgstr ""
 
+#: src/ai/gemini.js:275
+msgid "and today is"
+msgstr ""
+
 #: src/ai/gemini.js:279
 msgid "Who are you?"
 msgstr ""
@@ -137,7 +141,7 @@ msgid "and"
 msgstr ""
 
 #: src/ai/gemini.js:283
-msgid "How are you?"
+msgid "How are you"
 msgstr ""
 
 #: src/ai/gemini.js:286

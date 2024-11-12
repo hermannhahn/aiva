@@ -272,7 +272,7 @@ export class GoogleGemini {
             ' ' +
             this.app.userSettings.LOCATION +
             ' ' +
-            'and today is' +
+            _('and today is') +
             ' ' +
             date +
             '. ' +
@@ -280,8 +280,8 @@ export class GoogleGemini {
             ' ' +
             _('and') +
             ' ' +
-            _('How are you?') +
-            '. ';
+            _('How are you') +
+            '? ';
         const instructions =
             _('If any of my interactions include a request to run something') +
             ' ' +

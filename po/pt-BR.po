@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-12 17:02-0300\n"
+"POT-Creation-Date: 2024-11-12 17:04-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -135,6 +135,10 @@ msgstr "Olá, eu sou"
 msgid "I'm in"
 msgstr "Eu estou em"
 
+#: src/ai/gemini.js:275
+msgid "and today is"
+msgstr ""
+
 #: src/ai/gemini.js:279
 msgid "Who are you?"
 msgstr "Quem é você?"
@@ -145,7 +149,7 @@ msgstr "e"
 
 #: src/ai/gemini.js:283
 #, fuzzy
-msgid "How are you?"
+msgid "How are you"
 msgstr "Quem é você?"
 
 #: src/ai/gemini.js:286
