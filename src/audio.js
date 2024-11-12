@@ -176,6 +176,7 @@ export class Audio {
         // Transcribe audio
         if (tts) {
             this.app.chat.addQuestion(_('Transcribing...'));
+            this.app.chat.setStatusIcon('⌛');
             this.app.azure.transcribe(this.questionPath);
         }
     }
