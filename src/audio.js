@@ -128,7 +128,7 @@ export class Audio {
             GLib.PRIORITY_DEFAULT,
             100000,
             () => {
-                this.stopRecord();
+                this.stopRecord(false);
             },
         );
 
@@ -157,9 +157,10 @@ export class Audio {
     }
 
     /**
+     * @param {boolean} [tts=true]
      * @description stop recording and transcribe
      */
-    stopRecord() {
+    stopRecord(tts = true) {
         clearTimeout(this.afkProtectionTimeout);
         if (!this.isRecording) {
             this.app.log('Recording already stopped.');
@@ -173,8 +174,10 @@ export class Audio {
         this.app.log('Recording stopped successfully.');
 
         // Transcribe audio
-        this.app.chat.addQuestion(_('Transcribing...'));
-        this.app.azure.transcribe(this.questionPath);
+        if (tts) {
+            this.app.chat.addQuestion(_('Transcribing...'));
+            this.app.azure.transcribe(this.questionPath);
+        }
     }
 
     /**
