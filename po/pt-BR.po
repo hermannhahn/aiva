@@ -107,7 +107,7 @@ msgstr "Peço desculpas, eu não posso responder a esta pergunta."
 #, fuzzy
 msgid "Sorry, I can't do this now. Try again later."
 msgstr ""
-"Peço desculpas, eu não posso fazer isso agora. Tente novamente mais tarde."
+"Eu não posso fazer isso agora. Tente novamente mais tarde."
 
 #: src/ai/gemini.js:221 src/ai/gemini.js:229 src/ai/gemini.js:237
 #, fuzzy
@@ -199,15 +199,15 @@ msgstr "false caso contrário"
 
 #: src/ai/gemini.js:305
 msgid "text to be associated with the command line"
-msgstr ""
+msgstr "texto a ser associado com a linha de comando"
 
 #: src/ai/gemini.js:305
 msgid "informing action in success case"
-msgstr ""
+msgstr "informando ação no caso de sucesso"
 
 #: src/ai/gemini.js:305
 msgid "or failure text"
-msgstr ""
+msgstr "ou texto de fracasso"
 
 #: src/ai/gemini.js:306
 #, fuzzy
@@ -224,15 +224,15 @@ msgstr "Não use sudo"
 
 #: src/ai/gemini.js:307
 msgid "Prefer browser, firefox and google websites"
-msgstr ""
+msgstr "Preferir navegador, firefox e sites do google"
 
 #: src/ai/gemini.js:307
 msgid "Never generate destructive commands"
-msgstr ""
+msgstr "Nunca gere comandos destrutivos"
 
 #: src/ai/gemini.js:308
 msgid "Response example"
-msgstr ""
+msgstr "Exemplo de resposta"
 
 #: src/ai/gemini.js:309
 msgid "Request"
@@ -377,11 +377,11 @@ msgstr "Me dê um momento para organizar isso..."
 
 #: src/utils/utils.js:384
 msgid "Leitura finalizada!"
-msgstr ""
+msgstr "Leitura finalizada!"
 
 #: src/utils/utils.js:388 src/utils/utils.js:390
 msgid "Failed to get text from clipboard"
-msgstr ""
+msgstr "Falha ao obter texto da área de transferência"
 
 #: src/utils/utils.js:558
 #, fuzzy
