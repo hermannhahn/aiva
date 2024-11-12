@@ -194,7 +194,7 @@ export default class AivaExtension extends Extension {
      */
     enable() {
         // aiva instance
-        this._aiva = new Aiva({
+        this._app = new Aiva({
             clipboard: St.Clipboard.get_default(),
             settings: this.getSettings(),
             openSettings: this.openPreferences,
@@ -204,19 +204,22 @@ export default class AivaExtension extends Extension {
                 console.log('[AIVA] ' + message);
             },
         });
-        this._aiva.log('Starting AIVA...');
+        this._app.log('Starting AIVA...');
 
         // add to status bar
-        Main.panel.addToStatusArea('gvaGnomeExtension', this._aiva, 1);
+        Main.panel.addToStatusArea('gvaGnomeExtension', this._app, 1);
 
         // get and save location
-        this._aiva.log('Getting IP and location...');
+        this._app.log('Getting IP and location...');
+        this._app.utils.getAndSaveLocation();
+
+        // key events
         this._shortcutBinding = global.stage.connect(
             'key-press-event',
             this._onKeyPress.bind(this),
         );
 
-        this._aiva.log('AIVA started.');
+        this._app.log('AIVA started.');
     }
 
     /**
@@ -227,52 +230,19 @@ export default class AivaExtension extends Extension {
             global.display.disconnect(this._shortcutBinding);
             this._shortcutBinding = null;
         }
-        this._aiva.log('Disabling extension...');
-        this._aiva.destroy();
-        this._aiva = null;
+        this._app.log('Disabling extension...');
+        this._app.destroy();
+        this._app = null;
         console.log('Extension disabled.');
     }
 
     _onKeyPress(display, event) {
         const symbol = event.get_key_symbol();
-        this._aiva.log('Key pressed: ' + symbol);
-        if (this._aiva.spamProtection === true) {
-            this._aiva.log('Spam protection activated.');
-            // clear timeout
-            clearTimeout(this._aiva.spamProtectionTimeout);
-            this._aiva.spamProtectionTimeout = null;
-            // set timeout to disable spam protection
-            this._aiva.spamProtectionTimeout = GLib.timeout_add(
-                GLib.PRIORITY_DEFAULT,
-                3000,
-                () => {
-                    this._aiva.spamProtection = false;
-                },
-            );
-            return Clutter.EVENT_STOP;
-        }
+        this._app.log('Key pressed: ' + symbol);
         // Keybind: ESC [65307]
         // Clutter.KEY_ESC
-        if (
-            (symbol === 65307 || symbol === Clutter.KEY_F1) &&
-            this._aiva.spamProtection === false
-        ) {
-            this._aiva.spamProtection = true;
-            if (this._aiva.audio.isRecording) {
-                this._aiva.audio.stopRecord();
-            } else {
-                clearTimeout(this._aiva.spamProtectionTimeout);
-                this._aiva.spamProtectionTimeout = null;
-                // set timeout to disable spam protection
-                this._aiva.spamProtectionTimeout = GLib.timeout_add(
-                    GLib.PRIORITY_DEFAULT,
-                    3000,
-                    () => {
-                        this._aiva.spamProtection = false;
-                    },
-                );
-                this._aiva.audio.record();
-            }
+        if (symbol === 65307 || symbol === Clutter.KEY_F1) {
+            this._app.audio.record();
             return Clutter.EVENT_STOP; // Impede a propagação do evento
         }
         return Clutter.EVENT_PROPAGATE;
