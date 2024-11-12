@@ -614,26 +614,4 @@ export class Utils {
             );
         }
     }
-
-    getAndSaveLocation() {
-        let url = 'https://api.myip.com';
-        let _httpSession = new Soup.Session();
-        let message = Soup.Message.new('GET', url);
-        _httpSession.send_and_read_async(
-            message,
-            GLib.PRIORITY_DEFAULT,
-            null,
-            (_httpSession, result) => {
-                let bytes = _httpSession.send_and_read_finish(result);
-                let decoder = new TextDecoder('utf-8');
-                let response = decoder.decode(bytes.get_data());
-                const res = JSON.parse(response);
-                const ip = res.ip;
-                const country = res.country;
-                this.app.log('IP: ' + ip);
-                this.app.log('Country: ' + country);
-                this.app.userSettings.LOCATION = country;
-            },
-        );
-    }
 }
