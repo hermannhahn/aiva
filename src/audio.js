@@ -36,7 +36,6 @@ export class Audio {
      * @param {string} path
      */
     play(path) {
-        this.stop();
         this.speechStatusBar = this.app.ui.addStatusIcon('🔊');
 
         this.app.log('Playing audio... ' + path);
@@ -52,6 +51,7 @@ export class Audio {
             this.playingPid = process.pid;
             this.isPlaying = true;
             this.app.log('Audio played successfully.');
+            this.app.ui.removeStatusIcon(this.speechStatusBar);
         } else {
             this.app.log('Error playing audio.');
         }
