@@ -89,13 +89,9 @@
 }
 .status-bar-section {
     color: rgb(243, 232, 212);
-    height: 50px;
+    height: 25px;
     width: 100%;
-    text-wrap: wrap;
-    word-wrap: break-word;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
+    text-align: right;
 }
 .status-bar {
     color: rgb(243, 232, 212);
