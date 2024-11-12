@@ -71,6 +71,8 @@ export class Chat {
             `<b>${this.app.userSettings.USERNAME}:</b> ${text}`,
         );
         this.app.ui.inputChat = inputChat;
+        this.app.ui.waitStatusBar = this.app.ui.addStatusIcon('⌛');
+
         if (speech) {
             this.app.azure.tts(text);
         }
