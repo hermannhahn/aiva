@@ -14,7 +14,6 @@ const DEBUG = true;
 import St from 'gi://St';
 import GObject from 'gi://GObject';
 import Clutter from 'gi://Clutter';
-import Soup from 'gi://Soup';
 import GLib from 'gi://GLib';
 import {
     Extension,
@@ -215,25 +214,6 @@ export default class AivaExtension extends Extension {
         this._shortcutBinding = global.stage.connect(
             'key-press-event',
             this._onKeyPress.bind(this),
-        );
-        let url = 'https://api.myip.com';
-        let _httpSession = new Soup.Session();
-        let message = Soup.Message.new('GET', url);
-        _httpSession.send_and_read_async(
-            message,
-            GLib.PRIORITY_DEFAULT,
-            null,
-            (_httpSession, result) => {
-                let bytes = _httpSession.send_and_read_finish(result);
-                let decoder = new TextDecoder('utf-8');
-                let response = decoder.decode(bytes.get_data());
-                const res = JSON.parse(response);
-                const ip = res.ip;
-                const country = res.country;
-                this._aiva.log('IP: ' + ip);
-                this._aiva.log('Country: ' + country);
-                this._aiva.userSettings.LOCATION = country;
-            },
         );
 
         this._aiva.log('AIVA started.');
