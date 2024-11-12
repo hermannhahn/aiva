@@ -16,11 +16,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/audio.js:159 src/ai/azure.js:150
-#, fuzzy
-msgid "Transcribing..."
-msgstr "Transcrevendo..."
-
 #: src/interpreter.js:42
 msgid "computer"
 msgstr "computador"
@@ -87,6 +82,11 @@ msgstr "Iniciando a leitura..."
 #, fuzzy
 msgid "Sorry, I'm having connection trouble. Please try again."
 msgstr "Estou tendo problemas de conexão. Por favor, tente novamente."
+
+#: src/ai/azure.js:150
+#, fuzzy
+msgid "Transcribing..."
+msgstr "Transcrevendo..."
 
 #: src/ai/azure.js:159 src/ai/azure.js:183 src/ai/azure.js:198
 msgid "Transcribe error!"

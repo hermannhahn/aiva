@@ -17,10 +17,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/audio.js:159 src/ai/azure.js:150
-msgid "Transcribing..."
-msgstr ""
-
 #: src/interpreter.js:42
 msgid "computer"
 msgstr ""
@@ -85,6 +81,10 @@ msgstr ""
 #: src/ai/azure.js:133 src/ai/gemini.js:106 src/ai/gemini.js:197
 #: src/utils/utils.js:293
 msgid "Sorry, I'm having connection trouble. Please try again."
+msgstr ""
+
+#: src/ai/azure.js:150
+msgid "Transcribing..."
 msgstr ""
 
 #: src/ai/azure.js:159 src/ai/azure.js:183 src/ai/azure.js:198
