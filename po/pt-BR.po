@@ -156,13 +156,12 @@ msgstr "Como vai você?"
 #, fuzzy
 msgid "If any of my interactions includes"
 msgstr ""
-"Se alguma das minhas interações incluir uma solicitação para executar algo"
+"Se alguma das minhas interações incluir"
 
 #: src/ai/gemini.js:288
 #, fuzzy
 msgid "a request to run something"
-msgstr ""
-"Se alguma das minhas interações incluir uma solicitação para executar algo"
+msgstr "uma solicitação para executar algo"
 
 #: src/ai/gemini.js:290
 msgid "on my computer or search for something"
