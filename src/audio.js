@@ -84,18 +84,46 @@ export class Audio {
             this.app.log('Recording stopped.');
             return;
         }
-        this.isRecording = true;
-        this.app.log('Recording...');
 
         // afk protection
         clearTimeout(this.afkProtectionTimeout);
         this.afkProtectionTimeout = null;
-        // set timeout to disable spam protection
         this.afkProtectionTimeout = GLib.timeout_add(
             GLib.PRIORITY_DEFAULT,
             100000,
             () => {
                 this.stopRecord();
+            },
+        );
+
+        if (this.app.spamProtection === true) {
+            this.app.log('Spam protection activated.');
+            // clear timeout
+            clearTimeout(this.app.spamProtectionTimeout);
+            this.app.spamProtectionTimeout = null;
+            // set timeout to disable spam protection
+            this.app.spamProtectionTimeout = GLib.timeout_add(
+                GLib.PRIORITY_DEFAULT,
+                3000,
+                () => {
+                    this.app.spamProtection = false;
+                },
+            );
+            return;
+        }
+
+        this.isRecording = true;
+        this.app.spamProtection = true;
+        this.app.log('Recording...');
+
+        clearTimeout(this.app.spamProtectionTimeout);
+        this.app.spamProtectionTimeout = null;
+        // set timeout to disable spam protection
+        this.app.spamProtectionTimeout = GLib.timeout_add(
+            GLib.PRIORITY_DEFAULT,
+            3000,
+            () => {
+                this.app.spamProtection = false;
             },
         );
 
