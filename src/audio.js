@@ -25,6 +25,10 @@ export class Audio {
         this.playingPid = 0;
         this.pipeline = null;
         this.questionPath = null;
+        this.spamProtection = false;
+        this.afkProtectionTimeout = null;
+        this.spamProtectionTimeout = null;
+        this.app.log('Audio loaded.');
     }
 
     /**
@@ -96,34 +100,34 @@ export class Audio {
             },
         );
 
-        if (this.app.spamProtection === true) {
+        if (this.spamProtection === true) {
             this.app.log('Spam protection activated.');
             // clear timeout
-            clearTimeout(this.app.spamProtectionTimeout);
-            this.app.spamProtectionTimeout = null;
+            clearTimeout(this.spamProtectionTimeout);
+            this.spamProtectionTimeout = null;
             // set timeout to disable spam protection
-            this.app.spamProtectionTimeout = GLib.timeout_add(
+            this.spamProtectionTimeout = GLib.timeout_add(
                 GLib.PRIORITY_DEFAULT,
                 3000,
                 () => {
-                    this.app.spamProtection = false;
+                    this.spamProtection = false;
                 },
             );
             return;
         }
 
         this.isRecording = true;
-        this.app.spamProtection = true;
+        this.spamProtection = true;
         this.app.log('Recording...');
 
-        clearTimeout(this.app.spamProtectionTimeout);
-        this.app.spamProtectionTimeout = null;
+        clearTimeout(this.spamProtectionTimeout);
+        this.spamProtectionTimeout = null;
         // set timeout to disable spam protection
-        this.app.spamProtectionTimeout = GLib.timeout_add(
+        this.spamProtectionTimeout = GLib.timeout_add(
             GLib.PRIORITY_DEFAULT,
             3000,
             () => {
-                this.app.spamProtection = false;
+                this.spamProtection = false;
             },
         );
 

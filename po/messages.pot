@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-11 22:24-0300\n"
+"POT-Creation-Date: 2024-11-11 22:25-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/audio.js:171
+#: src/audio.js:175
 msgid "Transcribing..."
 msgstr ""
 
