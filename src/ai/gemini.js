@@ -287,7 +287,7 @@ export class GoogleGemini {
             ' ' +
             _('a request to run something') +
             ' ' +
-            _('on my computer or search for something') +
+            _('like search on web, open apps or websites') +
             ', ' +
             _('ignore, respond only and exactly with the word') +
             ': ' +

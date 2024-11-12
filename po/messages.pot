@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-12 18:06-0300\n"
+"POT-Creation-Date: 2024-11-12 18:08-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -153,7 +153,7 @@ msgid "a request to run something"
 msgstr ""
 
 #: src/ai/gemini.js:290
-msgid "on my computer or search for something"
+msgid "like search on web, open apps or websites"
 msgstr ""
 
 #: src/ai/gemini.js:292
