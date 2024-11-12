@@ -160,7 +160,7 @@ msgstr "uma solicitação para executar algo"
 
 #: src/ai/gemini.js:290
 msgid "like search on web, open apps or websites"
-msgstr ""
+msgstr "como pesquisar na web, abrir aplicativos ou sites"
 
 #: src/ai/gemini.js:292
 msgid "ignore, respond only and exactly with the word"
