@@ -56,7 +56,6 @@ export class Audio {
                 this.app.log('Error playing audio.');
             }
             // get process status
-            process.wait_for_child(this.stop);
         } else {
             this.app.log('Audio already playing.');
             this.stop();
