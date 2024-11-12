@@ -15,6 +15,7 @@ import St from 'gi://St';
 import GObject from 'gi://GObject';
 import Clutter from 'gi://Clutter';
 import GLib from 'gi://GLib';
+import Soup from 'gi://Soup';
 import {
     Extension,
     gettext as _,
@@ -78,7 +79,7 @@ const Aiva = GObject.registerClass(
                 AZURE_SPEECH_VOICE: settings.get_string('azure-speech-voice'),
                 GEMINI_API_KEY: settings.get_string('gemini-api-key'),
                 HISTORY_FILE: GLib.build_filenamev([EXT_DIR, 'history.json']),
-                LOCATION: 'Unknown',
+                LOCATION: this._getLocation(),
                 RECURSIVE_TALK: settings.get_boolean('log-history'),
                 USERNAME: GLib.get_real_name(),
             };
@@ -181,6 +182,25 @@ const Aiva = GObject.registerClass(
         logError(message) {
             this.logger.logError(message);
         }
+
+        _getLocation() {
+            let url = 'https://api.myip.com';
+            let _httpSession = new Soup.Session();
+            let message = Soup.Message.new('GET', url);
+            _httpSession.send_and_read_async(
+                message,
+                GLib.PRIORITY_DEFAULT,
+                null,
+                (_httpSession, result) => {
+                    let bytes = _httpSession.send_and_read_finish(result);
+                    let decoder = new TextDecoder('utf-8');
+                    let response = decoder.decode(bytes.get_data());
+                    const res = JSON.parse(response);
+                    const country = res.country;
+                    return country;
+                },
+            );
+        }
     },
 );
 
@@ -207,10 +227,6 @@ export default class AivaExtension extends Extension {
 
         // add to status bar
         Main.panel.addToStatusArea('gvaGnomeExtension', this._app, 1);
-
-        // get and save location
-        this._app.log('Getting IP and location...');
-        this._app.utils.getAndSaveLocation();
 
         // key events
         this._shortcutBinding = global.stage.connect(
