@@ -119,12 +119,6 @@ export class UI {
         // Separator
         this.newSeparator = new PopupMenu.PopupSeparatorMenuItem();
 
-        this.waitStatusBar = new PopupMenu.PopupMenuItem('', {
-            style_class: 'status-bar',
-            can_focus: false,
-            label: '⌛',
-        });
-
         // Initialize
         this._createApp();
         this._addItems();
