@@ -55,11 +55,11 @@ export class Audio {
             } else {
                 this.app.log('Error playing audio.');
             }
-            this.app.ui.removeStatusIcon(this.speechStatusBar);
+            // get process status
+            process.wait_for_child(this.stop);
         } else {
             this.app.log('Audio already playing.');
             this.stop();
-            this.play(path);
         }
     }
 
@@ -67,19 +67,22 @@ export class Audio {
      * @description stop playing
      */
     stop() {
+        this.app.ui.removeStatusIcon(this.speechStatusBar);
+        this.app.log('Stopping audio...');
         if (!this.isPlaying) {
             this.app.log('Audio not playing.');
             return;
         }
         this.isPlaying = false;
-        this.app.log('Stopping audio...');
-        this.app.ui.removeStatusIcon(this.speechStatusBar);
 
         // Kill player pid
-        GLib.spawn_command_line_async('kill ' + this.playingPid);
-        this.app.log(
-            'Audio stopped successfully. [PID: ' + this.playingPid + ']',
-        );
+        let result = GLib.spawn_command_line_async('kill ' + this.playingPid);
+        // if success
+        if (result.returncode === 0) {
+            this.app.log('Audio stopped successfully.');
+        } else {
+            this.app.log('Error stopping audio. PID: ' + this.playingPid);
+        }
     }
 
     /**
