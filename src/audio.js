@@ -93,6 +93,7 @@ export class Audio {
             this.spamBlock();
             return;
         }
+        this.spamProtection = true;
 
         // Stop recording if recording
         if (this.isRecording) {
@@ -101,15 +102,11 @@ export class Audio {
             return;
         }
 
-        // enable spam protection
-        this.spamProtection = true;
-        // enable limit recording time
-        this.limitProtection = true;
-
         // limit protection
         if (this.limitProtection) {
             this.recodingTimeout();
         }
+        this.limitProtection = true;
 
         // Start recording
         this.app.log('Recording...');
