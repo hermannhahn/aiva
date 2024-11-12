@@ -162,7 +162,7 @@ export class GoogleGemini {
                     let jsonResponse = {};
                     try {
                         jsonResponse = JSON.parse(aiResponse);
-                        this.app.log('Parsed Response: ' + aiResponse);
+                        // this.app.log('Parsed Response: ' + aiResponse);
                         // eslint-disable-next-line no-unused-vars
                     } catch (error) {
                         let cleanedResponse = aiResponse.replace(
@@ -170,7 +170,7 @@ export class GoogleGemini {
                             '$1',
                         );
                         cleanedResponse = `{${cleanedResponse}}`;
-                        this.app.log('Cleaned Response: ' + cleanedResponse);
+                        // this.app.log('Cleaned Response: ' + cleanedResponse);
                         try {
                             jsonResponse = JSON.parse(cleanedResponse);
                             // eslint-disable-next-line no-unused-vars
