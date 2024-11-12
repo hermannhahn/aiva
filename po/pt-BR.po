@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-12 17:30-0300\n"
+"POT-Creation-Date: 2024-11-12 17:53-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -139,7 +139,6 @@ msgstr "Eu estou em"
 msgid "and today is"
 msgstr "e hoje é"
 
-
 #: src/ai/gemini.js:279
 msgid "Who are you?"
 msgstr "Quem é você?"
@@ -154,107 +153,114 @@ msgid "How are you"
 msgstr "Como vai você?"
 
 #: src/ai/gemini.js:286
-msgid "If any of my interactions include a request to run something"
+#, fuzzy
+msgid "If any of my interactions includes"
 msgstr ""
 "Se alguma das minhas interações incluir uma solicitação para executar algo"
 
 #: src/ai/gemini.js:288
+#, fuzzy
+msgid "a request to run something"
+msgstr ""
+"Se alguma das minhas interações incluir uma solicitação para executar algo"
+
+#: src/ai/gemini.js:290
 msgid "on my computer or search for something"
 msgstr "no meu computador ou pesquisar algo"
 
-#: src/ai/gemini.js:290
+#: src/ai/gemini.js:292
 msgid "ignore, respond only and exactly with the word"
 msgstr "ignore, responda somente e exatamente com a palavra"
 
-#: src/ai/gemini.js:294
+#: src/ai/gemini.js:296
 msgid "otherwise respond normally."
 msgstr "caso contrário, responda normalmente."
 
-#: src/ai/gemini.js:300
+#: src/ai/gemini.js:302
 msgid "For the request"
 msgstr "Para a solicitação"
 
-#: src/ai/gemini.js:300
+#: src/ai/gemini.js:302
 #, fuzzy
 msgid "Generate a command line for this request"
 msgstr "Gerar uma linha de comando que"
 
-#: src/ai/gemini.js:301
+#: src/ai/gemini.js:303
 msgid "Return a JSON with the following keys"
 msgstr "Retorne um JSON com as seguintes chaves"
 
-#: src/ai/gemini.js:302
+#: src/ai/gemini.js:304
 #, fuzzy
 msgid "true if it possible to generate"
 msgstr "true se for possível ser gerado"
 
-#: src/ai/gemini.js:302
+#: src/ai/gemini.js:304
 #, fuzzy
 msgid "a Linux Ubuntu terminal command line to the request type"
 msgstr "uma linha de comando Linux Ubuntu para esta solicitação"
 
-#: src/ai/gemini.js:302
+#: src/ai/gemini.js:304
 msgid "false otherwise"
 msgstr "false caso contrário"
 
-#: src/ai/gemini.js:303
+#: src/ai/gemini.js:305
 msgid "text to be associated with the command line"
 msgstr ""
 
-#: src/ai/gemini.js:303
+#: src/ai/gemini.js:305
 msgid "informing action in success case"
 msgstr ""
 
-#: src/ai/gemini.js:303
+#: src/ai/gemini.js:305
 msgid "or failure text"
-msgstr ""
-
-#: src/ai/gemini.js:304
-#, fuzzy
-msgid "command line for linux ubuntu that fulfills the request"
-msgstr "gerar uma linha de comando Linux Ubuntu que atenda a solicitação."
-
-#: src/ai/gemini.js:305
-msgid "Rules for commandline value"
-msgstr "Regras para o valor da linha de comando"
-
-#: src/ai/gemini.js:305
-msgid "Do not use sudo"
-msgstr "Não use sudo"
-
-#: src/ai/gemini.js:305
-msgid "Prefer browser, firefox and google websites"
-msgstr ""
-
-#: src/ai/gemini.js:305
-msgid "Never generate destructive commands"
 msgstr ""
 
 #: src/ai/gemini.js:306
 #, fuzzy
+msgid "command line for linux ubuntu that fulfills the request"
+msgstr "gerar uma linha de comando Linux Ubuntu que atenda a solicitação."
+
+#: src/ai/gemini.js:307
+msgid "Rules for commandline value"
+msgstr "Regras para o valor da linha de comando"
+
+#: src/ai/gemini.js:307
+msgid "Do not use sudo"
+msgstr "Não use sudo"
+
+#: src/ai/gemini.js:307
+msgid "Prefer browser, firefox and google websites"
+msgstr ""
+
+#: src/ai/gemini.js:307
+msgid "Never generate destructive commands"
+msgstr ""
+
+#: src/ai/gemini.js:308
+#, fuzzy
 msgid "Examples of response"
 msgstr "Exemplos de respostas"
 
-#: src/ai/gemini.js:307
+#: src/ai/gemini.js:309
 msgid "Request"
 msgstr "Solicitação"
 
-#: src/ai/gemini.js:307
+#: src/ai/gemini.js:309
 #, fuzzy
 msgid "Generate a command line that search for santos ferry crossing"
 msgstr ""
 "Gere uma linha de comando que pesquise pelo travessia de balsa de santos"
 
-#: src/ai/gemini.js:308
+#: src/ai/gemini.js:310
 msgid "JSON Response"
 msgstr "Resposta JSON"
 
-#: src/ai/gemini.js:308
+#: src/ai/gemini.js:310
 #, fuzzy
 msgid "Searching for santos boat crossing..."
 msgstr "Pesquisando travessia de balsa de santos..."
 
-#: src/ai/gemini.js:308
+#: src/ai/gemini.js:310
 #, fuzzy
 msgid "boat+crossing+santos"
 msgstr "travessia+balsa+santos"

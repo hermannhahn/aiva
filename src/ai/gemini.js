@@ -283,7 +283,9 @@ export class GoogleGemini {
             _('How are you') +
             '? ';
         const instructions =
-            _('If any of my interactions include a request to run something') +
+            _('If any of my interactions includes') +
+            ' ' +
+            _('a request to run something') +
             ' ' +
             _('on my computer or search for something') +
             ', ' +
