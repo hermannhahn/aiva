@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-12 13:59-0300\n"
+"POT-Creation-Date: 2024-11-12 14:01-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/audio.js:159
+#: src/audio.js:159 src/ai/azure.js:150
 #, fuzzy
 msgid "Transcribing..."
 msgstr "Transcrevendo..."
@@ -88,12 +88,12 @@ msgstr "Iniciando a leitura..."
 msgid "Sorry, I'm having connection trouble. Please try again."
 msgstr "Estou tendo problemas de conexão. Por favor, tente novamente."
 
-#: src/ai/azure.js:157 src/ai/azure.js:181 src/ai/azure.js:196
+#: src/ai/azure.js:159 src/ai/azure.js:183 src/ai/azure.js:198
 msgid "Transcribe error!"
 msgstr "Erro na transcrição!"
 
-#: src/ai/azure.js:159 src/ai/azure.js:183 src/ai/azure.js:198
-#: src/ai/azure.js:243 src/ai/azure.js:253
+#: src/ai/azure.js:161 src/ai/azure.js:185 src/ai/azure.js:200
+#: src/ai/azure.js:245 src/ai/azure.js:255
 #, fuzzy
 msgid "Sorry, I'm having trouble to listen you. Please try again."
 msgstr "Estou tendo dificuldade de te escutar. Por favor, tente novamente."

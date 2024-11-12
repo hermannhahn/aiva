@@ -147,6 +147,8 @@ export class MicrosoftAzure {
      */
     transcribe(path) {
         this.transcribeStatusIcon = this.app.ui.addStatusIcon('📝');
+        this.app.chat.addQuestion(_('Transcribing...'));
+
         // Load audio file
         let file = Gio.File.new_for_path(path);
 
