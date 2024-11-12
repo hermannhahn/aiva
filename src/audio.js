@@ -86,16 +86,16 @@ export class Audio {
      * @description start recording
      */
     record() {
-        // Stop recording if recording
-        if (this.isRecording && !this.spamProtection) {
-            this.stopRecord();
-            this.app.log('Recording stopped.');
-            return;
-        }
-
         // spam protection
         if (this.spamProtection === true) {
             this.spamBlock();
+            return;
+        }
+
+        // Stop recording if recording
+        if (this.isRecording) {
+            this.stopRecord();
+            this.app.log('Recording stopped.');
             return;
         }
 
