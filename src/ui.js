@@ -86,6 +86,13 @@ export class UI {
             can_focus: false,
         });
 
+        // Create status bar section
+        this.statusBarSection = new PopupMenu.PopupBaseMenuItem({
+            style_class: 'status-bar-section',
+            reactive: false,
+            can_focus: false,
+        });
+
         // Create scrollbar
         this.scrollView = new St.ScrollView({
             style_class: 'chat-scroll-section',
@@ -111,6 +118,11 @@ export class UI {
 
         // Separator
         this.newSeparator = new PopupMenu.PopupSeparatorMenuItem();
+
+        this.statusBar = new PopupMenu.PopupMenuItem('', {
+            style_class: 'status-bar',
+            can_focus: false,
+        });
 
         // Initialize
         this._createApp();
