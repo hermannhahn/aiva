@@ -87,6 +87,18 @@ export class Audio {
         this.isRecording = true;
         this.app.log('Recording...');
 
+        // afk protection
+        clearTimeout(this.afkProtectionTimeout);
+        this.afkProtectionTimeout = null;
+        // set timeout to disable spam protection
+        this.afkProtectionTimeout = GLib.timeout_add(
+            GLib.PRIORITY_DEFAULT,
+            100000,
+            () => {
+                this.stopRecord();
+            },
+        );
+
         // Create temporary file for audio recording
         this.questionPath = 'gva_temp_audio_XXXXXX.wav';
 
@@ -115,8 +127,9 @@ export class Audio {
      * @description stop recording and transcribe
      */
     stopRecord() {
+        clearTimeout(this.afkProtectionTimeout);
         if (!this.isRecording) {
-            this.app.log('Recording not started.');
+            this.app.log('Recording already stopped.');
             return;
         }
         this.isRecording = false;
