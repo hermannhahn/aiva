@@ -276,12 +276,12 @@ export class UI {
         return copyButton;
     }
 
-    addStatusIcon(label) {
+    addStatusIcon(emoji) {
         let icon = new PopupMenu.PopupMenuItem('', {
             style_class: 'status-bar',
             can_focus: false,
         });
-        icon.label.clutter_text.set_markup(label);
+        icon.label.clutter_text.set_markup(emoji);
         this.statusBarSection.add_child(icon);
         return icon;
     }
