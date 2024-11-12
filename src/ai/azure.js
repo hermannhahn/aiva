@@ -39,7 +39,7 @@ export class MicrosoftAzure {
             return;
         }
 
-        this.speechStatusBar = this.app.ui.addStatusIcon('🔊');
+        this.generateStatusBar = this.app.ui.addStatusIcon('📥');
 
         // API URL
         const apiUrl = `https://${this.AZURE_SPEECH_REGION}.tts.speech.microsoft.com/cognitiveservices/v1`;
@@ -67,7 +67,7 @@ export class MicrosoftAzure {
             this.app.chat.editResponse(
                 _("Sorry, I'm having connection trouble. Please try again."),
             );
-            this.app.ui.removeStatusIcon(this.speechStatusBar);
+            this.app.ui.removeStatusIcon(this.generateStatusBar);
             return;
         }
 
@@ -80,7 +80,7 @@ export class MicrosoftAzure {
             this.app.chat.editResponse(
                 _("Sorry, I'm having connection trouble. Please try again."),
             );
-            this.app.ui.removeStatusIcon(this.speechStatusBar);
+            this.app.ui.removeStatusIcon(this.generateStatusBar);
             return;
         }
 
@@ -115,7 +115,7 @@ export class MicrosoftAzure {
                 if (success) {
                     this.app.log('Audio file saved to: ' + tempFilePath);
                     // Play audio
-                    this.app.ui.removeStatusIcon(this.speechStatusBar);
+                    this.app.ui.removeStatusIcon(this.generateStatusBar);
                     this.app.audio.play(tempFilePath);
                 } else {
                     this.app.log('Requisition error: ' + stderr);
@@ -124,7 +124,7 @@ export class MicrosoftAzure {
                             "Sorry, I'm having connection trouble. Please try again.",
                         ),
                     );
-                    this.app.ui.removeStatusIcon(this.speechStatusBar);
+                    this.app.ui.removeStatusIcon(this.generateStatusBar);
                 }
             } catch (e) {
                 this.app.log('Error processing response: ' + e.message);
@@ -133,7 +133,7 @@ export class MicrosoftAzure {
                         "Sorry, I'm having connection trouble. Please try again.",
                     ),
                 );
-                this.app.ui.removeStatusIcon(this.speechStatusBar);
+                this.app.ui.removeStatusIcon(this.generateStatusBar);
             } finally {
                 // GLib.unlink(tempFilePath);
             }
