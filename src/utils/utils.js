@@ -555,7 +555,8 @@ export class Utils {
             parts: [
                 {
                     text:
-                        _('Hi! I am ') +
+                        _('Hi! I am') +
+                        ' ' +
                         this.app.userSettings.ASSIST_NAME +
                         _(', your helpfull assistant.'),
                 },
