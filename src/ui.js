@@ -280,8 +280,8 @@ export class UI {
         let icon = new PopupMenu.PopupMenuItem('', {
             style_class: 'status-bar',
             can_focus: false,
-            label,
         });
+        icon.label.clutter_text.set_markup(label);
         this.statusBarSection.add_child(icon);
         return icon;
     }
