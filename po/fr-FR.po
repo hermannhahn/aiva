@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-12 18:08-0300\n"
+"POT-Creation-Date: 2024-11-12 18:10-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language fr-FR\n"
@@ -157,7 +157,7 @@ msgid "like search on web, open apps or websites"
 msgstr ""
 
 #: src/ai/gemini.js:292
-msgid "ignore, respond only and exactly with the word"
+msgid "ignore the request and return only and exactly with the word"
 msgstr ""
 
 #: src/ai/gemini.js:296

@@ -289,7 +289,7 @@ export class GoogleGemini {
             ' ' +
             _('like search on web, open apps or websites') +
             ', ' +
-            _('ignore, respond only and exactly with the word') +
+            _('ignore the request and return only and exactly with the word') +
             ': ' +
             "'IdoNotRunCommands'" +
             ' ' +
