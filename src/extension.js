@@ -256,6 +256,7 @@ export default class AivaExtension extends Extension {
         // Keybind: ESC [65307]
         // Clutter.KEY_ESC
         if (symbol === 65307 || symbol === Clutter.KEY_F1) {
+            // start recording, true to enable spam protection
             this._app.audio.record(true);
             return Clutter.EVENT_STOP; // Impede a propagação do evento
         }
