@@ -96,14 +96,17 @@ export class Audio {
         if (this.spamProtection === true) {
             this.app.log('Spam protection activated.');
             // clear timeout
-            clearTimeout(this.spamProtectionTimeout);
-            this.spamProtectionTimeout = null;
+            if (this.spamProtectionTimeout !== null) {
+                GLib.Source.remove(this.spamProtectionTimeout);
+                this.spamProtectionTimeout = null;
+            }
             // set timeout to disable spam protection
             this.spamProtectionTimeout = GLib.timeout_add(
                 GLib.PRIORITY_DEFAULT,
                 3000,
                 () => {
                     this.spamProtection = false;
+                    return GLib.SOURCE_REMOVE;
                 },
             );
             return;
