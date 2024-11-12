@@ -71,7 +71,6 @@ export class Chat {
             `<b>${this.app.userSettings.USERNAME}:</b> ${text}`,
         );
         this.app.ui.inputChat = inputChat;
-        this.waitStatusBar = this.app.ui.addStatusIcon('⌛');
 
         if (speech) {
             this.app.azure.tts(text);
@@ -98,7 +97,6 @@ export class Chat {
             this.app.log('Code copied to clipboard.');
         }
         this.app.utils.scrollToBottom();
-        this.app.ui.removeStatusIcon(this.waitStatusBar);
     }
 
     /**
@@ -151,7 +149,7 @@ export class Chat {
             this.app.utils.copyToClipboard(response.code);
             this.app.log('Code copied to clipboard.');
         }
-        this.app.utils.scrollToBottom();
         this.app.ui.removeStatusIcon(this.waitStatusBar);
+        this.app.utils.scrollToBottom();
     }
 }
