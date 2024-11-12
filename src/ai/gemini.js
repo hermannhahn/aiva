@@ -68,7 +68,7 @@ export class GoogleGemini {
                     // Safety
                     let safetyReason = this.safetyReason(question, res);
                     if (safetyReason) {
-                        if (safetyReason === 'executeLocalCommand') {
+                        if (safetyReason === 'IdoNotRunCommands') {
                             this.app.interpreter.voiceCommandInterpreter(
                                 question,
                             );
@@ -87,7 +87,7 @@ export class GoogleGemini {
 
                     // Command runner
                     if (
-                        aiResponse.toLowerCase().includes('executelocalcommand')
+                        aiResponse.toLowerCase().includes('idonotruncommands')
                     ) {
                         this.app.interpreter.voiceCommandInterpreter(question);
                         return;
@@ -242,7 +242,7 @@ export class GoogleGemini {
                         safetyRating.category ===
                         'HARM_CATEGORY_DANGEROUS_CONTENT'
                     ) {
-                        aiResponse = 'executeLocalCommand';
+                        aiResponse = 'IdoNotRunCommands';
                         // aiResponse =
                         //     _("Sorry, I can't answer this question.") +
                         //     ' ' +
@@ -289,7 +289,7 @@ export class GoogleGemini {
             ', ' +
             _('ignore, respond only and exactly with the word') +
             ': ' +
-            "'executeLocalCommand'" +
+            "'IdoNotRunCommands'" +
             ' ' +
             _('otherwise respond normally.');
         return introduction + instructions;
