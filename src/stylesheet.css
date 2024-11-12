@@ -77,7 +77,6 @@
 }
 .chat-section {
     overflow-y: auto;
-    color: rgb(243, 232, 212);
     text-wrap: wrap;
     word-wrap: break-word;
     padding-left: 10px;
@@ -86,6 +85,15 @@
 }
 .chat-section::selection {
     background-color: rgb(42, 42, 42);
+}
+.status-bar {
+    height: 50px;
+    width: 100%;
+    text-wrap: wrap;
+    word-wrap: break-word;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
 }
 .google-gemini-icon {
     background-image: url('assets/icon_gemini.png');
