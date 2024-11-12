@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-12 17:04-0300\n"
+"POT-Creation-Date: 2024-11-12 17:30-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -175,7 +175,7 @@ msgstr "Para a solicitação"
 
 #: src/ai/gemini.js:300
 #, fuzzy
-msgid "Generate a command line that"
+msgid "Generate a command line for this request"
 msgstr "Gerar uma linha de comando que"
 
 #: src/ai/gemini.js:301
@@ -188,7 +188,8 @@ msgid "true if it possible to generate"
 msgstr "true se for possível ser gerado"
 
 #: src/ai/gemini.js:302
-msgid "a Linux Ubuntu terminal command line to this request"
+#, fuzzy
+msgid "a Linux Ubuntu terminal command line to the request type"
 msgstr "uma linha de comando Linux Ubuntu para esta solicitação"
 
 #: src/ai/gemini.js:302
@@ -196,12 +197,20 @@ msgid "false otherwise"
 msgstr "false caso contrário"
 
 #: src/ai/gemini.js:303
-#, fuzzy
-msgid "generate a text to be spoken, informing success, failure or action"
-msgstr "texto para ser falado, informando sucesso, fracasso ou ação"
+msgid "text to be associated with the command line"
+msgstr ""
+
+#: src/ai/gemini.js:303
+msgid "informing action in success case"
+msgstr ""
+
+#: src/ai/gemini.js:303
+msgid "or failure text"
+msgstr ""
 
 #: src/ai/gemini.js:304
-msgid "generate a command line for linux ubuntu that fulfills the request."
+#, fuzzy
+msgid "command line for linux ubuntu that fulfills the request"
 msgstr "gerar uma linha de comando Linux Ubuntu que atenda a solicitação."
 
 #: src/ai/gemini.js:305
@@ -213,18 +222,12 @@ msgid "Do not use sudo"
 msgstr "Não use sudo"
 
 #: src/ai/gemini.js:305
-#, fuzzy
-msgid "Always use firefox to open sites, videos, music, and images."
-msgstr "Sempre use o firefox para abrir sites, vídeos, música e imagens."
+msgid "Prefer browser, firefox and google websites"
+msgstr ""
 
 #: src/ai/gemini.js:305
-#, fuzzy
-msgid ""
-"Use firefox for search, create, edit or open documents. Use Google Drive, "
-"Google Docs and Google Sheets websites."
+msgid "Never generate destructive commands"
 msgstr ""
-"Use o firefox para pesquisar, criar, editar ou abrir documentos. Use o "
-"Google Drive, Google Docs e Google Sheets."
 
 #: src/ai/gemini.js:306
 #, fuzzy
@@ -457,3 +460,19 @@ msgstr "Salvar"
 #: src/prefs.js:705
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
+
+#, fuzzy
+#~ msgid "generate a text to be spoken, informing success, failure or action"
+#~ msgstr "texto para ser falado, informando sucesso, fracasso ou ação"
+
+#, fuzzy
+#~ msgid "Always use firefox to open sites, videos, music, and images."
+#~ msgstr "Sempre use o firefox para abrir sites, vídeos, música e imagens."
+
+#, fuzzy
+#~ msgid ""
+#~ "Use firefox for search, create, edit or open documents. Use Google Drive, "
+#~ "Google Docs and Google Sheets websites."
+#~ msgstr ""
+#~ "Use o firefox para pesquisar, criar, editar ou abrir documentos. Use o "
+#~ "Google Drive, Google Docs e Google Sheets."

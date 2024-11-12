@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-12 17:09-0300\n"
+"POT-Creation-Date: 2024-11-12 17:30-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -165,7 +165,7 @@ msgid "For the request"
 msgstr ""
 
 #: src/ai/gemini.js:300
-msgid "Generate a command line that"
+msgid "Generate a command line for this request"
 msgstr ""
 
 #: src/ai/gemini.js:301
@@ -177,7 +177,7 @@ msgid "true if it possible to generate"
 msgstr ""
 
 #: src/ai/gemini.js:302
-msgid "a Linux Ubuntu terminal command line to this request"
+msgid "a Linux Ubuntu terminal command line to the request type"
 msgstr ""
 
 #: src/ai/gemini.js:302
@@ -185,11 +185,19 @@ msgid "false otherwise"
 msgstr ""
 
 #: src/ai/gemini.js:303
-msgid "generate a text to be spoken, informing success, failure or action"
+msgid "text to be associated with the command line"
+msgstr ""
+
+#: src/ai/gemini.js:303
+msgid "informing action in success case"
+msgstr ""
+
+#: src/ai/gemini.js:303
+msgid "or failure text"
 msgstr ""
 
 #: src/ai/gemini.js:304
-msgid "generate a command line for linux ubuntu that fulfills the request."
+msgid "command line for linux ubuntu that fulfills the request"
 msgstr ""
 
 #: src/ai/gemini.js:305
@@ -201,13 +209,11 @@ msgid "Do not use sudo"
 msgstr ""
 
 #: src/ai/gemini.js:305
-msgid "Always use firefox to open sites, videos, music, and images."
+msgid "Prefer browser, firefox and google websites"
 msgstr ""
 
 #: src/ai/gemini.js:305
-msgid ""
-"Use firefox for search, create, edit or open documents. Use Google Drive, "
-"Google Docs and Google Sheets websites."
+msgid "Never generate destructive commands"
 msgstr ""
 
 #: src/ai/gemini.js:306
