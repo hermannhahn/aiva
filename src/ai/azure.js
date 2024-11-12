@@ -233,6 +233,7 @@ export class MicrosoftAzure {
                     } else {
                         this.app.log('Nenhuma transcrição encontrada.');
                         this.app.chat.editQuestion('Transcribe error!');
+                        this.app.ui.removeStatusIcon(this.transcribeStatusIcon);
                         this.app.chat.editResponse(
                             _(
                                 "Sorry, I'm having trouble to listen you. Please try again.",
@@ -242,6 +243,7 @@ export class MicrosoftAzure {
                 } else {
                     this.app.log('Erro na requisição: ' + stderr);
                     this.app.chat.editQuestion('Transcribe error!');
+                    this.app.ui.removeStatusIcon(this.transcribeStatusIcon);
                     this.app.chat.editResponse(
                         _(
                             "Sorry, I'm having trouble to listen you. Please try again.",
@@ -251,6 +253,7 @@ export class MicrosoftAzure {
             } catch (e) {
                 this.app.log('Erro ao processar resposta: ' + e.message);
                 this.app.chat.editQuestion(e.message);
+                this.app.ui.removeStatusIcon(this.transcribeStatusIcon);
                 this.app.chat.editResponse(e.message);
             }
         });
