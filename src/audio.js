@@ -37,6 +37,7 @@ export class Audio {
      */
     play(path) {
         if (!this.isPlaying) {
+            this.speechStatusBar = this.app.ui.addStatusIcon('🗣️');
             this.app.log('Playing audio... ' + path);
             // Process sync, not async
             const process = GLib.spawn_async(
@@ -53,6 +54,7 @@ export class Audio {
             } else {
                 this.app.log('Error playing audio.');
             }
+            this.app.ui.removeStatusIcon(this.speechStatusBar);
         } else {
             this.app.log('Audio already playing.');
             this.stop();
@@ -70,6 +72,7 @@ export class Audio {
         }
         this.isPlaying = false;
         this.app.log('Stopping audio...');
+        this.app.ui.removeStatusIcon(this.speechStatusBar);
 
         // Kill player pid
         GLib.spawn_command_line_async('kill ' + this.playingPid);
@@ -109,6 +112,7 @@ export class Audio {
         this.isRecording = true;
         this.spamProtection = true;
         this.app.log('Recording...');
+        this.recordStatusBar = this.app.ui.addStatusIcon('🎤');
 
         clearTimeout(this.spamProtectionTimeout);
         this.spamProtectionTimeout = null;
@@ -154,6 +158,7 @@ export class Audio {
         });
 
         this.pipeline.init(null);
+        this.app.log('Recording started successfully.');
     }
 
     /**
@@ -167,6 +172,7 @@ export class Audio {
             return;
         }
         this.isRecording = false;
+        this.app.ui.removeStatusIcon(this.recordStatusBar);
         this.app.log('Stopping recording...');
 
         // Stop recording
@@ -176,7 +182,6 @@ export class Audio {
         // Transcribe audio
         if (tts) {
             this.app.chat.addQuestion(_('Transcribing...'));
-            this.app.chat.setStatusIcon('⌛');
             this.app.azure.transcribe(this.questionPath);
         }
     }
