@@ -237,7 +237,6 @@ export default class AivaExtension extends Extension {
 
     _onKeyPress(display, event) {
         const symbol = event.get_key_symbol();
-        this._app.log('Key pressed: ' + symbol);
         // Keybind: ESC [65307]
         // Clutter.KEY_ESC
         if (symbol === 65307 || symbol === Clutter.KEY_F1) {
