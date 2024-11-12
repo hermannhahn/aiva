@@ -137,7 +137,8 @@ msgstr "Eu estou em"
 
 #: src/ai/gemini.js:275
 msgid "and today is"
-msgstr ""
+msgstr "e hoje é"
+
 
 #: src/ai/gemini.js:279
 msgid "Who are you?"
@@ -150,7 +151,7 @@ msgstr "e"
 #: src/ai/gemini.js:283
 #, fuzzy
 msgid "How are you"
-msgstr "Quem é você?"
+msgstr "Como vai você?"
 
 #: src/ai/gemini.js:286
 msgid "If any of my interactions include a request to run something"
