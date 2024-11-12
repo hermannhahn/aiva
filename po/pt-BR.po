@@ -148,9 +148,8 @@ msgid "and"
 msgstr "e"
 
 #: src/ai/gemini.js:283
-#, fuzzy
 msgid "How are you"
-msgstr "Como vai você?"
+msgstr "Como vai você"
 
 #: src/ai/gemini.js:286
 #, fuzzy
