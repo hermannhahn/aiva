@@ -36,8 +36,8 @@ export class Audio {
      * @param {string} path
      */
     play(path) {
-        if (!this.isPlaying) {
-            this.speechStatusBar = this.app.ui.addStatusIcon('🔊');
+        this.stop();
+        this.speechStatusBar = this.app.ui.addStatusIcon('🔊');
 
             this.app.log('Playing audio... ' + path);
             // Process sync, not async
@@ -55,10 +55,6 @@ export class Audio {
             } else {
                 this.app.log('Error playing audio.');
             }
-            // get process status
-        } else {
-            this.app.log('Audio already playing.');
-            this.stop();
         }
     }
 
