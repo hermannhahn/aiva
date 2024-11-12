@@ -182,7 +182,7 @@ msgstr "Para a solicitação"
 #: src/ai/gemini.js:302
 #, fuzzy
 msgid "Generate a command line for this request"
-msgstr "Gerar uma linha de comando que"
+msgstr "Gerar uma linha de comando para esta solicitação"
 
 #: src/ai/gemini.js:303
 msgid "Return a JSON with the following keys"
