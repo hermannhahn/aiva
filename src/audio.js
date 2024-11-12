@@ -86,11 +86,6 @@ export class Audio {
      * @description start recording
      */
     record() {
-        // active spam protection
-        this.spamProtection = true;
-        // limit recording time
-        this.limitProtection = true;
-
         // Stop recording if recording
         if (this.isRecording && !this.spamProtection) {
             this.stopRecord();
@@ -112,6 +107,11 @@ export class Audio {
         this.app.log('Recording...');
         this.isRecording = true;
         this.recordStatusBar = this.app.ui.addStatusIcon('🎤');
+
+        // active spam protection
+        this.spamProtection = true;
+        // limit recording time
+        this.limitProtection = true;
 
         // Create temporary file for audio recording
         this.questionPath = 'gva_temp_audio_XXXXXX.wav';
