@@ -123,6 +123,7 @@ export class UI {
             style_class: 'status-bar',
             can_focus: false,
         });
+        this.statusBar.label.clutter_text.set_markup('⌛');
 
         // Initialize
         this._createApp();
@@ -150,6 +151,12 @@ export class UI {
         this.app.menu.addMenuItem(this.item);
         this.app.menu.style_class = 'menu';
 
+        // Add search entry, mic button, clear button and settings button to items container
+        this.item.add_child(this.searchEntry);
+        this.item.add_child(this.micButton);
+        this.item.add_child(this.clearButton);
+        this.item.add_child(this.settingsButton);
+
         // Add scrollview to menu box
         this.app.menu.box.add_child(this.scrollView);
         this.app.menu.box.style_class = 'menu-box';
@@ -157,11 +164,9 @@ export class UI {
         // Add chat to scrollbar
         this.scrollView.add_child(this.chatSection.actor);
 
-        // Add search entry, mic button, clear button and settings button to items container
-        this.item.add_child(this.searchEntry);
-        this.item.add_child(this.micButton);
-        this.item.add_child(this.clearButton);
-        this.item.add_child(this.settingsButton);
+        // Add statusBarSection
+        this.app.menu.box.add_child(this.statusBarSection);
+        this.statusBarSection.add_child(this.statusBar);
     }
 
     /**
