@@ -153,6 +153,8 @@ export class MicrosoftAzure {
             return;
         }
 
+        this.transcribeStatusIcon = this.app.ui.addStatusIcon('📝');
+
         // API URL
         const apiUrl = `https://${this.AZURE_SPEECH_REGION}.stt.speech.microsoft.com/speech/recognition/conversation/cognitiveservices/v1?language=${this.AZURE_SPEECH_LANGUAGE}`;
 
@@ -170,9 +172,11 @@ export class MicrosoftAzure {
         if (!success) {
             this.app.log('Error creating temporary audio file.');
             this.app.chat.editQuestion(_('Transcribe error!'));
+            this.waitStatusBar = this.app.ui.addStatusIcon('⌛');
             this.app.chat.editResponse(
                 _("Sorry, I'm having trouble to listen you. Please try again."),
             );
+            this.app.ui.removeStatusIcon(this.transcribeStatusIcon);
             return;
         }
 
@@ -184,9 +188,11 @@ export class MicrosoftAzure {
                 'Erro ao escrever no arquivo temporário: ' + e.message,
             );
             this.app.chat.editQuestion(_('Transcribe error!'));
+            this.waitStatusBar = this.app.ui.addStatusIcon('⌛');
             this.app.chat.editResponse(
                 _("Sorry, I'm having trouble to listen you. Please try again."),
             );
+            this.app.ui.removeStatusIcon(this.transcribeStatusIcon);
             return;
         }
 
@@ -222,6 +228,7 @@ export class MicrosoftAzure {
                     if (response && response.DisplayText) {
                         let transcription = response.DisplayText;
                         this.app.chat.editQuestion(transcription);
+                        this.app.ui.removeStatusIcon(this.transcribeStatusIcon);
                         this.app.interpreter.proccess(transcription);
                     } else {
                         this.app.log('Nenhuma transcrição encontrada.');
