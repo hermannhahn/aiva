@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-12 17:53-0300\n"
+"POT-Creation-Date: 2024-11-12 17:56-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -155,8 +155,7 @@ msgstr "Como vai você?"
 #: src/ai/gemini.js:286
 #, fuzzy
 msgid "If any of my interactions includes"
-msgstr ""
-"Se alguma das minhas interações incluir"
+msgstr "Se alguma das minhas interações incluir"
 
 #: src/ai/gemini.js:288
 #, fuzzy
@@ -176,12 +175,8 @@ msgid "otherwise respond normally."
 msgstr "caso contrário, responda normalmente."
 
 #: src/ai/gemini.js:302
-msgid "For the request"
-msgstr "Para a solicitação"
-
-#: src/ai/gemini.js:302
 #, fuzzy
-msgid "Generate a command line for this request"
+msgid "Generate a command line for the request"
 msgstr "Gerar uma linha de comando para esta solicitação"
 
 #: src/ai/gemini.js:303
@@ -236,9 +231,8 @@ msgid "Never generate destructive commands"
 msgstr ""
 
 #: src/ai/gemini.js:308
-#, fuzzy
-msgid "Examples of response"
-msgstr "Exemplos de respostas"
+msgid "Response example"
+msgstr ""
 
 #: src/ai/gemini.js:309
 msgid "Request"
@@ -466,6 +460,13 @@ msgstr "Salvar"
 #: src/prefs.js:705
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
+
+#~ msgid "For the request"
+#~ msgstr "Para a solicitação"
+
+#, fuzzy
+#~ msgid "Examples of response"
+#~ msgstr "Exemplos de respostas"
 
 #, fuzzy
 #~ msgid "generate a text to be spoken, informing success, failure or action"

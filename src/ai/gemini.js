@@ -299,13 +299,13 @@ export class GoogleGemini {
 
     commandRequest(request) {
         const response = `
-${_('For the request')}: "${_('Generate a command line for this request')}: ${request}"
+${_('Generate a command line for the request')}: ${request}
 ${_('Return a JSON with the following keys')}:
 'success' (${_('true if it possible to generate')} ${_('a Linux Ubuntu terminal command line to the request type')}, ${_('false otherwise')}),
 'response' (${_('text to be associated with the command line')}, ${_('informing action in success case')}, ${_('or failure text')}),
 'commandline' (${_('command line for linux ubuntu that fulfills the request')}).
 ${_('Rules for commandline value')}: ${_('Do not use sudo')}, ${_('Prefer browser, firefox and google websites')}, ${_('Never generate destructive commands')}.
-${_('Examples of response')}:
+${_('Response example')}:
 ${_('Request')}: "${_('Generate a command line that search for santos ferry crossing')}"
 ${_('JSON Response')}: {success: true, response: "${_('Searching for santos boat crossing...')}", commandline: "firefox https://www.google.com/search?q=${_('boat+crossing+santos')}"}
 `;
