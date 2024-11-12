@@ -93,12 +93,18 @@ export class Audio {
             return;
         }
 
+        // spam protection
         if (this.spamProtection === true) {
             this.spamBlock();
             return;
         }
 
-        // afk protection
+        // enable spam protection
+        this.spamProtection = true;
+        // enable limit recording time
+        this.limitProtection = true;
+
+        // limit protection
         if (this.limitProtection) {
             this.recodingTimeout();
         }
@@ -107,11 +113,6 @@ export class Audio {
         this.app.log('Recording...');
         this.isRecording = true;
         this.recordStatusBar = this.app.ui.addStatusIcon('🎤');
-
-        // active spam protection
-        this.spamProtection = true;
-        // limit recording time
-        this.limitProtection = true;
 
         // Create temporary file for audio recording
         this.questionPath = 'gva_temp_audio_XXXXXX.wav';
@@ -162,18 +163,19 @@ export class Audio {
     }
 
     spamBlock() {
-        this.app.log('Spam protection activated.');
         // clear timeout
         if (this.spamProtectionTimeout !== null) {
             GLib.Source.remove(this.spamProtectionTimeout);
             this.spamProtectionTimeout = null;
         }
         // set timeout to disable spam protection
+        this.app.log('Spam protection enabled.');
         this.spamProtectionTimeout = GLib.timeout_add(
             GLib.PRIORITY_DEFAULT,
             3000,
             () => {
                 this.spamProtection = false;
+                this.app.log('Spam protection disabled.');
                 return GLib.SOURCE_REMOVE;
             },
         );
