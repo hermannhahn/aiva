@@ -144,10 +144,17 @@ HELP
             }
         }
         if (command === 'openSite') {
-            if (text.includes('yotube')) {
-                this.app.utils.executeCommand(
-                    'firefox https://www.youtube.com',
-                );
+            const urls = {
+                youtube: 'https://www.youtube.com',
+                cnn: 'https://www.youtube.com/@CNNBrasil',
+                uol: 'https://www.uol.com.br',
+            };
+
+            for (const [key, url] of Object.entries(urls)) {
+                if (text.includes(key)) {
+                    this.app.utils.executeCommand(`firefox ${url}`);
+                    break;
+                }
             }
         }
         this.app.gemini.runCommand(text);
