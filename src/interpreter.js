@@ -61,7 +61,7 @@ export class Interpreter {
 
     _isLocalVoiceCommand(text) {
         text = text.toLowerCase();
-        let result = {success: false, command: ''};
+        let result = {success: false, command: '', request: ''};
 
         const commands = {
             readClipboardText: [
@@ -93,6 +93,22 @@ export class Interpreter {
                 _('open youtube'),
                 _('on youtube'),
             ],
+            readNewsOf: [
+                _('read news of'),
+                _('read the news of'),
+                _('show me the news of'),
+                _('show news of'),
+                _('what is the news of'),
+                _('what are the news of'),
+                _('tell me the news of')
+                _('read news from'),
+                _('read the news from'),
+                _('show me the news from'),
+                _('show news from'),
+                _('what is the news from'),
+                _('what are the news from'),
+                _('tell me the news from')
+            ],
             readNews: [
                 _('read news'),
                 _('read the news'),
@@ -100,6 +116,7 @@ export class Interpreter {
                 _('show news'),
                 _('what is the news'),
                 _('what are the news'),
+                _('tell me the news')
             ],
         };
 
@@ -107,7 +124,8 @@ export class Interpreter {
 
         if (commandToRun) {
             result.success = true;
-            result.command = commandToRun;
+            result.command = commandToRun.type;
+            result.request = commandToRun.request;
             return result;
         }
 
@@ -195,9 +213,18 @@ HELP
                     this.app.logError('Erro ao abrir site:', error);
                     break;
                 }
-            case 'readNews':
+                case 'readNewsOf':
+                    try {
+                        // Remove command from text
+
+                        break;
+                    } catch (error) {
+                        this.app.logError('Erro ao abrir site:', error);
+                        break;
+                    }
+                case 'readNews':
                 try {
-                    this.app.gemini.readNews();
+                    this.app.utils.readNews();
                     break;
                 } catch (error) {
                     this.app.logError('Erro ao ler notícias:', error);
