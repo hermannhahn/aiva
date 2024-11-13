@@ -79,15 +79,15 @@ msgstr "leia o texto"
 
 #: src/interpreter.js:84
 msgid "open the website"
-msgstr ""
+msgstr "abrir a página"
 
 #: src/interpreter.js:85
 msgid "open site"
-msgstr ""
+msgstr "abrir site"
 
 #: src/interpreter.js:86
 msgid "open website"
-msgstr ""
+msgstr "abrir página"
 
 #: src/interpreter.js:89
 #, fuzzy
@@ -96,42 +96,40 @@ msgstr "leia o texto"
 
 #: src/interpreter.js:90
 msgid "open channel"
-msgstr ""
+msgstr "abrir canal"
 
 #: src/interpreter.js:91
 msgid "open the youtube channel"
-msgstr ""
+msgstr "abrir o canal do youtube"
 
 #: src/interpreter.js:92
 msgid "open youtube channel"
-msgstr ""
+msgstr "abrir o canal do youtube"
 
 #: src/interpreter.js:93
 msgid "open youtube"
-msgstr ""
+msgstr "abrir youtube"
 
 #: src/interpreter.js:94
 msgid "on youtube"
-msgstr ""
+msgstr "no youtube"
 
 #: src/interpreter.js:97
-#, fuzzy
 msgid "read news of"
-msgstr "leia pra mim"
+msgstr "leia as notícias de"
 
 #: src/interpreter.js:98
-#, fuzzy
 msgid "read the news of"
-msgstr "leia o texto"
+msgstr "leia as notícias da"
 
 #: src/interpreter.js:99
 #, fuzzy
 msgid "show me the news of"
-msgstr "leia o texto"
+msgstr "leia as notícias do"
 
 #: src/interpreter.js:100
 msgid "show news of"
-msgstr ""
+msgstr "mostre as notícias de"
 
 #: src/interpreter.js:101
 #, fuzzy
