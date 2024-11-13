@@ -8,23 +8,25 @@ export class Interpreter {
     }
 
     proccess(question) {
+        const command = question;
         this.app.ui.searchEntry.clutter_text.reactive = false;
         this.app.log('Question: ' + question);
         this.app.log('Processing question...');
         this.app.chat.addResponse('...');
-        const isLocalVoiceCommand = this._isLocalVoiceCommand(question);
-        if (this._isCommand(question)) {
-            this.app.log('Command detected.');
-            this._commandInterpreter(question);
-        } else if (isLocalVoiceCommand.success) {
+        const isDatabaseCommand = this._isDatabaseCommand(question);
+
+        // SLASH COMMANDS
+        if (this._isSlashCommand(question)) {
+            this.app.log('Slash command: ' + command);
+            this._slashCommands(command);
+            // DATABASE COMMANDS
+        } else if (isDatabaseCommand.success) {
             this.app.log('Local Voice command detected.');
             this.localVoiceCommandsInterpreter(
-                isLocalVoiceCommand.command,
-                isLocalVoiceCommand.request,
+                isDatabaseCommand.command,
+                isDatabaseCommand.request,
             );
-        } else if (this._isVoiceCommand(question)) {
-            this.app.log('Voice command detected.');
-            this.voiceCommandInterpreter(question);
+            // QUESTION
         } else {
             this.app.log('Sending question to API...');
             this.app.gemini.response(question);
@@ -32,7 +34,7 @@ export class Interpreter {
         this.app.ui.searchEntry.clutter_text.reactive = true;
     }
 
-    _isCommand(text) {
+    _isSlashCommand(text) {
         if (text.startsWith('/')) {
             return true;
         }
@@ -59,7 +61,7 @@ export class Interpreter {
         return false;
     }
 
-    _isLocalVoiceCommand(text) {
+    _isDatabaseCommand(text) {
         text = text.toLowerCase();
         let result = {success: false, command: '', request: ''};
 
@@ -132,7 +134,7 @@ export class Interpreter {
         return result;
     }
 
-    _commandInterpreter(text) {
+    _slashCommands(text) {
         if (text.startsWith('/help')) {
             this.app.chat.add(`
 HELP
