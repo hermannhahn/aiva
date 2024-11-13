@@ -18,7 +18,10 @@ export class Interpreter {
             this._commandInterpreter(question);
         } else if (isLocalVoiceCommand.success) {
             this.app.log('Local Voice command detected.');
-            this.localVoiceCommandsInterpreter(isLocalVoiceCommand.command);
+            this.localVoiceCommandsInterpreter(
+                isLocalVoiceCommand.command,
+                question,
+            );
         } else if (this._isVoiceCommand(question)) {
             this.app.log('Voice command detected.');
             this.voiceCommandInterpreter(question);
@@ -60,63 +63,47 @@ export class Interpreter {
         text = text.toLowerCase();
         let result = {success: false, command: ''};
 
-        const readCommands = [
-            _('read this text'),
-            _('read the text'),
-            _('read the clipboard'),
-            _('read copied text'),
-            _('read clipboard text'),
-            _('read this clipboard'),
-            _('read text in memory'),
-            _('read memorised text'),
-            _('read for me'),
-            _('read this for me'),
-            _('read text for me'),
-            _('read this please'),
-            _('you can read now'),
-        ];
+        const commands = {
+            readClipboardText: [
+                _('read this text'),
+                _('read the text'),
+                _('read the clipboard'),
+                _('read copied text'),
+                _('read clipboard text'),
+                _('read this clipboard'),
+                _('read text in memory'),
+                _('read memorised text'),
+                _('read for me'),
+                _('read this for me'),
+                _('read text for me'),
+                _('read this please'),
+                _('you can read now'),
+            ],
+            openSite: [
+                _('open this site'),
+                _('open the site'),
+                _('open this website'),
+                _('open the website'),
+                _('open site'),
+                _('open website'),
+            ],
+            readNews: [
+                _('read news'),
+                _('read the news'),
+                _('show me the news'),
+                _('show news'),
+                _('what is the news'),
+                _('what are the news'),
+                _('news'),
+            ],
+        };
 
-        for (const command of readCommands) {
-            if (text.includes(command)) {
-                result.success = true;
-                result.command = 'readClipboard';
-                return result;
-            }
-        }
+        let commandToRun = this.app.utils.findCategoryInArrays(text, commands);
 
-        const openSiteCommands = [
-            _('open this site'),
-            _('open the site'),
-            _('open this website'),
-            _('open the website'),
-            _('open site'),
-            _('open website'),
-        ];
-
-        for (const command of openSiteCommands) {
-            if (text.includes(command)) {
-                result.success = true;
-                result.command = 'openSite';
-                return result;
-            }
-        }
-
-        const readNewsCommands = [
-            _('read news'),
-            _('read the news'),
-            _('show me the news'),
-            _('show news'),
-            _('what is the news'),
-            _('what are the news'),
-            _('news'),
-        ];
-
-        for (const command of readNewsCommands) {
-            if (text.includes(command)) {
-                result.success = true;
-                result.command = 'readNews';
-                return result;
-            }
+        if (commandToRun) {
+            result.success = true;
+            result.command = commandToRun;
+            return result;
         }
 
         return result;
@@ -142,7 +129,7 @@ HELP
         this.app.gemini.runCommand(request);
     }
 
-    async localVoiceCommandsInterpreter(command) {
+    async localVoiceCommandsInterpreter(command, text) {
         if (command === 'readClipboard') {
             try {
                 this.app.chat.editResponse(_('Starting reading...'));
@@ -153,6 +140,9 @@ HELP
                     error,
                 );
             }
+        }
+        if (command === 'openSite') {
+            this.app.gemini.runCommand(text);
         }
     }
 }

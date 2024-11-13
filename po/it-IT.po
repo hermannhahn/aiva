@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-12 23:25-0300\n"
+"POT-Creation-Date: 2024-11-13 00:21-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language it-IT\n"
@@ -16,116 +16,116 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/interpreter.js:42
+#: src/interpreter.js:45
 msgid "computer"
 msgstr ""
 
-#: src/interpreter.js:64
+#: src/interpreter.js:68
 msgid "read this text"
 msgstr ""
 
-#: src/interpreter.js:65
+#: src/interpreter.js:69
 msgid "read the text"
 msgstr ""
 
-#: src/interpreter.js:66
+#: src/interpreter.js:70
 #, fuzzy
 msgid "read the clipboard"
 msgstr "Codice copiato negli appunti"
 
-#: src/interpreter.js:67
+#: src/interpreter.js:71
 msgid "read copied text"
 msgstr ""
 
-#: src/interpreter.js:68
+#: src/interpreter.js:72
 msgid "read clipboard text"
 msgstr ""
 
-#: src/interpreter.js:69
+#: src/interpreter.js:73
 msgid "read this clipboard"
 msgstr ""
 
-#: src/interpreter.js:70
+#: src/interpreter.js:74
 msgid "read text in memory"
 msgstr ""
 
-#: src/interpreter.js:71
+#: src/interpreter.js:75
 msgid "read memorised text"
 msgstr ""
 
-#: src/interpreter.js:72
+#: src/interpreter.js:76
 msgid "read for me"
 msgstr ""
 
-#: src/interpreter.js:73
+#: src/interpreter.js:77
 msgid "read this for me"
 msgstr ""
 
-#: src/interpreter.js:74
+#: src/interpreter.js:78
 msgid "read text for me"
 msgstr ""
 
-#: src/interpreter.js:75
+#: src/interpreter.js:79
 msgid "read this please"
 msgstr ""
 
-#: src/interpreter.js:76
+#: src/interpreter.js:80
 msgid "you can read now"
 msgstr ""
 
-#: src/interpreter.js:88
+#: src/interpreter.js:83
 msgid "open this site"
 msgstr ""
 
-#: src/interpreter.js:89
+#: src/interpreter.js:84
 msgid "open the site"
 msgstr ""
 
-#: src/interpreter.js:90
+#: src/interpreter.js:85
 msgid "open this website"
 msgstr ""
 
-#: src/interpreter.js:91
+#: src/interpreter.js:86
 msgid "open the website"
 msgstr ""
 
-#: src/interpreter.js:92
+#: src/interpreter.js:87
 msgid "open site"
 msgstr ""
 
-#: src/interpreter.js:93
+#: src/interpreter.js:88
 msgid "open website"
 msgstr ""
 
-#: src/interpreter.js:105
+#: src/interpreter.js:91
 msgid "read news"
 msgstr ""
 
-#: src/interpreter.js:106
+#: src/interpreter.js:92
 msgid "read the news"
 msgstr ""
 
-#: src/interpreter.js:107
+#: src/interpreter.js:93
 msgid "show me the news"
 msgstr ""
 
-#: src/interpreter.js:108
+#: src/interpreter.js:94
 msgid "show news"
 msgstr ""
 
-#: src/interpreter.js:109
+#: src/interpreter.js:95
 msgid "what is the news"
 msgstr ""
 
-#: src/interpreter.js:110
+#: src/interpreter.js:96
 msgid "what are the news"
 msgstr ""
 
-#: src/interpreter.js:111
+#: src/interpreter.js:97
 msgid "news"
 msgstr ""
 
-#: src/interpreter.js:148
+#: src/interpreter.js:135
 msgid "Starting reading..."
 msgstr ""
 
