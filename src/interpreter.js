@@ -94,7 +94,6 @@ export class Interpreter {
                 _('show news'),
                 _('what is the news'),
                 _('what are the news'),
-                _('news'),
             ],
         };
 
@@ -147,7 +146,7 @@ HELP
                 try {
                     const urls = {
                         youtube: 'https://www.youtube.com',
-                        cnn: 'https://www.youtube.com/@CNNBrasil',
+                        'cnn brasil': 'https://www.youtube.com/@CNNbrasil/live',
                         uol: 'https://www.uol.com.br',
                     };
 
