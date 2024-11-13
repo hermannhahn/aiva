@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-12 22:14-0300\n"
+"POT-Creation-Date: 2024-11-12 22:26-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -20,59 +20,59 @@ msgstr ""
 msgid "computer"
 msgstr "computador"
 
-#: src/interpreter.js:62
+#: src/interpreter.js:64
 msgid "read this text"
 msgstr "leia esse texto"
 
-#: src/interpreter.js:63
+#: src/interpreter.js:65
 msgid "read the text"
 msgstr "leia o texto"
 
-#: src/interpreter.js:64
+#: src/interpreter.js:66
 msgid "read the clipboard"
 msgstr "leia o texto que copiei"
 
-#: src/interpreter.js:65
+#: src/interpreter.js:67
 msgid "read copied text"
 msgstr "leia o texto copiado"
 
-#: src/interpreter.js:66
+#: src/interpreter.js:68
 msgid "read clipboard text"
 msgstr "leia o texto da área de transferência"
 
-#: src/interpreter.js:67
+#: src/interpreter.js:69
 msgid "read this clipboard"
 msgstr "leia esse texto"
 
-#: src/interpreter.js:68
+#: src/interpreter.js:70
 msgid "read text in memory"
 msgstr "leia o texto na memória"
 
-#: src/interpreter.js:69
+#: src/interpreter.js:71
 msgid "read memorised text"
 msgstr "leia o texto memorisado"
 
-#: src/interpreter.js:70
+#: src/interpreter.js:72
 msgid "read for me"
 msgstr "leia pra mim"
 
-#: src/interpreter.js:71
+#: src/interpreter.js:73
 msgid "read this for me"
 msgstr "leia isso pra mim"
 
-#: src/interpreter.js:72
+#: src/interpreter.js:74
 msgid "read text for me"
 msgstr "leia o texto pra mim"
 
-#: src/interpreter.js:73
+#: src/interpreter.js:75
 msgid "read this please"
 msgstr "leia isso por favor"
 
-#: src/interpreter.js:74
+#: src/interpreter.js:76
 msgid "you can read now"
 msgstr "pode ler agora"
 
-#: src/interpreter.js:110
+#: src/interpreter.js:111
 msgid "Starting reading..."
 msgstr "Iniciando a leitura..."
 
@@ -154,7 +154,6 @@ msgid ""
 msgstr ""
 "true Se for possível alcançar o propósito da solicitação com uma linha de "
 "comando."
-
 
 #: src/ai/gemini.js:295
 #, fuzzy

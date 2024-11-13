@@ -18,7 +18,7 @@ export class Interpreter {
             this._commandInterpreter(question);
         } else if (isLocalVoiceCommand.success) {
             this.app.log('Local Voice command detected.');
-            this.localVoiceCommandInterpreter(isLocalVoiceCommand.command);
+            this.localVoiceCommandsInterpreter(isLocalVoiceCommand.command);
         } else if (this._isVoiceCommand(question)) {
             this.app.log('Voice command detected.');
             this.voiceCommandInterpreter(question);
@@ -58,6 +58,8 @@ export class Interpreter {
 
     _isLocalVoiceCommand(text) {
         text = text.toLowerCase();
+        let result = {success: false, word: ''};
+
         const readCommands = [
             _('read this text'),
             _('read the text'),
@@ -73,7 +75,6 @@ export class Interpreter {
             _('read this please'),
             _('you can read now'),
         ];
-        let result = {success: false, word: ''};
         for (const command of readCommands) {
             if (text.includes(command)) {
                 result.success = true;
@@ -104,7 +105,7 @@ HELP
         this.app.gemini.runCommand(request);
     }
 
-    async localVoiceCommandInterpreter(command) {
+    async localVoiceCommandsInterpreter(command) {
         if (command === 'readClipboard') {
             try {
                 this.app.chat.editResponse(_('Starting reading...'));
