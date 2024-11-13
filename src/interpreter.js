@@ -22,12 +22,12 @@ export class Interpreter {
         } else if (isDatabaseCommand.success) {
             // DATABASE COMMANDS
             this.app.log('Local Voice command detected.');
-            this.localVoiceCommandsInterpreter(
+            this._databaseCommands(
                 isDatabaseCommand.command,
                 isDatabaseCommand.request,
             );
         } else {
-            // QUESTION
+            // QUESTIONS
             this.app.log('Sending question to API...');
             this.app.gemini.response(question);
         }
@@ -154,7 +154,7 @@ HELP
         this.app.gemini.runCommand(request);
     }
 
-    async localVoiceCommandsInterpreter(command, text) {
+    async _databaseCommands(command, text) {
         switch (command) {
             case 'readClipboardText':
                 try {
