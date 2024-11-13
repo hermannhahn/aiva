@@ -274,34 +274,25 @@ export class GoogleGemini {
             ' ' +
             _('and today is') +
             ' ' +
-            date +
-            '. ' +
-            _('Who are you?') +
-            ' ' +
-            _('and') +
-            ' ' +
-            _('How are you') +
-            '? ';
-        const instructions =
-            _('If any of my interactions includes') +
-            ' ' +
-            _('a request to run something') +
-            ' ' +
-            _('like search on web, open apps or websites') +
-            ', ' +
-            _('ignore the request and return only and exactly with the word') +
-            ': ' +
-            "'IdoNotRunCommands'" +
-            ' ' +
-            _('otherwise respond normally.');
-        return introduction + instructions;
+            date;
+        // const instructions =
+        //     _('If any of my interactions includes') +
+        //     ' ' +
+        //     _('a request to open apps or websites') +
+        //     ', ' +
+        //     _('ignore the request and returns') +
+        //     ': ' +
+        //     "'IdoNotRunCommands'" +
+        //     ' ' +
+        //     _('otherwise respond normally.');
+        return introduction;
     }
 
     commandRequest(request) {
         const response = `
 ${_('Generate a command line for the request')}: ${request}
 ${_('Return a JSON with the following keys')}:
-'success' (${_('true if it possible to generate')} ${_('a Linux Ubuntu terminal command line to the request type')}, ${_('false otherwise')}),
+'success' (${_('true If it is possible to achieve the purpose of the request with a command line.')} ${_('a Linux Ubuntu terminal command line to the request')}, ${_('false otherwise')}),
 'response' (${_('text to be associated with the command line')}, ${_('informing action in success case')}, ${_('or failure text')}),
 'commandline' (${_('command line for linux ubuntu that fulfills the request')}).
 ${_('Rules for commandline value')}: ${_('Do not use sudo')}, ${_('Prefer browser, firefox and google websites')}, ${_('Never generate destructive commands')}.
