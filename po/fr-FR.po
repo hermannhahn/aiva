@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-13 15:31-0300\n"
+"POT-Creation-Date: 2024-11-13 15:32-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language fr-FR\n"
@@ -16,188 +16,184 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/interpreter.js:47
-msgid "computer"
-msgstr ""
-
-#: src/interpreter.js:70
+#: src/interpreter.js:50
 msgid "read this text"
 msgstr ""
 
-#: src/interpreter.js:71
+#: src/interpreter.js:51
 msgid "read the text"
 msgstr ""
 
-#: src/interpreter.js:72
+#: src/interpreter.js:52
 #, fuzzy
 msgid "read the clipboard"
 msgstr "Code copié dans le presse-papier"
 
-#: src/interpreter.js:73
+#: src/interpreter.js:53
 msgid "read copied text"
 msgstr ""
 
-#: src/interpreter.js:74
+#: src/interpreter.js:54
 msgid "read clipboard text"
 msgstr ""
 
-#: src/interpreter.js:75
+#: src/interpreter.js:55
 msgid "read this clipboard"
 msgstr ""
 
-#: src/interpreter.js:76
+#: src/interpreter.js:56
 msgid "read text in memory"
 msgstr ""
 
-#: src/interpreter.js:77
+#: src/interpreter.js:57
 msgid "read memorised text"
 msgstr ""
 
-#: src/interpreter.js:78
+#: src/interpreter.js:58
 msgid "read for me"
 msgstr ""
 
-#: src/interpreter.js:79
+#: src/interpreter.js:59
 msgid "read this for me"
 msgstr ""
 
-#: src/interpreter.js:80
+#: src/interpreter.js:60
 msgid "read text for me"
 msgstr ""
 
-#: src/interpreter.js:81
+#: src/interpreter.js:61
 msgid "read this please"
 msgstr ""
 
-#: src/interpreter.js:82
+#: src/interpreter.js:62
 msgid "you can read now"
 msgstr ""
 
-#: src/interpreter.js:85
+#: src/interpreter.js:65
 msgid "open the site"
 msgstr ""
 
-#: src/interpreter.js:86
+#: src/interpreter.js:66
 msgid "open the website"
 msgstr ""
 
-#: src/interpreter.js:87
+#: src/interpreter.js:67
 msgid "open site"
 msgstr ""
 
-#: src/interpreter.js:88
+#: src/interpreter.js:68
 msgid "open website"
 msgstr ""
 
-#: src/interpreter.js:91
+#: src/interpreter.js:71
 msgid "open the channel"
 msgstr ""
 
-#: src/interpreter.js:92
+#: src/interpreter.js:72
 msgid "open channel"
 msgstr ""
 
-#: src/interpreter.js:93
+#: src/interpreter.js:73
 msgid "open the youtube channel"
 msgstr ""
 
-#: src/interpreter.js:94
+#: src/interpreter.js:74
 msgid "open youtube channel"
 msgstr ""
 
-#: src/interpreter.js:95
+#: src/interpreter.js:75
 msgid "open youtube"
 msgstr ""
 
-#: src/interpreter.js:96
+#: src/interpreter.js:76
 msgid "on youtube"
 msgstr ""
 
-#: src/interpreter.js:99
+#: src/interpreter.js:79
 msgid "read news of"
 msgstr ""
 
-#: src/interpreter.js:100
+#: src/interpreter.js:80
 msgid "read the news of"
 msgstr ""
 
-#: src/interpreter.js:101
+#: src/interpreter.js:81
 msgid "show me the news of"
 msgstr ""
 
-#: src/interpreter.js:102
+#: src/interpreter.js:82
 msgid "show news of"
 msgstr ""
 
-#: src/interpreter.js:103
+#: src/interpreter.js:83
 msgid "what is the news of"
 msgstr ""
 
-#: src/interpreter.js:104
+#: src/interpreter.js:84
 msgid "what are the news of"
 msgstr ""
 
-#: src/interpreter.js:105
+#: src/interpreter.js:85
 msgid "tell me the news of"
 msgstr ""
 
-#: src/interpreter.js:106
+#: src/interpreter.js:86
 msgid "read news from"
 msgstr ""
 
-#: src/interpreter.js:107
+#: src/interpreter.js:87
 msgid "read the news from"
 msgstr ""
 
-#: src/interpreter.js:108
+#: src/interpreter.js:88
 msgid "show me the news from"
 msgstr ""
 
-#: src/interpreter.js:109
+#: src/interpreter.js:89
 msgid "show news from"
 msgstr ""
 
-#: src/interpreter.js:110
+#: src/interpreter.js:90
 msgid "what is the news from"
 msgstr ""
 
-#: src/interpreter.js:111
+#: src/interpreter.js:91
 msgid "what are the news from"
 msgstr ""
 
-#: src/interpreter.js:112
+#: src/interpreter.js:92
 msgid "tell me the news from"
 msgstr ""
 
-#: src/interpreter.js:115
+#: src/interpreter.js:95
 msgid "read news"
 msgstr ""
 
-#: src/interpreter.js:116
+#: src/interpreter.js:96
 msgid "read the news"
 msgstr ""
 
-#: src/interpreter.js:117
+#: src/interpreter.js:97
 msgid "show me the news"
 msgstr ""
 
-#: src/interpreter.js:118
+#: src/interpreter.js:98
 msgid "show news"
 msgstr ""
 
-#: src/interpreter.js:119
+#: src/interpreter.js:99
 msgid "what is the news"
 msgstr ""
 
-#: src/interpreter.js:120
+#: src/interpreter.js:100
 msgid "what are the news"
 msgstr ""
 
-#: src/interpreter.js:121
+#: src/interpreter.js:101
 msgid "tell me the news"
 msgstr ""
 
-#: src/interpreter.js:161
+#: src/interpreter.js:136
 msgid "Starting reading..."
 msgstr ""
 
