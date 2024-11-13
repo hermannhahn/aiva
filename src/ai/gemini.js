@@ -88,12 +88,6 @@ export class GoogleGemini {
                         return;
                     }
 
-                    // Command runner
-                    if (aiResponse.toLowerCase().includes('tryruncommand')) {
-                        this.app.interpreter.voiceCommandInterpreter(question);
-                        return;
-                    }
-
                     this.app.chat.editResponse(aiResponse);
 
                     // Add to history
