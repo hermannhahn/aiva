@@ -80,12 +80,18 @@ export class Interpreter {
                 _('you can read now'),
             ],
             openSite: [
-                _('open this site'),
                 _('open the site'),
-                _('open this website'),
                 _('open the website'),
                 _('open site'),
                 _('open website'),
+            ],
+            openYoutubeChannel: [
+                _('open the channel'),
+                _('open channel'),
+                _('open the youtube channel'),
+                _('open youtube channel'),
+                _('open youtube'),
+                _('on youtube'),
             ],
             readNews: [
                 _('read news'),
@@ -142,6 +148,32 @@ HELP
                     );
                     break;
                 }
+            case 'openYoutubeChannel':
+                try {
+                    const urls = {
+                        'cnn brasil': 'https://www.youtube.com/@CNNbrasil/live',
+                        'uol news': 'https://www.youtube.com/@uolnews/live',
+                        sbt: 'https://www.youtube.com/@SBT/live',
+                        'band news': 'https://www.youtube.com/@BandNews/live',
+                        record: 'https://www.youtube.com/@Record/live',
+                        'felipe neto': 'https://www.youtube.com/@felipeneto',
+                        'manual do mundo':
+                            'https://www.youtube.com/@ManualDoMundo',
+                    };
+
+                    for (const [key, url] of Object.entries(urls)) {
+                        if (text.includes(key)) {
+                            this.app.chat.editResponse(_(`Opening ${key}...`));
+                            this.app.utils.executeCommand(`firefox ${url}`);
+                            break;
+                        }
+                    }
+                    this.app.gemini.runCommand(text);
+                    break;
+                } catch (error) {
+                    this.app.logError('Erro ao abrir site:', error);
+                    break;
+                }
             case 'openSite':
                 try {
                     const urls = {
@@ -152,10 +184,12 @@ HELP
 
                     for (const [key, url] of Object.entries(urls)) {
                         if (text.includes(key)) {
+                            this.app.chat.editResponse(_(`Opening ${key}...`));
                             this.app.utils.executeCommand(`firefox ${url}`);
                             break;
                         }
                     }
+                    this.app.gemini.runCommand(text);
                     break;
                 } catch (error) {
                     this.app.logError('Erro ao abrir site:', error);

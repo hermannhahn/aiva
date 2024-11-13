@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-13 00:47-0300\n"
+"POT-Creation-Date: 2024-11-13 01:04-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -74,58 +74,73 @@ msgstr "pode ler agora"
 
 #: src/interpreter.js:83
 #, fuzzy
-msgid "open this site"
-msgstr "leia esse texto"
-
-#: src/interpreter.js:84
-#, fuzzy
 msgid "open the site"
 msgstr "leia o texto"
 
-#: src/interpreter.js:85
-#, fuzzy
-msgid "open this website"
-msgstr "leia isso por favor"
-
-#: src/interpreter.js:86
+#: src/interpreter.js:84
 msgid "open the website"
 msgstr ""
 
-#: src/interpreter.js:87
+#: src/interpreter.js:85
 msgid "open site"
 msgstr ""
 
-#: src/interpreter.js:88
+#: src/interpreter.js:86
 msgid "open website"
 msgstr ""
 
+#: src/interpreter.js:89
+#, fuzzy
+msgid "open the channel"
+msgstr "leia o texto"
+
+#: src/interpreter.js:90
+msgid "open channel"
+msgstr ""
+
 #: src/interpreter.js:91
+msgid "open the youtube channel"
+msgstr ""
+
+#: src/interpreter.js:92
+msgid "open youtube channel"
+msgstr ""
+
+#: src/interpreter.js:93
+msgid "open youtube"
+msgstr ""
+
+#: src/interpreter.js:94
+msgid "on youtube"
+msgstr ""
+
+#: src/interpreter.js:97
 #, fuzzy
 msgid "read news"
 msgstr "leia pra mim"
 
-#: src/interpreter.js:92
+#: src/interpreter.js:98
 #, fuzzy
 msgid "read the news"
 msgstr "leia o texto"
 
-#: src/interpreter.js:93
+#: src/interpreter.js:99
 msgid "show me the news"
 msgstr ""
 
-#: src/interpreter.js:94
+#: src/interpreter.js:100
 msgid "show news"
 msgstr ""
 
-#: src/interpreter.js:95
+#: src/interpreter.js:101
 msgid "what is the news"
 msgstr ""
 
-#: src/interpreter.js:96
+#: src/interpreter.js:102
 msgid "what are the news"
 msgstr ""
 
-#: src/interpreter.js:135
+#: src/interpreter.js:141
 msgid "Starting reading..."
 msgstr "Iniciando a leitura..."
 
@@ -480,3 +495,11 @@ msgstr "Salvar"
 #: src/prefs.js:705
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
+
+#, fuzzy
+#~ msgid "open this site"
+#~ msgstr "leia esse texto"
+
+#, fuzzy
+#~ msgid "open this website"
+#~ msgstr "leia isso por favor"
