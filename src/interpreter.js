@@ -15,19 +15,19 @@ export class Interpreter {
         this.app.chat.addResponse('...');
         const isDatabaseCommand = this._isDatabaseCommand(question);
 
-        // SLASH COMMANDS
         if (this._isSlashCommand(question)) {
+            // SLASH COMMANDS
             this.app.log('Slash command: ' + command);
             this._slashCommands(command);
-            // DATABASE COMMANDS
         } else if (isDatabaseCommand.success) {
+            // DATABASE COMMANDS
             this.app.log('Local Voice command detected.');
             this.localVoiceCommandsInterpreter(
                 isDatabaseCommand.command,
                 isDatabaseCommand.request,
             );
-            // QUESTION
         } else {
+            // QUESTION
             this.app.log('Sending question to API...');
             this.app.gemini.response(question);
         }
