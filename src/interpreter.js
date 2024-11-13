@@ -129,7 +129,7 @@ HELP
         }
     }
 
-    async _databaseCommands(command, text) {
+    async _databaseCommands(command, request) {
         switch (command) {
             case 'readClipboardText':
                 try {
@@ -157,13 +157,13 @@ HELP
                     };
 
                     for (const [key, url] of Object.entries(urls)) {
-                        if (text.includes(key)) {
+                        if (request.includes(key)) {
                             this.app.chat.editResponse(_(`Opening ${key}...`));
                             this.app.utils.executeCommand(`firefox ${url}`);
                             return;
                         }
                     }
-                    this.app.gemini.runCommand(command + ' ' + text);
+                    this.app.gemini.runCommand(command + ' ' + request);
                     return;
                 } catch (error) {
                     this.app.logError('Erro ao abrir site:', error);
@@ -178,13 +178,13 @@ HELP
                     };
 
                     for (const [key, url] of Object.entries(urls)) {
-                        if (text.includes(key)) {
+                        if (request.includes(key)) {
                             this.app.chat.editResponse(_(`Opening ${key}...`));
                             this.app.utils.executeCommand(`firefox ${url}`);
                             return;
                         }
                     }
-                    this.app.gemini.runCommand(command + ' ' + text);
+                    this.app.gemini.runCommand(command + ' ' + request);
                     return;
                 } catch (error) {
                     this.app.logError('Erro ao abrir site:', error);
@@ -192,8 +192,8 @@ HELP
                 }
             case 'readNewsOf':
                 try {
-                    // get the three first words from text
-                    const topic = text.split(/\s+/).slice(0, 3).join(' ');
+                    // get the three first words from request
+                    const topic = request.split(/\s+/).slice(0, 3).join(' ');
                     this.app.utils.readNews(topic);
                     return;
                 } catch (error) {
