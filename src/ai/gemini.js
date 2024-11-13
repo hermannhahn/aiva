@@ -21,6 +21,7 @@ export class GoogleGemini {
         this.LOCATION = app.userSettings.LOCATION;
         this.GEMINI_API_KEY = app.userSettings.GEMINI_API_KEY;
         this.afterTune = null;
+        this.block = false;
         this.app.log('Google Gemini API loaded');
     }
 
@@ -67,8 +68,9 @@ export class GoogleGemini {
 
                     // Safety
                     let safetyReason = this.safetyReason(question, res);
-                    if (safetyReason) {
-                        if (safetyReason === 'IdoNotRunCommands') {
+                    if (safetyReason && !this.block) {
+                        if (safetyReason === 'tryRunCommand') {
+                            this.block = true;
                             this.app.interpreter.voiceCommandInterpreter(
                                 question,
                             );
@@ -77,6 +79,7 @@ export class GoogleGemini {
                         this.app.chat.editResponse(safetyReason);
                         return;
                     }
+                    this.block = false;
 
                     if (aiResponse === undefined) {
                         this.app.chat.editResponse(
@@ -86,9 +89,7 @@ export class GoogleGemini {
                     }
 
                     // Command runner
-                    if (
-                        aiResponse.toLowerCase().includes('idonotruncommands')
-                    ) {
+                    if (aiResponse.toLowerCase().includes('tryruncommand')) {
                         this.app.interpreter.voiceCommandInterpreter(question);
                         return;
                     }
