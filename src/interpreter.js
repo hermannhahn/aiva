@@ -161,7 +161,14 @@ HELP
                     this.app.logError('Erro ao abrir site:', error);
                 }
                 break;
-
+            case 'readNews':
+                try {
+                    this.app.gemini.readNews();
+                    break;
+                } catch (error) {
+                    this.app.logError('Erro ao ler notícias:', error);
+                }
+                break;
             default:
                 break;
         }
