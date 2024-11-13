@@ -42,6 +42,21 @@ export class Interpreter {
         return false;
     }
 
+    _slashCommands(text) {
+        if (text.startsWith('/help')) {
+            this.app.chat.add(`
+HELP
+
+/settings   - Open settings
+/help       - Show this help
+                `);
+        }
+
+        if (text.startsWith('/settings')) {
+            this.app.openSettings();
+        }
+    }
+
     _isDatabaseCommand(text) {
         text = text.toLowerCase();
         let result = {success: false, command: '', request: ''};
@@ -113,21 +128,6 @@ export class Interpreter {
         }
 
         return result;
-    }
-
-    _slashCommands(text) {
-        if (text.startsWith('/help')) {
-            this.app.chat.add(`
-HELP
-
-/settings   - Open settings
-/help       - Show this help
-                `);
-        }
-
-        if (text.startsWith('/settings')) {
-            this.app.openSettings();
-        }
     }
 
     async _databaseCommands(command, request) {
