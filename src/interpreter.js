@@ -183,7 +183,7 @@ HELP
                         if (text.includes(key)) {
                             this.app.chat.editResponse(_(`Opening ${key}...`));
                             this.app.utils.executeCommand(`firefox ${url}`);
-                            break;
+                            return;
                         }
                     }
                     const address = this.app.gemini.runCommand(
@@ -191,10 +191,10 @@ HELP
                     );
                     this.app.chat.editResponse(_(`Opening ${text}...`));
                     this.app.utils.executeCommand(`firefox ${address}`);
-                    break;
+                    return;
                 } catch (error) {
                     this.app.logError('Erro ao abrir site:', error);
-                    break;
+                    return;
                 }
             case 'openSite':
                 try {
@@ -208,24 +208,24 @@ HELP
                         if (text.includes(key)) {
                             this.app.chat.editResponse(_(`Opening ${key}...`));
                             this.app.utils.executeCommand(`firefox ${url}`);
-                            break;
+                            return;
                         }
                     }
                     this.app.gemini.runCommand(command + ' ' + text);
-                    break;
+                    return;
                 } catch (error) {
                     this.app.logError('Erro ao abrir site:', error);
-                    break;
+                    return;
                 }
             case 'readNewsOf':
                 try {
                     // get the three first words from text
                     const topic = text.split(/\s+/).slice(0, 3).join(' ');
                     this.app.utils.readNews(topic);
-                    break;
+                    return;
                 } catch (error) {
                     this.app.logError('Erro ao abrir site:', error);
-                    break;
+                    return;
                 }
             case 'readNews':
                 try {
@@ -233,8 +233,8 @@ HELP
                     break;
                 } catch (error) {
                     this.app.logError('Erro ao ler notícias:', error);
-                    break;
                 }
+                break;
             default:
                 break;
         }
