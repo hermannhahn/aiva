@@ -157,22 +157,22 @@ HELP
                             break;
                         }
                     }
+                    break;
                 } catch (error) {
                     this.app.logError('Erro ao abrir site:', error);
+                    break;
                 }
-                break;
             case 'readNews':
                 try {
                     this.app.gemini.readNews();
                     break;
                 } catch (error) {
                     this.app.logError('Erro ao ler notícias:', error);
+                    break;
                 }
-                break;
             default:
+                this.app.gemini.runCommand(text);
                 break;
         }
-
-        this.app.gemini.runCommand(text);
     }
 }
