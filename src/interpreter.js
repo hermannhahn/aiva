@@ -31,6 +31,7 @@ export class Interpreter {
             this.app.log('Sending question to API...');
             this.app.gemini.response(question);
         }
+
         this.app.ui.searchEntry.clutter_text.reactive = true;
     }
 
