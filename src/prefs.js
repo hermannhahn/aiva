@@ -747,13 +747,10 @@ class AivaSettings {
                 return 'Chave da API Gemini';
             }
             if (text === 'How to get API key?') {
-                return 'Como obter a chave da API Gemini?';
+                return 'Como obter a chave API?';
             }
             if (text === 'Azure Speech API Key') {
                 return 'Chave da API Speech Azure';
-            }
-            if (text === 'How to get API key?') {
-                return 'Como obter a chave da API Speech Azure?';
             }
             if (text === 'Azure Speech Region') {
                 return 'Região da API Speech Azure';
