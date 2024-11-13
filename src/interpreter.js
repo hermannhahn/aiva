@@ -130,19 +130,26 @@ HELP
     }
 
     async localVoiceCommandsInterpreter(command, text) {
-        if (command === 'readClipboard') {
+        if (command === 'readClipboardText') {
             try {
                 this.app.chat.editResponse(_('Starting reading...'));
                 await this.app.utils.readClipboardText();
+                return;
             } catch (error) {
                 this.app.logError(
                     'Erro ao obter texto da área de transferência:',
                     error,
                 );
+                return;
             }
         }
         if (command === 'openSite') {
-            this.app.gemini.runCommand(text);
+            if (text.includes('yotube')) {
+                this.app.utils.executeCommand(
+                    'firefox https://www.youtube.com',
+                );
+            }
         }
+        this.app.gemini.runCommand(text);
     }
 }
