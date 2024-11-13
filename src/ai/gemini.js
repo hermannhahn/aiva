@@ -71,9 +71,7 @@ export class GoogleGemini {
                     if (safetyReason && !this.block) {
                         if (safetyReason === 'tryRunCommand') {
                             this.block = true;
-                            this.app.interpreter.voiceCommandInterpreter(
-                                question,
-                            );
+                            this.runCommand(question);
                             return;
                         }
                         this.app.chat.editResponse(safetyReason);
