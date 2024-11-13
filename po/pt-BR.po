@@ -152,6 +152,9 @@ msgid ""
 "true If it is possible to achieve the purpose of the request with a command "
 "line."
 msgstr ""
+"true Se for possível alcançar o propósito da solicitação com uma linha de "
+"comando."
+
 
 #: src/ai/gemini.js:295
 #, fuzzy
@@ -425,58 +428,3 @@ msgstr "Salvar"
 #: src/prefs.js:705
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
-
-#~ msgid "Who are you?"
-#~ msgstr "Quem é você?"
-
-#~ msgid "and"
-#~ msgstr "e"
-
-#~ msgid "How are you"
-#~ msgstr "Como vai você"
-
-#~ msgid "If any of my interactions includes"
-#~ msgstr "Se alguma das minhas interações incluir"
-
-#~ msgid "a request to run something"
-#~ msgstr "uma solicitação para executar algo"
-
-#~ msgid "like search on web, open apps or websites"
-#~ msgstr "como pesquisar na web, abrir aplicativos ou sites"
-
-#, fuzzy
-#~ msgid "ignore the request and return only and exactly with the word"
-#~ msgstr "ignore a solicitação e responda somente e exatamente com a palavra"
-
-#~ msgid "otherwise respond normally."
-#~ msgstr "caso contrário, responda normalmente."
-
-#, fuzzy
-#~ msgid "true if it possible to generate"
-#~ msgstr "true se for possível ser gerado"
-
-#~ msgid "on my computer or search for something"
-#~ msgstr "no meu computador ou pesquisar algo"
-
-#~ msgid "For the request"
-#~ msgstr "Para a solicitação"
-
-#, fuzzy
-#~ msgid "Examples of response"
-#~ msgstr "Exemplos de respostas"
-
-#, fuzzy
-#~ msgid "generate a text to be spoken, informing success, failure or action"
-#~ msgstr "texto para ser falado, informando sucesso, fracasso ou ação"
-
-#, fuzzy
-#~ msgid "Always use firefox to open sites, videos, music, and images."
-#~ msgstr "Sempre use o firefox para abrir sites, vídeos, música e imagens."
-
-#, fuzzy
-#~ msgid ""
-#~ "Use firefox for search, create, edit or open documents. Use Google Drive, "
-#~ "Google Docs and Google Sheets websites."
-#~ msgstr ""
-#~ "Use o firefox para pesquisar, criar, editar ou abrir documentos. Use o "
-#~ "Google Drive, Google Docs e Google Sheets."
