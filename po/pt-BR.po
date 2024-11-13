@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-12 23:10-0300\n"
+"POT-Creation-Date: 2024-11-12 23:25-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -72,7 +72,64 @@ msgstr "leia isso por favor"
 msgid "you can read now"
 msgstr "pode ler agora"
 
+#: src/interpreter.js:88
+#, fuzzy
+msgid "open this site"
+msgstr "leia esse texto"
+
+#: src/interpreter.js:89
+#, fuzzy
+msgid "open the site"
+msgstr "leia o texto"
+
+#: src/interpreter.js:90
+#, fuzzy
+msgid "open this website"
+msgstr "leia isso por favor"
+
+#: src/interpreter.js:91
+msgid "open the website"
+msgstr ""
+
+#: src/interpreter.js:92
+msgid "open site"
+msgstr ""
+
+#: src/interpreter.js:93
+msgid "open website"
+msgstr ""
+
+#: src/interpreter.js:105
+#, fuzzy
+msgid "read news"
+msgstr "leia pra mim"
+
+#: src/interpreter.js:106
+#, fuzzy
+msgid "read the news"
+msgstr "leia o texto"
+
+#: src/interpreter.js:107
+msgid "show me the news"
+msgstr ""
+
+#: src/interpreter.js:108
+msgid "show news"
+msgstr ""
+
+#: src/interpreter.js:109
+msgid "what is the news"
+msgstr ""
+
+#: src/interpreter.js:110
+msgid "what are the news"
+msgstr ""
+
 #: src/interpreter.js:111
+msgid "news"
+msgstr ""
+
+#: src/interpreter.js:148
 msgid "Starting reading..."
 msgstr "Iniciando a leitura..."
 

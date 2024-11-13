@@ -58,7 +58,7 @@ export class Interpreter {
 
     _isLocalVoiceCommand(text) {
         text = text.toLowerCase();
-        let result = {success: false, word: ''};
+        let result = {success: false, command: ''};
 
         const readCommands = [
             _('read this text'),
@@ -75,6 +75,7 @@ export class Interpreter {
             _('read this please'),
             _('you can read now'),
         ];
+
         for (const command of readCommands) {
             if (text.includes(command)) {
                 result.success = true;
@@ -82,6 +83,42 @@ export class Interpreter {
                 return result;
             }
         }
+
+        const openSiteCommands = [
+            _('open this site'),
+            _('open the site'),
+            _('open this website'),
+            _('open the website'),
+            _('open site'),
+            _('open website'),
+        ];
+
+        for (const command of openSiteCommands) {
+            if (text.includes(command)) {
+                result.success = true;
+                result.command = 'openSite';
+                return result;
+            }
+        }
+
+        const readNewsCommands = [
+            _('read news'),
+            _('read the news'),
+            _('show me the news'),
+            _('show news'),
+            _('what is the news'),
+            _('what are the news'),
+            _('news'),
+        ];
+
+        for (const command of readNewsCommands) {
+            if (text.includes(command)) {
+                result.success = true;
+                result.command = 'readNews';
+                return result;
+            }
+        }
+
         return result;
     }
 

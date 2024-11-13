@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-12 23:10-0300\n"
+"POT-Creation-Date: 2024-11-12 23:25-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language it-IT\n"
@@ -73,7 +73,59 @@ msgstr ""
 msgid "you can read now"
 msgstr ""
 
+#: src/interpreter.js:88
+msgid "open this site"
+msgstr ""
+
+#: src/interpreter.js:89
+msgid "open the site"
+msgstr ""
+
+#: src/interpreter.js:90
+msgid "open this website"
+msgstr ""
+
+#: src/interpreter.js:91
+msgid "open the website"
+msgstr ""
+
+#: src/interpreter.js:92
+msgid "open site"
+msgstr ""
+
+#: src/interpreter.js:93
+msgid "open website"
+msgstr ""
+
+#: src/interpreter.js:105
+msgid "read news"
+msgstr ""
+
+#: src/interpreter.js:106
+msgid "read the news"
+msgstr ""
+
+#: src/interpreter.js:107
+msgid "show me the news"
+msgstr ""
+
+#: src/interpreter.js:108
+msgid "show news"
+msgstr ""
+
+#: src/interpreter.js:109
+msgid "what is the news"
+msgstr ""
+
+#: src/interpreter.js:110
+msgid "what are the news"
+msgstr ""
+
 #: src/interpreter.js:111
+msgid "news"
+msgstr ""
+
+#: src/interpreter.js:148
 msgid "Starting reading..."
 msgstr ""
 
