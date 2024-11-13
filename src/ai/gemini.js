@@ -242,7 +242,7 @@ export class GoogleGemini {
                         safetyRating.category ===
                         'HARM_CATEGORY_DANGEROUS_CONTENT'
                     ) {
-                        aiResponse = 'IdoNotRunCommands';
+                        aiResponse = 'tryRunCommand';
                         // aiResponse =
                         //     _("Sorry, I can't answer this question.") +
                         //     ' ' +
