@@ -171,7 +171,6 @@ HELP
                     break;
                 }
             default:
-                this.app.gemini.runCommand(text);
                 break;
         }
     }
