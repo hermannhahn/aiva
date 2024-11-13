@@ -615,4 +615,15 @@ export class Utils {
             );
         }
     }
+
+    findCategoryInArrays(string, commands) {
+        for (const category in commands) {
+            for (let i = 0; i < commands[category].length; i++) {
+                if (string.includes(commands[category][i])) {
+                    return category;
+                }
+            }
+        }
+        return false;
+    }
 }
