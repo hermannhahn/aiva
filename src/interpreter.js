@@ -230,7 +230,6 @@ HELP
             case 'readNews':
                 try {
                     this.app.utils.readNews();
-                    break;
                 } catch (error) {
                     this.app.logError('Erro ao ler notícias:', error);
                 }
