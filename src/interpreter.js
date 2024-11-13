@@ -20,7 +20,7 @@ export class Interpreter {
             this.app.log('Local Voice command detected.');
             this.localVoiceCommandsInterpreter(
                 isLocalVoiceCommand.command,
-                question,
+                isLocalVoiceCommand.request,
             );
         } else if (this._isVoiceCommand(question)) {
             this.app.log('Voice command detected.');
@@ -100,14 +100,14 @@ export class Interpreter {
                 _('show news of'),
                 _('what is the news of'),
                 _('what are the news of'),
-                _('tell me the news of')
+                _('tell me the news of'),
                 _('read news from'),
                 _('read the news from'),
                 _('show me the news from'),
                 _('show news from'),
                 _('what is the news from'),
                 _('what are the news from'),
-                _('tell me the news from')
+                _('tell me the news from'),
             ],
             readNews: [
                 _('read news'),
@@ -116,7 +116,7 @@ export class Interpreter {
                 _('show news'),
                 _('what is the news'),
                 _('what are the news'),
-                _('tell me the news')
+                _('tell me the news'),
             ],
         };
 
@@ -186,7 +186,7 @@ HELP
                             break;
                         }
                     }
-                    this.app.gemini.runCommand(text);
+                    this.app.gemini.runCommand(command + ' ' + text);
                     break;
                 } catch (error) {
                     this.app.logError('Erro ao abrir site:', error);
@@ -207,22 +207,23 @@ HELP
                             break;
                         }
                     }
-                    this.app.gemini.runCommand(text);
+                    this.app.gemini.runCommand(command + ' ' + text);
                     break;
                 } catch (error) {
                     this.app.logError('Erro ao abrir site:', error);
                     break;
                 }
-                case 'readNewsOf':
-                    try {
-                        // Remove command from text
-
-                        break;
-                    } catch (error) {
-                        this.app.logError('Erro ao abrir site:', error);
-                        break;
-                    }
-                case 'readNews':
+            case 'readNewsOf':
+                try {
+                    // get the three first words from text
+                    const topic = text.split(/\s+/).slice(0, 3).join(' ');
+                    this.app.utils.readNews(topic);
+                    break;
+                } catch (error) {
+                    this.app.logError('Erro ao abrir site:', error);
+                    break;
+                }
+            case 'readNews':
                 try {
                     this.app.utils.readNews();
                     break;
