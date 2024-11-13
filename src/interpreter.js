@@ -186,7 +186,11 @@ HELP
                             break;
                         }
                     }
-                    this.app.gemini.runCommand(command + ' ' + text);
+                    const address = this.app.gemini.runCommand(
+                        command + ' ' + text,
+                    );
+                    this.app.chat.editResponse(_(`Opening ${text}...`));
+                    this.app.utils.executeCommand(`firefox ${address}`);
                     break;
                 } catch (error) {
                     this.app.logError('Erro ao abrir site:', error);
