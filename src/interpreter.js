@@ -130,33 +130,42 @@ HELP
     }
 
     async localVoiceCommandsInterpreter(command, text) {
-        if (command === 'readClipboardText') {
-            try {
-                this.app.chat.editResponse(_('Starting reading...'));
-                await this.app.utils.readClipboardText();
-                return;
-            } catch (error) {
-                this.app.logError(
-                    'Erro ao obter texto da área de transferência:',
-                    error,
-                );
-                return;
-            }
-        }
-        if (command === 'openSite') {
-            const urls = {
-                youtube: 'https://www.youtube.com',
-                cnn: 'https://www.youtube.com/@CNNBrasil',
-                uol: 'https://www.uol.com.br',
-            };
-
-            for (const [key, url] of Object.entries(urls)) {
-                if (text.includes(key)) {
-                    this.app.utils.executeCommand(`firefox ${url}`);
+        switch (command) {
+            case 'readClipboardText':
+                try {
+                    this.app.chat.editResponse(_('Starting reading...'));
+                    await this.app.utils.readClipboardText();
+                    break;
+                } catch (error) {
+                    this.app.logError(
+                        'Erro ao obter texto da área de transferência:',
+                        error,
+                    );
                     break;
                 }
-            }
+            case 'openSite':
+                try {
+                    const urls = {
+                        youtube: 'https://www.youtube.com',
+                        cnn: 'https://www.youtube.com/@CNNBrasil',
+                        uol: 'https://www.uol.com.br',
+                    };
+
+                    for (const [key, url] of Object.entries(urls)) {
+                        if (text.includes(key)) {
+                            this.app.utils.executeCommand(`firefox ${url}`);
+                            break;
+                        }
+                    }
+                } catch (error) {
+                    this.app.logError('Erro ao abrir site:', error);
+                }
+                break;
+
+            default:
+                break;
         }
+
         this.app.gemini.runCommand(text);
     }
 }
