@@ -120,22 +120,6 @@ class AivaSettings {
         const voiceOptions = {
             'en-US': [
                 {
-                    voice: 'en-US-AvaMultilingualNeural',
-                    label: 'Ava Multilingual Neural (4x)',
-                },
-                {
-                    voice: 'en-US-AndrewMultilingualNeural',
-                    label: 'Andrew Multilingual Neural (4x)',
-                },
-                {
-                    voice: 'en-US-EmmaMultilingualNeural',
-                    label: 'Emma Multilingual Neural (4x)',
-                },
-                {
-                    voice: 'en-US-BrianMultilingualNeural',
-                    label: 'Brian Multilingual Neural (4x)',
-                },
-                {
                     voice: 'en-US-AvaNeural',
                     label: 'Ava Neural',
                 },
@@ -338,6 +322,22 @@ class AivaSettings {
                 {
                     voice: 'en-US-SteffanMultilingualNeural',
                     label: 'Steffan Multilingual Neural (1.4x)',
+                },
+                {
+                    voice: 'en-US-AvaMultilingualNeural',
+                    label: 'Ava Multilingual Neural (4x)',
+                },
+                {
+                    voice: 'en-US-AndrewMultilingualNeural',
+                    label: 'Andrew Multilingual Neural (4x)',
+                },
+                {
+                    voice: 'en-US-EmmaMultilingualNeural',
+                    label: 'Emma Multilingual Neural (4x)',
+                },
+                {
+                    voice: 'en-US-BrianMultilingualNeural',
+                    label: 'Brian Multilingual Neural (4x)',
                 },
                 {
                     voice: 'en-US-AlloyMultilingualNeural',
