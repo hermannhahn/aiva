@@ -80,8 +80,8 @@ export class UI {
             can_focus: false,
         });
 
-        // Create chat section
-        this.chatSection = new PopupMenu.PopupMenuSection({
+        // Create chat section - PopupMenuSection
+        this.chatSection = new PopupMenu.PopupBaseMenuItem({
             style_class: 'chat-section',
             can_focus: false,
         });
@@ -92,6 +92,8 @@ export class UI {
             reactive: false,
             can_focus: false,
         });
+        this.addStatusIcon('🟢');
+        this.addStatusIcon('🤖');
 
         // Create scrollbar
         this.scrollView = new St.ScrollView({
