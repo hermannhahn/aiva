@@ -628,4 +628,22 @@ export class Utils {
         }
         return false;
     }
+
+    loadJsonFile = (filename) => {
+        let contents;
+        const datadir = Gio.File.new_for_path(
+            Gio.get_user_data_dir(),
+        ).get_path();
+        filename = Gio.File.new_for_path(datadir + '/' + filename).get_path();
+        try {
+            contents = Gio.File.new_for_path(filename)
+                .load_contents(null)[1]
+                .toString();
+        } catch (e) {
+            logError(e);
+            return null;
+        }
+
+        return contents;
+    };
 }
