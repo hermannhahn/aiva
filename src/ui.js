@@ -80,8 +80,8 @@ export class UI {
             can_focus: false,
         });
 
-        // Create chat section - PopupMenuSection
-        this.chatSection = new PopupMenu.PopupBaseMenuItem({
+        // Create chat section
+        this.chatSection = new PopupMenu.PopupMenuSection({
             style_class: 'chat-section',
             can_focus: false,
         });
