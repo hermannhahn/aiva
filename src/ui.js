@@ -48,6 +48,12 @@ export class UI {
             can_focus: false,
         });
 
+        // Entry Icon
+        this.entryIcon = new PopupMenu.PopupMenuItem('', {
+            style_class: 'status-bar',
+            can_focus: false,
+        });
+
         // Create search entry
         this.searchEntry = new St.Entry({
             name: 'searchEntry',
@@ -92,8 +98,6 @@ export class UI {
             reactive: false,
             can_focus: false,
         });
-        this.addStatusIcon('🟢');
-        this.addStatusIcon('🤖');
 
         // Create scrollbar
         this.scrollView = new St.ScrollView({
@@ -148,6 +152,7 @@ export class UI {
         this.app.menu.style_class = 'menu';
 
         // Add search entry, mic button, clear button and settings button to items container
+        this.item.add_child(this.entryIcon);
         this.item.add_child(this.searchEntry);
         this.item.add_child(this.micButton);
         this.item.add_child(this.clearButton);
@@ -162,6 +167,7 @@ export class UI {
 
         // Add statusBarSection
         this.app.menu.box.add_child(this.statusBarSection);
+        this.addStatusIcon('🟢');
         // this.statusBarSection.add_child(this.statusBar);
     }
 
