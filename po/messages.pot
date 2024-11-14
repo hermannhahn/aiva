@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-14 00:40-0300\n"
+"POT-Creation-Date: 2024-11-14 00:59-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -474,58 +474,66 @@ msgstr ""
 msgid "Gemini API Key"
 msgstr ""
 
-#: src/prefs.js:68 src/prefs.js:81
+#: src/prefs.js:69 src/prefs.js:83
 msgid "How to get API key?"
 msgstr ""
 
-#: src/prefs.js:74
+#: src/prefs.js:75
 msgid "Azure Speech API Key"
 msgstr ""
 
-#: src/prefs.js:87
+#: src/prefs.js:89
 msgid "Azure Speech Region"
 msgstr ""
 
-#: src/prefs.js:94
+#: src/prefs.js:96
 msgid "e.g.: eastus, westus..."
 msgstr ""
 
-#: src/prefs.js:99
+#: src/prefs.js:101
 msgid "Select Language"
 msgstr ""
 
-#: src/prefs.js:103
-msgid "English"
-msgstr ""
-
-#: src/prefs.js:104
-msgid "Portuguese (Brazil)"
-msgstr ""
-
 #: src/prefs.js:105
-msgid "Spanish"
+msgid "English"
 msgstr ""
 
 #: src/prefs.js:106
 msgid "French"
 msgstr ""
 
+#: src/prefs.js:107
+msgid "German"
+msgstr ""
+
+#: src/prefs.js:108
+msgid "Italian"
+msgstr ""
+
+#: src/prefs.js:109
+msgid "Portuguese (Brazil)"
+msgstr ""
+
 #: src/prefs.js:110
+msgid "Spanish"
+msgstr ""
+
+#: src/prefs.js:114
 msgid "Select Voice"
 msgstr ""
 
-#: src/prefs.js:637
+#: src/prefs.js:641
 msgid "Assistant Name"
 msgstr ""
 
-#: src/prefs.js:646
+#: src/prefs.js:650
 msgid "Remember talk history"
 msgstr ""
 
-#: src/prefs.js:654
+#: src/prefs.js:658
 msgid "Save"
 msgstr ""
 
-#: src/prefs.js:705
+#: src/prefs.js:709
 msgid "Your preferences have been saved"
 msgstr ""

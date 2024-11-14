@@ -58,33 +58,35 @@ class AivaSettings {
 
         // GEMINI API KEY
         const apiKeyLabel = new Gtk.Label({
-            label: _('Gemini API Key'),
+            label: '🔑 ' + _('Gemini API Key'),
             halign: Gtk.Align.START,
         });
         const apiKey = new Gtk.Entry({
             buffer: new Gtk.EntryBuffer(),
         });
         const howToButtonApiKey = new Gtk.LinkButton({
-            label: _('How to get API key?'),
+            label: '❓',
+            hint_text: _('How to get API key?'),
             uri: 'https://github.com/wwardaww/gnome-gemini-ai?tab=readme-ov-file#using-gemini-api-key',
         });
 
         // AZURE API KEY
         const labelAzure = new Gtk.Label({
-            label: _('Azure Speech API Key'),
+            label: '🔑 ' + _('Azure Speech API Key'),
             halign: Gtk.Align.START,
         });
         const azureSpeechKey = new Gtk.Entry({
             buffer: new Gtk.EntryBuffer(),
         });
         const howToButtonAzure = new Gtk.LinkButton({
-            label: _('How to get API key?'),
+            label: '❓',
+            hint_text: _('How to get API key?'),
             uri: 'https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/get-started-speech-to-text',
         });
 
         // AZURE REGION
         const labelRegion = new Gtk.Label({
-            label: _('Azure Speech Region'),
+            label: '🌍 ' + _('Azure Speech Region'),
             halign: Gtk.Align.START,
         });
         const azureRegion = new Gtk.Entry({
@@ -96,14 +98,16 @@ class AivaSettings {
 
         // AZURE LANGUAGE (ComboBoxText) to lang options
         const labelLanguage = new Gtk.Label({
-            label: _('Select Language'),
+            label: _('Select Language') + ' 🗣',
             halign: Gtk.Align.START,
         });
         const languageSelector = new Gtk.ComboBoxText();
-        languageSelector.append('en-US', _('English'));
-        languageSelector.append('pt-BR', _('Portuguese (Brazil)'));
-        languageSelector.append('es', _('Spanish'));
-        languageSelector.append('fr', _('French'));
+        languageSelector.append('en-US', '🇺🇲 ' + _('English'));
+        languageSelector.append('fr-FR', '🇫🇷 ' + _('French'));
+        languageSelector.append('de-DE', '🇩🇪 ' + _('German'));
+        languageSelector.append('it-IT', '🇮🇹 ' + _('Italian'));
+        languageSelector.append('pt-BR', '🇧🇷 ' + _('Portuguese (Brazil)'));
+        languageSelector.append('es-ES', '🇪🇸 ' + _('Spanish'));
 
         // AZURE VOICE (ComboBoxText) to voice selection
         const labelVoice = new Gtk.Label({
