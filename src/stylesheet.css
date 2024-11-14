@@ -141,7 +141,6 @@
     width: 24px;
     height: 24px;
     border: 1px solid transparent;
-    border-radius: 150px;
 }
 .mic-icon:hover {
     background-color: rgb(54, 54, 54);
@@ -149,26 +148,18 @@
 }
 .mic-icon:checked {
     border: 1px solid rgb(225, 0, 0);
-    background: rgba(255, 0, 0, 0.5);
-    -webkit-animation: pulse 1s infinite;
-    animation: pulse 1s infinite;
 }
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
+.mic-icon:active {
+    background-size: 18px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid transparent;
 }
 .trash-icon {
     background-image: url('assets/icon_trash.png');
     background-size: 20px;
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
 }
 .trash-icon:hover {
     background-color: rgb(54, 54, 54);
@@ -183,8 +174,8 @@
 .settings-icon {
     background-image: url('assets/icon_settings.png');
     background-size: 20px;
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
 }
 .settings-icon:hover {
     background-color: rgb(54, 54, 54);
