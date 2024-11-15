@@ -49,7 +49,7 @@ export class UI {
         });
 
         // Entry Icon
-        this.entryIcon = new PopupMenu.PopupMenuItem('', {
+        this.entryIcon = new PopupMenu.PopupMenuItem('🧠', {
             style_class: 'status-bar',
             can_focus: false,
         });
