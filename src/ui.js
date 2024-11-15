@@ -45,7 +45,7 @@ export class UI {
         this.item = new PopupMenu.PopupBaseMenuItem({
             style_class: 'app-item',
             reactive: false,
-            can_focus: false,
+            can_focus: true,
         });
 
         // Entry Icon
@@ -100,6 +100,8 @@ export class UI {
             style_class: 'status-bar',
             reactive: false,
             can_focus: false,
+            x_expand: true,
+            y_expand: true,
         });
 
         // Create scrollbar
