@@ -58,7 +58,8 @@ export class UI {
 
         // Create search entry
         this.searchEntry = new Gtk.TextView({
-            placeholder_text: 'Ask me anything...',
+            style_class: 'search-entry',
+            hint_text: _('Ask me anything...'),
             wrap_mode: Gtk.WrapMode.WORD,
             width_chars: 30,
             height_chars: 2,
