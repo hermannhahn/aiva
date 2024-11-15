@@ -165,8 +165,8 @@ export class UI {
         this.app.menu.addMenuItem(this.item);
         this.app.menu.style_class = 'menu';
 
-        // Add search entry, mic button, clear button and settings button to items container
-        this.item.add_child(this.statusBar.actor);
+        // Add items
+        this.item.add_child(this.statusBar);
         this.item.add_child(this.searchEntry);
         this.item.add_child(this.micButton);
         this.item.add_child(this.clearButton);
@@ -184,7 +184,7 @@ export class UI {
     }
 
     /**
-     * @description add items actions
+     * @description items actions
      */
     _itemsActions() {
         // If press enter on question input box
@@ -291,7 +291,7 @@ export class UI {
     }
 
     statusIcon(icon) {
-        this.statusBar.label.clutter_text.set_markup(icon);
+        this.statusBar.label = icon;
         return true;
     }
 }
