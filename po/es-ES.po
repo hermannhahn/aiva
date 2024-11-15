@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-14 21:41-0300\n"
+"POT-Creation-Date: 2024-11-15 01:04-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language es-ES\n"
@@ -474,66 +474,66 @@ msgstr ""
 msgid "Gemini API Key"
 msgstr ""
 
-#: src/prefs.js:69 src/prefs.js:83
+#: src/prefs.js:70 src/prefs.js:86
 msgid "How to get API key?"
 msgstr ""
 
-#: src/prefs.js:75
+#: src/prefs.js:77
 msgid "Azure Speech API Key"
 msgstr ""
 
-#: src/prefs.js:89
+#: src/prefs.js:93
 msgid "Azure Speech Region"
 msgstr ""
 
-#: src/prefs.js:96
+#: src/prefs.js:100
 msgid "e.g.: eastus, westus..."
 msgstr ""
 
-#: src/prefs.js:101
+#: src/prefs.js:106
 msgid "Select Language"
 msgstr ""
 
-#: src/prefs.js:105
+#: src/prefs.js:110
 msgid "English"
 msgstr ""
 
-#: src/prefs.js:106
+#: src/prefs.js:111
 msgid "French"
 msgstr ""
 
-#: src/prefs.js:107
+#: src/prefs.js:112
 msgid "German"
 msgstr ""
 
-#: src/prefs.js:108
+#: src/prefs.js:113
 msgid "Italian"
 msgstr ""
 
-#: src/prefs.js:109
+#: src/prefs.js:114
 msgid "Portuguese (Brazil)"
 msgstr ""
 
-#: src/prefs.js:110
+#: src/prefs.js:115
 msgid "Spanish"
 msgstr ""
 
-#: src/prefs.js:114
+#: src/prefs.js:119
 msgid "Select Voice"
 msgstr ""
 
-#: src/prefs.js:641
+#: src/prefs.js:646
 msgid "Assistant Name"
 msgstr ""
 
-#: src/prefs.js:650
+#: src/prefs.js:655
 msgid "Remember talk history"
 msgstr ""
 
-#: src/prefs.js:658
+#: src/prefs.js:663
 msgid "Save"
 msgstr ""
 
-#: src/prefs.js:709
+#: src/prefs.js:714
 msgid "Your preferences have been saved"
 msgstr ""
