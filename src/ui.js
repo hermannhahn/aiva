@@ -1,5 +1,5 @@
 import St from 'gi://St';
-import Gtk from 'gi://Gtk';
+// import Gtk from 'gi://Gtk';
 import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
