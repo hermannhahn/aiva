@@ -51,7 +51,7 @@ export class UI {
         // Status Icon
         this.statusBar = new St.Button({
             label: '🔍',
-            style_class: 'status-bar',
+            style_class: 'status-icon',
             can_focus: false,
         });
 
