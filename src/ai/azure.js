@@ -39,7 +39,7 @@ export class MicrosoftAzure {
             return;
         }
 
-        this.generateStatusBar = this.app.ui.addStatusIcon('🔄');
+        this.generateStatusBar = this.app.ui.statusIcon('🔄');
 
         // API URL
         const apiUrl = `https://${this.AZURE_SPEECH_REGION}.tts.speech.microsoft.com/cognitiveservices/v1`;
@@ -67,7 +67,7 @@ export class MicrosoftAzure {
             this.app.chat.editResponse(
                 _("Sorry, I'm having connection trouble. Please try again."),
             );
-            this.app.ui.removeStatusIcon(this.generateStatusBar);
+            this.app.ui.statusIcon('🔎');
             return;
         }
 
@@ -80,7 +80,7 @@ export class MicrosoftAzure {
             this.app.chat.editResponse(
                 _("Sorry, I'm having connection trouble. Please try again."),
             );
-            this.app.ui.removeStatusIcon(this.generateStatusBar);
+            this.app.ui.statusIcon('🔎');
             return;
         }
 
@@ -115,7 +115,7 @@ export class MicrosoftAzure {
                 if (success) {
                     this.app.log('Audio file saved to: ' + tempFilePath);
                     // Play audio
-                    this.app.ui.removeStatusIcon(this.generateStatusBar);
+                    this.app.ui.statusIcon('🔎');
                     this.app.audio.play(tempFilePath);
                 } else {
                     this.app.log('Requisition error: ' + stderr);
@@ -124,7 +124,7 @@ export class MicrosoftAzure {
                             "Sorry, I'm having connection trouble. Please try again.",
                         ),
                     );
-                    this.app.ui.removeStatusIcon(this.generateStatusBar);
+                    this.app.ui.statusIcon('🔎');
                 }
             } catch (e) {
                 this.app.log('Error processing response: ' + e.message);
@@ -133,7 +133,7 @@ export class MicrosoftAzure {
                         "Sorry, I'm having connection trouble. Please try again.",
                     ),
                 );
-                this.app.ui.removeStatusIcon(this.generateStatusBar);
+                this.app.ui.statusIcon('🔎');
             } finally {
                 // GLib.unlink(tempFilePath);
             }
@@ -146,7 +146,7 @@ export class MicrosoftAzure {
      * @returns {string} text
      */
     transcribe(path) {
-        this.transcribeStatusIcon = this.app.ui.addStatusIcon('📝');
+        this.transcribeStatusIcon = this.app.ui.statusIcon('📝');
         this.app.chat.addQuestion(_('Transcribing...'));
 
         // Load audio file
@@ -160,7 +160,7 @@ export class MicrosoftAzure {
             this.app.chat.editResponse(
                 _("Sorry, I'm having trouble to listen you. Please try again."),
             );
-            this.app.ui.removeStatusIcon(this.transcribeStatusIcon);
+            this.app.ui.statusIcon('🔎');
             return;
         }
 
@@ -184,7 +184,7 @@ export class MicrosoftAzure {
             this.app.chat.editResponse(
                 _("Sorry, I'm having trouble to listen you. Please try again."),
             );
-            this.app.ui.removeStatusIcon(this.transcribeStatusIcon);
+            this.app.ui.statusIcon('🔎');
             return;
         }
 
@@ -199,7 +199,7 @@ export class MicrosoftAzure {
             this.app.chat.editResponse(
                 _("Sorry, I'm having trouble to listen you. Please try again."),
             );
-            this.app.ui.removeStatusIcon(this.transcribeStatusIcon);
+            this.app.ui.statusIcon('🔎');
             return;
         }
 
@@ -235,7 +235,7 @@ export class MicrosoftAzure {
                     if (response && response.DisplayText) {
                         let transcription = response.DisplayText;
                         this.app.chat.editQuestion(transcription);
-                        this.app.ui.removeStatusIcon(this.transcribeStatusIcon);
+                        this.app.ui.statusIcon('🔎');
                         this.app.interpreter.proccess(transcription);
                     } else {
                         this.app.log('Nenhuma transcrição encontrada.');
@@ -245,7 +245,7 @@ export class MicrosoftAzure {
                                 "Sorry, I'm having trouble to listen you. Please try again.",
                             ),
                         );
-                        this.app.ui.removeStatusIcon(this.transcribeStatusIcon);
+                        this.app.ui.statusIcon('🔎');
                     }
                 } else {
                     this.app.log('Erro na requisição: ' + stderr);
@@ -255,13 +255,13 @@ export class MicrosoftAzure {
                             "Sorry, I'm having trouble to listen you. Please try again.",
                         ),
                     );
-                    this.app.ui.removeStatusIcon(this.transcribeStatusIcon);
+                    this.app.ui.statusIcon('🔎');
                 }
             } catch (e) {
                 this.app.log('Erro ao processar resposta: ' + e.message);
                 this.app.chat.editQuestion(e.message);
                 this.app.chat.editResponse(e.message);
-                this.app.ui.removeStatusIcon(this.transcribeStatusIcon);
+                this.app.ui.statusIcon('🔎');
             }
         });
     }
