@@ -90,15 +90,9 @@ export class UI {
             can_focus: false,
         });
 
-        // Create chat section
-        this.chatSection = new PopupMenu.PopupMenuSection({
-            style_class: 'chat-section',
-            can_focus: false,
-        });
-
         // Create status bar section
         this.tipsSection = new PopupMenu.PopupBaseMenuItem({
-            style_class: 'status-bar',
+            style_class: 'tips-section',
             can_focus: false,
         });
 
@@ -106,6 +100,12 @@ export class UI {
         this.scrollView = new St.ScrollView({
             style_class: 'chat-scroll-section',
             overlay_scrollbars: false,
+            can_focus: false,
+        });
+
+        // Create chat section
+        this.chatSection = new PopupMenu.PopupMenuSection({
+            style_class: 'chat-section',
             can_focus: false,
         });
 
@@ -295,6 +295,6 @@ export class UI {
                 icon = '🔎';
                 break;
         }
-        this.statusBar.label.clutter_text.set_markup('🔎');
+        this.statusBar.label.clutter_text.set_markup(icon);
     }
 }
