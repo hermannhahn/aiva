@@ -53,8 +53,7 @@
     border-radius: 100px;
 }
 .mic-icon:checked {
-    background-image: url('assets/icon_mic.png');
-    background-size: 24px;
+    background-image: url('assets/icon_mic_rec.png');
 }
 .mic-icon:active {
     background-size: 22px;
