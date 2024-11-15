@@ -110,13 +110,7 @@ export class Audio {
         this.recordStatusBar = this.app.ui.addStatusIcon('🎤');
 
         // Create temporary file for audio recording
-        const datadir = Gio.File.new_for_path(
-            Gio.get_user_data_dir(),
-        ).get_path();
-        const filename = Gio.File.new_for_path(
-            datadir + '/last_audio.wav',
-        ).get_path();
-        this.questionPath = filename;
+        this.questionPath = '/tmp/gva_last_transcription.wav';
 
         // Pipeline GStreamer
         this.pipeline = new Gio.Subprocess({
