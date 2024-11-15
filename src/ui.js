@@ -64,7 +64,7 @@ export class UI {
             x_expand: true,
             y_expand: true,
             can_focus: false,
-            wrap_mode: St.WrapMode.WRAP_WORD,
+            wrap_mode: St.WrapMode.WORD_CHAR,
             min_width: 200,
             min_height: 100,
         });
