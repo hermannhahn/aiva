@@ -161,17 +161,17 @@ export class UI {
         this.item.add_child(this.clearButton);
         this.item.add_child(this.settingsButton);
 
+        // Add statusBarSection
+        this.app.menu.box.add_child(this.statusBarSection);
+        this.addStatusIcon('🟢');
+        // this.statusBarSection.add_child(this.statusBar);
+
         // Add scrollview to menu box
         this.app.menu.box.add_child(this.scrollView);
         this.app.menu.box.style_class = 'menu-box';
 
         // Add chat to scrollbar
         this.scrollView.add_child(this.chatSection.actor);
-
-        // Add statusBarSection
-        this.app.menu.box.add_child(this.statusBarSection);
-        this.addStatusIcon('🟢');
-        // this.statusBarSection.add_child(this.statusBar);
     }
 
     /**
