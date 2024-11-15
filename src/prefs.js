@@ -66,11 +66,12 @@ class AivaSettings {
         });
         const howToButtonApiKey = new Gtk.LinkButton({
             label: '❓',
-            style_class: 'link-button',
             tooltip_text: _('How to get API key?'),
             uri: 'https://console.cloud.google.com/apis/credentials',
             halign: Gtk.Align.START,
         });
+        const labelHowTo = howToButtonApiKey.get_child();
+        labelHowTo.set_property('underlined', false);
 
         // AZURE API KEY
         const labelAzure = new Gtk.Label({
@@ -82,11 +83,12 @@ class AivaSettings {
         });
         const howToButtonAzure = new Gtk.LinkButton({
             label: '❓',
-            style_class: 'link-button',
             tooltip_text: _('How to get API key?'),
             uri: 'https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/get-started-speech-to-text',
             halign: Gtk.Align.START,
         });
+        const labelHowToAzure = howToButtonAzure.get_child();
+        labelHowToAzure.set_property('underlined', false);
 
         // AZURE REGION
         const labelRegion = new Gtk.Label({
