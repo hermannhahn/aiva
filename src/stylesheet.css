@@ -86,29 +86,13 @@
 .chat-section::selection {
     background-color: rgb(42, 42, 42);
 }
-.status-bar {
-    color: rgb(243, 232, 212);
-    text-align: right;
-}
-.status-bar:hover {
-    background-color: rgb(42, 42, 42);
-}
-.status-bar-icon {
-    font-size: 12px;
-    width: 16px;
-    height: 16px;
-    border: 1px solid transparent;
-}
-.status-bar-icon:hover {
-    background-color: rgb(42, 42, 42);
-}
-.entry-icon {
+.status-icon {
     font-size: 16px;
     width: 24px;
     height: 24px;
     border: 1px solid transparent;
 }
-.entry-icon:hover {
+.status-icon:hover {
     background-color: rgb(42, 42, 42);
 }
 .input-chat::selection {
