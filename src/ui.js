@@ -161,7 +161,7 @@ export class UI {
         this.item.add_child(this.settingsButton);
 
         // Add Tips Section
-        this.app.menu.box.add_child(this.tipsSection);
+        this.app.menu.box.add_child(this.tipsSection.actor);
 
         // Add scrollview to menu box
         this.app.menu.box.add_child(this.scrollView);
