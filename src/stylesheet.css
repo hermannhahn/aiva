@@ -24,7 +24,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 55px;
 }
 .status-bar {
     font-size: 16px;
