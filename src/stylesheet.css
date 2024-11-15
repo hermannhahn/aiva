@@ -1,10 +1,4 @@
 /* Add your custom extension styling here */
-.searchEntry {
-    width: 250px;
-    height: 20px !important;
-    border-radius: 10px;
-    text-wrap: wrap;
-}
 .app-item {
     position: relative; /* Para garantir que o container fixo fique acima */
     display: flex;
@@ -28,63 +22,11 @@
 .menu-box::selection {
     background-color: rgb(42, 42, 42);
 }
-.response-chat {
-    color: rgb(243, 232, 212);
-    background-color: rgb(42, 42, 42);
+.search-entry {
+    width: 250px;
+    height: 20px !important;
     border-radius: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
     text-wrap: wrap;
-    text-align: justify;
-    word-wrap: break-word;
-    margin-top: 10px;
-    overflow-y: auto;
-    /* display: grid;
-    grid-template-columns: repeat(
-        auto-fill,
-        minmax(200px, 1fr)
-    ); /* see notes below */
-    /* grid-gap: 1em; */
-}
-.response-chat:hover {
-    background-color: rgb(42, 42, 42);
-}
-.response-chat::selection {
-    background-color: rgb(42, 42, 42);
-}
-.input-chat {
-    color: rgb(243, 232, 212);
-    text-wrap: wrap;
-    text-align: justify;
-    word-wrap: break-word;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-}
-.input-chat::selection {
-    background-color: rgb(42, 42, 42);
-}
-.chat-scroll-section {
-    max-width: 800px;
-    max-height: 600px;
-    overflow: auto;
-    padding-right: 10px;
-    padding-bottom: 10px;
-}
-.chat-scroll-section::selection {
-    background-color: rgb(42, 42, 42);
-}
-.chat-section {
-    overflow-y: auto;
-    color: rgb(243, 232, 212);
-    text-wrap: wrap;
-    word-wrap: break-word;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-.chat-section::selection {
-    background-color: rgb(42, 42, 42);
 }
 .status-icon {
     font-size: 16px;
@@ -94,40 +36,6 @@
 }
 .status-icon:hover {
     background-color: rgb(42, 42, 42);
-}
-.input-chat::selection {
-    background-color: rgb(42, 42, 42);
-}
-.google-gemini-icon {
-    background-image: url('assets/icon_gemini.png');
-    background-size: 24px;
-    width: 24px;
-    height: 24px;
-    padding: 0px;
-}
-.copy-icon {
-    background-image: url('assets/icon_copy.png');
-    background-size: 26px;
-    width: 24px;
-    height: 24px;
-}
-.copy-icon:hover {
-    background-image: url('assets/icon_copy.png');
-}
-.copy-icon:active {
-    background-image: url('assets/icon_check.png');
-}
-.copy-icon-checked {
-    background-image: url('assets/icon_check.png');
-    background-size: 26px;
-    width: 24px;
-    height: 24px;
-}
-.copy-icon-checked:hover {
-    background-image: url('assets/icon_check.png');
-}
-.copy-icon-checked:active {
-    background-image: url('assets/icon_check.png');
 }
 .mic-icon {
     /* background-image: url('assets/icon_mic.png');
@@ -185,6 +93,98 @@
     width: 20px;
     height: 20px;
     border: 1px solid transparent;
+}
+.chat-scroll-section {
+    max-width: 800px;
+    max-height: 600px;
+    overflow: auto;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+.chat-scroll-section::selection {
+    background-color: rgb(42, 42, 42);
+}
+.chat-section {
+    overflow-y: auto;
+    color: rgb(243, 232, 212);
+    text-wrap: wrap;
+    word-wrap: break-word;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.chat-section::selection {
+    background-color: rgb(42, 42, 42);
+}
+.response-chat {
+    color: rgb(243, 232, 212);
+    background-color: rgb(42, 42, 42);
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    text-wrap: wrap;
+    text-align: justify;
+    word-wrap: break-word;
+    margin-top: 10px;
+    overflow-y: auto;
+    /* display: grid;
+    grid-template-columns: repeat(
+        auto-fill,
+        minmax(200px, 1fr)
+    ); /* see notes below */
+    /* grid-gap: 1em; */
+}
+.response-chat:hover {
+    background-color: rgb(42, 42, 42);
+}
+.response-chat::selection {
+    background-color: rgb(42, 42, 42);
+}
+.input-chat {
+    color: rgb(243, 232, 212);
+    text-wrap: wrap;
+    text-align: justify;
+    word-wrap: break-word;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+.input-chat::selection {
+    background-color: rgb(42, 42, 42);
+}
+.input-chat::selection {
+    background-color: rgb(42, 42, 42);
+}
+.google-gemini-icon {
+    background-image: url('assets/icon_gemini.png');
+    background-size: 24px;
+    width: 24px;
+    height: 24px;
+    padding: 0px;
+}
+.copy-icon {
+    background-image: url('assets/icon_copy.png');
+    background-size: 26px;
+    width: 24px;
+    height: 24px;
+}
+.copy-icon:hover {
+    background-image: url('assets/icon_copy.png');
+}
+.copy-icon:active {
+    background-image: url('assets/icon_check.png');
+}
+.copy-icon-checked {
+    background-image: url('assets/icon_check.png');
+    background-size: 26px;
+    width: 24px;
+    height: 24px;
+}
+.copy-icon-checked:hover {
+    background-image: url('assets/icon_check.png');
+}
+.copy-icon-checked:active {
+    background-image: url('assets/icon_check.png');
 }
 .inputLabel {
     color: black;
