@@ -58,14 +58,14 @@ export class UI {
 
         // Create search entry
         this.searchEntry = new Gtk.TextView({
-            editable: true,
             wrap_mode: Gtk.WrapMode.WORD,
-            monospace: true,
-            cursor_visible: true,
-            accepts_tab: true,
-            hexpand: true,
-            vexpand: true,
-            can_focus: true,
+            // editable: true,
+            // monospace: true,
+            // cursor_visible: true,
+            // accepts_tab: true,
+            // hexpand: true,
+            // vexpand: true,
+            // can_focus: true,
         });
 
         // this.searchEntry = new Gtk.TextView({
