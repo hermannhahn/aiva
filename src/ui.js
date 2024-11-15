@@ -48,7 +48,7 @@ export class UI {
             can_focus: true,
         });
 
-        // Entry Icon
+        // Status Icon
         this.statusBar = new St.Button({
             label: '🔍',
             style_class: 'status-icon',
@@ -58,7 +58,7 @@ export class UI {
         // Create search entry
         this.searchEntry = new St.Entry({
             name: 'searchEntry',
-            style_class: 'searchEntry',
+            style_class: 'search-entry',
             hint_text: _('Ask me anything...'),
             track_hover: true,
             x_expand: true,
