@@ -35,10 +35,10 @@ export class UI {
 
         // Create tray
         this.tray = new St.BoxLayout({
-            style_class: 'panel-status-menu-box',
+            style_class: 'system-tray',
         });
         this.icon = new St.Icon({
-            style_class: 'google-gemini-icon',
+            style_class: 'google-assistant-icon',
         });
 
         // Create app item section
@@ -57,7 +57,6 @@ export class UI {
 
         // Create search entry
         this.searchEntry = new St.Entry({
-            name: 'searchEntry',
             style_class: 'search-entry',
             hint_text: _('Ask me anything...'),
             track_hover: true,
