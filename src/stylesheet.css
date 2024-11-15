@@ -1,10 +1,4 @@
 /* Add your custom extension styling here */
-.app-item {
-    position: relative; /* Para garantir que o container fixo fique acima */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 .system-tray {
     padding: 0px;
     margin: 0px;
@@ -25,18 +19,26 @@
 .menu-box::selection {
     background-color: rgb(42, 42, 42);
 }
-.search-entry {
-    width: 250px;
-    height: 20px !important;
-    border-radius: 10px;
-    text-wrap: wrap;
+.app-items {
+    position: relative; /* Para garantir que o container fixo fique acima */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .status-bar {
-    font-size: 12px;
-    color: burlywood;
+    font-size: 16px;
+    width: 24px;
+    height: 24px;
+    text-align: center;
 }
-.status-icon:hover {
+.stastatus-bar:hover {
     background-color: rgb(42, 42, 42);
+}
+.search-entry {
+    width: 250px;
+    height: 40px !important;
+    border-radius: 10px;
+    text-wrap: wrap;
 }
 .mic-icon {
     background-image: url('assets/icon_mic.png');
@@ -85,6 +87,11 @@
 }
 .settings-icon:active {
     font-size: 14px;
+}
+.tips-section {
+    font-size: 12px;
+    color: burlywood;
+    height: 5px;
 }
 .chat-scroll-section {
     max-width: 800px;
