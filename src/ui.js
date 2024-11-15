@@ -43,7 +43,7 @@ export class UI {
 
         // Create app item section
         this.item = new PopupMenu.PopupBaseMenuItem({
-            style_class: 'app-item',
+            style_class: 'app-items',
             reactive: false,
             can_focus: true,
         });
@@ -62,7 +62,7 @@ export class UI {
             track_hover: true,
             x_expand: true,
             y_expand: true,
-            can_focus: false,
+            can_focus: true,
         });
 
         // Create voice activation button
