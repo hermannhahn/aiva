@@ -396,6 +396,11 @@ export class Utils {
         });
     }
 
+    /**
+     *
+     * @param {string} text
+     * @returns {object} { code, tts }
+     */
     extractCodeAndTTS(text) {
         let tts = text.split('*').join('');
         tts = tts
