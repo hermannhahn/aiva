@@ -285,6 +285,7 @@ export class UI {
             style_class: 'status-icon',
             can_focus: false,
         });
+        this.statusBar = statusBar;
         this.item.add_child(statusBar);
         return statusBar;
     }
