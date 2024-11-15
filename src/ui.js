@@ -160,7 +160,7 @@ export class UI {
         this.item.add_child(this.clearButton);
         this.item.add_child(this.settingsButton);
 
-        // Add statusBarSection
+        // Add Tips Section
         this.app.menu.box.add_child(this.tipsSection);
 
         // Add scrollview to menu box
