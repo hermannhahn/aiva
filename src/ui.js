@@ -279,6 +279,6 @@ export class UI {
     }
 
     statusIcon(icon) {
-        this.statusBar.label.set_text(icon);
+        this.app.ui.statusBar.label.set_text(icon);
     }
 }
