@@ -67,7 +67,7 @@ export class UI {
 
         // Create voice activation button
         this.micButton = new St.Button({
-            label: '🎤',
+            label: '',
             style_class: 'mic-icon',
             toggle_mode: true,
             can_focus: false,
