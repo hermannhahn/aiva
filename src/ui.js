@@ -67,6 +67,7 @@ export class UI {
 
         // Create voice activation button
         this.micButton = new St.Button({
+            label: '🎤',
             style_class: 'mic-icon',
             toggle_mode: true,
             can_focus: false,
@@ -74,6 +75,7 @@ export class UI {
 
         // Create clear history button
         this.clearButton = new St.Button({
+            label: '🗑️',
             style_class: 'trash-icon',
             toggle_mode: true,
             can_focus: false,
@@ -81,6 +83,7 @@ export class UI {
 
         // Create settings button
         this.settingsButton = new St.Button({
+            label: '⚙️',
             style_class: 'settings-icon',
             toggle_mode: true,
             can_focus: false,
