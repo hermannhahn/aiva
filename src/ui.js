@@ -1,4 +1,5 @@
 import St from 'gi://St';
+import Gtk from 'gi://Gtk';
 import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
@@ -56,14 +57,22 @@ export class UI {
         });
 
         // Create search entry
-        this.searchEntry = new St.Entry({
-            style_class: 'search-entry',
-            hint_text: _('Ask me anything...'),
-            track_hover: true,
-            x_expand: true,
-            y_expand: true,
-            can_focus: true,
+        this.searchEntry = new Gtk.TextView({
+            activates_default: true,
+            placeholder_text: 'Ask me anything...',
+            wrap_mode: Gtk.WrapMode.WORD,
+            width_chars: 30,
+            height_chars: 2,
         });
+
+        // this.searchEntry = new Gtk.TextView({
+        //     style_class: 'search-entry',
+        //     hint_text: _('Ask me anything...'),
+        //     track_hover: true,
+        //     x_expand: true,
+        //     y_expand: true,
+        //     can_focus: true,
+        // });
 
         // Create voice activation button
         this.micButton = new St.Button({
