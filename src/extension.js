@@ -12,7 +12,6 @@ const DEBUG = true;
 
 // Extension
 import St from 'gi://St';
-import Gtk from 'gi://Gtk';
 import GObject from 'gi://GObject';
 import Clutter from 'gi://Clutter';
 import GLib from 'gi://GLib';
@@ -226,27 +225,6 @@ export default class AivaExtension extends Extension {
         });
         this._app.log('Starting AIVA...');
 
-        this.window = new Gtk.Window({
-            title: 'Assistente',
-            default_width: 600,
-            default_height: 400,
-        });
-
-        this.window.connect('destroy', () => {
-            Gtk.main_quit();
-        });
-
-        // Layout principal
-        this.mainBox = new Gtk.Box({
-            orientation: Gtk.Orientation.VERTICAL,
-            spacing: 10,
-            margin_top: 10,
-            margin_bottom: 10,
-            margin_start: 10,
-            margin_end: 10,
-        });
-
-        this.window.set_child(this.mainBox);
         // add to status bar
         Main.panel.addToStatusArea('gvaGnomeExtension', this._app, 1);
 
