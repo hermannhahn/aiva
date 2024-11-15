@@ -56,26 +56,26 @@ export class UI {
             can_focus: false,
         });
 
-        // Create search entry
-        this.searchEntry = new Gtk.TextView({
-            wrap_mode: Gtk.WrapMode.WORD,
-            // editable: true,
-            // monospace: true,
-            // cursor_visible: true,
-            // accepts_tab: true,
-            // hexpand: true,
-            // vexpand: true,
-            // can_focus: true,
-        });
-
+        // // Create search entry
         // this.searchEntry = new Gtk.TextView({
-        //     style_class: 'search-entry',
-        //     hint_text: _('Ask me anything...'),
-        //     track_hover: true,
-        //     x_expand: true,
-        //     y_expand: true,
-        //     can_focus: true,
+        //     wrap_mode: Gtk.WrapMode.WORD,
+        //     // editable: true,
+        //     // monospace: true,
+        //     // cursor_visible: true,
+        //     // accepts_tab: true,
+        //     // hexpand: true,
+        //     // vexpand: true,
+        //     // can_focus: true,
         // });
+
+        this.searchEntry = new St.Entry({
+            style_class: 'search-entry',
+            hint_text: _('Ask me anything...'),
+            track_hover: true,
+            x_expand: true,
+            y_expand: true,
+            can_focus: true,
+        });
 
         // Create voice activation button
         this.micButton = new St.Button({
