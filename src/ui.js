@@ -50,7 +50,7 @@ export class UI {
 
         // Entry Icon
         this.entryIcon = new PopupMenu.PopupMenuItem('🧠', {
-            style_class: 'status-bar',
+            style_class: 'entry-icon',
             can_focus: false,
         });
 
@@ -97,7 +97,7 @@ export class UI {
 
         // Create status bar section
         this.statusBarSection = new PopupMenu.PopupBaseMenuItem({
-            style_class: 'status-bar-section',
+            style_class: 'status-bar',
             reactive: false,
             can_focus: false,
         });
@@ -283,7 +283,7 @@ export class UI {
 
     addStatusIcon(label) {
         let icon = new PopupMenu.PopupMenuItem('', {
-            style_class: 'status-bar',
+            style_class: 'status-bar-icon',
             can_focus: false,
         });
         this.statusBarSection.add_child(icon);
