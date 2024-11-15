@@ -88,7 +88,7 @@
 }
 .status-bar {
     color: rgb(243, 232, 212);
-    height: 16px;
+    height: 24px;
     text-align: right;
 }
 .status-bar:hover {
