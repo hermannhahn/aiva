@@ -397,15 +397,14 @@ export class Utils {
     }
 
     extractCodeAndTTS(text) {
-        // Expressão regular para capturar o código entre triplo acento grave
         let tts = text.split('*').join('');
         tts = tts
             .replace(/&/g, '')
             .replace(/</g, '')
             .replace(/>/g, '')
             .replace(/`{3}/g, '')
-            .replace(/<code>/g, '') // Remove tags de abertura <code>
-            .replace(/<\/code>/g, '') // Remove tags de fechamento <code>
+            .replace(/<code>/g, '') // Remove open <code> tags
+            .replace(/<\/code>/g, '') // Remove tags close </code> tags
             .replace(/\[red\](.*?)\[\/red\]/g, '')
             .replace(/\[green\](.*?)\[\/green\]/g, '')
             .replace(/\[yellow\](.*?)\[\/yellow\]/g, '')
@@ -414,18 +413,19 @@ export class Utils {
             .replace(/\[black\](.*?)\[\/black\]/g, '')
             .replace(/\[gray\](.*?)\[\/gray\]/g, '')
             .replace(/\[brown\](.*?)\[\/brown\]/g, '')
-            .replace(/\[blue\](.*?)\[\/blue\]/g, '');
+            .replace(/\[blue\](.*?)\[\/blue\]/g, '')
+            .replace(/\[(.*?)\]\((.*?)\)/g, ''); // Remove links from text
 
-        // If tts is more then 100 characters, change tts text
-        if (tts.length > 2000) {
-            tts = this.randomPhraseToShowOnScreen();
-        }
+        // If tts is more then 2000 characters, change tts text
+        // if (tts.length > 2000) {
+        //     tts = this.randomPhraseToShowOnScreen();
+        // }
 
+        // Search for code example
         const regex = /`{3}([\s\S]*?)`{3}/;
         const match = text.match(regex);
 
         if (match) {
-            // const code = match[1]; // Captura o conteúdo entre os acentos graves
             // If found more match, add to code result
             let code = match[1];
             let nextMatch = text.match(regex);
@@ -434,11 +434,11 @@ export class Utils {
                 text = text.replace(nextMatch[0], '');
                 nextMatch = text.match(regex);
             }
-            // Remove o bloco de código do texto original para formar o TTS
             this.app.log('code detected!');
+
             return {code, tts};
         } else {
-            // Se não encontrar código, retorna apenas o texto original no campo tts
+            // If not
             return {code: null, tts};
         }
     }
