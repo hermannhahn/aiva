@@ -278,22 +278,7 @@ export class UI {
         return copyButton;
     }
 
-    statusIcon(type) {
-        let icon = '🔎';
-        switch (type) {
-            case 'mic':
-                icon = '🎤';
-                break;
-            case 'settings':
-                icon = '⚙️';
-                break;
-            case 'trash':
-                icon = '🗑️';
-                break;
-            default:
-                icon = '🔎';
-                break;
-        }
+    statusIcon(icon) {
         this.statusBar.label.clutter_text.set_markup(icon);
     }
 }
