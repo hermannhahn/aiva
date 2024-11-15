@@ -287,6 +287,5 @@ export class UI {
         });
         this.statusBar = statusBar;
         this.item.add_child(statusBar);
-        return statusBar;
     }
 }
