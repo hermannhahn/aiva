@@ -98,10 +98,7 @@ export class UI {
         // Create status bar section
         this.statusBarSection = new PopupMenu.PopupBaseMenuItem({
             style_class: 'status-bar',
-            reactive: false,
             can_focus: false,
-            x_expand: true,
-            y_expand: true,
         });
 
         // Create scrollbar
@@ -287,6 +284,8 @@ export class UI {
         let icon = new PopupMenu.PopupMenuItem('', {
             style_class: 'status-bar-icon',
             can_focus: false,
+            x_expand: true,
+            y_expand: true,
         });
         this.statusBarSection.add_child(icon);
         icon.label.clutter_text.set_markup(label);
