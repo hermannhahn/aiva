@@ -159,8 +159,8 @@
 .input-chat::selection {
     background-color: rgb(42, 42, 42);
 }
-.google-gemini-icon {
-    background-image: url('assets/icon_gemini.png');
+.google-assistant-icon {
+    background-image: url('assets/icon_google_assistant.png');
     background-size: 24px;
     width: 24px;
     height: 24px;
