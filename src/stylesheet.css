@@ -6,6 +6,10 @@
     justify-content: center;
     padding-top: 10px;
 }
+.system-tray {
+    padding: 0px;
+    margin: 0px;
+}
 .menu::selection {
     background-color: rgb(42, 42, 42);
 }
