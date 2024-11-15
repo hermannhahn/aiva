@@ -279,6 +279,6 @@ export class UI {
     }
 
     statusIcon(icon) {
-        this.statusBar.label.clutter_text.set_markup(icon);
+        this.statusBar.label.set_text(icon);
     }
 }
