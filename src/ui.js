@@ -154,7 +154,7 @@ export class UI {
         this.app.menu.style_class = 'menu';
 
         // Add search entry, mic button, clear button and settings button to items container
-        this.item.add_child(this.statusBar);
+        this.item.add_child(this.statusBar.actor);
         this.item.add_child(this.searchEntry);
         this.item.add_child(this.micButton);
         this.item.add_child(this.clearButton);
@@ -279,13 +279,7 @@ export class UI {
     }
 
     statusIcon(icon) {
-        this.item.remove_child(this.statusBar);
-        let statusBar = new St.Button({
-            label: icon,
-            style_class: 'status-icon',
-            can_focus: false,
-        });
-        this.statusBar = statusBar;
-        this.item.add_child(statusBar);
+        this.statusBar.label.clutter_text.set_markup(icon);
+        return true;
     }
 }
