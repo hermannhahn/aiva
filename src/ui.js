@@ -49,7 +49,8 @@ export class UI {
         });
 
         // Entry Icon
-        this.entryIcon = new PopupMenu.PopupMenuItem('🧠', {
+        this.entryIcon = new St.Button({
+            label: '🔍',
             style_class: 'entry-icon',
             can_focus: false,
         });
@@ -63,6 +64,9 @@ export class UI {
             x_expand: true,
             y_expand: true,
             can_focus: false,
+            wrap_mode: St.WrapMode.WRAP_WORD,
+            min_width: 200,
+            min_height: 100,
         });
 
         // Create voice activation button
