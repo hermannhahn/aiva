@@ -279,6 +279,13 @@ export class UI {
     }
 
     statusIcon(icon) {
-        this.app.ui.statusBar.label.set_text(icon);
+        this.item.remove_child(this.statusBar);
+        let statusBar = new St.Button({
+            label: icon,
+            style_class: 'status-icon',
+            can_focus: false,
+        });
+        this.item.add_child(statusBar);
+        return statusBar;
     }
 }
