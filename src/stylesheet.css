@@ -238,3 +238,7 @@
     color: rgb(221, 13, 13);
     font-weight: bold;
 }
+.link-button {
+    text-decoration: none;
+    color: grey;
+}
