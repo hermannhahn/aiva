@@ -36,31 +36,28 @@
     font-size: 16px;
     width: 24px;
     height: 24px;
-    border: 1px solid transparent;
 }
 .status-icon:hover {
     background-color: rgb(42, 42, 42);
 }
 .mic-icon {
-    /* background-image: url('assets/icon_mic.png');
-    background-size: 26px; */
+    background-image: url('assets/icon_mic.png');
+    background-size: 24px;
     font-size: 16px;
     width: 24px;
     height: 24px;
-    border: 1px solid transparent;
+    text-align: center;
 }
 .mic-icon:hover {
     background-color: rgb(54, 54, 54);
-    border-radius: 10px;
+    border-radius: 100px;
 }
-/* .mic-icon:checked {
-    border: 1px solid rgb(225, 0, 0);
-} */
+.mic-icon:checked {
+    background-image: url('assets/icon_mic.png');
+    background-size: 24px;
+}
 .mic-icon:active {
-    background-size: 18px;
-    width: 20px;
-    height: 20px;
-    border: 1px solid transparent;
+    background-size: 22px;
 }
 .trash-icon {
     /* background-image: url('assets/icon_trash.png');
@@ -68,17 +65,14 @@
     font-size: 16px;
     width: 24px;
     height: 24px;
-    border: 1px solid transparent;
+    text-align: center;
 }
 .trash-icon:hover {
     background-color: rgb(54, 54, 54);
-    border-radius: 10px;
+    border-radius: 100px;
 }
 .trash-icon:active {
-    background-size: 18px;
-    width: 20px;
-    height: 20px;
-    border: 1px solid transparent;
+    font-size: 14px;
 }
 .settings-icon {
     /* background-image: url('assets/icon_settings.png');
@@ -86,21 +80,18 @@
     font-size: 16px;
     width: 24px;
     height: 24px;
-    border: 1px solid transparent;
+    text-align: center;
 }
 .settings-icon:hover {
     background-color: rgb(54, 54, 54);
-    border-radius: 10px;
+    border-radius: 100px;
 }
 .settings-icon:active {
-    background-size: 18px;
-    width: 20px;
-    height: 20px;
-    border: 1px solid transparent;
+    font-size: 14px;
 }
 .chat-scroll-section {
     max-width: 800px;
-    max-height: 600px;
+    max-height: 550px;
     overflow: auto;
     padding-right: 10px;
     padding-bottom: 10px;
