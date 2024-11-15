@@ -36,7 +36,7 @@ export class Audio {
      * @param {string} path
      */
     play(path) {
-        this.speechStatusBar = this.app.ui.addStatusIcon('🔊');
+        this.speechStatusBar = this.app.ui.statusIcon('🔊');
 
         this.app.log('Playing audio... ' + path);
         // Process sync, not async
@@ -51,7 +51,7 @@ export class Audio {
             this.playingPid = process.pid;
             this.isPlaying = true;
             this.app.log('Audio played successfully.');
-            this.app.ui.removeStatusIcon(this.speechStatusBar);
+            this.app.ui.statusIcon('🔎');
         } else {
             this.app.log('Error playing audio.');
         }
@@ -61,7 +61,7 @@ export class Audio {
      * @description stop playing
      */
     stop() {
-        this.app.ui.removeStatusIcon(this.speechStatusBar);
+        this.app.ui.statusIcon('🔎');
         this.app.log('Stopping audio...');
         if (!this.isPlaying) {
             this.app.log('Audio not playing.');
@@ -107,7 +107,7 @@ export class Audio {
         // Start recording
         this.app.log('Recording...');
         this.isRecording = true;
-        this.recordStatusBar = this.app.ui.addStatusIcon('🎤');
+        this.recordStatusBar = this.app.ui.statusIcon('🎤');
 
         // Create temporary file for audio recording
         this.questionPath = '/tmp/gva_last_transcription.wav';
@@ -144,7 +144,7 @@ export class Audio {
             return;
         }
         this.isRecording = false;
-        this.app.ui.removeStatusIcon(this.recordStatusBar);
+        this.app.ui.statusIcon('🔎');
         this.app.log('Stopping recording...');
 
         // Stop recording
