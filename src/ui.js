@@ -49,9 +49,9 @@ export class UI {
         });
 
         // Entry Icon
-        this.entryIcon = new St.Button({
+        this.statusBar = new St.Button({
             label: '🔍',
-            style_class: 'entry-icon',
+            style_class: 'status-icon',
             can_focus: false,
         });
 
@@ -97,7 +97,7 @@ export class UI {
         });
 
         // Create status bar section
-        this.statusBarSection = new PopupMenu.PopupBaseMenuItem({
+        this.tipsSection = new PopupMenu.PopupBaseMenuItem({
             style_class: 'status-bar',
             can_focus: false,
         });
@@ -155,16 +155,14 @@ export class UI {
         this.app.menu.style_class = 'menu';
 
         // Add search entry, mic button, clear button and settings button to items container
-        this.item.add_child(this.entryIcon);
+        this.item.add_child(this.statusBar);
         this.item.add_child(this.searchEntry);
         this.item.add_child(this.micButton);
         this.item.add_child(this.clearButton);
         this.item.add_child(this.settingsButton);
 
         // Add statusBarSection
-        this.app.menu.box.add_child(this.statusBarSection);
-        this.addStatusIcon('🟢');
-        // this.statusBarSection.add_child(this.statusBar);
+        this.app.menu.box.add_child(this.tipsSection);
 
         // Add scrollview to menu box
         this.app.menu.box.add_child(this.scrollView);
@@ -281,17 +279,22 @@ export class UI {
         return copyButton;
     }
 
-    addStatusIcon(label) {
-        let icon = new PopupMenu.PopupMenuItem('', {
-            style_class: 'status-bar-icon',
-            can_focus: false,
-        });
-        this.statusBarSection.add_child(icon);
-        icon.label.clutter_text.set_markup(label);
-        return icon;
-    }
-
-    removeStatusIcon(icon) {
-        this.statusBarSection.remove_child(icon);
+    statusIcon(type) {
+        let icon = '🔎';
+        switch (type) {
+            case 'mic':
+                icon = '🎤';
+                break;
+            case 'settings':
+                icon = '⚙️';
+                break;
+            case 'trash':
+                icon = '🗑️';
+                break;
+            default:
+                icon = '🔎';
+                break;
+        }
+        this.statusBar.label.clutter_text.set_markup('🔎');
     }
 }
