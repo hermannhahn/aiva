@@ -47,6 +47,7 @@ export class UI {
             style_class: 'app-items',
             reactive: false,
             can_focus: true,
+            y_expand: false,
         });
 
         // Status Icon
