@@ -4,8 +4,7 @@
     border-radius: 10px;
 }
 .app-items {
-    height: 50px;
-    padding: 2px;
+    height: 25px;
     vertical-align: middle;
 }
 .status-icon {
@@ -21,7 +20,7 @@
 }
 .search-entry {
     width: 250px;
-    height: 20px !important;
+    height: 25px !important;
     border-radius: 10px;
 }
 .mic-icon {
