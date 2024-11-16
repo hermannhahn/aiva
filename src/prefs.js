@@ -649,7 +649,7 @@ class AivaSettings {
 
         // AIVA Name
         const labelAssistName = new Gtk.Label({
-            label: _('Assistant Name'),
+            label: '🤖 ' + _('Assistant Name'),
             halign: Gtk.Align.START,
         });
         const assistName = new Gtk.Entry({
@@ -658,7 +658,7 @@ class AivaSettings {
 
         // HISTORY LOG
         const histroyLabel = new Gtk.Label({
-            label: _('Remember talk history'),
+            label: '📝' + _('Remember talk history'),
             halign: Gtk.Align.START,
         });
         const historyButton = new Gtk.Switch({
@@ -666,7 +666,7 @@ class AivaSettings {
         });
 
         const save = new Gtk.Button({
-            label: _('Save'),
+            label: '💾 ' + _('Save'),
             halign: Gtk.Align.CENTER,
         });
         const statusLabel = new Gtk.Label({
