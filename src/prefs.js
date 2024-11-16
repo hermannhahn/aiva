@@ -31,7 +31,7 @@ class AivaSettings {
             return this.translations(text, defaultLanguage);
         };
 
-        this.ui = new Adw.PreferencesGroup({title: _('Settings:')});
+        this.ui = new Adw.PreferencesGroup({title: '⚙ ' + _('Settings:')});
         this.main = new Gtk.Grid({
             margin_top: 10,
             margin_bottom: 10,
@@ -69,6 +69,7 @@ class AivaSettings {
             tooltip_text: _('How to get API key?'),
             uri: 'https://console.cloud.google.com/apis/credentials',
             halign: Gtk.Align.START,
+            underline: false,
         });
         const labelHowTo = howToApiKey.get_child();
         labelHowTo.set_property('underlined', false);
@@ -86,6 +87,7 @@ class AivaSettings {
             tooltip_text: _('How to get API key?'),
             uri: 'https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/get-started-speech-to-text',
             halign: Gtk.Align.START,
+            underline: false,
         });
         const labelHowToAzure = howToAzure.get_child();
         labelHowToAzure.set_property('underlined', false);
@@ -98,10 +100,11 @@ class AivaSettings {
         const azureRegion = new Gtk.Entry({
             buffer: new Gtk.EntryBuffer(),
         });
-        const howToRegion = new Gtk.LinkButton({
+        const howToRegion = new Gtk.Button({
             label: '❓',
             tooltip_text: _('eastus, westus...'),
             halign: Gtk.Align.START,
+            underline: false,
         });
 
         // AZURE LANGUAGE (ComboBoxText) to lang options
