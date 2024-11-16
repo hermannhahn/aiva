@@ -66,7 +66,6 @@ class AivaSettings {
         const apiKey = new Gtk.Entry({
             buffer: new Gtk.EntryBuffer(),
             halign: Gtk.Align.CENTER,
-            secret: true,
         });
         const howToApiKey = new Gtk.LinkButton({
             label: '❓',
@@ -88,7 +87,6 @@ class AivaSettings {
         const azureSpeechKey = new Gtk.Entry({
             buffer: new Gtk.EntryBuffer(),
             halign: Gtk.Align.CENTER,
-            secret: true,
         });
         const howToAzure = new Gtk.LinkButton({
             label: '❓',
