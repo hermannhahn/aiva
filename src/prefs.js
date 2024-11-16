@@ -64,13 +64,13 @@ class AivaSettings {
         const apiKey = new Gtk.Entry({
             buffer: new Gtk.EntryBuffer(),
         });
-        const howToButtonApiKey = new Gtk.LinkButton({
+        const howToApiKey = new Gtk.LinkButton({
             label: '❓',
             tooltip_text: _('How to get API key?'),
             uri: 'https://console.cloud.google.com/apis/credentials',
             halign: Gtk.Align.START,
         });
-        const labelHowTo = howToButtonApiKey.get_child();
+        const labelHowTo = howToApiKey.get_child();
         labelHowTo.set_property('underlined', false);
 
         // AZURE API KEY
@@ -81,31 +81,32 @@ class AivaSettings {
         const azureSpeechKey = new Gtk.Entry({
             buffer: new Gtk.EntryBuffer(),
         });
-        const howToButtonAzure = new Gtk.LinkButton({
+        const howToAzure = new Gtk.LinkButton({
             label: '❓',
             tooltip_text: _('How to get API key?'),
             uri: 'https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/get-started-speech-to-text',
             halign: Gtk.Align.START,
         });
-        const labelHowToAzure = howToButtonAzure.get_child();
+        const labelHowToAzure = howToAzure.get_child();
         labelHowToAzure.set_property('underlined', false);
 
         // AZURE REGION
         const labelRegion = new Gtk.Label({
-            label: '🌍 ' + _('Azure Speech Region'),
+            label: '🌐 ' + _('Azure Speech Region'),
             halign: Gtk.Align.START,
         });
         const azureRegion = new Gtk.Entry({
             buffer: new Gtk.EntryBuffer(),
         });
-        const howToRegion = new Gtk.Label({
-            label: _('e.g.: eastus, westus...'),
+        const howToRegion = new Gtk.LinkButton({
+            label: '❓',
+            tooltip_text: _('eastus, westus...'),
             halign: Gtk.Align.START,
         });
 
         // AZURE LANGUAGE (ComboBoxText) to lang options
         const labelLanguage = new Gtk.Label({
-            label: _('Select Language') + ' 🗣',
+            label: '🌎 ' + _('Select Language'),
             halign: Gtk.Align.START,
         });
         const languageSelector = new Gtk.ComboBoxText();
@@ -118,7 +119,7 @@ class AivaSettings {
 
         // AZURE VOICE (ComboBoxText) to voice selection
         const labelVoice = new Gtk.Label({
-            label: _('Select Voice'),
+            label: '🗣 ' + _('Select Voice'),
             halign: Gtk.Align.START,
         });
         const azureVoiceSelector = new Gtk.ComboBoxText();
