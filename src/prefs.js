@@ -87,7 +87,7 @@ class AivaSettings {
             tooltip_text: _('How to get API key?'),
             uri: 'https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/get-started-speech-to-text',
             halign: Gtk.Align.START,
-            underline: false,
+            css_classes: ['link-button'],
         });
         const labelHowToAzure = howToAzure.get_child();
         labelHowToAzure.set_property('underlined', false);
@@ -104,7 +104,7 @@ class AivaSettings {
             label: '❓',
             tooltip_text: _('eastus, westus...'),
             halign: Gtk.Align.START,
-            underline: false,
+            css_classes: ['link-button'],
         });
 
         // AZURE LANGUAGE (ComboBoxText) to lang options
