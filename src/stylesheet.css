@@ -205,3 +205,8 @@
 .code {
     color: blue;
 }
+.label-button {
+    background-color: transparent;
+    color: blanchedalmond;
+    font-weight: bold;
+}
