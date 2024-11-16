@@ -89,12 +89,6 @@ export class UI {
             can_focus: false,
         });
 
-        // Create status bar section
-        this.tipsSection = new PopupMenu.PopupBaseMenuItem({
-            style_class: 'tips-section',
-            can_focus: false,
-        });
-
         // Create scrollbar
         this.scrollView = new St.ScrollView({
             style_class: 'chat-scroll-section',
@@ -159,9 +153,6 @@ export class UI {
         this.item.add_child(this.micButton);
         this.item.add_child(this.clearButton);
         this.item.add_child(this.settingsButton);
-
-        // Add Tips Section
-        this.app.menu.box.add_child(this.tipsSection.actor);
 
         // Add scrollview to menu box
         this.app.menu.box.add_child(this.scrollView);
