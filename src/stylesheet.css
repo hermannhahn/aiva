@@ -26,9 +26,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0px;
-    margin: 0px;
-    height: 36px;
+    padding: 10px;
 }
 .status-icon {
     font-size: 16px;
