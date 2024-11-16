@@ -11,6 +11,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    height: 20px;
 }
 .menu-box::selection {
     background-color: rgb(42, 42, 42);
@@ -24,6 +25,8 @@
 .status-icon {
     font-size: 16px;
     text-align: center;
+    width: 24px;
+    height: 24px;
     padding: 2px;
 }
 .status-icon:hover {
@@ -39,6 +42,8 @@
     background-image: url('assets/icon_mic.png');
     background-size: 24px;
     text-align: center;
+    width: 24px;
+    height: 24px;
     padding: 2px;
 }
 .mic-icon:hover {
@@ -56,6 +61,8 @@
     background-size: 20px; */
     font-size: 16px;
     text-align: center;
+    width: 24px;
+    height: 24px;
     padding: 2px;
 }
 .trash-icon:hover {
@@ -70,6 +77,8 @@
     background-size: 20px; */
     font-size: 16px;
     text-align: center;
+    width: 24px;
+    height: 24px;
     padding: 2px;
 }
 .settings-icon:hover {
