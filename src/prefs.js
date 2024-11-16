@@ -69,7 +69,7 @@ class AivaSettings {
             tooltip_text: _('How to get API key?'),
             uri: 'https://console.cloud.google.com/apis/credentials',
             halign: Gtk.Align.START,
-            underline: false,
+            css_classes: ['link-button'],
         });
         const labelHowTo = howToApiKey.get_child();
         labelHowTo.set_property('underlined', false);
