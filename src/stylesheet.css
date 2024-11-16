@@ -11,7 +11,6 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    height: 20px;
 }
 .menu-box::selection {
     background-color: rgb(42, 42, 42);
