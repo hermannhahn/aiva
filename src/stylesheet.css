@@ -30,13 +30,15 @@
 .status-icon {
     font-size: 16px;
     width: 22px;
-    height: 10px;
+    height: 22px;
     padding-left: 5px;
     text-align: center;
 }
 .status-icon:hover {
     background-color: rgb(42, 42, 42);
     border-radius: 100px;
+    width: 22px;
+    height: 22px;
 }
 .search-entry {
     width: 250px;
@@ -55,6 +57,8 @@
 .mic-icon:hover {
     background-color: rgb(54, 54, 54);
     border-radius: 100px;
+    width: 22px;
+    height: 22px;
 }
 .mic-icon:checked {
     background-image: url('assets/icon_mic_rec.png');
@@ -73,6 +77,8 @@
 .trash-icon:hover {
     background-color: rgb(54, 54, 54);
     border-radius: 100px;
+    width: 22px;
+    height: 22px;
 }
 .trash-icon:active {
     font-size: 14px;
