@@ -20,7 +20,7 @@
 }
 .search-entry {
     width: 250px;
-    height: 25px !important;
+    min-height: 40px;
     border-radius: 10px;
 }
 .mic-icon {
