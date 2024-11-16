@@ -15,8 +15,6 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    padding: 0px;
-    margin: 0px;
 }
 .menu-box::selection {
     background-color: rgb(42, 42, 42);
@@ -26,7 +24,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 .status-icon {
     font-size: 16px;
@@ -43,6 +42,8 @@
     width: 250px;
     height: 20px !important;
     border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .mic-icon {
     width: 22px;
