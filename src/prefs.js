@@ -720,11 +720,11 @@ class AivaSettings {
         // Add to grid
         this.main.attach(apiKeyLabel, 0, 0, 1, 1);
         this.main.attach(apiKey, 2, 0, 2, 1);
-        this.main.attach(howToButtonApiKey, 4, 0, 1, 1);
+        this.main.attach(howToApiKey, 4, 0, 1, 1);
 
         this.main.attach(labelAzure, 0, 1, 1, 1);
         this.main.attach(azureSpeechKey, 2, 1, 2, 1);
-        this.main.attach(howToButtonAzure, 4, 1, 1, 1);
+        this.main.attach(howToAzure, 4, 1, 1, 1);
 
         this.main.attach(labelRegion, 0, 2, 1, 1);
         this.main.attach(azureRegion, 2, 2, 2, 1);
