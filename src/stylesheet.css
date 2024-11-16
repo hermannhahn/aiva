@@ -1,8 +1,4 @@
-/* Add your custom extension styling here */
-.menu::selection {
-    background-color: rgb(42, 42, 42);
-}
-.menu-box {
+/* .menu-box {
     color: aliceblue;
     background-color: rgb(42, 42, 42);
     border-radius: 10px;
@@ -11,10 +7,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-}
-.menu-box::selection {
-    background-color: rgb(42, 42, 42);
-}
+} */
 .app-items {
     position: relative; /* Para garantir que o container fixo fique acima */
     display: flex;
