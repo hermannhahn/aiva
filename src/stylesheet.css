@@ -1,8 +1,4 @@
 /* Add your custom extension styling here */
-.system-tray {
-    padding: 0px;
-    margin: 0px;
-}
 .menu::selection {
     background-color: rgb(42, 42, 42);
 }
@@ -24,28 +20,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
 }
 .status-icon {
     font-size: 16px;
     width: 22px;
     height: 22px;
-    padding-left: 5px;
     text-align: center;
 }
 .status-icon:hover {
     background-color: rgb(42, 42, 42);
-    border-radius: 100px;
-    width: 22px;
-    height: 22px;
+    border-radius: 10px;
 }
 .search-entry {
     width: 250px;
     height: 20px !important;
     border-radius: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
 }
 .mic-icon {
     width: 22px;
@@ -56,9 +45,7 @@
 }
 .mic-icon:hover {
     background-color: rgb(54, 54, 54);
-    border-radius: 100px;
-    width: 22px;
-    height: 22px;
+    border-radius: 10px;
 }
 .mic-icon:checked {
     background-image: url('assets/icon_mic_rec.png');
@@ -76,9 +63,7 @@
 }
 .trash-icon:hover {
     background-color: rgb(54, 54, 54);
-    border-radius: 100px;
-    width: 22px;
-    height: 22px;
+    border-radius: 10px;
 }
 .trash-icon:active {
     font-size: 14px;
@@ -94,7 +79,7 @@
 }
 .settings-icon:hover {
     background-color: rgb(54, 54, 54);
-    border-radius: 100px;
+    border-radius: 10px;
 }
 .settings-icon:active {
     font-size: 14px;
