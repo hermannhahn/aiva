@@ -41,8 +41,9 @@
 }
 .search-entry {
     width: 250px;
-    height: 20px !important;
+    height: 40px !important;
     border-radius: 10px;
+    font-size: 14px;
     text-wrap: wrap;
     word-wrap: break-word;
 }
