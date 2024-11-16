@@ -4,8 +4,10 @@
     border-radius: 10px;
 }
 .app-items {
-    max-height: 35px;
-    vertical-align: middle;
+    max-height: 30px;
+    padding: 0px;
+    margin: 0px;
+    border: none;
 }
 .status-icon {
     font-size: 16px;
