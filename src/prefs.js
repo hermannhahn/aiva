@@ -58,8 +58,8 @@ class AivaSettings {
 
         // GEMINI API KEY
         const apiKeyLabel = new Gtk.Label({
-            label: '🔑 ' + _('Gemini API Key'),
-            halign: Gtk.Align.START,
+            label: _('Gemini API Key') + ':  🔑',
+            halign: Gtk.Align.END,
         });
         const apiKey = new Gtk.Entry({
             buffer: new Gtk.EntryBuffer(),
@@ -76,8 +76,8 @@ class AivaSettings {
 
         // AZURE API KEY
         const labelAzure = new Gtk.Label({
-            label: '🔑 ' + _('Azure Speech API Key'),
-            halign: Gtk.Align.START,
+            label: _('Azure Speech API Key') + ':  🔑',
+            halign: Gtk.Align.END,
         });
         const azureSpeechKey = new Gtk.Entry({
             buffer: new Gtk.EntryBuffer(),
@@ -94,8 +94,8 @@ class AivaSettings {
 
         // AZURE REGION
         const labelRegion = new Gtk.Label({
-            label: '🌐 ' + _('Azure Speech Region'),
-            halign: Gtk.Align.START,
+            label: _('Azure Speech Region') + ':  🌐',
+            halign: Gtk.Align.END,
         });
         const azureRegion = new Gtk.Entry({
             buffer: new Gtk.EntryBuffer(),
@@ -109,8 +109,8 @@ class AivaSettings {
 
         // AZURE LANGUAGE (ComboBoxText) to lang options
         const labelLanguage = new Gtk.Label({
-            label: '🌎 ' + _('Select Language'),
-            halign: Gtk.Align.START,
+            label: _('Select Language') + ':  🌎',
+            halign: Gtk.Align.END,
         });
         const languageSelector = new Gtk.ComboBoxText();
         languageSelector.append('en-US', '🇺🇲 ' + _('English'));
@@ -122,8 +122,8 @@ class AivaSettings {
 
         // AZURE VOICE (ComboBoxText) to voice selection
         const labelVoice = new Gtk.Label({
-            label: '🗣 ' + _('Select Voice'),
-            halign: Gtk.Align.START,
+            label: _('Select Voice') + ':  🗣',
+            halign: Gtk.Align.END,
         });
         const azureVoiceSelector = new Gtk.ComboBoxText();
 
@@ -649,8 +649,8 @@ class AivaSettings {
 
         // AIVA Name
         const labelAssistName = new Gtk.Label({
-            label: '🤖 ' + _('Assistant Name'),
-            halign: Gtk.Align.START,
+            label: _('Assistant Name') + ':  🤖',
+            halign: Gtk.Align.END,
         });
         const assistName = new Gtk.Entry({
             buffer: new Gtk.EntryBuffer(),
@@ -658,15 +658,15 @@ class AivaSettings {
 
         // HISTORY LOG
         const histroyLabel = new Gtk.Label({
-            label: '📝' + _('Remember talk history'),
-            halign: Gtk.Align.START,
+            label: _('Remember talk history') + ':  📝',
+            halign: Gtk.Align.END,
         });
         const historyButton = new Gtk.Switch({
             valign: Gtk.Align.CENTER,
         });
 
         const save = new Gtk.Button({
-            label: '💾 ' + _('Save'),
+            label: _('Save') + '  💾',
             halign: Gtk.Align.CENTER,
         });
         const statusLabel = new Gtk.Label({
