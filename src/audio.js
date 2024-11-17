@@ -50,7 +50,7 @@ export class Audio {
         let dataText = decoderText.decode(audioInfo);
         let duration = parseInt(dataText);
 
-        this.app.log('Audio duration: ' + duration);
+        this.app.log('Audio duration: ' + duration / 1000 + 's');
         this.app.ui.statusIcon('🔊');
         let playIcon = () => {
             GLib.timeout_add(GLib.PRIORITY_DEFAULT, duration, () => {
