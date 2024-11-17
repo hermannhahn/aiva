@@ -46,9 +46,9 @@ export class Audio {
             this.app.log('Error getting audio duration.');
             return;
         }
-        const decoder = new TextDecoder('utf-8');
-        const data = decoder.decode(audioInfo.get_data());
-        const duration = parseInt(data);
+        let decoderText = new TextDecoder('utf-8');
+        let dataText = decoderText.decode(audioInfo.get_data());
+        let duration = parseInt(dataText);
 
         this.app.log('Audio duration: ' + duration);
         this.app.ui.statusIcon('🔊');
