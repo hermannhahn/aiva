@@ -118,7 +118,7 @@ export class Chat {
             this.app.utils.copySelectedText(responseChat, copyButton);
         });
         this.app.ui.responseChat = responseChat;
-        this.waitStatusBar = this.app.ui.statusIcon('⌛');
+        this.waitStatusBar = this.app.ui.statusIcon('🔍');
 
         let response = this.app.utils.extractCodeAndTTS(text);
         if (speech) {
@@ -149,7 +149,7 @@ export class Chat {
             this.app.utils.copyToClipboard(response.code);
             this.app.log('Code copied to clipboard.');
         }
-        this.app.ui.statusIcon('🔎');
+        this.app.ui.statusIcon('🧠');
         this.app.utils.scrollToBottom();
     }
 }
