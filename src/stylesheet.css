@@ -18,7 +18,7 @@
     border-radius: 10px;
 }
 .status-icon {
-    font-size: 18px;
+    font-size: 24px;
     color: black;
     text-align: center;
     width: 40px;
@@ -30,11 +30,11 @@
     border-radius: 10px;
 }
 .status-icon:active {
-    font-size: 16px;
+    font-size: 22px;
 }
 .enter-icon {
     background-image: url('assets/icon_enter.png');
-    background-size: 26px;
+    background-size: 36px;
     text-align: center;
     width: 40px;
     margin-top: 25px;
@@ -45,11 +45,11 @@
     border-radius: 10px;
 }
 .enter-icon:active {
-    background-size: 24px;
+    background-size: 34px;
 }
 .mic-icon {
     background-image: url('assets/icon_mic.png');
-    background-size: 26px;
+    background-size: 36px;
     text-align: center;
     width: 40px;
     margin-top: 25px;
@@ -63,12 +63,12 @@
     background-image: url('assets/icon_mic_rec.png');
 }
 .mic-icon:active {
-    background-size: 24px;
+    background-size: 34px;
 }
 .trash-icon {
     /* background-image: url('assets/icon_trash.png');
     background-size: 20px; */
-    font-size: 18px;
+    font-size: 24px;
     text-align: center;
     width: 40px;
     margin-top: 25px;
@@ -79,12 +79,12 @@
     border-radius: 10px;
 }
 .trash-icon:active {
-    font-size: 16px;
+    font-size: 22px;
 }
 .settings-icon {
     /* background-image: url('assets/icon_settings.png');
     background-size: 20px; */
-    font-size: 18px;
+    font-size: 24px;
     text-align: center;
     width: 40px;
     margin-top: 25px;
@@ -96,7 +96,7 @@
     border-radius: 10px;
 }
 .settings-icon:active {
-    font-size: 16px;
+    font-size: 22px;
 }
 .chat-scroll {
     max-width: 800px;
