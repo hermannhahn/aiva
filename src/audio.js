@@ -36,12 +36,6 @@ export class Audio {
      * @param {string} path
      */
     play(path) {
-        this.app.ui.statusIcon('🔊');
-        GLib.timeout_add(GLib.PRIORITY_DEFAULT, 3000, () => {
-            this.app.ui.resetStatusIcon();
-            return GLib.SOURCE_REMOVE;
-        });
-
         this.app.log('Playing audio... ' + path);
 
         // Get audio total time
@@ -54,6 +48,11 @@ export class Audio {
         }
         const duration = parseInt(audioInfo);
         this.app.log('Audio duration: ' + duration);
+        this.app.ui.statusIcon('🔊');
+        GLib.timeout_add(GLib.PRIORITY_DEFAULT, duration * 1000, () => {
+            this.app.ui.resetStatusIcon();
+            return GLib.SOURCE_REMOVE;
+        });
 
         // Process sync, not async
         const process = GLib.spawn_async(
