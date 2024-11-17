@@ -402,25 +402,29 @@ export class Utils {
      * @returns {object} { code, tts }
      */
     extractCodeAndTTS(text) {
-        let tts = text.split('*').join('');
-        tts = tts
-            .replace(/&/g, '')
-            .replace(/</g, '')
-            .replace(/>/g, '')
-            .replace(/`{3}/g, '')
-            .replace(/<code>/g, '') // Remove open <code> tags
-            .replace(/<\/code>/g, '') // Remove tags close </code> tags
-            .replace(/\[red\](.*?)\[\/red\]/g, '')
-            .replace(/\[green\](.*?)\[\/green\]/g, '')
-            .replace(/\[yellow\](.*?)\[\/yellow\]/g, '')
-            .replace(/\[cyan\](.*?)\[\/cyan\]/g, '')
-            .replace(/\[white\](.*?)\[\/white\]/g, '')
-            .replace(/\[black\](.*?)\[\/black\]/g, '')
-            .replace(/\[gray\](.*?)\[\/gray\]/g, '')
-            .replace(/\[brown\](.*?)\[\/brown\]/g, '')
-            .replace(/\[blue\](.*?)\[\/blue\]/g, '')
-            .replace(/\[(.*?)\]\((.*?)\)/g, '') // Remove links from tts
-            .replace(/https?:\/\/[^\s"]*/g, '');
+        const getTTS = () => {
+            let tts = text.split('*').join('');
+            tts = tts
+                .replace(/&/g, '')
+                .replace(/</g, '')
+                .replace(/>/g, '')
+                .replace(/`{3}/g, '')
+                .replace(/<code>/g, '') // Remove open <code> tags
+                .replace(/<\/code>/g, '') // Remove tags close </code> tags
+                .replace(/\[red\](.*?)\[\/red\]/g, '')
+                .replace(/\[green\](.*?)\[\/green\]/g, '')
+                .replace(/\[yellow\](.*?)\[\/yellow\]/g, '')
+                .replace(/\[cyan\](.*?)\[\/cyan\]/g, '')
+                .replace(/\[white\](.*?)\[\/white\]/g, '')
+                .replace(/\[black\](.*?)\[\/black\]/g, '')
+                .replace(/\[gray\](.*?)\[\/gray\]/g, '')
+                .replace(/\[brown\](.*?)\[\/brown\]/g, '')
+                .replace(/\[blue\](.*?)\[\/blue\]/g, '')
+                .replace(/\[(.*?)\]\((.*?)\)/g, '') // Remove links from tts
+                .replace(/https?:\/\/[^\s"]*/g, '');
+
+            return tts;
+        };
 
         // If tts is more then 2000 characters, change tts text
         // if (tts.length > 2000) {
@@ -441,6 +445,8 @@ export class Utils {
                 nextMatch = text.match(regex);
             }
             this.app.log('code detected!');
+            // remove code from tts
+            tts = tts.replace(match[0], '');
 
             return {code, tts};
         } else {
