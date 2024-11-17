@@ -148,8 +148,8 @@ export class UI {
         this.app.menu.style_class = 'menu';
 
         // Add items
-        this.item.add_child(this.statusBar);
         this.item.add_child(this.searchEntry);
+        this.item.add_child(this.statusBar);
         this.item.add_child(this.micButton);
         this.item.add_child(this.clearButton);
         this.item.add_child(this.settingsButton);
