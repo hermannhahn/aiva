@@ -22,14 +22,14 @@
     font-size: 18px;
     color: black;
     text-align: center;
-    width: 24px;
-    height: 24px;
+    width: 32px;
     margin-top: 25px;
     margin-bottom: 10px;
 }
 .status-icon:hover {
     background-color: rgb(42, 42, 42);
     border-radius: 10px;
+    font-size: 19px;
 }
 .status-icon:active {
     font-size: 16px;
@@ -38,14 +38,14 @@
     background-image: url('assets/icon_mic.png');
     background-size: 26px;
     text-align: center;
-    width: 24px;
-    height: 24px;
+    width: 32px;
     margin-top: 23px;
     margin-bottom: 13px;
 }
 .mic-icon:hover {
     background-color: rgb(54, 54, 54);
     border-radius: 10px;
+    font-size: 19px;
 }
 .mic-icon:checked {
     background-image: url('assets/icon_mic_rec.png');
@@ -58,14 +58,14 @@
     background-size: 20px; */
     font-size: 18px;
     text-align: center;
-    width: 24px;
-    height: 24px;
+    width: 32px;
     margin-top: 23px;
     margin-bottom: 13px;
 }
 .trash-icon:hover {
     background-color: rgb(54, 54, 54);
     border-radius: 10px;
+    font-size: 19px;
 }
 .trash-icon:active {
     font-size: 16px;
@@ -75,14 +75,14 @@
     background-size: 20px; */
     font-size: 18px;
     text-align: center;
-    width: 24px;
-    height: 24px;
+    width: 32px;
     margin-top: 23px;
     margin-bottom: 13px;
 }
 .settings-icon:hover {
     background-color: rgb(54, 54, 54);
     border-radius: 10px;
+    font-size: 19px;
 }
 .settings-icon:active {
     font-size: 16px;
