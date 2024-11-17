@@ -47,7 +47,7 @@ export class Audio {
             return;
         }
         let decoderText = new TextDecoder('utf-8');
-        let dataText = decoderText.decode(audioInfo.get_data());
+        let dataText = decoderText.decode(audioInfo);
         let duration = parseInt(dataText);
 
         this.app.log('Audio duration: ' + duration);
