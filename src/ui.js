@@ -145,7 +145,6 @@ export class UI {
     _addItems() {
         // Add items container to menu
         this.app.menu.addMenuItem(this.item);
-        this.app.menu.style_class = 'menu';
 
         // Add items
         this.item.add_child(this.searchEntry);
@@ -156,7 +155,7 @@ export class UI {
 
         // Add scrollview to menu box
         this.app.menu.box.add_child(this.scrollView);
-        this.app.menu.box.style_class = 'menu-box';
+        this.app.menu.box.style_class = 'app';
 
         // Add chat to scrollbar
         this.scrollView.add_child(this.chatSection.actor);
