@@ -38,24 +38,24 @@ export class Audio {
     play(path) {
         this.app.log('Playing audio... ' + path);
 
-        // Get audio total time
-        const [success, audioInfo] = GLib.spawn_command_line_sync(
-            `mediainfo --Inform="Audio;%Duration%" ${path}`,
-        );
-        if (!success) {
-            this.app.log('Error getting audio duration.');
-            return;
-        }
-        let decoderText = new TextDecoder('utf-8');
-        let dataText = decoderText.decode(audioInfo.get_data());
-        let duration = parseInt(dataText);
+        // // Get audio total time
+        // const [success, audioInfo] = GLib.spawn_command_line_sync(
+        //     `mediainfo --Inform="Audio;%Duration%" ${path}`,
+        // );
+        // if (!success) {
+        //     this.app.log('Error getting audio duration.');
+        //     return;
+        // }
+        // let decoderText = new TextDecoder('utf-8');
+        // let dataText = decoderText.decode(audioInfo.get_data());
+        // let duration = parseInt(dataText);
 
-        this.app.log('Audio duration: ' + duration);
-        this.app.ui.statusIcon('🔊');
-        GLib.timeout_add(GLib.PRIORITY_DEFAULT, duration * 1000, () => {
-            this.app.ui.resetStatusIcon();
-            return GLib.SOURCE_REMOVE;
-        });
+        // this.app.log('Audio duration: ' + duration);
+        // this.app.ui.statusIcon('🔊');
+        // GLib.timeout_add(GLib.PRIORITY_DEFAULT, duration * 1000, () => {
+        //     this.app.ui.resetStatusIcon();
+        //     return GLib.SOURCE_REMOVE;
+        // });
 
         // Process sync, not async
         const process = GLib.spawn_async(
