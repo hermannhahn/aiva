@@ -402,8 +402,8 @@ export class Utils {
      * @returns {object} { code, tts }
      */
     extractCodeAndTTS(text) {
-        const getTTS = () => {
-            let tts = text.split('*').join('');
+        const getTTS = (tts) => {
+            tts = text.split('*').join('');
             tts = tts
                 .replace(/&/g, '')
                 .replace(/</g, '')
@@ -446,11 +446,14 @@ export class Utils {
             }
             this.app.log('code detected!');
             // remove code from tts
-            tts = tts.replace(match[0], '');
+            let tts = tts.replace(match[0], '');
+            tts = getTTS(tts);
 
             return {code, tts};
         } else {
             // If not
+            let tts = getTTS(text);
+            this.app.log('code not detected!');
             return {code: null, tts};
         }
     }
