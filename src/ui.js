@@ -49,6 +49,13 @@ export class UI {
             can_focus: true,
         });
 
+        // Status Icon
+        this.statusBar = new St.Button({
+            label: '↩️',
+            style_class: 'status-icon',
+            can_focus: false,
+        });
+
         this.searchEntry = new St.Entry({
             style_class: 'search-entry',
             hint_text: _('Ask me anything...'),
@@ -58,10 +65,11 @@ export class UI {
             can_focus: true,
         });
 
-        // Status Icon
-        this.statusBar = new St.Button({
-            label: '↩️',
-            style_class: 'status-icon',
+        // Create enter button
+        this.enterButton = new St.Button({
+            label: '',
+            style_class: 'enter-icon',
+            toggle_mode: true,
             can_focus: false,
         });
 
@@ -148,8 +156,9 @@ export class UI {
         this.app.menu.box.style_class = 'app';
 
         // Add items
-        this.item.add_child(this.searchEntry);
         this.item.add_child(this.statusBar);
+        this.item.add_child(this.searchEntry);
+        this.item.add_child(this.enterButton);
         this.item.add_child(this.micButton);
         this.item.add_child(this.clearButton);
         this.item.add_child(this.settingsButton);
