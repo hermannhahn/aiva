@@ -46,7 +46,10 @@ export class Audio {
             this.app.log('Error getting audio duration.');
             return;
         }
-        const duration = parseInt(audioInfo);
+        const decoder = new TextDecoder('utf-8');
+        const data = decoder.decode(audioInfo.get_data());
+        const duration = parseInt(data);
+
         this.app.log('Audio duration: ' + duration);
         this.app.ui.statusIcon('🔊');
         GLib.timeout_add(GLib.PRIORITY_DEFAULT, duration * 1000, () => {
