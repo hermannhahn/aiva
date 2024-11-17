@@ -16,7 +16,7 @@
     width: 250px;
     min-height: 30px;
     border-radius: 10px;
-    padding-left: 5px;
+    margin-left: 5px;
 }
 .status-icon {
     font-size: 18px;
@@ -39,8 +39,8 @@
     background-size: 26px;
     text-align: center;
     width: 32px;
-    margin-top: 23px;
-    margin-bottom: 13px;
+    margin-top: 25px;
+    margin-bottom: 10px;
 }
 .mic-icon:hover {
     background-color: rgb(54, 54, 54);
@@ -59,8 +59,8 @@
     font-size: 18px;
     text-align: center;
     width: 32px;
-    margin-top: 23px;
-    margin-bottom: 13px;
+    margin-top: 25px;
+    margin-bottom: 10px;
 }
 .trash-icon:hover {
     background-color: rgb(54, 54, 54);
@@ -76,8 +76,8 @@
     font-size: 18px;
     text-align: center;
     width: 32px;
-    margin-top: 23px;
-    margin-bottom: 13px;
+    margin-top: 25px;
+    margin-bottom: 10px;
 }
 .settings-icon:hover {
     background-color: rgb(54, 54, 54);
