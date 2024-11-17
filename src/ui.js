@@ -49,13 +49,6 @@ export class UI {
             can_focus: true,
         });
 
-        // Status Icon
-        this.statusBar = new St.Button({
-            label: '🔍',
-            style_class: 'status-icon',
-            can_focus: false,
-        });
-
         this.searchEntry = new St.Entry({
             style_class: 'search-entry',
             hint_text: _('Ask me anything...'),
@@ -63,6 +56,13 @@ export class UI {
             x_expand: true,
             y_expand: true,
             can_focus: true,
+        });
+
+        // Status Icon
+        this.statusBar = new St.Button({
+            label: '↩️',
+            style_class: 'status-icon',
+            can_focus: false,
         });
 
         // Create voice activation button
