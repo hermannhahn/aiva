@@ -103,6 +103,7 @@
     max-width: 800px;
     max-height: 550px;
     overflow: auto;
+    padding-top: 10px;
 }
 .chat-scroll::selection {
     background-color: rgb(42, 42, 42);
@@ -112,7 +113,6 @@
     color: rgb(243, 232, 212);
     text-wrap: wrap;
     word-wrap: break-word;
-    padding-top: 10px;
 }
 .chat-section::selection {
     background-color: rgb(42, 42, 42);
