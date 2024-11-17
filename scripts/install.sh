@@ -14,7 +14,8 @@ sudo apt install curl -y
 sudo apt install python3 -y
 sudo apt install notify-send -y
 sudo apt install sox -y
-sudo apt install gettext
+sudo apt install gettext -y
+sudo apt install mediainfo -y
 npm install
 echo "Dependencies installed."
 echo "Installing extension..."
