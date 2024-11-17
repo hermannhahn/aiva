@@ -419,7 +419,8 @@ export class Utils {
             .replace(/\[gray\](.*?)\[\/gray\]/g, '')
             .replace(/\[brown\](.*?)\[\/brown\]/g, '')
             .replace(/\[blue\](.*?)\[\/blue\]/g, '')
-            .replace(/\[(.*?)\]\((.*?)\)/g, ''); // Remove links from text
+            .replace(/\[(.*?)\]\((.*?)\)/g, '') // Remove links from tts
+            .replace(/https?:\/\/[^\s"]*/g, '');
 
         // If tts is more then 2000 characters, change tts text
         // if (tts.length > 2000) {
