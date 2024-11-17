@@ -12,7 +12,7 @@ export class Interpreter {
         this.app.ui.searchEntry.clutter_text.reactive = false;
         this.app.log('Question: ' + question);
         this.app.log('Processing question...');
-        this.app.chat.addResponse('...');
+        this.app.chat.addResponse('⌛');
         const isDatabaseCommand = this._isDatabaseCommand(question);
 
         if (this._isSlashCommand(question)) {
