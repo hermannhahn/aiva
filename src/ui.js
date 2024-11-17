@@ -91,7 +91,7 @@ export class UI {
 
         // Create scrollbar
         this.scrollView = new St.ScrollView({
-            style_class: 'chat-scroll-section',
+            style_class: 'chat-scroll',
             overlay_scrollbars: false,
             can_focus: false,
         });
@@ -143,8 +143,9 @@ export class UI {
      * @description add items to app tray
      */
     _addItems() {
-        // Add items container to menu
+        // Add items container to app
         this.app.menu.addMenuItem(this.item);
+        this.app.menu.box.style_class = 'app';
 
         // Add items
         this.item.add_child(this.searchEntry);
@@ -153,9 +154,8 @@ export class UI {
         this.item.add_child(this.clearButton);
         this.item.add_child(this.settingsButton);
 
-        // Add scrollview to menu box
+        // Add scrollview
         this.app.menu.box.add_child(this.scrollView);
-        this.app.menu.box.style_class = 'app';
 
         // Add chat to scrollbar
         this.scrollView.add_child(this.chatSection.actor);
