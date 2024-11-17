@@ -24,10 +24,10 @@
     width: 40px;
     margin-top: 25px;
     margin-bottom: 12px;
+    padding-left: 5px;
 }
 .status-icon:hover {
-    background-color: rgb(42, 42, 42);
-    border-radius: 10px;
+    background-color: transparent;
 }
 .status-icon:active {
     font-size: 22px;
