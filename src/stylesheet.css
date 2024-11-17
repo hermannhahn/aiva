@@ -9,7 +9,7 @@
     padding: 2px;
 }
 .status-icon {
-    font-size: 16px;
+    font-size: 18px;
     text-align: center;
     width: 24px;
     height: 24px;
@@ -17,7 +17,10 @@
 }
 .status-icon:hover {
     background-color: rgb(42, 42, 42);
-    border-radius: 10px;
+    border-radius: 13px;
+}
+.status-icon:active {
+    font-size: 16px;
 }
 .search-entry {
     width: 250px;
