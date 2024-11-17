@@ -88,7 +88,6 @@
     max-width: 800px;
     max-height: 550px;
     overflow: auto;
-    /* padding: 10px; */
 }
 .chat-scroll::selection {
     background-color: rgb(42, 42, 42);
@@ -98,8 +97,6 @@
     color: rgb(243, 232, 212);
     text-wrap: wrap;
     word-wrap: break-word;
-    /* padding-left: 10px;
-    padding-right: 10px; */
 }
 .chat-section::selection {
     background-color: rgb(42, 42, 42);
@@ -110,12 +107,13 @@
     border-radius: 10px;
     padding-left: 10px;
     padding-right: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
     font-size: 14px;
     text-wrap: wrap;
     text-align: justify;
     word-wrap: break-word;
     margin-top: 10px;
+    margin-left: 10px;
     margin-right: 10px;
     overflow-y: auto;
 }
@@ -133,6 +131,7 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     margin-top: 10px;
+    margin-left: 10px;
     margin-right: 10px;
 }
 .input-chat::selection {
@@ -154,6 +153,7 @@
     width: 24px;
     height: 24px;
     margin-top: 10px;
+    margin-left: 10px;
     margin-right: 10px;
 }
 .copy-icon:hover {
