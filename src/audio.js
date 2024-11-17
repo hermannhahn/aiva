@@ -53,7 +53,7 @@ export class Audio {
         this.app.log('Audio duration: ' + duration);
         this.app.ui.statusIcon('🔊');
         let playIcon = () => {
-            GLib.timeout_add(GLib.PRIORITY_DEFAULT, duration * 1000, () => {
+            GLib.timeout_add(GLib.PRIORITY_DEFAULT, duration, () => {
                 this.app.ui.resetStatusIcon();
                 return GLib.SOURCE_REMOVE;
             });
