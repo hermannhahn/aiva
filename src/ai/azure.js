@@ -39,7 +39,7 @@ export class MicrosoftAzure {
             return;
         }
 
-        this.generateStatusBar = this.app.ui.statusIcon('🔄');
+        this.app.ui.statusIcon('📥');
 
         // API URL
         const apiUrl = `https://${this.AZURE_SPEECH_REGION}.tts.speech.microsoft.com/cognitiveservices/v1`;
@@ -141,7 +141,7 @@ export class MicrosoftAzure {
      * @returns {string} text
      */
     transcribe(path) {
-        this.transcribeStatusIcon = this.app.ui.statusIcon('📝');
+        this.app.ui.statusIcon('📝');
         this.app.chat.addQuestion(_('⏳'));
 
         // Load audio file
