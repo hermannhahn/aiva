@@ -281,4 +281,9 @@ export class UI {
         this.statusBar.label = icon;
         return true;
     }
+
+    resetStatusIcon() {
+        this.statusBar.label = '🧠';
+        return true;
+    }
 }
