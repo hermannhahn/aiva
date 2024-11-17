@@ -36,9 +36,25 @@ export class Audio {
      * @param {string} path
      */
     play(path) {
-        this.speechStatusBar = this.app.ui.statusIcon('🔊');
+        this.app.ui.statusIcon('🔊');
+        GLib.timeout_add(GLib.PRIORITY_DEFAULT, 3000, () => {
+            this.app.ui.resetStatusIcon();
+            return GLib.SOURCE_REMOVE;
+        });
 
         this.app.log('Playing audio... ' + path);
+
+        // Get audio total time
+        const [success, audioInfo] = GLib.spawn_command_line_sync(
+            `mediainfo --Inform="Audio;%Duration%" ${path}`,
+        );
+        if (!success) {
+            this.app.log('Error getting audio duration.');
+            return;
+        }
+        const duration = parseInt(audioInfo);
+        this.app.log('Audio duration: ' + duration);
+
         // Process sync, not async
         const process = GLib.spawn_async(
             null, // workspace folder
@@ -51,7 +67,6 @@ export class Audio {
             this.playingPid = process.pid;
             this.isPlaying = true;
             this.app.log('Audio played successfully.');
-            this.app.ui.statusIcon('🔎');
         } else {
             this.app.log('Error playing audio.');
         }
@@ -61,7 +76,7 @@ export class Audio {
      * @description stop playing
      */
     stop() {
-        this.app.ui.statusIcon('🔎');
+        this.app.ui.resetStatusIcon();
         this.app.log('Stopping audio...');
         if (!this.isPlaying) {
             this.app.log('Audio not playing.');
@@ -105,9 +120,9 @@ export class Audio {
         this.limitProtection = true;
 
         // Start recording
+        this.app.ui.statusIcon('⭕');
         this.app.log('Recording...');
         this.isRecording = true;
-        this.recordStatusBar = this.app.ui.statusIcon('🎤');
 
         // Create temporary file for audio recording
         this.questionPath = '/tmp/gva_last_transcription.wav';
@@ -144,7 +159,7 @@ export class Audio {
             return;
         }
         this.isRecording = false;
-        this.app.ui.statusIcon('🔎');
+        this.app.ui.resetStatusIcon();
         this.app.log('Stopping recording...');
 
         // Stop recording
@@ -167,7 +182,7 @@ export class Audio {
         this.app.log('Spam protection enabled.');
         this.spamProtectionTimeout = GLib.timeout_add(
             GLib.PRIORITY_DEFAULT,
-            3000,
+            2000,
             () => {
                 this.spamProtection = false;
                 this.app.log('Spam protection disabled.');
