@@ -12,14 +12,18 @@
     padding-right: 1px;
     margin: 0px;
 }
+.search-entry {
+    width: 250px;
+    min-height: 30px;
+    border-radius: 10px;
+}
 .status-icon {
     font-size: 18px;
     text-align: center;
     width: 24px;
     height: 24px;
     margin-top: 23px;
-    margin-bottom: 15px;
-    margin-left: 2px;
+    margin-bottom: 13px;
 }
 .status-icon:hover {
     background-color: rgb(42, 42, 42);
@@ -28,19 +32,14 @@
 .status-icon:active {
     font-size: 16px;
 }
-.search-entry {
-    width: 250px;
-    min-height: 30px;
-    border-radius: 10px;
-}
 .mic-icon {
     background-image: url('assets/icon_mic.png');
     background-size: 26px;
     text-align: center;
     width: 24px;
     height: 24px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 23px;
+    margin-bottom: 13px;
 }
 .mic-icon:hover {
     background-color: rgb(54, 54, 54);
@@ -59,8 +58,8 @@
     text-align: center;
     width: 24px;
     height: 24px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 23px;
+    margin-bottom: 13px;
 }
 .trash-icon:hover {
     background-color: rgb(54, 54, 54);
@@ -76,8 +75,8 @@
     text-align: center;
     width: 24px;
     height: 24px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 23px;
+    margin-bottom: 13px;
 }
 .settings-icon:hover {
     background-color: rgb(54, 54, 54);
