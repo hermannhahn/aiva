@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-17 23:35-0300\n"
+"POT-Creation-Date: 2024-11-17 23:38-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language it-IT\n"
@@ -466,90 +466,90 @@ msgstr ""
 msgid "Ask me anything..."
 msgstr ""
 
-#: src/prefs.js:41
+#: src/prefs.js:34
 msgid "Settings:"
 msgstr ""
 
-#: src/prefs.js:68
+#: src/prefs.js:61
 msgid "Gemini API Key"
 msgstr ""
 
-#: src/prefs.js:69
+#: src/prefs.js:62
 msgid "Insert your Gemini API key here"
 msgstr ""
 
-#: src/prefs.js:79 src/prefs.js:100
+#: src/prefs.js:72 src/prefs.js:93
 msgid "How to get API key?"
 msgstr ""
 
-#: src/prefs.js:89
+#: src/prefs.js:82
 msgid "Azure Speech API Key"
 msgstr ""
 
-#: src/prefs.js:90
+#: src/prefs.js:83
 msgid "Insert your Azure Speech API key here"
 msgstr ""
 
-#: src/prefs.js:110
+#: src/prefs.js:103
 msgid "Azure Speech Region"
 msgstr ""
 
-#: src/prefs.js:111
+#: src/prefs.js:104
 msgid "e.g.: eastus, westus..."
 msgstr ""
 
-#: src/prefs.js:121
+#: src/prefs.js:114
 msgid "Select Language"
 msgstr ""
 
-#: src/prefs.js:122
+#: src/prefs.js:115
 msgid "Select app language"
 msgstr ""
 
-#: src/prefs.js:126
+#: src/prefs.js:119
 msgid "English"
 msgstr ""
 
-#: src/prefs.js:127
+#: src/prefs.js:120
 msgid "French"
 msgstr ""
 
-#: src/prefs.js:128
+#: src/prefs.js:121
 msgid "German"
 msgstr ""
 
-#: src/prefs.js:129
+#: src/prefs.js:122
 msgid "Italian"
 msgstr ""
 
-#: src/prefs.js:130
+#: src/prefs.js:123
 msgid "Portuguese (Brazil)"
 msgstr ""
 
-#: src/prefs.js:131
+#: src/prefs.js:124
 msgid "Spanish"
 msgstr ""
 
-#: src/prefs.js:135
+#: src/prefs.js:128
 msgid "Select Voice"
 msgstr ""
 
-#: src/prefs.js:136
+#: src/prefs.js:129
 msgid "Select app voice"
 msgstr ""
 
-#: src/prefs.js:664
+#: src/prefs.js:657
 msgid "Assistant Name"
 msgstr ""
 
-#: src/prefs.js:675
+#: src/prefs.js:668
 msgid "Remember talk history"
 msgstr ""
 
-#: src/prefs.js:685
+#: src/prefs.js:678
 msgid "Save"
 msgstr ""
 
-#: src/prefs.js:736
+#: src/prefs.js:729
 msgid "Your preferences have been saved"
 msgstr ""

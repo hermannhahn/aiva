@@ -1,7 +1,5 @@
 import Gtk from 'gi://Gtk';
 import Adw from 'gi://Adw';
-import Gdk from 'gi://Gdk';
-import Gio from 'gi://Gio';
 
 import {ExtensionPreferences} from 'resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js';
 
@@ -10,12 +8,7 @@ export default class ClipboardIndicatorPreferences extends ExtensionPreferences 
         window._settings = this.getSettings();
         const settingsUI = new AivaSettings(window._settings);
         const page = new Adw.PreferencesPage();
-        // Create a CSS provider and load the CSS file
-        const cssProvider = new Gtk.CssProvider();
-        cssProvider.load_from_file(Gio.File.new_for_path('./stylesheet.css'));
         page.add(settingsUI.ui);
-        page.set_css_provider(cssProvider);
-
         // Set window size to 750x530
         window.set_default_size(800, 530);
         window.add(page);
