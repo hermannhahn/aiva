@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-18 11:56-0300\n"
+"POT-Creation-Date: 2024-11-18 14:48-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -560,26 +560,25 @@ msgstr "Espanhol"
 msgid "Select Voice"
 msgstr "Selecione a voz"
 
-#: src/prefs.js:130
-#, fuzzy
-msgid "Select app voice"
-msgstr "Selecione a voz"
-
-#: src/prefs.js:658
+#: src/prefs.js:656
 msgid "Assistant Name"
 msgstr "Nome do assistente"
 
-#: src/prefs.js:668
+#: src/prefs.js:666
 msgid "Remember talk history"
 msgstr "Lembrar conversa"
 
-#: src/prefs.js:677
+#: src/prefs.js:675
 msgid "Save"
 msgstr "Salvar"
 
-#: src/prefs.js:728
+#: src/prefs.js:726
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
+
+#, fuzzy
+#~ msgid "Select app voice"
+#~ msgstr "Selecione a voz"
 
 #, fuzzy
 #~ msgid "Select app language"
