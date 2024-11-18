@@ -13,14 +13,9 @@ export default class ClipboardIndicatorPreferences extends ExtensionPreferences 
         // Create a CSS provider and load the CSS file
         const cssProvider = new Gtk.CssProvider();
         cssProvider.load_from_file(Gio.File.new_for_path('./stylesheet.css'));
-
-        // Add the CSS provider to the window
-        Gtk.StyleContext.add_provider_for_screen(
-            Gdk.Screen.get_default(),
-            cssProvider,
-            Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION,
-        );
         page.add(settingsUI.ui);
+        page.set_css_provider(cssProvider);
+
         // Set window size to 750x530
         window.set_default_size(800, 530);
         window.add(page);
