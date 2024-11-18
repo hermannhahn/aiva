@@ -243,3 +243,11 @@
 .label-button:hover {
     background-color: transparent;
 }
+.small-label {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 10px;
+}
+.label {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+}
