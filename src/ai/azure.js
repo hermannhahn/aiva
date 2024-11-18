@@ -70,7 +70,6 @@ export class MicrosoftAzure {
 
         // Write SSML to temporary file
         try {
-            this.app.ui.statusIcon('📥');
             GLib.file_set_contents(tempFilePath, ssml);
             this.app.log('SSML written to temporary audio file.');
         } catch (e) {
