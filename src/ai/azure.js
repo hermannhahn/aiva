@@ -30,6 +30,8 @@ export class MicrosoftAzure {
      * @returns {path} audio file path
      */
     tts(text) {
+        this.app.ui.statusIcon('📥');
+
         if (
             text === '...' ||
             text === null ||
