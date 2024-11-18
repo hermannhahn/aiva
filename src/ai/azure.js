@@ -30,16 +30,17 @@ export class MicrosoftAzure {
      * @returns {path} audio file path
      */
     tts(text) {
-        this.app.ui.statusIcon('📥');
-
         if (
             text === '...' ||
             text === null ||
             text === '' ||
             text === undefined
         ) {
+            this.app.ui.resetStatusIcon();
             return;
         }
+
+        this.app.ui.statusIcon('📥');
 
         // API URL
         const apiUrl = `https://${this.AZURE_SPEECH_REGION}.tts.speech.microsoft.com/cognitiveservices/v1`;
@@ -66,6 +67,7 @@ export class MicrosoftAzure {
             this.app.log('Error creating temporary audio file.');
             this.app.chat.editResponse(
                 _("Sorry, I'm having connection trouble. Please try again."),
+                false,
             );
             return;
         }
@@ -78,6 +80,7 @@ export class MicrosoftAzure {
             this.app.log('Error writing to temporary audio file: ' + e.message);
             this.app.chat.editResponse(
                 _("Sorry, I'm having connection trouble. Please try again."),
+                false,
             );
             return;
         }
@@ -120,6 +123,7 @@ export class MicrosoftAzure {
                         _(
                             "Sorry, I'm having connection trouble. Please try again.",
                         ),
+                        false,
                     );
                 }
             } catch (e) {
@@ -128,6 +132,7 @@ export class MicrosoftAzure {
                     _(
                         "Sorry, I'm having connection trouble. Please try again.",
                     ),
+                    false,
                 );
             } finally {
                 // GLib.unlink(tempFilePath);
