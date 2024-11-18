@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-18 14:48-0300\n"
+"POT-Creation-Date: 2024-11-18 14:53-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -519,60 +519,60 @@ msgstr ""
 msgid "Insert your Azure Speech API key here"
 msgstr ""
 
-#: src/prefs.js:104
+#: src/prefs.js:105
 msgid "Azure Speech Region"
 msgstr "Região do Azure Speech"
 
-#: src/prefs.js:110
+#: src/prefs.js:111
 #, fuzzy
 msgid "e.g.: eastus, westus..."
 msgstr "ex: eastus, westus, ..."
 
-#: src/prefs.js:116
+#: src/prefs.js:117
 msgid "Select Language"
 msgstr "Selecione a linguagem"
 
-#: src/prefs.js:120
+#: src/prefs.js:121
 msgid "English"
 msgstr "Inglês"
 
-#: src/prefs.js:121
+#: src/prefs.js:122
 msgid "French"
 msgstr "Francês"
 
-#: src/prefs.js:122
+#: src/prefs.js:123
 msgid "German"
 msgstr ""
 
-#: src/prefs.js:123
+#: src/prefs.js:124
 msgid "Italian"
 msgstr ""
 
-#: src/prefs.js:124
+#: src/prefs.js:125
 msgid "Portuguese (Brazil)"
 msgstr "Português (Brasil)"
 
-#: src/prefs.js:125
+#: src/prefs.js:126
 msgid "Spanish"
 msgstr "Espanhol"
 
-#: src/prefs.js:129
+#: src/prefs.js:130
 msgid "Select Voice"
 msgstr "Selecione a voz"
 
-#: src/prefs.js:656
+#: src/prefs.js:657
 msgid "Assistant Name"
 msgstr "Nome do assistente"
 
-#: src/prefs.js:666
+#: src/prefs.js:667
 msgid "Remember talk history"
 msgstr "Lembrar conversa"
 
-#: src/prefs.js:675
+#: src/prefs.js:676
 msgid "Save"
 msgstr "Salvar"
 
-#: src/prefs.js:726
+#: src/prefs.js:727
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
 

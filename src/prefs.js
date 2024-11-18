@@ -74,7 +74,7 @@ class AivaSettings {
             tooltip_text: _('How to get API key?'),
             uri: 'https://console.cloud.google.com/apis/credentials',
             halign: Gtk.Align.START,
-            // css_classes: ['link-button'],
+            css_classes: ['link-button'],
         });
         const labelHowTo = howToApiKey.get_child();
         labelHowTo.set_property('underlined', false);
@@ -95,6 +95,7 @@ class AivaSettings {
             tooltip_text: _('How to get API key?'),
             uri: 'https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/get-started-speech-to-text',
             halign: Gtk.Align.START,
+            css_classes: ['link-button'],
         });
         const labelHowToAzure = howToAzure.get_child();
         labelHowToAzure.set_property('underlined', false);
@@ -126,7 +127,7 @@ class AivaSettings {
 
         // AZURE VOICE (ComboBoxText) to voice selection
         const labelVoice = new Gtk.Label({
-            label: '🔊 ' + _('Select Voice') + ':',
+            label: _('Select Voice') + ' 🔊',
             halign: Gtk.Align.END,
         });
         const azureVoiceSelector = new Gtk.ComboBoxText();
@@ -750,9 +751,9 @@ class AivaSettings {
         this.main.attach(histroyLabel, 0, 6, 1, 1);
         this.main.attach(historyButton, 2, 6, 1, 1);
 
-        this.main.attach(save, 1, 7, 3, 1);
+        this.main.attach(save, 1, 8, 3, 1);
 
-        this.main.attach(statusLabel, 1, 8, 3, 1);
+        this.main.attach(statusLabel, 1, 9, 3, 1);
 
         // Add to main
         this.ui.add(this.main);
