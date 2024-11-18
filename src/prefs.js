@@ -697,7 +697,7 @@ class AivaSettings {
             valign: Gtk.Align.START,
         });
         const histroyLabel = new Gtk.Label({
-            label: _('Remember talk history'),
+            label: '      ' + _('Remember talk history'),
             halign: Gtk.Align.START,
         });
         const blankLine = new Gtk.Label({
