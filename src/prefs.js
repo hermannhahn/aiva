@@ -31,7 +31,7 @@ class AivaSettings {
             return this.translations(text, defaultLanguage);
         };
 
-        this.tabSettings = new Adw.PreferencesGroup({
+        this.main = new Adw.PreferencesGroup({
             title: '⚙ ' + _('SETTINGS'),
         });
 
@@ -791,7 +791,7 @@ class AivaSettings {
         this.settingsContainer.attach(statusLabel, 0, 9, 3, 1);
 
         // Add to main
-        this.tabSettings.add(this.settingsContainer);
+        this.main.add(this.settingsContainer);
     }
 
     translations(text, lang) {
