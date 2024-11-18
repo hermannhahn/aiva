@@ -31,7 +31,6 @@ class AivaSettings {
             return this.translations(text, defaultLanguage);
         };
 
-        this.ui = new Adw.PreferencesGroup({title: '⚙ ' + _('SETTINGS')});
         this.settingsTab = new Adw.PreferencesGroup({
             title: '⚙ ' + _('SETTINGS'),
         });
