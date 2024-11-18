@@ -32,7 +32,7 @@ class AivaSettings {
         };
 
         this.tabSettings = new Adw.PreferencesGroup({
-            title: '⚙ ' + _('SETTINGS')
+            title: '⚙ ' + _('SETTINGS'),
         });
 
         this.settingsContainer = new Gtk.Grid({
