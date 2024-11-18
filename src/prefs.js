@@ -33,8 +33,6 @@ class AivaSettings {
 
         this.tabSettings = new Adw.PreferencesGroup({
             title: '⚙ ' + _('SETTINGS'),
-            css_classes: ['settingsTitle'],
-            halign: Gtk.Align.CENTER,
         });
 
         this.settingsContainer = new Gtk.Grid({
