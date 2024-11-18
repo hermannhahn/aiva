@@ -240,3 +240,6 @@
     color: blanchedalmond;
     font-weight: bold;
 }
+.label-button:hover {
+    background-color: transparent;
+}
