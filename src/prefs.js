@@ -57,12 +57,14 @@ class AivaSettings {
         }
 
         // GEMINI API KEY
-        let apiKeyLabel = new Gtk.Label({
-            label: _('Gemini API Key') + ' 🔑',
+        const apiKeyLabel = new Gtk.Label({
+            label: _('Gemini API Key'),
+            halign: Gtk.Align.START,
+        });
+        const apiKeyIcon = new Gtk.Label({
+            label: '🔑',
             halign: Gtk.Align.END,
         });
-        apiKeyLabel.background_color = '#242424';
-        apiKeyLabel.focus_on_click = false;
         const apiKey = new Gtk.Entry({
             buffer: new Gtk.EntryBuffer(),
             halign: Gtk.Align.CENTER,
@@ -76,36 +78,44 @@ class AivaSettings {
             halign: Gtk.Align.START,
             css_classes: ['link-button'],
         });
-        const labelHowTo = howToApiKey.get_child();
-        labelHowTo.set_property('underlined', false);
+        const howToApiKeyLabel = howToApiKey.get_child();
+        howToApiKeyLabel.set_property('underlined', false);
 
         // AZURE API KEY
-        const labelAzure = new Gtk.Label({
-            label: _('Azure Speech API Key') + ' 🔑',
+        const speechKeyLabel = new Gtk.Label({
+            label: _('Azure Speech API Key'),
+            halign: Gtk.Align.START,
+        });
+        const speechKeyIcon = new Gtk.Label({
+            label: '🔑',
             halign: Gtk.Align.END,
         });
-        const azureSpeechKey = new Gtk.Entry({
+        const speechKey = new Gtk.Entry({
             buffer: new Gtk.EntryBuffer(),
             halign: Gtk.Align.CENTER,
             placeholder_text: _('Insert your Azure Speech API key here'),
             width_chars: 40,
         });
-        const howToAzure = new Gtk.LinkButton({
+        const howToSpeechKey = new Gtk.LinkButton({
             label: '❓',
             tooltip_text: _('How to get API key?'),
             uri: 'https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/get-started-speech-to-text',
             halign: Gtk.Align.START,
             css_classes: ['link-button'],
         });
-        const labelHowToAzure = howToAzure.get_child();
-        labelHowToAzure.set_property('underlined', false);
+        const howToSpeechKeyLabel = howToSpeechKey.get_child();
+        howToSpeechKeyLabel.set_property('underlined', false);
 
         // AZURE REGION
-        const labelRegion = new Gtk.Label({
-            label: _('Azure Speech Region') + ' 📍',
+        const speechRegionLabel = new Gtk.Label({
+            label: _('Azure Speech Region'),
+            halign: Gtk.Align.START,
+        });
+        const speechRegionIcon = new Gtk.Label({
+            label: '📍',
             halign: Gtk.Align.END,
         });
-        const azureRegion = new Gtk.Entry({
+        const speechRegion = new Gtk.Entry({
             buffer: new Gtk.EntryBuffer(),
             halign: Gtk.Align.START,
             placeholder_text: _('e.g.: eastus, westus...'),
@@ -113,8 +123,12 @@ class AivaSettings {
         });
 
         // AZURE LANGUAGE (ComboBoxText) to lang options
-        const labelLanguage = new Gtk.Label({
-            label: _('Select Language') + ' 🌎',
+        const sysLanguageLabel = new Gtk.Label({
+            label: _('Select Language'),
+            halign: Gtk.Align.END,
+        });
+        const sysLanguageIcon = new Gtk.Label({
+            label: '🌎',
             halign: Gtk.Align.END,
         });
         const languageSelector = new Gtk.ComboBoxText();
@@ -126,11 +140,15 @@ class AivaSettings {
         languageSelector.append('es-ES', '🇪🇸 ' + _('Spanish'));
 
         // AZURE VOICE (ComboBoxText) to voice selection
-        const labelVoice = new Gtk.Label({
-            label: _('Select Voice') + ' 🔊',
+        const voiceLabel = new Gtk.Label({
+            label: _('Select Voice'),
+            halign: Gtk.Align.START,
+        });
+        const voiceIcon = new Gtk.Label({
+            label: '🗣️',
             halign: Gtk.Align.END,
         });
-        const azureVoiceSelector = new Gtk.ComboBoxText();
+        const voiceSelector = new Gtk.ComboBoxText();
 
         // Voice options
         const voiceOptions = {
@@ -634,12 +652,12 @@ class AivaSettings {
 
         // Update voice
         const updateVoices = (language) => {
-            azureVoiceSelector.remove_all();
+            voiceSelector.remove_all();
             if (voiceOptions[language]) {
                 voiceOptions[language].forEach((option) => {
-                    azureVoiceSelector.append(option.voice, option.label);
+                    voiceSelector.append(option.voice, option.label);
                     if (option.voice === defaultVoice) {
-                        azureVoiceSelector.set_active_id(option.voice);
+                        voiceSelector.set_active_id(option.voice);
                     }
                 });
             }
@@ -653,8 +671,12 @@ class AivaSettings {
         updateVoices(defaultLanguage);
 
         // AIVA Name
-        const labelAssistName = new Gtk.Label({
-            label: _('Assistant Name') + ' 🤖',
+        const assistNameLabel = new Gtk.Label({
+            label: _('Assistant Name'),
+            halign: Gtk.Align.START,
+        });
+        const assistNameIcon = new Gtk.Label({
+            label: '🤖',
             halign: Gtk.Align.END,
         });
         const assistName = new Gtk.Entry({
@@ -664,14 +686,20 @@ class AivaSettings {
 
         // HISTORY LOG
         const histroyLabel = new Gtk.Label({
-            label: _('Remember talk history') + ' 📄',
-            halign: Gtk.Align.END,
-            css_classes: ['label-button'],
+            label: _('Remember talk history'),
+            halign: Gtk.Align.START,
         });
-        const historyButton = new Gtk.Switch({
+        const histroyIcon = new Gtk.Label({
+            label: '📜',
+            halign: Gtk.Align.END,
+        });
+        const history = new Gtk.CheckButton({
             valign: Gtk.Align.START,
         });
-
+        const blankLine = new Gtk.Label({
+            label: ' ',
+            halign: Gtk.Align.CENTER,
+        });
         const save = new Gtk.Button({
             label: _('Save') + '  💾',
             halign: Gtk.Align.CENTER,
@@ -687,12 +715,12 @@ class AivaSettings {
 
         // Set default
         apiKey.set_text(defaultKey);
-        azureSpeechKey.set_text(defaultSpeechKey);
-        azureRegion.set_text(defaultRegion);
-        azureVoiceSelector.set_active_id(defaultVoice);
+        speechKey.set_text(defaultSpeechKey);
+        speechRegion.set_text(defaultRegion);
+        voiceSelector.set_active_id(defaultVoice);
         languageSelector.set_active_id(defaultLanguage);
         assistName.set_text(defaultAssistName);
-        historyButton.set_active(defaultLog);
+        history.set_active(defaultLog);
 
         // Actions
         save.connect('clicked', () => {
@@ -702,11 +730,11 @@ class AivaSettings {
             );
             this.schema.set_string(
                 'azure-speech-key',
-                azureSpeechKey.get_buffer().get_text(),
+                speechKey.get_buffer().get_text(),
             );
             this.schema.set_string(
                 'azure-speech-region',
-                azureRegion.get_buffer().get_text(),
+                speechRegion.get_buffer().get_text(),
             );
 
             // Save selected language
@@ -714,11 +742,11 @@ class AivaSettings {
             this.schema.set_string('azure-speech-language', selectedLanguage);
 
             // Save selected voice
-            const selectedVoice = azureVoiceSelector.get_active_id();
+            const selectedVoice = voiceSelector.get_active_id();
             this.schema.set_string('azure-speech-voice', selectedVoice);
 
             // Save history log
-            this.schema.set_boolean('log-history', historyButton.state);
+            this.schema.set_boolean('log-history', history.state);
             this.schema.set_string(
                 'assist-name',
                 assistName.get_buffer().get_text(),
@@ -729,31 +757,31 @@ class AivaSettings {
 
         // Add to grid
         this.main.attach(apiKeyLabel, 0, 0, 1, 1);
-        this.main.attach(apiKey, 2, 0, 2, 1);
-        this.main.attach(howToApiKey, 4, 0, 1, 1);
-
-        this.main.attach(labelAzure, 0, 1, 1, 1);
-        this.main.attach(azureSpeechKey, 2, 1, 2, 1);
-        this.main.attach(howToAzure, 4, 1, 1, 1);
-
-        this.main.attach(labelRegion, 0, 2, 1, 1);
-        this.main.attach(azureRegion, 2, 2, 2, 1);
-
-        this.main.attach(labelLanguage, 0, 3, 1, 1);
-        this.main.attach(languageSelector, 2, 3, 2, 1);
-
-        this.main.attach(labelVoice, 0, 4, 1, 1);
-        this.main.attach(azureVoiceSelector, 2, 4, 2, 1);
-
-        this.main.attach(labelAssistName, 0, 5, 1, 1);
-        this.main.attach(assistName, 2, 5, 2, 1);
-
+        this.main.attach(apiKeyIcon, 1, 0, 1, 1);
+        this.main.attach(apiKey, 2, 0, 1, 1);
+        this.main.attach(howToApiKey, 3, 0, 1, 1);
+        this.main.attach(speechKeyLabel, 0, 1, 1, 1);
+        this.main.attach(speechKeyIcon, 1, 1, 1, 1);
+        this.main.attach(speechKey, 2, 1, 1, 1);
+        this.main.attach(howToSpeechKey, 3, 1, 1, 1);
+        this.main.attach(speechRegionLabel, 0, 2, 1, 1);
+        this.main.attach(speechRegionIcon, 1, 2, 1, 1);
+        this.main.attach(speechRegion, 2, 2, 1, 1);
+        this.main.attach(sysLanguageLabel, 0, 3, 1, 1);
+        this.main.attach(sysLanguageIcon, 1, 3, 1, 1);
+        this.main.attach(languageSelector, 2, 3, 1, 1);
+        this.main.attach(voiceLabel, 0, 4, 1, 1);
+        this.main.attach(voiceIcon, 1, 4, 1, 1);
+        this.main.attach(voiceSelector, 2, 4, 1, 1);
+        this.main.attach(assistNameLabel, 0, 5, 1, 1);
+        this.main.attach(assistNameIcon, 1, 5, 1, 1);
+        this.main.attach(assistName, 2, 5, 1, 1);
         this.main.attach(histroyLabel, 0, 6, 1, 1);
-        this.main.attach(historyButton, 2, 6, 1, 1);
-
-        this.main.attach(save, 1, 8, 3, 1);
-
-        this.main.attach(statusLabel, 1, 9, 3, 1);
+        this.main.attach(histroyIcon, 1, 6, 1, 1);
+        this.main.attach(history, 2, 6, 1, 1);
+        this.main.attach(blankLine, 0, 7, 3, 1);
+        this.main.attach(save, 0, 8, 3, 1);
+        this.main.attach(statusLabel, 0, 9, 3, 1);
 
         // Add to main
         this.ui.add(this.main);
