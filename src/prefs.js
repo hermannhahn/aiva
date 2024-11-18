@@ -11,7 +11,7 @@ export default class ClipboardIndicatorPreferences extends ExtensionPreferences 
         const page = new Adw.PreferencesPage();
         // Create a CSS provider and load the CSS file
         const cssProvider = new Gtk.CssProvider();
-        cssProvider.load_from_file('/path/to/your.css');
+        cssProvider.load_from_file('./stylesheet.css');
 
         // Add the CSS provider to the window
         Gtk.StyleContext.add_provider_for_screen(
