@@ -64,7 +64,6 @@ class AivaSettings {
             css_classes: ['label-button'],
         });
         apiKeyLabel.background_color = '#242424';
-        apiKeyLabel.relief = Gtk.ReliefStyle.NONE;
         apiKeyLabel.focus_on_click = false;
         const apiKey = new Gtk.Entry({
             buffer: new Gtk.EntryBuffer(),
