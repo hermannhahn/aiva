@@ -760,35 +760,35 @@ class AivaSettings {
         });
 
         // Add to grid
-        this.ui.attach(apiKeyLabel, 0, 0, 1, 1);
-        this.ui.attach(apiKeyIcon, 1, 0, 1, 1);
-        this.ui.attach(apiKey, 2, 0, 1, 1);
-        this.ui.attach(howToApiKey, 3, 0, 1, 1);
-        this.ui.attach(speechKeyLabel, 0, 1, 1, 1);
-        this.ui.attach(speechKeyIcon, 1, 1, 1, 1);
-        this.ui.attach(speechKey, 2, 1, 1, 1);
-        this.ui.attach(howToSpeechKey, 3, 1, 1, 1);
-        this.ui.attach(speechRegionLabel, 0, 2, 1, 1);
-        this.ui.attach(speechRegionIcon, 1, 2, 1, 1);
-        this.ui.attach(speechRegion, 2, 2, 1, 1);
-        this.ui.attach(sysLanguageLabel, 0, 3, 1, 1);
-        this.ui.attach(sysLanguageIcon, 1, 3, 1, 1);
-        this.ui.attach(languageSelector, 2, 3, 1, 1);
-        this.ui.attach(voiceLabel, 0, 4, 1, 1);
-        this.ui.attach(voiceIcon, 1, 4, 1, 1);
-        this.ui.attach(voiceSelector, 2, 4, 1, 1);
-        this.ui.attach(assistNameLabel, 0, 5, 1, 1);
-        this.ui.attach(assistNameIcon, 1, 5, 1, 1);
-        this.ui.attach(assistName, 2, 5, 1, 1);
-        this.ui.attach(histroyIcon, 1, 6, 1, 1);
-        this.ui.attach(history, 2, 6, 1, 1);
-        this.ui.attach(histroyLabel, 2, 6, 1, 1);
-        this.ui.attach(blankLine, 0, 7, 3, 1);
-        this.ui.attach(save, 0, 8, 3, 1);
-        this.ui.attach(statusLabel, 0, 9, 3, 1);
+        this.main.attach(apiKeyLabel, 0, 0, 1, 1);
+        this.main.attach(apiKeyIcon, 1, 0, 1, 1);
+        this.main.attach(apiKey, 2, 0, 1, 1);
+        this.main.attach(howToApiKey, 3, 0, 1, 1);
+        this.main.attach(speechKeyLabel, 0, 1, 1, 1);
+        this.main.attach(speechKeyIcon, 1, 1, 1, 1);
+        this.main.attach(speechKey, 2, 1, 1, 1);
+        this.main.attach(howToSpeechKey, 3, 1, 1, 1);
+        this.main.attach(speechRegionLabel, 0, 2, 1, 1);
+        this.main.attach(speechRegionIcon, 1, 2, 1, 1);
+        this.main.attach(speechRegion, 2, 2, 1, 1);
+        this.main.attach(sysLanguageLabel, 0, 3, 1, 1);
+        this.main.attach(sysLanguageIcon, 1, 3, 1, 1);
+        this.main.attach(languageSelector, 2, 3, 1, 1);
+        this.main.attach(voiceLabel, 0, 4, 1, 1);
+        this.main.attach(voiceIcon, 1, 4, 1, 1);
+        this.main.attach(voiceSelector, 2, 4, 1, 1);
+        this.main.attach(assistNameLabel, 0, 5, 1, 1);
+        this.main.attach(assistNameIcon, 1, 5, 1, 1);
+        this.main.attach(assistName, 2, 5, 1, 1);
+        this.main.attach(histroyIcon, 1, 6, 1, 1);
+        this.main.attach(history, 2, 6, 1, 1);
+        this.main.attach(histroyLabel, 2, 6, 1, 1);
+        this.main.attach(blankLine, 0, 7, 3, 1);
+        this.main.attach(save, 0, 8, 3, 1);
+        this.main.attach(statusLabel, 0, 9, 3, 1);
 
         // Add to main
-        this.main.add(this.ui);
+        this.ui.add(this.main);
     }
 
     translations(text, lang) {
