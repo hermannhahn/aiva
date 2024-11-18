@@ -143,12 +143,13 @@ export class Chat {
         let response = this.app.utils.extractCodeAndTTS(text);
         if (speech) {
             this.app.azure.tts(response.tts);
+        } else {
+            this.app.ui.resetStatusIcon();
         }
         if (response.code) {
             this.app.utils.copyToClipboard(response.code);
             this.app.log('Code copied to clipboard.');
         }
-        this.app.ui.resetStatusIcon();
         this.app.utils.scrollToBottom();
     }
 }
