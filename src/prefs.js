@@ -57,65 +57,64 @@ class AivaSettings {
         }
 
         // GEMINI API KEY
-        let apiKeyLabel = new Gtk.Button({
-            label: '🔑 ' + _('Gemini API Key') + ':',
-            tooltip_text: _('Insert your Gemini API key here'),
-            halign: Gtk.Align.START,
-            css_classes: ['label-button'],
+        let apiKeyLabel = new Gtk.Label({
+            label: _('Gemini API Key') + ' 🔑',
+            halign: Gtk.Align.END,
         });
         apiKeyLabel.background_color = '#242424';
         apiKeyLabel.focus_on_click = false;
         const apiKey = new Gtk.Entry({
             buffer: new Gtk.EntryBuffer(),
-            halign: Gtk.Align.START,
+            halign: Gtk.Align.CENTER,
+            placeholder_text: _('Insert your Gemini API key here'),
+            width_chars: 40,
         });
         const howToApiKey = new Gtk.LinkButton({
             label: '❓',
             tooltip_text: _('How to get API key?'),
             uri: 'https://console.cloud.google.com/apis/credentials',
             halign: Gtk.Align.START,
-            css_classes: ['link-button'],
+            // css_classes: ['link-button'],
         });
         const labelHowTo = howToApiKey.get_child();
         labelHowTo.set_property('underlined', false);
 
         // AZURE API KEY
-        const labelAzure = new Gtk.Button({
-            label: '🔑 ' + _('Azure Speech API Key') + ':',
-            tooltip_text: _('Insert your Azure Speech API key here'),
-            halign: Gtk.Align.START,
-            css_classes: ['label-button'],
+        const labelAzure = new Gtk.Label({
+            label: _('Azure Speech API Key') + ' 🔑',
+            halign: Gtk.Align.END,
         });
         const azureSpeechKey = new Gtk.Entry({
             buffer: new Gtk.EntryBuffer(),
-            halign: Gtk.Align.START,
+            halign: Gtk.Align.CENTER,
+            placeholder_text: _('Insert your Azure Speech API key here'),
+            width_chars: 40,
         });
         const howToAzure = new Gtk.LinkButton({
             label: '❓',
             tooltip_text: _('How to get API key?'),
             uri: 'https://learn.microsoft.com/en-us/azure/cognitive-services/speech-service/get-started-speech-to-text',
             halign: Gtk.Align.START,
-            css_classes: ['link-button'],
         });
         const labelHowToAzure = howToAzure.get_child();
         labelHowToAzure.set_property('underlined', false);
 
         // AZURE REGION
-        const labelRegion = new Gtk.Button({
-            label: '📍 ' + _('Azure Speech Region') + ':',
-            tooltip_text: _('e.g.: eastus, westus...'),
-            halign: Gtk.Align.START,
-            css_classes: ['label-button'],
+        const labelRegion = new Gtk.Label({
+            label: _('Azure Speech Region') + ' 📍',
+            halign: Gtk.Align.END,
         });
         const azureRegion = new Gtk.Entry({
             buffer: new Gtk.EntryBuffer(),
+            halign: Gtk.Align.START,
+            placeholder_text: _('e.g.: eastus, westus...'),
+            width_chars: 20,
         });
 
         // AZURE LANGUAGE (ComboBoxText) to lang options
-        const labelLanguage = new Gtk.Button({
-            label: '🌎 ' + _('Select Language') + ':',
-            tooltip_text: _('Select app language'),
-            halign: Gtk.Align.START,
+        const labelLanguage = new Gtk.Label({
+            label: _('Select Language') + ' 🌎',
+            halign: Gtk.Align.END,
         });
         const languageSelector = new Gtk.ComboBoxText();
         languageSelector.append('en-US', '🇺🇲 ' + _('English'));
@@ -655,25 +654,23 @@ class AivaSettings {
         updateVoices(defaultLanguage);
 
         // AIVA Name
-        const labelAssistName = new Gtk.Button({
+        const labelAssistName = new Gtk.Label({
             label: '🤖 ' + _('Assistant Name') + ':',
-            tooltip_text: 'Give your assistant a name',
-            halign: Gtk.Align.START,
-            css_classes: ['label-button'],
+            halign: Gtk.Align.END,
         });
         const assistName = new Gtk.Entry({
             buffer: new Gtk.EntryBuffer(),
+            placeholder_text: 'Give your assistant a name',
         });
 
         // HISTORY LOG
-        const histroyLabel = new Gtk.Button({
+        const histroyLabel = new Gtk.Label({
             label: '📝 ' + _('Remember talk history') + ':',
-            tooltip_text: 'Remember talk history',
-            halign: Gtk.Align.START,
+            halign: Gtk.Align.END,
             css_classes: ['label-button'],
         });
         const historyButton = new Gtk.Switch({
-            valign: Gtk.Align.CENTER,
+            valign: Gtk.Align.START,
         });
 
         const save = new Gtk.Button({
