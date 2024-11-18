@@ -1,6 +1,7 @@
 import Gtk from 'gi://Gtk';
 import Adw from 'gi://Adw';
 import Gdk from 'gi://Gdk';
+import Gio from 'gi://Gio';
 
 import {ExtensionPreferences} from 'resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js';
 
@@ -11,7 +12,13 @@ export default class ClipboardIndicatorPreferences extends ExtensionPreferences 
         const page = new Adw.PreferencesPage();
         // Create a CSS provider and load the CSS file
         const cssProvider = new Gtk.CssProvider();
-        cssProvider.load_from_file('./stylesheet.css');
+        const datadir = Gio.File.new_for_path(
+            Gio.get_user_data_dir(),
+        ).get_path();
+        const file = Gio.File.new_for_path(
+            datadir + '/stylesheet.css',
+        ).get_path();
+        cssProvider.load_from_file(file);
 
         // Add the CSS provider to the window
         Gtk.StyleContext.add_provider_for_screen(
