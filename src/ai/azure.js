@@ -39,8 +39,6 @@ export class MicrosoftAzure {
             return;
         }
 
-        this.app.ui.statusIcon('📥');
-
         // API URL
         const apiUrl = `https://${this.AZURE_SPEECH_REGION}.tts.speech.microsoft.com/cognitiveservices/v1`;
 
@@ -72,6 +70,7 @@ export class MicrosoftAzure {
 
         // Write SSML to temporary file
         try {
+            this.app.ui.statusIcon('📥');
             GLib.file_set_contents(tempFilePath, ssml);
             this.app.log('SSML written to temporary audio file.');
         } catch (e) {
