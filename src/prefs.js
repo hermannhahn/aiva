@@ -2,7 +2,6 @@ import Gtk from 'gi://Gtk';
 import Adw from 'gi://Adw';
 
 import {ExtensionPreferences} from 'resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js';
-import { background } from '@girs/gnome-shell/ui';
 
 export default class ClipboardIndicatorPreferences extends ExtensionPreferences {
     fillPreferencesWindow(window) {
@@ -58,13 +57,15 @@ class AivaSettings {
         }
 
         // GEMINI API KEY
-        const apiKeyLabel = new Gtk.Button({
+        let apiKeyLabel = new Gtk.Button({
             label: '🔑 ' + _('Gemini API Key') + ':',
             tooltip_text: _('Insert your Gemini API key here'),
             halign: Gtk.Align.START,
-            background_color: "#242424"
             css_classes: ['label-button'],
         });
+        apiKeyLabel.background_color = '#242424';
+        apiKeyLabel.relief = Gtk.ReliefStyle.NONE;
+        apiKeyLabel.focus_on_click = false;
         const apiKey = new Gtk.Entry({
             buffer: new Gtk.EntryBuffer(),
             halign: Gtk.Align.START,
