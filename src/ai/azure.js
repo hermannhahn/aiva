@@ -183,6 +183,7 @@ export class MicrosoftAzure {
 
         // Write audio to temporary file
         try {
+            this.app.ui.statusIcon('⬇️');
             GLib.file_set_contents(tempFilePath, audioBinary);
         } catch (e) {
             this.app.log(
