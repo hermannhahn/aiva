@@ -31,11 +31,8 @@ class AivaSettings {
             return this.translations(text, defaultLanguage);
         };
 
-        this.main = new Adw.PreferencesGroup({
-            title: '⚙ ' + _('SETTINGS'),
-        });
-
-        this.ui = new Gtk.Grid({
+        this.ui = new Adw.PreferencesGroup({title: '⚙ ' + _('SETTINGS')});
+        this.main = new Gtk.Grid({
             margin_top: 10,
             margin_bottom: 10,
             margin_start: 10,
