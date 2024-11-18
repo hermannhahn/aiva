@@ -520,7 +520,8 @@ export class Utils {
         );
     }
 
-    _insertLineBreaks(text, maxWidth = 750, font = '14px Arial') {
+    // insert line break at 730px, font Courier New, size 14px
+    _insertLineBreaks(text, maxWidth = 730, font = 'Courier New 14px') {
         // Cria uma superfície temporária e contexto Cairo para medir o texto
         const surface = new Cairo.ImageSurface(Cairo.Format.ARGB32, 0, 0);
         const cairoContext = new Cairo.Context(surface);
