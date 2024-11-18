@@ -446,7 +446,7 @@ export class Utils {
             }
             this.app.log('code detected!');
             // remove code from tts
-            let tts = tts.replace(match[0], '');
+            let tts = text.replace(match[0], '');
             tts = getTTS(tts);
 
             return {code, tts};
