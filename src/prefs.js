@@ -58,7 +58,7 @@ class AivaSettings {
 
         this.ui = new Adw.PreferencesGroup();
 
-        this.genSettingsUI = new Gtk.Box({
+        this.generalSettingsUI = new Gtk.Box({
             margin_top: 10,
             margin_bottom: 10,
             margin_start: 10,
@@ -67,7 +67,7 @@ class AivaSettings {
             orientation: Gtk.Orientation.VERTICAL,
         });
 
-        this.advSettingsUI = new Gtk.Box({
+        this.advancedSettingsUI = new Gtk.Box({
             margin_top: 10,
             margin_bottom: 10,
             margin_start: 10,
