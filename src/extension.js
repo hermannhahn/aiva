@@ -216,7 +216,7 @@ const Aiva = GObject.registerClass(
 
                     // Aqui ajusta a transparência, substituindo sua lógica real
                     const configuredTransparency = transparency / 100;
-                    this.app.log('Transparency:' + configuredTransparency);
+                    console.log('Transparency:' + configuredTransparency);
                     this.app.menu.box.set_style(
                         `background-color: rgba(42, 42, 42, ${configuredTransparency});`,
                     );
