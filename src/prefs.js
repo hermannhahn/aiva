@@ -43,8 +43,8 @@ class AivaSettings {
             return this.translations(text, defaultLanguage);
         };
 
-        this.generalSettingsUI = new Adw.PreferencesGroup({
-            title: '⚙ ' + _('SETTINGS'),
+        this.generalSettingsUI = new Gtk.Label({
+            label: '⚙️ ' + _('Settings'),
         });
         this.generalSettings = new Gtk.Grid({
             margin_top: 10,
@@ -57,8 +57,8 @@ class AivaSettings {
             row_homogeneous: false,
         });
 
-        this.appearanceSettingsUI = new Adw.PreferencesGroup({
-            title: '🎨 ' + _('Appearance'),
+        this.appearanceSettingsUI = new Gtk.Label({
+            label: '🎨 ' + _('Appearance'),
         });
         this.appearanceSettings = new Gtk.Box({
             orientation: Gtk.Orientation.VERTICAL,
