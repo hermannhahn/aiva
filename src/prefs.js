@@ -743,7 +743,7 @@ class AivaSettings {
 
         // Update transparency
         const updateTransparency = (transparency) => {
-            this.schema.set_boolean('theme-transparency', transparency);
+            this.schema.set_string('theme-transparency', transparency);
             // add style to window
             this._sendTransparencyRequest(transparency); // Enviar transparência como "0.5"
         };
