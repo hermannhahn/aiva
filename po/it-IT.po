@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-18 22:57-0300\n"
+"POT-Creation-Date: 2024-11-18 23:02-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language it-IT\n"
@@ -466,82 +466,82 @@ msgstr ""
 msgid "Ask me anything..."
 msgstr ""
 
-#: src/prefs.js:91
+#: src/prefs.js:101
 msgid "Advanced Settings Content"
 msgstr ""
 
-#: src/prefs.js:113
+#: src/prefs.js:123
 msgid "Gemini API Key"
 msgstr ""
 
-#: src/prefs.js:124
+#: src/prefs.js:134
 msgid "Insert your Gemini API key here"
 msgstr ""
 
-#: src/prefs.js:129 src/prefs.js:155
+#: src/prefs.js:139 src/prefs.js:165
 msgid "How to get API key?"
 msgstr ""
 
-#: src/prefs.js:139
+#: src/prefs.js:149
 msgid "Azure Speech API Key"
 msgstr ""
 
-#: src/prefs.js:150
+#: src/prefs.js:160
 msgid "Insert your Azure Speech API key here"
 msgstr ""
 
-#: src/prefs.js:165
+#: src/prefs.js:175
 msgid "Azure Speech Region"
 msgstr ""
 
-#: src/prefs.js:176
+#: src/prefs.js:186
 msgid "e.g.: eastus, westus..."
 msgstr ""
 
-#: src/prefs.js:182
+#: src/prefs.js:192
 msgid "Select Language"
 msgstr ""
 
-#: src/prefs.js:191
+#: src/prefs.js:201
 msgid "English"
 msgstr ""
 
-#: src/prefs.js:192
+#: src/prefs.js:202
 msgid "French"
 msgstr ""
 
-#: src/prefs.js:193
+#: src/prefs.js:203
 msgid "German"
 msgstr ""
 
-#: src/prefs.js:194
+#: src/prefs.js:204
 msgid "Italian"
 msgstr ""
 
-#: src/prefs.js:195
+#: src/prefs.js:205
 msgid "Portuguese (Brazil)"
 msgstr ""
 
-#: src/prefs.js:196
+#: src/prefs.js:206
 msgid "Spanish"
 msgstr ""
 
-#: src/prefs.js:200
+#: src/prefs.js:210
 msgid "Select Voice"
 msgstr ""
 
-#: src/prefs.js:731
+#: src/prefs.js:741
 msgid "Assistant Name"
 msgstr ""
 
-#: src/prefs.js:752
+#: src/prefs.js:762
 msgid "Remember talk history"
 msgstr ""
 
-#: src/prefs.js:760
+#: src/prefs.js:770
 msgid "Save"
 msgstr ""
 
-#: src/prefs.js:811
+#: src/prefs.js:821
 msgid "Your preferences have been saved"
 msgstr ""

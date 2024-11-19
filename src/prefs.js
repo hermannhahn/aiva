@@ -67,7 +67,17 @@ class AivaSettings {
         };
 
         // GENERAL SETTINGS
-        this.generalSettings = new Gtk.Grid({
+        this.generalSettings = new Gtk.Box({
+            margin_top: 10,
+            margin_bottom: 10,
+            margin_start: 10,
+            margin_end: 10,
+            row_spacing: 10,
+            column_spacing: 14,
+            column_homogeneous: false,
+            row_homogeneous: false,
+        });
+        this.generalSettingsGrid = new Gtk.Grid({
             margin_top: 10,
             margin_bottom: 10,
             margin_start: 10,
@@ -812,32 +822,34 @@ class AivaSettings {
         });
 
         // Add to grid
-        this.generalSettings.attach(apiKeyLabel, 0, 0, 1, 1);
-        this.generalSettings.attach(apiKeyIcon, 1, 0, 1, 1);
-        this.generalSettings.attach(apiKey, 2, 0, 1, 1);
-        this.generalSettings.attach(howToApiKey, 3, 0, 1, 1);
-        this.generalSettings.attach(speechKeyLabel, 0, 1, 1, 1);
-        this.generalSettings.attach(speechKeyIcon, 1, 1, 1, 1);
-        this.generalSettings.attach(speechKey, 2, 1, 1, 1);
-        this.generalSettings.attach(howToSpeechKey, 3, 1, 1, 1);
-        this.generalSettings.attach(speechRegionLabel, 0, 2, 1, 1);
-        this.generalSettings.attach(speechRegionIcon, 1, 2, 1, 1);
-        this.generalSettings.attach(speechRegion, 2, 2, 1, 1);
-        this.generalSettings.attach(sysLanguageLabel, 0, 3, 1, 1);
-        this.generalSettings.attach(sysLanguageIcon, 1, 3, 1, 1);
-        this.generalSettings.attach(languageSelector, 2, 3, 1, 1);
-        this.generalSettings.attach(voiceLabel, 0, 4, 1, 1);
-        this.generalSettings.attach(voiceIcon, 1, 4, 1, 1);
-        this.generalSettings.attach(voiceSelector, 2, 4, 1, 1);
-        this.generalSettings.attach(assistNameLabel, 0, 5, 1, 1);
-        this.generalSettings.attach(assistNameIcon, 1, 5, 1, 1);
-        this.generalSettings.attach(assistName, 2, 5, 1, 1);
-        this.generalSettings.attach(histroyIcon, 1, 6, 1, 1);
-        this.generalSettings.attach(history, 2, 6, 1, 1);
-        this.generalSettings.attach(histroyLabel, 2, 6, 1, 1);
-        this.generalSettings.attach(blankLine, 0, 7, 3, 1);
-        this.generalSettings.attach(save, 0, 8, 3, 1);
-        this.generalSettings.attach(statusLabel, 0, 9, 3, 1);
+        this.generalSettingsGrid.attach(apiKeyLabel, 0, 0, 1, 1);
+        this.generalSettingsGrid.attach(apiKeyIcon, 1, 0, 1, 1);
+        this.generalSettingsGrid.attach(apiKey, 2, 0, 1, 1);
+        this.generalSettingsGrid.attach(howToApiKey, 3, 0, 1, 1);
+        this.generalSettingsGrid.attach(speechKeyLabel, 0, 1, 1, 1);
+        this.generalSettingsGrid.attach(speechKeyIcon, 1, 1, 1, 1);
+        this.generalSettingsGrid.attach(speechKey, 2, 1, 1, 1);
+        this.generalSettingsGrid.attach(howToSpeechKey, 3, 1, 1, 1);
+        this.generalSettingsGrid.attach(speechRegionLabel, 0, 2, 1, 1);
+        this.generalSettingsGrid.attach(speechRegionIcon, 1, 2, 1, 1);
+        this.generalSettingsGrid.attach(speechRegion, 2, 2, 1, 1);
+        this.generalSettingsGrid.attach(sysLanguageLabel, 0, 3, 1, 1);
+        this.generalSettingsGrid.attach(sysLanguageIcon, 1, 3, 1, 1);
+        this.generalSettingsGrid.attach(languageSelector, 2, 3, 1, 1);
+        this.generalSettingsGrid.attach(voiceLabel, 0, 4, 1, 1);
+        this.generalSettingsGrid.attach(voiceIcon, 1, 4, 1, 1);
+        this.generalSettingsGrid.attach(voiceSelector, 2, 4, 1, 1);
+        this.generalSettingsGrid.attach(assistNameLabel, 0, 5, 1, 1);
+        this.generalSettingsGrid.attach(assistNameIcon, 1, 5, 1, 1);
+        this.generalSettingsGrid.attach(assistName, 2, 5, 1, 1);
+        this.generalSettingsGrid.attach(histroyIcon, 1, 6, 1, 1);
+        this.generalSettingsGrid.attach(history, 2, 6, 1, 1);
+        this.generalSettingsGrid.attach(histroyLabel, 2, 6, 1, 1);
+        this.generalSettingsGrid.attach(blankLine, 0, 7, 3, 1);
+        this.generalSettingsGrid.attach(save, 0, 8, 3, 1);
+        this.generalSettingsGrid.attach(statusLabel, 0, 9, 3, 1);
+
+        this.generalSettings.append(this.generalSettingsGrid);
     }
 
     translations(text, lang) {
