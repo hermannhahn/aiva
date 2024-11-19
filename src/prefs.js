@@ -956,18 +956,18 @@ class AivaSettings {
         return text;
     }
 
-    _sendTransparencyRequest(transparencyValue) {
+    _sendRequest(request) {
         const connection = Gio.DBus.session;
         console.log('Sending transparency request...');
         // Certifique-se de enviar o valor como string
-        const transparencyString = transparencyValue.toString();
+        request = request.toString();
 
         connection.call(
             'org.gnome.shell.extensions.aiva', // Nome do bus
             '/org/gnome/shell/extensions/aiva', // Caminho do objeto
             'org.gnome.shell.extensions.aiva', // Interface
             'SetTransparency', // Método
-            new GLib.Variant('(s)', [transparencyString]), // Argumento como string
+            new GLib.Variant('(s)', [request]), // Argumento como string
             GLib.VariantType.new('(s)'), // Tipo de retorno esperado
             Gio.DBusCallFlags.NONE,
             -1, // Timeout padrão
@@ -975,9 +975,9 @@ class AivaSettings {
             (conn, result) => {
                 try {
                     conn.call_finish(result);
-                    log('Transparency request sent successfully');
+                    log('Request sent successfully');
                 } catch (error) {
-                    logError(error, 'Failed to send transparency request');
+                    logError(error, 'Failed to send request');
                 }
             },
         );
