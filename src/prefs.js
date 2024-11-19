@@ -8,7 +8,11 @@ export default class ClipboardIndicatorPreferences extends ExtensionPreferences 
         window._settings = this.getSettings();
         const settingsUI = new AivaSettings(window._settings);
         const page = new Adw.PreferencesPage();
-        const divisor = new Gtk.HSeparator();
+        const divisor = new Gtk.Label({
+            label: ' ',
+            halign: Gtk.Align.CENTER,
+            css_classes: ['separator'],
+        });
         page.add(settingsUI.generalSettings);
         page.add(divisor);
         page.add(settingsUI.appearenceSettings);
