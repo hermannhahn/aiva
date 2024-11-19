@@ -64,7 +64,7 @@ class AivaSettings {
             margin_bottom: 10,
             margin_start: 10,
             margin_end: 10,
-            spacing: 10,
+            spacing: 12,
         });
 
         this.advancedSettingsUI = new Gtk.Box({
@@ -73,7 +73,7 @@ class AivaSettings {
             margin_bottom: 10,
             margin_start: 10,
             margin_end: 10,
-            spacing: 10,
+            spacing: 12,
         });
 
         this.main = new Gtk.Grid({
