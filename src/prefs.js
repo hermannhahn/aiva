@@ -72,10 +72,8 @@ class AivaSettings {
             margin_bottom: 10,
             margin_start: 10,
             margin_end: 10,
-            row_spacing: 10,
-            column_spacing: 14,
-            column_homogeneous: false,
-            row_homogeneous: false,
+            spacing: 10,
+            orientation: Gtk.Orientation.VERTICAL,
         });
         this.generalSettingsGrid = new Gtk.Grid({
             margin_top: 10,
