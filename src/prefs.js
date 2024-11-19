@@ -20,7 +20,7 @@ export default class ClipboardIndicatorPreferences extends ExtensionPreferences 
 
         // create a page for the general settings
         const generalPage = new Adw.PreferencesPage();
-        generalPage.add(settingsUI.generalSettingsUI);
+        generalPage.add(settingsUI.ui);
 
         // add the general settings page to the notebook
         notebook.append_page(generalPage, new Gtk.Label({label: 'General'}));
@@ -56,9 +56,7 @@ class AivaSettings {
             return this.translations(text, defaultLanguage);
         };
 
-        this.ui = new Adw.PreferencesGroup();
-
-        this.generalSettingsUI = new Gtk.Box({
+        this.ui = this.generalSettingsUI = new Gtk.Box({
             margin_top: 10,
             margin_bottom: 10,
             margin_start: 10,
