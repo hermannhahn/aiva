@@ -7,12 +7,18 @@ export default class ClipboardIndicatorPreferences extends ExtensionPreferences 
     fillPreferencesWindow(window) {
         window._settings = this.getSettings();
         const settingsUI = new AivaSettings(window._settings);
-        const page = new Adw.PreferencesPage();
-        page.add(settingsUI.generalSettingsUI);
-        page.add(settingsUI.appearanceSettingsUI);
+        const tabView = new Adw.TabView();
+        tabView.append_page(
+            settingsUI.generalSettingsUI,
+            new Adw.PageHeader({title: _('General')}),
+        );
+        tabView.append_page(
+            settingsUI.appearanceSettingsUI,
+            new Adw.PageHeader({title: _('Appearance')}),
+        );
         // Set window size to 800x530
         window.set_default_size(800, 530);
-        window.add(page);
+        window.add(tabView);
     }
 }
 
@@ -709,7 +715,7 @@ class AivaSettings {
             valign: Gtk.Align.START,
         });
         const histroyLabel = new Gtk.Label({
-            label: '      ' + _('Remember talk history'),
+            label: '         ' + _('Remember talk history'),
             halign: Gtk.Align.START,
         });
         const blankLine = new Gtk.Label({
