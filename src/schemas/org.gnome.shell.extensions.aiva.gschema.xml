@@ -58,5 +58,13 @@
            it will remeember talk history
         </description>
     </key>
+    <!--- theme-transparency -->
+    <key name="theme-transparency" type="b">
+        <default>0</default>
+        <summary>Transparency of theme</summary>
+        <description>
+           Set transparency of theme
+        </description>
+    </key>
   </schema>
 </schemalist>
