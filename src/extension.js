@@ -201,9 +201,7 @@ const Aiva = GObject.registerClass(
 
             const dbusImpl = Gio.DBusExportedObject.wrapJSObject(interfaceXML, {
                 SetTransparency(transparencyValue) {
-                    console.log(
-                        `Received transparencyValue: ${transparencyValue}`,
-                    );
+                    log(`Received transparencyValue: ${transparencyValue}`);
 
                     // Converta a string para um número
                     let transparency = parseFloat(transparencyValue);
@@ -216,7 +214,7 @@ const Aiva = GObject.registerClass(
 
                     // Aqui ajusta a transparência, substituindo sua lógica real
                     const configuredTransparency = transparency / 100;
-                    console.log('Transparency:' + configuredTransparency);
+                    log('Transparency:' + configuredTransparency);
                     this.app.menu.box.set_style(
                         `background-color: rgba(42, 42, 42, ${configuredTransparency});`,
                     );
