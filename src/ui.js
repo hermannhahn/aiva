@@ -35,9 +35,10 @@ export class UI {
         this.app.log('Initializing UI...');
 
         // set menu box transparency
-        this.app.log('Transparency:' + this.app.userSettings.TRANSPARENCY);
+        const configuredTransparency = this.app.userSettings.TRANSPARENCY / 100;
+        this.app.log('Transparency:' + configuredTransparency);
         this.app.menu.box.set_style(
-            `background-color: rgba(24, 24, 24, ${this.app.userSettings.TRANSPARENCY});`,
+            `background-color: rgba(42, 42, 42, ${configuredTransparency});`,
         );
 
         // Create tray
