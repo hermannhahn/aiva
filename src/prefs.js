@@ -63,10 +63,10 @@ class AivaSettings {
         };
 
         // GENERAL SETTINGS
-        this.generalSettingsUI = new Adw.PreferencesGroup({
+        this.ui = new Adw.PreferencesGroup({
             title: '⚙ ' + _('General Settings:'),
         });
-        this.generalSettings = new Gtk.Grid({
+        this.main = new Gtk.Grid({
             margin_top: 10,
             margin_bottom: 10,
             margin_start: 10,
@@ -77,19 +77,19 @@ class AivaSettings {
             row_homogeneous: false,
         });
 
-        // ADVANCED SETTINGS
-        this.advancedSettingsUI = new Adw.PreferencesGroup({
-            title: '⚙ ' + _('Advanced Settings:'),
-        });
-        this.advancedSettings = new Gtk.Box({
-            margin_top: 10,
-            margin_bottom: 10,
-            margin_start: 10,
-            margin_end: 10,
-            spacing: 10,
-            orientation: Gtk.Orientation.VERTICAL,
-        });
-        this.advancedSettingsUI.add(this.advancedSettings);
+        // // ADVANCED SETTINGS
+        // this.advancedSettingsUI = new Adw.PreferencesGroup({
+        //     title: '⚙ ' + _('Advanced Settings:'),
+        // });
+        // this.advancedSettings = new Gtk.Box({
+        //     margin_top: 10,
+        //     margin_bottom: 10,
+        //     margin_start: 10,
+        //     margin_end: 10,
+        //     spacing: 10,
+        //     orientation: Gtk.Orientation.VERTICAL,
+        // });
+        // this.advancedSettingsUI.add(this.advancedSettings);
 
         // GEMINI API KEY
 
@@ -810,35 +810,35 @@ class AivaSettings {
         });
 
         // Add to grid
-        this.generalSettings.attach(apiKeyLabel, 0, 0, 1, 1);
-        this.generalSettings.attach(apiKeyIcon, 1, 0, 1, 1);
-        this.generalSettings.attach(apiKey, 2, 0, 1, 1);
-        this.generalSettings.attach(howToApiKey, 3, 0, 1, 1);
-        this.generalSettings.attach(speechKeyLabel, 0, 1, 1, 1);
-        this.generalSettings.attach(speechKeyIcon, 1, 1, 1, 1);
-        this.generalSettings.attach(speechKey, 2, 1, 1, 1);
-        this.generalSettings.attach(howToSpeechKey, 3, 1, 1, 1);
-        this.generalSettings.attach(speechRegionLabel, 0, 2, 1, 1);
-        this.generalSettings.attach(speechRegionIcon, 1, 2, 1, 1);
-        this.generalSettings.attach(speechRegion, 2, 2, 1, 1);
-        this.generalSettings.attach(sysLanguageLabel, 0, 3, 1, 1);
-        this.generalSettings.attach(sysLanguageIcon, 1, 3, 1, 1);
-        this.generalSettings.attach(languageSelector, 2, 3, 1, 1);
-        this.generalSettings.attach(voiceLabel, 0, 4, 1, 1);
-        this.generalSettings.attach(voiceIcon, 1, 4, 1, 1);
-        this.generalSettings.attach(voiceSelector, 2, 4, 1, 1);
-        this.generalSettings.attach(assistNameLabel, 0, 5, 1, 1);
-        this.generalSettings.attach(assistNameIcon, 1, 5, 1, 1);
-        this.generalSettings.attach(assistName, 2, 5, 1, 1);
-        this.generalSettings.attach(histroyIcon, 1, 6, 1, 1);
-        this.generalSettings.attach(history, 2, 6, 1, 1);
-        this.generalSettings.attach(histroyLabel, 2, 6, 1, 1);
-        this.generalSettings.attach(blankLine, 0, 7, 3, 1);
-        this.generalSettings.attach(save, 0, 8, 3, 1);
-        this.generalSettings.attach(statusLabel, 0, 9, 3, 1);
+        this.main.attach(apiKeyLabel, 0, 0, 1, 1);
+        this.main.attach(apiKeyIcon, 1, 0, 1, 1);
+        this.main.attach(apiKey, 2, 0, 1, 1);
+        this.main.attach(howToApiKey, 3, 0, 1, 1);
+        this.main.attach(speechKeyLabel, 0, 1, 1, 1);
+        this.main.attach(speechKeyIcon, 1, 1, 1, 1);
+        this.main.attach(speechKey, 2, 1, 1, 1);
+        this.main.attach(howToSpeechKey, 3, 1, 1, 1);
+        this.main.attach(speechRegionLabel, 0, 2, 1, 1);
+        this.main.attach(speechRegionIcon, 1, 2, 1, 1);
+        this.main.attach(speechRegion, 2, 2, 1, 1);
+        this.main.attach(sysLanguageLabel, 0, 3, 1, 1);
+        this.main.attach(sysLanguageIcon, 1, 3, 1, 1);
+        this.main.attach(languageSelector, 2, 3, 1, 1);
+        this.main.attach(voiceLabel, 0, 4, 1, 1);
+        this.main.attach(voiceIcon, 1, 4, 1, 1);
+        this.main.attach(voiceSelector, 2, 4, 1, 1);
+        this.main.attach(assistNameLabel, 0, 5, 1, 1);
+        this.main.attach(assistNameIcon, 1, 5, 1, 1);
+        this.main.attach(assistName, 2, 5, 1, 1);
+        this.main.attach(histroyIcon, 1, 6, 1, 1);
+        this.main.attach(history, 2, 6, 1, 1);
+        this.main.attach(histroyLabel, 2, 6, 1, 1);
+        this.main.attach(blankLine, 0, 7, 3, 1);
+        this.main.attach(save, 0, 8, 3, 1);
+        this.main.attach(statusLabel, 0, 9, 3, 1);
 
         // Add to General Settings UI
-        this.generalSettingsUI.add(this.generalSettings);
+        this.ui.add(this.main);
     }
 
     translations(text, lang) {
