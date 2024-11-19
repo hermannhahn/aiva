@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-18 22:30-0300\n"
+"POT-Creation-Date: 2024-11-18 22:35-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -495,85 +495,85 @@ msgstr ", sua assistente útil."
 msgid "Ask me anything..."
 msgstr "Pergunte-me qualquer coisa..."
 
-#: src/prefs.js:61
+#: src/prefs.js:60
 #, fuzzy
 msgid "Settings:"
 msgstr "Preferências:"
 
-#: src/prefs.js:105
+#: src/prefs.js:103
 msgid "Gemini API Key"
 msgstr ""
 
-#: src/prefs.js:116
+#: src/prefs.js:114
 msgid "Insert your Gemini API key here"
 msgstr ""
 
-#: src/prefs.js:121 src/prefs.js:147
+#: src/prefs.js:119 src/prefs.js:145
 msgid "How to get API key?"
 msgstr "Como obter a chave de API?"
 
-#: src/prefs.js:131
+#: src/prefs.js:129
 msgid "Azure Speech API Key"
 msgstr ""
 
-#: src/prefs.js:142
+#: src/prefs.js:140
 msgid "Insert your Azure Speech API key here"
 msgstr ""
 
-#: src/prefs.js:157
+#: src/prefs.js:155
 msgid "Azure Speech Region"
 msgstr "Região do Azure Speech"
 
-#: src/prefs.js:168
+#: src/prefs.js:166
 #, fuzzy
 msgid "e.g.: eastus, westus..."
 msgstr "ex: eastus, westus, ..."
 
-#: src/prefs.js:174
+#: src/prefs.js:172
 msgid "Select Language"
 msgstr "Selecione a linguagem"
 
-#: src/prefs.js:183
+#: src/prefs.js:181
 msgid "English"
 msgstr "Inglês"
 
-#: src/prefs.js:184
+#: src/prefs.js:182
 msgid "French"
 msgstr "Francês"
 
-#: src/prefs.js:185
+#: src/prefs.js:183
 msgid "German"
 msgstr ""
 
-#: src/prefs.js:186
+#: src/prefs.js:184
 msgid "Italian"
 msgstr ""
 
-#: src/prefs.js:187
+#: src/prefs.js:185
 msgid "Portuguese (Brazil)"
 msgstr "Português (Brasil)"
 
-#: src/prefs.js:188
+#: src/prefs.js:186
 msgid "Spanish"
 msgstr "Espanhol"
 
-#: src/prefs.js:192
+#: src/prefs.js:190
 msgid "Select Voice"
 msgstr "Selecione a voz"
 
-#: src/prefs.js:723
+#: src/prefs.js:721
 msgid "Assistant Name"
 msgstr "Nome do assistente"
 
-#: src/prefs.js:744
+#: src/prefs.js:742
 msgid "Remember talk history"
 msgstr "Lembrar conversa"
 
-#: src/prefs.js:752
+#: src/prefs.js:750
 msgid "Save"
 msgstr "Salvar"
 
-#: src/prefs.js:803
+#: src/prefs.js:801
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
 

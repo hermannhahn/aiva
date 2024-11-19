@@ -57,9 +57,7 @@ class AivaSettings {
         };
 
         // GENERAL SETTINGS
-        this.generalSettingsUI = new Adw.PreferencesGroup({
-            title: '⚙ ' + _('Settings:'),
-        });
+        this.generalSettingsUI = new Adw.PreferencesGroup({title: '⚙ ' + _('Settings:')});
         this.generalSettings = new Gtk.Grid({
             margin_top: 10,
             margin_bottom: 10,
