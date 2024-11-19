@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-19 00:07-0300\n"
+"POT-Creation-Date: 2024-11-19 00:15-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -495,16 +495,12 @@ msgstr ", sua assistente útil."
 msgid "Ask me anything..."
 msgstr "Pergunte-me qualquer coisa..."
 
-#: src/prefs.js:13
-msgid "General"
-msgstr ""
-
-#: src/prefs.js:17 src/prefs.js:56
-msgid "Appearance"
-msgstr ""
-
 #: src/prefs.js:42
 msgid "SETTINGS"
+msgstr ""
+
+#: src/prefs.js:56
+msgid "Appearance"
 msgstr ""
 
 #: src/prefs.js:79
