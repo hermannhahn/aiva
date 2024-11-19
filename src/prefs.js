@@ -741,21 +741,6 @@ class AivaSettings {
         transparencySelector.append('80', '80% Transparency');
         transparencySelector.append('90', '90% Transparency');
 
-        // Update transparency
-        const updateTransparency = (transparency) => {
-            this.schema.set_string('theme-transparency', transparency);
-            // add style to window
-            this._sendTransparencyRequest(transparency); // Enviar transparência como "0.5"
-        };
-        updateTransparency(defaulTransparency);
-
-        // Update on change
-        transparencySelector.connect('changed', () => {
-            const selectedTransparency = transparencySelector.get_active_id();
-            this.app.log('Selected transparency: ' + selectedTransparency);
-            updateTransparency(selectedTransparency);
-        });
-
         const blankLine = new Gtk.Label({
             label: ' ',
             halign: Gtk.Align.CENTER,
@@ -772,9 +757,6 @@ class AivaSettings {
             halign: Gtk.Align.CENTER,
         });
 
-        // Set labels property
-        // apiKeyLabel.set_property('padding', 40);
-
         // Set default
         apiKey.set_text(defaultKey);
         speechKey.set_text(defaultSpeechKey);
@@ -784,6 +766,20 @@ class AivaSettings {
         assistName.set_text(defaultAssistName);
         history.set_active(defaultLog);
         transparencySelector.set_active_id(defaulTransparency);
+
+        // Update transparency
+        const updateTransparency = (transparency) => {
+            this.schema.set_string('theme-transparency', transparency);
+            // add style to window
+            this._sendTransparencyRequest(transparency); // Enviar transparência como "0.5"
+        };
+
+        // Update on change
+        transparencySelector.connect('changed', () => {
+            const selectedTransparency = transparencySelector.get_active_id();
+            this.app.log('Selected transparency: ' + selectedTransparency);
+            updateTransparency(selectedTransparency);
+        });
 
         // Actions
         save.connect('clicked', () => {
@@ -818,7 +814,7 @@ class AivaSettings {
             // Save transparency value
             const selectedTransparency = transparencySelector.get_active_id();
             this.schema.set_string(
-                'transparency',
+                'theme-transparency',
                 selectedTransparency.toString(),
             );
 
