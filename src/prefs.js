@@ -713,10 +713,7 @@ class AivaSettings {
             halign: Gtk.Align.END,
         });
         const historyButton = new Gtk.CheckButton({
-            valign: Gtk.Align.START,
-        });
-        const histroyLabel = new Gtk.Label({
-            label: '          ' + _('Remember talk history'),
+            label: _('Remember talk history'),
             halign: Gtk.Align.START,
         });
 
@@ -846,7 +843,6 @@ class AivaSettings {
         this.generalSettingsPage.attach(assistName, 2, 5, 1, 1);
         this.generalSettingsPage.attach(histroyIcon, 1, 6, 1, 1);
         this.generalSettingsPage.attach(historyButton, 2, 6, 1, 1);
-        this.generalSettingsPage.attach(histroyLabel, 2, 6, 1, 1);
 
         // Add to General Settings
         this.generalSettings.add(this.generalSettingsPage);
