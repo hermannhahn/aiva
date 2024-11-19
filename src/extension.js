@@ -16,6 +16,7 @@ import GObject from 'gi://GObject';
 import Clutter from 'gi://Clutter';
 import GLib from 'gi://GLib';
 import Soup from 'gi://Soup';
+import Gio from 'gi://Gio';
 import {
     Extension,
     gettext as _,
@@ -139,6 +140,9 @@ const Aiva = GObject.registerClass(
             // initialize chat
             this.chat.init();
 
+            // register dbus
+            this._registerDBus();
+
             this.log('Extension initialized.');
         }
 
@@ -182,6 +186,45 @@ const Aiva = GObject.registerClass(
          */
         logError(message) {
             this.logger.logError(message);
+        }
+
+        _registerDBus() {
+            const interfaceXML = `
+            <node>
+                <interface name="org.gnome.shell.extensions.aiva">
+                    <method name="SetTransparency">
+                        <arg type="s" name="transparencyValue" direction="in"/>
+                    </method>
+                </interface>
+            </node>
+            `;
+
+            const dbusImpl = Gio.DBusExportedObject.wrapJSObject(interfaceXML, {
+                SetTransparency(transparencyValue) {
+                    log(`Received transparencyValue: ${transparencyValue}`);
+
+                    // Converta a string para um número
+                    let transparency = parseFloat(transparencyValue);
+                    if (isNaN(transparency)) {
+                        logError(
+                            new Error('Invalid transparency value received'),
+                        );
+                        return;
+                    }
+
+                    // Aqui ajusta a transparência, substituindo sua lógica real
+                    this.app.menu.box.set_style(
+                        `background-color: rgba(24, 24, 24, ${transparency});`,
+                    );
+                },
+            });
+
+            dbusImpl.export(
+                Gio.DBus.session,
+                '/org/gnome/shell/extensions/aiva',
+            );
+
+            log('D-Bus server started');
         }
 
         _getLocation() {
