@@ -727,16 +727,17 @@ class AivaSettings {
             halign: Gtk.Align.END,
         });
         const transparencySelector = new Gtk.ComboBoxText();
-        transparencySelector.append('0', '0% Transparency');
-        transparencySelector.append('10', '10% Transparency');
-        transparencySelector.append('20', '20% Transparency');
-        transparencySelector.append('30', '30% Transparency');
-        transparencySelector.append('40', '40% Transparency');
-        transparencySelector.append('50', '50% Transparency');
-        transparencySelector.append('60', '60% Transparency');
-        transparencySelector.append('70', '70% Transparency');
-        transparencySelector.append('80', '80% Transparency');
-        transparencySelector.append('90', '90% Transparency');
+        transparencySelector.append('0', '100%');
+        transparencySelector.append('10', '90%');
+        transparencySelector.append('20', '80%');
+        transparencySelector.append('30', '70%');
+        transparencySelector.append('40', '60%');
+        transparencySelector.append('50', '50%');
+        transparencySelector.append('60', '40%');
+        transparencySelector.append('70', '30%');
+        transparencySelector.append('80', '20%');
+        transparencySelector.append('90', '10%');
+        transparencySelector.append('100', '0%');
 
         const blankLine = new Gtk.Label({
             label: ' ',
@@ -809,7 +810,7 @@ class AivaSettings {
             this.schema.set_string('azure-speech-voice', selectedVoice);
 
             // Save history log
-            this.schema.set_boolean('log-history', historyButton.state);
+            this.schema.set_boolean('log-history', historyButton.get_active());
 
             // Save assistant name
             this.schema.set_string(
