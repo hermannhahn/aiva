@@ -1,6 +1,7 @@
 import Gtk from 'gi://Gtk';
 import Adw from 'gi://Adw';
 import Gio from 'gi://Gio';
+import GLib from 'gi://GLib';
 
 import {ExtensionPreferences} from 'resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js';
 
@@ -33,13 +34,6 @@ class AivaSettings {
         const _ = (text) => {
             return this.translations(text, defaultLanguage);
         };
-
-        const dbusClient = new Gio.DBus.Client({
-            busType: Gio.BusType.SESSION,
-            name: 'org.gnome.shell.extensions.aiva',
-            objectPath: '/org/gnome/shell/extensions/aiva',
-            interfaceName: 'org.gnome.shell.extensions.aiva',
-        });
 
         this.generalSettings = new Adw.PreferencesGroup({
             title: '⚙ ' + _('SETTINGS'),
@@ -751,7 +745,7 @@ class AivaSettings {
         const updateTransparency = (transparency) => {
             this.schema.set_boolean('theme-transparency', transparency);
             // add style to window
-            dbusClient.call('setTransparency', transparency, null, null);
+            this._sendTransparencyRequest(transparency); // Enviar transparência como "0.5"
         };
         updateTransparency(defaulTransparency);
 
@@ -1034,5 +1028,32 @@ class AivaSettings {
         }
 
         return text;
+    }
+
+    _sendTransparencyRequest(transparencyValue) {
+        const connection = Gio.DBus.session;
+
+        // Certifique-se de enviar o valor como string
+        const transparencyString = transparencyValue.toString();
+
+        connection.call(
+            'org.gnome.shell.extensions.aiva', // Nome do bus
+            '/org/gnome/shell/extensions/aiva', // Caminho do objeto
+            'org.gnome.shell.extensions.aiva', // Interface
+            'SetTransparency', // Método
+            new GLib.Variant('(s)', [transparencyString]), // Argumento como string
+            GLib.VariantType.new('(s)'), // Tipo de retorno esperado
+            Gio.DBusCallFlags.NONE,
+            -1, // Timeout padrão
+            null, // Cancellable (não usado aqui)
+            (conn, result) => {
+                try {
+                    conn.call_finish(result);
+                    log('Transparency request sent successfully');
+                } catch (error) {
+                    logError(error, 'Failed to send transparency request');
+                }
+            },
+        );
     }
 }
