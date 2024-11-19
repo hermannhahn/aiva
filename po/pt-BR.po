@@ -495,85 +495,85 @@ msgstr ", sua assistente útil."
 msgid "Ask me anything..."
 msgstr "Pergunte-me qualquer coisa..."
 
-#: src/prefs.js:67
+#: src/prefs.js:66
 #, fuzzy
 msgid "Settings:"
 msgstr "Preferências:"
 
-#: src/prefs.js:111
+#: src/prefs.js:109
 msgid "Gemini API Key"
 msgstr ""
 
-#: src/prefs.js:122
+#: src/prefs.js:120
 msgid "Insert your Gemini API key here"
 msgstr ""
 
-#: src/prefs.js:127 src/prefs.js:153
+#: src/prefs.js:125 src/prefs.js:151
 msgid "How to get API key?"
 msgstr "Como obter a chave de API?"
 
-#: src/prefs.js:137
+#: src/prefs.js:135
 msgid "Azure Speech API Key"
 msgstr ""
 
-#: src/prefs.js:148
+#: src/prefs.js:146
 msgid "Insert your Azure Speech API key here"
 msgstr ""
 
-#: src/prefs.js:163
+#: src/prefs.js:161
 msgid "Azure Speech Region"
 msgstr "Região do Azure Speech"
 
-#: src/prefs.js:174
+#: src/prefs.js:172
 #, fuzzy
 msgid "e.g.: eastus, westus..."
 msgstr "ex: eastus, westus, ..."
 
-#: src/prefs.js:180
+#: src/prefs.js:178
 msgid "Select Language"
 msgstr "Selecione a linguagem"
 
-#: src/prefs.js:189
+#: src/prefs.js:187
 msgid "English"
 msgstr "Inglês"
 
-#: src/prefs.js:190
+#: src/prefs.js:188
 msgid "French"
 msgstr "Francês"
 
-#: src/prefs.js:191
+#: src/prefs.js:189
 msgid "German"
 msgstr ""
 
-#: src/prefs.js:192
+#: src/prefs.js:190
 msgid "Italian"
 msgstr ""
 
-#: src/prefs.js:193
+#: src/prefs.js:191
 msgid "Portuguese (Brazil)"
 msgstr "Português (Brasil)"
 
-#: src/prefs.js:194
+#: src/prefs.js:192
 msgid "Spanish"
 msgstr "Espanhol"
 
-#: src/prefs.js:198
+#: src/prefs.js:196
 msgid "Select Voice"
 msgstr "Selecione a voz"
 
-#: src/prefs.js:729
+#: src/prefs.js:727
 msgid "Assistant Name"
 msgstr "Nome do assistente"
 
-#: src/prefs.js:750
+#: src/prefs.js:748
 msgid "Remember talk history"
 msgstr "Lembrar conversa"
 
-#: src/prefs.js:758
+#: src/prefs.js:756
 msgid "Save"
 msgstr "Salvar"
 
-#: src/prefs.js:809
+#: src/prefs.js:807
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
 
