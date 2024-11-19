@@ -1,5 +1,4 @@
 import Gtk from 'gi://Gtk';
-import Adw from 'gi://Adw';
 
 import {ExtensionPreferences} from 'resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js';
 
@@ -11,27 +10,43 @@ export default class ClipboardIndicatorPreferences extends ExtensionPreferences 
         // create a notebook to hold the settings pages
         const notebook = new Gtk.Notebook();
 
-        // general page
+        // Página de Configurações Gerais
         const generalPage = new Gtk.Box({
             orientation: Gtk.Orientation.VERTICAL,
+            margin_top: 10,
+            margin_bottom: 10,
+            margin_start: 10,
+            margin_end: 10,
+            spacing: 10,
         });
-        generalPage.append(settingsUI.generalSettingsUI);
+        generalPage.append(settingsUI.generalSettings);
 
-        // advanced page
+        // Página de Configurações Avançadas
         const advancedPage = new Gtk.Box({
             orientation: Gtk.Orientation.VERTICAL,
+            margin_top: 10,
+            margin_bottom: 10,
+            margin_start: 10,
+            margin_end: 10,
+            spacing: 10,
         });
-        advancedPage.append(settingsUI.advancedSettingsUI);
+        advancedPage.append(settingsUI.advancedSettings);
 
-        // add pages
-        notebook.append_page(generalPage, new Gtk.Label({label: 'General'}));
-        notebook.append_page(advancedPage, new Gtk.Label({label: 'Advanced'}));
+        // Adiciona as abas ao Notebook
+        notebook.append_page(
+            generalPage,
+            new Gtk.Label({label: 'General Settings'}),
+        );
+        notebook.append_page(
+            advancedPage,
+            new Gtk.Label({label: 'Advanced Settings'}),
+        );
 
-        // set the window size to 800x530
+        // Define o tamanho padrão da janela
         window.set_default_size(800, 530);
 
-        // add the notebook to the window
-        window.add(notebook);
+        // Adiciona o Notebook à janela
+        window.set_child(notebook);
     }
 }
 
@@ -52,9 +67,6 @@ class AivaSettings {
         };
 
         // GENERAL SETTINGS
-        this.generalSettingsUI = new Adw.PreferencesGroup({
-            title: '⚙ ' + _('Settings:'),
-        });
         this.generalSettings = new Gtk.Grid({
             margin_top: 10,
             margin_bottom: 10,
@@ -67,9 +79,6 @@ class AivaSettings {
         });
 
         // ADVANCED SETTINGS
-        this.advancedSettingsUI = new Adw.PreferencesGroup({
-            title: '⚙ ' + _('Advanced Settings:'),
-        });
         this.advancedSettings = new Gtk.Box({
             margin_top: 10,
             margin_bottom: 10,
@@ -78,7 +87,11 @@ class AivaSettings {
             spacing: 10,
             orientation: Gtk.Orientation.VERTICAL,
         });
-        this.advancedSettingsUI.add(this.advancedSettings);
+        const advancedLabel = new Gtk.Label({
+            label: _('Advanced Settings Content'),
+            hexpand: true,
+        });
+        this.advancedSettings.append(advancedLabel);
 
         // GEMINI API KEY
 
@@ -825,9 +838,6 @@ class AivaSettings {
         this.generalSettings.attach(blankLine, 0, 7, 3, 1);
         this.generalSettings.attach(save, 0, 8, 3, 1);
         this.generalSettings.attach(statusLabel, 0, 9, 3, 1);
-
-        // Add to General Settings UI
-        this.generalSettingsUI.add(this.generalSettings);
     }
 
     translations(text, lang) {
