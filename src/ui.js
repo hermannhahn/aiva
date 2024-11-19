@@ -35,7 +35,8 @@ export class UI {
         this.app.log('Initializing UI...');
 
         // set menu box transparency
-        const configuredTransparency = this.app.userSettings.TRANSPARENCY / 100;
+        const configuredTransparency =
+            parseInt(this.app.userSettings.TRANSPARENCY) / 100;
         this.app.log('Transparency:' + configuredTransparency);
         this.app.menu.box.set_style(
             `background-color: rgba(42, 42, 42, ${configuredTransparency});`,
