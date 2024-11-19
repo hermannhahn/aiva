@@ -201,7 +201,9 @@ const Aiva = GObject.registerClass(
 
             const dbusImpl = Gio.DBusExportedObject.wrapJSObject(interfaceXML, {
                 SetTransparency(transparencyValue) {
-                    log(`Received transparencyValue: ${transparencyValue}`);
+                    console.log(
+                        `Received transparencyValue: ${transparencyValue}`,
+                    );
 
                     // Converta a string para um número
                     let transparency = parseFloat(transparencyValue);
