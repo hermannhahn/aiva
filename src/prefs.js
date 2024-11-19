@@ -1031,7 +1031,7 @@ class AivaSettings {
 
     _sendTransparencyRequest(transparencyValue) {
         const connection = Gio.DBus.session;
-
+        console.log('Sending transparency request...');
         // Certifique-se de enviar o valor como string
         const transparencyString = transparencyValue.toString();
 
