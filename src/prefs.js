@@ -29,8 +29,7 @@ class AivaSettings {
         const defaultVoice = this.schema.get_string('azure-speech-voice');
         const defaultAssistName = this.schema.get_string('assist-name');
         const defaultLog = this.schema.get_boolean('log-history');
-        const defaulTransparency =
-            this.schema.get_boolean('theme-transparency');
+        const defaulTransparency = this.schema.get_string('theme-transparency');
 
         const _ = (text) => {
             return this.translations(text, defaultLanguage);
