@@ -36,7 +36,7 @@ export class UI {
         this.app.log('Initializing UI...');
 
         // set menu box transparency
-        this.app.menu.box.set_style_property(
+        this.app.menu.set_style_property(
             'background-color',
             this.app.userSettings.TRANSPARENCY,
         );
@@ -136,27 +136,6 @@ export class UI {
         // Separator
         this.newSeparator = new PopupMenu.PopupSeparatorMenuItem();
 
-        // Crie um novo servidor D-Bus para receber mensagens do processo de preferências
-        const dbusServer = new Gio.DBus.Server({
-            busType: Gio.BusType.SESSION,
-        });
-        dbusServer.register_object(
-            '/org/gnome/shell/extensions/aiva',
-            class {
-                // Defina o método 'setTransparency' para receber o valor de transparência
-                setTransparency(transparencyValue) {
-                    // Defina a propriedade de estilo 'background-color' do Gtk.Box
-                    this.app.menu.box.set_style_property(
-                        'background-color',
-                        transparencyValue,
-                    );
-                }
-            },
-        );
-
-        // Inicie o servidor D-Bus
-        dbusServer.start();
-
         // Initialize
         this._createApp();
         this._addItems();
@@ -202,6 +181,26 @@ export class UI {
      * @description items actions
      */
     _itemsActions() {
+        // Crie um novo servidor D-Bus para receber mensagens do processo de preferências
+        const dbusServer = new Gio.DBus.Server({
+            busType: Gio.BusType.SESSION,
+        });
+        dbusServer.register_object(
+            '/org/gnome/shell/extensions/aiva',
+            class {
+                // Defina o método 'setTransparency' para receber o valor de transparência
+                setTransparency(transparencyValue) {
+                    // Defina a propriedade de estilo 'background-color' do Gtk.Box
+                    this.app.menu.box.set_style(
+                        `background-color: rgba(24, 24, 24, ${transparencyValue});`,
+                    );
+                }
+            },
+        );
+
+        // Inicie o servidor D-Bus
+        dbusServer.start();
+
         // If press enter on question input box
         this.searchEntry.clutter_text.connect('activate', (actor) => {
             const question = actor.text;
