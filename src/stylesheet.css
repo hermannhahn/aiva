@@ -42,7 +42,6 @@
 }
 .enter-icon:hover {
     background-color: rgb(54, 54, 54);
-    border-radius: 10px;
 }
 .enter-icon:active {
     background-size: 34px;
@@ -57,7 +56,6 @@
 }
 .mic-icon:hover {
     background-color: rgb(54, 54, 54);
-    border-radius: 10px;
 }
 .mic-icon:checked {
     background-image: url('assets/icon_mic_rec.png');
@@ -76,7 +74,6 @@
 }
 .trash-icon:hover {
     background-color: rgb(54, 54, 54);
-    border-radius: 10px;
 }
 .trash-icon:active {
     font-size: 22px;
@@ -93,7 +90,6 @@
 }
 .settings-icon:hover {
     background-color: rgb(54, 54, 54);
-    border-radius: 10px;
 }
 .settings-icon:active {
     font-size: 22px;
