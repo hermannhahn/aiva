@@ -807,9 +807,6 @@ class AivaSettings {
         this.generalSettings.attach(blankLine, 0, 7, 3, 1);
         this.generalSettings.attach(save, 0, 8, 3, 1);
         this.generalSettings.attach(statusLabel, 0, 9, 3, 1);
-
-        // Add to main
-        this.generalSettingsUI.add(this.generalSettings);
     }
 
     translations(text, lang) {
