@@ -12,14 +12,12 @@ export default class ClipboardIndicatorPreferences extends ExtensionPreferences 
             settingsUI.generalSettingsUI,
             new Adw.TabPage({
                 title: 'General Settings',
-                icon_name: 'settings-applications-symbolic',
             }),
         );
         tabView.add_page(
             settingsUI.appearanceSettingsUI,
             new Adw.TabPage({
                 title: 'Appearance',
-                icon_name: 'color-symbolic',
             }),
         );
 

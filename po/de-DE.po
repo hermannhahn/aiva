@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-19 00:39-0300\n"
+"POT-Creation-Date: 2024-11-19 00:41-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language de-DE\n"
@@ -466,86 +466,86 @@ msgstr ""
 msgid "Ask me anything..."
 msgstr ""
 
-#: src/prefs.js:49
+#: src/prefs.js:47
 msgid "SETTINGS"
 msgstr ""
 
-#: src/prefs.js:63
+#: src/prefs.js:61
 msgid "Appearance"
 msgstr ""
 
-#: src/prefs.js:86
+#: src/prefs.js:84
 msgid "Gemini API Key"
 msgstr ""
 
-#: src/prefs.js:97
+#: src/prefs.js:95
 msgid "Insert your Gemini API key here"
 msgstr ""
 
-#: src/prefs.js:102 src/prefs.js:128
+#: src/prefs.js:100 src/prefs.js:126
 msgid "How to get API key?"
 msgstr ""
 
-#: src/prefs.js:112
+#: src/prefs.js:110
 msgid "Azure Speech API Key"
 msgstr ""
 
-#: src/prefs.js:123
+#: src/prefs.js:121
 msgid "Insert your Azure Speech API key here"
 msgstr ""
 
-#: src/prefs.js:138
+#: src/prefs.js:136
 msgid "Azure Speech Region"
 msgstr ""
 
-#: src/prefs.js:149
+#: src/prefs.js:147
 msgid "e.g.: eastus, westus..."
 msgstr ""
 
-#: src/prefs.js:155
+#: src/prefs.js:153
 msgid "Select Language"
 msgstr ""
 
-#: src/prefs.js:164
+#: src/prefs.js:162
 msgid "English"
 msgstr ""
 
-#: src/prefs.js:165
+#: src/prefs.js:163
 msgid "French"
 msgstr ""
 
-#: src/prefs.js:166
+#: src/prefs.js:164
 msgid "German"
 msgstr ""
 
-#: src/prefs.js:167
+#: src/prefs.js:165
 msgid "Italian"
 msgstr ""
 
-#: src/prefs.js:168
+#: src/prefs.js:166
 msgid "Portuguese (Brazil)"
 msgstr ""
 
-#: src/prefs.js:169
+#: src/prefs.js:167
 msgid "Spanish"
 msgstr ""
 
-#: src/prefs.js:173
+#: src/prefs.js:171
 msgid "Select Voice"
 msgstr ""
 
-#: src/prefs.js:704
+#: src/prefs.js:702
 msgid "Assistant Name"
 msgstr ""
 
-#: src/prefs.js:725
+#: src/prefs.js:723
 msgid "Remember talk history"
 msgstr ""
 
-#: src/prefs.js:733
+#: src/prefs.js:731
 msgid "Save"
 msgstr ""
 
-#: src/prefs.js:784
+#: src/prefs.js:782
 msgid "Your preferences have been saved"
 msgstr ""
