@@ -29,6 +29,8 @@ class AivaSettings {
         const defaultVoice = this.schema.get_string('azure-speech-voice');
         const defaultAssistName = this.schema.get_string('assist-name');
         const defaultLog = this.schema.get_boolean('log-history');
+        const defaulTransparency =
+            this.schema.get_boolean('theme-transparency');
 
         const _ = (text) => {
             return this.translations(text, defaultLanguage);
@@ -718,10 +720,34 @@ class AivaSettings {
             label: '          ' + _('Remember talk history'),
             halign: Gtk.Align.START,
         });
+
+        // THEME TRANSPARENCY
+        const transparencyLabel = new Gtk.Label({
+            label: _('Transparency') + ':',
+            halign: Gtk.Align.END,
+        });
+        const transparencyIcon = new Gtk.Label({
+            label: '⬜️',
+            halign: Gtk.Align.END,
+        });
+        const transparency = new Gtk.ComboBoxText();
+        transparency.append(0, '0% Transparency');
+        transparency.append(10, '10% Transparency');
+        transparency.append(20, '20% Transparency');
+        transparency.append(30, '30% Transparency');
+        transparency.append(40, '40% Transparency');
+        transparency.append(50, '50% Transparency');
+        transparency.append(60, '60% Transparency');
+        transparency.append(70, '70% Transparency');
+        transparency.append(80, '80% Transparency');
+        transparency.append(90, '90% Transparency');
+
         const blankLine = new Gtk.Label({
             label: ' ',
             halign: Gtk.Align.CENTER,
         });
+
+        // SAVE BUTTON
         const save = new Gtk.Button({
             label: _('Save') + '  💾',
             halign: Gtk.Align.CENTER,
@@ -743,6 +769,7 @@ class AivaSettings {
         languageSelector.set_active_id(defaultLanguage);
         assistName.set_text(defaultAssistName);
         history.set_active(defaultLog);
+        transparency.set_active_id(defaulTransparency);
 
         // Actions
         save.connect('clicked', () => {
@@ -772,6 +799,12 @@ class AivaSettings {
             this.schema.set_string(
                 'assist-name',
                 assistName.get_buffer().get_text(),
+            );
+
+            // Save transparency value
+            this.schema.set_string(
+                'theme-transparency',
+                transparency.get_active_id(),
             );
 
             statusLabel.set_markup(_('Your preferences have been saved'));
@@ -805,8 +838,16 @@ class AivaSettings {
         this.generalSettingsPage.attach(save, 0, 8, 3, 1);
         this.generalSettingsPage.attach(statusLabel, 0, 9, 3, 1);
 
-        // Add to main
+        // Add to General Settings
         this.generalSettings.add(this.generalSettingsPage);
+
+        // Add to grid
+        this.appearenceSettingsPage.attach(transparencyLabel, 0, 0, 1, 1);
+        this.appearenceSettingsPage.attach(transparencyIcon, 1, 0, 1, 1);
+        this.appearenceSettingsPage.attach(transparency, 2, 0, 1, 1);
+
+        // Add to General Settings
+        this.appearenceSettings.add(this.appearenceSettingsPage);
     }
 
     translations(text, lang) {
