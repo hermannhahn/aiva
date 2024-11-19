@@ -777,7 +777,7 @@ class AivaSettings {
         // Update on change
         transparencySelector.connect('changed', () => {
             const selectedTransparency = transparencySelector.get_active_id();
-            this.app.log('Selected transparency: ' + selectedTransparency);
+            console.log('Selected transparency: ' + selectedTransparency);
             updateTransparency(selectedTransparency);
         });
 
