@@ -5,13 +5,38 @@ import {ExtensionPreferences} from 'resource:///org/gnome/Shell/Extensions/js/ex
 
 export default class ClipboardIndicatorPreferences extends ExtensionPreferences {
     fillPreferencesWindow(window) {
+        // window._settings = this.getSettings();
+        // const settingsUI = new AivaSettings(window._settings);
+        // const page = new Adw.PreferencesPage();
+        // page.add(settingsUI.ui);
+        // // Set window size to 800x530
+        // window.set_default_size(800, 530);
+        // window.add(page);
         window._settings = this.getSettings();
         const settingsUI = new AivaSettings(window._settings);
-        const page = new Adw.PreferencesPage();
-        page.add(settingsUI.ui);
-        // Set window size to 800x530
+
+        // create a notebook to hold the settings pages
+        const notebook = new Gtk.Notebook();
+
+        // create a page for the general settings
+        const generalPage = new Adw.PreferencesPage();
+        generalPage.add(settingsUI.generalSettingsUI);
+
+        // add the general settings page to the notebook
+        notebook.append_page(generalPage, new Gtk.Label({label: 'General'}));
+
+        // create a page for the advanced settings
+        const advancedPage = new Adw.PreferencesPage();
+        advancedPage.add(settingsUI.advancedSettingsUI);
+
+        // add the advanced settings page to the notebook
+        notebook.append_page(advancedPage, new Gtk.Label({label: 'Advanced'}));
+
+        // set the window size to 800x530
         window.set_default_size(800, 530);
-        window.add(page);
+
+        // add the notebook to the window
+        window.add(notebook);
     }
 }
 
