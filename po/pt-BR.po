@@ -497,7 +497,7 @@ msgstr "Pergunte-me qualquer coisa..."
 
 #: src/prefs.js:67
 #, fuzzy
-msgid "General Settings:"
+msgid "Settings:"
 msgstr "Preferências:"
 
 #: src/prefs.js:111

@@ -467,7 +467,7 @@ msgid "Ask me anything..."
 msgstr ""
 
 #: src/prefs.js:67
-msgid "General Settings:"
+msgid "Settings:"
 msgstr ""
 
 #: src/prefs.js:111
