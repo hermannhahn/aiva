@@ -856,8 +856,8 @@ class AivaSettings {
         this.appearenceSettingsPage.attach(transparencyIcon, 1, 0, 1, 1);
         this.appearenceSettingsPage.attach(transparencySelector, 2, 0, 1, 1);
         this.appearenceSettingsPage.attach(blankLine, 0, 1, 1, 1);
-        this.appearenceSettingsPage.attach(save, 1, 2, 1, 1);
-        this.appearenceSettingsPage.attach(statusLabel, 1, 3, 1, 1);
+        this.appearenceSettingsPage.attach(save, 4, 2, 1, 1);
+        this.appearenceSettingsPage.attach(statusLabel, 3, 3, 1, 1);
 
         // Add to General Settings
         this.appearenceSettings.add(this.appearenceSettingsPage);
