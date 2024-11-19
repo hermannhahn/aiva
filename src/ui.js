@@ -145,7 +145,6 @@ export class UI {
         this.tray.add_child(this.icon);
         this.app.add_child(this.tray);
         this.app.log('App tray initialized.');
-        this.setTransparency();
     }
 
     /**
@@ -177,7 +176,6 @@ export class UI {
     _itemsActions() {
         // If press enter on question input box
         this.searchEntry.clutter_text.connect('activate', (actor) => {
-            this.setTransparency();
             const question = actor.text;
             this.searchEntry.clutter_text.set_text('');
             this.searchEntry.clutter_text.reactive = false;
@@ -187,13 +185,11 @@ export class UI {
 
         // If press mic button
         this.micButton.connect('clicked', (_self) => {
-            this.setTransparency();
             this.app.audio.record();
         });
 
         // If press clear button
         this.clearButton.connect('clicked', (_self) => {
-            this.setTransparency();
             this.searchEntry.clutter_text.set_text('');
             this.app.chat.history = [];
             this.app.menu.box.remove_child(this.scrollView);
@@ -204,7 +200,6 @@ export class UI {
 
         // If press settings button
         this.settingsButton.connect('clicked', (_self) => {
-            this.setTransparency();
             this.app.openSettings();
             // Close App
             this.app.menu.close();
