@@ -56,9 +56,26 @@ class AivaSettings {
             return this.translations(text, defaultLanguage);
         };
 
-        this.ui = new Adw.PreferencesGroup({
-            title: '⚙ ' + _('SETTINGS'),
+        this.ui = new Adw.PreferencesGroup();
+
+        this.generalSettingsUI = new Gtk.Box({
+            orientation: Gtk.Orientation.VERTICAL,
+            margin_top: 10,
+            margin_bottom: 10,
+            margin_start: 10,
+            margin_end: 10,
+            spacing: 10,
         });
+
+        this.advancedSettingsUI = new Gtk.Box({
+            orientation: Gtk.Orientation.VERTICAL,
+            margin_top: 10,
+            margin_bottom: 10,
+            margin_start: 10,
+            margin_end: 10,
+            spacing: 10,
+        });
+
         this.main = new Gtk.Grid({
             margin_top: 10,
             margin_bottom: 10,
@@ -815,7 +832,9 @@ class AivaSettings {
         this.main.attach(statusLabel, 0, 9, 3, 1);
 
         // Add to main
-        this.ui.add(this.main);
+        this.generalSettingsUI.add(this.main);
+        this.advancedSettingsUI.add(this.main);
+        // this.ui.add(this.main);
     }
 
     translations(text, lang) {
