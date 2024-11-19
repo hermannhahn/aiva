@@ -60,7 +60,7 @@
     </key>
     <!--- theme-transparency -->
     <key name="theme-transparency" type="b">
-        <default>0</default>
+        <default>"0"</default>
         <summary>Transparency of theme</summary>
         <description>
            Set transparency of theme
