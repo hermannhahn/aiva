@@ -30,7 +30,7 @@ export default class ClipboardIndicatorPreferences extends ExtensionPreferences 
 
         // create a page for the advanced settings
         this.advancedPage = new Adw.PreferencesPage();
-        this.advancedPage.add(settingsUI.advancedSettingsUI);
+        this.advancedPage.add(settingsUI.ui);
 
         // add the advanced settings page to the notebook
         notebook.append_page(
