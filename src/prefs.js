@@ -731,16 +731,16 @@ class AivaSettings {
             halign: Gtk.Align.END,
         });
         const transparencySelector = new Gtk.ComboBoxText();
-        transparencySelector.append(0, '0% Transparency');
-        transparencySelector.append(10, '10% Transparency');
-        transparencySelector.append(20, '20% Transparency');
-        transparencySelector.append(30, '30% Transparency');
-        transparencySelector.append(40, '40% Transparency');
-        transparencySelector.append(50, '50% Transparency');
-        transparencySelector.append(60, '60% Transparency');
-        transparencySelector.append(70, '70% Transparency');
-        transparencySelector.append(80, '80% Transparency');
-        transparencySelector.append(90, '90% Transparency');
+        transparencySelector.append('0', '0% Transparency');
+        transparencySelector.append('10', '10% Transparency');
+        transparencySelector.append('20', '20% Transparency');
+        transparencySelector.append('30', '30% Transparency');
+        transparencySelector.append('40', '40% Transparency');
+        transparencySelector.append('50', '50% Transparency');
+        transparencySelector.append('60', '60% Transparency');
+        transparencySelector.append('70', '70% Transparency');
+        transparencySelector.append('80', '80% Transparency');
+        transparencySelector.append('90', '90% Transparency');
 
         // Update transparency
         const updateTransparency = (transparency) => {
