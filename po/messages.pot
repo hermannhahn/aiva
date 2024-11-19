@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-19 01:54-0300\n"
+"POT-Creation-Date: 2024-11-19 11:23-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -534,22 +534,22 @@ msgstr ""
 msgid "Select Voice"
 msgstr ""
 
-#: src/prefs.js:699
+#: src/prefs.js:705
 msgid "Assistant Name"
 msgstr ""
 
-#: src/prefs.js:720
+#: src/prefs.js:726
 msgid "Remember talk history"
 msgstr ""
 
-#: src/prefs.js:726
+#: src/prefs.js:732
 msgid "Transparency"
 msgstr ""
 
-#: src/prefs.js:752
+#: src/prefs.js:758
 msgid "Save"
 msgstr ""
 
-#: src/prefs.js:810
+#: src/prefs.js:817
 msgid "Your preferences have been saved"
 msgstr ""

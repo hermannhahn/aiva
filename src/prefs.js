@@ -694,6 +694,12 @@ class AivaSettings {
         });
         updateVoices(defaultLanguage);
 
+        // Update transparencySelector on change
+        transparencySelector.connect('changed', () => {
+            const selectedTransparency = transparencySelector.get_active_id();
+            this.schema.set_boolean('theme-transparency', selectedTransparency);
+        });
+
         // AIVA Name
         const assistNameLabel = new Gtk.Label({
             label: _('Assistant Name') + ':',
@@ -730,17 +736,17 @@ class AivaSettings {
             label: '⬜️',
             halign: Gtk.Align.END,
         });
-        const transparency = new Gtk.ComboBoxText();
-        transparency.append(0, '0% Transparency');
-        transparency.append(10, '10% Transparency');
-        transparency.append(20, '20% Transparency');
-        transparency.append(30, '30% Transparency');
-        transparency.append(40, '40% Transparency');
-        transparency.append(50, '50% Transparency');
-        transparency.append(60, '60% Transparency');
-        transparency.append(70, '70% Transparency');
-        transparency.append(80, '80% Transparency');
-        transparency.append(90, '90% Transparency');
+        const transparencySelector = new Gtk.ComboBoxText();
+        transparencySelector.append(0, '0% Transparency');
+        transparencySelector.append(10, '10% Transparency');
+        transparencySelector.append(20, '20% Transparency');
+        transparencySelector.append(30, '30% Transparency');
+        transparencySelector.append(40, '40% Transparency');
+        transparencySelector.append(50, '50% Transparency');
+        transparencySelector.append(60, '60% Transparency');
+        transparencySelector.append(70, '70% Transparency');
+        transparencySelector.append(80, '80% Transparency');
+        transparencySelector.append(90, '90% Transparency');
 
         const blankLine = new Gtk.Label({
             label: ' ',
@@ -769,7 +775,7 @@ class AivaSettings {
         languageSelector.set_active_id(defaultLanguage);
         assistName.set_text(defaultAssistName);
         history.set_active(defaultLog);
-        transparency.set_active_id(defaulTransparency);
+        transparencySelector.set_active_id(defaulTransparency);
 
         // Actions
         save.connect('clicked', () => {
@@ -802,9 +808,10 @@ class AivaSettings {
             );
 
             // Save transparency value
+            const selectedTransparency = transparencySelector.get_active_id();
             this.schema.set_string(
-                'theme-transparency',
-                transparency.get_active_id(),
+                'transparency',
+                selectedTransparency.toString(),
             );
 
             statusLabel.set_markup(_('Your preferences have been saved'));
@@ -844,7 +851,7 @@ class AivaSettings {
         // Add to grid
         this.appearenceSettingsPage.attach(transparencyLabel, 0, 0, 1, 1);
         this.appearenceSettingsPage.attach(transparencyIcon, 1, 0, 1, 1);
-        this.appearenceSettingsPage.attach(transparency, 2, 0, 1, 1);
+        this.appearenceSettingsPage.attach(transparencySelector, 2, 0, 1, 1);
 
         // Add to General Settings
         this.appearenceSettings.add(this.appearenceSettingsPage);
