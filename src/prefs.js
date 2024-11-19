@@ -838,7 +838,7 @@ class AivaSettings {
         this.generalSettings.attach(statusLabel, 0, 9, 3, 1);
 
         // Add to General Settings UI
-        this.this.generalSettingsUI.add(this.generalSettings);
+        this.generalSettingsUI.add(this.generalSettings);
     }
 
     translations(text, lang) {
