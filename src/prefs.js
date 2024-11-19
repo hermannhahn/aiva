@@ -10,11 +10,11 @@ export default class ClipboardIndicatorPreferences extends ExtensionPreferences 
         const tabView = new Adw.TabView();
         tabView.append_page(
             settingsUI.generalSettingsUI,
-            new Gtk.Label({title: 'General'}),
+            new Gtk.Label({label: 'General'}),
         );
         tabView.append_page(
             settingsUI.appearanceSettingsUI,
-            new Gtk.Label({title: 'Appearance'}),
+            new Gtk.Label({label: 'Appearance'}),
         );
         // Set window size to 800x530
         window.set_default_size(800, 530);
