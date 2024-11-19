@@ -11,7 +11,6 @@ export default class ClipboardIndicatorPreferences extends ExtensionPreferences 
         const settingsUI = new AivaSettings(window._settings);
         const page = new Adw.PreferencesPage();
         page.add(settingsUI.generalSettings);
-        page.add(settingsUI.appearenceSettings);
         // Set window size to 800x530
         window.set_default_size(800, 530);
         window.add(page);
@@ -29,7 +28,6 @@ class AivaSettings {
         const defaultVoice = this.schema.get_string('azure-speech-voice');
         const defaultAssistName = this.schema.get_string('assist-name');
         const defaultLog = this.schema.get_boolean('log-history');
-        const defaulTransparency = this.schema.get_string('theme-transparency');
 
         const _ = (text) => {
             return this.translations(text, defaultLanguage);
@@ -39,19 +37,6 @@ class AivaSettings {
             title: '⚙ ' + _('SETTINGS'),
         });
         this.generalSettingsPage = new Gtk.Grid({
-            margin_top: 10,
-            margin_bottom: 10,
-            margin_start: 10,
-            margin_end: 10,
-            row_spacing: 10,
-            column_spacing: 14,
-            column_homogeneous: false,
-            row_homogeneous: false,
-        });
-        this.appearenceSettings = new Adw.PreferencesGroup({
-            title: '🎨 ' + _('APPEARANCE'),
-        });
-        this.appearenceSettingsPage = new Gtk.Grid({
             margin_top: 10,
             margin_bottom: 10,
             margin_start: 10,
@@ -717,28 +702,6 @@ class AivaSettings {
             halign: Gtk.Align.START,
         });
 
-        // THEME TRANSPARENCY
-        const transparencyLabel = new Gtk.Label({
-            label: _('Transparency') + ':',
-            halign: Gtk.Align.END,
-        });
-        const transparencyIcon = new Gtk.Label({
-            label: '⬜️',
-            halign: Gtk.Align.END,
-        });
-        const transparencySelector = new Gtk.ComboBoxText();
-        transparencySelector.append('0', '100%');
-        transparencySelector.append('10', '90%');
-        transparencySelector.append('20', '80%');
-        transparencySelector.append('30', '70%');
-        transparencySelector.append('40', '60%');
-        transparencySelector.append('50', '50%');
-        transparencySelector.append('60', '40%');
-        transparencySelector.append('70', '30%');
-        transparencySelector.append('80', '20%');
-        transparencySelector.append('90', '10%');
-        transparencySelector.append('100', '0%');
-
         const blankLine = new Gtk.Label({
             label: ' ',
             halign: Gtk.Align.END,
@@ -763,28 +726,6 @@ class AivaSettings {
         languageSelector.set_active_id(defaultLanguage);
         assistName.set_text(defaultAssistName);
         historyButton.set_active(defaultLog);
-        transparencySelector.set_active_id(defaulTransparency);
-
-        // Update transparency
-        const updateTransparency = (transparency) => {
-            this.schema.set_string('theme-transparency', transparency);
-            // set menu box transparency
-            const configureTransparency = parseInt(transparency) / 100;
-            this.app.log('Transparency:' + configureTransparency);
-            this.app.menu.box.set_style(
-                `background-color: rgba(42, 42, 42, ${configureTransparency});`,
-            );
-
-            // add style to window
-            this._sendTransparencyRequest(transparency); // Enviar transparência como "0.5"
-        };
-
-        // Update on change
-        transparencySelector.connect('changed', () => {
-            const selectedTransparency = transparencySelector.get_active_id();
-            console.log('Selected transparency: ' + selectedTransparency);
-            updateTransparency(selectedTransparency);
-        });
 
         // Actions
         save.connect('clicked', () => {
@@ -818,13 +759,6 @@ class AivaSettings {
                 assistName.get_buffer().get_text(),
             );
 
-            // Save transparency value
-            const selectedTransparency = transparencySelector.get_active_id();
-            this.schema.set_string(
-                'theme-transparency',
-                selectedTransparency.toString(),
-            );
-
             statusLabel.set_markup(_('Your preferences have been saved'));
         });
 
@@ -851,20 +785,9 @@ class AivaSettings {
         this.generalSettingsPage.attach(assistName, 2, 5, 1, 1);
         this.generalSettingsPage.attach(histroyIcon, 1, 6, 1, 1);
         this.generalSettingsPage.attach(historyButton, 2, 6, 1, 1);
-
-        // Add to General Settings
-        this.generalSettings.add(this.generalSettingsPage);
-
-        // Add to grid
-        this.appearenceSettingsPage.attach(transparencyLabel, 0, 0, 1, 1);
-        this.appearenceSettingsPage.attach(transparencyIcon, 1, 0, 1, 1);
-        this.appearenceSettingsPage.attach(transparencySelector, 2, 0, 1, 1);
-        this.appearenceSettingsPage.attach(blankLine, 4, 1, 1, 1);
-        this.appearenceSettingsPage.attach(save, 4, 2, 1, 1);
-        this.appearenceSettingsPage.attach(statusLabel, 4, 3, 1, 1);
-
-        // Add to General Settings
-        this.appearenceSettings.add(this.appearenceSettingsPage);
+        this.generalSettingsPage.attach(blankLine, 0, 7, 4, 1);
+        this.generalSettingsPage.attach(save, 0, 8, 4, 1);
+        this.generalSettingsPage.attach(statusLabel, 0, 9, 4, 1);
     }
 
     translations(text, lang) {
