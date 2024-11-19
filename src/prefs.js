@@ -694,12 +694,6 @@ class AivaSettings {
         });
         updateVoices(defaultLanguage);
 
-        // Update transparencySelector on change
-        transparencySelector.connect('changed', () => {
-            const selectedTransparency = transparencySelector.get_active_id();
-            this.schema.set_boolean('theme-transparency', selectedTransparency);
-        });
-
         // AIVA Name
         const assistNameLabel = new Gtk.Label({
             label: _('Assistant Name') + ':',
@@ -747,6 +741,18 @@ class AivaSettings {
         transparencySelector.append(70, '70% Transparency');
         transparencySelector.append(80, '80% Transparency');
         transparencySelector.append(90, '90% Transparency');
+
+        // Update transparency
+        const updateTransparency = (transparency) => {
+            this.schema.set_boolean('theme-transparency', transparency);
+        };
+        updateTransparency(defaulTransparency);
+
+        // Update on change
+        transparencySelector.connect('changed', () => {
+            const selectedTransparency = transparencySelector.get_active_id();
+            updateTransparency(selectedTransparency);
+        });
 
         const blankLine = new Gtk.Label({
             label: ' ',
