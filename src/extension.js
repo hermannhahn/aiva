@@ -82,6 +82,7 @@ const Aiva = GObject.registerClass(
                 LOCATION: this._getLocation(),
                 RECURSIVE_TALK: settings.get_boolean('log-history'),
                 USERNAME: GLib.get_real_name(),
+                TRANSPARENCY: settings.get_string('theme-transparency'),
             };
         }
 
