@@ -54,8 +54,14 @@ class AivaSettings {
             row_homogeneous: false,
         });
         this.appearanceSettings = new Gtk.Grid({
-            orientation: Gtk.Orientation.VERTICAL,
-            spacing: 10,
+            margin_top: 10,
+            margin_bottom: 10,
+            margin_start: 10,
+            margin_end: 10,
+            row_spacing: 10,
+            column_spacing: 14,
+            column_homogeneous: false,
+            row_homogeneous: false,
         });
 
         // Set Gemini default name if no name is setted
