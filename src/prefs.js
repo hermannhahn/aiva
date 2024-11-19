@@ -791,6 +791,8 @@ class AivaSettings {
         this.generalSettingsPage.attach(blankLine, 0, 7, 4, 1);
         this.generalSettingsPage.attach(save, 0, 8, 4, 1);
         this.generalSettingsPage.attach(statusLabel, 0, 9, 4, 1);
+
+        this.generalSettings.add(this.generalSettingsPage);
     }
 
     translations(text, lang) {
