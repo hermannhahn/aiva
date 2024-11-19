@@ -702,11 +702,6 @@ class AivaSettings {
             halign: Gtk.Align.START,
         });
 
-        const blankLine = new Gtk.Label({
-            label: ' ',
-            halign: Gtk.Align.END,
-        });
-
         // SAVE BUTTON
         const save = new Gtk.Button({
             label: _('Save') + '  💾',
@@ -788,9 +783,8 @@ class AivaSettings {
         this.generalSettingsPage.attach(assistName, 2, 5, 1, 1);
         this.generalSettingsPage.attach(histroyIcon, 1, 6, 1, 1);
         this.generalSettingsPage.attach(historyButton, 2, 6, 1, 1);
-        this.generalSettingsPage.attach(blankLine, 0, 7, 4, 1);
-        this.generalSettingsPage.attach(save, 0, 8, 4, 1);
-        this.generalSettingsPage.attach(statusLabel, 0, 9, 4, 1);
+        this.generalSettingsPage.attach(save, 0, 7, 3, 1);
+        this.generalSettingsPage.attach(statusLabel, 0, 8, 3, 1);
 
         this.generalSettings.add(this.generalSettingsPage);
     }
