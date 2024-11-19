@@ -500,86 +500,87 @@ msgstr "Pergunte-me qualquer coisa..."
 msgid "Settings:"
 msgstr "Preferências:"
 
-#: src/prefs.js:103
+#: src/prefs.js:73
+#, fuzzy
+msgid "Advanced Settings:"
+msgstr "Preferências:"
+
+#: src/prefs.js:101
 msgid "Gemini API Key"
 msgstr ""
 
-#: src/prefs.js:114
+#: src/prefs.js:112
 msgid "Insert your Gemini API key here"
 msgstr ""
 
-#: src/prefs.js:119 src/prefs.js:145
+#: src/prefs.js:117 src/prefs.js:143
 msgid "How to get API key?"
 msgstr "Como obter a chave de API?"
 
-#: src/prefs.js:129
+#: src/prefs.js:127
 msgid "Azure Speech API Key"
 msgstr ""
 
-#: src/prefs.js:140
+#: src/prefs.js:138
 msgid "Insert your Azure Speech API key here"
 msgstr ""
 
-#: src/prefs.js:155
+#: src/prefs.js:153
 msgid "Azure Speech Region"
 msgstr "Região do Azure Speech"
 
-#: src/prefs.js:166
+#: src/prefs.js:164
 #, fuzzy
 msgid "e.g.: eastus, westus..."
 msgstr "ex: eastus, westus, ..."
 
-#: src/prefs.js:172
+#: src/prefs.js:170
 msgid "Select Language"
 msgstr "Selecione a linguagem"
 
-#: src/prefs.js:181
+#: src/prefs.js:179
 msgid "English"
 msgstr "Inglês"
 
-#: src/prefs.js:182
+#: src/prefs.js:180
 msgid "French"
 msgstr "Francês"
 
-#: src/prefs.js:183
+#: src/prefs.js:181
 msgid "German"
 msgstr ""
 
-#: src/prefs.js:184
+#: src/prefs.js:182
 msgid "Italian"
 msgstr ""
 
-#: src/prefs.js:185
+#: src/prefs.js:183
 msgid "Portuguese (Brazil)"
 msgstr "Português (Brasil)"
 
-#: src/prefs.js:186
+#: src/prefs.js:184
 msgid "Spanish"
 msgstr "Espanhol"
 
-#: src/prefs.js:190
+#: src/prefs.js:188
 msgid "Select Voice"
 msgstr "Selecione a voz"
 
-#: src/prefs.js:721
+#: src/prefs.js:719
 msgid "Assistant Name"
 msgstr "Nome do assistente"
 
-#: src/prefs.js:742
+#: src/prefs.js:740
 msgid "Remember talk history"
 msgstr "Lembrar conversa"
 
-#: src/prefs.js:750
+#: src/prefs.js:748
 msgid "Save"
 msgstr "Salvar"
 
-#: src/prefs.js:801
+#: src/prefs.js:799
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
-
-#, fuzzy
-#~ msgid "Advanced Settings:"
-#~ msgstr "Preferências:"
 
 #, fuzzy
 #~ msgid "Select app voice"

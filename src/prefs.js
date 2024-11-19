@@ -69,19 +69,17 @@ class AivaSettings {
             row_homogeneous: false,
         });
 
-        // // ADVANCED SETTINGS
-        // this.advancedSettingsUI = new Adw.PreferencesGroup({
-        //     title: '⚙ ' + _('Advanced Settings:'),
-        // });
-        // this.advancedSettings = new Gtk.Box({
-        //     margin_top: 10,
-        //     margin_bottom: 10,
-        //     margin_start: 10,
-        //     margin_end: 10,
-        //     spacing: 10,
-        //     orientation: Gtk.Orientation.VERTICAL,
-        // });
-        // this.advancedSettingsUI.add(this.advancedSettings);
+        // ADVANCED SETTINGS
+        this.advancedSettingsUI = new Adw.PreferencesGroup({title: '⚙ ' + _('Advanced Settings:')});
+        this.advancedSettings = new Gtk.Box({
+            margin_top: 10,
+            margin_bottom: 10,
+            margin_start: 10,
+            margin_end: 10,
+            spacing: 10,
+            orientation: Gtk.Orientation.VERTICAL,
+        });
+        this.advancedSettingsUI.add(this.advancedSettings);
 
         // GEMINI API KEY
 
