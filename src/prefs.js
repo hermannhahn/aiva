@@ -767,6 +767,13 @@ class AivaSettings {
         // Update transparency
         const updateTransparency = (transparency) => {
             this.schema.set_string('theme-transparency', transparency);
+            // set menu box transparency
+            const configureTransparency = parseInt(transparency) / 100;
+            this.app.log('Transparency:' + configureTransparency);
+            this.app.menu.box.set_style(
+                `background-color: rgba(42, 42, 42, ${configureTransparency});`,
+            );
+
             // add style to window
             this._sendTransparencyRequest(transparency); // Enviar transparência como "0.5"
         };
