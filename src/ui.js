@@ -35,6 +35,12 @@ export class UI {
     init() {
         this.app.log('Initializing UI...');
 
+        // set menu box transparency
+        this.app.menu.box.set_style_property(
+            'background-color',
+            this.app.userSettings.TRANSPARENCY,
+        );
+
         // Create tray
         this.tray = new St.BoxLayout({
             style_class: 'system-tray',
