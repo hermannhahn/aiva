@@ -855,7 +855,6 @@ class AivaSettings {
         this.appearenceSettingsPage.attach(blankLine, 0, 1, 1, 1);
         this.appearenceSettingsPage.attach(save, 0, 2, 1, 1);
         this.appearenceSettingsPage.attach(statusLabel, 0, 3, 1, 1);
-)
 
         // Add to General Settings
         this.appearenceSettings.add(this.appearenceSettingsPage);
