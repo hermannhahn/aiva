@@ -8,16 +8,20 @@ export default class ClipboardIndicatorPreferences extends ExtensionPreferences 
         window._settings = this.getSettings();
         const settingsUI = new AivaSettings(window._settings);
         const tabView = new Adw.TabView();
-        const tab1 = new Adw.Tab({
-            title: 'General Settings',
-            child: settingsUI.generalSettingsUI,
-        });
-        tabView.add(tab1);
-        const tab2 = new Adw.Tab({
-            title: 'Appearance Settings',
-            child: settingsUI.appearanceSettingsUI,
-        });
-        tabView.add(tab2);
+        tabView.add_page(
+            settingsUI.generalSettingsUI,
+            new Adw.TabPage({
+                title: 'General Settings',
+                icon_name: 'settings-applications-symbolic',
+            }),
+        );
+        tabView.add_page(
+            settingsUI.appearanceSettingsUI,
+            new Adw.TabPage({
+                title: 'Appearance',
+                icon_name: 'color-symbolic',
+            }),
+        );
 
         // Set window size to 800x530
         window.set_default_size(800, 530);
