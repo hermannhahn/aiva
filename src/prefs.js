@@ -741,7 +741,7 @@ class AivaSettings {
 
         const blankLine = new Gtk.Label({
             label: ' ',
-            halign: Gtk.Align.CENTER,
+            halign: Gtk.Align.END,
         });
 
         // SAVE BUTTON
@@ -752,7 +752,7 @@ class AivaSettings {
         const statusLabel = new Gtk.Label({
             label: '',
             useMarkup: true,
-            halign: Gtk.Align.CENTER,
+            halign: Gtk.Align.END,
         });
 
         // Set default
@@ -859,9 +859,9 @@ class AivaSettings {
         this.appearenceSettingsPage.attach(transparencyLabel, 0, 0, 1, 1);
         this.appearenceSettingsPage.attach(transparencyIcon, 1, 0, 1, 1);
         this.appearenceSettingsPage.attach(transparencySelector, 2, 0, 1, 1);
-        this.appearenceSettingsPage.attach(blankLine, 0, 1, 1, 1);
+        this.appearenceSettingsPage.attach(blankLine, 4, 1, 1, 1);
         this.appearenceSettingsPage.attach(save, 4, 2, 1, 1);
-        this.appearenceSettingsPage.attach(statusLabel, 3, 3, 1, 1);
+        this.appearenceSettingsPage.attach(statusLabel, 4, 3, 1, 1);
 
         // Add to General Settings
         this.appearenceSettings.add(this.appearenceSettingsPage);
