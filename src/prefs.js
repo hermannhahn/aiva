@@ -43,8 +43,8 @@ class AivaSettings {
             return this.translations(text, defaultLanguage);
         };
 
-        this.generalSettingsUI = new Gtk.Label({
-            label: '⚙️ ' + _('Settings'),
+        this.generalSettingsUI = new Gtk.Box({
+            title: '⚙️ ' + _('Settings'),
         });
         this.generalSettings = new Gtk.Grid({
             margin_top: 10,
@@ -56,14 +56,15 @@ class AivaSettings {
             column_homogeneous: false,
             row_homogeneous: false,
         });
-
-        this.appearanceSettingsUI = new Gtk.Label({
-            label: '🎨 ' + _('Appearance'),
+        this.appearanceSettingsUI = new Gtk.Box({
+            title: '🎨 ' + _('Appearance'),
         });
-        this.appearanceSettings = new Gtk.Box({
+        this.appearanceSettings = new Gtk.Grid({
             orientation: Gtk.Orientation.VERTICAL,
             spacing: 10,
         });
+
+        this.generalSettingsUI.add(this.generalSettings);
         this.appearanceSettingsUI.add(this.appearanceSettings);
 
         // Set Gemini default name if no name is setted
