@@ -9,7 +9,6 @@ export default class ClipboardIndicatorPreferences extends ExtensionPreferences 
         const settingsUI = new AivaSettings(window._settings);
         const page = new Adw.PreferencesPage();
         page.add(settingsUI.generalSettings);
-        page.add(settingsUI.divisor);
         page.add(settingsUI.appearenceSettings);
         // Set window size to 800x530
         window.set_default_size(800, 530);
@@ -33,8 +32,6 @@ class AivaSettings {
         const _ = (text) => {
             return this.translations(text, defaultLanguage);
         };
-
-        this.divisor = new Adw.PreferencesGroup({title: ' '});
 
         this.generalSettings = new Adw.PreferencesGroup({
             title: '⚙ ' + _('SETTINGS'),
@@ -847,9 +844,6 @@ class AivaSettings {
         this.generalSettingsPage.attach(histroyIcon, 1, 6, 1, 1);
         this.generalSettingsPage.attach(history, 2, 6, 1, 1);
         this.generalSettingsPage.attach(histroyLabel, 2, 6, 1, 1);
-        this.generalSettingsPage.attach(blankLine, 0, 7, 3, 1);
-        this.generalSettingsPage.attach(save, 0, 8, 3, 1);
-        this.generalSettingsPage.attach(statusLabel, 0, 9, 3, 1);
 
         // Add to General Settings
         this.generalSettings.add(this.generalSettingsPage);
@@ -858,6 +852,10 @@ class AivaSettings {
         this.appearenceSettingsPage.attach(transparencyLabel, 0, 0, 1, 1);
         this.appearenceSettingsPage.attach(transparencyIcon, 1, 0, 1, 1);
         this.appearenceSettingsPage.attach(transparencySelector, 2, 0, 1, 1);
+        this.appearenceSettingsPage.attach(blankLine, 0, 1, 1, 1);
+        this.appearenceSettingsPage.attach(save, 0, 2, 1, 1);
+        this.appearenceSettingsPage.attach(statusLabel, 0, 3, 1, 1);
+)
 
         // Add to General Settings
         this.appearenceSettings.add(this.appearenceSettingsPage);
