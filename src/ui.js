@@ -1,4 +1,5 @@
 import St from 'gi://St';
+import Gio from 'gi://Gio';
 // import Gtk from 'gi://Gtk';
 import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
@@ -128,6 +129,27 @@ export class UI {
 
         // Separator
         this.newSeparator = new PopupMenu.PopupSeparatorMenuItem();
+
+        // Crie um novo servidor D-Bus para receber mensagens do processo de preferências
+        const dbusServer = new Gio.DBus.Server({
+            busType: Gio.BusType.SESSION,
+        });
+        dbusServer.register_object(
+            '/org/gnome/shell/extensions/aiva',
+            class {
+                // Defina o método 'setTransparency' para receber o valor de transparência
+                setTransparency(transparencyValue) {
+                    // Defina a propriedade de estilo 'background-color' do Gtk.Box
+                    this.app.menu.box.set_style_property(
+                        'background-color',
+                        transparencyValue,
+                    );
+                }
+            },
+        );
+
+        // Inicie o servidor D-Bus
+        dbusServer.start();
 
         // Initialize
         this._createApp();
