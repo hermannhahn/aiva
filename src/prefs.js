@@ -23,14 +23,15 @@ export default class ClipboardIndicatorPreferences extends ExtensionPreferences 
             orientation: Gtk.Orientation.VERTICAL,
         });
         generalPage.append(settingsUI.generalSettingsUI);
-        notebook.append_page(generalPage);
 
         // advanced page
         const advancedPage = new Gtk.Box({
             orientation: Gtk.Orientation.VERTICAL,
         });
         advancedPage.append(settingsUI.advancedSettingsUI);
-        notebook.append_page(advancedPage);
+
+        // add pages
+        notebook.append_page(advancedPage, advancedPage);
 
         // set the window size to 800x530
         window.set_default_size(800, 530);
@@ -57,7 +58,9 @@ class AivaSettings {
         };
 
         // GENERAL SETTINGS
-        this.generalSettingsUI = new Adw.PreferencesGroup({title: '⚙ ' + _('Settings:')});
+        this.generalSettingsUI = new Adw.PreferencesGroup({
+            title: '⚙ ' + _('Settings:'),
+        });
         this.generalSettings = new Gtk.Grid({
             margin_top: 10,
             margin_bottom: 10,
@@ -70,7 +73,9 @@ class AivaSettings {
         });
 
         // ADVANCED SETTINGS
-        this.advancedSettingsUI = new Adw.PreferencesGroup({title: '⚙ ' + _('Advanced Settings:')});
+        this.advancedSettingsUI = new Adw.PreferencesGroup({
+            title: '⚙ ' + _('Advanced Settings:'),
+        });
         this.advancedSettings = new Gtk.Box({
             margin_top: 10,
             margin_bottom: 10,
