@@ -712,7 +712,7 @@ class AivaSettings {
             label: '📜',
             halign: Gtk.Align.END,
         });
-        const history = new Gtk.CheckButton({
+        const historyButton = new Gtk.CheckButton({
             valign: Gtk.Align.START,
         });
         const histroyLabel = new Gtk.Label({
@@ -764,7 +764,7 @@ class AivaSettings {
         voiceSelector.set_active_id(defaultVoice);
         languageSelector.set_active_id(defaultLanguage);
         assistName.set_text(defaultAssistName);
-        history.set_active(defaultLog);
+        historyButton.set_active(defaultLog);
         transparencySelector.set_active_id(defaulTransparency);
 
         // Update transparency
@@ -805,7 +805,7 @@ class AivaSettings {
             this.schema.set_string('azure-speech-voice', selectedVoice);
 
             // Save history log
-            this.schema.set_boolean('log-history', history.state);
+            this.schema.set_boolean('log-history', historyButton.state);
 
             // Save assistant name
             this.schema.set_string(
@@ -845,7 +845,7 @@ class AivaSettings {
         this.generalSettingsPage.attach(assistNameIcon, 1, 5, 1, 1);
         this.generalSettingsPage.attach(assistName, 2, 5, 1, 1);
         this.generalSettingsPage.attach(histroyIcon, 1, 6, 1, 1);
-        this.generalSettingsPage.attach(history, 2, 6, 1, 1);
+        this.generalSettingsPage.attach(historyButton, 2, 6, 1, 1);
         this.generalSettingsPage.attach(histroyLabel, 2, 6, 1, 1);
 
         // Add to General Settings
