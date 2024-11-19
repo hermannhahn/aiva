@@ -294,9 +294,9 @@ export class UI {
 
     setTransparency(transparency) {
         // set menu box transparency
-        const configuredTransparency = parseInt(transparency) / 100;
+        transparency = parseInt(transparency) / 100;
         this.app.menu.box.set_style(
-            `background-color: rgba(42, 42, 42, ${configuredTransparency});`,
+            `background-color: rgba(42, 42, 42, ${transparency});`,
         );
     }
 }
