@@ -83,7 +83,6 @@ const Aiva = GObject.registerClass(
                 LOCATION: this._getLocation(),
                 RECURSIVE_TALK: settings.get_boolean('log-history'),
                 USERNAME: GLib.get_real_name(),
-                TRANSPARENCY: settings.get_string('theme-transparency'),
             };
         }
 
@@ -140,9 +139,6 @@ const Aiva = GObject.registerClass(
             // initialize chat
             this.chat.init();
 
-            // register dbus
-            this._registerDBus();
-
             this.log('Extension initialized.');
         }
 
@@ -186,47 +182,6 @@ const Aiva = GObject.registerClass(
          */
         logError(message) {
             this.logger.logError(message);
-        }
-
-        _registerDBus() {
-            const interfaceXML = `
-            <node>
-                <interface name="org.gnome.shell.extensions.aiva">
-                    <method name="SetTransparency">
-                        <arg type="s" name="transparencyValue" direction="in"/>
-                    </method>
-                </interface>
-            </node>
-            `;
-
-            const dbusImpl = Gio.DBusExportedObject.wrapJSObject(interfaceXML, {
-                SetTransparency(transparencyValue) {
-                    log(`Received transparencyValue: ${transparencyValue}`);
-
-                    // Converta a string para um número
-                    let transparency = parseFloat(transparencyValue);
-                    if (isNaN(transparency)) {
-                        logError(
-                            new Error('Invalid transparency value received'),
-                        );
-                        return;
-                    }
-
-                    // Aqui ajusta a transparência, substituindo sua lógica real
-                    const configuredTransparency = transparency / 100;
-                    log('Transparency:' + configuredTransparency);
-                    this.app.menu.box.set_style(
-                        `background-color: rgba(42, 42, 42, ${configuredTransparency});`,
-                    );
-                },
-            });
-
-            dbusImpl.export(
-                Gio.DBus.session,
-                '/org/gnome/shell/extensions/aiva',
-            );
-
-            log('D-Bus server started');
         }
 
         _getLocation() {
@@ -280,6 +235,9 @@ export default class AivaExtension extends Extension {
             this._onKeyPress.bind(this),
         );
 
+        // register dbus
+        this._registerDBus();
+
         this._app.log('AIVA started.');
     }
 
@@ -307,5 +265,27 @@ export default class AivaExtension extends Extension {
             return Clutter.EVENT_STOP; // Impede a propagação do evento
         }
         return Clutter.EVENT_PROPAGATE;
+    }
+
+    _registerDBus() {
+        const interfaceXML = `
+        <node>
+            <interface name="org.gnome.shell.extensions.aiva">
+                <method name="SetRequestable">
+                    <arg type="s" name="request" direction="in"/>
+                </method>
+            </interface>
+        </node>
+        `;
+
+        const dbusImpl = Gio.DBusExportedObject.wrapJSObject(interfaceXML, {
+            SetRequestable(request) {
+                log(`Received: ${request}`);
+            },
+        });
+
+        dbusImpl.export(Gio.DBus.session, '/org/gnome/shell/extensions/aiva');
+
+        log('D-Bus server started');
     }
 }
