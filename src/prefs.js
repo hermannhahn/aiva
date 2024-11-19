@@ -1,5 +1,6 @@
 import Gtk from 'gi://Gtk';
 import Adw from 'gi://Adw';
+import Gio from 'gi://Gio';
 
 import {ExtensionPreferences} from 'resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js';
 
@@ -32,6 +33,13 @@ class AivaSettings {
         const _ = (text) => {
             return this.translations(text, defaultLanguage);
         };
+
+        const dbusClient = new Gio.DBus.Client({
+            busType: Gio.BusType.SESSION,
+            name: 'org.gnome.shell.extensions.aiva',
+            objectPath: '/org/gnome/shell/extensions/aiva',
+            interfaceName: 'org.gnome.shell.extensions.aiva',
+        });
 
         this.generalSettings = new Adw.PreferencesGroup({
             title: '⚙ ' + _('SETTINGS'),
@@ -742,6 +750,8 @@ class AivaSettings {
         // Update transparency
         const updateTransparency = (transparency) => {
             this.schema.set_boolean('theme-transparency', transparency);
+            // add style to window
+            dbusClient.call('setTransparency', transparency, null, null);
         };
         updateTransparency(defaulTransparency);
 
@@ -759,7 +769,7 @@ class AivaSettings {
         // SAVE BUTTON
         const save = new Gtk.Button({
             label: _('Save') + '  💾',
-            halign: Gtk.Align.CENTER,
+            halign: Gtk.Align.END,
         });
         const statusLabel = new Gtk.Label({
             label: '',
@@ -853,8 +863,8 @@ class AivaSettings {
         this.appearenceSettingsPage.attach(transparencyIcon, 1, 0, 1, 1);
         this.appearenceSettingsPage.attach(transparencySelector, 2, 0, 1, 1);
         this.appearenceSettingsPage.attach(blankLine, 0, 1, 1, 1);
-        this.appearenceSettingsPage.attach(save, 0, 2, 1, 1);
-        this.appearenceSettingsPage.attach(statusLabel, 0, 3, 1, 1);
+        this.appearenceSettingsPage.attach(save, 1, 2, 1, 1);
+        this.appearenceSettingsPage.attach(statusLabel, 1, 3, 1, 1);
 
         // Add to General Settings
         this.appearenceSettings.add(this.appearenceSettingsPage);
