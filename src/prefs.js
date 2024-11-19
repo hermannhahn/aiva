@@ -19,18 +19,24 @@ export default class ClipboardIndicatorPreferences extends ExtensionPreferences 
         const notebook = new Gtk.Notebook();
 
         // create a page for the general settings
-        const generalPage = new Adw.PreferencesPage();
-        generalPage.add(settingsUI.ui);
+        this.generalPage = new Adw.PreferencesPage();
+        this.generalPage.add(settingsUI.ui);
 
         // add the general settings page to the notebook
-        notebook.append_page(generalPage, new Gtk.Label({label: 'General'}));
+        notebook.append_page(
+            this.generalPage,
+            new Gtk.Label({label: 'General'}),
+        );
 
         // create a page for the advanced settings
-        const advancedPage = new Adw.PreferencesPage();
-        advancedPage.add(settingsUI.advancedSettingsUI);
+        this.advancedPage = new Adw.PreferencesPage();
+        this.advancedPage.add(settingsUI.advancedSettingsUI);
 
         // add the advanced settings page to the notebook
-        notebook.append_page(advancedPage, new Gtk.Label({label: 'Advanced'}));
+        notebook.append_page(
+            this.advancedPage,
+            new Gtk.Label({label: 'Advanced'}),
+        );
 
         // set the window size to 800x530
         window.set_default_size(800, 530);
@@ -56,15 +62,6 @@ class AivaSettings {
             return this.translations(text, defaultLanguage);
         };
 
-        this.ui = this.generalSettingsUI = new Gtk.Box({
-            margin_top: 10,
-            margin_bottom: 10,
-            margin_start: 10,
-            margin_end: 10,
-            spacing: 10,
-            orientation: Gtk.Orientation.VERTICAL,
-        });
-
         this.advancedSettingsUI = new Gtk.Box({
             margin_top: 10,
             margin_bottom: 10,
@@ -74,7 +71,7 @@ class AivaSettings {
             orientation: Gtk.Orientation.VERTICAL,
         });
 
-        this.main = new Gtk.Grid({
+        this.generalSettingsUI = new Gtk.Grid({
             margin_top: 10,
             margin_bottom: 10,
             margin_start: 10,
@@ -830,9 +827,7 @@ class AivaSettings {
         this.main.attach(statusLabel, 0, 9, 3, 1);
 
         // Add to main
-        this.ui.add(this.main);
-        this.ui.add(this.generalSettingsUI);
-        this.ui.add(this.advancedSettingsUI);
+        this.generalSettingsUI.add(this.main);
     }
 
     translations(text, lang) {
