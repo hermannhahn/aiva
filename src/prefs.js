@@ -8,13 +8,8 @@ export default class ClipboardIndicatorPreferences extends ExtensionPreferences 
         window._settings = this.getSettings();
         const settingsUI = new AivaSettings(window._settings);
         const page = new Adw.PreferencesPage();
-        const divisor = new Gtk.Label({
-            label: ' ',
-            halign: Gtk.Align.CENTER,
-            css_classes: ['separator'],
-        });
         page.add(settingsUI.generalSettings);
-        page.add(divisor);
+        page.add(settingsUI.divisor);
         page.add(settingsUI.appearenceSettings);
         // Set window size to 800x530
         window.set_default_size(800, 530);
@@ -38,6 +33,8 @@ class AivaSettings {
         const _ = (text) => {
             return this.translations(text, defaultLanguage);
         };
+
+        this.divisor = new Adw.PreferencesGroup({title: ' '});
 
         this.generalSettings = new Adw.PreferencesGroup({
             title: '⚙ ' + _('SETTINGS'),
