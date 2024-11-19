@@ -806,6 +806,8 @@ class AivaSettings {
 
             // Save history log
             this.schema.set_boolean('log-history', history.state);
+
+            // Save assistant name
             this.schema.set_string(
                 'assist-name',
                 assistName.get_buffer().get_text(),
