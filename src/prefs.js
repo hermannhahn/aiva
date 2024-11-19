@@ -759,6 +759,9 @@ class AivaSettings {
                 assistName.get_buffer().get_text(),
             );
 
+            // test, send dbus request
+            this._sendRequest('testing');
+
             statusLabel.set_markup(_('Your preferences have been saved'));
         });
 
