@@ -269,6 +269,16 @@
     font-family: 'Courier New', Courier, monospace;
     font-size: 16px;
 }
+.colors-icon {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    background-color: transparent
+    width: 24px;
+    height: 24px;
+}
+.colors-icon:hover {
+    background-color: '#424242';
+}
 .transparency-ok-icon {
     font-family: 'Courier New', Courier, monospace;
     font-size: 12px;
