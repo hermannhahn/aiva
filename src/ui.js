@@ -346,7 +346,7 @@ export class UI {
                 case '0, 0, 200':
                     this.colorBlueButton.active = true;
                     break;
-                case '200, 0, 0':
+                case '2054, 54, 54':
                     this.colorRedButton.active = true;
                     break;
                 case '0, 255, 0':
@@ -358,7 +358,7 @@ export class UI {
                 case '200, 0, 200':
                     this.colorPurpleButton.active = true;
                     break;
-                case '0, 0, 0':
+                case '54, 54, 54':
                     this.colorBlackButton.active = true;
                     break;
                 default:
@@ -375,7 +375,10 @@ export class UI {
                 this.colorBlackButton.active = false;
             });
             this.colorRedButton.connect('clicked', () => {
-                this.setTheme(this.app.userSettings.TRANSPARENCY, '200, 0, 0');
+                this.setTheme(
+                    this.app.userSettings.TRANSPARENCY,
+                    '2054, 54, 54',
+                );
                 this.colorRedButton.active = true;
                 this.colorBlueButton.active = false;
                 this.colorGreenButton.active = false;
@@ -417,7 +420,7 @@ export class UI {
                 this.colorBlackButton.active = false;
             });
             this.colorBlackButton.connect('clicked', () => {
-                this.setTheme(this.app.userSettings.TRANSPARENCY, '0, 0, 0');
+                this.setTheme(this.app.userSettings.TRANSPARENCY, '54, 54, 54');
                 this.colorBlackButton.active = true;
                 this.colorRedButton.active = false;
                 this.colorGreenButton.active = false;
@@ -514,6 +517,17 @@ export class UI {
     }
 
     setTheme(transparency, color) {
+        // set default if empty, null or undefined
+        if (
+            transparency === '' ||
+            transparency === null ||
+            transparency === undefined
+        ) {
+            transparency = '75';
+        }
+        if (color === '' || color === null || color === undefined) {
+            color = '54, 54, 54';
+        }
         // save
         const tString = transparency.toString();
         this.app.extension.settings.set_string('theme-transparency', tString);
