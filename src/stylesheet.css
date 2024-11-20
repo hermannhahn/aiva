@@ -110,17 +110,6 @@
 .appearance-icon:active {
     font-size: 18px;
 }
-.appearance-box {
-    width: 500px;
-    height: 40px;
-    background-color: rgba(42, 42, 42, 0.857);
-    position: relative;
-    display: flex;
-    align-items: right;
-    justify-content: right;
-    border-radius: 10px;
-    margin-bottom: 150px;
-}
 .chat-scroll {
     max-width: 800px;
     max-height: 550px;
@@ -294,4 +283,15 @@
 .transparency-label {
     font-family: 'Courier New', Courier, monospace;
     font-size: 12px;
+}
+.appearance-box {
+    width: 500px;
+    height: 40px;
+    background-color: rgba(42, 42, 42, 0.857);
+    position: relative;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    border-radius: 10px;
+    padding-bottom: 50px;
 }
