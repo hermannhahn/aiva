@@ -119,7 +119,7 @@ class AivaSettings {
             css_classes: ['label'],
         });
         const speechRegionIcon = new Gtk.Label({
-            label: '📍',
+            label: '🗺',
             halign: Gtk.Align.END,
         });
         const speechRegion = new Gtk.Entry({
