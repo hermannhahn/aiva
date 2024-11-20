@@ -341,38 +341,9 @@ export class UI {
                 this.setTheme(transparency, this.app.userSettings.COLOR);
             });
 
-            // Set color button active
-            switch (this.app.userSettings.COLOR) {
-                case '0, 0, 200':
-                    this.colorBlueButton.active = true;
-                    break;
-                case '2054, 54, 54':
-                    this.colorRedButton.active = true;
-                    break;
-                case '0, 255, 0':
-                    this.colorGreenButton.active = true;
-                    break;
-                case '200, 200, 0':
-                    this.colorYellowButton.active = true;
-                    break;
-                case '200, 0, 200':
-                    this.colorPurpleButton.active = true;
-                    break;
-                case '54, 54, 54':
-                    this.colorBlackButton.active = true;
-                    break;
-                default:
-                    break;
-            }
             // Connect color buttons
             this.colorBlueButton.connect('clicked', () => {
                 this.setTheme(this.app.userSettings.TRANSPARENCY, '0, 0, 200');
-                this.colorBlueButton.active = true;
-                this.colorRedButton.active = false;
-                this.colorGreenButton.active = false;
-                this.colorYellowButton.active = false;
-                this.colorPurpleButton.active = false;
-                this.colorBlackButton.active = false;
             });
             this.colorRedButton.connect('clicked', () => {
                 this.setTheme(
@@ -528,6 +499,53 @@ export class UI {
         if (color === '' || color === null || color === undefined) {
             color = '54, 54, 54';
         }
+        // Set color button active
+        switch (this.app.userSettings.COLOR) {
+            case '0, 0, 200':
+                this.colorBlueButton.active = true;
+                this.colorRedButton.active = false;
+                this.colorGreenButton.active = false;
+                this.colorYellowButton.active = false;
+                this.colorPurpleButton.active = false;
+                this.colorBlackButton.active = false;
+                break;
+            case '200, 0, 0':
+                this.colorRedButton.active = true;
+                this.colorBlueButton.active = false;
+                this.colorGreenButton.active = false;
+                this.colorYellowButton.active = false;
+                this.colorPurpleButton.active = false;
+                this.colorBlackButton.active = false;
+                break;
+            case '0, 200, 0':
+                this.colorGreenButton.active = true;
+                this.colorRedButton.active = false;
+                this.colorBlueButton.active = false;
+                this.colorYellowButton.active = false;
+                this.colorPurpleButton.active = false;
+                this.colorBlackButton.active = false;
+
+                break;
+            case '200, 200, 0':
+                this.colorYellowButton.active = true;
+
+                this.colorRedButton.active = false;
+                this.colorGreenButton.active = false;
+                this.colorBlueButton.active = false;
+                this.colorPurpleButton.active = false;
+                this.colorBlackButton.active = false;
+
+                break;
+            case '200, 0, 200':
+                this.colorPurpleButton.active = true;
+                break;
+            case '54, 54, 54':
+                this.colorBlackButton.active = true;
+                break;
+            default:
+                break;
+        }
+
         // save
         const tString = transparency.toString();
         this.app.extension.settings.set_string('theme-transparency', tString);
