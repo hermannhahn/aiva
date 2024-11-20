@@ -240,19 +240,16 @@ export class UI {
         // If press appearance button
         this.appearanceBoxIsOpen = false;
         this.appearanceButton.connect('clicked', (_self) => {
-            const parent = this.app.menu.box.get_parent();
+            const parent = this.app.menu.get_parent();
             if (this.appearanceBoxIsOpen) {
                 parent.remove_child(this.appearanceBox);
                 this.appearanceBoxIsOpen = false;
                 return;
             }
-            // get menu box parent
+            // get menu parent
             // show appearance box
             if (parent) {
-                parent.insert_child_above(
-                    this.appearanceBox,
-                    this.app.menu.box,
-                );
+                parent.insert_child_above(this.appearanceBox, this.app.menu);
                 this.appearanceBox.add_child(this.transparencyLabel);
                 this.appearanceBox.add_child(this.transparencyEntry);
                 this.appearanceBox.add_child(this.transparencyButton);
