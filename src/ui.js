@@ -213,6 +213,7 @@ export class UI {
 
         // Apply userSettings appearance
         this.setTransparency(this.app.userSettings.TRANSPARENCY);
+        this.scrollView.set_style(`background-color: rgba(42, 42, 42, 0);`);
     }
 
     /**
