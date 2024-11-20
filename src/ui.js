@@ -357,7 +357,10 @@ export class UI {
     setTransparency(transparency) {
         // set menu box transparency
         transparency = parseInt(transparency) / 100;
-        this.app.menu.box.set_style(
+        this.items.set_style(
+            `background-color: rgba(42, 42, 42, ${transparency});`,
+        );
+        this.chatSection.set_style(
             `background-color: rgba(42, 42, 42, ${transparency});`,
         );
     }
