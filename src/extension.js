@@ -70,7 +70,7 @@ const Aiva = GObject.registerClass(
                 this.extension.uuid,
             ]);
             // user settings
-            let username = settings.get_string('username');
+            let username = settings.get_string('user-name');
             if (username === '') {
                 username = GLib.get_real_name();
             }
