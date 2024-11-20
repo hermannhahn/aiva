@@ -298,3 +298,8 @@
     margin-top: 0px;
     margin-right: 0px;
 }
+.invisibl-area {
+    width: 500px;
+    height: 40px;
+    background-color: transparent;
+}
