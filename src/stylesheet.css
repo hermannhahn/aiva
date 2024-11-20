@@ -285,7 +285,10 @@
     font-family: 'Courier New', Courier, monospace;
     font-size: 12px;
     font-weight: bold;
-    margin-top: 2px;
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+    margin-right: 5px;
 }
 .transparency-entry {
     font-family: 'Courier New', Courier, monospace;
@@ -295,9 +298,10 @@
 .transparency-ok-icon {
     font-family: 'Courier New', Courier, monospace;
     font-size: 12px;
-    width: 24px;
-    height: 24px;
-    margin-left: 5px;
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+    margin-right: 5px;
 }
 .transparency-ok-icon:hover {
     background-color: '#454545';
@@ -306,7 +310,10 @@
     font-family: 'Courier New', Courier, monospace;
     font-size: 12px;
     font-weight: bold;
+    width: 40px;
+    height: 40px;
     margin-top: 5px;
+    margin-right: 5px;
 }
 .colors-icon {
     /* background-image: url('assets/icon_settings.png');
@@ -315,8 +322,8 @@
     font-size: 16px;
     text-align: center;
     width: 40px;
-    margin-top: 25px;
-    margin-bottom: 12px;
+    height: 40px;
+    margin-top: 5px;
     margin-right: 5px;
 }
 .colors-icon:hover {
