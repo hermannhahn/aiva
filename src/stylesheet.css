@@ -296,10 +296,10 @@
     justify-content: right;
     text-align: right;
     border-radius: 10px;
-    padding-bottom: 5px;
 }
 .invisibl-area {
     width: 500px;
     height: 40px;
     background-color: transparent;
+    padding-bottom: 5px;
 }
