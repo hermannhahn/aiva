@@ -133,7 +133,6 @@ export class UI {
             style_class: 'transparency-ok-icon',
             toggle_mode: true,
             can_focus: true,
-            reactive: true,
         });
 
         // Create colors label
@@ -148,8 +147,6 @@ export class UI {
             style_class: 'colors-icon',
             toggle_mode: true,
             can_focus: true,
-            hover: true,
-            reactive: true,
         });
 
         // Create color red button
@@ -158,8 +155,6 @@ export class UI {
             style_class: 'colors-icon',
             toggle_mode: true,
             can_focus: true,
-            hover: true,
-            reactive: true,
         });
 
         // Create color green button
@@ -168,8 +163,6 @@ export class UI {
             style_class: 'colors-icon',
             toggle_mode: true,
             can_focus: true,
-            hover: true,
-            reactive: true,
         });
 
         // Create color yellow button
@@ -178,8 +171,6 @@ export class UI {
             style_class: 'colors-icon',
             toggle_mode: true,
             can_focus: true,
-            hover: true,
-            reactive: true,
         });
 
         // Create scrollbar
