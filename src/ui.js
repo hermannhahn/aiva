@@ -133,7 +133,6 @@ export class UI {
             style_class: 'transparency-ok-icon',
             toggle_mode: true,
             can_focus: true,
-            hover: true,
             reactive: true,
         });
 
