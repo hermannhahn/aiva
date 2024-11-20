@@ -692,6 +692,20 @@ class AivaSettings {
             placeholder_text: 'Give your assistant a name',
         });
 
+        // USER NAME
+        const userNameLabel = new Gtk.Label({
+            label: _('User Name') + ':',
+            halign: Gtk.Align.END,
+        });
+        const userNameIcon = new Gtk.Label({
+            label: '👤',
+            halign: Gtk.Align.END,
+        });
+        const userName = new Gtk.Entry({
+            buffer: new Gtk.EntryBuffer(),
+            placeholder_text: 'Your name or nickname',
+        });
+
         // HISTORY LOG
         const histroyIcon = new Gtk.Label({
             label: '📜',
@@ -720,6 +734,7 @@ class AivaSettings {
         voiceSelector.set_active_id(defaultVoice);
         languageSelector.set_active_id(defaultLanguage);
         assistName.set_text(defaultAssistName);
+        userName.set_text(defaultAssistName);
         historyButton.set_active(defaultLog);
 
         // Actions
@@ -748,10 +763,16 @@ class AivaSettings {
             // Save history log
             this.schema.set_boolean('log-history', historyButton.get_active());
 
-            // Save assistant name
+            // Set assistant name
             this.schema.set_string(
                 'assist-name',
                 assistName.get_buffer().get_text(),
+            );
+
+            // Set user name
+            this.schema.set_string(
+                'user-name',
+                userName.get_buffer().get_text(),
             );
 
             // test, send dbus request
@@ -783,8 +804,11 @@ class AivaSettings {
         this.generalSettingsPage.attach(assistName, 2, 5, 1, 1);
         this.generalSettingsPage.attach(histroyIcon, 1, 6, 1, 1);
         this.generalSettingsPage.attach(historyButton, 2, 6, 1, 1);
-        this.generalSettingsPage.attach(save, 0, 7, 3, 1);
-        this.generalSettingsPage.attach(statusLabel, 0, 8, 3, 1);
+        this.generalSettingsPage.attach(userNameLabel, 0, 7, 1, 1);
+        this.generalSettingsPage.attach(userNameIcon, 1, 7, 1, 1);
+        this.generalSettingsPage.attach(userName, 2, 7, 1, 1);
+        this.generalSettingsPage.attach(save, 0, 8, 3, 1);
+        this.generalSettingsPage.attach(statusLabel, 0, 9, 3, 1);
 
         this.generalSettings.add(this.generalSettingsPage);
     }

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-19 22:37-0300\n"
+"POT-Creation-Date: 2024-11-20 20:52-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language de-DE\n"
@@ -534,14 +534,18 @@ msgstr ""
 msgid "Assistant Name"
 msgstr ""
 
-#: src/prefs.js:701
+#: src/prefs.js:697
+msgid "User Name"
+msgstr ""
+
+#: src/prefs.js:715
 msgid "Remember talk history"
 msgstr ""
 
-#: src/prefs.js:707
+#: src/prefs.js:721
 msgid "Save"
 msgstr ""
 
-#: src/prefs.js:760
+#: src/prefs.js:781
 msgid "Your preferences have been saved"
 msgstr ""
