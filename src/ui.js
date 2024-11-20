@@ -239,13 +239,13 @@ export class UI {
         // If press appearance button
         this.appearanceBoxIsOpen = false;
         this.appearanceButton.connect('clicked', (_self) => {
+            const parent = this.app.menu.box.get_parent();
             if (this.appearanceBoxIsOpen) {
-                this.app.menu.box.remove_child(this.appearanceBox);
+                parent.remove_child(this.appearanceBox);
                 this.appearanceBoxIsOpen = false;
                 return;
             }
             // get menu box parent
-            const parent = this.app.menu.box.get_parent();
             // show appearance box
             if (parent) {
                 parent.insert_child_above(
