@@ -273,10 +273,8 @@
     font-family: 'Courier New', Courier, monospace;
     font-size: 12px;
     background-color: '#242424';
-    width: 20px;
-    height: 20px;
-    padding-left: 5px;
-    padding-right: 5px;
+    width: 24px;
+    height: 24px;
 }
 .transparency-ok-icon:hover {
     background-color: '#424242';
@@ -285,6 +283,7 @@
     font-family: 'Courier New', Courier, monospace;
     font-size: 12px;
     width: 20px;
+    padding-right: 5px;
 }
 .transparency-label {
     font-family: 'Courier New', Courier, monospace;
