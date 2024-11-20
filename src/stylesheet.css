@@ -94,6 +94,22 @@
 .settings-icon:active {
     font-size: 18px;
 }
+.appearance-icon {
+    /* background-image: url('assets/icon_settings.png');
+    background-size: 20px; */
+    font-size: 20px;
+    text-align: center;
+    width: 40px;
+    margin-top: 25px;
+    margin-bottom: 12px;
+    margin-right: 5px;
+}
+.appearance-icon:hover {
+    background-color: rgb(54, 54, 54);
+}
+.appearance-icon:active {
+    font-size: 18px;
+}
 .chat-scroll {
     max-width: 800px;
     max-height: 550px;
