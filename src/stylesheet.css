@@ -110,6 +110,14 @@
 .appearance-icon:active {
     font-size: 18px;
 }
+.appearance-box {
+    width: 300px;
+    height: 30px;
+    background-color: rgba(42, 42, 42, 0.857);
+    position: relative;
+    border-radius: 10px;
+    margin-bottom: 50px;
+}
 .chat-scroll {
     max-width: 800px;
     max-height: 550px;
