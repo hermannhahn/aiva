@@ -125,7 +125,7 @@ export class UI {
             label: 'OK',
             style_class: 'transparency-ok-icon',
             toggle_mode: true,
-            can_focus: false,
+            can_focus: true,
         });
 
         // Create scrollbar
