@@ -307,6 +307,10 @@ export class UI {
         this.settingsButton.connect('clicked', (_self) => {
             this.app.openSettings();
             // Close App
+            if (this.appearanceBoxIsOpen) {
+                this.appearanceMenu.remove_child(this.appearanceBox);
+                this.appearanceBoxIsOpen = false;
+            }
             this.app.menu.close();
         });
 
