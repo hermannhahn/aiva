@@ -193,7 +193,8 @@ export class UI {
         // Add items container to app
         this.app.menu.addMenuItem(this.appearanceMenu);
         this.app.menu.addMenuItem(this.items);
-        this.app.menu.box.style_class = 'app';
+        this.app.menu.style_class = 'app';
+        this.app.menu.box.style_class = 'app-box';
 
         // Add items
         this.items.add_child(this.statusBar);
