@@ -285,8 +285,9 @@
     font-family: 'Courier New', Courier, monospace;
     font-size: 12px;
     font-weight: bold;
-    height: 40px;
-    margin-top: 20px;
+    height: 20px;
+    margin-top: 25px;
+    margin-left: 5px;
     margin-right: 5px;
 }
 .transparency-entry {
@@ -301,9 +302,9 @@
     background-color: rgb(45, 45, 45);
     font-size: 12px;
     width: 40px;
-    height: 40px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    height: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     border-radius: 5px;
 }
 .transparency-ok-icon:hover {
@@ -316,8 +317,8 @@
     font-family: 'Courier New', Courier, monospace;
     font-size: 12px;
     font-weight: bold;
-    height: 40px;
-    margin-top: 20px;
+    height: 20px;
+    margin-top: 25px;
     margin-right: 5px;
     margin-left: 5px;
 }
@@ -328,10 +329,11 @@
     font-size: 16px;
     text-align: center;
     width: 40px;
-    height: 40px;
-    margin-top: 3px;
-    margin-bottom: 3px;
+    height: 20px;
     margin-right: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
 }
 .colors-icon:hover {
     background-color: rgb(54, 54, 54);
