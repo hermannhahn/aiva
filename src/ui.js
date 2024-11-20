@@ -97,6 +97,22 @@ export class UI {
             can_focus: false,
         });
 
+        // Create appearance button
+        this.appearanceButton = new St.Button({
+            label: '🎨',
+            style_class: 'appearance-icon',
+            toggle_mode: true,
+            can_focus: false,
+        });
+
+        // Create appearance box
+        this.appearanceBox = new St.BoxLayout({
+            style_class: 'appearance-box',
+        });
+
+        // Create transparency slider
+        this.transparency;
+
         // Create scrollbar
         this.scrollView = new St.ScrollView({
             style_class: 'chat-scroll',
