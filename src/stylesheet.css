@@ -298,7 +298,13 @@
 }
 .transparency-label {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 12px;
+    font-size: 8px;
+    font-weight: bold;
+}
+.colors-label {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 8px;
+    font-weight: bold;
 }
 .appearance-box {
     background-color: rgba(42, 42, 42, 0.757);
