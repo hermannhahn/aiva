@@ -240,30 +240,26 @@ export class UI {
         // If press appearance button
         this.appearanceBoxIsOpen = false;
         this.appearanceButton.connect('clicked', (_self) => {
-            const parent = this.app.menu.get_parent();
             if (this.appearanceBoxIsOpen) {
-                parent.remove_child(this.appearanceBox);
+                this.app.menu.removeMenuItem(this.appearanceBox);
                 this.appearanceBoxIsOpen = false;
                 return;
             }
             // get menu parent
             // show appearance box
-            if (parent) {
-                parent.insert_child_above(this.appearanceBox, this.app.menu);
-                this.appearanceBox.add_child(this.transparencyLabel);
-                this.appearanceBox.add_child(this.transparencyEntry);
-                this.appearanceBox.add_child(this.transparencyButton);
+            this.app.menu.addMenuItem(this.appearanceBox);
+            this.appearanceBox.add_child(this.transparencyLabel);
+            this.appearanceBox.add_child(this.transparencyEntry);
+            this.appearanceBox.add_child(this.transparencyButton);
 
-                this.transparencyButton.connect('clicked', (_self) => {
-                    const transparency =
-                        this.transparencyEntry.clutter_text.text;
-                    if (transparency === '' || isNaN(parseInt(transparency))) {
-                        this.app.logError('Transparency value is invalid.');
-                        return;
-                    }
-                    this.setTransparency(transparency);
-                });
-            }
+            this.transparencyButton.connect('clicked', (_self) => {
+                const transparency = this.transparencyEntry.clutter_text.text;
+                if (transparency === '' || isNaN(parseInt(transparency))) {
+                    this.app.logError('Transparency value is invalid.');
+                    return;
+                }
+                this.setTransparency(transparency);
+            });
             this.appearanceBoxIsOpen = true;
         });
     }
