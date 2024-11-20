@@ -140,7 +140,7 @@ export class UI {
         // Create colors label
         this.colorsLabel = new St.Label({
             text: 'Color: ',
-            style_class: 'transparency-label',
+            style_class: 'colors-label',
         });
 
         // Create color blue button
