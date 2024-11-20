@@ -269,26 +269,22 @@
     font-family: 'Courier New', Courier, monospace;
     font-size: 16px;
 }
-.colors-icon {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 12px;
+.invisibl-area {
+    width: 500px;
+    height: 40px;
     background-color: transparent;
-    width: 24px;
-    height: 24px;
-    padding-left: 5px;
+    padding-bottom: 10px;
+    display: flex;
 }
-.colors-icon:hover {
-    background-color: '#424242';
+.appearance-box {
+    background-color: rgba(42, 42, 42, 0.757);
+    border-radius: 10px;
+    text-align: right;
 }
-.transparency-ok-icon {
+.transparency-label {
     font-family: 'Courier New', Courier, monospace;
     font-size: 12px;
-    background-color: '#242424';
-    width: 24px;
-    height: 24px;
-}
-.transparency-ok-icon:hover {
-    background-color: '#424242';
+    font-weight: bold;
 }
 .transparency-entry {
     font-family: 'Courier New', Courier, monospace;
@@ -296,25 +292,25 @@
     width: 20px;
     padding-right: 5px;
 }
-.transparency-label {
+.transparency-ok-icon {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 8px;
-    font-weight: bold;
+    font-size: 12px;
+    width: 24px;
+    height: 24px;
 }
 .colors-label {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 8px;
+    font-size: 12px;
     font-weight: bold;
 }
-.appearance-box {
-    background-color: rgba(42, 42, 42, 0.757);
-    border-radius: 10px;
-    text-align: right;
-}
-.invisibl-area {
-    width: 500px;
-    height: 40px;
+.colors-icon {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
     background-color: transparent;
-    padding-bottom: 10px;
-    display: flex;
+    width: 24px;
+    height: 24px;
+    margin-left: 5px;
+}
+.colors-icon:hover {
+    background-color: '#242424';
 }
