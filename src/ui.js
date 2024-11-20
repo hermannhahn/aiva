@@ -240,26 +240,33 @@ export class UI {
         // If press appearance button
         this.appearanceBoxIsOpen = false;
         this.appearanceButton.connect('clicked', (_self) => {
+            const parent = this.app.menu.box.get_parent();
             if (this.appearanceBoxIsOpen) {
-                this.app.menu.removeMenuItem(this.appearanceBox);
+                parent.remove_child(this.appearanceBox);
                 this.appearanceBoxIsOpen = false;
                 return;
             }
-            // get menu parent
+            // get menu box parent
             // show appearance box
-            this.app.menu.addMenuItem(this.appearanceBox);
-            this.appearanceBox.add_child(this.transparencyLabel);
-            this.appearanceBox.add_child(this.transparencyEntry);
-            this.appearanceBox.add_child(this.transparencyButton);
+            if (parent) {
+                parent.insert_child_above(
+                    this.appearanceBox,
+                    this.app.menu.box,
+                );
+                this.appearanceBox.add_child(this.transparencyLabel);
+                this.appearanceBox.add_child(this.transparencyEntry);
+                this.appearanceBox.add_child(this.transparencyButton);
 
-            this.transparencyButton.connect('clicked', (_self) => {
-                const transparency = this.transparencyEntry.clutter_text.text;
-                if (transparency === '' || isNaN(parseInt(transparency))) {
-                    this.app.logError('Transparency value is invalid.');
-                    return;
-                }
-                this.setTransparency(transparency);
-            });
+                this.transparencyButton.connect('clicked', (_self) => {
+                    const transparency =
+                        this.transparencyEntry.clutter_text.text;
+                    if (transparency === '' || isNaN(parseInt(transparency))) {
+                        this.app.logError('Transparency value is invalid.');
+                        return;
+                    }
+                    this.setTransparency(transparency);
+                });
+            }
             this.appearanceBoxIsOpen = true;
         });
     }
