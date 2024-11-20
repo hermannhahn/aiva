@@ -84,6 +84,7 @@ const Aiva = GObject.registerClass(
                 RECURSIVE_TALK: settings.get_boolean('log-history'),
                 USERNAME: GLib.get_real_name(),
                 TRANSPARENCY: settings.get_string('theme-transparency'),
+                COLOR: settings.get_string('theme-color'),
             };
         }
 
