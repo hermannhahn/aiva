@@ -268,7 +268,6 @@ export class UI {
             this.transparencyButton.connect('clicked', (_self) => {
                 const transparency = this.transparencyEntry.clutter_text.text;
                 if (transparency === '' || isNaN(parseInt(transparency))) {
-                    this.app.logError('Transparency value is invalid.');
                     return;
                 }
                 this.setTransparency(transparency);
@@ -359,6 +358,9 @@ export class UI {
     }
 
     setTransparency(transparency) {
+        // save
+        const tString = transparency.toString();
+        this.app.extension.settings.set_string('theme-transparency', tString);
         // set menu box transparency
         transparency = parseInt(transparency) / 100;
         this.items.set_style(
@@ -366,10 +368,6 @@ export class UI {
         );
         this.scrollView.set_style(
             `background-color: rgba(42, 42, 42, ${transparency});`,
-        );
-        this.app.extension.settings.set_string(
-            'theme-transparency',
-            parseInt(transparency * 100),
         );
     }
 }
