@@ -124,6 +124,7 @@ export class UI {
         this.transparencyButton = new St.Button({
             label: 'OK',
             style_class: 'transparency-ok-icon',
+            toggle_mode: true,
             can_focus: false,
         });
 
@@ -255,18 +256,18 @@ export class UI {
                 this.appearanceBox.add_child(this.transparencyLabel);
                 this.appearanceBox.add_child(this.transparencyEntry);
                 this.appearanceBox.add_child(this.transparencyButton);
+
+                this.transparencyButton.connect('clicked', (_self) => {
+                    const transparency =
+                        this.transparencyEntry.clutter_text.text;
+                    if (transparency === '' || isNaN(parseInt(transparency))) {
+                        this.app.logError('Transparency value is invalid.');
+                        return;
+                    }
+                    this.setTransparency(transparency);
+                });
             }
             this.appearanceBoxIsOpen = true;
-        });
-        this.transparencyButton.connect('clicked', (_self) => {
-            const transparency = this.transparencyEntry.clutter_text.text;
-            if (transparency === '' || isNaN(parseInt(transparency))) {
-                this.app.logError('Transparency value is invalid.');
-                return;
-            }
-            this.setTransparency(transparency);
-            this.app.menu.box.remove_child(this.appearanceBox);
-            this.appearanceBoxIsOpen = false;
         });
     }
 
