@@ -348,13 +348,10 @@ export class UI {
                 this.setTheme(this.app.userSettings.TRANSPARENCY, '0, 0, 200');
             });
             this.colorRedButton.connect('clicked', () => {
-                this.setTheme(
-                    this.app.userSettings.TRANSPARENCY,
-                    '2054, 54, 54',
-                );
+                this.setTheme(this.app.userSettings.TRANSPARENCY, '200, 0, 0');
             });
             this.colorGreenButton.connect('clicked', () => {
-                this.setTheme(this.app.userSettings.TRANSPARENCY, '0, 255, 0');
+                this.setTheme(this.app.userSettings.TRANSPARENCY, '0, 200, 0');
             });
             this.colorYellowButton.connect('clicked', () => {
                 this.setTheme(
