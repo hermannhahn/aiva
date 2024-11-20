@@ -272,7 +272,6 @@ export class UI {
             this.app.userSettings.TRANSPARENCY,
             this.app.userSettings.COLOR,
         );
-        this.scrollView.set_style(`background-color: rgba(42, 42, 42, 0);`);
     }
 
     /**
@@ -398,6 +397,7 @@ export class UI {
         this.setTheme(
             this.app.userSettings.TRANSPARENCY,
             this.app.userSettings.COLOR,
+            true,
         );
         // Question
         let inputChat = new PopupMenu.PopupMenuItem('', {
@@ -456,7 +456,7 @@ export class UI {
         return true;
     }
 
-    setTheme(transparency, color) {
+    setTheme(transparency, color, chat = false) {
         // set default if empty, null or undefined
         if (
             transparency === '' ||
@@ -483,8 +483,12 @@ export class UI {
         this.items.set_style(
             `background-color: rgba(${color}, ${transparency});`,
         );
-        this.scrollView.set_style(
-            `background-color: rgba(${color}, ${transparency});`,
-        );
+        if (chat) {
+            this.scrollView.set_style(
+                `background-color: rgba(${color}, ${transparency});`,
+            );
+        } else {
+            this.scrollView.set_style(`background-color: rgba(42, 42, 42, 0);`);
+        }
     }
 }
