@@ -119,8 +119,10 @@ export class UI {
         this.transparencyEntry = new St.Entry({
             style_class: 'transparency-entry',
             can_focus: true,
-            hint_text: this.app.userSettings.TRANSPARENCY,
         });
+        this.transparencyEntry.clutter_text.set_text(
+            this.app.userSettings.TRANSPARENCY,
+        );
 
         // Create transparency label
         this.transparencyLabel = new St.Label({
@@ -350,54 +352,24 @@ export class UI {
                     this.app.userSettings.TRANSPARENCY,
                     '2054, 54, 54',
                 );
-                this.colorRedButton.active = true;
-                this.colorBlueButton.active = false;
-                this.colorGreenButton.active = false;
-                this.colorYellowButton.active = false;
-                this.colorPurpleButton.active = false;
-                this.colorBlackButton.active = false;
             });
             this.colorGreenButton.connect('clicked', () => {
                 this.setTheme(this.app.userSettings.TRANSPARENCY, '0, 255, 0');
-                this.colorGreenButton.active = true;
-                this.colorRedButton.active = false;
-                this.colorBlueButton.active = false;
-                this.colorYellowButton.active = false;
-                this.colorPurpleButton.active = false;
-                this.colorBlackButton.active = false;
             });
             this.colorYellowButton.connect('clicked', () => {
                 this.setTheme(
                     this.app.userSettings.TRANSPARENCY,
                     '200, 200, 0',
                 );
-                this.colorYellowButton.active = true;
-                this.colorRedButton.active = false;
-                this.colorGreenButton.active = false;
-                this.colorBlueButton.active = false;
-                this.colorPurpleButton.active = false;
-                this.colorBlackButton.active = false;
             });
             this.colorPurpleButton.connect('clicked', () => {
                 this.setTheme(
                     this.app.userSettings.TRANSPARENCY,
                     '200, 0, 200',
                 );
-                this.colorPurpleButton.active = true;
-                this.colorRedButton.active = false;
-                this.colorGreenButton.active = false;
-                this.colorYellowButton.active = false;
-                this.colorBlueButton.active = false;
-                this.colorBlackButton.active = false;
             });
             this.colorBlackButton.connect('clicked', () => {
                 this.setTheme(this.app.userSettings.TRANSPARENCY, '54, 54, 54');
-                this.colorBlackButton.active = true;
-                this.colorRedButton.active = false;
-                this.colorGreenButton.active = false;
-                this.colorYellowButton.active = false;
-                this.colorBlueButton.active = false;
-                this.colorPurpleButton.active = false;
             });
         });
     }
@@ -499,8 +471,10 @@ export class UI {
         if (color === '' || color === null || color === undefined) {
             color = '54, 54, 54';
         }
+        // change transparencyEntry hint-text
+        this.transparencyEntry.clutter_text.set_text(transparency);
         // Set color button active
-        switch (this.app.userSettings.COLOR) {
+        switch (color) {
             case '0, 0, 200':
                 this.colorBlueButton.active = true;
                 this.colorRedButton.active = false;
@@ -528,7 +502,6 @@ export class UI {
                 break;
             case '200, 200, 0':
                 this.colorYellowButton.active = true;
-
                 this.colorRedButton.active = false;
                 this.colorGreenButton.active = false;
                 this.colorBlueButton.active = false;
@@ -538,9 +511,19 @@ export class UI {
                 break;
             case '200, 0, 200':
                 this.colorPurpleButton.active = true;
+                this.colorRedButton.active = false;
+                this.colorGreenButton.active = false;
+                this.colorYellowButton.active = false;
+                this.colorBlueButton.active = false;
+                this.colorBlackButton.active = false;
                 break;
             case '54, 54, 54':
                 this.colorBlackButton.active = true;
+                this.colorRedButton.active = false;
+                this.colorGreenButton.active = false;
+                this.colorYellowButton.active = false;
+                this.colorBlueButton.active = false;
+                this.colorPurpleButton.active = false;
                 break;
             default:
                 break;
@@ -560,6 +543,5 @@ export class UI {
         this.scrollView.set_style(
             `background-color: rgba(${color}, ${transparency});`,
         );
-        // set color
     }
 }
