@@ -115,6 +115,7 @@
     height: 30px;
     background-color: rgba(42, 42, 42, 0.857);
     position: relative;
+    float: right;
     border-radius: 10px;
     margin-bottom: 50px;
 }
