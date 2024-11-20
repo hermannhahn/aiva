@@ -1,15 +1,5 @@
 .app {
     background-color: transparent;
-    text-align: right;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-end;
-    /* margin-top: 30px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    padding: 0px; */
 }
 .app-box {
     background-color: transparent;
@@ -297,17 +287,22 @@
     font-size: 12px;
 }
 .appearance-box {
-    width: 500px;
-    height: 40px;
-    background-color: rgba(42, 42, 42, 0.857);
-    align-items: right;
-    justify-content: right;
-    text-align: right;
+    background-color: rgba(42, 42, 42, 0.757);
     border-radius: 10px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
 }
 .invisibl-area {
     width: 500px;
     height: 40px;
     background-color: transparent;
     padding-bottom: 10px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
 }
