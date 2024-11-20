@@ -93,7 +93,6 @@ const Aiva = GObject.registerClass(
          */
         _createInstances() {
             this.logger = new Logger(DEBUG);
-            this.gemini = new GoogleGemini(this);
             this.azure = new MicrosoftAzure(this);
             this.audio = new Audio(this);
             this.utils = new Utils(this);
