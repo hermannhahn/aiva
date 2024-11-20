@@ -289,8 +289,8 @@
     height: 40px;
     background-color: rgba(42, 42, 42, 0.857);
     position: relative;
-    display: flex;
-    flex-direction: row;
+    float: right;
+    margin-bottom: 50px;
     align-items: right;
     justify-content: right;
     text-align: right;
