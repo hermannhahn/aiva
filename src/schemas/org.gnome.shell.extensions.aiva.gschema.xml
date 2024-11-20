@@ -66,5 +66,13 @@
            Set transparency of theme
         </description>
     </key>
+    <!--- theme-color -->
+    <key name="theme-color" type="s">
+        <default>"0"</default>
+        <summary>Color of theme</summary>
+        <description>
+           Set color of theme
+        </description>
+    </key>
   </schema>
 </schemalist>
