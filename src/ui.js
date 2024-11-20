@@ -96,16 +96,18 @@ export class UI {
             can_focus: false,
         });
 
+        this.appearanceMenu = new PopupMenu.PopupBaseMenuItem({
+            style_class: 'app-items',
+            reactive: false,
+            can_focus: true,
+        });
+
         // Create appearance button
         this.appearanceButton = new St.Button({
             label: '🎨',
             style_class: 'appearance-icon',
             toggle_mode: true,
             can_focus: false,
-        });
-
-        this.subMenu = new St.BoxLayout({
-            style_class: 'invisibl-area',
         });
 
         // Create appearance box
@@ -189,7 +191,7 @@ export class UI {
      */
     _addItems() {
         // Add items container to app
-        this.app.menu.addMenuItem(this.subMenu);
+        this.app.menu.addMenuItem(this.appearanceMenu);
         this.app.menu.addMenuItem(this.items);
         this.app.menu.box.style_class = 'app';
 
@@ -248,13 +250,13 @@ export class UI {
         this.appearanceBoxIsOpen = false;
         this.appearanceButton.connect('clicked', (_self) => {
             if (this.appearanceBoxIsOpen) {
-                this.subMenu.remove_child(this.appearanceBox);
+                this.appearanceMenu.remove_child(this.appearanceBox);
                 this.appearanceBoxIsOpen = false;
                 return;
             }
             // get menu box parent
             // show appearance box
-            this.subMenu.add_child(this.appearanceBox);
+            this.appearanceMenu.add_child(this.appearanceBox);
             this.appearanceBox.add_child(this.transparencyLabel);
             this.appearanceBox.add_child(this.transparencyEntry);
             this.appearanceBox.add_child(this.transparencyButton);
