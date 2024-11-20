@@ -301,6 +301,7 @@ export class UI {
      * @returns {object} question item
      */
     question() {
+        this.setTransparency(this.app.userSettings.TRANSPARENCY);
         // Question
         let inputChat = new PopupMenu.PopupMenuItem('', {
             style_class: 'input-chat',
