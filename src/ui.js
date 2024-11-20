@@ -313,6 +313,7 @@ export class UI {
             this.appearanceBox.add_child(this.transparencyEntry);
             this.appearanceBox.add_child(this.transparencyButton);
             // Add appearance buttons to appearance box
+            this.appearanceBox.add_child(this.colorsLabel);
             this.appearanceBox.add_child(this.colorBlueButton);
             this.appearanceBox.add_child(this.colorRedButton);
             this.appearanceBox.add_child(this.colorGreenButton);
