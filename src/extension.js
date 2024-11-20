@@ -200,6 +200,7 @@ const Aiva = GObject.registerClass(
                     let response = decoder.decode(bytes.get_data());
                     const res = JSON.parse(response);
                     const country = res.country;
+                    this.userSettings.LOCATION = country;
                     return country;
                 },
             );
