@@ -251,7 +251,7 @@ export class UI {
             // get menu box parent
             // show appearance box
             if (parent) {
-                parent.insert_child_above(this.appearanceBox, this.items);
+                parent.insert_child_above(this.appearanceBox, this.app.menu);
                 this.appearanceBox.add_child(this.transparencyLabel);
                 this.appearanceBox.add_child(this.transparencyEntry);
                 this.appearanceBox.add_child(this.transparencyButton);
