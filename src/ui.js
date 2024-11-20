@@ -111,7 +111,7 @@ export class UI {
 
         // Create transparency slider
         this.transparencyEntry = new St.Entry({
-            style_class: 'transparency-slider',
+            style_class: 'transparency-entry',
             can_focus: true,
         });
 
