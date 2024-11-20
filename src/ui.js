@@ -42,7 +42,7 @@ export class UI {
         });
 
         // Create app item section
-        this.item = new PopupMenu.PopupBaseMenuItem({
+        this.items = new PopupMenu.PopupBaseMenuItem({
             style_class: 'app-items',
             reactive: false,
             can_focus: true,
@@ -185,17 +185,17 @@ export class UI {
      */
     _addItems() {
         // Add items container to app
-        this.app.menu.addMenuItem(this.item);
+        this.app.menu.addMenuItem(this.items);
         this.app.menu.box.style_class = 'app';
 
         // Add items
-        this.item.add_child(this.statusBar);
-        this.item.add_child(this.searchEntry);
-        this.item.add_child(this.enterButton);
-        this.item.add_child(this.micButton);
-        this.item.add_child(this.clearButton);
-        this.item.add_child(this.settingsButton);
-        this.item.add_child(this.appearanceButton);
+        this.items.add_child(this.statusBar);
+        this.items.add_child(this.searchEntry);
+        this.items.add_child(this.enterButton);
+        this.items.add_child(this.micButton);
+        this.items.add_child(this.clearButton);
+        this.items.add_child(this.settingsButton);
+        this.items.add_child(this.appearanceButton);
 
         // Add scrollview
         this.app.menu.box.add_child(this.scrollView);
@@ -251,7 +251,7 @@ export class UI {
             // get menu box parent
             // show appearance box
             if (parent) {
-                parent.insert_child_above(this.appearanceBox, this.item);
+                parent.insert_child_above(this.appearanceBox, this.items);
                 this.appearanceBox.add_child(this.transparencyLabel);
                 this.appearanceBox.add_child(this.transparencyEntry);
                 this.appearanceBox.add_child(this.transparencyButton);
