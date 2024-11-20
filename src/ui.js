@@ -123,7 +123,7 @@ export class UI {
 
         // Create transparency label
         this.transparencyLabel = new St.Label({
-            text: 'Transparency: 🎚',
+            text: 'Transparency: ',
             style_class: 'transparency-label',
         });
 
@@ -135,6 +135,12 @@ export class UI {
             can_focus: true,
             hover: true,
             reactive: true,
+        });
+
+        // Create colors label
+        this.colorsLabel = new St.Label({
+            text: 'Color: ',
+            style_class: 'transparency-label',
         });
 
         // Create color blue button
