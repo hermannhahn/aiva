@@ -70,6 +70,10 @@ const Aiva = GObject.registerClass(
                 this.extension.uuid,
             ]);
             // user settings
+            let username = settings.get_string('username');
+            if (username === '') {
+                username = GLib.get_real_name();
+            }
             this.userSettings = {
                 ASSIST_NAME: settings.get_string('assist-name'),
                 AZURE_SPEECH_KEY: settings.get_string('azure-speech-key'),
@@ -82,7 +86,7 @@ const Aiva = GObject.registerClass(
                 HISTORY_FILE: GLib.build_filenamev([EXT_DIR, 'history.json']),
                 LOCATION: this._getLocation(),
                 RECURSIVE_TALK: settings.get_boolean('log-history'),
-                USERNAME: GLib.get_real_name(),
+                USERNAME: username,
                 TRANSPARENCY: settings.get_string('theme-transparency'),
                 COLOR: settings.get_string('theme-color'),
             };
