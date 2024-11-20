@@ -481,7 +481,7 @@ export class UI {
         this.app.extension.settings.set_string('theme-color', color);
         this.app.userSettings.COLOR = color;
         // set theme
-        transparency -= 100;
+        transparency = 100 - transparency;
         transparency = parseInt(transparency) / 100;
         this.items.set_style(
             `background-color: rgba(${color}, ${transparency});`,
