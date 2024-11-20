@@ -1,5 +1,4 @@
 import St from 'gi://St';
-// import Gtk from 'gi://Gtk';
 import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
@@ -111,18 +110,22 @@ export class UI {
         });
 
         // Create transparency slider
-        this.transparencySlider = new St.Slider({
+        this.transparencyEntry = new St.Entry({
             style_class: 'transparency-slider',
-            value: 1,
-            min: 0,
-            max: 1,
-            step: 0.01,
+            can_focus: true,
         });
 
         // Create transparency label
         this.transparencyLabel = new St.Label({
             label: '🎚',
             style_class: 'transparency-label',
+        });
+
+        // Create transparency ok button
+        this.transparencyButton = new St.Button({
+            label: 'OK',
+            style_class: 'transparency-ok-icon',
+            can_focus: false,
         });
 
         // Create scrollbar
@@ -244,12 +247,20 @@ export class UI {
             }
             // show appearance box
             this.app.menu.box.add_child(this.appearanceBox);
-            this.appearanceBox.add_child(this.transparencySlider);
+            this.appearanceBox.add_child(this.transparencyEntry);
             this.appearanceBox.add_child(this.transparencyLabel);
-            this.transparencySlider.connect('value-changed', () => {
-                const transparency = this.transparencySlider.value;
-                this.setTransparency(transparency);
-            });
+            this.appearanceBox.add_child(this.transparencyButton);
+            this.appearanceBoxIsOpen = true;
+        });
+        this.transparencyButton.connect('clicked', (_self) => {
+            const transparency = this.transparencyEntry.clutter_text.text;
+            if (transparency === '' || isNaN(parseInt(transparency))) {
+                this.app.logError('Transparency value is invalid.');
+                return;
+            }
+            this.setTransparency(transparency);
+            this.app.menu.box.remove_child(this.appearanceBox);
+            this.appearanceBoxIsOpen = false;
         });
     }
 
