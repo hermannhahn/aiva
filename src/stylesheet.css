@@ -288,9 +288,6 @@
     width: 500px;
     height: 40px;
     background-color: rgba(42, 42, 42, 0.857);
-    position: absolute;
-    float: right;
-    margin-bottom: 50px;
     align-items: right;
     justify-content: right;
     text-align: right;
