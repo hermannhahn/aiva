@@ -244,11 +244,18 @@ export class UI {
                 this.appearanceBoxIsOpen = false;
                 return;
             }
+            // get menu box parent
+            const parent = this.app.menu.box.get_parent();
             // show appearance box
-            this.app.menu.box.add_child(this.appearanceBox);
-            this.appearanceBox.add_child(this.transparencyLabel);
-            this.appearanceBox.add_child(this.transparencyEntry);
-            this.appearanceBox.add_child(this.transparencyButton);
+            if (parent) {
+                parent.insert_child_above(
+                    this.appearanceBox,
+                    this.app.menu.box,
+                );
+                this.appearanceBox.add_child(this.transparencyLabel);
+                this.appearanceBox.add_child(this.transparencyEntry);
+                this.appearanceBox.add_child(this.transparencyButton);
+            }
             this.appearanceBoxIsOpen = true;
         });
         this.transparencyButton.connect('clicked', (_self) => {
