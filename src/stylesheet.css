@@ -1,5 +1,4 @@
 .app {
-    color: aliceblue;
     background-color: transparent;
     text-align: right;
     display: flex;
@@ -11,6 +10,9 @@
     margin-left: 0px;
     margin-right: 0px;
     padding: 0px; */
+}
+.app-box {
+    background-color: transparent;
 }
 .app-items {
     padding-top: 0px;
