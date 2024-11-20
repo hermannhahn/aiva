@@ -367,5 +367,9 @@ export class UI {
         this.scrollView.set_style(
             `background-color: rgba(42, 42, 42, ${transparency});`,
         );
+        this.app.extension.settings.set_int(
+            'theme-transparency',
+            parseInt(transparency * 100),
+        );
     }
 }
