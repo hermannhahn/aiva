@@ -123,6 +123,7 @@ export class UI {
 
         // Create transparency label
         this.transparencyLabel = new St.Label({
+            text: 'Transparency: 🎚',
             style_class: 'transparency-label',
         });
 
