@@ -104,7 +104,7 @@ export class UI {
             can_focus: false,
         });
 
-        this.invisibleArea = new St.BoxLayout({
+        this.subMenu = new St.BoxLayout({
             style_class: 'invisibl-area',
         });
 
@@ -189,6 +189,7 @@ export class UI {
      */
     _addItems() {
         // Add items container to app
+        this.app.menu.addMenuItem(this.subMenu);
         this.app.menu.addMenuItem(this.items);
         this.app.menu.box.style_class = 'app';
 
@@ -246,33 +247,26 @@ export class UI {
         // If press appearance button
         this.appearanceBoxIsOpen = false;
         this.appearanceButton.connect('clicked', (_self) => {
-            const parent = this.app.menu.box.get_parent();
             if (this.appearanceBoxIsOpen) {
-                parent.remove_child(this.appearanceBox);
+                this.subMenu.remove_child(this.appearanceBox);
                 this.appearanceBoxIsOpen = false;
                 return;
             }
             // get menu box parent
             // show appearance box
-            if (parent) {
-                parent.insert_child_above(
-                    this.appearanceBox,
-                    this.app.menu.box,
-                );
-                this.appearanceBox.add_child(this.transparencyLabel);
-                this.appearanceBox.add_child(this.transparencyEntry);
-                this.appearanceBox.add_child(this.transparencyButton);
+            this.subMenu.add_child(this.appearanceBox);
+            this.appearanceBox.add_child(this.transparencyLabel);
+            this.appearanceBox.add_child(this.transparencyEntry);
+            this.appearanceBox.add_child(this.transparencyButton);
 
-                this.transparencyButton.connect('clicked', (_self) => {
-                    const transparency =
-                        this.transparencyEntry.clutter_text.text;
-                    if (transparency === '' || isNaN(parseInt(transparency))) {
-                        this.app.logError('Transparency value is invalid.');
-                        return;
-                    }
-                    this.setTransparency(transparency);
-                });
-            }
+            this.transparencyButton.connect('clicked', (_self) => {
+                const transparency = this.transparencyEntry.clutter_text.text;
+                if (transparency === '' || isNaN(parseInt(transparency))) {
+                    this.app.logError('Transparency value is invalid.');
+                    return;
+                }
+                this.setTransparency(transparency);
+            });
             this.appearanceBoxIsOpen = true;
         });
     }
