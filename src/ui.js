@@ -246,8 +246,8 @@ export class UI {
             }
             // show appearance box
             this.app.menu.box.add_child(this.appearanceBox);
-            this.appearanceBox.add_child(this.transparencyEntry);
             this.appearanceBox.add_child(this.transparencyLabel);
+            this.appearanceBox.add_child(this.transparencyEntry);
             this.appearanceBox.add_child(this.transparencyButton);
             this.appearanceBoxIsOpen = true;
         });
