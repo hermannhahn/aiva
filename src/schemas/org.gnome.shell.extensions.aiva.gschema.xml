@@ -74,5 +74,13 @@
            Set color of theme
         </description>
     </key>
+    <!--- user-name -->
+    <key name="user-name" type="s">
+        <default>"0"</default>
+        <summary>User nanem</summary>
+        <description>
+           Set user name
+        </description>
+    </key>
   </schema>
 </schemalist>
