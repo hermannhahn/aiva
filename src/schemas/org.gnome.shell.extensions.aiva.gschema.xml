@@ -59,7 +59,7 @@
         </description>
     </key>
     <!--- theme-transparency -->
-    <key name="theme-transparency" type="s">
+    <key name="theme-transparency" type="i">
         <default>"0"</default>
         <summary>Transparency of theme</summary>
         <description>
