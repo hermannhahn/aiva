@@ -275,6 +275,7 @@
     background-color: transparent;
     width: 24px;
     height: 24px;
+    padding-left: 5px;
 }
 .colors-icon:hover {
     background-color: '#424242';
