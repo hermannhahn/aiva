@@ -209,6 +209,9 @@ export class UI {
 
         // Add chat to scrollbar
         this.scrollView.add_child(this.chatSection.actor);
+
+        // Apply userSettings appearance
+        this.setTransparency(this.app.userSettings.TRANSPARENCY);
     }
 
     /**
