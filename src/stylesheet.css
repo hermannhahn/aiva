@@ -293,5 +293,5 @@
     align-items: right;
     justify-content: right;
     border-radius: 10px;
-    padding-bottom: 50px;
+    margin-top: -100px;
 }
