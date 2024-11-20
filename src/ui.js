@@ -326,10 +326,12 @@ export class UI {
             this.appearanceBox.add_child(this.transparencyButton);
             // Add appearance buttons to appearance box
             this.appearanceBox.add_child(this.colorsLabel);
+            this.appearanceBox.add_child(this.colorBlackButton);
             this.appearanceBox.add_child(this.colorBlueButton);
             this.appearanceBox.add_child(this.colorRedButton);
             this.appearanceBox.add_child(this.colorGreenButton);
             this.appearanceBox.add_child(this.colorYellowButton);
+            this.appearanceBox.add_child(this.colorPurpleButton);
 
             this.transparencyButton.connect('clicked', (_self) => {
                 const transparency = this.transparencyEntry.clutter_text.text;
