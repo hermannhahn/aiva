@@ -119,7 +119,7 @@ export class UI {
         this.transparencyEntry = new St.Entry({
             style_class: 'transparency-entry',
             can_focus: true,
-            value: this.app.userSettings.TRANSPARENCY,
+            hint_text: this.app.userSettings.TRANSPARENCY,
         });
 
         // Create transparency label
