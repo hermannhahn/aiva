@@ -486,5 +486,11 @@ export class UI {
         this.scrollView.set_style(
             `background-color: rgba(${color}, ${transparency});`,
         );
+        if (transparency < 0.8) {
+            transparency += 0.2;
+        }
+        this.searchEntry.set_style(
+            `background-color: rgba(${color}, ${transparency});`,
+        );
     }
 }
