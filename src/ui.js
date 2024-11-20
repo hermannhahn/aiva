@@ -137,6 +137,46 @@ export class UI {
             reactive: true,
         });
 
+        // Create color blue button
+        this.colorBlueButton = new St.Button({
+            label: '🟦',
+            style_class: 'colors-icon',
+            toggle_mode: true,
+            can_focus: true,
+            hover: true,
+            reactive: true,
+        });
+
+        // Create color red button
+        this.colorRedButton = new St.Button({
+            label: '🟥',
+            style_class: 'colors-icon',
+            toggle_mode: true,
+            can_focus: true,
+            hover: true,
+            reactive: true,
+        });
+
+        // Create color green button
+        this.colorGreenButton = new St.Button({
+            label: '🟩',
+            style_class: 'colors-icon',
+            toggle_mode: true,
+            can_focus: true,
+            hover: true,
+            reactive: true,
+        });
+
+        // Create color yellow button
+        this.colorYellowButton = new St.Button({
+            label: '🟨',
+            style_class: 'colors-icon',
+            toggle_mode: true,
+            can_focus: true,
+            hover: true,
+            reactive: true,
+        });
+
         // Create scrollbar
         this.scrollView = new St.ScrollView({
             style_class: 'chat-scroll',
@@ -263,9 +303,15 @@ export class UI {
             // get menu box parent
             // show appearance box
             this.appearanceMenu.add_child(this.appearanceBox);
+            // Add transparency slider
             this.appearanceBox.add_child(this.transparencyLabel);
             this.appearanceBox.add_child(this.transparencyEntry);
             this.appearanceBox.add_child(this.transparencyButton);
+            // Add appearance buttons to appearance box
+            this.appearanceBox.add_child(this.colorBlueButton);
+            this.appearanceBox.add_child(this.colorRedButton);
+            this.appearanceBox.add_child(this.colorGreenButton);
+            this.appearanceBox.add_child(this.colorYellowButton);
 
             this.transparencyButton.connect('clicked', (_self) => {
                 const transparency = this.transparencyEntry.clutter_text.text;
