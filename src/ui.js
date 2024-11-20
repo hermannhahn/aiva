@@ -119,6 +119,7 @@ export class UI {
         this.transparencyEntry = new St.Entry({
             style_class: 'transparency-entry',
             can_focus: true,
+            value: this.app.userSettings.TRANSPARENCY,
         });
 
         // Create transparency label
@@ -168,6 +169,22 @@ export class UI {
         // Create color yellow button
         this.colorYellowButton = new St.Button({
             label: '🟨',
+            style_class: 'colors-icon',
+            toggle_mode: true,
+            can_focus: true,
+        });
+
+        // Create color purple button
+        this.colorPurpleButton = new St.Button({
+            label: '🟪',
+            style_class: 'colors-icon',
+            toggle_mode: true,
+            can_focus: true,
+        });
+
+        // Create color black button
+        this.colorBlackButton = new St.Button({
+            label: '⬛',
             style_class: 'colors-icon',
             toggle_mode: true,
             can_focus: true,
@@ -249,7 +266,10 @@ export class UI {
         this.scrollView.add_child(this.chatSection.actor);
 
         // Apply userSettings appearance
-        this.setTransparency(this.app.userSettings.TRANSPARENCY);
+        this.setTheme(
+            this.app.userSettings.TRANSPARENCY,
+            this.app.userSettings.COLOR,
+        );
         this.scrollView.set_style(`background-color: rgba(42, 42, 42, 0);`);
     }
 
@@ -296,6 +316,7 @@ export class UI {
                 this.appearanceBoxIsOpen = false;
                 return;
             }
+            this.appearanceBoxIsOpen = true;
             // get menu box parent
             // show appearance box
             this.appearanceMenu.add_child(this.appearanceBox);
@@ -315,9 +336,93 @@ export class UI {
                 if (transparency === '' || isNaN(parseInt(transparency))) {
                     return;
                 }
-                this.setTransparency(transparency);
+                this.setTheme(transparency, this.app.userSettings.COLOR);
             });
-            this.appearanceBoxIsOpen = true;
+
+            // Set color button active
+            switch (this.app.userSettings.COLOR) {
+                case '0, 0, 200':
+                    this.colorBlueButton.active = true;
+                    break;
+                case '200, 0, 0':
+                    this.colorRedButton.active = true;
+                    break;
+                case '0, 255, 0':
+                    this.colorGreenButton.active = true;
+                    break;
+                case '200, 200, 0':
+                    this.colorYellowButton.active = true;
+                    break;
+                case '200, 0, 200':
+                    this.colorPurpleButton.active = true;
+                    break;
+                case '0, 0, 0':
+                    this.colorBlackButton.active = true;
+                    break;
+                default:
+                    break;
+            }
+            // Connect color buttons
+            this.colorBlueButton.connect('clicked', () => {
+                this.setTheme(this.app.userSettings.TRANSPARENCY, '0, 0, 200');
+                this.colorBlueButton.active = true;
+                this.colorRedButton.active = false;
+                this.colorGreenButton.active = false;
+                this.colorYellowButton.active = false;
+                this.colorPurpleButton.active = false;
+                this.colorBlackButton.active = false;
+            });
+            this.colorRedButton.connect('clicked', () => {
+                this.setTheme(this.app.userSettings.TRANSPARENCY, '200, 0, 0');
+                this.colorRedButton.active = true;
+                this.colorBlueButton.active = false;
+                this.colorGreenButton.active = false;
+                this.colorYellowButton.active = false;
+                this.colorPurpleButton.active = false;
+                this.colorBlackButton.active = false;
+            });
+            this.colorGreenButton.connect('clicked', () => {
+                this.setTheme(this.app.userSettings.TRANSPARENCY, '0, 255, 0');
+                this.colorGreenButton.active = true;
+                this.colorRedButton.active = false;
+                this.colorBlueButton.active = false;
+                this.colorYellowButton.active = false;
+                this.colorPurpleButton.active = false;
+                this.colorBlackButton.active = false;
+            });
+            this.colorYellowButton.connect('clicked', () => {
+                this.setTheme(
+                    this.app.userSettings.TRANSPARENCY,
+                    '200, 200, 0',
+                );
+                this.colorYellowButton.active = true;
+                this.colorRedButton.active = false;
+                this.colorGreenButton.active = false;
+                this.colorBlueButton.active = false;
+                this.colorPurpleButton.active = false;
+                this.colorBlackButton.active = false;
+            });
+            this.colorPurpleButton.connect('clicked', () => {
+                this.setTheme(
+                    this.app.userSettings.TRANSPARENCY,
+                    '200, 0, 200',
+                );
+                this.colorPurpleButton.active = true;
+                this.colorRedButton.active = false;
+                this.colorGreenButton.active = false;
+                this.colorYellowButton.active = false;
+                this.colorBlueButton.active = false;
+                this.colorBlackButton.active = false;
+            });
+            this.colorBlackButton.connect('clicked', () => {
+                this.setTheme(this.app.userSettings.TRANSPARENCY, '0, 0, 0');
+                this.colorBlackButton.active = true;
+                this.colorRedButton.active = false;
+                this.colorGreenButton.active = false;
+                this.colorYellowButton.active = false;
+                this.colorBlueButton.active = false;
+                this.colorPurpleButton.active = false;
+            });
         });
     }
 
@@ -345,7 +450,10 @@ export class UI {
      * @returns {object} question item
      */
     question() {
-        this.setTransparency(this.app.userSettings.TRANSPARENCY);
+        this.setTheme(
+            this.app.userSettings.TRANSPARENCY,
+            this.app.userSettings.COLOR,
+        );
         // Question
         let inputChat = new PopupMenu.PopupMenuItem('', {
             style_class: 'input-chat',
@@ -403,17 +511,21 @@ export class UI {
         return true;
     }
 
-    setTransparency(transparency) {
+    setTheme(transparency, color) {
         // save
         const tString = transparency.toString();
         this.app.extension.settings.set_string('theme-transparency', tString);
-        // set menu box transparency
+        this.app.userSettings.TRANSPARENCY = tString;
+        this.app.extension.settings.set_string('theme-color', color);
+        this.app.userSettings.COLOR = color;
+        // set theme
         transparency = parseInt(transparency) / 100;
         this.items.set_style(
-            `background-color: rgba(42, 42, 42, ${transparency});`,
+            `background-color: rgba(${color}, ${transparency});`,
         );
         this.scrollView.set_style(
-            `background-color: rgba(42, 42, 42, ${transparency});`,
+            `background-color: rgba(${color}, ${transparency});`,
         );
+        // set color
     }
 }
