@@ -104,6 +104,10 @@ export class UI {
             can_focus: false,
         });
 
+        this.invisibleArea = new St.BoxLayout({
+            style_class: 'invisibl-area',
+        });
+
         // Create appearance box
         this.appearanceBox = new St.BoxLayout({
             style_class: 'appearance-box',
@@ -251,7 +255,10 @@ export class UI {
             // get menu box parent
             // show appearance box
             if (parent) {
-                parent.insert_child_above(this.appearanceBox, this.app.menu.box);
+                parent.insert_child_above(
+                    this.appearanceBox,
+                    this.app.menu.box,
+                );
                 this.appearanceBox.add_child(this.transparencyLabel);
                 this.appearanceBox.add_child(this.transparencyEntry);
                 this.appearanceBox.add_child(this.transparencyButton);
