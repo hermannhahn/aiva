@@ -299,12 +299,13 @@
 }
 .transparency-ok-icon {
     font-family: 'Courier New', Courier, monospace;
-    background-color: '#424242';
+    background-color: rgb(45, 45, 45);
     font-size: 12px;
     width: 40px;
     height: 40px;
     margin-top: 5px;
     margin-bottom: 5px;
+    border-radius: 5px;
 }
 .transparency-ok-icon:hover {
     background-color: rgb(54, 54, 54);
@@ -318,8 +319,9 @@
     font-weight: bold;
     width: 40px;
     height: 40px;
-    margin-top: 15px;
+    margin-top: 20px;
     margin-right: 5px;
+    margin-left: 5px;
 }
 .colors-icon {
     /* background-image: url('assets/icon_settings.png');
