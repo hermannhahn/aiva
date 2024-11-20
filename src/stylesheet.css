@@ -2,7 +2,10 @@
     color: aliceblue;
     background-color: rgba(42, 42, 42, 0.757);
     border-radius: 10px;
-    margin: 0px;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
     padding: 0px;
 }
 .app-items {
