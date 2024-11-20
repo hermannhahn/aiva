@@ -111,7 +111,19 @@ export class UI {
         });
 
         // Create transparency slider
-        this.transparency;
+        this.transparencySlider = new St.Slider({
+            style_class: 'transparency-slider',
+            value: 1,
+            min: 0,
+            max: 1,
+            step: 0.01,
+        });
+
+        // Create transparency label
+        this.transparencyLabel = new St.Label({
+            label: '🎚',
+            style_class: 'transparency-label',
+        });
 
         // Create scrollbar
         this.scrollView = new St.ScrollView({
@@ -178,6 +190,7 @@ export class UI {
         this.item.add_child(this.micButton);
         this.item.add_child(this.clearButton);
         this.item.add_child(this.settingsButton);
+        this.item.add_child(this.appearanceButton);
 
         // Add scrollview
         this.app.menu.box.add_child(this.scrollView);
@@ -219,6 +232,24 @@ export class UI {
             this.app.openSettings();
             // Close App
             this.app.menu.close();
+        });
+
+        // If press appearance button
+        this.appearanceBoxIsOpen = false;
+        this.appearanceButton.connect('clicked', (_self) => {
+            if (this.appearanceBoxIsOpen) {
+                this.app.menu.box.remove_child(this.appearanceBox);
+                this.appearanceBoxIsOpen = false;
+                return;
+            }
+            // show appearance box
+            this.app.menu.box.add_child(this.appearanceBox);
+            this.appearanceBox.add_child(this.transparencySlider);
+            this.appearanceBox.add_child(this.transparencyLabel);
+            this.transparencySlider.connect('value-changed', () => {
+                const transparency = this.transparencySlider.value;
+                this.setTransparency(transparency);
+            });
         });
     }
 
