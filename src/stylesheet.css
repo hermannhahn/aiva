@@ -283,3 +283,7 @@
 .transparency-ok-icon:hover {
     background-color: '#424242';
 }
+.transparency-entry {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+}
