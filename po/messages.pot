@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-21 01:47-0300\n"
+"POT-Creation-Date: 2024-11-21 10:26-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -454,11 +454,11 @@ msgstr ""
 msgid "Failed to get text from clipboard"
 msgstr ""
 
-#: src/utils/utils.js:574
+#: src/utils/utils.js:578
 msgid "Hi! I am"
 msgstr ""
 
-#: src/utils/utils.js:577
+#: src/utils/utils.js:581
 msgid ", your helpfull assistant."
 msgstr ""
 
