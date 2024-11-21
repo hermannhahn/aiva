@@ -25,7 +25,6 @@ export default class ClipboardIndicatorPreferences extends ExtensionPreferences 
 class AivaSettings {
     constructor(schema) {
         this.schema = schema;
-        this.utils = new Utils(this);
 
         // Get default values
         const defaultKey = this.schema.get_string('gemini-api-key');
