@@ -22,14 +22,7 @@ export class UI {
         this.app.log('Initializing UI...');
 
         // Create tray
-        this.main.CreateTray();
-
-        // Create app item section
-        this.items = new PopupMenu.PopupBaseMenuItem({
-            style_class: 'app-items',
-            reactive: false,
-            can_focus: true,
-        });
+        this.main.CreateInterface();
 
         // Status Icon
         this.statusBar = new St.Button({
@@ -230,22 +223,22 @@ export class UI {
      */
     _addItems() {
         // Add items container to app
-        this.app.menu.addMenuItem(this.appearanceMenu);
-        this.app.menu.addMenuItem(this.items);
-        this.app.menu.style_class = 'app';
-        this.app.menu.box.style_class = 'app-box';
+        this.app.interface.addMenuItem(this.appearanceMenu);
+        this.app.interface.addMenuItem(this.menu);
+        this.app.interface.style_class = 'app';
+        this.app.interface.box.style_class = 'app-box';
 
         // Add items
-        this.items.add_child(this.statusBar);
-        this.items.add_child(this.searchEntry);
-        this.items.add_child(this.enterButton);
-        this.items.add_child(this.micButton);
-        this.items.add_child(this.clearButton);
-        this.items.add_child(this.settingsButton);
-        this.items.add_child(this.appearanceButton);
+        this.menu.add_child(this.statusBar);
+        this.menu.add_child(this.searchEntry);
+        this.menu.add_child(this.enterButton);
+        this.menu.add_child(this.micButton);
+        this.menu.add_child(this.clearButton);
+        this.menu.add_child(this.settingsButton);
+        this.menu.add_child(this.appearanceButton);
 
         // Add scrollview
-        this.app.menu.box.add_child(this.scrollView);
+        this.app.interface.box.add_child(this.scrollView);
 
         // Add chat to scrollbar
         this.scrollView.add_child(this.chatSection.actor);
@@ -280,10 +273,10 @@ export class UI {
         this.clearButton.connect('clicked', (_self) => {
             this.searchEntry.clutter_text.set_text('');
             this.app.chat.history = [];
-            this.app.menu.box.remove_child(this.scrollView);
+            this.app.interface.box.remove_child(this.scrollView);
             this.chatSection = new PopupMenu.PopupMenuSection();
             this.scrollView.add_child(this.chatSection.actor);
-            this.app.menu.box.add_child(this.scrollView);
+            this.app.interface.box.add_child(this.scrollView);
         });
 
         // If press settings button
@@ -294,7 +287,7 @@ export class UI {
                 this.appearanceMenu.remove_child(this.appearanceBox);
                 this.appearanceBoxIsOpen = false;
             }
-            this.app.menu.close();
+            this.app.interface.close();
         });
 
         // If press appearance button
@@ -467,7 +460,7 @@ export class UI {
         // set theme
         transparency = 100 - transparency;
         transparency = parseInt(transparency) / 100;
-        this.items.set_style(
+        this.menu.set_style(
             `background-color: rgba(${color}, ${transparency});`,
         );
         this.scrollView.set_style(
