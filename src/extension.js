@@ -60,6 +60,7 @@ const Aiva = GObject.registerClass(
             // extension settings
             const {settings} = this.extension;
             this._shortcutBinding = null;
+            this.interface = this.menu;
             // extension directory
             const EXT_DIR = GLib.build_filenamev([
                 GLib.get_home_dir(),
