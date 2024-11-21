@@ -73,6 +73,7 @@ const Aiva = GObject.registerClass(
             let username = settings.get_string('user-name');
             if (username === '') {
                 username = GLib.get_real_name();
+                settings.set_string('user-name', username);
             }
             this.userSettings = {
                 ASSIST_NAME: settings.get_string('assist-name'),
