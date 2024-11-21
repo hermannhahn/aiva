@@ -8,7 +8,7 @@ export class Menu {
 
     CreateMenu() {
         // Create app item section
-        this.app.items = new PopupMenu.PopupBaseMenuItem({
+        this.app.ui.items = new PopupMenu.PopupBaseMenuItem({
             style_class: 'app-items',
             reactive: false,
             can_focus: true,
