@@ -1,4 +1,4 @@
-export class StLayouts {
+export class Layouts {
     constructor(app) {
         this.app = app;
     }
