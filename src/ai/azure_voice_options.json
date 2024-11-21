@@ -1,0 +1,498 @@
+{
+  "en-US": [
+    {
+      "voice": "en-US-AvaNeural",
+      "label": "Ava Neural"
+    },
+    {
+      "voice": "en-US-AndrewNeural",
+      "label": "Andrew Neural"
+    },
+    {
+      "voice": "en-US-EmmaNeural",
+      "label": "Emma Neural"
+    },
+    {
+      "voice": "en-US-BrianNeural",
+      "label": "Brian Neural"
+    },
+    {
+      "voice": "en-US-JennyNeural",
+      "label": "Jenny Neural"
+    },
+    {
+      "voice": "en-US-GuyNeural",
+      "label": "Guy Neural"
+    },
+    {
+      "voice": "en-US-AriaNeural",
+      "label": "Aria Neural"
+    },
+    {
+      "voice": "en-US-DavisNeural",
+      "label": "Davis Neural"
+    },
+    {
+      "voice": "en-US-JaneNeural",
+      "label": "Jane Neural"
+    },
+    {
+      "voice": "en-US-JasonNeural",
+      "label": "Jason Neural"
+    },
+    {
+      "voice": "en-US-SaraNeural",
+      "label": "Sara Neural"
+    },
+    {
+      "voice": "en-US-TonyNeural",
+      "label": "Tony Neural"
+    },
+    {
+      "voice": "en-US-NancyNeural",
+      "label": "Nancy Neural"
+    },
+    {
+      "voice": "en-US-AmberNeural",
+      "label": "Amber Neural"
+    },
+    {
+      "voice": "en-US-AnaNeural",
+      "label": "Ana Neural"
+    },
+    {
+      "voice": "en-US-AshleyNeural",
+      "label": "Ashley Neural"
+    },
+    {
+      "voice": "en-US-BrandonNeural",
+      "label": "Brandon Neural"
+    },
+    {
+      "voice": "en-US-ChristopherNeural",
+      "label": "Christopher Neural"
+    },
+    {
+      "voice": "en-US-CoraNeural",
+      "label": "Cora Neural"
+    },
+    {
+      "voice": "en-US-ElizabethNeural",
+      "label": "Elizabeth Neural"
+    },
+    {
+      "voice": "en-US-EricNeural",
+      "label": "Eric Neural"
+    },
+    {
+      "voice": "en-US-JacobNeural",
+      "label": "Jacob Neural"
+    },
+    {
+      "voice": "en-US-JennyMultilingualNeural",
+      "label": "Jenny Multilingual Neural (4x)"
+    },
+    {
+      "voice": "en-US-MichelleNeural",
+      "label": "Michelle Neural"
+    },
+    {
+      "voice": "en-US-MonicaNeural",
+      "label": "Monica Neural"
+    },
+    {
+      "voice": "en-US-RogerNeural",
+      "label": "Roger Neural"
+    },
+    {
+      "voice": "en-US-RyanMultilingualNeural",
+      "label": "Ryan Multilingual Neural (4x)"
+    },
+    {
+      "voice": "en-US-SteffanNeural",
+      "label": "Steffan Neural"
+    },
+    {
+      "voice": "en-US-AdamMultilingualNeural",
+      "label": "Adam Multilingual Neural (1.4x)"
+    },
+    {
+      "voice": "en-US-AIGenerate1Neural",
+      "label": "AIGenerate 1 Neural (1x)"
+    },
+    {
+      "voice": "en-US-AIGenerate2Neural",
+      "label": "AIGenerate 2 Neural (1x)"
+    },
+    {
+      "voice": "en-US-AlloyTurboMultilingualNeural",
+      "label": "Alloy Turbo Multilingual Neural (1.4x)"
+    },
+    {
+      "voice": "en-US-AmandaMultilingualNeural",
+      "label": "Amanda Multilingual Neural (1.4x)"
+    },
+    {
+      "voice": "en-US-BlueNeural",
+      "label": "Blue Neural (1)"
+    },
+    {
+      "voice": "en-US-BrandonMultilingualNeural",
+      "label": "Brandon Multilingual Neural (1.4x)"
+    },
+    {
+      "voice": "en-US-ChristopherMultilingualNeural",
+      "label": "Christopher Multilingual Neural (1.4x)"
+    },
+    {
+      "voice": "en-US-CoraMultilingualNeural",
+      "label": "Cora Multilingual Neural (1.4x)"
+    },
+    {
+      "voice": "en-US-DavisMultilingualNeural",
+      "label": "Davis Multilingual Neural (1.4x)"
+    },
+    {
+      "voice": "en-US-DerekMultilingualNeural",
+      "label": "Derek Multilingual Neural (1.4x)"
+    },
+    {
+      "voice": "en-US-DustinMultilingualNeural",
+      "label": "Dustin Multilingual Neural (1.4x)"
+    },
+    {
+      "voice": "en-US-EvelynMultilingualNeural",
+      "label": "Evelyn Multilingual Neural (1.4x)"
+    },
+    {
+      "voice": "en-US-KaiNeural",
+      "label": "Kai Neural (1x)"
+    },
+    {
+      "voice": "en-US-LewisMultilingualNeural",
+      "label": "Lewis Multilingual Neural (1.4x)"
+    },
+    {
+      "voice": "en-US-LolaMultilingualNeural",
+      "label": "Lola Multilingual Neural (1.4x)"
+    },
+    {
+      "voice": "en-US-LunaNeural",
+      "label": "Luna Neural (1x)"
+    },
+    {
+      "voice": "en-US-NancyMultilingualNeural",
+      "label": "Nancy Multilingual Neural (1.4x)"
+    },
+    {
+      "voice": "en-US-NovaTurboMultilingualNeural",
+      "label": "Nova Turbo Multilingual Neural (1.4x)"
+    },
+    {
+      "voice": "en-US-PhoebeMultilingualNeural",
+      "label": "Phoebe Multilingual Neural (1.4x)"
+    },
+    {
+      "voice": "en-US-SamuelMultilingualNeural",
+      "label": "Samuel Multilingual Neural (1.4x)"
+    },
+    {
+      "voice": "en-US-SerenaMultilingualNeural",
+      "label": "Serena Multilingual Neural (1.4x)"
+    },
+    {
+      "voice": "en-US-SteffanMultilingualNeural",
+      "label": "Steffan Multilingual Neural (1.4x)"
+    },
+    {
+      "voice": "en-US-AvaMultilingualNeural",
+      "label": "Ava Multilingual Neural (4x)"
+    },
+    {
+      "voice": "en-US-AndrewMultilingualNeural",
+      "label": "Andrew Multilingual Neural (4x)"
+    },
+    {
+      "voice": "en-US-EmmaMultilingualNeural",
+      "label": "Emma Multilingual Neural (4x)"
+    },
+    {
+      "voice": "en-US-BrianMultilingualNeural",
+      "label": "Brian Multilingual Neural (4x)"
+    },
+    {
+      "voice": "en-US-AlloyMultilingualNeural",
+      "label": "Alloy Multilingual Neural HD (5x)"
+    },
+    {
+      "voice": "en-US-EchoMultilingualNeural",
+      "label": "Echo Multilingual Neural HD (5x)"
+    },
+    {
+      "voice": "en-US-FableMultilingualNeural",
+      "label": "Fable Multilingual Neural HD (5x)"
+    },
+    {
+      "voice": "en-US-OnyxMultilingualNeural",
+      "label": "Onyx Multilingual Neural HD (5x)"
+    },
+    {
+      "voice": "en-US-NovaMultilingualNeural",
+      "label": "Nova Multilingual Neural HD (5x)"
+    },
+    {
+      "voice": "en-US-ShimmerMultilingualNeural",
+      "label": "Shimmer Multilingual Neural HD (5x)"
+    },
+    {
+      "voice": "en-US-AlloyMultilingualNeuralHD",
+      "label": "Alloy Multilingual Neural HD (5x)"
+    },
+    {
+      "voice": "en-US-EchoMultilingualNeuralHD",
+      "label": "Echo Multilingual Neural HD (5x)"
+    },
+    {
+      "voice": "en-US-FableMultilingualNeuralHD",
+      "label": "Fable Multilingual Neural HD (5x)"
+    },
+    {
+      "voice": "en-US-OnyxMultilingualNeuralHD",
+      "label": "Onyx Multilingual Neural HD (5x)"
+    },
+    {
+      "voice": "en-US-NovaMultilingualNeuralHD",
+      "label": "Nova Multilingual Neural HD (5x)"
+    },
+    {
+      "voice": "en-US-ShimmerMultilingualNeuralHD",
+      "label": "Shimmer Multilingual Neural HD (5x)"
+    }
+  ],
+  "pt-BR": [
+    {
+      "voice": "pt-BR-FranciscaNeural",
+      "label": "Francisca Neural"
+    },
+    {
+      "voice": "pt-BR-AntonioNeural",
+      "label": "Antonio Neural"
+    },
+    {
+      "voice": "pt-BR-BrendaNeural",
+      "label": "Brenda Neural"
+    },
+    {
+      "voice": "pt-BR-DonatoNeural",
+      "label": "Donato Neural"
+    },
+    {
+      "voice": "pt-BR-ElzaNeural",
+      "label": "Elza Neural"
+    },
+    {
+      "voice": "pt-BR-FabioNeural",
+      "label": "Fabio Neural"
+    },
+    {
+      "voice": "pt-BR-GiovannaNeural",
+      "label": "Giovanna Neural"
+    },
+    {
+      "voice": "pt-BR-HumbertoNeural",
+      "label": "Humberto Neural"
+    },
+    {
+      "voice": "pt-BR-JulioNeural",
+      "label": "Julio Neural"
+    },
+    {
+      "voice": "pt-BR-LeilaNeural",
+      "label": "Leila Neural"
+    },
+    {
+      "voice": "pt-BR-LeticiaNeural",
+      "label": "Leticia Neural"
+    },
+    {
+      "voice": "pt-BR-ManuelaNeural",
+      "label": "Manuela Neural"
+    },
+    {
+      "voice": "pt-BR-NicolauNeural",
+      "label": "Nicolau Neural"
+    },
+    {
+      "voice": "pt-BR-ThalitaNeural",
+      "label": "Thalita Neural"
+    },
+    {
+      "voice": "pt-BR-ValerioNeural",
+      "label": "Valerio Neural"
+    },
+    {
+      "voice": "pt-BR-YaraNeural",
+      "label": "Yara Neural"
+    },
+    {
+      "voice": "pt-BR-MacerioMultilingualNeural",
+      "label": "Macerio Multilingual Neural (1.4x)"
+    },
+    {
+      "voice": "pt-BR-ThalitaMultilingualNeural",
+      "label": "Thalita Multilingual Neural (1.4x)"
+    }
+  ],
+  "es-ES": [
+    {
+      "voice": "es-ES-ElviraNeural",
+      "label": "Elvira Neural"
+    },
+    {
+      "voice": "es-ES-AlvaroNeural",
+      "label": "Alvaro Neural"
+    },
+    {
+      "voice": "es-ES-AbrilNeural",
+      "label": "Abril Neural"
+    },
+    {
+      "voice": "es-ES-ArnauNeural",
+      "label": "Arnau Neural"
+    },
+    {
+      "voice": "es-ES-DarioNeural",
+      "label": "Dario Neural"
+    },
+    {
+      "voice": "es-ES-EliasNeural",
+      "label": "Elias Neural"
+    },
+    {
+      "voice": "es-ES-EstrellaNeural",
+      "label": "Estrella Neural"
+    },
+    {
+      "voice": "es-ES-IreneNeural",
+      "label": "Irene Neural"
+    },
+    {
+      "voice": "es-ES-LaiaNeural",
+      "label": "Laia Neural"
+    },
+    {
+      "voice": "es-ES-LiaNeural",
+      "label": "Lia Neural"
+    },
+    {
+      "voice": "es-ES-NilNeural",
+      "label": "Nil Neural"
+    },
+    {
+      "voice": "es-ES-SaulNeural",
+      "label": "Saul Neural"
+    },
+    {
+      "voice": "es-ES-TeoNeural",
+      "label": "Teo Neural"
+    },
+    {
+      "voice": "es-ES-TrianaNeural",
+      "label": "Triana Neural"
+    },
+    {
+      "voice": "es-ES-VeraNeural",
+      "label": "Vera Neural"
+    },
+    {
+      "voice": "es-ES-XimenaNeural",
+      "label": "Ximena Neural"
+    },
+    {
+      "voice": "es-ES-ArabellaMultilingualNeural",
+      "label": "Arabella Multilingue Neural (1.4x)"
+    },
+    {
+      "voice": "es-ES-IsidoraMultilingualNeural",
+      "label": "Isidora Multilingue Neural (1.4x)"
+    },
+    {
+      "voice": "es-ES-TristanMultilingualNeural",
+      "label": "Tristan Multilingue Neural (1.4x)"
+    },
+    {
+      "voice": "es-ES-XimenaMultilingualNeural",
+      "label": "Ximena Multilingue Neural (1.4x)"
+    }
+  ],
+  "fr-FR": [
+    {
+      "voice": "fr-FR-DeniseNeural",
+      "label": "Denise Neural"
+    },
+    {
+      "voice": "fr-FR-HenriNeural",
+      "label": "Henri Neural"
+    },
+    {
+      "voice": "fr-FR-AlainNeural",
+      "label": "Alain Neural"
+    },
+    {
+      "voice": "fr-FR-BrigitteNeural",
+      "label": "Brigitte Neural"
+    },
+    {
+      "voice": "fr-FR-CelesteNeural",
+      "label": "Celeste Neural"
+    },
+    {
+      "voice": "fr-FR-ClaudeNeural",
+      "label": "Claude Neural"
+    },
+    {
+      "voice": "fr-FR-CoralieNeural",
+      "label": "Coralie Neural"
+    },
+    {
+      "voice": "fr-FR-EloiseNeural",
+      "label": "Eloise Neural"
+    },
+    {
+      "voice": "fr-FR-JacquelineNeural",
+      "label": "Jacqueline Neural"
+    },
+    {
+      "voice": "fr-FR-JeromeNeural",
+      "label": "Jerome Neural"
+    },
+    {
+      "voice": "fr-FR-JosephineNeural",
+      "label": "Josephine Neural"
+    },
+    {
+      "voice": "fr-FR-MauriceNeural",
+      "label": "Maurice Neural"
+    },
+    {
+      "voice": "fr-FR-RemyMultilingualNeural",
+      "label": "Remy Multilingue Neural (4x)"
+    },
+    {
+      "voice": "fr-FR-VivienneMultilingualNeural",
+      "label": "Vivienne Multilingue Neural (4x)"
+    },
+    {
+      "voice": "fr-FR-YvesNeural",
+      "label": "Yves Neural"
+    },
+    {
+      "voice": "fr-FR-YvetteNeural",
+      "label": "Yvette Neural"
+    },
+    {
+      "voice": "fr-FR-LucienMultilingualNeural",
+      "label": "Lucien Multilingue Neural (1.4x)"
+    }
+  ]
+}
