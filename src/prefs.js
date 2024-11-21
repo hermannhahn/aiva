@@ -28,6 +28,7 @@ class AivaSettings {
         const defaultVoice = this.schema.get_string('azure-speech-voice');
         const defaultAssistName = this.schema.get_string('assist-name');
         const defaultLog = this.schema.get_boolean('log-history');
+        const defaultUserName = this.schema.get_string('user-name');
 
         const _ = (text) => {
             return this.translations(text, defaultLanguage);
@@ -734,8 +735,8 @@ class AivaSettings {
         voiceSelector.set_active_id(defaultVoice);
         languageSelector.set_active_id(defaultLanguage);
         assistName.set_text(defaultAssistName);
-        userName.set_text(defaultAssistName);
         historyButton.set_active(defaultLog);
+        userName.set_text(defaultUserName);
 
         // Actions
         save.connect('clicked', () => {
