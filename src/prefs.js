@@ -5,8 +5,6 @@ import GLib from 'gi://GLib';
 
 import {ExtensionPreferences} from 'resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js';
 
-import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
-
 import {Utils} from './utils/utils.js';
 
 export default class ClipboardIndicatorPreferences extends ExtensionPreferences {
