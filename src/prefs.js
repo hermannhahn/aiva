@@ -169,6 +169,7 @@ class AivaSettings {
 
         // Load voices
         const loadJsonFile = (filename) => {
+            log('Filename: ' + filename);
             let contents;
             try {
                 contents = Gio.File.new_for_path(filename)
