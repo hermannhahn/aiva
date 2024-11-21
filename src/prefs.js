@@ -167,8 +167,21 @@ class AivaSettings {
         });
         const voiceSelector = new Gtk.ComboBoxText();
 
-        const voiceOptionsJson =
-            this.app.utils.loadJsonFile('voiceOptions.json');
+        const loadJsonFile = (filename) => {
+            let contents;
+            try {
+                contents = Gio.File.new_for_path(filename)
+                    .load_contents(null)[1]
+                    .toString();
+            } catch (e) {
+                logError(e);
+                return null;
+            }
+
+            return contents;
+        };
+
+        const voiceOptionsJson = loadJsonFile('voiceOptions.json');
         const voiceOptions = JSON.parse(voiceOptionsJson);
 
         // Update voice
