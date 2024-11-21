@@ -169,7 +169,7 @@
 .input-chat::selection {
     background-color: rgb(42, 42, 42);
 }
-.google-assistant-icon {
+.tray-icon {
     background-image: url('assets/icon_aiva_assistant.png');
     background-size: 24px;
     width: 24px;
