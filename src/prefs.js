@@ -167,6 +167,7 @@ class AivaSettings {
         });
         const voiceSelector = new Gtk.ComboBoxText();
 
+        // Load voices
         const loadJsonFile = (filename) => {
             let contents;
             try {
@@ -180,12 +181,11 @@ class AivaSettings {
 
             return contents;
         };
-
         const voiceOptionsJson = loadJsonFile('voiceOptions.json');
         const voiceOptions = JSON.parse(voiceOptionsJson);
 
         // Update voice
-        const updateVoices = (language) => {
+        const updateVoice = (language) => {
             voiceSelector.remove_all();
             if (voiceOptions[language]) {
                 voiceOptions[language].forEach((option) => {
@@ -200,11 +200,11 @@ class AivaSettings {
         // Update on change
         languageSelector.connect('changed', () => {
             const selectedLanguage = languageSelector.get_active_id();
-            updateVoices(selectedLanguage);
+            updateVoice(selectedLanguage);
         });
-        updateVoices(defaultLanguage);
+        updateVoice(defaultLanguage);
 
-        // AIVA Name
+        // AIVA NAME
         const assistNameLabel = new Gtk.Label({
             label: _('Assistant Name') + ':',
             halign: Gtk.Align.END,
@@ -260,8 +260,8 @@ class AivaSettings {
         voiceSelector.set_active_id(defaultVoice);
         languageSelector.set_active_id(defaultLanguage);
         assistName.set_text(defaultAssistName);
-        historyButton.set_active(defaultLog);
         userName.set_text(defaultUserName);
+        historyButton.set_active(defaultLog);
 
         // Actions
         save.connect('clicked', () => {
@@ -328,11 +328,11 @@ class AivaSettings {
         this.generalSettingsPage.attach(assistNameLabel, 0, 5, 1, 1);
         this.generalSettingsPage.attach(assistNameIcon, 1, 5, 1, 1);
         this.generalSettingsPage.attach(assistName, 2, 5, 1, 1);
-        this.generalSettingsPage.attach(histroyIcon, 1, 6, 1, 1);
-        this.generalSettingsPage.attach(historyButton, 2, 6, 1, 1);
-        this.generalSettingsPage.attach(userNameLabel, 0, 7, 1, 1);
-        this.generalSettingsPage.attach(userNameIcon, 1, 7, 1, 1);
-        this.generalSettingsPage.attach(userName, 2, 7, 1, 1);
+        this.generalSettingsPage.attach(userNameLabel, 0, 6, 1, 1);
+        this.generalSettingsPage.attach(userNameIcon, 1, 6, 1, 1);
+        this.generalSettingsPage.attach(userName, 2, 6, 1, 1);
+        this.generalSettingsPage.attach(histroyIcon, 1, 7, 1, 1);
+        this.generalSettingsPage.attach(historyButton, 2, 7, 1, 1);
         this.generalSettingsPage.attach(save, 0, 8, 3, 1);
         this.generalSettingsPage.attach(statusLabel, 0, 9, 3, 1);
 
