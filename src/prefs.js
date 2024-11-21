@@ -5,8 +5,6 @@ import GLib from 'gi://GLib';
 
 import {ExtensionPreferences} from 'resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js';
 
-import {Utils} from './utils/utils.js';
-
 export default class ClipboardIndicatorPreferences extends ExtensionPreferences {
     fillPreferencesWindow(window) {
         // get schema
@@ -171,7 +169,27 @@ class AivaSettings {
         const voiceSelector = new Gtk.ComboBoxText();
 
         // Load voices
-        const voiceOptionsJson = this.utils.loadJsonFile('voiceOptions.json');
+        const loadJsonFile = (filename) => {
+            let contents;
+            const datadir = Gio.File.new_for_path(
+                Gio.get_user_data_dir(),
+            ).get_path();
+            filename = Gio.File.new_for_path(
+                datadir + '/' + filename,
+            ).get_path();
+            try {
+                contents = Gio.File.new_for_path(filename)
+                    .load_contents(null)[1]
+                    .toString();
+            } catch (e) {
+                logError(e);
+                return null;
+            }
+
+            return contents;
+        };
+
+        const voiceOptionsJson = loadJsonFile('voiceOptions.json');
         const voiceOptions = JSON.parse(voiceOptionsJson);
 
         // Update voice
