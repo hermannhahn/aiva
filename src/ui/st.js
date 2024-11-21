@@ -1,4 +1,4 @@
-export class Audio {
+export class Layout {
     constructor(app) {
         this.app = app;
     }
