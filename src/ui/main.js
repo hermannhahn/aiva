@@ -1,4 +1,5 @@
 import St from 'gi://St';
+import {Menu} from './menu.js';
 
 export class Main {
     constructor(app) {
@@ -14,5 +15,10 @@ export class Main {
         this.app.ui.icon = new St.Icon({
             style_class: 'tray-icon',
         });
+    }
+
+    CreateMenu() {
+        const menu = new Menu(this.app);
+        menu.add();
     }
 }
