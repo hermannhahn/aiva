@@ -2,7 +2,8 @@ import St from 'gi://St';
 import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
-import {Main} from './ui/main.js';
+import {Interface} from './ui/interface.js';
+import {Menu} from './ui/menu.js';
 
 /**
  * @description app user interface
@@ -11,8 +12,14 @@ import {Main} from './ui/main.js';
 export class UI {
     constructor(app) {
         this.app = app;
-        this.main = new Main(app);
         this.app.log('UI loaded.');
+        // Create interface
+        const {tray, icon} = new Interface();
+        this.tray = tray;
+        this.icon = icon;
+
+        // Create menu
+        this.menu = new Menu();
     }
 
     /**
@@ -20,9 +27,6 @@ export class UI {
      */
     init() {
         this.app.log('Initializing UI...');
-
-        // Create tray
-        this.main.CreateInterface();
 
         // Status Icon
         this.statusBar = new St.Button({
