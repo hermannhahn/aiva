@@ -13,13 +13,6 @@ export class UI {
     constructor(app) {
         this.app = app;
         this.app.log('UI loaded.');
-        // Create interface
-        const {tray, icon} = new Interface();
-        this.tray = tray;
-        this.icon = icon;
-
-        // Create menu
-        this.menu = new Menu();
     }
 
     /**
@@ -27,6 +20,14 @@ export class UI {
      */
     init() {
         this.app.log('Initializing UI...');
+
+        // App interface
+        const {tray, icon} = new Interface();
+        this.tray = tray;
+        this.icon = icon;
+
+        // Main menu
+        this.menu = new Menu();
 
         // Status Icon
         this.statusBar = new St.Button({
