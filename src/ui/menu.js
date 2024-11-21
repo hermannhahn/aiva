@@ -6,7 +6,7 @@ export class Menu {
         this.app.log('Menu loaded.');
     }
 
-    CreateMenu() {
+    add() {
         // Create app item section
         this.app.ui.menu = new PopupMenu.PopupBaseMenuItem({
             style_class: 'app-items',
