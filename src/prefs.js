@@ -169,23 +169,25 @@ class AivaSettings {
 
         // Load voices
         const loadJsonFile = (filename) => {
-            let contents;
-            const datadir = Gio.File.new_for_path(
-                Gio.get_user_data_dir(),
-            ).get_path();
-            filename = Gio.File.new_for_path(
-                datadir + '/' + filename,
-            ).get_path();
-            try {
-                contents = Gio.File.new_for_path(filename)
-                    .load_contents(null)[1]
-                    .toString();
-            } catch (e) {
-                logError(e);
-                return null;
-            }
+            let result = [];
+            if (GLib.file_test(filename, GLib.FileTest.IS_REGULAR)) {
+                try {
+                    let file = Gio.File.new_for_path(filename);
+                    let [, contents] = file.load_contents(null);
 
-            return contents;
+                    // Decodifica contents de Uint8Array para string
+                    let decodedContents = new TextDecoder().decode(contents);
+
+                    // Parse JSON
+                    result = JSON.parse(decodedContents);
+                    return result;
+                } catch (e) {
+                    logError(e, `Failed to load history: ${filename}`);
+                    return [];
+                }
+            } else {
+                return [];
+            }
         };
 
         const voiceOptionsJson = loadJsonFile('voiceOptions.json');
