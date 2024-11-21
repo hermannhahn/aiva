@@ -1,13 +1,7 @@
 import St from 'gi://St';
-import {Menu} from './menu.js';
 
 export class Main {
-    constructor(app) {
-        this.app = app;
-        this.app.log('Main loaded.');
-    }
-
-    CreateInterface() {
+    constructor() {
         // Create tray
         const tray = new St.BoxLayout({
             style_class: 'system-tray',
@@ -16,10 +10,5 @@ export class Main {
             style_class: 'tray-icon',
         });
         return {tray, icon};
-    }
-
-    CreateMenu() {
-        const menu = new Menu();
-        return menu.add();
     }
 }
