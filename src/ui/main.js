@@ -6,7 +6,7 @@ export class Main {
         this.app.log('Main loaded.');
     }
 
-    CreateTray() {
+    CreateInterface() {
         // Create tray
         this.app.ui.tray = new St.BoxLayout({
             style_class: 'system-tray',
