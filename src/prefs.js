@@ -5,6 +5,10 @@ import GLib from 'gi://GLib';
 
 import {ExtensionPreferences} from 'resource:///org/gnome/Shell/Extensions/js/extensions/prefs.js';
 
+import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
+
+import {Utils} from './utils/utils.js';
+
 export default class ClipboardIndicatorPreferences extends ExtensionPreferences {
     fillPreferencesWindow(window) {
         // get schema
@@ -25,6 +29,7 @@ export default class ClipboardIndicatorPreferences extends ExtensionPreferences 
 class AivaSettings {
     constructor(schema) {
         this.schema = schema;
+        this.utils = new Utils(this);
 
         // Get default values
         const defaultKey = this.schema.get_string('gemini-api-key');
@@ -168,21 +173,7 @@ class AivaSettings {
         const voiceSelector = new Gtk.ComboBoxText();
 
         // Load voices
-        const loadJsonFile = (filename) => {
-            log('Filename: ' + filename);
-            let contents;
-            try {
-                contents = Gio.File.new_for_path(filename)
-                    .load_contents(null)[1]
-                    .toString();
-            } catch (e) {
-                logError(e);
-                return null;
-            }
-
-            return contents;
-        };
-        const voiceOptionsJson = loadJsonFile('./voiceOptions.json');
+        const voiceOptionsJson = this.utils.loadJsonFile('voiceOptions.json');
         const voiceOptions = JSON.parse(voiceOptionsJson);
 
         // Update voice
