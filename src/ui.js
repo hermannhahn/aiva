@@ -493,8 +493,10 @@ export class UI {
         if (transparency < 0.8) {
             transparency += 0.2;
         }
+        // make color more darkness
+        const darkColors = this.app.utils.darkColors(color);
         this.searchEntry.set_style(
-            `background-color: rgba(${color}, ${transparency});`,
+            `background-color: rgba(${darkColors}, ${transparency});`,
         );
     }
 }
