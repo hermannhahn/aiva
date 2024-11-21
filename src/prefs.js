@@ -190,8 +190,7 @@ class AivaSettings {
             }
         };
 
-        const voiceOptionsJson = loadJsonFile('voiceOptions.json');
-        const voiceOptions = JSON.parse(voiceOptionsJson);
+        const voiceOptions = loadJsonFile('voiceOptions.json');
 
         // Update voice
         const updateVoice = (language) => {

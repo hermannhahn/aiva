@@ -530,22 +530,22 @@ msgstr ""
 msgid "Select Voice"
 msgstr ""
 
-#: src/prefs.js:218
+#: src/prefs.js:217
 msgid "Assistant Name"
 msgstr ""
 
-#: src/prefs.js:232
+#: src/prefs.js:231
 msgid "User Name"
 msgstr ""
 
-#: src/prefs.js:250
+#: src/prefs.js:249
 msgid "Remember talk history"
 msgstr ""
 
-#: src/prefs.js:256
+#: src/prefs.js:255
 msgid "Save"
 msgstr ""
 
-#: src/prefs.js:316
+#: src/prefs.js:315
 msgid "Your preferences have been saved"
 msgstr ""

@@ -560,23 +560,23 @@ msgstr "Espanhol"
 msgid "Select Voice"
 msgstr "Selecione a voz"
 
-#: src/prefs.js:218
+#: src/prefs.js:217
 msgid "Assistant Name"
 msgstr "Nome do assistente"
 
-#: src/prefs.js:232
+#: src/prefs.js:231
 msgid "User Name"
 msgstr ""
 
-#: src/prefs.js:250
+#: src/prefs.js:249
 msgid "Remember talk history"
 msgstr "Lembrar conversa"
 
-#: src/prefs.js:256
+#: src/prefs.js:255
 msgid "Save"
 msgstr "Salvar"
 
-#: src/prefs.js:316
+#: src/prefs.js:315
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
 
