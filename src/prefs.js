@@ -7,20 +7,26 @@ import {ExtensionPreferences} from 'resource:///org/gnome/Shell/Extensions/js/ex
 
 export default class ClipboardIndicatorPreferences extends ExtensionPreferences {
     fillPreferencesWindow(window) {
+        // get schema
         window._settings = this.getSettings();
+        // create settings ui
         const settingsUI = new AivaSettings(window._settings);
         const page = new Adw.PreferencesPage();
         page.add(settingsUI.generalSettings);
-        // Set window size to 800x530
         window.set_default_size(800, 530);
         window.add(page);
     }
 }
 
+/**
+ * @description Show and edit preferences.
+ * @param {object} schema
+ */
 class AivaSettings {
     constructor(schema) {
         this.schema = schema;
 
+        // Get default values
         const defaultKey = this.schema.get_string('gemini-api-key');
         const defaultSpeechKey = this.schema.get_string('azure-speech-key');
         const defaultRegion = this.schema.get_string('azure-speech-region');
@@ -30,10 +36,12 @@ class AivaSettings {
         const defaultLog = this.schema.get_boolean('log-history');
         const defaultUserName = this.schema.get_string('user-name');
 
+        // Local translator
         const _ = (text) => {
-            return this.translations(text, defaultLanguage);
+            return this.translate(text, defaultLanguage);
         };
 
+        // Page settings
         this.generalSettings = new Adw.PreferencesGroup({
             title: '⚙ ' + _('SETTINGS'),
         });
@@ -48,7 +56,7 @@ class AivaSettings {
             row_homogeneous: false,
         });
 
-        // Set Gemini default name if no name is setted
+        // Set AIVA default name if no name is setted
         if (
             defaultAssistName === '' ||
             defaultAssistName === null ||
@@ -814,7 +822,7 @@ class AivaSettings {
         this.generalSettings.add(this.generalSettingsPage);
     }
 
-    translations(text, lang) {
+    translate(text, lang) {
         if (lang === 'pt-BR') {
             if (text === 'Settings:') {
                 return 'Preferências:';
