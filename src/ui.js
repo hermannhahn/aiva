@@ -2,28 +2,16 @@ import St from 'gi://St';
 import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
+import {Main} from './ui/main.js';
+
 /**
  * @description app user interface
  * @param {object} app
- * @example
- * instance:
- * const ui = new UI(app);
- *
- * public function
- * init() - initialize interfaces
- * chat() - return chat item
- * question() - return new question item
- * response() - return new response item
- * copy() - return new copy button item
- *
- * private function
- * _createApp() - create app and tray
- * _addItems() - add items to app
- * _itemsActions() - event handlers
  */
 export class UI {
     constructor(app) {
         this.app = app;
+        this.main = new Main(app);
         this.app.log('UI loaded.');
     }
 
@@ -34,12 +22,7 @@ export class UI {
         this.app.log('Initializing UI...');
 
         // Create tray
-        this.tray = new St.BoxLayout({
-            style_class: 'system-tray',
-        });
-        this.icon = new St.Icon({
-            style_class: 'tray-icon',
-        });
+        this.main.CreateTray();
 
         // Create app item section
         this.items = new PopupMenu.PopupBaseMenuItem({
