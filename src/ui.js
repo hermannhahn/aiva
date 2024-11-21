@@ -38,7 +38,7 @@ export class UI {
             style_class: 'system-tray',
         });
         this.icon = new St.Icon({
-            style_class: 'google-assistant-icon',
+            style_class: 'tray-icon',
         });
 
         // Create app item section
