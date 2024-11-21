@@ -1,6 +1,6 @@
 import St from 'gi://St';
 
-export class Main {
+export class Interface {
     constructor() {
         // Create tray
         const tray = new St.BoxLayout({
