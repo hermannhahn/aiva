@@ -9,16 +9,17 @@ export class Main {
 
     CreateInterface() {
         // Create tray
-        this.app.ui.tray = new St.BoxLayout({
+        const tray = new St.BoxLayout({
             style_class: 'system-tray',
         });
-        this.app.ui.icon = new St.Icon({
+        const icon = new St.Icon({
             style_class: 'tray-icon',
         });
+        return {tray, icon};
     }
 
     CreateMenu() {
-        const menu = new Menu(this.app);
-        menu.add();
+        const menu = new Menu();
+        return menu.add();
     }
 }
