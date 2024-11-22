@@ -1,21 +1,13 @@
 import St from 'gi://St';
 
-import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
-
 export class Menu {
-    constructor() {
+    constructor(intrface) {
+        this.interface = intrface;
         this._create();
         return this;
     }
 
     _create() {
-        // Create interface
-        this.interface = new PopupMenu.PopupBaseMenuItem({
-            style_class: 'app-interface',
-            reactive: false,
-            can_focus: true,
-        });
-
         // AI Character
         this.character = new St.Button({
             label: '🤖',
