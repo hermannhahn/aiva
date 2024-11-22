@@ -4,7 +4,7 @@
 .app-box {
     background-color: transparent;
 }
-.app-items {
+.app-interface {
     padding-top: 0px;
     padding-bottom: 5px;
     padding-left: 1px;
@@ -12,12 +12,12 @@
     margin: 0px;
     border-radius: 10px;
 }
-.user-question-entry {
+.user-entry {
     width: 250px;
     min-height: 30px;
     border-radius: 10px;
 }
-.status-icon {
+.character-icon {
     font-size: 20px;
     color: black;
     text-align: center;
