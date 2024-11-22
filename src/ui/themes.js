@@ -97,4 +97,44 @@ export class Themes {
     add() {
         this.interface.addMenuItem(this.appearanceMenu);
     }
+
+    setTheme(transparency, color) {
+        // set default if empty, null or undefined
+        if (
+            transparency === '' ||
+            transparency === null ||
+            transparency === undefined
+        ) {
+            transparency = '75';
+        }
+        if (color === '' || color === null || color === undefined) {
+            color = '54, 54, 54';
+        }
+        // set transparencyEntry text
+        this.transparencyEntry.clutter_text.set_text(transparency);
+
+        // save
+        const tString = transparency.toString();
+        this.app.extension.settings.set_string('theme-transparency', tString);
+        this.app.userSettings.TRANSPARENCY = tString;
+        this.app.extension.settings.set_string('theme-color', color);
+        this.app.userSettings.COLOR = color;
+        // set theme
+        transparency = 100 - transparency;
+        transparency = parseInt(transparency) / 100;
+        this.menu.set_style(
+            `background-color: rgba(${color}, ${transparency});`,
+        );
+        this.scrollView.set_style(
+            `background-color: rgba(${color}, ${transparency});`,
+        );
+        if (transparency < 0.8) {
+            transparency += 0.2;
+        }
+        // make color more darkness
+        const darkColors = this.app.utils.darkColors(color);
+        this.searchEntry.set_style(
+            `background-color: rgba(${darkColors}, ${transparency});`,
+        );
+    }
 }
