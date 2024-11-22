@@ -462,7 +462,7 @@ msgstr ""
 msgid ", your helpfull assistant."
 msgstr ""
 
-#: src/ui/menu.js:21
+#: src/ui/menu.js:16
 msgid "Ask me anything..."
 msgstr ""
 

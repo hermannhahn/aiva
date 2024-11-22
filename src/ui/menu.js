@@ -3,11 +3,6 @@ import St from 'gi://St';
 export class Menu {
     constructor(intrface) {
         this.interface = intrface;
-        this._create();
-        return this;
-    }
-
-    _create() {
         // AI Character
         this.character = new St.Button({
             label: '🤖',
@@ -64,6 +59,7 @@ export class Menu {
             toggle_mode: true,
             can_focus: false,
         });
+        return this;
     }
 
     add() {
