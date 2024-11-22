@@ -6,7 +6,7 @@ import {Themes} from './ui/themes.js';
 import {Chat} from './ui/chat.js';
 
 /**
- * @description app user interface
+ * @description user interface
  * @param {object} app
  */
 export class UI {
@@ -19,7 +19,7 @@ export class UI {
     }
 
     /**
-     * @description initialize interfaces
+     * @description initialize ui
      */
     init() {
         this.app.log('Initializing UI...');
