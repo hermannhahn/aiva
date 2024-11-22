@@ -1,7 +1,8 @@
 import St from 'gi://St';
 
 export class Interface {
-    constructor() {
+    constructor(app) {
+        this.app = app;
         this._create();
         return this;
     }
@@ -15,5 +16,10 @@ export class Interface {
         this.icon = new St.Icon({
             style_class: 'tray-icon',
         });
+    }
+
+    _show() {
+        this.tray.add_child(this.icon);
+        this.app.add_child(this.tray);
     }
 }
