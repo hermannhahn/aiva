@@ -34,8 +34,6 @@ export class Interface {
     add() {
         this.tray.add_child(this.icon);
         this.app.add_child(this.tray);
-        this.interface.addMenuItem(this.appearanceMenu);
-        this.interface.addMenuItem(this.menu);
         this.interface.style_class = 'app';
         this.interface.box.style_class = 'app-box';
     }
