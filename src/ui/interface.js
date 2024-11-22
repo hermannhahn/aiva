@@ -25,5 +25,5 @@ export class Interface {
         });
     }
 
-    add() {}
+    show() {}
 }
