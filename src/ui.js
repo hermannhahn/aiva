@@ -1,10 +1,10 @@
-import St from 'gi://St';
 import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 import {Interface} from './ui/interface.js';
 import {Menu} from './ui/menu.js';
 import {Themes} from './ui/themes.js';
+import {Chat} from './ui/chat.js';
 
 /**
  * @description app user interface
@@ -13,7 +13,10 @@ import {Themes} from './ui/themes.js';
 export class UI {
     constructor(app) {
         this.app = app;
-        this.app.log('UI loaded.');
+        this.interface = new Interface(this.app);
+        this.menu = new Menu(this.interface);
+        this.themes = new Themes(this.menu);
+        this.chat = new Chat();
     }
 
     /**
@@ -21,52 +24,6 @@ export class UI {
      */
     init() {
         this.app.log('Initializing UI...');
-
-        // App interface
-        const {tray, icon} = new Interface();
-        this.tray = tray;
-        this.icon = icon;
-
-        // Main menu
-        this.menu = new Menu();
-        this.themes = new Themes();
-
-        // Create scrollbar
-        this.scrollView = new St.ScrollView({
-            style_class: 'chat-scroll',
-            overlay_scrollbars: false,
-            can_focus: false,
-        });
-
-        // Create chat section
-        this.chatSection = new PopupMenu.PopupMenuSection({
-            style_class: 'chat-section',
-            can_focus: false,
-        });
-
-        // Create input and response chat items
-        this.inputChat = new PopupMenu.PopupMenuItem('', {
-            style_class: 'input-chat',
-            can_focus: false,
-        });
-        this.responseChat = new PopupMenu.PopupMenuItem('', {
-            style_class: 'response-chat',
-            can_focus: false,
-        });
-
-        // Create copy button
-        this.copyButton = new PopupMenu.PopupMenuItem('', {
-            style_class: 'copy-icon',
-            can_focus: false,
-        });
-
-        // Separator
-        this.newSeparator = new PopupMenu.PopupSeparatorMenuItem();
-
-        // Initialize
-        this._createApp();
-        this._addItems();
-        this._itemsActions();
 
         this.app.log('UI initialized.');
     }
