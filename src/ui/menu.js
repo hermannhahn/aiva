@@ -63,12 +63,10 @@ export class Menu {
             toggle_mode: true,
             can_focus: false,
         });
-        this.add();
-        this.connect();
         return this;
     }
 
-    show() {
+    create() {
         this.menu.add_child(this.character);
         this.menu.add_child(this.userEntry);
         this.menu.add_child(this.enterButton);
@@ -76,12 +74,13 @@ export class Menu {
         this.menu.add_child(this.clearButton);
         this.menu.add_child(this.settingsButton);
         this.menu.add_child(this.appearanceButton);
+        this._connect();
     }
 
     /**
      * @description actions
      */
-    connect() {
+    _connect() {
         // If press enter on question input box
         this.userEntry.clutter_text.connect('activate', (actor) => {
             const question = actor.text;
