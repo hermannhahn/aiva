@@ -1,5 +1,11 @@
 import St from 'gi://St';
 
+import * as PopupMenu from 'gi://PopupMenu';
+
+/**
+ * @description app user interface
+ * @param {object} app
+ */
 export class Interface {
     constructor(app) {
         this.app = app;
@@ -15,6 +21,13 @@ export class Interface {
         // Create icon
         this.icon = new St.Icon({
             style_class: 'tray-icon',
+        });
+
+        // Create interface
+        this.interface = new PopupMenu.PopupBaseMenuItem({
+            style_class: 'app-interface',
+            reactive: false,
+            can_focus: true,
         });
     }
 
