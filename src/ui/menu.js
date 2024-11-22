@@ -65,4 +65,15 @@ export class Menu {
             can_focus: false,
         });
     }
+
+    add() {
+        this.menu.add_child(this.statusBar);
+        this.menu.add_child(this.searchEntry);
+        this.menu.add_child(this.enterButton);
+        this.menu.add_child(this.micButton);
+        this.menu.add_child(this.clearButton);
+        this.menu.add_child(this.settingsButton);
+        this.menu.add_child(this.appearanceButton);
+        this.interface.addMenuItem(this.menu);
+    }
 }
