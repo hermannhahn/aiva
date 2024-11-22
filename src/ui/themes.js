@@ -4,7 +4,6 @@ import * as PopupMenu from 'gi://PopupMenu';
 export class Themes {
     constructor() {
         this._create();
-        this.app.log('Theme menu loaded.');
         return this;
     }
 
