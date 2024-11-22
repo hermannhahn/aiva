@@ -24,10 +24,4 @@ export class Interface {
             can_focus: true,
         });
     }
-
-    add() {
-        this.interface.style_class = 'app';
-        this.interface.box.style_class = 'app-box';
-        this.tray.add_child(this.icon);
-    }
 }
