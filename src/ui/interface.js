@@ -31,7 +31,7 @@ export class Interface {
         });
     }
 
-    _show() {
+    show() {
         this.tray.add_child(this.icon);
         this.app.add_child(this.tray);
     }
