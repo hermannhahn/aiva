@@ -6,6 +6,7 @@ export class Menu {
     constructor() {
         this.create();
         this.app.log('Menu loaded.');
+        return this;
     }
 
     create() {
@@ -65,12 +66,6 @@ export class Menu {
             can_focus: false,
         });
 
-        this.appearanceMenu = new PopupMenu.PopupBaseMenuItem({
-            style_class: 'app-items',
-            reactive: false,
-            can_focus: true,
-        });
-
         // Create appearance button
         this.appearanceButton = new St.Button({
             label: '🎨',
@@ -78,7 +73,5 @@ export class Menu {
             toggle_mode: true,
             can_focus: false,
         });
-
-        return this.menu;
     }
 }
