@@ -98,7 +98,7 @@ export class Themes {
         this.interface.addMenuItem(this.appearanceMenu);
     }
 
-    setTheme(transparency, color) {
+    set(transparency, color) {
         // set default if empty, null or undefined
         if (
             transparency === '' ||
