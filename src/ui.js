@@ -24,6 +24,7 @@ export class UI {
      */
     init() {
         this.app.log('Initializing UI...');
+        this.interface.show();
 
         this.app.log('UI initialized.');
     }
