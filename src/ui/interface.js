@@ -24,4 +24,6 @@ export class Interface {
             can_focus: true,
         });
     }
+
+    add() {}
 }
