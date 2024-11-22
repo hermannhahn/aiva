@@ -1,7 +1,7 @@
 import * as St from 'gi://St';
 import * as PopupMenu from 'gi://PopupMenu';
 
-export class ThemeMenu {
+export class Themes {
     constructor() {
         this._create();
         this.app.log('Theme menu loaded.');
