@@ -4,11 +4,6 @@ import * as PopupMenu from 'gi://PopupMenu';
 export class Chat {
     constructor(intrface) {
         this.interface = intrface;
-        this._create();
-        return this;
-    }
-
-    _create() {
         // Create scrollbar
         this.scrollView = new St.ScrollView({
             style_class: 'chat-scroll',
@@ -40,6 +35,7 @@ export class Chat {
 
         // Separator
         this.newSeparator = new PopupMenu.PopupSeparatorMenuItem();
+        return this;
     }
 
     add() {
