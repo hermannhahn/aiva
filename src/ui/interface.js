@@ -25,4 +25,8 @@ export class Interface {
         });
         return this;
     }
+
+    create() {
+        this.tray.add_child(this.icon);
+    }
 }
