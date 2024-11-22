@@ -2,7 +2,8 @@ import * as St from 'gi://St';
 import * as PopupMenu from 'gi://PopupMenu';
 
 export class Themes {
-    constructor() {
+    constructor(intrface) {
+        this.interface = intrface;
         this._create();
         return this;
     }
@@ -95,5 +96,9 @@ export class Themes {
             toggle_mode: true,
             can_focus: true,
         });
+    }
+
+    add() {
+        this.interface.addMenuItem(this.appearanceMenu);
     }
 }
