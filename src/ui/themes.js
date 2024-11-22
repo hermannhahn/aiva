@@ -90,7 +90,14 @@ export class Themes {
             toggle_mode: true,
             can_focus: true,
         });
+        this.menu.style_class = 'app';
+        this.menu.box.style_class = 'app-box';
         return this;
+    }
+
+    show() {
+        this.menu.add_child(this.appearanceMenu);
+        this.menu.add_child(this.items);
     }
 
     set(transparency, color) {
