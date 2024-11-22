@@ -36,6 +36,5 @@ export class Interface {
         this.interface.box.style_class = 'app-box';
         this.tray.add_child(this.icon);
         this.app.add_child(this.tray);
-        this.interface.box.add_child(this.scrollView);
     }
 }
