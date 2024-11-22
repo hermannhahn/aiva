@@ -14,7 +14,7 @@ export class UI {
         this.app = app;
         this.interface = new Interface(this.app);
         this.menu = new Menu(this.interface);
-        this.themes = new Themes(this.menu);
+        this.theme = new Themes(this.menu);
         this.chat = new Chat(this.interface);
     }
 
@@ -24,16 +24,16 @@ export class UI {
     init() {
         this.app.log('Initializing UI...');
         this.interface.add();
-        this.themes.add();
+        this.theme.add();
         this.menu.add();
         this.chat.add();
 
-        this.setTheme(
+        this.theme.set(
             this.app.userSettings.TRANSPARENCY,
             this.app.userSettings.COLOR,
         );
 
-        this._actions();
+        this.interface.connect();
 
         this.app.log('UI initialized.');
     }
