@@ -4,12 +4,12 @@ import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 
 export class Menu {
     constructor() {
-        this.create();
+        this._create();
         this.app.log('Menu loaded.');
         return this;
     }
 
-    create() {
+    _create() {
         // Create interface
         this.interface = new PopupMenu.PopupBaseMenuItem({
             style_class: 'app-interface',
