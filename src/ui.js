@@ -12,7 +12,7 @@ import {Chat} from './ui/chat.js';
 export class UI {
     constructor(app) {
         this.app = app;
-        this.interface = new Interface(this.app);
+        this.interface = new Interface();
         this.menu = new Menu(this.interface);
         this.theme = new Themes(this.menu);
         this.chat = new Chat(this.interface);
