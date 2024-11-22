@@ -67,8 +67,8 @@ export class Menu {
     }
 
     add() {
-        this.menu.add_child(this.statusBar);
-        this.menu.add_child(this.searchEntry);
+        this.menu.add_child(this.character);
+        this.menu.add_child(this.userEntry);
         this.menu.add_child(this.enterButton);
         this.menu.add_child(this.micButton);
         this.menu.add_child(this.clearButton);
