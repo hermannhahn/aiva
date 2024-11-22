@@ -4,6 +4,7 @@ import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js'
 
 import {Interface} from './ui/interface.js';
 import {Menu} from './ui/menu.js';
+import {Themes} from './ui/themes.js';
 
 /**
  * @description app user interface
@@ -28,150 +29,7 @@ export class UI {
 
         // Main menu
         this.menu = new Menu();
-
-        // Status Icon
-        this.statusBar = new St.Button({
-            label: '🤖',
-            style_class: 'status-icon',
-            can_focus: false,
-        });
-
-        this.searchEntry = new St.Entry({
-            style_class: 'search-entry',
-            hint_text: _('Ask me anything...'),
-            track_hover: true,
-            x_expand: true,
-            y_expand: true,
-            can_focus: true,
-        });
-
-        // Create enter button
-        this.enterButton = new St.Button({
-            label: '',
-            style_class: 'enter-icon',
-            toggle_mode: true,
-            can_focus: false,
-        });
-
-        // Create voice activation button
-        this.micButton = new St.Button({
-            label: '',
-            style_class: 'mic-icon',
-            toggle_mode: true,
-            can_focus: false,
-        });
-
-        // Create clear history button
-        this.clearButton = new St.Button({
-            label: '🗑️',
-            style_class: 'trash-icon',
-            toggle_mode: true,
-            can_focus: false,
-        });
-
-        // Create settings button
-        this.settingsButton = new St.Button({
-            label: '⚙️',
-            style_class: 'settings-icon',
-            toggle_mode: true,
-            can_focus: false,
-        });
-
-        this.appearanceMenu = new PopupMenu.PopupBaseMenuItem({
-            style_class: 'app-items',
-            reactive: false,
-            can_focus: true,
-        });
-
-        // Create appearance button
-        this.appearanceButton = new St.Button({
-            label: '🎨',
-            style_class: 'appearance-icon',
-            toggle_mode: true,
-            can_focus: false,
-        });
-
-        // Create appearance box
-        this.appearanceBox = new St.BoxLayout({
-            style_class: 'appearance-box',
-        });
-
-        // Create transparency slider
-        this.transparencyEntry = new St.Entry({
-            style_class: 'transparency-entry',
-            can_focus: true,
-        });
-        this.transparencyEntry.clutter_text.set_text(
-            this.app.userSettings.TRANSPARENCY,
-        );
-
-        // Create transparency label
-        this.transparencyLabel = new St.Label({
-            text: 'Transparency: ',
-            style_class: 'transparency-label',
-        });
-
-        // Create transparency ok button
-        this.transparencyButton = new St.Button({
-            label: 'OK',
-            style_class: 'transparency-ok-icon',
-            toggle_mode: true,
-            can_focus: true,
-        });
-
-        // Create colors label
-        this.colorsLabel = new St.Label({
-            text: 'Color: ',
-            style_class: 'colors-label',
-        });
-
-        // Create color blue button
-        this.colorBlueButton = new St.Button({
-            label: '🟦',
-            style_class: 'colors-icon',
-            toggle_mode: true,
-            can_focus: true,
-        });
-
-        // Create color red button
-        this.colorRedButton = new St.Button({
-            label: '🟥',
-            style_class: 'colors-icon',
-            toggle_mode: true,
-            can_focus: true,
-        });
-
-        // Create color green button
-        this.colorGreenButton = new St.Button({
-            label: '🟩',
-            style_class: 'colors-icon',
-            toggle_mode: true,
-            can_focus: true,
-        });
-
-        // Create color yellow button
-        this.colorYellowButton = new St.Button({
-            label: '🟨',
-            style_class: 'colors-icon',
-            toggle_mode: true,
-            can_focus: true,
-        });
-
-        // Create color purple button
-        this.colorPurpleButton = new St.Button({
-            label: '🟪',
-            style_class: 'colors-icon',
-            toggle_mode: true,
-            can_focus: true,
-        });
-
-        // Create color black button
-        this.colorBlackButton = new St.Button({
-            label: '⬛',
-            style_class: 'colors-icon',
-            toggle_mode: true,
-            can_focus: true,
-        });
+        this.themes = new Themes();
 
         // Create scrollbar
         this.scrollView = new St.ScrollView({
