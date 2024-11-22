@@ -2,8 +2,7 @@ import * as St from 'gi://St';
 import * as PopupMenu from 'gi://PopupMenu';
 
 export class Themes {
-    constructor(intrface) {
-        this.interface = intrface;
+    constructor() {
         this.appearanceMenu = new PopupMenu.PopupBaseMenuItem({
             style_class: 'app-interface',
             reactive: false,
@@ -92,10 +91,6 @@ export class Themes {
             can_focus: true,
         });
         return this;
-    }
-
-    add() {
-        this.interface.addMenuItem(this.appearanceMenu);
     }
 
     set(transparency, color) {
