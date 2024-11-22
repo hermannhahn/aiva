@@ -18,12 +18,11 @@ export class Interface {
         });
 
         // Create interface
-        this.interface = new PopupMenu.PopupBaseMenuItem({
+        this.box = new PopupMenu.PopupBaseMenuItem({
             style_class: 'app-interface',
             reactive: false,
             can_focus: true,
         });
+        return this;
     }
-
-    show() {}
 }
