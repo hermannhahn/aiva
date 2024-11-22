@@ -28,79 +28,18 @@ export class UI {
         this.themes.add();
         this.menu.add();
 
-        this.app.log('UI initialized.');
-    }
-
-    /**
-     * @description create app tray
-     */
-    _createApp() {
-        // Icon tray
-        this.tray.add_child(this.icon);
-        this.app.add_child(this.tray);
-        this.app.log('App tray initialized.');
-    }
-
-    /**
-     * @description add items to app tray
-     */
-    _addItems() {
-        // Add items container to app
-        // Add items
-
-        // Add scrollview
-        this.app.interface.box.add_child(this.scrollView);
-
-        // Add chat to scrollbar
-        this.scrollView.add_child(this.chatSection.actor);
-
-        // Apply userSettings appearance
         this.setTheme(
             this.app.userSettings.TRANSPARENCY,
             this.app.userSettings.COLOR,
         );
-        this.scrollView.set_style(`background-color: rgba(42, 42, 42, 0);`);
+
+        this.app.log('UI initialized.');
     }
 
     /**
      * @description items actions
      */
     _itemsActions() {
-        // If press enter on question input box
-        this.searchEntry.clutter_text.connect('activate', (actor) => {
-            const question = actor.text;
-            this.searchEntry.clutter_text.set_text('');
-            this.searchEntry.clutter_text.reactive = false;
-            this.app.chat.addQuestion(question);
-            this.app.interpreter.proccess(question);
-        });
-
-        // If press mic button
-        this.micButton.connect('clicked', (_self) => {
-            this.app.audio.record();
-        });
-
-        // If press clear button
-        this.clearButton.connect('clicked', (_self) => {
-            this.searchEntry.clutter_text.set_text('');
-            this.app.chat.history = [];
-            this.app.interface.box.remove_child(this.scrollView);
-            this.chatSection = new PopupMenu.PopupMenuSection();
-            this.scrollView.add_child(this.chatSection.actor);
-            this.app.interface.box.add_child(this.scrollView);
-        });
-
-        // If press settings button
-        this.settingsButton.connect('clicked', (_self) => {
-            this.app.openSettings();
-            // Close App
-            if (this.appearanceBoxIsOpen) {
-                this.appearanceMenu.remove_child(this.appearanceBox);
-                this.appearanceBoxIsOpen = false;
-            }
-            this.app.interface.close();
-        });
-
         // If press appearance button
         this.appearanceBoxIsOpen = false;
         this.appearanceButton.connect('clicked', (_self) => {
