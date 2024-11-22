@@ -4,11 +4,6 @@ import * as PopupMenu from 'gi://PopupMenu';
 export class Themes {
     constructor(intrface) {
         this.interface = intrface;
-        this._create();
-        return this;
-    }
-
-    _create() {
         this.appearanceMenu = new PopupMenu.PopupBaseMenuItem({
             style_class: 'app-interface',
             reactive: false,
@@ -96,6 +91,7 @@ export class Themes {
             toggle_mode: true,
             can_focus: true,
         });
+        return this;
     }
 
     add() {
