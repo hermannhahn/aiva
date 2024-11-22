@@ -63,10 +63,12 @@ export class Menu {
             toggle_mode: true,
             can_focus: false,
         });
+        this.add();
+        this.connect();
         return this;
     }
 
-    add() {
+    show() {
         this.menu.add_child(this.character);
         this.menu.add_child(this.userEntry);
         this.menu.add_child(this.enterButton);
@@ -81,21 +83,21 @@ export class Menu {
      */
     connect() {
         // If press enter on question input box
-        this.menu.userEntry.clutter_text.connect('activate', (actor) => {
+        this.userEntry.clutter_text.connect('activate', (actor) => {
             const question = actor.text;
-            this.menu.userEntry.clutter_text.set_text('');
-            this.menu.userEntry.clutter_text.reactive = false;
+            this.userEntry.clutter_text.set_text('');
+            this.userEntry.clutter_text.reactive = false;
             this.app.chat.addQuestion(question);
             this.app.interpreter.proccess(question);
         });
 
         // If press mic button
-        this.menu.micButton.connect('clicked', (_self) => {
+        this.micButton.connect('clicked', (_self) => {
             this.app.audio.record();
         });
 
         // If press clear button
-        this.menu.clearButton.connect('clicked', (_self) => {
+        this.clearButton.connect('clicked', (_self) => {
             this.menu.userEntry.clutter_text.set_text('');
             this.app.chat.history = [];
             this.interface.box.remove_child(this.scrollView);
