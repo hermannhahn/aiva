@@ -24,7 +24,9 @@ export class UI {
      */
     init() {
         this.app.log('Initializing UI...');
-        this.interface.show();
+        this.interface.add();
+        this.themes.add();
+        this.menu.add();
 
         this.app.log('UI initialized.');
     }
@@ -44,19 +46,7 @@ export class UI {
      */
     _addItems() {
         // Add items container to app
-        this.app.interface.addMenuItem(this.appearanceMenu);
-        this.app.interface.addMenuItem(this.menu);
-        this.app.interface.style_class = 'app';
-        this.app.interface.box.style_class = 'app-box';
-
         // Add items
-        this.menu.add_child(this.statusBar);
-        this.menu.add_child(this.searchEntry);
-        this.menu.add_child(this.enterButton);
-        this.menu.add_child(this.micButton);
-        this.menu.add_child(this.clearButton);
-        this.menu.add_child(this.settingsButton);
-        this.menu.add_child(this.appearanceButton);
 
         // Add scrollview
         this.app.interface.box.add_child(this.scrollView);
