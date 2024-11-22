@@ -72,4 +72,14 @@ export class Menu {
         this.menu.add_child(this.appearanceButton);
         this.interface.addMenuItem(this.menu);
     }
+
+    statusIcon(icon) {
+        this.statusBar.label = icon;
+        return true;
+    }
+
+    resetStatusIcon() {
+        this.statusBar.label = '🤖';
+        return true;
+    }
 }
