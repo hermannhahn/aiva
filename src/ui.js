@@ -1,6 +1,9 @@
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
-import {Interface} from './ui/interface.js';
+import St from 'gi://St';
+
+import {Chat} from './chat.js';
+import {Menu} from './menu.js';
 
 /**
  * @description user interface
@@ -9,14 +12,25 @@ import {Interface} from './ui/interface.js';
 export class UI {
     constructor(app) {
         this.app = app;
-        this.interface = new Interface();
+        this.menu = new Menu();
+        this.chat = new Chat();
+
+        // App
+        this.tray = new St.BoxLayout({
+            style_class: 'system-tray',
+        });
+        this.icon = new St.Icon({
+            style_class: 'tray-icon',
+        });
     }
 
     /**
      * @description initialize interfaces
      */
     create() {
-        this.app.add_child(this.interface.box);
-        this.interface.create();
+        this.app.add_child(this.tray);
+        this.tray.add_child(this.icon);
+        this.menu.create(this.app.menu);
+        this.chat.create(this.app.menu);
     }
 }
