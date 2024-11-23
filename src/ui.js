@@ -23,7 +23,6 @@ export class UI {
             style_class: 'tray-icon',
         });
 
-        // Interface
         this.interface = new Interface();
     }
 
@@ -33,8 +32,6 @@ export class UI {
     create() {
         this.app.add_child(this.tray);
         this.tray.add_child(this.icon);
-        this.app.menu.addMenuItem(this.interface.theme.menu);
-        this.app.menu.addMenuItem(this.interface.menu);
-        this.interface.create();
+        this.interface.create(this.app.menu);
     }
 }
