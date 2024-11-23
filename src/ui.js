@@ -25,7 +25,7 @@ export class UI {
     }
 
     /**
-     * @description initialize interfaces
+     * @description initialize app ui
      */
     create() {
         this.app.add_child(this.tray);
