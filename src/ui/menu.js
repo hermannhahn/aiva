@@ -2,16 +2,14 @@ import St from 'gi://St';
 
 import * as PopupMenu from 'gi://PopupMenu';
 
-import {Themes} from './themes.js';
-
 /**
  * @description user interface
  */
-export class Menu {
-    constructor() {
-        this.theme = new Themes();
+export class Interface {
+    constructor(app) {
+        this.app = app;
 
-        this.menu = new PopupMenu.PopupBaseMenuItem({
+        this.ui = new PopupMenu.PopupBaseMenuItem({
             style_class: 'app-menu',
             reactive: false,
             can_focus: true,
@@ -134,6 +132,17 @@ export class Menu {
             }
             this.app.interface.close();
         });
+
+        // If press appearance button
+        this.appearanceBoxIsOpen = false;
+        this.menu.appearanceButton.connect('clicked', (_self) => {
+            if (this.appearanceBoxIsOpen) {
+                this.appearanceMenu.remove_child(this.appearanceBox);
+                this.appearanceBoxIsOpen = false;
+                return;
+            }
+            this.appearanceBoxIsOpen = true;
+
     }
 
     statusIcon(icon) {
