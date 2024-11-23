@@ -10,16 +10,21 @@ import {Interface} from './interface.js';
  */
 export class UI {
     constructor(app) {
-        this.app = app;
-        this.interface = new Interface();
-
         // App
-        this.box = new St.BoxLayout({
-            style_class: 'ui',
+        this.app = app;
+        this.app.menu.style_class = 'app';
+        this.app.menu.box.style_class = 'app-box';
+
+        // Tray
+        this.tray = new St.BoxLayout({
+            style_class: 'app-menu',
         });
         this.icon = new St.Icon({
             style_class: 'tray-icon',
         });
+
+        // Interface
+        this.interface = new Interface();
     }
 
     /**
