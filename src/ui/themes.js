@@ -97,6 +97,7 @@ export class Themes {
     }
 
     show() {
+        this.appearanceBoxIsOpen = true;
         this.menu.add_child(this.box);
         this.box.add_child(this.transparencyLabel);
         this.box.add_child(this.transparencyEntry);
@@ -109,6 +110,11 @@ export class Themes {
         this.box.add_child(this.colorYellowButton);
         this.box.add_child(this.colorPurpleButton);
         this._connect();
+    }
+
+    hide() {
+        this.menu.remove_child(this.box);
+        this.appearanceBoxIsOpen = false;
     }
 
     set(transparency, color) {
