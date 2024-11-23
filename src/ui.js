@@ -4,6 +4,7 @@ import St from 'gi://St';
 
 import {Chat} from './chat.js';
 import {Menu} from './menu.js';
+import {Themes} from './themes.js';
 
 /**
  * @description user interface
@@ -12,7 +13,8 @@ import {Menu} from './menu.js';
 export class UI {
     constructor(app) {
         this.app = app;
-        this.menu = new Menu();
+        this.theme = new Themes();
+        this.interface = new Interface();
         this.chat = new Chat();
 
         // App
@@ -30,7 +32,8 @@ export class UI {
     create() {
         this.app.add_child(this.tray);
         this.tray.add_child(this.icon);
-        this.menu.create(this.app.menu);
+        this.app.menu.addMenuItem(this.theme.menu);
+        this.app.menu.addMenuItem(this.interface.ui);
         this.chat.create(this.app.menu);
     }
 }
