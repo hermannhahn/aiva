@@ -73,14 +73,13 @@ export class Interface {
             can_focus: false,
         });
 
-        this.chat = new Chat();
         this.theme = new Theme();
-
+        this.chat = new Chat();
     }
 
-    create(ui) {
-        this.theme.create(ui)
-        ui.addMenuItem(this.menu);
+    create(app) {
+        app.addMenuItem(this.theme.menu);
+        app.addMenuItem(this.menu);
         this.menu.add_child(this.character);
         this.menu.add_child(this.userEntry);
         this.menu.add_child(this.enterButton);
@@ -88,7 +87,6 @@ export class Interface {
         this.menu.add_child(this.clearButton);
         this.menu.add_child(this.settingsButton);
         this.menu.add_child(this.appearanceButton);
-        this.chat.create(ui)
         this._connect();
     }
 
@@ -140,7 +138,7 @@ export class Interface {
                 return;
             }
             this.appearanceBoxIsOpen = true;
-
+        });
     }
 
     statusIcon(icon) {
