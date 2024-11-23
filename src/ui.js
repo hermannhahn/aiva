@@ -2,6 +2,8 @@ import St from 'gi://St';
 import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
+import {Interface} from './interface.js';
+
 /**
  * @description app user interface
  * @param {object} app
@@ -9,20 +11,13 @@ import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js'
 export class UI {
     constructor(app) {
         this.app = app;
+        this.interface = new Interface();
     }
 
     /**
      * @description initialize interfaces
      */
     init() {
-        // Create tray
-        this.tray = new St.BoxLayout({
-            style_class: 'tray',
-        });
-        this.icon = new St.Icon({
-            style_class: 'tray-icon',
-        });
-
         // Create app item section
         this.mainbar = new PopupMenu.PopupBaseMenuItem({
             style_class: 'main-bar',
@@ -219,8 +214,8 @@ export class UI {
      */
     _createApp() {
         // Icon tray
-        this.tray.add_child(this.icon);
-        this.app.add_child(this.tray);
+        this.interface.tray.add_child(this.icon);
+        this.app.add_child(this.interface.tray);
         this.app.log('App tray initialized.');
     }
 
