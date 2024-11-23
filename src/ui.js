@@ -15,11 +15,7 @@ export class UI {
     /**
      * @description initialize interfaces
      */
-    init() {
-        this.app.log('Initializing UI...');
-
-        // Create app
+    create() {
         this.app.add_child(this.interface.box);
-        this.interface.create();
     }
 }
