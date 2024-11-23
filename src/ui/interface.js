@@ -2,20 +2,18 @@ import St from 'gi://St';
 
 import * as PopupMenu from 'gi://PopupMenu';
 
+import {Chat} from './chat.js';
+import {Theme} from './theme.js';
+
 /**
  * @description user interface
  */
 export class Interface {
     constructor() {
         this.menu = new PopupMenu.PopupBaseMenuItem({
-            style_class: 'app-menu',
+            style_class: 'menu',
             reactive: false,
             can_focus: true,
-        });
-
-        // Create appearance box
-        this.box = new St.BoxLayout({
-            style_class: 'menu-box',
         });
 
         // AI Character
@@ -75,20 +73,22 @@ export class Interface {
             can_focus: false,
         });
 
-        // Create interface
+        this.chat = new Chat();
+        this.theme = new Theme();
 
-        return this;
     }
 
-    create() {
-        this.menu.add_child(this.box);
-        this.box.add_child(this.character);
-        this.box.add_child(this.userEntry);
-        this.box.add_child(this.enterButton);
-        this.box.add_child(this.micButton);
-        this.box.add_child(this.clearButton);
-        this.box.add_child(this.settingsButton);
-        this.box.add_child(this.appearanceButton);
+    create(ui) {
+        this.theme.create(ui)
+        ui.addMenuItem(this.menu);
+        this.menu.add_child(this.character);
+        this.menu.add_child(this.userEntry);
+        this.menu.add_child(this.enterButton);
+        this.menu.add_child(this.micButton);
+        this.menu.add_child(this.clearButton);
+        this.menu.add_child(this.settingsButton);
+        this.menu.add_child(this.appearanceButton);
+        this.chat.create(ui)
         this._connect();
     }
 
@@ -125,7 +125,7 @@ export class Interface {
             this.app.openSettings();
             // Close App
             if (this.appearanceBoxIsOpen) {
-                this.appearanceMenu.remove_child(this.appearanceBox);
+                this.appearanceMenu.remove_child(this.menu);
                 this.appearanceBoxIsOpen = false;
             }
             this.app.interface.close();
@@ -135,7 +135,7 @@ export class Interface {
         this.appearanceBoxIsOpen = false;
         this.menu.appearanceButton.connect('clicked', (_self) => {
             if (this.appearanceBoxIsOpen) {
-                this.appearanceMenu.remove_child(this.appearanceBox);
+                this.appearanceMenu.remove_child(this.menu);
                 this.appearanceBoxIsOpen = false;
                 return;
             }
