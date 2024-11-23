@@ -14,8 +14,8 @@ export class UI {
         this.interface = new Interface();
 
         // App
-        this.tray = new St.BoxLayout({
-            style_class: 'system-tray',
+        this.box = new St.BoxLayout({
+            style_class: 'ui',
         });
         this.icon = new St.Icon({
             style_class: 'tray-icon',
