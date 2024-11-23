@@ -25,7 +25,7 @@ export class Interface {
     /**
      * @description create interface
      */
-    _create() {
+    create() {
         this.box.add_child(this.icon);
         this.menu.create();
         this.chat.create();
