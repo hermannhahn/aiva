@@ -4,13 +4,10 @@ import * as PopupMenu from 'gi://PopupMenu';
 
 /**
  * @description user interface
- * @param {object} menu app menu
  */
 export class Interface {
-    constructor(menu) {
-        this.menu = menu;
-
-        this.ui = new PopupMenu.PopupBaseMenuItem({
+    constructor() {
+        this.menu = new PopupMenu.PopupBaseMenuItem({
             style_class: 'app-menu',
             reactive: false,
             can_focus: true,
