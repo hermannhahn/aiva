@@ -1,7 +1,8 @@
 import St from 'gi://St';
 
-import {Menu} from './menu.js';
 import {Chat} from './chat.js';
+import {Menu} from './menu.js';
+import {Themes} from './themes.js';
 
 /**
  * @description app user interface
@@ -10,9 +11,10 @@ export class Interface {
     constructor() {
         this.menu = new Menu();
         this.chat = new Chat();
+        this.theme = new Themes();
 
         // Create tray
-        this.tray = new St.BoxLayout({
+        this.box = new St.BoxLayout({
             style_class: 'system-tray',
         });
         // Create icon
@@ -24,6 +26,7 @@ export class Interface {
     }
 
     create() {
-        this.tray.add_child(this.icon);
+        this.box.add_child(this.icon);
+        this.box.add_child(this.menu.box);
     }
 }
