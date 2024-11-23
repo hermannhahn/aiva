@@ -2,11 +2,15 @@ import St from 'gi://St';
 
 import * as PopupMenu from 'gi://PopupMenu';
 
+import {Themes} from './themes.js';
+
 /**
  * @description user interface
  */
 export class Menu {
     constructor() {
+        this.theme = new Themes();
+
         this.menu = new PopupMenu.PopupBaseMenuItem({
             style_class: 'app-menu',
             reactive: false,
