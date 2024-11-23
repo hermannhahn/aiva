@@ -19,22 +19,20 @@
 }
 .user-entry {
     width: 250px;
-    min-height: 30px;
-    border-radius: 10px;
+    height: 30px !important;
+    border-radius: 5px;
 }
-.character-icon {
+.emoji-icon {
     font-size: 20px;
     color: black;
     text-align: center;
     width: 40px;
-    margin-top: 22px;
-    margin-bottom: 15px;
-    padding-left: 5px;
+    border-radius: 10px;
 }
-.character-icon:hover {
+.emoji-icon:hover {
     background-color: transparent;
 }
-.character-icon:active {
+.emoji-icon:active {
     font-size: 18px;
 }
 .enter-icon {
