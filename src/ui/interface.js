@@ -3,7 +3,7 @@ import St from 'gi://St';
 import * as PopupMenu from 'gi://PopupMenu';
 
 import {Chat} from './chat.js';
-import {Theme} from './theme.js';
+import {ThemeMenu} from './menu_theme.js';
 
 /**
  * @description user interface
@@ -73,7 +73,7 @@ export class Interface {
             can_focus: false,
         });
 
-        this.theme = new Theme();
+        this.theme = new ThemeMenu();
         this.chat = new Chat();
     }
 
@@ -87,6 +87,7 @@ export class Interface {
         this.menu.add_child(this.clearButton);
         this.menu.add_child(this.settingsButton);
         this.menu.add_child(this.appearanceButton);
+        app.box.add_child(this.chat.scrollView);
         this._connect();
     }
 
