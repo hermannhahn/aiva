@@ -9,7 +9,7 @@ export class Interpreter {
 
     proccess(question) {
         const command = question;
-        this.app.ui.searchEntry.clutter_text.reactive = false;
+        this.app.ui.userEntry.clutter_text.reactive = false;
         this.app.log('Question: ' + question);
         this.app.log('Processing question...');
         this.app.chat.addResponse('⌛');
@@ -32,7 +32,7 @@ export class Interpreter {
             this.app.gemini.response(question);
         }
 
-        this.app.ui.searchEntry.clutter_text.reactive = true;
+        this.app.ui.userEntry.clutter_text.reactive = true;
     }
 
     _isSlashCommand(text) {
