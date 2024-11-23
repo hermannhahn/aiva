@@ -151,7 +151,7 @@ export class ThemeMenu {
         }
         // make color more darkness
         const darkColors = this.app.utils.darkColors(color);
-        this.searchEntry.set_style(
+        this.userEntry.set_style(
             `background-color: rgba(${darkColors}, ${transparency});`,
         );
     }
