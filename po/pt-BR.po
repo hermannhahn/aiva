@@ -491,7 +491,7 @@ msgstr "Olá, eu sou "
 msgid ", your helpfull assistant."
 msgstr ", sua assistente útil."
 
-#: src/ui/menu.js:33
+#: src/ui/interface.js:33
 msgid "Ask me anything..."
 msgstr "Pergunte-me qualquer coisa..."
 

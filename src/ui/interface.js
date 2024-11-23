@@ -9,7 +9,7 @@ export class Interface {
     constructor(app) {
         this.app = app;
 
-        this.ui = new PopupMenu.PopupBaseMenuItem({
+        this.menu = new PopupMenu.PopupBaseMenuItem({
             style_class: 'app-menu',
             reactive: false,
             can_focus: true,
