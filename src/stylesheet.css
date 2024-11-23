@@ -12,14 +12,9 @@
     background-size: 24px;
     width: 24px;
     height: 24px;
-    padding: 0px;
 }
 .main-bar {
-    padding-top: 0px;
-    padding-bottom: 5px;
-    padding-left: 1px;
-    padding-right: 1px;
-    margin: 0px;
+    padding: 5px;
     border-radius: 10px;
 }
 .user-entry {
@@ -36,10 +31,10 @@
     margin-bottom: 15px;
     padding-left: 5px;
 }
-.status-icon:hover {
+.character-icon:hover {
     background-color: transparent;
 }
-.status-icon:active {
+.character-icon:active {
     font-size: 18px;
 }
 .enter-icon {
