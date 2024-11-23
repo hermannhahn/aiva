@@ -1,14 +1,7 @@
 import * as St from 'gi://St';
-import * as PopupMenu from 'gi://PopupMenu';
 
 export class Themes {
     constructor() {
-        this.appearanceMenu = new PopupMenu.PopupBaseMenuItem({
-            style_class: 'app-interface',
-            reactive: false,
-            can_focus: true,
-        });
-
         // Create appearance box
         this.appearanceBox = new St.BoxLayout({
             style_class: 'appearance-box',
