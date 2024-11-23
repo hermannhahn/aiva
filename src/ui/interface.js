@@ -88,20 +88,21 @@ export class Interface {
         this.menu.add_child(this.settingsButton);
         this.menu.add_child(this.appearanceButton);
         app.box.add_child(this.chat.scrollView);
-        this._connect();
+        this._connect(app);
     }
 
     /**
      * @description actions
+     * @param {object} app
      */
-    _connect() {
+    _connect(app) {
         // If press enter on question input box
         this.userEntry.clutter_text.connect('activate', (actor) => {
             const question = actor.text;
             this.userEntry.clutter_text.set_text('');
             this.userEntry.clutter_text.reactive = false;
-            this.app.chat.addQuestion(question);
-            this.app.interpreter.proccess(question);
+            app.chat.addQuestion(question);
+            app.interpreter.proccess(question);
         });
 
         // If press mic button
