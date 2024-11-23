@@ -3,7 +3,6 @@ import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js'
 import St from 'gi://St';
 
 import {Interface} from './interface.js';
-import {Themes} from './themes.js';
 
 /**
  * @description user interface
@@ -12,7 +11,6 @@ import {Themes} from './themes.js';
 export class UI {
     constructor(app) {
         this.app = app;
-        this.theme = new Themes();
         this.interface = new Interface();
 
         // App
@@ -30,7 +28,6 @@ export class UI {
     create() {
         this.app.add_child(this.tray);
         this.tray.add_child(this.icon);
-        this.app.menu.addMenuItem(this.theme.menu);
-        this.app.menu.addMenuItem(this.interface.menu);
+        this.interface.create(this.app.menu);
     }
 }
