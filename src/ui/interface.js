@@ -4,7 +4,7 @@ import * as PopupMenu from 'gi://PopupMenu';
 
 /**
  * @description user interface
- * @param {object} menu this.app.menu
+ * @param {object} menu app menu
  */
 export class Interface {
     constructor(menu) {
