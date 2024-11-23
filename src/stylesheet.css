@@ -17,10 +17,10 @@
     padding: 5px;
     border-radius: 10px;
 }
-.user-entry {
-    width: 250px;
-    height: 30px !important;
-    border-radius: 5px;
+.theme-bar {
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 5px;
 }
 .character-icon {
     font-size: 20px;
@@ -35,13 +35,16 @@
 .character-icon:active {
     font-size: 18px;
 }
+.user-entry {
+    width: 250px;
+    height: 30px !important;
+    border-radius: 5px;
+}
 .enter-icon {
     background-image: url('assets/icon_enter.png');
     background-size: 32px;
     text-align: center;
     width: 40px;
-    margin-top: 25px;
-    margin-bottom: 12px;
 }
 .enter-icon:hover {
     background-color: rgb(54, 54, 54);
@@ -54,8 +57,6 @@
     background-size: 32px;
     text-align: center;
     width: 40px;
-    margin-top: 25px;
-    margin-bottom: 12px;
 }
 .mic-icon:hover {
     background-color: rgb(54, 54, 54);
@@ -72,8 +73,6 @@
     font-size: 20px;
     text-align: center;
     width: 40px;
-    margin-top: 25px;
-    margin-bottom: 12px;
 }
 .trash-icon:hover {
     background-color: rgb(54, 54, 54);
@@ -87,8 +86,6 @@
     font-size: 20px;
     text-align: center;
     width: 40px;
-    margin-top: 25px;
-    margin-bottom: 12px;
     margin-right: 5px;
 }
 .settings-icon:hover {
@@ -103,8 +100,6 @@
     font-size: 20px;
     text-align: center;
     width: 40px;
-    margin-top: 25px;
-    margin-bottom: 12px;
     margin-right: 5px;
 }
 .appearance-icon:hover {
