@@ -2,8 +2,7 @@ import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js'
 
 import St from 'gi://St';
 
-import {Chat} from './chat.js';
-import {Menu} from './menu.js';
+import {Interface} from './interface.js';
 import {Themes} from './themes.js';
 
 /**
@@ -15,7 +14,6 @@ export class UI {
         this.app = app;
         this.theme = new Themes();
         this.interface = new Interface();
-        this.chat = new Chat();
 
         // App
         this.tray = new St.BoxLayout({
