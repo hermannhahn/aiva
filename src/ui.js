@@ -17,7 +17,7 @@ export class UI {
 
         // Tray
         this.tray = new St.BoxLayout({
-            style_class: 'app-menu',
+            style_class: 'tray',
         });
         this.icon = new St.Icon({
             style_class: 'tray-icon',
