@@ -7,6 +7,17 @@ import * as PopupMenu from 'gi://PopupMenu';
  */
 export class Menu {
     constructor() {
+        this.menu = new PopupMenu.PopupBaseMenuItem({
+            style_class: 'app-menu',
+            reactive: false,
+            can_focus: true,
+        });
+
+        // Create appearance box
+        this.box = new St.BoxLayout({
+            style_class: 'menu-box',
+        });
+
         // AI Character
         this.character = new St.Button({
             label: '🤖',
@@ -63,17 +74,21 @@ export class Menu {
             toggle_mode: true,
             can_focus: false,
         });
+
+        // Create interface
+
         return this;
     }
 
     create() {
-        this.menu.add_child(this.character);
-        this.menu.add_child(this.userEntry);
-        this.menu.add_child(this.enterButton);
-        this.menu.add_child(this.micButton);
-        this.menu.add_child(this.clearButton);
-        this.menu.add_child(this.settingsButton);
-        this.menu.add_child(this.appearanceButton);
+        this.menu.add_child(this.box);
+        this.box.add_child(this.character);
+        this.box.add_child(this.userEntry);
+        this.box.add_child(this.enterButton);
+        this.box.add_child(this.micButton);
+        this.box.add_child(this.clearButton);
+        this.box.add_child(this.settingsButton);
+        this.box.add_child(this.appearanceButton);
         this._connect();
     }
 
@@ -97,7 +112,7 @@ export class Menu {
 
         // If press clear button
         this.clearButton.connect('clicked', (_self) => {
-            this.menu.userEntry.clutter_text.set_text('');
+            this.userEntry.clutter_text.set_text('');
             this.app.chat.history = [];
             this.interface.box.remove_child(this.scrollView);
             this.chat.chatSection = new PopupMenu.PopupMenuSection();
@@ -106,7 +121,7 @@ export class Menu {
         });
 
         // If press settings button
-        this.menu.settingsButton.connect('clicked', (_self) => {
+        this.settingsButton.connect('clicked', (_self) => {
             this.app.openSettings();
             // Close App
             if (this.appearanceBoxIsOpen) {
