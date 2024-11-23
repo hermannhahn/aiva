@@ -34,7 +34,11 @@ export class Chat {
 
         // Separator
         this.newSeparator = new PopupMenu.PopupSeparatorMenuItem();
-        return this;
+    }
+
+    create(ui) {
+        ui.box.add_child(this.scrollView);
+        this.scrollView.add_child(this.chatSection.actor);
     }
 
     /**
