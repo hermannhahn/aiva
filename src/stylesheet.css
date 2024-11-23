@@ -22,17 +22,17 @@
     height: 30px !important;
     border-radius: 5px;
 }
-.emoji-icon {
+.character-icon {
     font-size: 20px;
     color: black;
     text-align: center;
     width: 40px;
     border-radius: 10px;
 }
-.emoji-icon:hover {
+.character-icon:hover {
     background-color: transparent;
 }
-.emoji-icon:active {
+.character-icon:active {
     font-size: 18px;
 }
 .enter-icon {
