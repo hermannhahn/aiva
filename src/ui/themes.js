@@ -95,10 +95,6 @@ export class Themes {
         });
     }
 
-    create(ui) {
-        ui.addMenuItem(this.menu);
-    }
-
     show() {
         this.appearanceBoxIsOpen = true;
         this.menu.add_child(this.box);
