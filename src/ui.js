@@ -5,34 +5,16 @@ import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js'
 /**
  * @description app user interface
  * @param {object} app
- * @example
- * instance:
- * const ui = new UI(app);
- *
- * public function
- * init() - initialize interfaces
- * chat() - return chat item
- * question() - return new question item
- * response() - return new response item
- * copy() - return new copy button item
- *
- * private function
- * _createApp() - create app and tray
- * _addItems() - add items to app
- * _itemsActions() - event handlers
  */
 export class UI {
     constructor(app) {
         this.app = app;
-        this.app.log('UI loaded.');
     }
 
     /**
      * @description initialize interfaces
      */
     init() {
-        this.app.log('Initializing UI...');
-
         // Create tray
         this.tray = new St.BoxLayout({
             style_class: 'tray',
@@ -42,21 +24,21 @@ export class UI {
         });
 
         // Create app item section
-        this.items = new PopupMenu.PopupBaseMenuItem({
-            style_class: 'app-items',
+        this.mainbar = new PopupMenu.PopupBaseMenuItem({
+            style_class: 'main-bar',
             reactive: false,
             can_focus: true,
         });
 
         // Status Icon
-        this.statusBar = new St.Button({
+        this.character = new St.Button({
             label: '🤖',
-            style_class: 'status-icon',
+            style_class: 'character-icon',
             can_focus: false,
         });
 
-        this.searchEntry = new St.Entry({
-            style_class: 'search-entry',
+        this.userEntry = new St.Entry({
+            style_class: 'user-entry',
             hint_text: _('Ask me anything...'),
             track_hover: true,
             x_expand: true,
@@ -97,7 +79,7 @@ export class UI {
         });
 
         this.appearanceMenu = new PopupMenu.PopupBaseMenuItem({
-            style_class: 'app-items',
+            style_class: 'theme-bar',
             reactive: false,
             can_focus: true,
         });
@@ -248,18 +230,18 @@ export class UI {
     _addItems() {
         // Add items container to app
         this.app.menu.addMenuItem(this.appearanceMenu);
-        this.app.menu.addMenuItem(this.items);
+        this.app.menu.addMenuItem(this.mainbar);
         this.app.menu.style_class = 'app';
         this.app.menu.box.style_class = 'app-box';
 
         // Add items
-        this.items.add_child(this.statusBar);
-        this.items.add_child(this.searchEntry);
-        this.items.add_child(this.enterButton);
-        this.items.add_child(this.micButton);
-        this.items.add_child(this.clearButton);
-        this.items.add_child(this.settingsButton);
-        this.items.add_child(this.appearanceButton);
+        this.mainbar.add_child(this.character);
+        this.mainbar.add_child(this.userEntry);
+        this.mainbar.add_child(this.enterButton);
+        this.mainbar.add_child(this.micButton);
+        this.mainbar.add_child(this.clearButton);
+        this.mainbar.add_child(this.settingsButton);
+        this.mainbar.add_child(this.appearanceButton);
 
         // Add scrollview
         this.app.menu.box.add_child(this.scrollView);
@@ -280,10 +262,10 @@ export class UI {
      */
     _itemsActions() {
         // If press enter on question input box
-        this.searchEntry.clutter_text.connect('activate', (actor) => {
+        this.userEntry.clutter_text.connect('activate', (actor) => {
             const question = actor.text;
-            this.searchEntry.clutter_text.set_text('');
-            this.searchEntry.clutter_text.reactive = false;
+            this.userEntry.clutter_text.set_text('');
+            this.userEntry.clutter_text.reactive = false;
             this.app.chat.addQuestion(question);
             this.app.interpreter.proccess(question);
         });
@@ -295,7 +277,7 @@ export class UI {
 
         // If press clear button
         this.clearButton.connect('clicked', (_self) => {
-            this.searchEntry.clutter_text.set_text('');
+            this.userEntry.clutter_text.set_text('');
             this.app.chat.history = [];
             this.app.menu.box.remove_child(this.scrollView);
             this.chatSection = new PopupMenu.PopupMenuSection();
@@ -451,12 +433,12 @@ export class UI {
     }
 
     statusIcon(icon) {
-        this.statusBar.label = icon;
+        this.character.label = icon;
         return true;
     }
 
     resetStatusIcon() {
-        this.statusBar.label = '🤖';
+        this.character.label = '🤖';
         return true;
     }
 
@@ -484,7 +466,7 @@ export class UI {
         // set theme
         transparency = 100 - transparency;
         transparency = parseInt(transparency) / 100;
-        this.items.set_style(
+        this.mainbar.set_style(
             `background-color: rgba(${color}, ${transparency});`,
         );
         this.scrollView.set_style(
@@ -493,7 +475,7 @@ export class UI {
         if (transparency < 0.8) {
             transparency += 0.2;
         }
-        this.searchEntry.set_style(
+        this.userEntry.set_style(
             `background-color: rgba(${color}, ${transparency});`,
         );
     }
