@@ -35,10 +35,10 @@ export class UI {
 
         // Create tray
         this.tray = new St.BoxLayout({
-            style_class: 'system-tray',
+            style_class: 'tray',
         });
         this.icon = new St.Icon({
-            style_class: 'google-assistant-icon',
+            style_class: 'tray-icon',
         });
 
         // Create app item section
