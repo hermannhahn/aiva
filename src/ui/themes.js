@@ -1,9 +1,19 @@
 import * as St from 'gi://St';
+import * as PopupMenu from 'gi://PopupMenu';
 
+/**
+ * @description user interface
+ */
 export class Themes {
     constructor() {
+        this.menu = new PopupMenu.PopupBaseMenuItem({
+            style_class: 'app-menu',
+            reactive: false,
+            can_focus: true,
+        });
+
         // Create appearance box
-        this.appearanceBox = new St.BoxLayout({
+        this.box = new St.BoxLayout({
             style_class: 'appearance-box',
         });
 
@@ -83,14 +93,22 @@ export class Themes {
             toggle_mode: true,
             can_focus: true,
         });
-        this.menu.style_class = 'app';
-        this.menu.box.style_class = 'app-box';
         return this;
     }
 
     show() {
-        this.menu.add_child(this.appearanceMenu);
-        this.menu.add_child(this.items);
+        this.menu.add_child(this.box);
+        this.box.add_child(this.transparencyLabel);
+        this.box.add_child(this.transparencyEntry);
+        this.box.add_child(this.transparencyButton);
+        this.box.add_child(this.colorsLabel);
+        this.box.add_child(this.colorBlackButton);
+        this.box.add_child(this.colorBlueButton);
+        this.box.add_child(this.colorRedButton);
+        this.box.add_child(this.colorGreenButton);
+        this.box.add_child(this.colorYellowButton);
+        this.box.add_child(this.colorPurpleButton);
+        this._connect();
     }
 
     set(transparency, color) {
@@ -136,7 +154,7 @@ export class Themes {
     /**
      * @description actions
      */
-    connect() {
+    _connect() {
         // If press appearance button
         this.appearanceBoxIsOpen = false;
         this.menu.appearanceButton.connect('clicked', (_self) => {
