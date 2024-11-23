@@ -19,11 +19,13 @@ export class Interface {
         this.icon = new St.Icon({
             style_class: 'tray-icon',
         });
-
         return this;
     }
 
-    create() {
+    /**
+     * @description create interface
+     */
+    _create() {
         this.box.add_child(this.icon);
         this.menu.create();
         this.chat.create();
