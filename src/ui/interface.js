@@ -1,7 +1,5 @@
 import St from 'gi://St';
 
-import * as PopupMenu from 'gi://PopupMenu';
-
 /**
  * @description app user interface
  * @param {object} app
