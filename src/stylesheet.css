@@ -14,7 +14,7 @@
     height: 24px;
 }
 .main-bar {
-    padding: 5px;
+    padding: 10px;
     border-radius: 10px;
 }
 .theme-bar {
@@ -23,7 +23,7 @@
     margin-bottom: 5px;
 }
 .character-icon {
-    font-size: 20px;
+    font-size: 24px;
     color: black;
     text-align: center;
     width: 40px;
@@ -33,12 +33,18 @@
     background-color: transparent;
 }
 .character-icon:active {
-    font-size: 18px;
+    font-size: 12px;
 }
 .user-entry {
     width: 250px;
     height: 30px !important;
     border-radius: 5px;
+}
+.user-entry:hover {
+    background-color: rgb(54, 54, 54);
+}
+.user-entry:active {
+    background-color: rgb(54, 54, 54);
 }
 .enter-icon {
     background-image: url('assets/icon_enter.png');
@@ -48,6 +54,7 @@
 }
 .enter-icon:hover {
     background-color: rgb(54, 54, 54);
+    border-radius: 5px;
 }
 .enter-icon:active {
     background-size: 30px;
@@ -60,6 +67,7 @@
 }
 .mic-icon:hover {
     background-color: rgb(54, 54, 54);
+    border-radius: 5px;
 }
 .mic-icon:checked {
     background-image: url('assets/icon_mic_rec.png');
@@ -76,6 +84,7 @@
 }
 .trash-icon:hover {
     background-color: rgb(54, 54, 54);
+    border-radius: 5px;
 }
 .trash-icon:active {
     font-size: 18px;
@@ -90,6 +99,7 @@
 }
 .settings-icon:hover {
     background-color: rgb(54, 54, 54);
+    border-radius: 5px;
 }
 .settings-icon:active {
     font-size: 18px;
@@ -104,6 +114,7 @@
 }
 .appearance-icon:hover {
     background-color: rgb(54, 54, 54);
+    border-radius: 5px;
 }
 .appearance-icon:active {
     font-size: 18px;
