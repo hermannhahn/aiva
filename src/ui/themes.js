@@ -93,7 +93,6 @@ export class Themes {
             toggle_mode: true,
             can_focus: true,
         });
-        return this;
     }
 
     show() {
