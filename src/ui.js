@@ -17,5 +17,6 @@ export class UI {
      */
     create() {
         this.app.add_child(this.interface.box);
+        this.interface.create();
     }
 }
