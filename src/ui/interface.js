@@ -2,7 +2,6 @@ import St from 'gi://St';
 
 /**
  * @description app user interface
- * @param {object} app
  */
 export class Interface {
     constructor() {
@@ -14,6 +13,7 @@ export class Interface {
         this.icon = new St.Icon({
             style_class: 'tray-icon',
         });
+
         return this;
     }
 
