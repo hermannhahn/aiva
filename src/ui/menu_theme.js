@@ -4,7 +4,7 @@ import * as PopupMenu from 'gi://PopupMenu';
 /**
  * @description user interface
  */
-export class MenuTheme {
+export class ThemeMenu {
     constructor() {
         this.menu = new PopupMenu.PopupBaseMenuItem({
             style_class: 'menu',
