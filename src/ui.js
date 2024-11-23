@@ -33,7 +33,7 @@ export class UI {
         this.app.add_child(this.tray);
         this.tray.add_child(this.icon);
         this.app.menu.addMenuItem(this.theme.menu);
-        this.app.menu.addMenuItem(this.interface.ui);
+        this.app.menu.addMenuItem(this.interface.menu);
         this.chat.create(this.app.menu);
     }
 }
