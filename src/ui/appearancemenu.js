@@ -2,9 +2,9 @@ import * as St from 'gi://St';
 import * as PopupMenu from 'gi://PopupMenu';
 
 /**
- * @description user interface
+ * @description appearance menu
  */
-export class ThemeMenu {
+export class AppearanceMenu {
     constructor() {
         this.menu = new PopupMenu.PopupBaseMenuItem({
             style_class: 'menu',
