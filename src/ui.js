@@ -2,7 +2,10 @@ import St from 'gi://St';
 import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
+import {AppearanceMenu} from './appearancemenu.js';
+import {Chat} from './chat.js';
 import {Interface} from './interface.js';
+import {MainMenu} from './mainmenu.js';
 
 /**
  * @description app user interface
@@ -12,79 +15,19 @@ export class UI {
     constructor(app) {
         this.app = app;
         this.interface = new Interface();
+        this.mainmenu = new MainMenu();
+        this.chat = new Chat();
+        this.appearanceMenu = new AppearanceMenu();
     }
 
     /**
      * @description initialize interfaces
      */
     init() {
-        // Create app item section
-        this.mainbar = new PopupMenu.PopupBaseMenuItem({
-            style_class: 'main-bar',
-            reactive: false,
-            can_focus: true,
-        });
-
-        // Status Icon
-        this.character = new St.Button({
-            label: '🤖',
-            style_class: 'character-icon',
-            can_focus: false,
-        });
-
-        this.userEntry = new St.Entry({
-            style_class: 'user-entry',
-            hint_text: _('Ask me anything...'),
-            track_hover: true,
-            x_expand: true,
-            y_expand: true,
-            can_focus: true,
-        });
-
-        // Create enter button
-        this.enterButton = new St.Button({
-            label: '',
-            style_class: 'enter-icon',
-            toggle_mode: true,
-            can_focus: false,
-        });
-
-        // Create voice activation button
-        this.micButton = new St.Button({
-            label: '',
-            style_class: 'mic-icon',
-            toggle_mode: true,
-            can_focus: false,
-        });
-
-        // Create clear history button
-        this.clearButton = new St.Button({
-            label: '🗑️',
-            style_class: 'trash-icon',
-            toggle_mode: true,
-            can_focus: false,
-        });
-
-        // Create settings button
-        this.settingsButton = new St.Button({
-            label: '⚙️',
-            style_class: 'settings-icon',
-            toggle_mode: true,
-            can_focus: false,
-        });
-
         this.appearanceMenu = new PopupMenu.PopupBaseMenuItem({
             style_class: 'theme-bar',
             reactive: false,
             can_focus: true,
-        });
-
-        // Create appearance button
-        this.appearanceButton = new St.Button({
-            label: '🎨',
-            style_class: 'appearance-icon',
-            toggle_mode: true,
-            can_focus: false,
         });
 
         // Create appearance box
