@@ -16,13 +16,6 @@ export class Interface {
         this.icon = new St.Icon({
             style_class: 'tray-icon',
         });
-
-        // Create interface
-        this.box = new PopupMenu.PopupBaseMenuItem({
-            style_class: 'app-interface',
-            reactive: false,
-            can_focus: true,
-        });
         return this;
     }
 
