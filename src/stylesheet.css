@@ -281,6 +281,7 @@
 .appearance-box {
     background-color: rgba(42, 42, 42, 0.757);
     border-radius: 10px;
+    padding: 10px;
     text-align: right;
 }
 .transparency-label {
