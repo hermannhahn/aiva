@@ -4,6 +4,9 @@
 .app-box {
     background-color: transparent;
 }
+.tray {
+    background-color: transparent;
+}
 .tray-icon {
     background-image: url('assets/icon_tray.png');
     background-size: 24px;
