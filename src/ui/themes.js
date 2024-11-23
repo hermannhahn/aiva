@@ -7,7 +7,7 @@ import * as PopupMenu from 'gi://PopupMenu';
 export class Themes {
     constructor() {
         this.menu = new PopupMenu.PopupBaseMenuItem({
-            style_class: 'app-menu',
+            style_class: 'menu',
             reactive: false,
             can_focus: true,
         });
