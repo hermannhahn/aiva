@@ -15,9 +15,7 @@ export class AppearanceMenu {
             reactive: false,
             can_focus: true,
         });
-        this.container.set_style(
-            `background-color: rgba(${this.app.userSettings.COLOR}, 0);`,
-        );
+        this.container.set_style(`background-color: rgba(54, 54, 54, 0);`);
 
         this.box = new St.BoxLayout({
             style_class: 'appearence-box',
