@@ -1,10 +1,10 @@
 import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
-import {AppearanceMenu} from './appearancemenu.js';
-import {Chat} from './chat.js';
-import {Interface} from './interface.js';
-import {MainMenu} from './mainmenu.js';
+import {AppearanceMenu} from './ui/appearancemenu.js';
+import {Chat} from './ui/chat.js';
+import {Interface} from './ui/interface.js';
+import {MainMenu} from './ui/mainmenu.js';
 
 /**
  * @description app user interface
@@ -13,6 +13,7 @@ import {MainMenu} from './mainmenu.js';
 export class UI {
     constructor(app) {
         this.app = app;
+        this.container = this.app.menu;
         this.interface = new Interface();
         this.mainmenu = new MainMenu();
         this.appearancemenu = new AppearanceMenu();
@@ -41,11 +42,12 @@ export class UI {
      * @description add items to app
      */
     _addItems() {
+        // add style
+        this.container.style_class = 'app';
+        this.container.box.style_class = 'app-box';
         // Add items container to app
-        this.app.menu.addMenuItem(this.appearancemenu);
-        this.app.menu.addMenuItem(this.mainbar);
-        this.app.menu.style_class = 'app';
-        this.app.menu.box.style_class = 'app-box';
+        this.container.addMenuItem(this.appearancemenu.items);
+        this.container.addMenuItem(this.mainmenu.items);
 
         // Add items
         this.mainbar.add_child(this.character);
@@ -57,7 +59,7 @@ export class UI {
         this.mainbar.add_child(this.appearanceButton);
 
         // Add scrollview
-        this.app.menu.box.add_child(this.scrollView);
+        this.container.box.add_child(this.chat.scrollView);
 
         // Add chat to scrollbar
         this.scrollView.add_child(this.chatSection.actor);
@@ -92,10 +94,10 @@ export class UI {
         this.clearButton.connect('clicked', (_self) => {
             this.userEntry.clutter_text.set_text('');
             this.app.chat.history = [];
-            this.app.menu.box.remove_child(this.scrollView);
+            this.container.box.remove_child(this.scrollView);
             this.chatSection = new PopupMenu.PopupMenuSection();
             this.scrollView.add_child(this.chatSection.actor);
-            this.app.menu.box.add_child(this.scrollView);
+            this.container.box.add_child(this.scrollView);
         });
 
         // If press settings button
@@ -106,7 +108,7 @@ export class UI {
                 this.appearanceMenu.remove_child(this.appearanceBox);
                 this.appearanceBoxIsOpen = false;
             }
-            this.app.menu.close();
+            this.container.close();
         });
 
         // If press appearance button
