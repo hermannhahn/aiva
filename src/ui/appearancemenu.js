@@ -10,16 +10,16 @@ export class AppearanceMenu {
     }
 
     _create() {
-        this.container = new PopupMenu.PopupBaseMenuItem({
+        this.container = new St.BoxLayout({
             style_class: 'appearence-bar',
+        });
+
+        this.box = new PopupMenu.PopupBaseMenuItem({
+            style_class: 'appearence-box',
             reactive: false,
             can_focus: true,
         });
-        this.container.set_style(`background-color: rgba(0, 0, 0, 0);`);
-
-        this.box = new St.BoxLayout({
-            style_class: 'appearence-box',
-        });
+        this.box.set_style(`background-color: rgba(0, 0, 0, 0);`);
 
         // Create transparency slider
         this.transparencyEntry = new St.Entry({
