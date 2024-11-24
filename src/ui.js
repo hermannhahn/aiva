@@ -50,6 +50,13 @@ export class UI {
         // add style
         this.container.style_class = 'app';
         this.container.box.style_class = 'app-box';
+        // this.appearancemenu.container.set_style(
+        //     `background-color: rgba(${this.app.userSettings.COLOR}, 0);`,
+        // );
+        // this.chat.container.set_style(
+        //     `background-color: rgba(${this.app.userSettings.COLOR}, 0);`,
+        // );
+
         // add items
         this.container.addMenuItem(this.appearancemenu.container);
         this.container.addMenuItem(this.mainmenu.container);
