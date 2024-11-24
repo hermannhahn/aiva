@@ -82,16 +82,16 @@ export class Chat {
      */
     response() {
         // Response
-        let responseChat = new PopupMenu.PopupMenuItem('', {
+        let responseBox = new PopupMenu.PopupMenuItem('', {
             style_class: 'response-chat',
             can_focus: false,
         });
-        responseChat.label.clutter_text.reactive = true;
-        responseChat.label.clutter_text.selectable = true;
-        responseChat.label.clutter_text.hover = true;
-        responseChat.label.clutter_text.justify = true;
-        this.lastResponse = responseChat;
-        return responseChat;
+        responseBox.label.clutter_text.reactive = true;
+        responseBox.label.clutter_text.selectable = true;
+        responseBox.label.clutter_text.hover = true;
+        responseBox.label.clutter_text.justify = true;
+        this.responseBox = responseBox;
+        return responseBox;
     }
 
     /**
