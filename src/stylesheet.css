@@ -121,8 +121,6 @@
 }
 .appearance-box {
     background-color: transparent;
-    border-radius: 10px;
-    text-align: right;
 }
 .chat-scroll {
     background-color: rgba(42, 42, 42, 0);
