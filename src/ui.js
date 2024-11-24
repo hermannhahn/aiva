@@ -203,7 +203,7 @@ export class UI {
         this.appearancemenu.box.set_style(
             `background-color: rgba(${color}, ${transparency});`,
         );
-        this.mainmenu.box.set_style(
+        this.mainmenu.container.set_style(
             `background-color: rgba(${color}, ${transparency});`,
         );
         this.chat.box.set_style(
