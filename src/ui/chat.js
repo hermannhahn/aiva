@@ -34,6 +34,12 @@ export class Chat {
 
         // Separator
         this.newSeparator = new PopupMenu.PopupSeparatorMenuItem();
+
+        this._addItems();
+    }
+
+    _addItems() {
+        this.container.add_child(this.box);
     }
 
     /**
