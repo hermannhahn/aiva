@@ -132,7 +132,7 @@
 }
 .chat-section {
     overflow-y: auto;
-    color: rgb(243, 232, 212);
+    color: rgba(42, 42, 42, 0);
     text-wrap: wrap;
     word-wrap: break-word;
 }
