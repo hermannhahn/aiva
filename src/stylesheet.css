@@ -18,6 +18,7 @@
     border-radius: 10px;
 }
 .theme-bar {
+    background-color: rgba(42, 42, 42, 0);
     padding: 5px;
     border-radius: 10px;
     margin-bottom: 5px;
@@ -120,6 +121,7 @@
     font-size: 18px;
 }
 .chat-scroll {
+    background-color: rgba(42, 42, 42, 0);
     max-width: 800px;
     max-height: 550px;
     overflow: auto;
