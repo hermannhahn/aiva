@@ -16,11 +16,6 @@ export class AppearanceMenu {
             can_focus: true,
         });
 
-        this.box = new PopupMenu.PopupMenuSection({
-            style_class: 'theme-section',
-            can_focus: false,
-        });
-
         // Create transparency slider
         this.transparencyEntry = new St.Entry({
             style_class: 'transparency-entry',
