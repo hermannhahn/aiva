@@ -6,14 +6,14 @@ import * as PopupMenu from 'gi://PopupMenu';
  */
 export class AppearanceMenu {
     constructor() {
-        this.menu = new PopupMenu.PopupBaseMenuItem({
-            style_class: 'menu',
+        this.appearanceMenu = new PopupMenu.PopupBaseMenuItem({
+            style_class: 'theme-bar',
             reactive: false,
             can_focus: true,
         });
 
         // Create appearance box
-        this.box = new St.BoxLayout({
+        this.appearanceBox = new St.BoxLayout({
             style_class: 'appearance-box',
         });
 
