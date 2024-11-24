@@ -11,7 +11,7 @@ export class Chat {
         });
 
         // Create chat section
-        this.chatSection = new PopupMenu.PopupMenuSection({
+        this.box = new PopupMenu.PopupMenuSection({
             style_class: 'chat-section',
             can_focus: false,
         });
