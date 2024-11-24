@@ -6,15 +6,10 @@ import * as PopupMenu from 'gi://PopupMenu';
  */
 export class AppearanceMenu {
     constructor() {
-        this.items = new PopupMenu.PopupBaseMenuItem({
+        this.container = new PopupMenu.PopupBaseMenuItem({
             style_class: 'theme-bar',
             reactive: false,
             can_focus: true,
-        });
-
-        // Create appearance box
-        this.box = new St.BoxLayout({
-            style_class: 'appearance-box',
         });
 
         // Create transparency slider
