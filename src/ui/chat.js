@@ -13,13 +13,13 @@ export class Chat {
             overlay_scrollbars: false,
             can_focus: false,
         });
+        this.container.set_style(`background-color: rgba(42, 42, 42, 0);`);
 
         // Create chat section
         this.box = new PopupMenu.PopupMenuSection({
             style_class: 'chat-section',
             can_focus: false,
         });
-        this.box.set_style(`background-color: rgba(42, 42, 42, 0);`);
 
         // Create input and response chat items
         this.input = new PopupMenu.PopupMenuItem('', {
