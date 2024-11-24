@@ -82,13 +82,13 @@ export class Utils {
 
     scrollToBottom() {
         // Força uma nova disposição do layout
-        this.app.ui.responseChat.queue_relayout();
+        this.app.ui.chat.responseChat.queue_relayout();
 
         // Conecta ao sinal que notifica quando o layout estiver pronto
-        this.app.ui.responseChat.connect('notify::height', (_self) => {
+        this.app.ui.chat.responseChat.connect('notify::height', (_self) => {
             // Aguardar o ajuste da rolagem após o próximo loop do evento
             GLib.idle_add(GLib.PRIORITY_DEFAULT, () => {
-                let vscrollBar = this.app.ui.scrollView.get_vscroll_bar();
+                let vscrollBar = this.app.ui.chat.container.get_vscroll_bar();
                 let adjustment = vscrollBar.get_adjustment();
 
                 // Define o valor superior e garante a rolagem até o final
