@@ -6,6 +6,10 @@ import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
  */
 export class AppearanceMenu {
     constructor() {
+        this._add();
+    }
+
+    _add() {
         this.container = new PopupMenu.PopupBaseMenuItem({
             style_class: 'theme-bar',
             reactive: false,
