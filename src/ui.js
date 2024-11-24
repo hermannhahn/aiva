@@ -96,6 +96,7 @@ export class UI {
         });
 
         // If press settings button
+        this.appearancemenu.isOpen = false;
         this.mainmenu.settingsButton.connect('clicked', (_self) => {
             this.app.openSettings();
             // Close App
@@ -109,7 +110,6 @@ export class UI {
         });
 
         // If press appearance button
-        this.appearancemenu.isOpen = false;
         this.mainmenu.appearanceButton.connect('clicked', (_self) => {
             // show or hide
             if (this.appearancemenu.isOpen) {
