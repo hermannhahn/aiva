@@ -64,6 +64,10 @@ export class Chat {
      * @param {boolean} [speech=true] - speech text
      */
     addQuestion(text, speech = false) {
+        this.app.ui.setTheme(
+            this.app.userSettings.TRANSPARENCY,
+            this.app.userSettings.COLOR,
+        );
         const inputChat = this.app.ui.chat.question();
         this.app.ui.chat.box.addMenuItem(inputChat);
         text = this.app.utils.questionFormat(text);
