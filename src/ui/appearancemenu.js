@@ -94,25 +94,20 @@ export class AppearanceMenu {
             toggle_mode: true,
             can_focus: true,
         });
+
+        this._add();
     }
 
-    show() {
-        this.isOpen = true;
-        this.container.add_child(this.box);
-        this.box.add_child(this.transparencyLabel);
-        this.box.add_child(this.transparencyEntry);
-        this.box.add_child(this.transparencyButton);
-        this.box.add_child(this.colorsLabel);
-        this.box.add_child(this.colorBlackButton);
-        this.box.add_child(this.colorBlueButton);
-        this.box.add_child(this.colorRedButton);
-        this.box.add_child(this.colorGreenButton);
-        this.box.add_child(this.colorYellowButton);
-        this.box.add_child(this.colorPurpleButton);
-    }
-
-    hide() {
-        this.isOpen = false;
-        this.container.remove_child(this.box);
+    _add() {
+        this.container.add_child(this.transparencyLabel);
+        this.container.add_child(this.transparencyEntry);
+        this.container.add_child(this.transparencyButton);
+        this.container.add_child(this.colorsLabel);
+        this.container.add_child(this.colorBlackButton);
+        this.container.add_child(this.colorBlueButton);
+        this.container.add_child(this.colorRedButton);
+        this.container.add_child(this.colorGreenButton);
+        this.container.add_child(this.colorYellowButton);
+        this.container.add_child(this.colorPurpleButton);
     }
 }
