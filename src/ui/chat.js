@@ -40,7 +40,7 @@ export class Chat {
      * @description create chat item
      * @returns {object} chat item
      */
-    box() {
+    null() {
         // Question
         let chat = new PopupMenu.PopupMenuItem('', {
             style_class: 'input-chat',
