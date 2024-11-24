@@ -64,8 +64,9 @@ export class Chat {
      * @param {boolean} [speech=true] - speech text
      */
     addQuestion(text, speech = false) {
-        this.app.ui.chat.container.set_style(
-            `background-color: rgba(${this.app.userSettings.COLOR}, ${this.app.userSettings.TRANSPARENCY});`,
+        this.app.ui.setTheme(
+            this.app.userSettings.TRANSPARENCY,
+            this.app.userSettings.COLOR,
         );
         const inputChat = this.app.ui.chat.question();
         this.app.ui.chat.box.addMenuItem(inputChat);
