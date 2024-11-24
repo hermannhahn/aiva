@@ -15,6 +15,9 @@ export class AppearanceMenu {
             reactive: false,
             can_focus: true,
         });
+        this.container.set_style(
+            `background-color: rgba(${this.app.userSettings.COLOR}, 0);`,
+        );
 
         // Create transparency slider
         this.transparencyEntry = new St.Entry({
