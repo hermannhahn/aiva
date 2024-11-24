@@ -1,4 +1,3 @@
-import St from 'gi://St';
 import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
@@ -16,158 +15,34 @@ export class UI {
         this.app = app;
         this.interface = new Interface();
         this.mainmenu = new MainMenu();
+        this.appearancemenu = new AppearanceMenu();
         this.chat = new Chat();
-        this.appearanceMenu = new AppearanceMenu();
     }
 
     /**
      * @description initialize interfaces
      */
     init() {
-        this.appearanceMenu = new PopupMenu.PopupBaseMenuItem({
-            style_class: 'theme-bar',
-            reactive: false,
-            can_focus: true,
-        });
-
-        // Create appearance box
-        this.appearanceBox = new St.BoxLayout({
-            style_class: 'appearance-box',
-        });
-
-        // Create transparency slider
-        this.transparencyEntry = new St.Entry({
-            style_class: 'transparency-entry',
-            can_focus: true,
-        });
-        this.transparencyEntry.clutter_text.set_text(
-            this.app.userSettings.TRANSPARENCY,
-        );
-
-        // Create transparency label
-        this.transparencyLabel = new St.Label({
-            text: 'Transparency: ',
-            style_class: 'transparency-label',
-        });
-
-        // Create transparency ok button
-        this.transparencyButton = new St.Button({
-            label: 'OK',
-            style_class: 'transparency-ok-icon',
-            toggle_mode: true,
-            can_focus: true,
-        });
-
-        // Create colors label
-        this.colorsLabel = new St.Label({
-            text: 'Color: ',
-            style_class: 'colors-label',
-        });
-
-        // Create color blue button
-        this.colorBlueButton = new St.Button({
-            label: '🟦',
-            style_class: 'colors-icon',
-            toggle_mode: true,
-            can_focus: true,
-        });
-
-        // Create color red button
-        this.colorRedButton = new St.Button({
-            label: '🟥',
-            style_class: 'colors-icon',
-            toggle_mode: true,
-            can_focus: true,
-        });
-
-        // Create color green button
-        this.colorGreenButton = new St.Button({
-            label: '🟩',
-            style_class: 'colors-icon',
-            toggle_mode: true,
-            can_focus: true,
-        });
-
-        // Create color yellow button
-        this.colorYellowButton = new St.Button({
-            label: '🟨',
-            style_class: 'colors-icon',
-            toggle_mode: true,
-            can_focus: true,
-        });
-
-        // Create color purple button
-        this.colorPurpleButton = new St.Button({
-            label: '🟪',
-            style_class: 'colors-icon',
-            toggle_mode: true,
-            can_focus: true,
-        });
-
-        // Create color black button
-        this.colorBlackButton = new St.Button({
-            label: '⬛',
-            style_class: 'colors-icon',
-            toggle_mode: true,
-            can_focus: true,
-        });
-
-        // Create scrollbar
-        this.scrollView = new St.ScrollView({
-            style_class: 'chat-scroll',
-            overlay_scrollbars: false,
-            can_focus: false,
-        });
-
-        // Create chat section
-        this.chatSection = new PopupMenu.PopupMenuSection({
-            style_class: 'chat-section',
-            can_focus: false,
-        });
-
-        // Create input and response chat items
-        this.inputChat = new PopupMenu.PopupMenuItem('', {
-            style_class: 'input-chat',
-            can_focus: false,
-        });
-        this.responseChat = new PopupMenu.PopupMenuItem('', {
-            style_class: 'response-chat',
-            can_focus: false,
-        });
-
-        // Create copy button
-        this.copyButton = new PopupMenu.PopupMenuItem('', {
-            style_class: 'copy-icon',
-            can_focus: false,
-        });
-
-        // Separator
-        this.newSeparator = new PopupMenu.PopupSeparatorMenuItem();
-
         // Initialize
         this._createApp();
         this._addItems();
         this._itemsActions();
-
-        this.app.log('UI initialized.');
     }
 
     /**
-     * @description create app tray
+     * @description create app
      */
     _createApp() {
-        // Icon tray
-        this.interface.tray.add_child(this.icon);
+        this.interface.tray.add_child(this.interface.icon);
         this.app.add_child(this.interface.tray);
-        this.app.log('App tray initialized.');
     }
 
     /**
-     * @description add items to app tray
+     * @description add items to app
      */
     _addItems() {
         // Add items container to app
-        this.app.menu.addMenuItem(this.appearanceMenu);
+        this.app.menu.addMenuItem(this.appearancemenu);
         this.app.menu.addMenuItem(this.mainbar);
         this.app.menu.style_class = 'app';
         this.app.menu.box.style_class = 'app-box';
