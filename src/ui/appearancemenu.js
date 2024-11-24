@@ -1,5 +1,5 @@
 import * as St from 'gi://St';
-import * as PopupMenu from 'gi://PopupMenu';
+import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 
 /**
  * @description appearance menu
