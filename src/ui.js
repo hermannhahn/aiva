@@ -102,7 +102,7 @@ export class UI {
             // Close App
             if (this.appearancemenu.isOpen) {
                 this.appearancemenu.container.remove_child(
-                    this.appearancemenu.items,
+                    this.appearancemenu.section,
                 );
                 this.appearancemenu.isOpen = false;
             }
@@ -114,7 +114,7 @@ export class UI {
             // show or hide
             if (this.appearancemenu.isOpen) {
                 this.appearancemenu.container.remove_child(
-                    this.appearancemenu.items,
+                    this.appearancemenu.section,
                 );
                 this.appearancemenu.isOpen = false;
                 return;
@@ -122,7 +122,9 @@ export class UI {
             this.appearancemenu.transparencyEntry.clutter_text.set_text(
                 this.app.userSettings.TRANSPARENCY,
             );
-            this.appearancemenu.container.add_child(this.appearancemenu.items);
+            this.appearancemenu.container.add_child(
+                this.appearancemenu.section,
+            );
 
             this.appearancemenu.transparencyButton.connect(
                 'clicked',
