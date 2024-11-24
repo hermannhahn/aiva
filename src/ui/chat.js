@@ -90,7 +90,7 @@ export class Chat {
         responseChat.label.clutter_text.selectable = true;
         responseChat.label.clutter_text.hover = true;
         responseChat.label.clutter_text.justify = true;
-        this.responseChat = responseChat;
+        this.lastResponse = responseChat;
         return responseChat;
     }
 
