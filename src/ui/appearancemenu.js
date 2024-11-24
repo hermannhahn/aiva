@@ -91,64 +91,23 @@ export class AppearanceMenu {
     }
 
     show() {
-        this.appearanceBoxIsOpen = true;
-        this.menu.add_child(this.box);
-        this.box.add_child(this.transparencyLabel);
-        this.box.add_child(this.transparencyEntry);
-        this.box.add_child(this.transparencyButton);
-        this.box.add_child(this.colorsLabel);
-        this.box.add_child(this.colorBlackButton);
-        this.box.add_child(this.colorBlueButton);
-        this.box.add_child(this.colorRedButton);
-        this.box.add_child(this.colorGreenButton);
-        this.box.add_child(this.colorYellowButton);
-        this.box.add_child(this.colorPurpleButton);
+        this.appearanceMenuIsOpen = true;
+        this.container.add_child(this.transparencyLabel);
+        this.container.add_child(this.transparencyEntry);
+        this.container.add_child(this.transparencyButton);
+        this.container.add_child(this.colorsLabel);
+        this.container.add_child(this.colorBlackButton);
+        this.container.add_child(this.colorBlueButton);
+        this.container.add_child(this.colorRedButton);
+        this.container.add_child(this.colorGreenButton);
+        this.container.add_child(this.colorYellowButton);
+        this.container.add_child(this.colorPurpleButton);
         this._connect();
     }
 
     hide() {
-        this.menu.remove_child(this.box);
-        this.appearanceBoxIsOpen = false;
-    }
-
-    set(transparency, color) {
-        // set default if empty, null or undefined
-        if (
-            transparency === '' ||
-            transparency === null ||
-            transparency === undefined
-        ) {
-            transparency = '75';
-        }
-        if (color === '' || color === null || color === undefined) {
-            color = '54, 54, 54';
-        }
-        // set transparencyEntry text
-        this.transparencyEntry.clutter_text.set_text(transparency);
-
-        // save
-        const tString = transparency.toString();
-        this.app.extension.settings.set_string('theme-transparency', tString);
-        this.app.userSettings.TRANSPARENCY = tString;
-        this.app.extension.settings.set_string('theme-color', color);
-        this.app.userSettings.COLOR = color;
-        // set theme
-        transparency = 100 - transparency;
-        transparency = parseInt(transparency) / 100;
-        this.menu.set_style(
-            `background-color: rgba(${color}, ${transparency});`,
-        );
-        this.scrollView.set_style(
-            `background-color: rgba(${color}, ${transparency});`,
-        );
-        if (transparency < 0.8) {
-            transparency += 0.2;
-        }
-        // make color more darkness
-        const darkColors = this.app.utils.darkColors(color);
-        this.userEntry.set_style(
-            `background-color: rgba(${darkColors}, ${transparency});`,
-        );
+        this.menu.remove_child(this.container);
+        this.appearanceMenuIsOpen = false;
     }
 
     /**
@@ -156,14 +115,13 @@ export class AppearanceMenu {
      */
     _connect() {
         // If press appearance button
-        this.appearanceBoxIsOpen = false;
         this.menu.appearanceButton.connect('clicked', (_self) => {
-            if (this.appearanceBoxIsOpen) {
+            if (this.appearanceMenuIsOpen) {
                 this.appearanceMenu.remove_child(this.appearanceBox);
-                this.appearanceBoxIsOpen = false;
+                this.appearanceMenuIsOpen = false;
                 return;
             }
-            this.appearanceBoxIsOpen = true;
+            this.appearanceMenuIsOpen = true;
             // get menu box parent
             // show appearance box
             this.appearanceMenu.add_child(this.appearanceBox);
