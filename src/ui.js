@@ -45,20 +45,9 @@ export class UI {
         // add style
         this.container.style_class = 'app';
         this.container.box.style_class = 'app-box';
-        // Add items container to app
+        // add items
         this.container.addMenuItem(this.appearancemenu.container);
         this.container.addMenuItem(this.mainmenu.container);
-
-        // Add items
-        this.mainbar.add_child(this.character);
-        this.mainbar.add_child(this.userEntry);
-        this.mainbar.add_child(this.enterButton);
-        this.mainbar.add_child(this.micButton);
-        this.mainbar.add_child(this.clearButton);
-        this.mainbar.add_child(this.settingsButton);
-        this.mainbar.add_child(this.appearanceButton);
-
-        // Add scrollview
         this.container.box.add_child(this.chat.container);
 
         // Add chat to scrollbar
@@ -172,24 +161,24 @@ export class UI {
         });
     }
 
-    /**
-     * @description create chat item
-     * @returns {object} chat item
-     */
-    chat() {
-        // Question
-        let chat = new PopupMenu.PopupMenuItem('', {
-            style_class: 'input-chat',
-            can_focus: false,
-        });
-        let scolor = chat.label.clutter_text.get_selected_text_color();
-        this.app.log('Selection Color ' + scolor);
-        console.log('Selection Color ' + scolor);
-        chat.label.clutter_text.reactive = true;
-        chat.label.clutter_text.selectable = true;
-        chat.label.clutter_text.hover = true;
-        return chat;
-    }
+    // /**
+    //  * @description create chat item
+    //  * @returns {object} chat item
+    //  */
+    // box() {
+    //     // Question
+    //     let chat = new PopupMenu.PopupMenuItem('', {
+    //         style_class: 'input-chat',
+    //         can_focus: false,
+    //     });
+    //     let scolor = chat.label.clutter_text.get_selected_text_color();
+    //     this.app.log('Selection Color ' + scolor);
+    //     console.log('Selection Color ' + scolor);
+    //     chat.label.clutter_text.reactive = true;
+    //     chat.label.clutter_text.selectable = true;
+    //     chat.label.clutter_text.hover = true;
+    //     return chat;
+    // }
 
     /**
      * @description create question item
@@ -270,7 +259,9 @@ export class UI {
             color = '54, 54, 54';
         }
         // set transparencyEntry text
-        this.transparencyEntry.clutter_text.set_text(transparency);
+        this.appearancemenu.transparencyEntry.clutter_text.set_text(
+            transparency,
+        );
 
         // save
         const tString = transparency.toString();
@@ -281,17 +272,25 @@ export class UI {
         // set theme
         transparency = 100 - transparency;
         transparency = parseInt(transparency) / 100;
-        this.mainbar.set_style(
+        this.appearancemenu.container.set_style(
             `background-color: rgba(${color}, ${transparency});`,
         );
-        this.scrollView.set_style(
+        this.mainmenu.container.set_style(
+            `background-color: rgba(${color}, ${transparency});`,
+        );
+        this.chat.container.set_style(
             `background-color: rgba(${color}, ${transparency});`,
         );
         if (transparency < 0.8) {
             transparency += 0.2;
         }
-        this.userEntry.set_style(
-            `background-color: rgba(${color}, ${transparency});`,
+        // make color more darkness
+        const darkColors = this.app.utils.darkColors(color);
+        this.appearancemenu.transparencyEntry.set_style(
+            `background-color: rgba(${darkColors}, ${transparency});`,
+        );
+        this.mainmenu.userEntry.set_style(
+            `background-color: rgba(${darkColors}, ${transparency});`,
         );
     }
 }
