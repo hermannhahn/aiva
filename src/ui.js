@@ -200,10 +200,13 @@ export class UI {
         // set theme
         transparency = 100 - transparency;
         transparency = parseInt(transparency) / 100;
-        this.mainmenu.container.set_style(
+        this.appearancemenu.box.set_style(
             `background-color: rgba(${color}, ${transparency});`,
         );
-        this.chat.container.set_style(
+        this.mainmenu.box.set_style(
+            `background-color: rgba(${color}, ${transparency});`,
+        );
+        this.chat.box.set_style(
             `background-color: rgba(${color}, ${transparency});`,
         );
         if (transparency < 0.8) {
@@ -212,6 +215,9 @@ export class UI {
         // make color more darkness
         const darkColors = this.app.utils.darkColors(color);
         this.mainmenu.userEntry.set_style(
+            `background-color: rgba(${darkColors}, ${transparency});`,
+        );
+        this.chat.inputChat.set_style(
             `background-color: rgba(${darkColors}, ${transparency});`,
         );
         this.chat.responseChat.set_style(
