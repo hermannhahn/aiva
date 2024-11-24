@@ -46,12 +46,12 @@ export class Chat {
      * @param {boolean} [speech=true] - speech text
      */
     add(text, speech = true) {
-        let chat = this.app.ui.chat();
-        this.app.ui.chatSection.addMenuItem(chat);
+        let chat = this.app.ui.chat.add();
+        this.app.ui.chat.box.addMenuItem(chat);
         chat.label.clutter_text.set_markup(
             `<b>${this.app.userSettings.ASSIST_NAME}:</b> ${text}`,
         );
-        this.app.ui.responseChat = chat;
+        this.app.ui.chat.responseChat = chat;
         if (speech) {
             this.app.azure.tts(text);
         }
@@ -64,13 +64,13 @@ export class Chat {
      * @param {boolean} [speech=true] - speech text
      */
     addQuestion(text, speech = false) {
-        const inputChat = this.app.ui.question();
-        this.app.ui.chatSection.addMenuItem(inputChat);
+        const inputChat = this.app.ui.chat.question();
+        this.app.ui.chat.box.addMenuItem(inputChat);
         text = this.app.utils.questionFormat(text);
         inputChat.label.clutter_text.set_markup(
             `<b>${this.app.userSettings.USERNAME}:</b> ${text}`,
         );
-        this.app.ui.inputChat = inputChat;
+        this.app.ui.chat.inputChat = inputChat;
 
         if (speech) {
             this.app.azure.tts(text);
@@ -85,7 +85,7 @@ export class Chat {
      */
     editQuestion(text, speech = false) {
         let formatedText = this.app.utils.questionFormat(text);
-        this.app.ui.inputChat.label.clutter_text.set_markup(
+        this.app.ui.chat.inputChat.label.clutter_text.set_markup(
             `<b>${this.app.userSettings.USERNAME}:</b> ${formatedText}`,
         );
         let response = this.app.utils.extractCodeAndTTS(text);
@@ -105,11 +105,11 @@ export class Chat {
      * @param {boolean} [speech=true] - speech text
      */
     addResponse(text, speech = false) {
-        let responseChat = this.app.ui.response();
-        let copyButton = this.app.ui.copy();
-        this.app.ui.chatSection.addMenuItem(responseChat);
-        this.app.ui.chatSection.addMenuItem(copyButton);
-        this.app.ui.chatSection.addMenuItem(this.app.ui.newSeparator);
+        let responseChat = this.app.ui.chat.response();
+        let copyButton = this.app.ui.chat.copy();
+        this.app.ui.chat.box.addMenuItem(responseChat);
+        this.app.ui.chat.box.addMenuItem(copyButton);
+        this.app.ui.chat.box.addMenuItem(this.app.ui.chat.newSeparator);
         const formatedText = this.app.utils.responseFormat(text);
         responseChat.label.clutter_text.set_markup(
             `<b>${this.app.userSettings.ASSIST_NAME}:</b> ${formatedText}`,
@@ -117,7 +117,7 @@ export class Chat {
         copyButton.connect('activate', (_self) => {
             this.app.utils.copySelectedText(responseChat, copyButton);
         });
-        this.app.ui.responseChat = responseChat;
+        this.app.ui.chat.responseChat = responseChat;
 
         let response = this.app.utils.extractCodeAndTTS(text);
         if (speech) {
@@ -137,14 +137,14 @@ export class Chat {
      */
     editResponse(text, speech = true) {
         const formatedText = this.app.utils.responseFormat(text);
-        this.app.ui.responseChat.label.clutter_text.set_markup(
+        this.app.ui.chat.responseChat.label.clutter_text.set_markup(
             `<b>${this.app.userSettings.ASSIST_NAME}:</b> ${formatedText}`,
         );
         let response = this.app.utils.extractCodeAndTTS(text);
         if (speech) {
             this.app.azure.tts(response.tts);
         } else {
-            this.app.ui.resetStatusIcon();
+            this.app.ui.chat.resetStatusIcon();
         }
         if (response.code) {
             this.app.utils.copyToClipboard(response.code);
