@@ -21,9 +21,6 @@ export class AppearanceMenu {
             style_class: 'transparency-entry',
             can_focus: true,
         });
-        this.transparencyEntry.clutter_text.set_text(
-            this.app.userSettings.TRANSPARENCY,
-        );
 
         // Create transparency label
         this.transparencyLabel = new St.Label({
