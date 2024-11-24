@@ -36,16 +36,11 @@ export class Chat {
         this.newSeparator = new PopupMenu.PopupSeparatorMenuItem();
     }
 
-    create(ui) {
-        ui.box.add_child(this.scrollView);
-        this.scrollView.add_child(this.chatSection.actor);
-    }
-
     /**
      * @description create chat item
      * @returns {object} chat item
      */
-    chat() {
+    box() {
         // Question
         let chat = new PopupMenu.PopupMenuItem('', {
             style_class: 'input-chat',
