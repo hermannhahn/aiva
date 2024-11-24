@@ -4,7 +4,7 @@ import * as PopupMenu from 'gi://PopupMenu';
 export class Chat {
     constructor() {
         // Create scrollbar
-        this.scrollView = new St.ScrollView({
+        this.container = new St.ScrollView({
             style_class: 'chat-scroll',
             overlay_scrollbars: false,
             can_focus: false,
