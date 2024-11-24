@@ -69,5 +69,17 @@ export class MainMenu {
             toggle_mode: true,
             can_focus: false,
         });
+
+        this._addItems();
+    }
+
+    _addItems() {
+        this.container.add_child(this.character);
+        this.container.add_child(this.userEntry);
+        this.container.add_child(this.enterButton);
+        this.container.add_child(this.micButton);
+        this.container.add_child(this.clearButton);
+        this.container.add_child(this.settingsButton);
+        this.container.add_child(this.appearanceButton);
     }
 }
