@@ -200,13 +200,13 @@ export class UI {
         // set theme
         transparency = 100 - transparency;
         transparency = parseInt(transparency) / 100;
-        this.appearancemenu.box.set_style(
+        this.appearancemenu.container.set_style(
             `background-color: rgba(${color}, ${transparency});`,
         );
         this.mainmenu.container.set_style(
             `background-color: rgba(${color}, ${transparency});`,
         );
-        this.chat.box.set_style(
+        this.chat.container.set_style(
             `background-color: rgba(${color}, ${transparency});`,
         );
         if (transparency < 0.8) {
