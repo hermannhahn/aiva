@@ -71,7 +71,6 @@ export class Chat {
      * @returns {object} question item
      */
     question() {
-        this.setTheme(null, null);
         // Question
         let inputChat = new PopupMenu.PopupMenuItem('', {
             style_class: 'input-chat',
