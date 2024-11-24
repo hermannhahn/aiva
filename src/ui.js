@@ -103,6 +103,9 @@ export class UI {
                 this.appearancemenu.hide();
                 return;
             }
+            this.transparencyEntry.clutter_text.set_text(
+                this.app.userSettings.TRANSPARENCY,
+            );
             this.appearancemenu.show();
 
             this.appearancemenu.transparencyButton.connect(
