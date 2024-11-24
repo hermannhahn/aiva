@@ -1,4 +1,4 @@
-import * as St from 'gi://St';
+import St from 'gi://St';
 import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 
 /**
