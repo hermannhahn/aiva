@@ -1,4 +1,5 @@
 import St from 'gi://St';
+import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 
 /**
  * @description appearance menu
@@ -9,12 +10,18 @@ export class AppearanceMenu {
     }
 
     _create() {
-        this.container = new St.BoxLayout({
-            style_class: 'theme-bar',
+        this.container = new PopupMenu.PopupBaseMenuItem({
+            style_class: 'appearence-bar',
+            reactive: false,
+            can_focus: true,
         });
         this.container.set_style(
             `background-color: rgba(${this.app.userSettings.COLOR}, 0);`,
         );
+
+        this.box = new St.BoxLayout({
+            style_class: 'appearence-box',
+        });
 
         // Create transparency slider
         this.transparencyEntry = new St.Entry({
