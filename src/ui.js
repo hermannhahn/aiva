@@ -204,7 +204,7 @@ export class UI {
         this.mainmenu.userEntry.set_style(
             `background-color: rgba(${darkColors}, ${transparency});`,
         );
-        this.chat.container.set_style(
+        this.chat.responseBox.set_style(
             `background-color: rgba(${darkColors}, ${transparency});`,
         );
     }
