@@ -7,6 +7,10 @@ import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js'
  */
 export class MainMenu {
     constructor() {
+        this._create();
+    }
+
+    _create() {
         // Create app item section
         this.container = new PopupMenu.PopupBaseMenuItem({
             style_class: 'main-bar',
