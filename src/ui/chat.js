@@ -3,6 +3,10 @@ import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 
 export class Chat {
     constructor() {
+        this._create();
+    }
+
+    _create() {
         // Create scrollbar
         this.container = new St.ScrollView({
             style_class: 'chat-scroll',
