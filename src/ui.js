@@ -97,13 +97,13 @@ export class UI {
 
         // If press appearance button
         this.appearancemenu.isOpen = false;
-        this.appearanceButton.connect('clicked', (_self) => {
+        this.appearancemenu.appearanceButton.connect('clicked', (_self) => {
             // show or hide
             if (this.appearancemenu.isOpen) {
                 this.appearancemenu.hide();
                 return;
             }
-            this.transparencyEntry.clutter_text.set_text(
+            this.appearancemenu.transparencyEntry.clutter_text.set_text(
                 this.app.userSettings.TRANSPARENCY,
             );
             this.appearancemenu.show();
