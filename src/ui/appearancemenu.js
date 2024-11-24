@@ -102,11 +102,10 @@ export class AppearanceMenu {
         this.container.add_child(this.colorGreenButton);
         this.container.add_child(this.colorYellowButton);
         this.container.add_child(this.colorPurpleButton);
-        this._connect();
     }
 
     hide() {
-        this.menu.remove_child(this.container);
         this.isOpen = false;
+        this.menu.remove_child(this.container);
     }
 }
