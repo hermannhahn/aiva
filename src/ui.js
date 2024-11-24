@@ -200,7 +200,7 @@ export class UI {
         // set theme
         transparency = 100 - transparency;
         transparency = parseInt(transparency) / 100;
-        this.appearancemenu.container.set_style(
+        this.appearancemenu.section.set_style(
             `background-color: rgba(${color}, ${transparency});`,
         );
         this.mainmenu.container.set_style(
