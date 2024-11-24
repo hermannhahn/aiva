@@ -22,11 +22,11 @@ export class Chat {
         });
 
         // Create input and response chat items
-        this.input = new PopupMenu.PopupMenuItem('', {
+        this.inputChat = new PopupMenu.PopupMenuItem('', {
             style_class: 'input-chat',
             can_focus: false,
         });
-        this.response = new PopupMenu.PopupMenuItem('', {
+        this.responseChat = new PopupMenu.PopupMenuItem('', {
             style_class: 'response-chat',
             can_focus: false,
         });
