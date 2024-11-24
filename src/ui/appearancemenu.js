@@ -1,5 +1,4 @@
 import St from 'gi://St';
-import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 
 /**
  * @description appearance menu
@@ -10,10 +9,8 @@ export class AppearanceMenu {
     }
 
     _create() {
-        this.container = new PopupMenu.PopupBaseMenuItem({
+        this.container = new St.BoxLayout({
             style_class: 'theme-bar',
-            reactive: false,
-            can_focus: true,
         });
         this.container.set_style(
             `background-color: rgba(${this.app.userSettings.COLOR}, 0);`,
