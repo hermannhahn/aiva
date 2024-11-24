@@ -13,6 +13,7 @@ export class Chat {
             overlay_scrollbars: false,
             can_focus: false,
         });
+        this.container.set_style(`background-color: rgba(42, 42, 42, 0);`);
 
         // Create chat section
         this.box = new PopupMenu.PopupMenuSection({
