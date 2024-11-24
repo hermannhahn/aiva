@@ -44,7 +44,7 @@ export class Chat {
     }
 
     _addItems() {
-        this.container.add_child(this.box);
+        this.container.add_child(this.box.actor);
     }
 
     /**
