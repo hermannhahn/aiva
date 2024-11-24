@@ -46,8 +46,8 @@ export class UI {
         this.container.style_class = 'app';
         this.container.box.style_class = 'app-box';
         // Add items container to app
-        this.container.addMenuItem(this.appearancemenu.items);
-        this.container.addMenuItem(this.mainmenu.items);
+        this.container.addMenuItem(this.appearancemenu.container);
+        this.container.addMenuItem(this.mainmenu.container);
 
         // Add items
         this.mainbar.add_child(this.character);
@@ -59,10 +59,10 @@ export class UI {
         this.mainbar.add_child(this.appearanceButton);
 
         // Add scrollview
-        this.container.box.add_child(this.chat.scrollView);
+        this.container.box.add_child(this.chat.container);
 
         // Add chat to scrollbar
-        this.scrollView.add_child(this.chatSection.actor);
+        this.chat.container.add_child(this.chat.box.actor);
 
         // Apply userSettings appearance
         this.setTheme(
