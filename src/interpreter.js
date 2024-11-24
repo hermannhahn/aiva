@@ -32,7 +32,7 @@ export class Interpreter {
             this.app.gemini.response(question);
         }
 
-        this.app.ui.chat.userEntry.clutter_text.reactive = true;
+        this.app.ui.mainmenu.userEntry.clutter_text.reactive = true;
     }
 
     _isSlashCommand(text) {
