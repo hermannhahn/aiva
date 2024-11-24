@@ -50,6 +50,10 @@ export class UI {
         // add style
         this.container.style_class = 'app';
         this.container.box.style_class = 'app-box';
+        this.setTheme(
+            this.app.userSettings.TRANSPARENCY,
+            this.app.userSettings.COLOR,
+        );
         this.appearancemenu.container.set_style(
             `background-color: rgba(${this.app.userSettings.COLOR}, 0);`,
         );
@@ -96,7 +100,9 @@ export class UI {
             this.app.openSettings();
             // Close App
             if (this.appearancemenu.isOpen) {
-                this.container.remove_child(this.appearancemenu.container);
+                this.appearancemenu.container.remove_child(
+                    this.appearancemenu.box,
+                );
                 this.appearancemenu.isOpen = false;
             }
             this.container.close();
@@ -107,14 +113,16 @@ export class UI {
         this.mainmenu.appearanceButton.connect('clicked', (_self) => {
             // show or hide
             if (this.appearancemenu.isOpen) {
-                this.container.remove_child(this.appearancemenu.container);
+                this.appearancemenu.container.remove_child(
+                    this.appearancemenu.box,
+                );
                 this.appearancemenu.isOpen = false;
                 return;
             }
             this.appearancemenu.transparencyEntry.clutter_text.set_text(
                 this.app.userSettings.TRANSPARENCY,
             );
-            this.container.add_child(this.appearancemenu.container);
+            this.appearancemenu.container.add_child(this.appearancemenu.box);
 
             this.appearancemenu.transparencyButton.connect(
                 'clicked',
