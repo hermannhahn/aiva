@@ -101,7 +101,7 @@ export class Chat {
         responseBox.label.clutter_text.selectable = true;
         responseBox.label.clutter_text.hover = true;
         responseBox.label.clutter_text.justify = true;
-        this.responseBox = responseBox;
+        this.responseChat = responseBox;
         return responseBox;
     }
 
