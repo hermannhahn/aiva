@@ -15,6 +15,7 @@ export class Chat {
             style_class: 'chat-section',
             can_focus: false,
         });
+        this.box.set_style(`background-color: rgba(42, 42, 42, 0);`);
 
         // Create input and response chat items
         this.input = new PopupMenu.PopupMenuItem('', {
