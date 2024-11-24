@@ -91,7 +91,7 @@ export class AppearanceMenu {
     }
 
     show() {
-        this.appearanceMenuIsOpen = true;
+        this.isOpen = true;
         this.container.add_child(this.transparencyLabel);
         this.container.add_child(this.transparencyEntry);
         this.container.add_child(this.transparencyButton);
@@ -107,7 +107,7 @@ export class AppearanceMenu {
 
     hide() {
         this.menu.remove_child(this.container);
-        this.appearanceMenuIsOpen = false;
+        this.isOpen = false;
     }
 
     /**
@@ -116,12 +116,12 @@ export class AppearanceMenu {
     _connect() {
         // If press appearance button
         this.menu.appearanceButton.connect('clicked', (_self) => {
-            if (this.appearanceMenuIsOpen) {
+            if (this.isOpen) {
                 this.appearanceMenu.remove_child(this.appearanceBox);
-                this.appearanceMenuIsOpen = false;
+                this.isOpen = false;
                 return;
             }
-            this.appearanceMenuIsOpen = true;
+            this.isOpen = true;
             // get menu box parent
             // show appearance box
             this.appearanceMenu.add_child(this.appearanceBox);
