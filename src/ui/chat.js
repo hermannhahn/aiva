@@ -1,5 +1,5 @@
 import St from 'gi://St';
-import * as PopupMenu from 'gi://PopupMenu';
+import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 
 export class Chat {
     constructor() {
