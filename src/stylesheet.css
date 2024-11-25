@@ -129,7 +129,7 @@
 }
 
 .chat-scroll {
-    background-color: rgba(42, 42, 42, 0);
+    background-color: rgba(25, 25, 25, 0);
     max-width: 800px;
     max-height: 550px;
     overflow: auto;
@@ -138,20 +138,20 @@
     border-radius: 10px;
 }
 .chat-scroll::selection {
-    background-color: rgb(42, 42, 42);
+    background-color: rgb(25, 25, 25);
 }
 .chat-section {
     overflow-y: auto;
-    color: rgba(42, 42, 42, 0);
+    color: rgba(25, 25, 25, 0);
     text-wrap: wrap;
     word-wrap: break-word;
 }
 .chat-section::selection {
-    background-color: rgb(42, 42, 42);
+    background-color: rgb(25, 25, 25);
 }
 .response-chat {
     color: rgb(243, 232, 212);
-    background-color: rgb(42, 42, 42);
+    background-color: rgb(25, 25, 25);
     border-radius: 10px;
     padding-left: 10px;
     padding-right: 10px;
@@ -169,11 +169,11 @@
     background-color: rgb(54, 54, 54);
 }
 .response-chat::selection {
-    background-color: rgb(42, 42, 42);
+    background-color: rgb(25, 25, 25);
 }
 .input-chat {
     color: rgb(243, 232, 212);
-    background-color: rgb(42, 42, 42);
+    background-color: rgb(25, 25, 25);
     border-radius: 10px;
     padding-left: 10px;
     padding-right: 10px;
@@ -190,7 +190,7 @@
     background-color: rgb(54, 54, 54);
 }
 .input-chat::selection {
-    background-color: rgb(42, 42, 42);
+    background-color: rgb(25, 25, 25);
 }
 .copy-icon {
     background-image: url('assets/icon_copy.png');
