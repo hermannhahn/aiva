@@ -22,9 +22,17 @@ export class AppearanceMenu {
             can_focus: true,
         });
 
-        // Create transparency slider
-        this.transparencyEntry = new St.Entry({
-            style_class: 'transparency-entry',
+        // Create theme mode label
+        this.themeModeLabel = new St.Label({
+            text: 'Theme Mode: ',
+            style_class: 'theme-mode-label',
+        });
+
+        // Create theme mode switch button
+        this.themeModeButton = new St.Button({
+            label: '☀️',
+            style_class: 'theme-mode-icon',
+            toggle_mode: true,
             can_focus: true,
         });
 
@@ -32,6 +40,12 @@ export class AppearanceMenu {
         this.transparencyLabel = new St.Label({
             text: 'Transparency: ',
             style_class: 'transparency-label',
+        });
+
+        // Create transparency entry
+        this.transparencyEntry = new St.Entry({
+            style_class: 'transparency-entry',
+            can_focus: true,
         });
 
         // Create transparency ok button
@@ -100,6 +114,8 @@ export class AppearanceMenu {
     }
 
     _add() {
+        this.menu.add_child(this.themeModeLabel);
+        this.menu.add_child(this.themeModeButton);
         this.menu.add_child(this.transparencyLabel);
         this.menu.add_child(this.transparencyEntry);
         this.menu.add_child(this.transparencyButton);
