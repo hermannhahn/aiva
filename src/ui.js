@@ -136,25 +136,19 @@ export class UI {
 
             // Connect color buttons
             this.appearancemenu.colorBlueButton.connect('clicked', () => {
-                this.setTheme(this.app.userSettings.TRANSPARENCY, '0, 0, 100');
+                this.setTheme(this.app.userSettings.TRANSPARENCY, '0, 0, 45');
             });
             this.appearancemenu.colorRedButton.connect('clicked', () => {
-                this.setTheme(this.app.userSettings.TRANSPARENCY, '100, 0, 0');
+                this.setTheme(this.app.userSettings.TRANSPARENCY, '45, 0, 0');
             });
             this.appearancemenu.colorGreenButton.connect('clicked', () => {
-                this.setTheme(this.app.userSettings.TRANSPARENCY, '0, 100, 0');
+                this.setTheme(this.app.userSettings.TRANSPARENCY, '0, 45, 0');
             });
             this.appearancemenu.colorYellowButton.connect('clicked', () => {
-                this.setTheme(
-                    this.app.userSettings.TRANSPARENCY,
-                    '100, 100, 0',
-                );
+                this.setTheme(this.app.userSettings.TRANSPARENCY, '45, 45, 0');
             });
             this.appearancemenu.colorPurpleButton.connect('clicked', () => {
-                this.setTheme(
-                    this.app.userSettings.TRANSPARENCY,
-                    '100, 0, 100',
-                );
+                this.setTheme(this.app.userSettings.TRANSPARENCY, '45, 0, 45');
             });
             this.appearancemenu.colorBlackButton.connect('clicked', () => {
                 this.setTheme(this.app.userSettings.TRANSPARENCY, '54, 54, 54');
