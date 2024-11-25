@@ -88,9 +88,10 @@ const Aiva = GObject.registerClass(
                 HISTORY_FILE: GLib.build_filenamev([EXT_DIR, 'history.json']),
                 LOCATION: this._getLocation(),
                 RECURSIVE_TALK: settings.get_boolean('log-history'),
-                USERNAME: username,
                 TRANSPARENCY: settings.get_string('theme-transparency'),
                 COLOR: settings.get_string('theme-color'),
+                MODE: settings.get_string('theme-mode'),
+                USERNAME: username,
             };
         }
 
