@@ -112,11 +112,11 @@ msgstr "no youtube"
 
 #: src/interpreter.js:94
 msgid "read news of"
-msgstr "leia notícias d"
+msgstr "leia notícias de"
 
 #: src/interpreter.js:95
 msgid "read the news of"
-msgstr "leia as notícias d"
+msgstr "leia as notícias de"
 
 #: src/interpreter.js:96
 #, fuzzy
