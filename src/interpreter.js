@@ -194,9 +194,7 @@ HELP
                 try {
                     // get the three first words from request
                     const topic = request.split(/\s+/).slice(0, 3).join(' ');
-                    this.app.gemini.response(
-                        _('Read news of') + ' ' + topic + '.',
-                    );
+                    this.app.gemini.response(`${_('Read news of')} ${topic}`);
                     // this.app.utils.readNews(topic);
                     return;
                 } catch (error) {
@@ -205,7 +203,7 @@ HELP
                 }
             case 'readNews':
                 try {
-                    this.app.gemini.response(_('Read news'));
+                    this.app.gemini.response(`${_('Read news')}`);
                     // this.app.utils.readNews();
                 } catch (error) {
                     this.app.logError('Erro ao ler notícias:', error);
