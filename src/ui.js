@@ -1,5 +1,6 @@
-import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
+import Gio from 'gi://Gio';
 
+import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 import {AppearanceMenu} from './ui/appearancemenu.js';
@@ -220,11 +221,12 @@ export class UI {
         this.chat.inputChat.set_style(
             `background-color: rgba(42, 42, 42, ${inputTransparency});`,
         );
-        if (transparency <= 0.8) {
-            transparency += 0.2;
+        let responseChatTransparency = transparency;
+        if (responseChatTransparency <= 0.8) {
+            responseChatTransparency += 0.2;
         }
         this.chat.responseChat.set_style(
-            `background-color: rgba(42, 42, 42, ${transparency});`,
+            `background-color: rgba(42, 42, 42, ${responseChatTransparency});`,
         );
 
         // make color more darkness
@@ -235,5 +237,40 @@ export class UI {
         this.mainmenu.userEntry.set_style(
             `background-color: rgba(${darkColors}, ${transparency});`,
         );
+
+        // set text color considering theme
+        function getTheme() {
+            let theme = Gio.Settings.get_default().get_string('gtk-theme');
+            return theme.includes('dark') ? 'dark' : 'light';
+        }
+        const theme = getTheme();
+        if (theme === 'dark') {
+            this.chat.inputChat.set_style(
+                `background-color: rgba(243, 232, 212, ${inputTransparency});`,
+            );
+            this.chat.responseChat.set_style(
+                `background-color: rgba(243, 232, 212, ${responseChatTransparency});`,
+            );
+            this.appearancemenu.transparencyEntry.set_style(
+                `background-color: rgba(243, 232, 212, ${transparency});`,
+            );
+            this.mainmenu.userEntry.set_style(
+                `background-color: rgba(243, 232, 212, ${transparency});`,
+            );
+        }
+        if (theme === 'light') {
+            this.chat.inputChat.set_style(
+                `background-color: rgba(243, 232, 212, ${inputTransparency});`,
+            );
+            this.chat.responseChat.set_style(
+                `background-color: rgba(243, 232, 212, ${responseChatTransparency});`,
+            );
+            this.appearancemenu.transparencyEntry.set_style(
+                `background-color: rgba(243, 232, 212, ${transparency});`,
+            );
+            this.mainmenu.userEntry.set_style(
+                `background-color: rgba(243, 232, 212, ${transparency});`,
+            );
+        }
     }
 }
