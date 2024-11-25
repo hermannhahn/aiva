@@ -219,12 +219,16 @@ export class UI {
         this.chat.container.set_style(
             `background-color: rgba(${color}, ${transparency});`,
         );
+        let inputTransparency = transparency;
+        if (inputTransparency <= 0.7) {
+            inputTransparency += 0.3;
+        }
+        this.chat.inputChat.set_style(
+            `background-color: rgba(42, 42, 42, ${inputTransparency});`,
+        );
         if (transparency <= 0.8) {
             transparency += 0.2;
         }
-        this.chat.inputChat.set_style(
-            `background-color: rgba(42, 42, 42, ${transparency});`,
-        );
         this.chat.responseChat.set_style(
             `background-color: rgba(42, 42, 42, ${transparency});`,
         );
