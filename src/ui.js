@@ -54,9 +54,6 @@ export class UI {
             this.app.userSettings.TRANSPARENCY,
             this.app.userSettings.COLOR,
         );
-        this.appearancemenu.container.set_style(
-            `background-color: rgba(${this.app.userSettings.COLOR}, 0);`,
-        );
         this.chat.container.set_style(
             `background-color: rgba(${this.app.userSettings.COLOR}, 0);`,
         );
