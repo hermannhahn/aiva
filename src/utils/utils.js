@@ -270,7 +270,7 @@ export class Utils {
             const countryLang = lang.split('-')[1];
             if (topic !== undefined) {
                 url = `https://news.google.com/rss/search?q=${topic}&hl=${lang}&gl=${countryLang}&ceid=${countryLang}`;
-                this.app.chat.editResponse(_('Of course, one momment please.'));
+                this.app.chat.editResponse(_('Of course, one moment please.'));
             } else {
                 url = `https://news.google.com/rss?hl=${lang}&gl=${countryLang}&ceid=${countryLang}`;
                 this.app.chat.editResponse(_('Sure, one moment please.'));
