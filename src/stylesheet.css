@@ -309,7 +309,7 @@
     border-radius: 10px;
 }
 .theme-mode-icon:hover {
-    background-color: transparent;
+    background-color: rgb(54, 54, 54);
 }
 .theme-mode-icon:active {
     font-size: 12px;
