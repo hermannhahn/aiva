@@ -98,15 +98,15 @@ export class AppearanceMenu {
     }
 
     _add() {
-        this.section.add_child(this.transparencyLabel);
-        this.section.add_child(this.transparencyEntry);
-        this.section.add_child(this.transparencyButton);
-        this.section.add_child(this.colorsLabel);
-        this.section.add_child(this.colorBlueButton);
-        this.section.add_child(this.colorRedButton);
-        this.section.add_child(this.colorGreenButton);
-        this.section.add_child(this.colorYellowButton);
-        this.section.add_child(this.colorPurpleButton);
-        this.section.add_child(this.colorBlackButton);
+        this.container.add_child(this.transparencyLabel);
+        this.container.add_child(this.transparencyEntry);
+        this.container.add_child(this.transparencyButton);
+        this.container.add_child(this.colorsLabel);
+        this.container.add_child(this.colorBlueButton);
+        this.container.add_child(this.colorRedButton);
+        this.container.add_child(this.colorGreenButton);
+        this.container.add_child(this.colorYellowButton);
+        this.container.add_child(this.colorPurpleButton);
+        this.container.add_child(this.colorBlackButton);
     }
 }
