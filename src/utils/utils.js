@@ -268,18 +268,12 @@ export class Utils {
             let url = '';
             const lang = this.app.userSettings.AZURE_SPEECH_LANGUAGE;
             const countryLang = lang.split('-')[1];
-            this.app.log('Language: ' + lang);
-            this.app.log('Country: ' + countryLang);
             if (topic !== undefined) {
                 url = `https://news.google.com/rss/search?q=${topic}&hl=${lang}&gl=${countryLang}&ceid=${countryLang}`;
-                this.app.chat.editResponse(
-                    _('Of course, one momment please.') + ':\n',
-                );
+                this.app.chat.editResponse(_('Of course, one momment please.'));
             } else {
                 url = `https://news.google.com/rss?hl=${lang}&gl=${countryLang}&ceid=${countryLang}`;
-                this.app.chat.editResponse(
-                    _('Sure, one moment please.') + ':\n',
-                );
+                this.app.chat.editResponse(_('Sure, one moment please.'));
             }
             const fetchNews = await this.fetchRSS(url);
             const unformattedNews = JSON.stringify(fetchNews, null, 2);
