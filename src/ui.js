@@ -162,16 +162,28 @@ export class UI {
         });
     }
 
+    /**
+     * @description status icon
+     * @param {string} icon
+     */
     statusIcon(icon) {
         this.mainmenu.character.label = icon;
         return true;
     }
 
+    /**
+     * @description reset status icon
+     */
     resetStatusIcon() {
         this.mainmenu.character.label = '🤖';
         return true;
     }
 
+    /**
+     * @description set theme
+     * @param {string} transparency
+     * @param {string} color
+     */
     setTheme(transparency, color) {
         // set default if empty, null or undefined
         if (
