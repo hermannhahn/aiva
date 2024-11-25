@@ -255,8 +255,7 @@ export class UI {
                 return 'light';
             }
         }
-        const gtkTheme = this.app.settings.get_string('gtk-theme');
-        const theme = getTheme(gtkTheme);
+        const theme = getTheme(this.app.userSettings.MODE);
         if (theme === 'dark') {
             // change themeModeButton label
             this.appearancemenu.themeModeButton.label = '🌙';
