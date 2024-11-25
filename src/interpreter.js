@@ -139,11 +139,10 @@ HELP
                         }
                     }
                     this.app.gemini.runCommand(command + ' ' + request);
-                    return;
                 } catch (error) {
                     this.app.logError('Erro ao abrir site:', error);
-                    return;
                 }
+                break;
             case 'openSite':
                 try {
                     const urls = {
@@ -160,11 +159,10 @@ HELP
                         }
                     }
                     this.app.gemini.runCommand(command + ' ' + request);
-                    return;
                 } catch (error) {
                     this.app.logError('Erro ao abrir site:', error);
-                    return;
                 }
+                break;
             default:
                 break;
         }
