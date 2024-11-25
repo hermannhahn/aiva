@@ -141,8 +141,8 @@ const Aiva = GObject.registerClass(
                 this.log('API key configured.');
             }
 
-            // initialize ui
-            this.ui.init();
+            // create ui
+            this.ui.create();
 
             // initialize chat
             this.chat.init();
