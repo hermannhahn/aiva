@@ -280,26 +280,30 @@ export class Utils {
                 );
             }
             const fetchNews = await this.fetchRSS(url);
-            const news = JSON.stringify(fetchNews, null, 2);
-            const stringNews = news
+            const unformattedNews = JSON.stringify(fetchNews, null, 2);
+            const stringNews = unformattedNews
                 .replace(/",/g, '\n')
                 .replace(/"/g, '')
                 .replace(/\[/g, '')
                 .replace(/\]/g, '');
 
-            for (let i = 0; i < stringNews.length; i++) {
-                const palavras = stringNews[i].split(' ');
-                palavras.reverse();
-                stringNews[i] = palavras.join(' ');
-            }
-
-            this.app.chat.editResponse(stringNews);
+            const news = this.swapNewspaperAndNews(stringNews);
+            this.app.chat.editResponse(news);
         } catch (error) {
             this.app.log(`Error fetching news: ${error}`);
             this.app.chat.editResponse(
                 _("Sorry, I'm having connection trouble. Please try again."),
             );
         }
+    }
+
+    swapNewspaperAndNews(newsString) {
+        const newsArray = newsString.split('\n');
+        for (let i = 0; i < newsArray.length; i++) {
+            const [news, newspaper] = newsArray[i].split(' - ');
+            newsArray[i] = `${newspaper} - ${news}`;
+        }
+        return newsArray.join('\n');
     }
 
     removeNotificationByTitle(title) {
