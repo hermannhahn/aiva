@@ -167,36 +167,12 @@ class AivaSettings {
         });
         const voiceSelector = new Gtk.ComboBoxText();
 
-        // Load voices
-        const loadJsonFile = (filename) => {
-            let result = [];
-            if (GLib.file_test(filename, GLib.FileTest.IS_REGULAR)) {
-                try {
-                    const file = Gio.File.new_for_path(filename);
-                    const [success, contents] = file.load_contents(null);
-                    if (success) {
-                        result = JSON.parse(contents);
-                    }
-                    return result;
-                } catch (e) {
-                    logError(e, `Failed to load history: ${filename}`);
-                    return [];
-                }
-            } else {
-                return [];
-            }
-        };
-
-        const voiceOptions = loadJsonFile('voiceOptions.json');
-        log('Voice options loaded: ' + voiceOptions);
-
         // Update voice
+        const voiceOptions = this.voiceOptions();
         const updateVoice = (language) => {
             voiceSelector.remove_all();
-            voiceOptions.forEach((voice) => {
-                if (voice.locale === language) {
-                    voiceSelector.append(voice.name, voice.name);
-                }
+            voiceOptions[language].forEach((voice) => {
+                voiceSelector.append(voice.voice, voice.label);
             });
             voiceSelector.set_active_id(defaultVoice);
         };
@@ -204,8 +180,6 @@ class AivaSettings {
         // Update on change
         languageSelector.connect('changed', () => {
             const selectedLanguage = languageSelector.get_active_id();
-            this.schema.set_string('azure-speech-language', selectedLanguage);
-            log('Selected language: ' + selectedLanguage);
             updateVoice(selectedLanguage);
         });
         updateVoice(defaultLanguage);
