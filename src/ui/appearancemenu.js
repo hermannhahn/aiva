@@ -20,7 +20,7 @@ export class AppearanceMenu {
             style_class: 'appearance-menu',
             reactive: false,
             can_focus: true,
-        })();
+        });
 
         // Create transparency slider
         this.transparencyEntry = new St.Entry({
