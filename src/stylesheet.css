@@ -302,17 +302,21 @@
     margin-right: 0px;
 }
 .theme-mode-icon {
-    font-size: 24px;
-    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
     text-align: center;
     width: 40px;
-    border-radius: 10px;
+    height: 20px;
+    margin-right: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
 }
 .theme-mode-icon:hover {
     background-color: rgb(54, 54, 54);
 }
 .theme-mode-icon:active {
-    font-size: 12px;
+    font-size: 14px;
 }
 .transparency-label {
     font-family: 'Courier New', Courier, monospace;
