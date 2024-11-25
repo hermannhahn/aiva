@@ -200,7 +200,7 @@ export class UI {
         // set theme
         transparency = 100 - transparency;
         transparency = parseInt(transparency) / 100;
-        this.appearancemenu.section.set_style(
+        this.appearancemenu.container.set_style(
             `background-color: rgba(${color}, ${transparency});`,
         );
         this.mainmenu.container.set_style(
@@ -214,6 +214,9 @@ export class UI {
         }
         // make color more darkness
         const darkColors = this.app.utils.darkColors(color);
+        this.appearancemenu.transparencyEntry.set_style(
+            `background-color: rgba(${darkColors}, ${transparency});`,
+        );
         this.mainmenu.userEntry.set_style(
             `background-color: rgba(${darkColors}, ${transparency});`,
         );
