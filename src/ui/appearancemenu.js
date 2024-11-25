@@ -10,15 +10,15 @@ export class AppearanceMenu {
     }
 
     _create() {
-        this.container = new PopupMenu.PopupBaseMenuItem({
-            style_class: 'appearence-box',
-            reactive: false,
-            can_focus: true,
-        });
-
         this.section = new PopupMenu.PopupMenuSection({
             style_class: 'appearence-section',
             can_focus: false,
+        });
+
+        this.container = new PopupMenu.PopupBaseMenuItem({
+            style_class: 'appearence-container',
+            reactive: false,
+            can_focus: true,
         });
 
         // Create transparency slider
