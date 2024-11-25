@@ -62,7 +62,7 @@ export class UI {
         );
 
         // add items
-        this.container.addMenuItem(this.appearancemenu.container);
+        this.container.addMenuItem(this.appearancemenu.area);
         this.container.addMenuItem(this.mainmenu.container);
         this.container.box.add_child(this.chat.container);
     }
@@ -101,8 +101,8 @@ export class UI {
             this.app.openSettings();
             // Close App
             if (this.appearancemenu.isOpen) {
-                this.appearancemenu.container.remove_child(
-                    this.appearancemenu.section,
+                this.appearancemenu.area.remove_child(
+                    this.appearancemenu.container,
                 );
                 this.appearancemenu.isOpen = false;
             }
@@ -113,8 +113,8 @@ export class UI {
         this.mainmenu.appearanceButton.connect('clicked', (_self) => {
             // show or hide
             if (this.appearancemenu.isOpen) {
-                this.appearancemenu.container.remove_child(
-                    this.appearancemenu.section,
+                this.appearancemenu.area.remove_child(
+                    this.appearancemenu.container,
                 );
                 this.appearancemenu.isOpen = false;
                 return;
@@ -122,9 +122,7 @@ export class UI {
             this.appearancemenu.transparencyEntry.clutter_text.set_text(
                 this.app.userSettings.TRANSPARENCY,
             );
-            this.appearancemenu.container.add_child(
-                this.appearancemenu.section,
-            );
+            this.appearancemenu.area.add_child(this.appearancemenu.container);
 
             this.appearancemenu.transparencyButton.connect(
                 'clicked',
