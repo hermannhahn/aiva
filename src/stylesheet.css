@@ -119,9 +119,15 @@
 .appearance-icon:active {
     font-size: 18px;
 }
-.appearance-box {
+.appearance-section {
     background-color: transparent;
 }
+.appearance-container {
+    border-radius: 10px;
+    padding: 10px;
+    text-align: right;
+}
+
 .chat-scroll {
     background-color: rgba(42, 42, 42, 0);
     max-width: 800px;
@@ -281,11 +287,6 @@
     background-color: transparent;
     padding-bottom: 10px;
     display: flex;
-}
-.appearance-section {
-    border-radius: 10px;
-    padding: 10px;
-    text-align: right;
 }
 .transparency-label {
     font-family: 'Courier New', Courier, monospace;
