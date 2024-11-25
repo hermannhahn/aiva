@@ -163,7 +163,7 @@
     margin-top: 10px;
     margin-left: 10px;
     margin-right: 10px;
-    overflow-y: auto;
+    /* overflow-y: auto; */
 }
 .response-chat:hover {
     background-color: rgb(42, 42, 42);
@@ -173,11 +173,15 @@
 }
 .input-chat {
     color: rgb(243, 232, 212);
+    background-color: rgb(42, 42, 42);
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
     text-wrap: wrap;
     text-align: justify;
     word-wrap: break-word;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 14px;
     margin-top: 10px;
     margin-left: 10px;
     margin-right: 10px;
