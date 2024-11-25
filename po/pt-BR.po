@@ -113,293 +113,293 @@ msgstr "no youtube"
 #: src/interpreter.js:94
 #, fuzzy
 msgid "read news from"
-msgstr "leia notícias d"
+msgstr "leia notícias de"
 
 #: src/interpreter.js:95
 #, fuzzy
 msgid "read news from2"
-msgstr "leia notícias d"
+msgstr "leia notícias da"
 
 #: src/interpreter.js:96
 #, fuzzy
 msgid "read news from3"
-msgstr "leia notícias d"
+msgstr "leia notícias do"
 
 #: src/interpreter.js:97
 #, fuzzy
 msgid "read the news from"
-msgstr "leia as notícias d"
+msgstr "leia as notícias de"
 
 #: src/interpreter.js:98
 #, fuzzy
 msgid "read the news from2"
-msgstr "leia as notícias d"
+msgstr "leia as notícias da"
 
 #: src/interpreter.js:99
 #, fuzzy
 msgid "read the news from3"
-msgstr "leia as notícias d"
+msgstr "leia as notícias do"
 
 #: src/interpreter.js:100
 msgid "what is the news from"
-msgstr "quais as notícias d"
+msgstr "quais as notícias de"
 
 #: src/interpreter.js:101
 #, fuzzy
 msgid "what is the news from2"
-msgstr "quais as notícias d"
+msgstr "quais as notícias da"
 
 #: src/interpreter.js:102
 #, fuzzy
 msgid "what is the news from3"
-msgstr "quais as notícias d"
+msgstr "quais as notícias do"
 
 #: src/interpreter.js:103
 #, fuzzy
 msgid "what's the news from"
-msgstr "quais as notícias d"
+msgstr "quais as notícias em"
 
 #: src/interpreter.js:104
 #, fuzzy
 msgid "what's the news from2"
-msgstr "quais as notícias d"
+msgstr "quais as notícias na"
 
 #: src/interpreter.js:105
 #, fuzzy
 msgid "what's the news from3"
-msgstr "quais as notícias d"
+msgstr "quais as notícias no"
 
 #: src/interpreter.js:106
 #, fuzzy
 msgid "can you read the news from"
-msgstr "leia as notícias d"
+msgstr "pode ler as notícias de"
 
 #: src/interpreter.js:107
 #, fuzzy
 msgid "can you read the news from2"
-msgstr "leia as notícias d"
+msgstr "pode ler as notícias da"
 
 #: src/interpreter.js:108
 #, fuzzy
 msgid "can you read the news from3"
-msgstr "leia as notícias d"
+msgstr "pode ler as notícias do"
 
 #: src/interpreter.js:109
 #, fuzzy
 msgid "please read the news from"
-msgstr "leia as notícias d"
+msgstr "leia as notícias em"
 
 #: src/interpreter.js:110
 #, fuzzy
 msgid "please read the news from2"
-msgstr "leia as notícias d"
+msgstr "leia as notícias na"
 
 #: src/interpreter.js:111
 #, fuzzy
 msgid "please read the news from3"
-msgstr "leia as notícias d"
+msgstr "leia as notícias no"
 
 #: src/interpreter.js:112
 #, fuzzy
 msgid "what are the latest updates from"
-msgstr "quais são as notícias d"
+msgstr "quais são as últimas notícias de"
 
 #: src/interpreter.js:113
 #, fuzzy
 msgid "what are the latest updates from2"
-msgstr "quais são as notícias d"
+msgstr "quais são as últimas notícias da"
 
 #: src/interpreter.js:114
 #, fuzzy
 msgid "what are the latest updates from3"
-msgstr "quais são as notícias d"
+msgstr "quais são as últimas notícias do"
 
 #: src/interpreter.js:115
 msgid "what's happening in"
-msgstr ""
+msgstr "o que está acontecendo em"
 
 #: src/interpreter.js:116
 msgid "what's happening in2"
-msgstr ""
+msgstr "o que está acontecendo no"
 
 #: src/interpreter.js:117
 msgid "what's happening in3"
-msgstr ""
+msgstr "o que está acontecendo na"
 
 #: src/interpreter.js:118
 #, fuzzy
 msgid "can you check the news from"
-msgstr "me mostre as notícias d"
+msgstr "verifique as notícias de"
 
 #: src/interpreter.js:119
 #, fuzzy
 msgid "can you check the news from2"
-msgstr "me mostre as notícias d"
+msgstr "verifique as notícias da"
 
 #: src/interpreter.js:120
 #, fuzzy
 msgid "can you check the news from3"
-msgstr "me mostre as notícias d"
+msgstr "verifique as notícias do"
 
 #: src/interpreter.js:121
 #, fuzzy
 msgid "what's the latest news from"
-msgstr "quais as notícias d"
+msgstr "quais as últimas notícias de"
 
 #: src/interpreter.js:122
 #, fuzzy
 msgid "what's the latest news from2"
-msgstr "quais as notícias d"
+msgstr "quais as últimas notícias da"
 
 #: src/interpreter.js:123
 #, fuzzy
 msgid "what's the latest news from3"
-msgstr "quais as notícias d"
+msgstr "quais as últimas notícias do"
 
 #: src/interpreter.js:124
 #, fuzzy
 msgid "any news from"
-msgstr "leia notícias d"
+msgstr "alguma notícia em"
 
 #: src/interpreter.js:125
 #, fuzzy
 msgid "any news from2"
-msgstr "leia notícias d"
+msgstr "alguma notícias de"
 
 #: src/interpreter.js:126
 #, fuzzy
 msgid "any news from3"
-msgstr "leia notícias d"
+msgstr "alguma notícia da"
 
 #: src/interpreter.js:127
 #, fuzzy
 msgid "get the news from"
-msgstr "leia as notícias d"
+msgstr "olha as notícias de"
 
 #: src/interpreter.js:128
 #, fuzzy
 msgid "get the news from2"
-msgstr "leia as notícias d"
+msgstr "olha as notícias da"
 
 #: src/interpreter.js:129
 #, fuzzy
 msgid "get the news from3"
-msgstr "leia as notícias d"
+msgstr "olha as notícias do"
 
 #: src/interpreter.js:130
 #, fuzzy
 msgid "fetch the news from"
-msgstr "leia as notícias d"
+msgstr "procure por notícias de"
 
 #: src/interpreter.js:131
 #, fuzzy
 msgid "fetch the news from2"
-msgstr "leia as notícias d"
+msgstr "procure por notícias da"
 
 #: src/interpreter.js:132
 #, fuzzy
 msgid "fetch the news from3"
-msgstr "leia as notícias d"
+msgstr "procure por notícias do"
 
 #: src/interpreter.js:133
 #, fuzzy
 msgid "what do the reports say from"
-msgstr "quais as notícias d"
+msgstr "o que estão falando de"
 
 #: src/interpreter.js:134
 #, fuzzy
 msgid "what do the reports say from2"
-msgstr "quais as notícias d"
+msgstr "o que estão falando da"
 
 #: src/interpreter.js:135
 #, fuzzy
 msgid "what do the reports say from3"
-msgstr "quais as notícias d"
+msgstr "o que estão falando do"
 
 #: src/interpreter.js:136
 #, fuzzy
 msgid "could you give me the news from"
-msgstr "me mostre as notícias d"
+msgstr "me fala as notícias de"
 
 #: src/interpreter.js:137
 #, fuzzy
 msgid "could you give me the news from2"
-msgstr "me mostre as notícias d"
+msgstr "me fala as notícias da"
 
 #: src/interpreter.js:138
 #, fuzzy
 msgid "could you give me the news from3"
-msgstr "me mostre as notícias d"
+msgstr "me fala as notícias do"
 
 #: src/interpreter.js:139
 #, fuzzy
 msgid "bring up the news from"
-msgstr "leia as notícias d"
+msgstr "verifique as notícias de"
 
 #: src/interpreter.js:140
 #, fuzzy
 msgid "bring up the news from2"
-msgstr "leia as notícias d"
+msgstr "verifique as notícias da"
 
 #: src/interpreter.js:141
 #, fuzzy
 msgid "bring up the news from3"
-msgstr "leia as notícias d"
+msgstr "verifique as notícias do"
 
 #: src/interpreter.js:142
 #, fuzzy
 msgid "look up the news from"
-msgstr "me mostre as notícias d"
+msgstr "me mostre as notícias de"
 
 #: src/interpreter.js:143
 #, fuzzy
 msgid "look up the news from2"
-msgstr "me mostre as notícias d"
+msgstr "me mostre as notícias da"
 
 #: src/interpreter.js:144
 #, fuzzy
 msgid "look up the news from3"
-msgstr "me mostre as notícias d"
+msgstr "me mostre as notícias do"
 
 #: src/interpreter.js:145
 #, fuzzy
 msgid "tell me what's happening in"
-msgstr "me fale as notícias"
+msgstr "o que está acontecendo em"
 
 #: src/interpreter.js:146
 msgid "tell me what's happening in2"
-msgstr ""
+msgstr "o que está acontecendo no"
 
 #: src/interpreter.js:147
 msgid "tell me what's happening in3"
-msgstr ""
+msgstr "o que está acontecendo na"
 
 #: src/interpreter.js:148
 #, fuzzy
 msgid "let me know the news from"
-msgstr "me fale as notícias d"
+msgstr "me fale as notícias de"
 
 #: src/interpreter.js:149
 #, fuzzy
 msgid "let me know the news from2"
-msgstr "me fale as notícias d"
+msgstr "me fale as notícias da"
 
 #: src/interpreter.js:150
 #, fuzzy
 msgid "let me know the news from3"
-msgstr "me fale as notícias d"
+msgstr "me fale as notícias do"
 
 #: src/interpreter.js:151
 msgid "what's the situation in"
-msgstr ""
+msgstr "qual a situação em"
 
 #: src/interpreter.js:152
 msgid "what's the situation in2"
-msgstr ""
+msgstr "qual a situação no"
 
 #: src/interpreter.js:153
 msgid "what's the situation in3"
-msgstr ""
+msgstr "qual a situação na"
 
 #: src/interpreter.js:156
 #, fuzzy
@@ -414,17 +414,17 @@ msgstr "ler notícias"
 #: src/interpreter.js:158
 #, fuzzy
 msgid "can you read the news"
-msgstr "leia as notícias d"
+msgstr "pode ler as notícias"
 
 #: src/interpreter.js:159
 #, fuzzy
 msgid "please read the news"
-msgstr "leia as notícias d"
+msgstr "ler as notícias"
 
 #: src/interpreter.js:160
 #, fuzzy
 msgid "what’s in the news"
-msgstr "quais as notícias"
+msgstr "quais as novidades"
 
 #: src/interpreter.js:161
 msgid "what is the news"
@@ -433,17 +433,17 @@ msgstr "quais as notícias"
 #: src/interpreter.js:162
 #, fuzzy
 msgid "any news"
-msgstr "leia notícias d"
+msgstr "alguma novidade"
 
 #: src/interpreter.js:163
 #, fuzzy
 msgid "get the news"
-msgstr "leia as notícias d"
+msgstr "pegue as notícias"
 
 #: src/interpreter.js:164
 #, fuzzy
 msgid "fetch the news"
-msgstr "leia as notícias d"
+msgstr "alguma notícia nova"
 
 #: src/interpreter.js:165
 #, fuzzy
@@ -453,37 +453,37 @@ msgstr "me fale as notícias"
 #: src/interpreter.js:166
 #, fuzzy
 msgid "what do the reports say"
-msgstr "quais as notícias d"
+msgstr "alguma novidade"
 
 #: src/interpreter.js:167
 #, fuzzy
 msgid "could you read the news"
-msgstr "leia as notícias d"
+msgstr "pode ler as notícias"
 
 #: src/interpreter.js:168
 #, fuzzy
 msgid "bring up the news"
-msgstr "leia as notícias d"
+msgstr "traga as notícias"
 
 #: src/interpreter.js:169
 #, fuzzy
 msgid "look up the news"
-msgstr "me mostre as notícias d"
+msgstr "me mostre as notícias"
 
 #: src/interpreter.js:170
 #, fuzzy
 msgid "what’s happening in the news"
-msgstr "quais são as notícias"
+msgstr "quais são as novidades do dia"
 
 #: src/interpreter.js:171
 #, fuzzy
 msgid "let me know the news"
-msgstr "me fale as notícias d"
+msgstr "me conte as notícias"
 
 #: src/interpreter.js:172
 #, fuzzy
 msgid "give me the news"
-msgstr "me fale as notícias"
+msgstr "manda as notícias"
 
 #: src/interpreter.js:192
 msgid "Starting reading..."
@@ -492,12 +492,12 @@ msgstr "Iniciando a leitura..."
 #: src/interpreter.js:253
 #, fuzzy
 msgid "Read news of"
-msgstr "Lê notícias d"
+msgstr "Leia as notícias"
 
 #: src/interpreter.js:262
 #, fuzzy
 msgid "Read news"
-msgstr "Lê notícias"
+msgstr "Ler notícias"
 
 #: src/ai/azure.js:69 src/ai/azure.js:82 src/ai/azure.js:124
 #: src/ai/azure.js:133 src/ai/gemini.js:99 src/ai/gemini.js:191
