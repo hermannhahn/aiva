@@ -219,21 +219,22 @@ export class UI {
         this.chat.container.set_style(
             `background-color: rgba(${color}, ${transparency});`,
         );
-        if (transparency < 0.9) {
-            transparency += 0.1;
+        if (transparency <= 0.8) {
+            transparency += 0.2;
         }
+        this.chat.inputChat.set_style(
+            `background-color: rgba(42, 42, 42, ${transparency});`,
+        );
+        this.chat.responseChat.set_style(
+            `background-color: rgba(42, 42, 42, ${transparency});`,
+        );
+
         // make color more darkness
         const darkColors = this.app.utils.darkColors(color);
         this.appearancemenu.transparencyEntry.set_style(
             `background-color: rgba(${darkColors}, ${transparency});`,
         );
         this.mainmenu.userEntry.set_style(
-            `background-color: rgba(${darkColors}, ${transparency});`,
-        );
-        this.chat.inputChat.set_style(
-            `background-color: rgba(${darkColors}, ${transparency});`,
-        );
-        this.chat.responseChat.set_style(
             `background-color: rgba(${darkColors}, ${transparency});`,
         );
     }
