@@ -1,5 +1,3 @@
-import Gio from 'gi://Gio';
-
 import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
@@ -247,11 +245,18 @@ export class UI {
 
     _setThemeMode() {
         // set text color considering theme
-        function getTheme() {
-            let theme = Gio.Settings.get_default().get_string('gtk-theme');
-            return theme.includes('dark') ? 'dark' : 'light';
+        function getTheme(theme) {
+            if (
+                theme.toLowerCase().includes('dark') ||
+                theme.toLowerCase().includes('night')
+            ) {
+                return 'dark';
+            } else {
+                return 'light';
+            }
         }
-        const theme = getTheme();
+        const gtkTheme = this.app.settings.get_string('gtk-theme');
+        const theme = getTheme(gtkTheme);
         if (theme === 'dark') {
             // change themeModeButton label
             this.appearancemenu.themeModeButton.label = '🌙';
