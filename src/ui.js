@@ -111,6 +111,7 @@ export class UI {
 
         // If press appearance button
         this.mainmenu.appearanceButton.connect('clicked', (_self) => {
+            this.appearancemenu.isOpen = true;
             // show or hide
             if (this.appearancemenu.isOpen) {
                 this.appearancemenu.container.remove_child(
