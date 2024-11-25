@@ -4,7 +4,6 @@ export class Interpreter {
     constructor(app) {
         this.app = app;
         this.app.log('Interpreter loaded.');
-        this.pids = [];
     }
 
     proccess(question) {
