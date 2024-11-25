@@ -301,8 +301,7 @@ export class Utils {
         for (let i = 0; i < newsArray.length; i++) {
             const [news, newspaper] = newsArray[i].split(' - ');
             if (news !== undefined && newspaper !== undefined) {
-                const newspaperBold = `<b>${newspaper}</b>`;
-                newsArray[i] = `${newspaperBold}:${news}`;
+                newsArray[i] = `<b>${newspaper}</b>:${news}`;
             }
         }
         return newsArray.join('\n');
