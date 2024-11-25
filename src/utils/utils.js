@@ -284,7 +284,8 @@ export class Utils {
                 .replace(/\]/g, '');
 
             const news = this.swapNewspaperAndNews(stringNews);
-            this.app.chat.editResponse(_('The main news are') + ':\n\n' + news);
+            const title = _('The main news are');
+            this.app.chat.editResponse(title + ':\n\n' + news);
         } catch (error) {
             this.app.log(`Error fetching news: ${error}`);
             this.app.chat.editResponse(
@@ -298,7 +299,8 @@ export class Utils {
         for (let i = 0; i < newsArray.length; i++) {
             const [news, newspaper] = newsArray[i].split(' - ');
             if (news !== undefined && newspaper !== undefined) {
-                newsArray[i] = `${newspaper}:${news}`;
+                const newspaperBold = `<b>${newspaper}</b>`;
+                newsArray[i] = `${newspaperBold}:${news}`;
             }
         }
         return newsArray.join('\n');
