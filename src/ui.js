@@ -29,10 +29,7 @@ export class UI {
         // Initialize
         this._createApp();
         this._addItems();
-        this.setTheme(
-            this.app.userSettings.TRANSPARENCY,
-            this.app.userSettings.COLOR,
-        );
+        this.setTheme();
         this._itemsActions();
     }
 
@@ -51,10 +48,7 @@ export class UI {
         // add style
         this.container.style_class = 'app';
         this.container.box.style_class = 'app-box';
-        this.setTheme(
-            this.app.userSettings.TRANSPARENCY,
-            this.app.userSettings.COLOR,
-        );
+
         this.chat.container.set_style(
             `background-color: rgba(${this.app.userSettings.COLOR}, 0);`,
         );
