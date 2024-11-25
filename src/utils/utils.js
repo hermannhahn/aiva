@@ -276,14 +276,15 @@ export class Utils {
                 this.app.chat.editResponse(_('Sure, searching...'));
             }
             const fetchNews = await this.fetchRSS(url);
-            const unformattedNews = JSON.stringify(fetchNews, null, 2);
-            const stringNews = unformattedNews
+            const stringNews = JSON.stringify(fetchNews, null, 2);
+            const preFormattedNews = stringNews
                 .replace(/",/g, '\n')
                 .replace(/"/g, '')
                 .replace(/\[/g, '')
                 .replace(/\]/g, '');
 
-            const news = this.swapNewspaperAndNews(stringNews);
+            const unformattedNews = this.swapNewspaperAndNews(preFormattedNews);
+            const news = this.questionFormat(unformattedNews);
             this.app.chat.editResponse(
                 `${_('Here are the main news')}:\n\n` + news,
             );
