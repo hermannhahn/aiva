@@ -274,17 +274,17 @@ msgstr "alguma notícia da"
 #: src/interpreter.js:127
 #, fuzzy
 msgid "any news from4"
-msgstr "alguma notícia em"
+msgstr "alguma notícia no"
 
 #: src/interpreter.js:128
 #, fuzzy
 msgid "any news from5"
-msgstr "alguma notícia em"
+msgstr "alguma notícia na"
 
 #: src/interpreter.js:129
 #, fuzzy
 msgid "any news from6"
-msgstr "alguma notícia em"
+msgstr "alguma notícia sobre"
 
 #: src/interpreter.js:130
 #, fuzzy
