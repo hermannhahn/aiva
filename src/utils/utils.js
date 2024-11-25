@@ -272,11 +272,13 @@ export class Utils {
             this.app.log('Country: ' + countryLang);
             if (topic !== undefined) {
                 url = `https://news.google.com/rss/search?q=${topic}&hl=${lang}&gl=${countryLang}&ceid=${countryLang}`;
-                this.app.chat.editResponse(_('The news are') + ':\n');
+                this.app.chat.editResponse(
+                    _('Of course, one momment please.') + ':\n',
+                );
             } else {
                 url = `https://news.google.com/rss?hl=${lang}&gl=${countryLang}&ceid=${countryLang}`;
                 this.app.chat.editResponse(
-                    _('The main news of the day are') + ':\n',
+                    _('Sure, one moment please.') + ':\n',
                 );
             }
             const fetchNews = await this.fetchRSS(url);
@@ -288,7 +290,7 @@ export class Utils {
                 .replace(/\]/g, '');
 
             const news = this.swapNewspaperAndNews(stringNews);
-            this.app.chat.editResponse(news);
+            this.app.chat.editResponse('The main news are:\n\n' + news);
         } catch (error) {
             this.app.log(`Error fetching news: ${error}`);
             this.app.chat.editResponse(
@@ -302,7 +304,7 @@ export class Utils {
         for (let i = 0; i < newsArray.length; i++) {
             const [news, newspaper] = newsArray[i].split(' - ');
             if (news !== undefined && newspaper !== undefined) {
-                newsArray[i] = `${newspaper} ${news}`;
+                newsArray[i] = `${newspaper}: -${news}`;
             }
         }
         return newsArray.join('\n');
