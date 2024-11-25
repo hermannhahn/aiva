@@ -74,6 +74,14 @@
            Set color of theme
         </description>
     </key>
+    <!--- theme-color -->
+    <key name="theme-mode" type="s">
+        <default>"0"</default>
+        <summary>Mode of theme</summary>
+        <description>
+           Set light or dark mode
+        </description>
+    </key>
     <!--- user-name -->
     <key name="user-name" type="s">
         <default>"0"</default>
