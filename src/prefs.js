@@ -191,6 +191,7 @@ class AivaSettings {
         };
 
         const voiceOptions = loadJsonFile('voiceOptions.json');
+        log('Voice options loaded: ' + voiceOptions);
 
         // Update voice
         const updateVoice = (language) => {
@@ -207,6 +208,7 @@ class AivaSettings {
         languageSelector.connect('changed', () => {
             const selectedLanguage = languageSelector.get_active_id();
             this.schema.set_string('azure-speech-language', selectedLanguage);
+            log('Selected language: ' + selectedLanguage);
             updateVoice(selectedLanguage);
         });
         updateVoice(defaultLanguage);
