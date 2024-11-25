@@ -286,6 +286,13 @@ export class Utils {
                 .replace(/"/g, '')
                 .replace(/\[/g, '')
                 .replace(/\]/g, '');
+
+            for (let i = 0; i < stringNews.length; i++) {
+                const palavras = stringNews[i].split(' ');
+                palavras.reverse();
+                stringNews[i] = palavras.join(' ');
+            }
+
             this.app.chat.editResponse(stringNews);
         } catch (error) {
             this.app.log(`Error fetching news: ${error}`);
