@@ -257,7 +257,7 @@ export class UI {
                 return 'light';
             }
         }
-        let theme = this.userSettings.MODE;
+        let theme = this.app.userSettings.MODE;
         if (theme === null || theme === undefined || theme !== '') {
             const settings = new Gio.Settings({
                 schema_id: 'org.gnome.desktop.interface',
