@@ -257,11 +257,19 @@ export class UI {
                 return 'light';
             }
         }
-        const settings = new Gio.Settings({
-            schema_id: 'org.gnome.desktop.interface',
-        });
-        const theme = getTheme(settings.get_string('gtk-theme'));
-        if (theme === 'dark') {
+        let theme = this.userSettings.MODE;
+        if (theme === null || theme === undefined || theme !== '') {
+            const settings = new Gio.Settings({
+                schema_id: 'org.gnome.desktop.interface',
+            });
+            theme = getTheme(settings.get_string('gtk-theme'));
+            if (theme === null || theme === undefined || theme !== '') {
+                theme = 'dark';
+            }
+            this.app.extension.settings.set_string('theme-mode', theme);
+            this.app.userSettings.MODE = theme;
+        }
+        if (this.app.userSettings.MODE === 'dark') {
             // change themeModeButton label
             this.appearancemenu.themeModeButton.label = '🌙';
             // set text color
@@ -272,7 +280,7 @@ export class UI {
             );
             this.mainmenu.userEntry.set_style(`color: rgb(243, 232, 212);`);
         }
-        if (theme === 'light') {
+        if (this.app.userSettings.MODE === 'light') {
             // change themeModeButton label
             this.appearancemenu.themeModeButton.label = '☀️';
             // set text color
