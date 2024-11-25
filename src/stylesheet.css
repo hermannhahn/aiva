@@ -122,12 +122,12 @@
 .appearance-section {
     background-color: transparent;
 }
-.appearance-container {
+.appearance-menu {
     border-radius: 10px;
     padding: 10px;
     text-align: right;
 }
-.appearance-area {
+.appearance-container {
     background-color: transparent;
 }
 
