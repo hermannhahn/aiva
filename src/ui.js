@@ -246,30 +246,30 @@ export class UI {
         const theme = getTheme();
         if (theme === 'dark') {
             this.chat.inputChat.set_style(
-                `background-color: rgba(243, 232, 212, ${inputTransparency});`,
+                `color: rgba(243, 232, 212, ${inputTransparency});`,
             );
             this.chat.responseChat.set_style(
-                `background-color: rgba(243, 232, 212, ${responseChatTransparency});`,
+                `color: rgba(243, 232, 212, ${responseChatTransparency});`,
             );
             this.appearancemenu.transparencyEntry.set_style(
-                `background-color: rgba(243, 232, 212, ${transparency});`,
+                `color: rgba(243, 232, 212, ${transparency});`,
             );
             this.mainmenu.userEntry.set_style(
-                `background-color: rgba(243, 232, 212, ${transparency});`,
+                `color: rgba(243, 232, 212, ${transparency});`,
             );
         }
         if (theme === 'light') {
             this.chat.inputChat.set_style(
-                `background-color: rgba(243, 232, 212, ${inputTransparency});`,
+                `color: rgba(25, 25, 25, ${inputTransparency});`,
             );
             this.chat.responseChat.set_style(
-                `background-color: rgba(243, 232, 212, ${responseChatTransparency});`,
+                `color: rgba(25, 25, 25, ${responseChatTransparency});`,
             );
             this.appearancemenu.transparencyEntry.set_style(
-                `background-color: rgba(243, 232, 212, ${transparency});`,
+                `color: rgba(25, 25, 25, ${transparency});`,
             );
             this.mainmenu.userEntry.set_style(
-                `background-color: rgba(243, 232, 212, ${transparency});`,
+                `color: rgba(25, 25, 25, ${transparency});`,
             );
         }
     }
