@@ -123,6 +123,12 @@ export class UI {
             this.appearancemenu.container.add_child(this.appearancemenu.menu);
             this.appearancemenu.isOpen = true;
 
+            // theme mode switch
+            this.appearancemenu.themeModeButton.connect('clicked', (_self) => {
+                this._setThemeMode();
+            });
+
+            // transparency ok button
             this.appearancemenu.transparencyButton.connect(
                 'clicked',
                 (_self) => {
@@ -237,7 +243,9 @@ export class UI {
         this.mainmenu.userEntry.set_style(
             `background-color: rgba(${darkColors}, ${transparency});`,
         );
+    }
 
+    _setThemeMode() {
         // set text color considering theme
         function getTheme() {
             let theme = Gio.Settings.get_default().get_string('gtk-theme');
@@ -245,32 +253,26 @@ export class UI {
         }
         const theme = getTheme();
         if (theme === 'dark') {
-            this.chat.inputChat.set_style(
-                `color: rgba(243, 232, 212, ${inputTransparency});`,
-            );
-            this.chat.responseChat.set_style(
-                `color: rgba(243, 232, 212, ${responseChatTransparency});`,
-            );
+            // change themeModeButton label
+            this.appearancemenu.themeModeButton.label = '🌙';
+            // set text color
+            this.chat.inputChat.set_style(`color: rgb(243, 232, 212);`);
+            this.chat.responseChat.set_style(`color: rgb(243, 232, 212);`);
             this.appearancemenu.transparencyEntry.set_style(
-                `color: rgba(243, 232, 212, ${transparency});`,
+                `color: rgb(243, 232, 212);`,
             );
-            this.mainmenu.userEntry.set_style(
-                `color: rgba(243, 232, 212, ${transparency});`,
-            );
+            this.mainmenu.userEntry.set_style(`color: rgb(243, 232, 212);`);
         }
         if (theme === 'light') {
-            this.chat.inputChat.set_style(
-                `color: rgba(25, 25, 25, ${inputTransparency});`,
-            );
-            this.chat.responseChat.set_style(
-                `color: rgba(25, 25, 25, ${responseChatTransparency});`,
-            );
+            // change themeModeButton label
+            this.appearancemenu.themeModeButton.label = '☀️';
+            // set text color
+            this.chat.inputChat.set_style(`color: rgb(25, 25, 25);`);
+            this.chat.responseChat.set_style(`color: rgb(25, 25, 25);`);
             this.appearancemenu.transparencyEntry.set_style(
-                `color: rgba(25, 25, 25, ${transparency});`,
+                `color: rgb(25, 25, 25);`,
             );
-            this.mainmenu.userEntry.set_style(
-                `color: rgba(25, 25, 25, ${transparency});`,
-            );
+            this.mainmenu.userEntry.set_style(`color: rgb(25, 25, 25);`);
         }
     }
 }
