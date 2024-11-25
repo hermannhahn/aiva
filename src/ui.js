@@ -280,10 +280,6 @@ export class UI {
             // set text color
             this.chat.inputChat.set_style(`color: rgb(243, 232, 212);`);
             this.chat.responseChat.set_style(`color: rgb(243, 232, 212);`);
-            this.appearancemenu.transparencyEntry.set_style(
-                `color: rgb(243, 232, 212);`,
-            );
-            this.mainmenu.userEntry.set_style(`color: rgb(243, 232, 212);`);
         }
         if (theme === 'dark') {
             console.log('dTheme changed to: ' + theme);
@@ -294,10 +290,6 @@ export class UI {
             // set text color
             this.chat.inputChat.set_style(`color: rgb(25, 25, 25);`);
             this.chat.responseChat.set_style(`color: rgb(25, 25, 25);`);
-            this.appearancemenu.transparencyEntry.set_style(
-                `color: rgb(25, 25, 25);`,
-            );
-            this.mainmenu.userEntry.set_style(`color: rgb(25, 25, 25);`);
         }
     }
 }
