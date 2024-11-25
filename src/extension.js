@@ -91,7 +91,6 @@ const Aiva = GObject.registerClass(
                 USERNAME: username,
                 TRANSPARENCY: settings.get_string('theme-transparency'),
                 COLOR: settings.get_string('theme-color'),
-                MODE: settings.get_string('gtk-theme'),
             };
         }
 
