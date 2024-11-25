@@ -693,4 +693,24 @@ export class Utils {
 
         return adjustedRgbString;
     }
+
+    lightColors(rgbString) {
+        // Split the RGB string into its component parts.
+        const [r, g, b] = rgbString.split(',');
+
+        // Convert the component parts to integers.
+        const rInt = parseInt(r);
+        const gInt = parseInt(g);
+        const bInt = parseInt(b);
+
+        // Adjust the brightness of each component.
+        const rAdjusted = rInt > 0 ? rInt - 50 : rInt;
+        const gAdjusted = gInt > 0 ? gInt - 50 : gInt;
+        const bAdjusted = bInt > 0 ? bInt - 50 : bInt;
+
+        // Convert the adjusted component parts back to a string.
+        const adjustedRgbString = `${rAdjusted},${gAdjusted},${bAdjusted}`;
+
+        return adjustedRgbString;
+    }
 }
