@@ -16,7 +16,7 @@ export class AppearanceMenu {
         });
 
         // menu
-        this.menu = new new St.BoxLayout({
+        this.menu = new St.BoxLayout({
             style_class: 'appearance-menu',
             reactive: false,
             can_focus: true,
