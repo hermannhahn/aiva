@@ -24,7 +24,7 @@ export class UI {
     /**
      * @description initialize interfaces
      */
-    init() {
+    create() {
         // Initialize
         this._createApp();
         this.setTheme(
