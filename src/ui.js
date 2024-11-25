@@ -269,9 +269,11 @@ export class UI {
             this.app.extension.settings.set_string('theme-mode', theme);
             this.app.userSettings.MODE = theme;
         }
-        if (this.app.userSettings.MODE === 'dark') {
+        if (this.app.userSettings.MODE === 'light') {
             // change themeModeButton label
             this.appearancemenu.themeModeButton.label = '🌙';
+            this.app.extension.settings.set_string('theme-mode', 'dark');
+            this.app.userSettings.MODE = 'dark';
             // set text color
             this.chat.inputChat.set_style(`color: rgb(243, 232, 212);`);
             this.chat.responseChat.set_style(`color: rgb(243, 232, 212);`);
@@ -280,9 +282,11 @@ export class UI {
             );
             this.mainmenu.userEntry.set_style(`color: rgb(243, 232, 212);`);
         }
-        if (this.app.userSettings.MODE === 'light') {
+        if (this.app.userSettings.MODE === 'dark') {
             // change themeModeButton label
             this.appearancemenu.themeModeButton.label = '☀️';
+            this.app.extension.settings.set_string('theme-mode', 'light');
+            this.app.userSettings.MODE = 'light';
             // set text color
             this.chat.inputChat.set_style(`color: rgb(25, 25, 25);`);
             this.chat.responseChat.set_style(`color: rgb(25, 25, 25);`);
