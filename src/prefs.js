@@ -172,14 +172,11 @@ class AivaSettings {
             let result = [];
             if (GLib.file_test(filename, GLib.FileTest.IS_REGULAR)) {
                 try {
-                    let file = Gio.File.new_for_path(filename);
-                    let [, contents] = file.load_contents(null);
-
-                    // Decodifica contents de Uint8Array para string
-                    let decodedContents = new TextDecoder().decode(contents);
-
-                    // Parse JSON
-                    result = JSON.parse(decodedContents);
+                    const file = Gio.File.new_for_path(filename);
+                    const [success, contents] = file.load_contents(null);
+                    if (success) {
+                        result = JSON.parse(contents);
+                    }
                     return result;
                 } catch (e) {
                     logError(e, `Failed to load history: ${filename}`);
