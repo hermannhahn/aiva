@@ -270,10 +270,10 @@ export class Utils {
             const countryLang = lang.split('-')[1];
             if (topic !== undefined) {
                 url = `https://news.google.com/rss/search?q=${topic}&hl=${lang}&gl=${countryLang}&ceid=${countryLang}`;
-                this.app.chat.editResponse(_('Of course, one moment please.'));
+                this.app.chat.editResponse(_('Of course, searching...'));
             } else {
                 url = `https://news.google.com/rss?hl=${lang}&gl=${countryLang}&ceid=${countryLang}`;
-                this.app.chat.editResponse(_('Sure, one moment please.'));
+                this.app.chat.editResponse(_('Sure, searching...'));
             }
             const fetchNews = await this.fetchRSS(url);
             const unformattedNews = JSON.stringify(fetchNews, null, 2);

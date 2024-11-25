@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-25 13:21-0300\n"
+"POT-Creation-Date: 2024-11-25 13:22-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -367,14 +367,12 @@ msgid "[ Copied ]"
 msgstr "[ Copiado ]"
 
 #: src/utils/utils.js:273
-#, fuzzy
-msgid "Of course, one moment please."
-msgstr "Com certeza, pesquisando..."
+msgid "Of course, searching..."
+msgstr ""
 
 #: src/utils/utils.js:276
-#, fuzzy
-msgid "Sure, one moment please."
-msgstr "Claro, pesquisando..."
+msgid "Sure, searching..."
+msgstr ""
 
 #: src/utils/utils.js:287
 #, fuzzy
@@ -586,6 +584,14 @@ msgstr "Salvar"
 #: src/prefs.js:287
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
+
+#, fuzzy
+#~ msgid "Of course, one moment please."
+#~ msgstr "Com certeza, pesquisando..."
+
+#, fuzzy
+#~ msgid "Sure, one moment please."
+#~ msgstr "Claro, pesquisando..."
 
 #~ msgid "The main news of the day are"
 #~ msgstr "As principais notícias do dia são"
