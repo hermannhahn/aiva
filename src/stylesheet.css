@@ -292,6 +292,28 @@
     padding-bottom: 10px;
     display: flex;
 }
+.theme-mode-label {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    font-weight: bold;
+    height: 20px;
+    margin-top: 24px;
+    margin-left: 15px;
+    margin-right: 0px;
+}
+.theme-mode-icon {
+    font-size: 24px;
+    color: black;
+    text-align: center;
+    width: 40px;
+    border-radius: 10px;
+}
+.theme-mode-icon:hover {
+    background-color: transparent;
+}
+.theme-mode-icon:active {
+    font-size: 12px;
+}
 .transparency-label {
     font-family: 'Courier New', Courier, monospace;
     font-size: 12px;
