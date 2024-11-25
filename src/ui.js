@@ -1,3 +1,5 @@
+import Gio from 'gi://Gio';
+
 import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
@@ -255,7 +257,10 @@ export class UI {
                 return 'light';
             }
         }
-        const theme = getTheme(this.app.userSettings.MODE);
+        const settings = new Gio.Settings({
+            schema_id: 'org.gnome.desktop.interface',
+        });
+        const theme = getTheme(settings.get_string('gtk-theme'));
         if (theme === 'dark') {
             // change themeModeButton label
             this.appearancemenu.themeModeButton.label = '🌙';
