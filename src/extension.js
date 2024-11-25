@@ -202,6 +202,9 @@ const Aiva = GObject.registerClass(
                     let decoder = new TextDecoder('utf-8');
                     let response = decoder.decode(bytes.get_data());
                     const res = JSON.parse(response);
+                    console.log('Response: ' + res);
+                    const ip = res.ip;
+                    console.log('IP: ' + ip);
                     const country = res.country;
                     this.userSettings.LOCATION = country;
                     console.log('Location: ' + country);
