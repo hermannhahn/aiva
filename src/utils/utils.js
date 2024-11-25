@@ -284,8 +284,9 @@ export class Utils {
                 .replace(/\]/g, '');
 
             const news = this.swapNewspaperAndNews(stringNews);
-            const title = _('The main news are');
-            this.app.chat.editResponse(title + ':\n\n' + news);
+            this.app.chat.editResponse(
+                `${_('Here are the main news')}:\n\n` + news,
+            );
         } catch (error) {
             this.app.log(`Error fetching news: ${error}`);
             this.app.chat.editResponse(
