@@ -108,7 +108,6 @@ export class UI {
 
         // If press appearance button
         this.mainmenu.appearanceButton.connect('clicked', (_self) => {
-            this.appearancemenu.isOpen = true;
             // show or hide
             if (this.appearancemenu.isOpen) {
                 this.appearancemenu.container.remove_child(
@@ -121,6 +120,7 @@ export class UI {
                 this.app.userSettings.TRANSPARENCY,
             );
             this.appearancemenu.container.add_child(this.appearancemenu.menu);
+            this.appearancemenu.isOpen = true;
 
             this.appearancemenu.transparencyButton.connect(
                 'clicked',
