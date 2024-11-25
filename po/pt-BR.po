@@ -212,12 +212,12 @@ msgstr "Iniciando a leitura..."
 #: src/interpreter.js:198
 #, fuzzy
 msgid "Read news of"
-msgstr "leia notícias d"
+msgstr "Lê notícias d"
 
 #: src/interpreter.js:208
 #, fuzzy
 msgid "Read news"
-msgstr "ler notícias"
+msgstr "Lê notícias"
 
 #: src/ai/azure.js:69 src/ai/azure.js:82 src/ai/azure.js:124
 #: src/ai/azure.js:133 src/ai/gemini.js:99 src/ai/gemini.js:191
