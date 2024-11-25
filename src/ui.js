@@ -207,8 +207,8 @@ export class UI {
         this.chat.container.set_style(
             `background-color: rgba(${color}, ${transparency});`,
         );
-        if (transparency < 0.8) {
-            transparency += 0.2;
+        if (transparency < 0.9) {
+            transparency += 0.1;
         }
         // make color more darkness
         const darkColors = this.app.utils.darkColors(color);
