@@ -1,4 +1,5 @@
 import St from 'gi://St';
+import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 
 /**
  * @description appearance menu
@@ -9,14 +10,16 @@ export class AppearanceMenu {
     }
 
     _create() {
-        // reserved space
-        this.area = new St.BoxLayout({
-            style_class: 'appearance-area',
-        });
-
         // Create container
         this.container = new St.BoxLayout({
             style_class: 'appearance-container',
+        });
+
+        // menu
+        this.menu = new PopupMenu.PopupBaseMenuItem({
+            style_class: 'appearance-menu',
+            reactive: false,
+            can_focus: true,
         });
 
         // Create transparency slider
@@ -97,15 +100,15 @@ export class AppearanceMenu {
     }
 
     _add() {
-        this.container.add_child(this.transparencyLabel);
-        this.container.add_child(this.transparencyEntry);
-        this.container.add_child(this.transparencyButton);
-        this.container.add_child(this.colorsLabel);
-        this.container.add_child(this.colorBlueButton);
-        this.container.add_child(this.colorRedButton);
-        this.container.add_child(this.colorGreenButton);
-        this.container.add_child(this.colorYellowButton);
-        this.container.add_child(this.colorPurpleButton);
-        this.container.add_child(this.colorBlackButton);
+        this.menu.add_child(this.transparencyLabel);
+        this.menu.add_child(this.transparencyEntry);
+        this.menu.add_child(this.transparencyButton);
+        this.menu.add_child(this.colorsLabel);
+        this.menu.add_child(this.colorBlueButton);
+        this.menu.add_child(this.colorRedButton);
+        this.menu.add_child(this.colorGreenButton);
+        this.menu.add_child(this.colorYellowButton);
+        this.menu.add_child(this.colorPurpleButton);
+        this.menu.add_child(this.colorBlackButton);
     }
 }
