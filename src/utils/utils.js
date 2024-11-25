@@ -283,8 +283,7 @@ export class Utils {
                 .replace(/\[/g, '')
                 .replace(/\]/g, '');
 
-            const unformattedNews = this.swapNewspaperAndNews(preFormattedNews);
-            const news = this._pangoConvert(unformattedNews);
+            const news = this.swapNewspaperAndNews(preFormattedNews);
             this.app.chat.editResponse(
                 `${_('Here are the main news')}:\n\n` + news,
             );
