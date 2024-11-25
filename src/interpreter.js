@@ -205,7 +205,8 @@ HELP
                 }
             case 'readNews':
                 try {
-                    this.app.utils.readNews();
+                    this.app.gemini.response(_('Read news'));
+                    // this.app.utils.readNews();
                 } catch (error) {
                     this.app.logError('Erro ao ler notícias:', error);
                 }
