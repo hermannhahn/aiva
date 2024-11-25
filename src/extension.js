@@ -114,37 +114,34 @@ const Aiva = GObject.registerClass(
          */
         _init(extension) {
             // initialize
+            console.log('[AIVA] Initializing extension...');
             super._init(0.0, 'aiva');
             this.extension = extension;
 
             // load settings
             this._loadSettings();
-            console.log('[AIVA] Settings loaded.');
-
-            // set language
             GLib.setenv(
                 'LANGUAGE',
                 this.userSettings.AZURE_SPEECH_LANGUAGE,
                 true,
             );
+            console.log('[AIVA] Settings loaded!');
 
             // create instances
             console.log('[AIVA] Creating instances...');
             this._createInstances();
+            this.log('Instances created!');
 
             // open settings if gemini api key is not configured
-            this.log('Checking API key...');
             if (this.userSettings.GEMINI_API_KEY === '') {
                 this.log('API key not configured.');
                 this.openSettings();
             } else {
-                this.log('API key configured.');
+                this.log('API key configured!');
             }
 
-            // create ui
+            // ui
             this.ui.create();
-
-            // initialize chat
             this.chat.init();
 
             this.log('Extension initialized.');
@@ -289,12 +286,12 @@ export default class AivaExtension extends Extension {
 
         const dbusImpl = Gio.DBusExportedObject.wrapJSObject(interfaceXML, {
             SetRequestable(request) {
-                log(`Received: ${request}`);
+                log(`[AIVA] Request received: ${request}`);
             },
         });
 
         dbusImpl.export(Gio.DBus.session, '/org/gnome/shell/extensions/aiva');
 
-        log('D-Bus server started');
+        log('[AIVA] D-Bus server started');
     }
 }
