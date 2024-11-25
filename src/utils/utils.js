@@ -301,7 +301,9 @@ export class Utils {
         const newsArray = newsString.split('\n');
         for (let i = 0; i < newsArray.length; i++) {
             const [news, newspaper] = newsArray[i].split(' - ');
-            newsArray[i] = `${newspaper} - ${news}`;
+            if (news !== undefined && newspaper !== undefined) {
+                newsArray[i] = `${newspaper} - ${news}`;
+            }
         }
         return newsArray.join('\n');
     }
