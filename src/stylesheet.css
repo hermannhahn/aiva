@@ -165,9 +165,6 @@
     margin-right: 10px;
     /* overflow-y: auto; */
 }
-.response-chat:hover {
-    background-color: rgb(42, 42, 42);
-}
 .response-chat::selection {
     background-color: rgb(42, 42, 42);
 }
@@ -185,9 +182,6 @@
     margin-top: 10px;
     margin-left: 10px;
     margin-right: 10px;
-}
-.input-chat::selection {
-    background-color: rgb(42, 42, 42);
 }
 .input-chat::selection {
     background-color: rgb(42, 42, 42);
