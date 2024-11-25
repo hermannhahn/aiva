@@ -125,7 +125,7 @@ export class UI {
 
             // theme mode switch
             this.appearancemenu.themeModeButton.connect('clicked', (_self) => {
-                this._setThemeMode();
+                this._switchThemeMode();
             });
 
             // transparency ok button
@@ -245,7 +245,7 @@ export class UI {
         );
     }
 
-    _setThemeMode() {
+    _switchThemeMode() {
         // set text color considering theme
         function getTheme(theme) {
             if (
@@ -258,18 +258,21 @@ export class UI {
             }
         }
         let theme = this.app.userSettings.MODE;
-        if (theme === null || theme === undefined || theme !== '') {
+        console.log('Theme: ' + theme);
+        if (theme === null || theme === undefined) {
             const settings = new Gio.Settings({
                 schema_id: 'org.gnome.desktop.interface',
             });
             theme = getTheme(settings.get_string('gtk-theme'));
-            if (theme === null || theme === undefined || theme !== '') {
+            if (theme === null || theme === undefined) {
                 theme = 'dark';
             }
             this.app.extension.settings.set_string('theme-mode', theme);
             this.app.userSettings.MODE = theme;
         }
-        if (this.app.userSettings.MODE === 'light') {
+        console.log('Theme Updated: ' + theme);
+        if (theme === 'light') {
+            console.log('lTheme changed to: ' + theme);
             // change themeModeButton label
             this.appearancemenu.themeModeButton.label = '🌙';
             this.app.extension.settings.set_string('theme-mode', 'dark');
@@ -282,7 +285,8 @@ export class UI {
             );
             this.mainmenu.userEntry.set_style(`color: rgb(243, 232, 212);`);
         }
-        if (this.app.userSettings.MODE === 'dark') {
+        if (theme === 'dark') {
+            console.log('dTheme changed to: ' + theme);
             // change themeModeButton label
             this.appearancemenu.themeModeButton.label = '☀️';
             this.app.extension.settings.set_string('theme-mode', 'light');
