@@ -62,7 +62,7 @@ export class UI {
         );
 
         // add items
-        this.container.addMenuItem(this.appearancemenu.area);
+        this.container.addMenuItem(this.appearancemenu.container);
         this.container.addMenuItem(this.mainmenu.container);
         this.container.box.add_child(this.chat.container);
     }
