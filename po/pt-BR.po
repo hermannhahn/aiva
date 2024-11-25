@@ -379,7 +379,7 @@ msgstr "Um momento, por favor..."
 #: src/utils/utils.js:293
 #, fuzzy
 msgid "The main news are"
-msgstr "As notícias são"
+msgstr "As principais notícias são"
 
 #: src/utils/utils.js:337
 msgid "I will show it on screen."
