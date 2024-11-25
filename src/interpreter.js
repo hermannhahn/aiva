@@ -90,86 +90,6 @@ HELP
                 _('open youtube'),
                 _('on youtube'),
             ],
-            readNewsOf: [
-                _('read news from'),
-                _('read news from2'),
-                _('read news from3'),
-                _('read the news from'),
-                _('read the news from2'),
-                _('read the news from3'),
-                _('what is the news from'),
-                _('what is the news from2'),
-                _('what is the news from3'),
-                _("what's the news from"),
-                _("what's the news from2"),
-                _("what's the news from3"),
-                _('can you read the news from'),
-                _('can you read the news from2'),
-                _('can you read the news from3'),
-                _('please read the news from'),
-                _('please read the news from2'),
-                _('please read the news from3'),
-                _('what are the latest updates from'),
-                _('what are the latest updates from2'),
-                _('what are the latest updates from3'),
-                _("what's happening in"),
-                _("what's happening in2"),
-                _("what's happening in3"),
-                _('can you check the news from'),
-                _('can you check the news from2'),
-                _('can you check the news from3'),
-                _("what's the latest news from"),
-                _("what's the latest news from2"),
-                _("what's the latest news from3"),
-                _('any news from'),
-                _('any news from2'),
-                _('any news from3'),
-                _('any news from4'),
-                _('any news from5'),
-                _('any news from6'),
-                _('get the news from'),
-                _('get the news from2'),
-                _('get the news from3'),
-                _('fetch the news from'),
-                _('fetch the news from2'),
-                _('fetch the news from3'),
-                _('what do the reports say from'),
-                _('what do the reports say from2'),
-                _('what do the reports say from3'),
-                _('could you give me the news from'),
-                _('could you give me the news from2'),
-                _('could you give me the news from3'),
-                _('bring up the news from'),
-                _('bring up the news from2'),
-                _('bring up the news from3'),
-                _('look up the news from'),
-                _('look up the news from2'),
-                _('look up the news from3'),
-                _("tell me what's happening in"),
-                _("tell me what's happening in2"),
-                _("tell me what's happening in3"),
-                _('let me know the news from'),
-                _('let me know the news from2'),
-                _('let me know the news from3'),
-                _("what's the situation in"),
-                _("what's the situation in2"),
-                _("what's the situation in3"),
-            ],
-            readNews: [
-                _('read the news'),
-                _('read news'),
-                _('can you read the news'),
-                _('please read the news'),
-                _('what is the news'),
-                _('get the news'),
-                _('fetch the news'),
-                _('tell me the news'),
-                _('could you read the news'),
-                _('bring up the news'),
-                _('look up the news'),
-                _('let me know the news'),
-                _('give me the news'),
-            ],
         };
 
         let commandToRun = this.app.utils.findCategoryInArrays(text, commands);
@@ -245,25 +165,6 @@ HELP
                     this.app.logError('Erro ao abrir site:', error);
                     return;
                 }
-            case 'readNewsOf':
-                try {
-                    // get the three first words from request
-                    const topic = request.split(/\s+/).slice(0, 3).join(' ');
-                    this.app.gemini.response(`${_('Read news of')} ${topic}`);
-                    // this.app.utils.readNews(topic);
-                    return;
-                } catch (error) {
-                    this.app.logError('Erro ao abrir site:', error);
-                    return;
-                }
-            case 'readNews':
-                try {
-                    this.app.gemini.response(`${_('Read news')}`);
-                    // this.app.utils.readNews();
-                } catch (error) {
-                    this.app.logError('Erro ao ler notícias:', error);
-                }
-                break;
             default:
                 break;
         }

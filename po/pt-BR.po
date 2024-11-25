@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-25 15:08-0300\n"
+"POT-Creation-Date: 2024-11-25 15:12-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -110,389 +110,9 @@ msgstr "abrir youtube"
 msgid "on youtube"
 msgstr "no youtube"
 
-#: src/interpreter.js:94
-#, fuzzy
-msgid "read news from"
-msgstr "leia notícias de"
-
-#: src/interpreter.js:95
-#, fuzzy
-msgid "read news from2"
-msgstr "leia notícias da"
-
-#: src/interpreter.js:96
-#, fuzzy
-msgid "read news from3"
-msgstr "leia notícias do"
-
-#: src/interpreter.js:97
-#, fuzzy
-msgid "read the news from"
-msgstr "leia as notícias de"
-
-#: src/interpreter.js:98
-#, fuzzy
-msgid "read the news from2"
-msgstr "leia as notícias da"
-
-#: src/interpreter.js:99
-#, fuzzy
-msgid "read the news from3"
-msgstr "leia as notícias do"
-
-#: src/interpreter.js:100
-msgid "what is the news from"
-msgstr "quais as notícias de"
-
-#: src/interpreter.js:101
-#, fuzzy
-msgid "what is the news from2"
-msgstr "quais as notícias da"
-
-#: src/interpreter.js:102
-#, fuzzy
-msgid "what is the news from3"
-msgstr "quais as notícias do"
-
-#: src/interpreter.js:103
-#, fuzzy
-msgid "what's the news from"
-msgstr "quais as notícias em"
-
-#: src/interpreter.js:104
-#, fuzzy
-msgid "what's the news from2"
-msgstr "quais as notícias na"
-
-#: src/interpreter.js:105
-#, fuzzy
-msgid "what's the news from3"
-msgstr "quais as notícias no"
-
-#: src/interpreter.js:106
-#, fuzzy
-msgid "can you read the news from"
-msgstr "pode ler as notícias de"
-
-#: src/interpreter.js:107
-#, fuzzy
-msgid "can you read the news from2"
-msgstr "pode ler as notícias da"
-
-#: src/interpreter.js:108
-#, fuzzy
-msgid "can you read the news from3"
-msgstr "pode ler as notícias do"
-
-#: src/interpreter.js:109
-#, fuzzy
-msgid "please read the news from"
-msgstr "leia as notícias em"
-
-#: src/interpreter.js:110
-#, fuzzy
-msgid "please read the news from2"
-msgstr "leia as notícias na"
-
 #: src/interpreter.js:111
-#, fuzzy
-msgid "please read the news from3"
-msgstr "leia as notícias no"
-
-#: src/interpreter.js:112
-#, fuzzy
-msgid "what are the latest updates from"
-msgstr "quais são as últimas notícias de"
-
-#: src/interpreter.js:113
-#, fuzzy
-msgid "what are the latest updates from2"
-msgstr "quais são as últimas notícias da"
-
-#: src/interpreter.js:114
-#, fuzzy
-msgid "what are the latest updates from3"
-msgstr "quais são as últimas notícias do"
-
-#: src/interpreter.js:115
-msgid "what's happening in"
-msgstr "o que está acontecendo em"
-
-#: src/interpreter.js:116
-msgid "what's happening in2"
-msgstr "o que está acontecendo no"
-
-#: src/interpreter.js:117
-msgid "what's happening in3"
-msgstr "o que está acontecendo na"
-
-#: src/interpreter.js:118
-#, fuzzy
-msgid "can you check the news from"
-msgstr "verifique as notícias de"
-
-#: src/interpreter.js:119
-#, fuzzy
-msgid "can you check the news from2"
-msgstr "verifique as notícias da"
-
-#: src/interpreter.js:120
-#, fuzzy
-msgid "can you check the news from3"
-msgstr "verifique as notícias do"
-
-#: src/interpreter.js:121
-#, fuzzy
-msgid "what's the latest news from"
-msgstr "quais as últimas notícias de"
-
-#: src/interpreter.js:122
-#, fuzzy
-msgid "what's the latest news from2"
-msgstr "quais as últimas notícias da"
-
-#: src/interpreter.js:123
-#, fuzzy
-msgid "what's the latest news from3"
-msgstr "quais as últimas notícias do"
-
-#: src/interpreter.js:124
-#, fuzzy
-msgid "any news from"
-msgstr "alguma notícia em"
-
-#: src/interpreter.js:125
-#, fuzzy
-msgid "any news from2"
-msgstr "alguma notícias de"
-
-#: src/interpreter.js:126
-#, fuzzy
-msgid "any news from3"
-msgstr "alguma notícia da"
-
-#: src/interpreter.js:127
-#, fuzzy
-msgid "any news from4"
-msgstr "alguma notícia no"
-
-#: src/interpreter.js:128
-#, fuzzy
-msgid "any news from5"
-msgstr "alguma notícia na"
-
-#: src/interpreter.js:129
-#, fuzzy
-msgid "any news from6"
-msgstr "alguma notícia sobre"
-
-#: src/interpreter.js:130
-#, fuzzy
-msgid "get the news from"
-msgstr "olha as notícias de"
-
-#: src/interpreter.js:131
-#, fuzzy
-msgid "get the news from2"
-msgstr "olha as notícias da"
-
-#: src/interpreter.js:132
-#, fuzzy
-msgid "get the news from3"
-msgstr "olha as notícias do"
-
-#: src/interpreter.js:133
-#, fuzzy
-msgid "fetch the news from"
-msgstr "procure por notícias de"
-
-#: src/interpreter.js:134
-#, fuzzy
-msgid "fetch the news from2"
-msgstr "procure por notícias da"
-
-#: src/interpreter.js:135
-#, fuzzy
-msgid "fetch the news from3"
-msgstr "procure por notícias do"
-
-#: src/interpreter.js:136
-#, fuzzy
-msgid "what do the reports say from"
-msgstr "o que estão falando de"
-
-#: src/interpreter.js:137
-#, fuzzy
-msgid "what do the reports say from2"
-msgstr "o que estão falando da"
-
-#: src/interpreter.js:138
-#, fuzzy
-msgid "what do the reports say from3"
-msgstr "o que estão falando do"
-
-#: src/interpreter.js:139
-#, fuzzy
-msgid "could you give me the news from"
-msgstr "me fala as notícias de"
-
-#: src/interpreter.js:140
-#, fuzzy
-msgid "could you give me the news from2"
-msgstr "me fala as notícias da"
-
-#: src/interpreter.js:141
-#, fuzzy
-msgid "could you give me the news from3"
-msgstr "me fala as notícias do"
-
-#: src/interpreter.js:142
-#, fuzzy
-msgid "bring up the news from"
-msgstr "verifique as notícias de"
-
-#: src/interpreter.js:143
-#, fuzzy
-msgid "bring up the news from2"
-msgstr "verifique as notícias da"
-
-#: src/interpreter.js:144
-#, fuzzy
-msgid "bring up the news from3"
-msgstr "verifique as notícias do"
-
-#: src/interpreter.js:145
-#, fuzzy
-msgid "look up the news from"
-msgstr "me mostre as notícias de"
-
-#: src/interpreter.js:146
-#, fuzzy
-msgid "look up the news from2"
-msgstr "me mostre as notícias da"
-
-#: src/interpreter.js:147
-#, fuzzy
-msgid "look up the news from3"
-msgstr "me mostre as notícias do"
-
-#: src/interpreter.js:148
-#, fuzzy
-msgid "tell me what's happening in"
-msgstr "o que está acontecendo em"
-
-#: src/interpreter.js:149
-msgid "tell me what's happening in2"
-msgstr "o que está acontecendo no"
-
-#: src/interpreter.js:150
-msgid "tell me what's happening in3"
-msgstr "o que está acontecendo na"
-
-#: src/interpreter.js:151
-#, fuzzy
-msgid "let me know the news from"
-msgstr "me fale as notícias de"
-
-#: src/interpreter.js:152
-#, fuzzy
-msgid "let me know the news from2"
-msgstr "me fale as notícias da"
-
-#: src/interpreter.js:153
-#, fuzzy
-msgid "let me know the news from3"
-msgstr "me fale as notícias do"
-
-#: src/interpreter.js:154
-msgid "what's the situation in"
-msgstr "qual a situação em"
-
-#: src/interpreter.js:155
-msgid "what's the situation in2"
-msgstr "qual a situação no"
-
-#: src/interpreter.js:156
-msgid "what's the situation in3"
-msgstr "qual a situação na"
-
-#: src/interpreter.js:159
-#, fuzzy
-msgid "read the news"
-msgstr "leia as notícias"
-
-#: src/interpreter.js:160
-#, fuzzy
-msgid "read news"
-msgstr "ler notícias"
-
-#: src/interpreter.js:161
-#, fuzzy
-msgid "can you read the news"
-msgstr "pode ler as notícias"
-
-#: src/interpreter.js:162
-#, fuzzy
-msgid "please read the news"
-msgstr "ler as notícias"
-
-#: src/interpreter.js:163
-msgid "what is the news"
-msgstr "quais as notícias"
-
-#: src/interpreter.js:164
-#, fuzzy
-msgid "get the news"
-msgstr "pegue as notícias"
-
-#: src/interpreter.js:165
-#, fuzzy
-msgid "fetch the news"
-msgstr "alguma notícia nova"
-
-#: src/interpreter.js:166
-#, fuzzy
-msgid "tell me the news"
-msgstr "me fale as notícias"
-
-#: src/interpreter.js:167
-#, fuzzy
-msgid "could you read the news"
-msgstr "pode ler as notícias"
-
-#: src/interpreter.js:168
-#, fuzzy
-msgid "bring up the news"
-msgstr "traga as notícias"
-
-#: src/interpreter.js:169
-#, fuzzy
-msgid "look up the news"
-msgstr "me mostre as notícias"
-
-#: src/interpreter.js:170
-#, fuzzy
-msgid "let me know the news"
-msgstr "me conte as notícias"
-
-#: src/interpreter.js:171
-#, fuzzy
-msgid "give me the news"
-msgstr "manda as notícias"
-
-#: src/interpreter.js:191
 msgid "Starting reading..."
 msgstr "Iniciando a leitura..."
-
-#: src/interpreter.js:252
-#, fuzzy
-msgid "Read news of"
-msgstr "Leia as notícias"
-
-#: src/interpreter.js:261
-#, fuzzy
-msgid "Read news"
-msgstr "Ler notícias"
 
 #: src/ai/azure.js:69 src/ai/azure.js:82 src/ai/azure.js:124
 #: src/ai/azure.js:133 src/ai/gemini.js:99 src/ai/gemini.js:191
@@ -869,6 +489,308 @@ msgstr "Salvar"
 #: src/prefs.js:287
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
+
+#, fuzzy
+#~ msgid "read news from"
+#~ msgstr "leia notícias de"
+
+#, fuzzy
+#~ msgid "read news from2"
+#~ msgstr "leia notícias da"
+
+#, fuzzy
+#~ msgid "read news from3"
+#~ msgstr "leia notícias do"
+
+#, fuzzy
+#~ msgid "read the news from"
+#~ msgstr "leia as notícias de"
+
+#, fuzzy
+#~ msgid "read the news from2"
+#~ msgstr "leia as notícias da"
+
+#, fuzzy
+#~ msgid "read the news from3"
+#~ msgstr "leia as notícias do"
+
+#~ msgid "what is the news from"
+#~ msgstr "quais as notícias de"
+
+#, fuzzy
+#~ msgid "what is the news from2"
+#~ msgstr "quais as notícias da"
+
+#, fuzzy
+#~ msgid "what is the news from3"
+#~ msgstr "quais as notícias do"
+
+#, fuzzy
+#~ msgid "what's the news from"
+#~ msgstr "quais as notícias em"
+
+#, fuzzy
+#~ msgid "what's the news from2"
+#~ msgstr "quais as notícias na"
+
+#, fuzzy
+#~ msgid "what's the news from3"
+#~ msgstr "quais as notícias no"
+
+#, fuzzy
+#~ msgid "can you read the news from"
+#~ msgstr "pode ler as notícias de"
+
+#, fuzzy
+#~ msgid "can you read the news from2"
+#~ msgstr "pode ler as notícias da"
+
+#, fuzzy
+#~ msgid "can you read the news from3"
+#~ msgstr "pode ler as notícias do"
+
+#, fuzzy
+#~ msgid "please read the news from"
+#~ msgstr "leia as notícias em"
+
+#, fuzzy
+#~ msgid "please read the news from2"
+#~ msgstr "leia as notícias na"
+
+#, fuzzy
+#~ msgid "please read the news from3"
+#~ msgstr "leia as notícias no"
+
+#, fuzzy
+#~ msgid "what are the latest updates from"
+#~ msgstr "quais são as últimas notícias de"
+
+#, fuzzy
+#~ msgid "what are the latest updates from2"
+#~ msgstr "quais são as últimas notícias da"
+
+#, fuzzy
+#~ msgid "what are the latest updates from3"
+#~ msgstr "quais são as últimas notícias do"
+
+#~ msgid "what's happening in"
+#~ msgstr "o que está acontecendo em"
+
+#~ msgid "what's happening in2"
+#~ msgstr "o que está acontecendo no"
+
+#~ msgid "what's happening in3"
+#~ msgstr "o que está acontecendo na"
+
+#, fuzzy
+#~ msgid "can you check the news from"
+#~ msgstr "verifique as notícias de"
+
+#, fuzzy
+#~ msgid "can you check the news from2"
+#~ msgstr "verifique as notícias da"
+
+#, fuzzy
+#~ msgid "can you check the news from3"
+#~ msgstr "verifique as notícias do"
+
+#, fuzzy
+#~ msgid "what's the latest news from"
+#~ msgstr "quais as últimas notícias de"
+
+#, fuzzy
+#~ msgid "what's the latest news from2"
+#~ msgstr "quais as últimas notícias da"
+
+#, fuzzy
+#~ msgid "what's the latest news from3"
+#~ msgstr "quais as últimas notícias do"
+
+#, fuzzy
+#~ msgid "any news from"
+#~ msgstr "alguma notícia em"
+
+#, fuzzy
+#~ msgid "any news from2"
+#~ msgstr "alguma notícias de"
+
+#, fuzzy
+#~ msgid "any news from3"
+#~ msgstr "alguma notícia da"
+
+#, fuzzy
+#~ msgid "any news from4"
+#~ msgstr "alguma notícia no"
+
+#, fuzzy
+#~ msgid "any news from5"
+#~ msgstr "alguma notícia na"
+
+#, fuzzy
+#~ msgid "any news from6"
+#~ msgstr "alguma notícia sobre"
+
+#, fuzzy
+#~ msgid "get the news from"
+#~ msgstr "olha as notícias de"
+
+#, fuzzy
+#~ msgid "get the news from2"
+#~ msgstr "olha as notícias da"
+
+#, fuzzy
+#~ msgid "get the news from3"
+#~ msgstr "olha as notícias do"
+
+#, fuzzy
+#~ msgid "fetch the news from"
+#~ msgstr "procure por notícias de"
+
+#, fuzzy
+#~ msgid "fetch the news from2"
+#~ msgstr "procure por notícias da"
+
+#, fuzzy
+#~ msgid "fetch the news from3"
+#~ msgstr "procure por notícias do"
+
+#, fuzzy
+#~ msgid "what do the reports say from"
+#~ msgstr "o que estão falando de"
+
+#, fuzzy
+#~ msgid "what do the reports say from2"
+#~ msgstr "o que estão falando da"
+
+#, fuzzy
+#~ msgid "what do the reports say from3"
+#~ msgstr "o que estão falando do"
+
+#, fuzzy
+#~ msgid "could you give me the news from"
+#~ msgstr "me fala as notícias de"
+
+#, fuzzy
+#~ msgid "could you give me the news from2"
+#~ msgstr "me fala as notícias da"
+
+#, fuzzy
+#~ msgid "could you give me the news from3"
+#~ msgstr "me fala as notícias do"
+
+#, fuzzy
+#~ msgid "bring up the news from"
+#~ msgstr "verifique as notícias de"
+
+#, fuzzy
+#~ msgid "bring up the news from2"
+#~ msgstr "verifique as notícias da"
+
+#, fuzzy
+#~ msgid "bring up the news from3"
+#~ msgstr "verifique as notícias do"
+
+#, fuzzy
+#~ msgid "look up the news from"
+#~ msgstr "me mostre as notícias de"
+
+#, fuzzy
+#~ msgid "look up the news from2"
+#~ msgstr "me mostre as notícias da"
+
+#, fuzzy
+#~ msgid "look up the news from3"
+#~ msgstr "me mostre as notícias do"
+
+#, fuzzy
+#~ msgid "tell me what's happening in"
+#~ msgstr "o que está acontecendo em"
+
+#~ msgid "tell me what's happening in2"
+#~ msgstr "o que está acontecendo no"
+
+#~ msgid "tell me what's happening in3"
+#~ msgstr "o que está acontecendo na"
+
+#, fuzzy
+#~ msgid "let me know the news from"
+#~ msgstr "me fale as notícias de"
+
+#, fuzzy
+#~ msgid "let me know the news from2"
+#~ msgstr "me fale as notícias da"
+
+#, fuzzy
+#~ msgid "let me know the news from3"
+#~ msgstr "me fale as notícias do"
+
+#~ msgid "what's the situation in"
+#~ msgstr "qual a situação em"
+
+#~ msgid "what's the situation in2"
+#~ msgstr "qual a situação no"
+
+#~ msgid "what's the situation in3"
+#~ msgstr "qual a situação na"
+
+#, fuzzy
+#~ msgid "read the news"
+#~ msgstr "leia as notícias"
+
+#, fuzzy
+#~ msgid "read news"
+#~ msgstr "ler notícias"
+
+#, fuzzy
+#~ msgid "can you read the news"
+#~ msgstr "pode ler as notícias"
+
+#, fuzzy
+#~ msgid "please read the news"
+#~ msgstr "ler as notícias"
+
+#~ msgid "what is the news"
+#~ msgstr "quais as notícias"
+
+#, fuzzy
+#~ msgid "get the news"
+#~ msgstr "pegue as notícias"
+
+#, fuzzy
+#~ msgid "fetch the news"
+#~ msgstr "alguma notícia nova"
+
+#, fuzzy
+#~ msgid "tell me the news"
+#~ msgstr "me fale as notícias"
+
+#, fuzzy
+#~ msgid "could you read the news"
+#~ msgstr "pode ler as notícias"
+
+#, fuzzy
+#~ msgid "bring up the news"
+#~ msgstr "traga as notícias"
+
+#, fuzzy
+#~ msgid "look up the news"
+#~ msgstr "me mostre as notícias"
+
+#, fuzzy
+#~ msgid "let me know the news"
+#~ msgstr "me conte as notícias"
+
+#, fuzzy
+#~ msgid "give me the news"
+#~ msgstr "manda as notícias"
+
+#, fuzzy
+#~ msgid "Read news of"
+#~ msgstr "Leia as notícias"
+
+#, fuzzy
+#~ msgid "Read news"
+#~ msgstr "Ler notícias"
 
 #, fuzzy
 #~ msgid "what’s in the news"
