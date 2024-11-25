@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-25 14:24-0300\n"
+"POT-Creation-Date: 2024-11-25 14:34-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -111,110 +111,142 @@ msgid "on youtube"
 msgstr "no youtube"
 
 #: src/interpreter.js:94
-msgid "read news of"
-msgstr "leia notícias de"
-
-#: src/interpreter.js:95
-msgid "read the news of"
-msgstr "leia as notícias de"
-
-#: src/interpreter.js:96
-#, fuzzy
-msgid "show me the news of"
-msgstr "mostre as notícias d"
-
-#: src/interpreter.js:97
-msgid "show news of"
-msgstr "mostre notícias d"
-
-#: src/interpreter.js:98
-#, fuzzy
-msgid "what is the news of"
-msgstr "quais as notícias d"
-
-#: src/interpreter.js:99
-#, fuzzy
-msgid "what are the news of"
-msgstr "quais são as notícias d"
-
-#: src/interpreter.js:100
-#, fuzzy
-msgid "tell me the news of"
-msgstr "fale as notícias d"
-
-#: src/interpreter.js:101
 #, fuzzy
 msgid "read news from"
 msgstr "leia notícias d"
 
-#: src/interpreter.js:102
+#: src/interpreter.js:95
 #, fuzzy
 msgid "read the news from"
 msgstr "leia as notícias d"
 
-#: src/interpreter.js:103
-msgid "show me the news from"
-msgstr "me mostre as notícias d"
-
-#: src/interpreter.js:104
-#, fuzzy
-msgid "show news from"
-msgstr "mostre notícias d"
-
-#: src/interpreter.js:105
+#: src/interpreter.js:96
 msgid "what is the news from"
 msgstr "quais as notícias d"
 
-#: src/interpreter.js:106
+#: src/interpreter.js:97
 #, fuzzy
-msgid "what are the news from"
+msgid "what’s the news from"
+msgstr "quais as notícias d"
+
+#: src/interpreter.js:98
+#, fuzzy
+msgid "can you read the news from"
+msgstr "leia as notícias d"
+
+#: src/interpreter.js:99
+#, fuzzy
+msgid "please read the news from"
+msgstr "leia as notícias d"
+
+#: src/interpreter.js:100
+#, fuzzy
+msgid "what are the latest updates from"
 msgstr "quais são as notícias d"
 
+#: src/interpreter.js:101
+msgid "what’s happening in"
+msgstr ""
+
+#: src/interpreter.js:102
+#, fuzzy
+msgid "can you check the news from"
+msgstr "me mostre as notícias d"
+
+#: src/interpreter.js:103
+#, fuzzy
+msgid "what’s the latest news from"
+msgstr "quais as notícias d"
+
+#: src/interpreter.js:104
+#, fuzzy
+msgid "any news from"
+msgstr "leia notícias d"
+
+#: src/interpreter.js:105
+#, fuzzy
+msgid "get the news from"
+msgstr "leia as notícias d"
+
+#: src/interpreter.js:106
+#, fuzzy
+msgid "fetch the news from"
+msgstr "leia as notícias d"
+
 #: src/interpreter.js:107
-msgid "tell me the news from"
-msgstr "me fale as notícias d"
+#, fuzzy
+msgid "what do the reports say from"
+msgstr "quais as notícias d"
+
+#: src/interpreter.js:108
+#, fuzzy
+msgid "could you give me the news from"
+msgstr "me mostre as notícias d"
+
+#: src/interpreter.js:109
+#, fuzzy
+msgid "bring up the news from"
+msgstr "leia as notícias d"
 
 #: src/interpreter.js:110
+#, fuzzy
+msgid "look up the news from"
+msgstr "me mostre as notícias d"
+
+#: src/interpreter.js:111
+msgid "tell me what’s happening in"
+msgstr ""
+
+#: src/interpreter.js:112
+#, fuzzy
+msgid "let me know the news from"
+msgstr "me fale as notícias d"
+
+#: src/interpreter.js:113
+msgid "what’s the situation in"
+msgstr ""
+
+#: src/interpreter.js:116
 #, fuzzy
 msgid "read news"
 msgstr "ler notícias"
 
-#: src/interpreter.js:111
+#: src/interpreter.js:117
 #, fuzzy
 msgid "read the news"
 msgstr "leia as notícias"
 
-#: src/interpreter.js:112
+#: src/interpreter.js:118
 msgid "show me the news"
 msgstr "me mostre as notícias"
 
-#: src/interpreter.js:113
+#: src/interpreter.js:119
 msgid "show news"
 msgstr "mostrar notícias"
 
-#: src/interpreter.js:114
+#: src/interpreter.js:120
 msgid "what is the news"
 msgstr "quais as notícias"
 
-#: src/interpreter.js:115
+#: src/interpreter.js:121
 msgid "what are the news"
 msgstr "quais são as notícias"
 
-#: src/interpreter.js:116
+#: src/interpreter.js:122
 #, fuzzy
 msgid "tell me the news"
 msgstr "me fale as notícias"
 
-#: src/interpreter.js:136
+#: src/interpreter.js:142
 msgid "Starting reading..."
 msgstr "Iniciando a leitura..."
 
-#: src/interpreter.js:197
+#: src/interpreter.js:203
 #, fuzzy
 msgid "Read news of"
 msgstr "Lê notícias d"
 
-#: src/interpreter.js:206
+#: src/interpreter.js:212
 #, fuzzy
 msgid "Read news"
 msgstr "Lê notícias"
@@ -594,6 +626,35 @@ msgstr "Salvar"
 #: src/prefs.js:287
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
+
+#~ msgid "read news of"
+#~ msgstr "leia notícias de"
+
+#~ msgid "read the news of"
+#~ msgstr "leia as notícias de"
+
+#, fuzzy
+#~ msgid "show me the news of"
+#~ msgstr "mostre as notícias d"
+
+#~ msgid "show news of"
+#~ msgstr "mostre notícias d"
+
+#, fuzzy
+#~ msgid "what is the news of"
+#~ msgstr "quais as notícias d"
+
+#, fuzzy
+#~ msgid "what are the news of"
+#~ msgstr "quais são as notícias d"
+
+#, fuzzy
+#~ msgid "tell me the news of"
+#~ msgstr "fale as notícias d"
+
+#, fuzzy
+#~ msgid "show news from"
+#~ msgstr "mostre notícias d"
 
 #, fuzzy
 #~ msgid "The main news are"
