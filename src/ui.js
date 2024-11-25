@@ -28,11 +28,11 @@ export class UI {
     create() {
         // Initialize
         this._createApp();
+        this._addItems();
         this.setTheme(
             this.app.userSettings.TRANSPARENCY,
             this.app.userSettings.COLOR,
         );
-        this._addItems();
         this._itemsActions();
     }
 
