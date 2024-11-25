@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-25 14:38-0300\n"
+"POT-Creation-Date: 2024-11-25 15:08-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language fr-FR\n"
@@ -242,155 +242,155 @@ msgid "any news from3"
 msgstr ""
 
 #: src/interpreter.js:127
-msgid "get the news from"
+msgid "any news from4"
 msgstr ""
 
 #: src/interpreter.js:128
-msgid "get the news from2"
+msgid "any news from5"
 msgstr ""
 
 #: src/interpreter.js:129
-msgid "get the news from3"
+msgid "any news from6"
 msgstr ""
 
 #: src/interpreter.js:130
-msgid "fetch the news from"
+msgid "get the news from"
 msgstr ""
 
 #: src/interpreter.js:131
-msgid "fetch the news from2"
+msgid "get the news from2"
 msgstr ""
 
 #: src/interpreter.js:132
-msgid "fetch the news from3"
+msgid "get the news from3"
 msgstr ""
 
 #: src/interpreter.js:133
-msgid "what do the reports say from"
+msgid "fetch the news from"
 msgstr ""
 
 #: src/interpreter.js:134
-msgid "what do the reports say from2"
+msgid "fetch the news from2"
 msgstr ""
 
 #: src/interpreter.js:135
-msgid "what do the reports say from3"
+msgid "fetch the news from3"
 msgstr ""
 
 #: src/interpreter.js:136
-msgid "could you give me the news from"
+msgid "what do the reports say from"
 msgstr ""
 
 #: src/interpreter.js:137
-msgid "could you give me the news from2"
+msgid "what do the reports say from2"
 msgstr ""
 
 #: src/interpreter.js:138
-msgid "could you give me the news from3"
+msgid "what do the reports say from3"
 msgstr ""
 
 #: src/interpreter.js:139
-msgid "bring up the news from"
+msgid "could you give me the news from"
 msgstr ""
 
 #: src/interpreter.js:140
-msgid "bring up the news from2"
+msgid "could you give me the news from2"
 msgstr ""
 
 #: src/interpreter.js:141
-msgid "bring up the news from3"
+msgid "could you give me the news from3"
 msgstr ""
 
 #: src/interpreter.js:142
-msgid "look up the news from"
+msgid "bring up the news from"
 msgstr ""
 
 #: src/interpreter.js:143
-msgid "look up the news from2"
+msgid "bring up the news from2"
 msgstr ""
 
 #: src/interpreter.js:144
-msgid "look up the news from3"
+msgid "bring up the news from3"
 msgstr ""
 
 #: src/interpreter.js:145
-msgid "tell me what's happening in"
+msgid "look up the news from"
 msgstr ""
 
 #: src/interpreter.js:146
-msgid "tell me what's happening in2"
+msgid "look up the news from2"
 msgstr ""
 
 #: src/interpreter.js:147
-msgid "tell me what's happening in3"
+msgid "look up the news from3"
 msgstr ""
 
 #: src/interpreter.js:148
-msgid "let me know the news from"
+msgid "tell me what's happening in"
 msgstr ""
 
 #: src/interpreter.js:149
-msgid "let me know the news from2"
+msgid "tell me what's happening in2"
 msgstr ""
 
 #: src/interpreter.js:150
-msgid "let me know the news from3"
+msgid "tell me what's happening in3"
 msgstr ""
 
 #: src/interpreter.js:151
-msgid "what's the situation in"
+msgid "let me know the news from"
 msgstr ""
 
 #: src/interpreter.js:152
-msgid "what's the situation in2"
+msgid "let me know the news from2"
 msgstr ""
 
 #: src/interpreter.js:153
-msgid "what's the situation in3"
+msgid "let me know the news from3"
+msgstr ""
+
+#: src/interpreter.js:154
+msgid "what's the situation in"
+msgstr ""
+
+#: src/interpreter.js:155
+msgid "what's the situation in2"
 msgstr ""
 
 #: src/interpreter.js:156
-msgid "read the news"
-msgstr ""
-
-#: src/interpreter.js:157
-msgid "read news"
-msgstr ""
-
-#: src/interpreter.js:158
-msgid "can you read the news"
+msgid "what's the situation in3"
 msgstr ""
 
 #: src/interpreter.js:159
-msgid "please read the news"
+msgid "read the news"
 msgstr ""
 
 #: src/interpreter.js:160
-msgid "what’s in the news"
+msgid "read news"
 msgstr ""
 
 #: src/interpreter.js:161
-msgid "what is the news"
+msgid "can you read the news"
 msgstr ""
 
 #: src/interpreter.js:162
-msgid "any news"
+msgid "please read the news"
 msgstr ""
 
 #: src/interpreter.js:163
-msgid "get the news"
+msgid "what is the news"
 msgstr ""
 
 #: src/interpreter.js:164
-msgid "fetch the news"
+msgid "get the news"
 msgstr ""
 
 #: src/interpreter.js:165
-msgid "tell me the news"
+msgid "fetch the news"
 msgstr ""
 
 #: src/interpreter.js:166
-msgid "what do the reports say"
+msgid "tell me the news"
 msgstr ""
 
 #: src/interpreter.js:167
@@ -406,26 +406,22 @@ msgid "look up the news"
 msgstr ""
 
 #: src/interpreter.js:170
-msgid "what’s happening in the news"
-msgstr ""
-
-#: src/interpreter.js:171
 msgid "let me know the news"
 msgstr ""
 
-#: src/interpreter.js:172
+#: src/interpreter.js:171
 msgid "give me the news"
 msgstr ""
 
-#: src/interpreter.js:192
+#: src/interpreter.js:191
 msgid "Starting reading..."
 msgstr ""
 
-#: src/interpreter.js:253
+#: src/interpreter.js:252
 msgid "Read news of"
 msgstr ""
 
-#: src/interpreter.js:262
+#: src/interpreter.js:261
 msgid "Read news"
 msgstr ""
 
