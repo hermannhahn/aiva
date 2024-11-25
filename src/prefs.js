@@ -191,24 +191,22 @@ class AivaSettings {
         };
 
         const voiceOptions = loadJsonFile('voiceOptions.json');
-        log('Voice options: ' + voiceOptions);
 
         // Update voice
         const updateVoice = (language) => {
             voiceSelector.remove_all();
-            if (voiceOptions[language]) {
-                voiceOptions[language].forEach((option) => {
-                    voiceSelector.append(option.voice, option.label);
-                    if (option.voice === defaultVoice) {
-                        voiceSelector.set_active_id(option.voice);
-                    }
-                });
-            }
+            voiceOptions.forEach((voice) => {
+                if (voice.locale === language) {
+                    voiceSelector.append(voice.name, voice.name);
+                }
+            });
+            voiceSelector.set_active_id(defaultVoice);
         };
 
         // Update on change
         languageSelector.connect('changed', () => {
             const selectedLanguage = languageSelector.get_active_id();
+            this.schema.set_string('azure-speech-language', selectedLanguage);
             updateVoice(selectedLanguage);
         });
         updateVoice(defaultLanguage);
