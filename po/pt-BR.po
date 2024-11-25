@@ -369,12 +369,12 @@ msgstr "[ Copiado ]"
 #: src/utils/utils.js:276
 #, fuzzy
 msgid "Of course, one momment please."
-msgstr "Um momento, por favor..."
+msgstr "Com certeza, pesquisando..."
 
 #: src/utils/utils.js:281
 #, fuzzy
 msgid "Sure, one moment please."
-msgstr "Um momento, por favor..."
+msgstr "Claro, pesquisando..."
 
 #: src/utils/utils.js:293
 #, fuzzy
