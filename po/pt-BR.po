@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-25 12:30-0300\n"
+"POT-Creation-Date: 2024-11-25 13:04-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -376,6 +376,11 @@ msgstr "Um momento, por favor..."
 msgid "Sure, one moment please."
 msgstr "Um momento, por favor..."
 
+#: src/utils/utils.js:293
+#, fuzzy
+msgid "The main news are"
+msgstr "As notícias são"
+
 #: src/utils/utils.js:337
 msgid "I will show it on screen."
 msgstr "Eu vou mostrar na tela."
@@ -581,9 +586,6 @@ msgstr "Salvar"
 #: src/prefs.js:287
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
-
-#~ msgid "The news are"
-#~ msgstr "As notícias são"
 
 #~ msgid "The main news of the day are"
 #~ msgstr "As principais notícias do dia são"
