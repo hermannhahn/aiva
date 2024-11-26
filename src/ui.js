@@ -276,14 +276,23 @@ export class UI {
         if (theme === 'dark') {
             console.log('lTheme changed to: ' + theme);
             // change themeModeButton label
-            this.appearancemenu.themeModeButton.label = '🌙';
+            this.appearancemenu.themeModeButton.label = '☀️';
             this.app.extension.settings.set_string('theme-mode', 'light');
             this.app.userSettings.MODE = 'light';
+            // set text color
+            this.chat.inputChat.set_style(`color: rgb(125, 125, 125);`);
+            this.chat.responseChat.set_style(`color: rgb(125, 125, 125);`);
+            this.chat.inputChat.set_style(
+                `background-color: rgba(${color}, ${transparency});`,
+            );
+            this.chat.responseChat.set_style(
+                `background-color: rgba(${color}, ${transparency});`,
+            );
         }
         if (theme === 'light') {
             console.log('dTheme changed to: ' + theme);
             // change themeModeButton label
-            this.appearancemenu.themeModeButton.label = '☀️';
+            this.appearancemenu.themeModeButton.label = '🌙';
             this.app.extension.settings.set_string('theme-mode', 'dark');
             this.app.userSettings.MODE = 'dark';
             // set text color
