@@ -1,4 +1,3 @@
-import St from 'gi://St';
 import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
@@ -248,26 +247,6 @@ export class UI {
         this.chat.container.set_style(
             `background-color: rgba(${color}, ${transparency});`,
         );
-
-        // question
-        let inputChatTransparency = transparency;
-        if (inputChatTransparency <= 0.7) {
-            inputChatTransparency += 0.3;
-        }
-        this.chat.inputChat.set_style(`color: rgb(125, 125, 125);`);
-        this.chat.inputChat.set_style(
-            `background-color: rgba(${darkColors}, ${inputChatTransparency});`,
-        );
-
-        // response
-        let responseChatTransparency = transparency;
-        if (responseChatTransparency <= 0.8) {
-            responseChatTransparency += 0.2;
-        }
-        this.chat.responseChat.set_style(`color: rgb(125, 125, 125);`);
-        this.chat.responseChat.set_style(
-            `background-color: rgba(${color}, ${responseChatTransparency});`,
-        );
     }
 
     /**
@@ -311,33 +290,10 @@ export class UI {
             this.appearancemenu.themeModeButton.label = '🌙';
             theme = 'dark';
         }
-        this.toggleStylesheet(theme);
         this.setTheme(
             this.app.userSettings.TRANSPARENCY,
             this.app.userSettings.COLOR,
             theme,
         );
-    }
-
-    toggleStylesheet(stylesheet) {
-        // Remove a folha de estilo anterior
-        const oldStylesheet = St.lookup_widget('stylesheet');
-        if (oldStylesheet) {
-            oldStylesheet.destroy();
-        }
-
-        // Cria um novo elemento de estilo
-        const newStylesheet = new St.Bin();
-        newStylesheet.set_name('stylesheet');
-
-        // Define o caminho para a nova folha de estilo
-        if (stylesheet === 'dark') {
-            newStylesheet.append_css('stylesheet.css');
-        } else {
-            newStylesheet.append_css('stylesheet_light.css');
-        }
-
-        // Adiciona a nova folha de estilo à interface
-        global.stage.add_child(newStylesheet);
     }
 }
