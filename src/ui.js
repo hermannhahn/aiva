@@ -1,3 +1,4 @@
+import St from 'gi://St';
 import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
@@ -335,5 +336,27 @@ export class UI {
             this.app.userSettings.COLOR,
             theme,
         );
+    }
+
+    toggleStylesheet(stylesheet) {
+        // Remove a folha de estilo anterior
+        const oldStylesheet = St.lookup_widget('stylesheet');
+        if (oldStylesheet) {
+            oldStylesheet.destroy();
+        }
+
+        // Cria um novo elemento de estilo
+        const newStylesheet = new St.Bin();
+        newStylesheet.set_name('stylesheet');
+
+        // Define o caminho para a nova folha de estilo
+        if (stylesheet === 'dark') {
+            newStylesheet.append_css('stylesheet.css');
+        } else {
+            newStylesheet.append_css('stylesheet_light.css');
+        }
+
+        // Adiciona a nova folha de estilo à interface
+        global.stage.add_child(newStylesheet);
     }
 }
