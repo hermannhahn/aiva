@@ -68,7 +68,7 @@
     </key>
     <!--- theme-color -->
     <key name="theme-color" type="s">
-        <default>"0"</default>
+        <default>"25, 25, 25"</default>
         <summary>Color of theme</summary>
         <description>
            Set color of theme
@@ -76,7 +76,7 @@
     </key>
     <!--- theme-color -->
     <key name="theme-mode" type="s">
-        <default>"0"</default>
+        <default>"dark"</default>
         <summary>Mode of theme</summary>
         <description>
            Set light or dark mode
@@ -84,10 +84,18 @@
     </key>
     <!--- user-name -->
     <key name="user-name" type="s">
-        <default>"0"</default>
+        <default>"Me"</default>
         <summary>User nanem</summary>
         <description>
            Set user name
+        </description>
+    </key>
+    <!--- location -->
+    <key name="location" type="s">
+        <default>"Undefined"</default>
+        <summary>Location</summary>
+        <description>
+           Set user location
         </description>
     </key>
   </schema>
