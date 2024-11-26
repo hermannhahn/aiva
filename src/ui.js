@@ -1,5 +1,3 @@
-import Gio from 'gi://Gio';
-
 import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
@@ -251,12 +249,13 @@ export class UI {
         );
 
         // question
-        let inputTransparency = transparency;
-        if (inputTransparency <= 0.7) {
-            inputTransparency += 0.3;
+        let inputChatTransparency = transparency;
+        if (inputChatTransparency <= 0.7) {
+            inputChatTransparency += 0.3;
         }
+        this.chat.inputChat.set_style(`color: rgb(125, 125, 125);`);
         this.chat.inputChat.set_style(
-            `background-color: rgba(42, 42, 42, ${inputTransparency});`,
+            `background-color: rgba(${darkColors}, ${inputChatTransparency});`,
         );
 
         // response
@@ -264,77 +263,77 @@ export class UI {
         if (responseChatTransparency <= 0.8) {
             responseChatTransparency += 0.2;
         }
+        this.chat.responseChat.set_style(`color: rgb(125, 125, 125);`);
         this.chat.responseChat.set_style(
-            `background-color: rgba(42, 42, 42, ${responseChatTransparency});`,
+            `background-color: rgba(${color}, ${responseChatTransparency});`,
         );
     }
 
+    /**
+     * @description light theme
+     * @param {string} color
+     * @param {string} transparency
+     */
+    lightTheme(color, transparency) {
+        const lightColors = this.app.utils.lightColors(color);
+        // appearance menu
+        this.appearancemenu.menu.set_style(
+            `background-color: rgba(${color}, ${transparency});`,
+        );
+        this.appearancemenu.transparencyEntry.set_style(
+            `background-color: rgba(${lightColors}, ${transparency});`,
+        );
+
+        // main menu
+        this.mainmenu.container.set_style(
+            `background-color: rgba(${color}, ${transparency});`,
+        );
+        this.mainmenu.userEntry.set_style(
+            `background-color: rgba(${lightColors}, ${transparency});`,
+        );
+
+        // chat
+        this.chat.container.set_style(
+            `background-color: rgba(${color}, ${transparency});`,
+        );
+
+        // question
+        let inputChatTransparency = transparency;
+        if (inputChatTransparency <= 0.7) {
+            inputChatTransparency += 0.3;
+        }
+        this.chat.inputChat.set_style(`color: rgb(25, 25, 25);`);
+        this.chat.inputChat.set_style(
+            `background-color: rgba(${lightColors}, ${inputChatTransparency});`,
+        );
+
+        // response
+        let responseChatTransparency = transparency;
+        if (responseChatTransparency <= 0.8) {
+            responseChatTransparency += 0.2;
+        }
+        this.chat.responseChat.set_style(`color: rgb(25, 25, 25);`);
+        this.chat.responseChat.set_style(
+            `background-color: rgba(${color}, ${responseChatTransparency});`,
+        );
+    }
+
+    /**
+     * @description switch theme mode
+     */
     _switchThemeMode() {
-        // set text color considering theme
-        function getTheme(theme) {
-            if (
-                theme.toLowerCase().includes('dark') ||
-                theme.toLowerCase().includes('night')
-            ) {
-                return 'dark';
-            } else {
-                return 'light';
-            }
-        }
         let theme = this.app.userSettings.MODE;
-        console.log('Theme: ' + theme);
-        if (theme === null || theme === undefined) {
-            const settings = new Gio.Settings({
-                schema_id: 'org.gnome.desktop.interface',
-            });
-            theme = getTheme(settings.get_string('gtk-theme'));
-            if (theme === null || theme === undefined) {
-                theme = 'dark';
-            }
-            this.app.extension.settings.set_string('theme-mode', theme);
-            this.app.userSettings.MODE = theme;
+        if (theme === 'dark') {
+            this.appearancemenu.themeModeButton.label = '☀️';
+            theme = 'light';
+        } else {
+            this.appearancemenu.themeModeButton.label = '🌙';
+            theme = 'dark';
         }
-        console.log('Theme Updated: ' + theme);
-        this.setThemeMode(
+        this.setTheme(
             this.app.userSettings.TRANSPARENCY,
             this.app.userSettings.COLOR,
             theme,
         );
-    }
-
-    setThemeMode(theme, color, transparency) {
-        color = this.app.utils.lightColors(color);
-        if (theme === 'dark') {
-            console.log('lTheme changed to: ' + theme);
-            // change themeModeButton label
-            this.appearancemenu.themeModeButton.label = '☀️';
-            this.app.extension.settings.set_string('theme-mode', 'light');
-            this.app.userSettings.MODE = 'light';
-            // set text color
-            this.chat.inputChat.set_style(`color: rgb(125, 125, 125);`);
-            this.chat.responseChat.set_style(`color: rgb(125, 125, 125);`);
-            this.chat.inputChat.set_style(
-                `background-color: rgba(${color}, ${transparency});`,
-            );
-            this.chat.responseChat.set_style(
-                `background-color: rgba(${color}, ${transparency});`,
-            );
-        }
-        if (theme === 'light') {
-            console.log('dTheme changed to: ' + theme);
-            // change themeModeButton label
-            this.appearancemenu.themeModeButton.label = '🌙';
-            this.app.extension.settings.set_string('theme-mode', 'dark');
-            this.app.userSettings.MODE = 'dark';
-            // set text color
-            this.chat.inputChat.set_style(`color: rgb(25, 25, 25);`);
-            this.chat.responseChat.set_style(`color: rgb(25, 25, 25);`);
-            this.chat.inputChat.set_style(
-                `background-color: rgba(${color}, ${transparency});`,
-            );
-            this.chat.responseChat.set_style(
-                `background-color: rgba(${color}, ${transparency});`,
-            );
-        }
     }
 }
