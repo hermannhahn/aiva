@@ -127,6 +127,9 @@ export class UI {
                     if (transparency === '' || isNaN(parseInt(transparency))) {
                         return;
                     }
+                    this.appearancemenu.transparencyEntry.clutter_text.set_text(
+                        this.app.userSettings.TRANSPARENCY,
+                    );
                     this.setTheme(transparency, this.app.userSettings.COLOR);
                 },
             );
@@ -174,10 +177,12 @@ export class UI {
      * @description set theme
      * @param {string} [transparency=this.app.userSettings.TRANSPARENCY]
      * @param {string} [color=this.app.userSettings.COLOR]
+     * @param {string} [mode=this.app.userSettings.MODE]
      */
     setTheme(
         transparency = this.app.userSettings.TRANSPARENCY,
         color = this.app.userSettings.COLOR,
+        mode = this.app.userSettings.MODE,
     ) {
         // set default if empty, null or undefined
         if (
@@ -188,31 +193,64 @@ export class UI {
             transparency = '75';
         }
         if (color === '' || color === null || color === undefined) {
-            color = '54, 54, 54';
+            color = '25, 25, 25';
         }
-        // set transparencyEntry text
-        this.appearancemenu.transparencyEntry.clutter_text.set_text(
-            transparency,
-        );
+        if (mode === '' || mode === null || mode === undefined) {
+            mode = 'dark';
+        }
 
         // save
-        const tString = transparency.toString();
-        this.app.extension.settings.set_string('theme-transparency', tString);
-        this.app.userSettings.TRANSPARENCY = tString;
+        this.app.extension.settings.set_string(
+            'theme-transparency',
+            transparency,
+        );
+        this.app.userSettings.TRANSPARENCY = transparency;
         this.app.extension.settings.set_string('theme-color', color);
         this.app.userSettings.COLOR = color;
-        // set theme
+        this.app.extension.settings.set_string('theme-mode', mode);
+        this.app.userSettings.MODE = mode;
+
+        // invert transparency value to css
         transparency = 100 - transparency;
         transparency = parseInt(transparency) / 100;
+
+        switch (mode) {
+            case 'dark':
+                color = this.darkTheme(color, transparency);
+                break;
+            case 'light':
+                color = this.lightTheme(color, transparency);
+                break;
+            default:
+                break;
+        }
+    }
+
+    darkTheme(color, transparency) {
+        const darkColors = this.app.utils.darkColors(color);
+
+        // appearance menu
         this.appearancemenu.menu.set_style(
             `background-color: rgba(${color}, ${transparency});`,
         );
+        this.appearancemenu.transparencyEntry.set_style(
+            `background-color: rgba(${darkColors}, ${transparency});`,
+        );
+
+        // main menu
         this.mainmenu.container.set_style(
             `background-color: rgba(${color}, ${transparency});`,
         );
+        this.mainmenu.userEntry.set_style(
+            `background-color: rgba(${darkColors}, ${transparency});`,
+        );
+
+        // chat
         this.chat.container.set_style(
             `background-color: rgba(${color}, ${transparency});`,
         );
+
+        // question
         let inputTransparency = transparency;
         if (inputTransparency <= 0.7) {
             inputTransparency += 0.3;
@@ -220,21 +258,14 @@ export class UI {
         this.chat.inputChat.set_style(
             `background-color: rgba(42, 42, 42, ${inputTransparency});`,
         );
+
+        // response
         let responseChatTransparency = transparency;
         if (responseChatTransparency <= 0.8) {
             responseChatTransparency += 0.2;
         }
         this.chat.responseChat.set_style(
             `background-color: rgba(42, 42, 42, ${responseChatTransparency});`,
-        );
-
-        // make color more darkness
-        const darkColors = this.app.utils.darkColors(color);
-        this.appearancemenu.transparencyEntry.set_style(
-            `background-color: rgba(${darkColors}, ${transparency});`,
-        );
-        this.mainmenu.userEntry.set_style(
-            `background-color: rgba(${darkColors}, ${transparency});`,
         );
     }
 
