@@ -297,26 +297,6 @@ export class UI {
         this.chat.container.set_style(
             `background-color: rgba(${color}, ${transparency});`,
         );
-
-        // question
-        let inputChatTransparency = transparency;
-        if (inputChatTransparency <= 0.7) {
-            inputChatTransparency += 0.3;
-        }
-        this.chat.inputChat.set_style(`color: rgb(25, 25, 25);`);
-        this.chat.inputChat.set_style(
-            `background-color: rgba(${lightColors}, ${inputChatTransparency});`,
-        );
-
-        // response
-        let responseChatTransparency = transparency;
-        if (responseChatTransparency <= 0.8) {
-            responseChatTransparency += 0.2;
-        }
-        this.chat.responseChat.set_style(`color: rgb(25, 25, 25);`);
-        this.chat.responseChat.set_style(
-            `background-color: rgba(${color}, ${responseChatTransparency});`,
-        );
     }
 
     /**
@@ -331,6 +311,7 @@ export class UI {
             this.appearancemenu.themeModeButton.label = '🌙';
             theme = 'dark';
         }
+        this.toggleStylesheet(theme);
         this.setTheme(
             this.app.userSettings.TRANSPARENCY,
             this.app.userSettings.COLOR,
