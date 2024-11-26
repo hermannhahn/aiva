@@ -1,17 +1,33 @@
 .app {
     background-color: transparent;
 }
+.app::selection {
+    color: black;
+    background-color: rgb(193, 193, 193);
+}
 .app-box {
     background-color: transparent;
 }
+.app-box::selection {
+    color: black;
+    background-color: rgb(193, 193, 193);
+}
 .tray {
     background-color: transparent;
+}
+.tray::selection {
+    color: black;
+    background-color: rgb(193, 193, 193);
 }
 .tray-icon {
     background-image: url('assets/icon_tray.png');
     background-size: 24px;
     width: 24px;
     height: 24px;
+}
+.tray-icon::selection {
+    color: black;
+    background-color: rgb(193, 193, 193);
 }
 .main-bar {
     padding: 10px;
@@ -138,7 +154,8 @@
     border-radius: 10px;
 }
 .chat-scroll::selection {
-    background-color: rgb(25, 25, 25);
+    color: black;
+    background-color: rgb(193, 193, 193);
 }
 .chat-section {
     overflow-y: auto;
@@ -147,11 +164,12 @@
     word-wrap: break-word;
 }
 .chat-section::selection {
-    background-color: rgb(25, 25, 25);
+    color: black;
+    background-color: rgb(193, 193, 193);
 }
 .response-chat {
     color: rgb(243, 232, 212);
-    background-color: rgb(25, 25, 25);
+    background-color: rgba(25, 25, 25, 0.3);
     border-radius: 10px;
     padding-left: 10px;
     padding-right: 10px;
@@ -169,11 +187,12 @@
     background-color: rgb(54, 54, 54);
 }
 .response-chat::selection {
-    background-color: rgb(25, 25, 25);
+    color: black;
+    background-color: rgb(193, 193, 193);
 }
 .input-chat {
     color: rgb(243, 232, 212);
-    background-color: rgb(25, 25, 25);
+    background-color: rgba(25, 25, 25, 0.3);
     border-radius: 10px;
     padding-left: 10px;
     padding-right: 10px;
@@ -190,7 +209,8 @@
     background-color: rgb(54, 54, 54);
 }
 .input-chat::selection {
-    background-color: rgb(25, 25, 25);
+    color: black;
+    background-color: rgb(193, 193, 193);
 }
 .copy-icon {
     background-image: url('assets/icon_copy.png');
