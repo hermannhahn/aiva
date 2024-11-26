@@ -179,7 +179,6 @@ export class UI {
     setTheme(
         transparency = this.app.userSettings.TRANSPARENCY,
         color = this.app.userSettings.COLOR,
-        theme = this.app.userSettings.MODE,
     ) {
         // set default if empty, null or undefined
         if (
@@ -238,7 +237,6 @@ export class UI {
         this.mainmenu.userEntry.set_style(
             `background-color: rgba(${darkColors}, ${transparency});`,
         );
-        this.setThemeMode(theme, color, inputTransparency);
     }
 
     _switchThemeMode() {
@@ -267,7 +265,7 @@ export class UI {
             this.app.userSettings.MODE = theme;
         }
         console.log('Theme Updated: ' + theme);
-        this.setTheme(
+        this.setThemeMode(
             this.app.userSettings.TRANSPARENCY,
             this.app.userSettings.COLOR,
             theme,
@@ -276,19 +274,19 @@ export class UI {
 
     setThemeMode(theme, color, transparency) {
         color = this.app.utils.lightColors(color);
-        if (theme === 'light') {
+        if (theme === 'dark') {
             console.log('lTheme changed to: ' + theme);
             // change themeModeButton label
             this.appearancemenu.themeModeButton.label = '🌙';
-            this.app.extension.settings.set_string('theme-mode', 'dark');
-            this.app.userSettings.MODE = 'dark';
+            this.app.extension.settings.set_string('theme-mode', 'light');
+            this.app.userSettings.MODE = 'light';
         }
-        if (theme === 'dark') {
+        if (theme === 'light') {
             console.log('dTheme changed to: ' + theme);
             // change themeModeButton label
             this.appearancemenu.themeModeButton.label = '☀️';
-            this.app.extension.settings.set_string('theme-mode', 'light');
-            this.app.userSettings.MODE = 'light';
+            this.app.extension.settings.set_string('theme-mode', 'dark');
+            this.app.userSettings.MODE = 'dark';
             // set text color
             this.chat.inputChat.set_style(`color: rgb(25, 25, 25);`);
             this.chat.responseChat.set_style(`color: rgb(25, 25, 25);`);
