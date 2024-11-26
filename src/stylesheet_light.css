@@ -1,0 +1,383 @@
+.app {
+    background-color: transparent;
+}
+.app-box {
+    background-color: transparent;
+}
+.tray {
+    background-color: transparent;
+}
+.tray-icon {
+    background-image: url('assets/icon_tray.png');
+    background-size: 24px;
+    width: 24px;
+    height: 24px;
+}
+.main-bar {
+    padding: 10px;
+    border-radius: 10px;
+}
+.appearence-bar {
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+.character-icon {
+    font-size: 24px;
+    color: black;
+    text-align: center;
+    width: 40px;
+    border-radius: 10px;
+}
+.character-icon:hover {
+    background-color: transparent;
+}
+.character-icon:active {
+    font-size: 12px;
+}
+.user-entry {
+    width: 250px;
+    height: 30px !important;
+    border-radius: 5px;
+}
+.user-entry:hover {
+    background-color: rgb(54, 54, 54);
+}
+.user-entry:active {
+    background-color: rgb(54, 54, 54);
+}
+.enter-icon {
+    background-image: url('assets/icon_enter.png');
+    background-size: 32px;
+    text-align: center;
+    width: 40px;
+}
+.enter-icon:hover {
+    background-color: rgb(54, 54, 54);
+    border-radius: 5px;
+}
+.enter-icon:active {
+    background-size: 30px;
+}
+.mic-icon {
+    background-image: url('assets/icon_mic.png');
+    background-size: 32px;
+    text-align: center;
+    width: 40px;
+}
+.mic-icon:hover {
+    background-color: rgb(54, 54, 54);
+    border-radius: 5px;
+}
+.mic-icon:checked {
+    background-image: url('assets/icon_mic_rec.png');
+}
+.mic-icon:active {
+    background-size: 30px;
+}
+.trash-icon {
+    /* background-image: url('assets/icon_trash.png');
+    background-size: 20px; */
+    font-size: 20px;
+    text-align: center;
+    width: 40px;
+}
+.trash-icon:hover {
+    background-color: rgb(54, 54, 54);
+    border-radius: 5px;
+}
+.trash-icon:active {
+    font-size: 18px;
+}
+.settings-icon {
+    /* background-image: url('assets/icon_settings.png');
+    background-size: 20px; */
+    font-size: 20px;
+    text-align: center;
+    width: 40px;
+    margin-right: 5px;
+}
+.settings-icon:hover {
+    background-color: rgb(54, 54, 54);
+    border-radius: 5px;
+}
+.settings-icon:active {
+    font-size: 18px;
+}
+.appearance-icon {
+    /* background-image: url('assets/icon_settings.png');
+    background-size: 20px; */
+    font-size: 20px;
+    text-align: center;
+    width: 40px;
+    margin-right: 5px;
+}
+.appearance-icon:hover {
+    background-color: rgb(54, 54, 54);
+    border-radius: 5px;
+}
+.appearance-icon:active {
+    font-size: 18px;
+}
+.appearance-menu {
+    border-radius: 10px;
+    padding: 10px;
+    text-align: right;
+}
+.appearance-container {
+    background-color: transparent;
+}
+
+.chat-scroll {
+    background-color: rgba(25, 25, 25, 0);
+    max-width: 800px;
+    max-height: 550px;
+    overflow: auto;
+    margin-top: 5px;
+    padding-top: 10px;
+    border-radius: 10px;
+}
+.chat-scroll::selection {
+    background-color: rgb(25, 25, 25);
+}
+.chat-section {
+    overflow-y: auto;
+    color: rgba(25, 25, 25, 0);
+    text-wrap: wrap;
+    word-wrap: break-word;
+}
+.chat-section::selection {
+    background-color: rgb(25, 25, 25);
+}
+.response-chat {
+    color: rgb(25, 25, 25);
+    background-color: rgb(243, 232, 212);
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    text-wrap: wrap;
+    text-align: justify;
+    word-wrap: break-word;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    /* overflow-y: auto; */
+}
+.response-chat:hover {
+    background-color: rgb(150, 150, 150);
+}
+.response-chat::selection {
+    background-color: rgb(25, 25, 25);
+}
+.input-chat {
+    color: rgb(25, 25, 25);
+    background-color: rgb(243, 232, 212);
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    text-wrap: wrap;
+    text-align: justify;
+    word-wrap: break-word;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.input-chat:hover {
+    background-color: rgb(150, 150, 150);
+}
+.input-chat::selection {
+    background-color: rgb(25, 25, 25);
+}
+.copy-icon {
+    background-image: url('assets/icon_copy.png');
+    background-size: 26px;
+    width: 24px;
+    height: 24px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.copy-icon:hover {
+    background-image: url('assets/icon_copy.png');
+}
+.copy-icon:active {
+    background-image: url('assets/icon_check.png');
+}
+.copy-icon-checked {
+    background-image: url('assets/icon_check.png');
+    background-size: 26px;
+    width: 24px;
+    height: 24px;
+}
+.copy-icon-checked:hover {
+    background-image: url('assets/icon_check.png');
+}
+.copy-icon-checked:active {
+    background-image: url('assets/icon_check.png');
+}
+.inputLabel {
+    color: black;
+    font-weight: bold;
+    padding-right: 10px;
+    padding-bottom: 30px;
+}
+.inputEntry {
+    color: black;
+    padding-right: 10px;
+    padding-bottom: 30px;
+}
+.howToButton {
+    color: black;
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+.saveButton {
+    color: black;
+    font-weight: bold;
+    padding: 30px;
+}
+.statusLabel {
+    color: black;
+    font-weight: bold;
+    padding: 10px;
+}
+.switch {
+    width: 60px;
+    height: 34px;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.selected-text {
+    color: rgb(221, 13, 13);
+    font-weight: bold;
+}
+.link-button {
+    text-decoration: none;
+    color: grey;
+}
+.code {
+    color: blue;
+}
+.label-button {
+    background-color: transparent;
+    color: blanchedalmond;
+    font-weight: bold;
+}
+.label-button:hover {
+    background-color: transparent;
+}
+.small-label {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 10px;
+}
+.label {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+}
+.settingsTitle {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+}
+.invisibl-area {
+    width: 500px;
+    height: 40px;
+    background-color: transparent;
+    padding-bottom: 10px;
+    display: flex;
+}
+.theme-mode-label {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    font-weight: bold;
+    height: 20px;
+    margin-top: 24px;
+    margin-left: 15px;
+    margin-right: 0px;
+}
+.theme-mode-icon {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    text-align: center;
+    width: 40px;
+    height: 20px;
+    margin-right: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.theme-mode-icon:hover {
+    background-color: rgb(54, 54, 54);
+}
+.theme-mode-icon:active {
+    font-size: 14px;
+}
+.transparency-label {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    font-weight: bold;
+    height: 20px;
+    margin-top: 24px;
+    margin-left: 15px;
+    margin-right: 0px;
+}
+.transparency-entry {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.transparency-ok-icon {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(45, 45, 45);
+    font-size: 12px;
+    width: 30px;
+    height: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 5px;
+    border-radius: 5px;
+}
+.transparency-ok-icon:hover {
+    background-color: rgb(54, 54, 54);
+}
+.transparency-ok-icon:active {
+    font-size: 10px;
+}
+.colors-label {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    font-weight: bold;
+    height: 20px;
+    margin-top: 24px;
+    margin-left: 25px;
+    margin-right: 0px;
+}
+.colors-icon {
+    /* background-image: url('assets/icon_settings.png');
+    background-size: 20px; */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    text-align: center;
+    width: 40px;
+    height: 20px;
+    margin-right: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.colors-icon:hover {
+    background-color: rgb(54, 54, 54);
+}
+.colors-icon:active {
+    font-size: 14px;
+}
