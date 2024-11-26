@@ -61,6 +61,7 @@ const Aiva = GObject.registerClass(
             const {settings} = this.extension;
             this._shortcutBinding = null;
             this.interface = this.menu;
+
             // extension directory
             const EXT_DIR = GLib.build_filenamev([
                 GLib.get_home_dir(),
@@ -70,12 +71,35 @@ const Aiva = GObject.registerClass(
                 'extensions',
                 this.extension.uuid,
             ]);
-            // user settings
+
+            // user name
             let username = settings.get_string('user-name');
             if (username === '') {
                 username = GLib.get_real_name();
                 settings.set_string('user-name', username);
             }
+
+            // theme mode
+            const gnomeSettings = new Gio.Settings({
+                schema_id: 'org.gnome.desktop.interface',
+            });
+            function getThemeMode(theme) {
+                if (
+                    theme.toLowerCase().includes('dark') ||
+                    theme.toLowerCase().includes('night')
+                ) {
+                    return 'dark';
+                } else {
+                    return 'light';
+                }
+            }
+            let mode = settings.get_string('theme-mode');
+            if (mode === '' || mode === null || mode === undefined) {
+                mode = getThemeMode(gnomeSettings.get_string('gtk-theme'));
+                settings.set_string('theme-mode', mode);
+            }
+
+            // settings
             this.userSettings = {
                 ASSIST_NAME: settings.get_string('assist-name'),
                 AZURE_SPEECH_KEY: settings.get_string('azure-speech-key'),
