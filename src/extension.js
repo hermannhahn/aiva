@@ -99,6 +99,17 @@ const Aiva = GObject.registerClass(
                 settings.set_string('theme-mode', mode);
             }
 
+            // location
+            let location = settings.get_string('location');
+            if (
+                location === '' ||
+                location === null ||
+                location === undefined
+            ) {
+                location = this._getLocation();
+                settings.set_string('location', location);
+            }
+
             // settings
             this.userSettings = {
                 ASSIST_NAME: settings.get_string('assist-name'),
@@ -110,7 +121,7 @@ const Aiva = GObject.registerClass(
                 AZURE_SPEECH_VOICE: settings.get_string('azure-speech-voice'),
                 GEMINI_API_KEY: settings.get_string('gemini-api-key'),
                 HISTORY_FILE: GLib.build_filenamev([EXT_DIR, 'history.json']),
-                LOCATION: this._getLocation(),
+                LOCATION: settings.get_string('location'),
                 RECURSIVE_TALK: settings.get_boolean('log-history'),
                 TRANSPARENCY: settings.get_string('theme-transparency'),
                 COLOR: settings.get_string('theme-color'),
