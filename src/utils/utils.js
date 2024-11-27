@@ -674,6 +674,13 @@ export class Utils {
         return contents;
     };
 
+    /**
+     * @description color adjust
+     * @param {string} rgbString - rgb string
+     * @param {string} mode - darken or lighten
+     * @param {int} factor - less effect if less then 1, more effect if more then 1
+     * @param {int} alpha - alpha value
+     */
     adjustColor(rgbString, mode = 'darken', factor = 0.8, alpha = 1.0) {
         // Split the RGB string into its component parts.
         const [r, g, b] = rgbString
