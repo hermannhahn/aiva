@@ -704,9 +704,9 @@ export class Utils {
         const bInt = parseInt(b);
 
         // Adjust the brightness of each component.
-        const rAdjusted = rInt > 0 ? rInt + 100 : rInt;
-        const gAdjusted = gInt > 0 ? gInt + 100 : gInt;
-        const bAdjusted = bInt > 0 ? bInt + 100 : bInt;
+        const rAdjusted = rInt < 255 ? rInt + 200 : rInt;
+        const gAdjusted = gInt < 255 ? gInt + 200 : gInt;
+        const bAdjusted = bInt < 255 ? bInt + 200 : bInt;
 
         // Convert the adjusted component parts back to a string.
         const adjustedRgbString = `${rAdjusted},${gAdjusted},${bAdjusted}`;
