@@ -704,7 +704,7 @@ export class Utils {
         );
 
         // Combine the adjusted components into an RGBA string.
-        const rgbaString = `rgba(${rAdjusted}, ${gAdjusted}, ${bAdjusted}, ${alpha})`;
+        const rgbaString = `${rAdjusted}, ${gAdjusted}, ${bAdjusted}, ${alpha}`;
 
         return rgbaString;
     }
