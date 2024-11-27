@@ -111,11 +111,6 @@ export class UI {
             this.appearancemenu.container.add_child(this.appearancemenu.menu);
             this.appearancemenu.isOpen = true;
 
-            // theme mode switch
-            this.appearancemenu.themeModeButton.connect('clicked', (_self) => {
-                this._switchThemeMode();
-            });
-
             // transparency ok button
             this.appearancemenu.transparencyButton.connect(
                 'clicked',
@@ -126,7 +121,7 @@ export class UI {
                         return;
                     }
                     this.appearancemenu.transparencyEntry.clutter_text.set_text(
-                        this.app.userSettings.TRANSPARENCY,
+                        transparency,
                     );
                     this.setTheme(transparency, this.app.userSettings.COLOR);
                 },
@@ -209,6 +204,7 @@ export class UI {
     }
 
     darkTheme(color, transparency) {
+        const lightnedColor = this.app.utils.lightnedColor(color);
         // appearance menu
         this.appearancemenu.menu.set_style(
             `background-color: rgba(${color}, ${transparency});`,
@@ -217,7 +213,7 @@ export class UI {
             `color: rgb(200, 200, 200);`,
         );
         this.appearancemenu.transparencyEntry.set_style(
-            `background-color: rgba(45, 45, 45, ${transparency});`,
+            `background-color: rgba(${lightnedColor}, ${transparency});`,
         );
 
         // main menu
@@ -226,7 +222,7 @@ export class UI {
         );
         this.mainmenu.userEntry.set_style(`color: rgb(200, 200, 200);`);
         this.mainmenu.userEntry.set_style(
-            `background-color: rgba(45, 45, 45, ${transparency});`,
+            `background-color: rgba(${lightnedColor}, ${transparency});`,
         );
 
         // chat
