@@ -225,8 +225,6 @@ export class UI {
     }
 
     darkTheme(color, transparency) {
-        const darkColors = this.app.utils.darkColors(color);
-
         // appearance menu
         this.appearancemenu.menu.set_style(
             `background-color: rgba(${color}, ${transparency});`,
@@ -235,7 +233,7 @@ export class UI {
             `color: rgb(200, 200, 200);`,
         );
         this.appearancemenu.transparencyEntry.set_style(
-            `background-color: rgba(${darkColors}, ${transparency});`,
+            `background-color: rgba(45, 45, 45, ${transparency});`,
         );
 
         // main menu
@@ -244,7 +242,7 @@ export class UI {
         );
         this.mainmenu.userEntry.set_style(`color: rgb(200, 200, 200);`);
         this.mainmenu.userEntry.set_style(
-            `background-color: rgba(${darkColors}, ${transparency});`,
+            `background-color: rgba(45, 45, 45, ${transparency});`,
         );
 
         // chat
@@ -260,7 +258,6 @@ export class UI {
      * @param {string} transparency
      */
     lightTheme(color, transparency) {
-        const lightColors = this.app.utils.lightColors(color);
         // appearance menu
         this.appearancemenu.menu.set_style(
             `background-color: rgba(${color}, ${transparency});`,
@@ -269,7 +266,7 @@ export class UI {
             `color: rgb(25, 25, 25);`,
         );
         this.appearancemenu.transparencyEntry.set_style(
-            `background-color: rgba(${lightColors}, ${transparency});`,
+            `background-color: rgba(225, 225, 225, ${transparency});`,
         );
 
         // main menu
@@ -278,7 +275,7 @@ export class UI {
         );
         this.mainmenu.userEntry.set_style(`color: rgb(25, 25, 25);`);
         this.mainmenu.userEntry.set_style(
-            `background-color: rgba(${lightColors}, ${transparency});`,
+            `background-color: rgba(225, 225, 225, ${transparency});`,
         );
 
         // chat
