@@ -64,10 +64,8 @@ export class Chat {
      * @param {boolean} [speech=true] - speech text
      */
     addQuestion(text, speech = false) {
-        let color = this.app.utils.darkColors(this.app.userSettings.COLOR);
-        let tcolor = '225, 225, 225';
-
-        const inputChat = this.app.ui.chat.question();
+        let color = this.app.utils.darkenedColor(this.app.userSettings.COLOR);
+        const inputChat = this.app.ui.chat.question(color);
         this.app.ui.chat.box.addMenuItem(inputChat);
         text = this.app.utils.questionFormat(text);
         inputChat.label.clutter_text.set_markup(
@@ -108,21 +106,8 @@ export class Chat {
      * @param {boolean} [speech=true] - speech text
      */
     addResponse(text, speech = false) {
-        let color = this.app.userSettings.COLOR;
-        let mode = this.app.userSettings.MODE;
-        let tcolor = '25, 25, 25';
-        if (mode === 'light') {
-            color = this.app.utils.lightColors(color);
-        }
-        if (mode === 'dark') {
-            color = this.app.utils.darkColors(color);
-            tcolor = '225, 225, 225';
-        }
-        let responseChat = this.app.ui.chat.response(
-            this.app.userSettings.TRANSPARENCY,
-            color,
-            tcolor,
-        );
+        let color = this.app.utils.darkenedColor(this.app.userSettings.COLOR);
+        let responseChat = this.app.ui.chat.response(color);
         let copyButton = this.app.ui.chat.copy(
             this.app.userSettings.TRANSPARENCY,
             color,
