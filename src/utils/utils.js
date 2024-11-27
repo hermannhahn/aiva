@@ -678,33 +678,39 @@ export class Utils {
      * @description color adjust
      * @param {string} rgbString - rgb string
      * @param {string} mode - darken or lighten
-     * @param {int} factor - less effect if less then 1, more effect if more then 1
+     * @param {string} factor
      */
-    adjustColor(rgbString, mode = 'darken', factor = 0.8) {
+    adjustColors(rgbString, mode = 'darken', factor = '10') {
         // Split the RGB string into its component parts.
-        const [r, g, b] = rgbString
-            .split(',')
-            .map((v) => parseInt(v.trim(), 10));
+        const [r, g, b] = rgbString.split(',');
 
-        // Adjust the brightness based on the mode.
-        let adjustFactor = mode === 'lighten' ? 1 / factor : factor;
+        // Convert the component parts to integers.
+        const rInt = parseInt(r);
+        const gInt = parseInt(g);
+        const bInt = parseInt(b);
+        const factorInt = parseInt(factor);
 
-        const rAdjusted = Math.min(
-            255,
-            Math.max(0, Math.floor(r * adjustFactor)),
-        );
-        const gAdjusted = Math.min(
-            255,
-            Math.max(0, Math.floor(g * adjustFactor)),
-        );
-        const bAdjusted = Math.min(
-            255,
-            Math.max(0, Math.floor(b * adjustFactor)),
-        );
+        // Adjust the brightness of each component.
+        let rAdjusted, gAdjusted, bAdjusted;
 
-        // Combine the adjusted components into an RGBA string.
-        const rgbaString = `${rAdjusted}, ${gAdjusted}, ${bAdjusted}`;
+        switch (mode) {
+            case 'darken':
+                rAdjusted = rInt > 0 ? rInt - factorInt : rInt;
+                gAdjusted = gInt > 0 ? gInt - factorInt : gInt;
+                bAdjusted = bInt > 0 ? bInt - factorInt : bInt;
+                break;
+            case 'lighten':
+                rAdjusted = rInt < 255 ? rInt + factorInt : rInt;
+                gAdjusted = gInt < 255 ? gInt + factorInt : gInt;
+                bAdjusted = bInt < 255 ? bInt + factorInt : bInt;
+                break;
+            default:
+                break;
+        }
 
-        return rgbaString;
+        // Convert the adjusted component parts back to a string.
+        const adjustedRgbString = `${rAdjusted},${gAdjusted},${bAdjusted}`;
+
+        return adjustedRgbString;
     }
 }
