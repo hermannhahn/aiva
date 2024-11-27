@@ -674,19 +674,27 @@ export class Utils {
         return contents;
     };
 
-    modifyColor(rgbString, factor = 1) {
+    adjustColor(rgbString, mode = 'darken', factor = 0.8, alpha = 1.0) {
         // Split the RGB string into its component parts.
         const [r, g, b] = rgbString
             .split(',')
             .map((v) => parseInt(v.trim(), 10));
 
-        // Decrement the brightness of each component to darken the color.
-        const rAdjusted = Math.max(0, Math.floor(r * factor));
-        const gAdjusted = Math.max(0, Math.floor(g * factor));
-        const bAdjusted = Math.max(0, Math.floor(b * factor));
+        // Adjust the brightness based on the mode.
+        let adjustFactor = mode === 'lighten' ? 1 / factor : factor;
 
-        // Add opacity to make it more transparent (0.0 to 1.0, menor = mais opaco).
-        const alpha = 0.7; // 70% de opacidade
+        const rAdjusted = Math.min(
+            255,
+            Math.max(0, Math.floor(r * adjustFactor)),
+        );
+        const gAdjusted = Math.min(
+            255,
+            Math.max(0, Math.floor(g * adjustFactor)),
+        );
+        const bAdjusted = Math.min(
+            255,
+            Math.max(0, Math.floor(b * adjustFactor)),
+        );
 
         // Combine the adjusted components into an RGBA string.
         const rgbaString = `rgba(${rAdjusted}, ${gAdjusted}, ${bAdjusted}, ${alpha})`;
