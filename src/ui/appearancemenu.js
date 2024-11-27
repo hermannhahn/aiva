@@ -32,6 +32,8 @@ export class AppearanceMenu {
         this.transparencyEntry = new St.Entry({
             style_class: 'transparency-entry',
             can_focus: true,
+            reactive: true,
+            hover: true,
         });
 
         // Create transparency ok button
