@@ -68,10 +68,10 @@ export class Chat {
         let mode = this.app.userSettings.MODE;
         let tcolor = '25, 25, 25';
         if (mode === 'light') {
-            color = this.app.utils.darkColors(color);
+            color = this.app.utils.lightColors(color);
         }
         if (mode === 'dark') {
-            color = this.app.utils.lightColors(color);
+            color = this.app.utils.darkColors(color);
             tcolor = '225, 225, 225';
         }
         const inputChat = this.app.ui.chat.question(
@@ -123,10 +123,10 @@ export class Chat {
         let mode = this.app.userSettings.MODE;
         let tcolor = '25, 25, 25';
         if (mode === 'light') {
-            color = this.app.utils.darkColors(color);
+            color = this.app.utils.lightColors(color);
         }
         if (mode === 'dark') {
-            color = this.app.utils.lightColors(color);
+            color = this.app.utils.darkColors(color);
             tcolor = '225, 225, 225';
         }
         let responseChat = this.app.ui.chat.response(
