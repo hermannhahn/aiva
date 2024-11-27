@@ -1,33 +1,17 @@
 .app {
     background-color: transparent;
 }
-.app::selection {
-    color: black;
-    background-color: rgb(193, 193, 193);
-}
 .app-box {
     background-color: transparent;
 }
-.app-box::selection {
-    color: black;
-    background-color: rgb(193, 193, 193);
-}
 .tray {
     background-color: transparent;
-}
-.tray::selection {
-    color: black;
-    background-color: rgb(193, 193, 193);
 }
 .tray-icon {
     background-image: url('assets/icon_tray.png');
     background-size: 24px;
     width: 24px;
     height: 24px;
-}
-.tray-icon::selection {
-    color: black;
-    background-color: rgb(193, 193, 193);
 }
 .main-bar {
     padding: 10px;
@@ -55,12 +39,10 @@
     width: 250px;
     height: 30px !important;
     border-radius: 5px;
-}
-.user-entry:hover {
     background-color: rgba(54, 54, 54, 0.3);
 }
-.user-entry:active {
-    background-color: rgba(54, 54, 54, 0);
+.user-entry:hover {
+    background-color: rgba(54, 54, 54, 0.7);
 }
 .enter-icon {
     background-image: url('assets/icon_enter.png');
@@ -69,7 +51,7 @@
     width: 40px;
 }
 .enter-icon:hover {
-    background-color: rgb(54, 54, 54);
+    background-color: rgba(54, 54, 54, 0.7);
     border-radius: 5px;
 }
 .enter-icon:active {
@@ -82,7 +64,7 @@
     width: 40px;
 }
 .mic-icon:hover {
-    background-color: rgb(54, 54, 54);
+    background-color: rgba(54, 54, 54, 0.7);
     border-radius: 5px;
 }
 .mic-icon:checked {
@@ -99,7 +81,7 @@
     width: 40px;
 }
 .trash-icon:hover {
-    background-color: rgb(54, 54, 54);
+    background-color: rgba(54, 54, 54, 0.7);
     border-radius: 5px;
 }
 .trash-icon:active {
@@ -114,7 +96,7 @@
     margin-right: 5px;
 }
 .settings-icon:hover {
-    background-color: rgb(54, 54, 54);
+    background-color: rgba(54, 54, 54, 0.7);
     border-radius: 5px;
 }
 .settings-icon:active {
@@ -129,7 +111,7 @@
     margin-right: 5px;
 }
 .appearance-icon:hover {
-    background-color: rgb(54, 54, 54);
+    background-color: rgba(54, 54, 54, 0.7);
     border-radius: 5px;
 }
 .appearance-icon:active {
@@ -145,7 +127,6 @@
 }
 
 .chat-scroll {
-    background-color: rgba(25, 25, 25, 0);
     max-width: 800px;
     max-height: 550px;
     overflow: auto;
@@ -154,23 +135,14 @@
     padding-bottom: 10px;
     border-radius: 10px;
 }
-.chat-scroll::selection {
-    color: black;
-    background-color: rgb(193, 193, 193);
-}
 .chat-section {
     overflow-y: auto;
-    color: rgba(25, 25, 25, 0);
     text-wrap: wrap;
     word-wrap: break-word;
 }
-.chat-section::selection {
-    color: black;
-    background-color: rgb(193, 193, 193);
-}
 .response-chat {
     color: rgb(243, 232, 212);
-    background-color: rgba(25, 25, 25, 0.3);
+    background-color: rgba(25, 25, 25, 0.5);
     border-radius: 10px;
     padding-left: 10px;
     padding-right: 10px;
@@ -185,15 +157,11 @@
     /* overflow-y: auto; */
 }
 .response-chat:hover {
-    background-color: rgb(54, 54, 54);
-}
-.response-chat::selection {
-    color: black;
-    background-color: rgb(193, 193, 193);
+    background-color: rgba(54, 54, 54, 0.7);
 }
 .input-chat {
     color: rgb(243, 232, 212);
-    background-color: rgba(25, 25, 25, 0.3);
+    background-color: rgba(25, 25, 25, 0.5);
     border-radius: 10px;
     padding-left: 10px;
     padding-right: 10px;
@@ -207,14 +175,11 @@
     margin-right: 10px;
 }
 .input-chat:hover {
-    background-color: rgb(54, 54, 54);
-}
-.input-chat::selection {
-    color: black;
-    background-color: rgb(193, 193, 193);
+    background-color: rgba(54, 54, 54, 0.7);
 }
 .copy-icon {
     background-image: url('assets/icon_copy.png');
+    background-color: rgba(25, 25, 25, 0.5);
     background-size: 26px;
     width: 24px;
     height: 24px;
@@ -224,6 +189,7 @@
 }
 .copy-icon:hover {
     background-image: url('assets/icon_copy.png');
+    background-color: rgba(54, 54, 54, 0.7);
 }
 .copy-icon:active {
     background-image: url('assets/icon_check.png');
@@ -313,32 +279,6 @@
     padding-bottom: 10px;
     display: flex;
 }
-.theme-mode-label {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 12px;
-    font-weight: bold;
-    height: 20px;
-    margin-top: 24px;
-    margin-left: 15px;
-    margin-right: 0px;
-}
-.theme-mode-icon {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 16px;
-    text-align: center;
-    width: 40px;
-    height: 20px;
-    margin-right: 5px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-}
-.theme-mode-icon:hover {
-    background-color: rgb(54, 54, 54);
-}
-.theme-mode-icon:active {
-    font-size: 14px;
-}
 .transparency-label {
     font-family: 'Courier New', Courier, monospace;
     font-size: 12px;
@@ -350,6 +290,7 @@
 }
 .transparency-entry {
     font-family: 'Courier New', Courier, monospace;
+    background-color: rgba(25, 25, 25, 0.5);
     font-size: 12px;
     width: 20px;
     height: 20px;
@@ -357,9 +298,12 @@
     margin-bottom: 10px;
     border-radius: 5px;
 }
+.transparency-entry:hover {
+    background-color: rgba(54, 54, 54, 0.7);
+}
 .transparency-ok-icon {
     font-family: 'Courier New', Courier, monospace;
-    background-color: rgb(45, 45, 45);
+    background-color: rgba(25, 25, 25, 0.5);
     font-size: 12px;
     width: 30px;
     height: 10px;
@@ -369,7 +313,7 @@
     border-radius: 5px;
 }
 .transparency-ok-icon:hover {
-    background-color: rgb(54, 54, 54);
+    background-color: rgba(54, 54, 54, 0.7);
 }
 .transparency-ok-icon:active {
     font-size: 10px;
@@ -387,6 +331,7 @@
     /* background-image: url('assets/icon_settings.png');
     background-size: 20px; */
     font-family: 'Courier New', Courier, monospace;
+    background-color: rgba(25, 25, 25, 0.5);
     font-size: 16px;
     text-align: center;
     width: 40px;
@@ -397,7 +342,7 @@
     border-radius: 5px;
 }
 .colors-icon:hover {
-    background-color: rgb(54, 54, 54);
+    background-color: rgba(54, 54, 54, 0.7);
 }
 .colors-icon:active {
     font-size: 14px;
