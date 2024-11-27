@@ -680,7 +680,7 @@ export class Utils {
      * @param {string} mode - darken or lighten
      * @param {string} factor
      */
-    adjustColors(rgbString, mode = 'darken', factor = '10') {
+    adjustColor(rgbString, mode = 'darken', factor = '10') {
         // Split the RGB string into its component parts.
         const [r, g, b] = rgbString.split(',');
 
