@@ -77,6 +77,8 @@ export class Chat {
         let questionBox = new PopupMenu.PopupMenuItem('', {
             style_class: 'input-chat',
             can_focus: false,
+            reactive: true,
+            hover: true,
         });
         questionBox.label.clutter_text.set_selected_text_color(this.whiteColor);
         questionBox.label.clutter_text.set_selection_color(this.blackColor);
@@ -106,6 +108,8 @@ export class Chat {
         let responseBox = new PopupMenu.PopupMenuItem('', {
             style_class: 'response-chat',
             can_focus: false,
+            reactive: true,
+            hover: true,
         });
         responseBox.label.clutter_text.set_selected_text_color(this.whiteColor);
         responseBox.label.clutter_text.set_selection_color(this.blackColor);
@@ -136,6 +140,8 @@ export class Chat {
         let copyButton = new PopupMenu.PopupMenuItem('', {
             style_class: 'copy-icon',
             can_focus: false,
+            reactive: true,
+            hover: true,
         });
         copyButton.set_style(`background-color: rgba(${color}, 0.8);`);
         copyButton.label.clutter_text.reactive = true;
