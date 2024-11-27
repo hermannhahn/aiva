@@ -115,7 +115,6 @@ export class Chat {
             this.app.userSettings.COLOR,
             'lighten',
             1.3,
-            0.8,
         );
         let responseChat = this.app.ui.chat.response(themeColor);
         let copyButton = this.app.ui.chat.copy(themeColor);
