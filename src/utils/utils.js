@@ -674,7 +674,7 @@ export class Utils {
         return contents;
     };
 
-    darkColors(rgbString) {
+    darkenedColor(rgbString) {
         // Split the RGB string into its component parts.
         const [r, g, b] = rgbString.split(',');
 
