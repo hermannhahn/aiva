@@ -68,8 +68,7 @@ export class Chat {
             this.app.userSettings.COLOR,
             'darken',
             0.8,
-            0,
-            8,
+            0.8,
         );
         const inputChat = this.app.ui.chat.question(themeColor);
         this.app.ui.chat.box.addMenuItem(inputChat);
@@ -116,8 +115,7 @@ export class Chat {
             this.app.userSettings.COLOR,
             'darken',
             0.8,
-            0,
-            8,
+            0.8,
         );
         let responseChat = this.app.ui.chat.response(themeColor);
         let copyButton = this.app.ui.chat.copy(themeColor);
