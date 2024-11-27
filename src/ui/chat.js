@@ -130,14 +130,16 @@ export class Chat {
 
     /**
      * @description create copy button item
+     * @param {string} color
      * @returns {object} copy button item
      */
-    copy() {
+    copy(color) {
         // Copy Button
         let copyButton = new PopupMenu.PopupMenuItem('', {
             style_class: 'copy-icon',
             can_focus: false,
         });
+        copyButton.set_style(`background-color: rgba(${color}, '0.2');`);
         copyButton.label.clutter_text.reactive = true;
         copyButton.label.clutter_text.selectable = true;
         copyButton.label.clutter_text.hover = true;
