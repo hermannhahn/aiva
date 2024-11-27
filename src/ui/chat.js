@@ -104,11 +104,7 @@ export class Chat {
             style_class: 'response-chat',
             can_focus: false,
         });
-        // responseBox.label.clutter_text.set_selected_text_color(this.blackColor);
-        responseBox.label.set_style(`
-            selection-background-color: rgba(0, 0, 0, 1); /* Preto */
-            selection-color: rgba(255, 255, 255, 1);      /* Branco */
-        `);
+        responseBox.label.clutter_text.set_selected_text_color(this.blackColor);
         responseBox.set_style(`background-color: rgba(${color}, '0.3');`);
         responseBox.label.clutter_text.reactive = true;
         responseBox.label.clutter_text.selectable = true;
