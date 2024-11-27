@@ -64,7 +64,11 @@ export class Chat {
      * @param {boolean} [speech=true] - speech text
      */
     addQuestion(text, speech = false) {
-        const inputChat = this.app.ui.chat.question();
+        const inputChat = this.app.ui.chat.question(
+            this.app.userSettings.TRANSPARENCY,
+            this.app.userSettings.COLOR,
+            this.app.userSettings.MODE,
+        );
         this.app.ui.chat.box.addMenuItem(inputChat);
         text = this.app.utils.questionFormat(text);
         inputChat.label.clutter_text.set_markup(
@@ -105,8 +109,16 @@ export class Chat {
      * @param {boolean} [speech=true] - speech text
      */
     addResponse(text, speech = false) {
-        let responseChat = this.app.ui.chat.response();
-        let copyButton = this.app.ui.chat.copy();
+        let responseChat = this.app.ui.chat.response(
+            this.app.userSettings.TRANSPARENCY,
+            this.app.userSettings.COLOR,
+            this.app.userSettings.MODE,
+        );
+        let copyButton = this.app.ui.chat.copy(
+            this.app.userSettings.TRANSPARENCY,
+            this.app.userSettings.COLOR,
+            this.app.userSettings.MODE,
+        );
         this.app.ui.chat.box.addMenuItem(responseChat);
         this.app.ui.chat.box.addMenuItem(copyButton);
         this.app.ui.chat.box.addMenuItem(this.app.ui.chat.newSeparator);
