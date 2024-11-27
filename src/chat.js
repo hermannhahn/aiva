@@ -108,11 +108,7 @@ export class Chat {
     addResponse(text, speech = false) {
         let color = this.app.utils.darkenedColor(this.app.userSettings.COLOR);
         let responseChat = this.app.ui.chat.response(color);
-        let copyButton = this.app.ui.chat.copy(
-            this.app.userSettings.TRANSPARENCY,
-            color,
-            tcolor,
-        );
+        let copyButton = this.app.ui.chat.copy(color);
         this.app.ui.chat.box.addMenuItem(responseChat);
         this.app.ui.chat.box.addMenuItem(copyButton);
         this.app.ui.chat.box.addMenuItem(this.app.ui.chat.newSeparator);
