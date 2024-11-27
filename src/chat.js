@@ -64,8 +64,9 @@ export class Chat {
      * @param {boolean} [speech=true] - speech text
      */
     addQuestion(text, speech = false) {
-        const themeColor = this.app.utils.darkenedColor(
+        const themeColor = this.app.utils.modifyColor(
             this.app.userSettings.COLOR,
+            0.7,
         );
         const inputChat = this.app.ui.chat.question(themeColor);
         this.app.ui.chat.box.addMenuItem(inputChat);
@@ -108,8 +109,9 @@ export class Chat {
      * @param {boolean} [speech=true] - speech text
      */
     addResponse(text, speech = false) {
-        const themeColor = this.app.utils.darkenedColor(
+        const themeColor = this.app.utils.modifyColor(
             this.app.userSettings.COLOR,
+            0.7,
         );
         let responseChat = this.app.ui.chat.response(themeColor);
         let copyButton = this.app.ui.chat.copy(themeColor);
