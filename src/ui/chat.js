@@ -80,7 +80,7 @@ export class Chat {
         inputBox.set_style(
             `background-color: rgba(${color}, ${transparency});`,
         );
-        inputBox.label.clutter_text.set_style(`color: rgb(${tcolor});`);
+        inputBox.set_style(`color: rgb(${tcolor});`);
         inputBox.label.clutter_text.reactive = true;
         inputBox.label.clutter_text.selectable = true;
         inputBox.label.clutter_text.hover = true;
@@ -104,7 +104,7 @@ export class Chat {
         responseBox.set_style(
             `background-color: rgba(${color}, ${transparency});`,
         );
-        responseBox.label.clutter_text.set_style(`color: rgb(${tcolor});`);
+        responseBox.set_style(`color: rgb(${tcolor});`);
         responseBox.label.clutter_text.reactive = true;
         responseBox.label.clutter_text.selectable = true;
         responseBox.label.clutter_text.hover = true;
@@ -129,7 +129,7 @@ export class Chat {
         copyButton.set_style(
             `background-color: rgba(${color}, ${transparency});`,
         );
-        copyButton.label.clutter_text.set_style(`color: rgb(${tcolor});`);
+        copyButton.set_style(`color: rgb(${tcolor});`);
 
         copyButton.label.clutter_text.reactive = true;
         copyButton.label.clutter_text.selectable = true;
