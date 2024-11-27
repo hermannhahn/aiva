@@ -66,15 +66,18 @@ export class Chat {
     addQuestion(text, speech = false) {
         let color = this.app.userSettings.COLOR;
         let mode = this.app.userSettings.MODE;
+        let tcolor = '25, 25, 25';
         if (mode === 'light') {
             color = this.app.utils.lightColors(color);
         }
         if (mode === 'dark') {
             color = this.app.utils.darkColors(color);
+            tcolor = '225, 225, 225';
         }
         const inputChat = this.app.ui.chat.question(
             this.app.userSettings.TRANSPARENCY,
             color,
+            tcolor,
         );
         this.app.ui.chat.box.addMenuItem(inputChat);
         text = this.app.utils.questionFormat(text);
@@ -118,20 +121,23 @@ export class Chat {
     addResponse(text, speech = false) {
         let color = this.app.userSettings.COLOR;
         let mode = this.app.userSettings.MODE;
+        let tcolor = '25, 25, 25';
         if (mode === 'light') {
             color = this.app.utils.lightColors(color);
         }
         if (mode === 'dark') {
             color = this.app.utils.darkColors(color);
+            tcolor = '225, 225, 225';
         }
         let responseChat = this.app.ui.chat.response(
             this.app.userSettings.TRANSPARENCY,
             color,
+            tcolor,
         );
         let copyButton = this.app.ui.chat.copy(
             this.app.userSettings.TRANSPARENCY,
-            this.app.userSettings.COLOR,
-            this.app.userSettings.MODE,
+            color,
+            tcolor,
         );
         this.app.ui.chat.box.addMenuItem(responseChat);
         this.app.ui.chat.box.addMenuItem(copyButton);
