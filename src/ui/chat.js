@@ -80,11 +80,8 @@ export class Chat {
             style_class: 'input-chat',
             can_focus: false,
         });
-        // inputBox.label.clutter_text.set_selected_text_color(this.blackColor);
-        inputBox.label.set_style(`
-            selection-background-color: rgba(0, 0, 0, 1); /* Preto */
-            selection-color: rgba(255, 255, 255, 1);      /* Branco */
-        `);
+        inputBox.label.clutter_text.set_selected_text_color(this.blackColor);
+        inputBox.label.clutter_text.set_selection_color(this.blackColor);
         inputBox.set_style(`background-color: rgba(${color}, '0.3');`);
         inputBox.label.clutter_text.reactive = true;
         inputBox.label.clutter_text.selectable = true;
@@ -105,6 +102,7 @@ export class Chat {
             can_focus: false,
         });
         responseBox.label.clutter_text.set_selected_text_color(this.blackColor);
+        responseBox.label.clutter_text.set_selection_color(this.blackColor);
         responseBox.set_style(`background-color: rgba(${color}, '0.3');`);
         responseBox.label.clutter_text.reactive = true;
         responseBox.label.clutter_text.selectable = true;
