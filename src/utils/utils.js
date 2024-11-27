@@ -709,7 +709,7 @@ export class Utils {
         }
 
         // Convert the adjusted component parts back to a string.
-        const adjustedRgbString = `${rAdjusted},${gAdjusted},${bAdjusted}, 0.8`;
+        const adjustedRgbString = `${rAdjusted},${gAdjusted},${bAdjusted}`;
 
         return adjustedRgbString;
     }
