@@ -80,8 +80,8 @@ export class Chat {
             style_class: 'input-chat',
             can_focus: false,
         });
-        questionBox.label.clutter_text.selected_text_color(this.blackColor);
-        questionBox.label.clutter_text.selection_color(this.blackColor);
+        questionBox.label.clutter_text.set_selected_text_color(this.blackColor);
+        questionBox.label.clutter_text.set_selection_color(this.blackColor);
         questionBox.label.clutter_text.justify = true;
         questionBox.label.clutter_text.line_wrap = true;
         questionBox.label.clutter_text.max_length = 100;
@@ -104,8 +104,8 @@ export class Chat {
             style_class: 'response-chat',
             can_focus: false,
         });
-        responseBox.label.clutter_text.selected_text_color(this.blackColor);
-        responseBox.label.clutter_text.selection_color(this.blackColor);
+        responseBox.label.clutter_text.set_selected_text_color(this.blackColor);
+        responseBox.label.clutter_text.set_selection_color(this.blackColor);
         responseBox.label.clutter_text.justify = true;
         responseBox.label.clutter_text.line_wrap = true;
         responseBox.label.clutter_text.max_length = 100;
