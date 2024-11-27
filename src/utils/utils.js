@@ -684,9 +684,9 @@ export class Utils {
         const bInt = parseInt(b);
 
         // Adjust the brightness of each component.
-        const rAdjusted = rInt < 255 ? rInt + 25 : rInt;
-        const gAdjusted = gInt < 255 ? gInt + 25 : gInt;
-        const bAdjusted = bInt < 255 ? bInt + 25 : bInt;
+        const rAdjusted = rInt < 255 ? rInt + 45 : rInt;
+        const gAdjusted = gInt < 255 ? gInt + 45 : gInt;
+        const bAdjusted = bInt < 255 ? bInt + 45 : bInt;
 
         // Convert the adjusted component parts back to a string.
         const adjustedRgbString = `${rAdjusted},${gAdjusted},${bAdjusted}`;
@@ -694,7 +694,7 @@ export class Utils {
         return adjustedRgbString;
     }
 
-    lightColors(rgbString) {
+    lightnedColor(rgbString) {
         // Split the RGB string into its component parts.
         const [r, g, b] = rgbString.split(',');
 
@@ -704,9 +704,9 @@ export class Utils {
         const bInt = parseInt(b);
 
         // Adjust the brightness of each component.
-        const rAdjusted = rInt > 0 ? rInt - 25 : rInt;
-        const gAdjusted = gInt > 0 ? gInt - 25 : gInt;
-        const bAdjusted = bInt > 0 ? bInt - 25 : bInt;
+        const rAdjusted = rInt > 0 ? rInt - 45 : rInt;
+        const gAdjusted = gInt > 0 ? gInt - 45 : gInt;
+        const bAdjusted = bInt > 0 ? bInt - 45 : bInt;
 
         // Convert the adjusted component parts back to a string.
         const adjustedRgbString = `${rAdjusted},${gAdjusted},${bAdjusted}`;
