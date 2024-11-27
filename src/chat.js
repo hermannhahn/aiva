@@ -64,12 +64,17 @@ export class Chat {
      * @param {boolean} [speech=true] - speech text
      */
     addQuestion(text, speech = false) {
-        const lcolor = this.app.utils.lightColors(this.app.userSettings.COLOR);
-        const dcolor = this.app.utils.darkColors(this.app.userSettings.COLOR);
+        let color = this.app.userSettings.COLOR;
+        let mode = this.app.userSettings.MODE;
+        if (mode === 'light') {
+            color = this.app.utils.lightColors(color);
+        }
+        if (mode === 'dark') {
+            color = this.app.utils.darkColors(color);
+        }
         const inputChat = this.app.ui.chat.question(
             this.app.userSettings.TRANSPARENCY,
-            lcolor,
-            dcolor,
+            color,
         );
         this.app.ui.chat.box.addMenuItem(inputChat);
         text = this.app.utils.questionFormat(text);
@@ -111,12 +116,17 @@ export class Chat {
      * @param {boolean} [speech=true] - speech text
      */
     addResponse(text, speech = false) {
-        const lcolor = this.app.utils.lightColors(this.app.userSettings.COLOR);
-        const dcolor = this.app.utils.darkColors(this.app.userSettings.COLOR);
+        let color = this.app.userSettings.COLOR;
+        let mode = this.app.userSettings.MODE;
+        if (mode === 'light') {
+            color = this.app.utils.lightColors(color);
+        }
+        if (mode === 'dark') {
+            color = this.app.utils.darkColors(color);
+        }
         let responseChat = this.app.ui.chat.response(
             this.app.userSettings.TRANSPARENCY,
-            lcolor,
-            dcolor,
+            color,
         );
         let copyButton = this.app.ui.chat.copy(
             this.app.userSettings.TRANSPARENCY,
