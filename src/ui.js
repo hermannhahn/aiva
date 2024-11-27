@@ -231,6 +231,12 @@ export class UI {
         this.appearancemenu.menu.set_style(
             `background-color: rgba(${color}, ${transparency});`,
         );
+        this.appearancemenu.menu.set_style(
+            `background-color: rgba(${color}, ${transparency});`,
+        );
+        this.appearancemenu.transparencyEntry.set_style(
+            `color: rgb(200, 200, 200);`,
+        );
         this.appearancemenu.transparencyEntry.set_style(
             `background-color: rgba(${darkColors}, ${transparency});`,
         );
@@ -239,11 +245,13 @@ export class UI {
         this.mainmenu.container.set_style(
             `background-color: rgba(${color}, ${transparency});`,
         );
+        this.mainmenu.userEntry.set_style(`color: rgb(200, 200, 200);`);
         this.mainmenu.userEntry.set_style(
             `background-color: rgba(${darkColors}, ${transparency});`,
         );
 
         // chat
+
         this.chat.container.set_style(
             `background-color: rgba(${color}, ${transparency});`,
         );
