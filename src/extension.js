@@ -79,26 +79,6 @@ const Aiva = GObject.registerClass(
                 settings.set_string('user-name', username);
             }
 
-            // theme mode
-            const gnomeSettings = new Gio.Settings({
-                schema_id: 'org.gnome.desktop.interface',
-            });
-            function getThemeMode(theme) {
-                if (
-                    theme.toLowerCase().includes('dark') ||
-                    theme.toLowerCase().includes('night')
-                ) {
-                    return 'dark';
-                } else {
-                    return 'light';
-                }
-            }
-            let mode = settings.get_string('theme-mode');
-            if (mode === '' || mode === null || mode === undefined) {
-                mode = getThemeMode(gnomeSettings.get_string('gtk-theme'));
-                settings.set_string('theme-mode', mode);
-            }
-
             // location
             let location = settings.get_string('location');
             if (
@@ -125,7 +105,6 @@ const Aiva = GObject.registerClass(
                 RECURSIVE_TALK: settings.get_boolean('log-history'),
                 TRANSPARENCY: settings.get_string('theme-transparency'),
                 COLOR: settings.get_string('theme-color'),
-                MODE: settings.get_string('theme-mode'),
                 USERNAME: username,
             };
         }
