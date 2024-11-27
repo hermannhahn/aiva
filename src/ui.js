@@ -206,7 +206,7 @@ export class UI {
     darkTheme(color, transparency) {
         const lightnedColor = this.app.utils.adjustColor(
             color,
-            'lilighten',
+            'lighten',
             1.3,
             1.2,
         );
