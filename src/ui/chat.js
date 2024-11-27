@@ -76,18 +76,21 @@ export class Chat {
      */
     question(color) {
         // Question
-        let inputBox = new PopupMenu.PopupMenuItem('', {
+        let questionBox = new PopupMenu.PopupMenuItem('', {
             style_class: 'input-chat',
             can_focus: false,
         });
-        inputBox.label.clutter_text.set_selected_text_color(this.blackColor);
-        inputBox.label.clutter_text.set_selection_color(this.blackColor);
-        inputBox.set_style(`background-color: rgba(${color}, '0.3');`);
-        inputBox.label.clutter_text.reactive = true;
-        inputBox.label.clutter_text.selectable = true;
-        inputBox.label.clutter_text.hover = true;
-        this.inputChat = inputBox;
-        return inputBox;
+        questionBox.label.clutter_text.selected_text_color(this.blackColor);
+        questionBox.label.clutter_text.selection_color(this.blackColor);
+        questionBox.label.clutter_text.justify = true;
+        questionBox.label.clutter_text.line_wrap = true;
+        questionBox.label.clutter_text.max_length = 100;
+        questionBox.set_style(`background-color: rgba(${color}, '0.3');`);
+        questionBox.label.clutter_text.reactive = true;
+        questionBox.label.clutter_text.selectable = true;
+        questionBox.label.clutter_text.hover = true;
+        this.inputChat = questionBox;
+        return questionBox;
     }
 
     /**
@@ -101,8 +104,11 @@ export class Chat {
             style_class: 'response-chat',
             can_focus: false,
         });
-        responseBox.label.clutter_text.set_selected_text_color(this.blackColor);
-        responseBox.label.clutter_text.set_selection_color(this.blackColor);
+        responseBox.label.clutter_text.selected_text_color(this.blackColor);
+        responseBox.label.clutter_text.selection_color(this.blackColor);
+        responseBox.label.clutter_text.justify = true;
+        responseBox.label.clutter_text.line_wrap = true;
+        responseBox.label.clutter_text.max_length = 100;
         responseBox.set_style(`background-color: rgba(${color}, '0.3');`);
         responseBox.label.clutter_text.reactive = true;
         responseBox.label.clutter_text.selectable = true;
