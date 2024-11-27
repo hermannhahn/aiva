@@ -106,9 +106,11 @@ export class Chat {
      * @param {boolean} [speech=true] - speech text
      */
     addResponse(text, speech = false) {
-        let color = this.app.utils.darkenedColor(this.app.userSettings.COLOR);
-        let responseChat = this.app.ui.chat.response(color);
-        let copyButton = this.app.ui.chat.copy(color);
+        const themeColor = this.app.utils.darkenedColor(
+            this.app.userSettings.COLOR,
+        );
+        let responseChat = this.app.ui.chat.response(themeColor);
+        let copyButton = this.app.ui.chat.copy(themeColor);
         this.app.ui.chat.box.addMenuItem(responseChat);
         this.app.ui.chat.box.addMenuItem(copyButton);
         this.app.ui.chat.box.addMenuItem(this.app.ui.chat.newSeparator);
