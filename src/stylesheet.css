@@ -151,6 +151,7 @@
     overflow: auto;
     margin-top: 5px;
     padding-top: 10px;
+    padding-bottom: 10px;
     border-radius: 10px;
 }
 .chat-scroll::selection {
