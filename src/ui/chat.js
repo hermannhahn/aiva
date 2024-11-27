@@ -88,7 +88,7 @@ export class Chat {
         questionBox.label.clutter_text.set_line_alignment(
             Clutter.ActorAlign.FILL,
         );
-        questionBox.set_style(`background-color: rgba(${color});`);
+        questionBox.set_style(`background-color: ${color};`);
         questionBox.label.clutter_text.reactive = true;
         questionBox.label.clutter_text.selectable = true;
         questionBox.label.clutter_text.hover = true;
@@ -117,7 +117,7 @@ export class Chat {
         responseBox.label.clutter_text.set_line_alignment(
             Clutter.ActorAlign.FILL,
         );
-        responseBox.set_style(`background-color: rgba(${color});`);
+        responseBox.set_style(`background-color: ${color};`);
         responseBox.label.clutter_text.reactive = true;
         responseBox.label.clutter_text.selectable = true;
         responseBox.label.clutter_text.hover = true;
@@ -137,7 +137,7 @@ export class Chat {
             style_class: 'copy-icon',
             can_focus: false,
         });
-        copyButton.set_style(`background-color: rgba(${color});`);
+        copyButton.set_style(`background-color: ${color};`);
         copyButton.label.clutter_text.reactive = true;
         copyButton.label.clutter_text.selectable = true;
         copyButton.label.clutter_text.hover = true;
