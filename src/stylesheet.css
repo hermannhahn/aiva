@@ -402,7 +402,7 @@
 .colors-icon:active {
     font-size: 14px;
 }
-.text-selection::selection {
-    background-color: rgba(0, 0, 0, 1); /* Preto */
-    color: rgba(255, 255, 255, 1); /* Branco */
-}
+/* .text-selection::selection {
+    background-color: rgba(0, 0, 0, 1);
+    color: rgba(255, 255, 255, 1);
+} */
