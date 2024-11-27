@@ -175,7 +175,6 @@ export class UI {
      * @description set theme
      * @param {string} [transparency=this.app.userSettings.TRANSPARENCY]
      * @param {string} [color=this.app.userSettings.COLOR]
-     * @param {string} [mode=this.app.userSettings.MODE]
      */
     setTheme(
         transparency = this.app.userSettings.TRANSPARENCY,
