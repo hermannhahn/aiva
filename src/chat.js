@@ -66,8 +66,8 @@ export class Chat {
     addQuestion(text, speech = false) {
         const themeColor = this.app.utils.adjustColor(
             this.app.userSettings.COLOR,
-            'darken',
-            0.8,
+            'lighten',
+            1.3,
             0.8,
         );
         const inputChat = this.app.ui.chat.question(themeColor);
@@ -113,8 +113,8 @@ export class Chat {
     addResponse(text, speech = false) {
         const themeColor = this.app.utils.adjustColor(
             this.app.userSettings.COLOR,
-            'darken',
-            0.8,
+            'lighten',
+            1.3,
             0.8,
         );
         let responseChat = this.app.ui.chat.response(themeColor);
