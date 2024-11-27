@@ -180,7 +180,6 @@ export class UI {
     setTheme(
         transparency = this.app.userSettings.TRANSPARENCY,
         color = this.app.userSettings.COLOR,
-        mode = this.app.userSettings.MODE,
     ) {
         // set default if empty, null or undefined
         if (
@@ -193,9 +192,6 @@ export class UI {
         if (color === '' || color === null || color === undefined) {
             color = '25, 25, 25';
         }
-        if (mode === '' || mode === null || mode === undefined) {
-            mode = 'dark';
-        }
 
         // save
         this.app.extension.settings.set_string(
@@ -205,23 +201,12 @@ export class UI {
         this.app.userSettings.TRANSPARENCY = transparency;
         this.app.extension.settings.set_string('theme-color', color);
         this.app.userSettings.COLOR = color;
-        this.app.extension.settings.set_string('theme-mode', mode);
-        this.app.userSettings.MODE = mode;
 
         // invert transparency value to css
         transparency = 100 - transparency;
         transparency = parseInt(transparency) / 100;
 
-        switch (mode) {
-            case 'dark':
-                color = this.darkTheme(color, transparency);
-                break;
-            case 'light':
-                color = this.lightTheme(color, transparency);
-                break;
-            default:
-                break;
-        }
+        this.darkTheme(color, transparency);
     }
 
     darkTheme(color, transparency) {
@@ -249,58 +234,6 @@ export class UI {
         this.chat.container.set_style(`color: rgb(200, 200, 200);`);
         this.chat.container.set_style(
             `background-color: rgba(${color}, ${transparency});`,
-        );
-    }
-
-    /**
-     * @description light theme
-     * @param {string} color
-     * @param {string} transparency
-     */
-    lightTheme(color, transparency) {
-        // appearance menu
-        this.appearancemenu.menu.set_style(
-            `background-color: rgba(${color}, ${transparency});`,
-        );
-        this.appearancemenu.transparencyEntry.set_style(
-            `color: rgb(25, 25, 25);`,
-        );
-        this.appearancemenu.transparencyEntry.set_style(
-            `background-color: rgba(225, 225, 225, ${transparency});`,
-        );
-
-        // main menu
-        this.mainmenu.container.set_style(
-            `background-color: rgba(${color}, ${transparency});`,
-        );
-        this.mainmenu.userEntry.set_style(`color: rgb(25, 25, 25);`);
-        this.mainmenu.userEntry.set_style(
-            `background-color: rgba(225, 225, 225, ${transparency});`,
-        );
-
-        // chat
-        this.chat.container.set_style(`color: rgb(25, 25, 25);`);
-        this.chat.container.set_style(
-            `background-color: rgba(${color}, ${transparency});`,
-        );
-    }
-
-    /**
-     * @description switch theme mode
-     */
-    _switchThemeMode() {
-        let theme = this.app.userSettings.MODE;
-        if (theme === 'dark') {
-            this.appearancemenu.themeModeButton.label = '☀️';
-            theme = 'light';
-        } else {
-            this.appearancemenu.themeModeButton.label = '🌙';
-            theme = 'dark';
-        }
-        this.setTheme(
-            this.app.userSettings.TRANSPARENCY,
-            this.app.userSettings.COLOR,
-            theme,
         );
     }
 }
