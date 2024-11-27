@@ -52,7 +52,7 @@ export class Utils {
      */
     questionFormat(text) {
         text = this._pangoConvert(text);
-        text = this._insertLineBreaks(text);
+        // text = this._insertLineBreaks(text);
         text = text
             .replace(/&/g, '\u0026')
             .replace(/</g, '\u003c')
@@ -76,7 +76,7 @@ export class Utils {
 
     responseFormat(text) {
         text = this._pangoConvert(text);
-        text = this._insertLineBreaks(text);
+        // text = this._insertLineBreaks(text);
         return text;
     }
 
