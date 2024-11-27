@@ -77,7 +77,7 @@ export class Chat {
         });
         inputBox.label.clutter_text.set_selected_text_color('black');
         inputBox.label.clutter_text.set_selected_background_color('white');
-        this.inputBox.set_style(`background-color: rgba(${color}, '0.3');`);
+        inputBox.set_style(`background-color: rgba(${color}, '0.3');`);
         inputBox.label.clutter_text.reactive = true;
         inputBox.label.clutter_text.selectable = true;
         inputBox.label.clutter_text.hover = true;
@@ -98,7 +98,7 @@ export class Chat {
         });
         responseBox.label.clutter_text.set_selected_text_color('black');
         responseBox.label.clutter_text.set_selected_background_color('white');
-        this.responseBox.set_style(`background-color: rgba(${color}, '0.3');`);
+        responseBox.set_style(`background-color: rgba(${color}, '0.3');`);
         responseBox.label.clutter_text.reactive = true;
         responseBox.label.clutter_text.selectable = true;
         responseBox.label.clutter_text.hover = true;
