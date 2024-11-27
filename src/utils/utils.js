@@ -679,9 +679,8 @@ export class Utils {
      * @param {string} rgbString - rgb string
      * @param {string} mode - darken or lighten
      * @param {int} factor - less effect if less then 1, more effect if more then 1
-     * @param {int} alpha - alpha value
      */
-    adjustColor(rgbString, mode = 'darken', factor = 0.8, alpha = 1.0) {
+    adjustColor(rgbString, mode = 'darken', factor = 0.8) {
         // Split the RGB string into its component parts.
         const [r, g, b] = rgbString
             .split(',')
@@ -704,7 +703,7 @@ export class Utils {
         );
 
         // Combine the adjusted components into an RGBA string.
-        const rgbaString = `${rAdjusted}, ${gAdjusted}, ${bAdjusted}, ${alpha}`;
+        const rgbaString = `${rAdjusted}, ${gAdjusted}, ${bAdjusted}`;
 
         return rgbaString;
     }
