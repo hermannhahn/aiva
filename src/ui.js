@@ -208,7 +208,7 @@ export class UI {
             color,
             'lighten',
             1.3,
-            1.2,
+            0.8,
         );
         // appearance menu
         this.appearancemenu.menu.set_style(
