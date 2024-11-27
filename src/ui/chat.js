@@ -69,10 +69,9 @@ export class Chat {
 
     /**
      * @description create question item
-     * @param {string} color
      * @returns {object} question item
      */
-    question(color) {
+    question() {
         // Question
         let questionBox = new PopupMenu.PopupMenuItem('', {
             style_class: 'input-chat',
@@ -90,7 +89,6 @@ export class Chat {
         questionBox.label.clutter_text.set_line_alignment(
             Clutter.ActorAlign.FILL,
         );
-        questionBox.set_style(`background-color: rgba(${color}, 0.4);`);
         questionBox.label.clutter_text.reactive = true;
         questionBox.label.clutter_text.selectable = true;
         questionBox.label.clutter_text.hover = true;
@@ -100,10 +98,9 @@ export class Chat {
 
     /**
      * @description create response item
-     * @param {string} color
      * @returns {object} response item
      */
-    response(color) {
+    response() {
         // Response
         let responseBox = new PopupMenu.PopupMenuItem('', {
             style_class: 'response-chat',
@@ -121,7 +118,6 @@ export class Chat {
         responseBox.label.clutter_text.set_line_alignment(
             Clutter.ActorAlign.FILL,
         );
-        responseBox.set_style(`background-color: rgba(${color}, 0.4);`);
         responseBox.label.clutter_text.reactive = true;
         responseBox.label.clutter_text.selectable = true;
         responseBox.label.clutter_text.hover = true;
@@ -132,10 +128,9 @@ export class Chat {
 
     /**
      * @description create copy button item
-     * @param {string} color
      * @returns {object} copy button item
      */
-    copy(color) {
+    copy() {
         // Copy Button
         let copyButton = new PopupMenu.PopupMenuItem('', {
             style_class: 'copy-icon',
@@ -143,7 +138,6 @@ export class Chat {
             reactive: true,
             hover: true,
         });
-        copyButton.set_style(`background-color: rgb(${color}, 0.4);`);
         copyButton.label.clutter_text.reactive = true;
         copyButton.label.clutter_text.selectable = true;
         copyButton.label.clutter_text.hover = true;
