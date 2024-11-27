@@ -674,43 +674,23 @@ export class Utils {
         return contents;
     };
 
-    darkenedColor(rgbString) {
+    modifyColor(rgbString, factor = 1) {
         // Split the RGB string into its component parts.
-        const [r, g, b] = rgbString.split(',');
+        const [r, g, b] = rgbString
+            .split(',')
+            .map((v) => parseInt(v.trim(), 10));
 
-        // Convert the component parts to integers.
-        const rInt = parseInt(r);
-        const gInt = parseInt(g);
-        const bInt = parseInt(b);
+        // Decrement the brightness of each component to darken the color.
+        const rAdjusted = Math.max(0, Math.floor(r * factor));
+        const gAdjusted = Math.max(0, Math.floor(g * factor));
+        const bAdjusted = Math.max(0, Math.floor(b * factor));
 
-        // Adjust the brightness of each component.
-        const rAdjusted = rInt < 255 ? rInt + 45 : rInt;
-        const gAdjusted = gInt < 255 ? gInt + 45 : gInt;
-        const bAdjusted = bInt < 255 ? bInt + 45 : bInt;
+        // Add opacity to make it more transparent (0.0 to 1.0, menor = mais opaco).
+        const alpha = 0.7; // 70% de opacidade
 
-        // Convert the adjusted component parts back to a string.
-        const adjustedRgbString = `${rAdjusted},${gAdjusted},${bAdjusted}`;
+        // Combine the adjusted components into an RGBA string.
+        const rgbaString = `rgba(${rAdjusted}, ${gAdjusted}, ${bAdjusted}, ${alpha})`;
 
-        return adjustedRgbString;
-    }
-
-    lightnedColor(rgbString) {
-        // Split the RGB string into its component parts.
-        const [r, g, b] = rgbString.split(',');
-
-        // Convert the component parts to integers.
-        const rInt = parseInt(r);
-        const gInt = parseInt(g);
-        const bInt = parseInt(b);
-
-        // Adjust the brightness of each component.
-        const rAdjusted = rInt > 0 ? rInt - 45 : rInt;
-        const gAdjusted = gInt > 0 ? gInt - 45 : gInt;
-        const bAdjusted = bInt > 0 ? bInt - 45 : bInt;
-
-        // Convert the adjusted component parts back to a string.
-        const adjustedRgbString = `${rAdjusted},${gAdjusted},${bAdjusted}`;
-
-        return adjustedRgbString;
+        return rgbaString;
     }
 }
