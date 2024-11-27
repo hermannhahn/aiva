@@ -269,7 +269,7 @@ export class UI {
             `color: rgb(25, 25, 25);`,
         );
         this.appearancemenu.transparencyEntry.set_style(
-            `background-color: rgb(255, 255, 255);`,
+            `background-color: rgba(${lightColors}, ${transparency});`,
         );
 
         // main menu
@@ -278,7 +278,7 @@ export class UI {
         );
         this.mainmenu.userEntry.set_style(`color: rgb(25, 25, 25);`);
         this.mainmenu.userEntry.set_style(
-            `background-color: rgb(255, 255, 255);`,
+            `background-color: rgba(${lightColors}, ${transparency});`,
         );
 
         // chat
