@@ -207,7 +207,7 @@ export class UI {
         const lightnedColor = this.app.utils.adjustColor(
             color,
             'lighten',
-            1.3,
+            1.8,
             0.8,
         );
         // appearance menu
