@@ -66,31 +66,45 @@ export class Chat {
 
     /**
      * @description create question item
+     * @param {string} transparency
+     * @param {string} color
+     * @param {string} tcolor
      * @returns {object} question item
      */
-    question() {
+    question(transparency, color, tcolor) {
         // Question
-        let inputChat = new PopupMenu.PopupMenuItem('', {
+        let inputBox = new PopupMenu.PopupMenuItem('', {
             style_class: 'input-chat',
             can_focus: false,
         });
-        inputChat.label.clutter_text.reactive = true;
-        inputChat.label.clutter_text.selectable = true;
-        inputChat.label.clutter_text.hover = true;
-        this.inputChat = inputChat;
-        return inputChat;
+        inputBox.set_style(
+            `background-color: rgba(${color}, ${transparency});`,
+        );
+        inputBox.label.clutter_text.set_style(`color: rgb(${tcolor});`);
+        inputBox.label.clutter_text.reactive = true;
+        inputBox.label.clutter_text.selectable = true;
+        inputBox.label.clutter_text.hover = true;
+        this.inputChat = inputBox;
+        return inputBox;
     }
 
     /**
      * @description create response item
+     * @param {string} transparency
+     * @param {string} color
+     * @param {string} tcolor
      * @returns {object} response item
      */
-    response() {
+    response(transparency, color, tcolor) {
         // Response
         let responseBox = new PopupMenu.PopupMenuItem('', {
             style_class: 'response-chat',
             can_focus: false,
         });
+        responseBox.set_style(
+            `background-color: rgba(${color}, ${transparency});`,
+        );
+        responseBox.label.clutter_text.set_style(`color: rgb(${tcolor});`);
         responseBox.label.clutter_text.reactive = true;
         responseBox.label.clutter_text.selectable = true;
         responseBox.label.clutter_text.hover = true;
@@ -101,14 +115,22 @@ export class Chat {
 
     /**
      * @description create copy button item
+     * @param {string} transparency
+     * @param {string} color
+     * @param {string} tcolor
      * @returns {object} copy button item
      */
-    copy() {
+    copy(transparency, color, tcolor) {
         // Copy Button
         let copyButton = new PopupMenu.PopupMenuItem('', {
             style_class: 'copy-icon',
             can_focus: false,
         });
+        copyButton.set_style(
+            `background-color: rgba(${color}, ${transparency});`,
+        );
+        copyButton.label.clutter_text.set_style(`color: rgb(${tcolor});`);
+
         copyButton.label.clutter_text.reactive = true;
         copyButton.label.clutter_text.selectable = true;
         copyButton.label.clutter_text.hover = true;
