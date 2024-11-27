@@ -32,6 +32,8 @@ export class MainMenu {
             x_expand: true,
             y_expand: true,
             can_focus: true,
+            reactive: true,
+            hover: true,
         });
 
         // Create enter button
