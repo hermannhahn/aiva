@@ -84,6 +84,8 @@ export class Chat {
         questionBox.label.clutter_text.set_selection_color(this.blackColor);
         questionBox.label.clutter_text.justify = true;
         questionBox.label.clutter_text.line_wrap = true;
+        questionBox.label.clutter_text.line_wrap_mode =
+            Clutter.WrapMode.WORD_CHAR;
         questionBox.set_style(`background-color: rgba(${color}, '0.3');`);
         questionBox.label.clutter_text.reactive = true;
         questionBox.label.clutter_text.selectable = true;
@@ -107,6 +109,8 @@ export class Chat {
         responseBox.label.clutter_text.set_selection_color(this.blackColor);
         responseBox.label.clutter_text.justify = true;
         responseBox.label.clutter_text.line_wrap = true;
+        responseBox.label.clutter_text.line_wrap_mode =
+            Clutter.WrapMode.WORD_CHAR;
         responseBox.set_style(`background-color: rgba(${color}, '0.3');`);
         responseBox.label.clutter_text.reactive = true;
         responseBox.label.clutter_text.selectable = true;
