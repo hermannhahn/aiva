@@ -1,4 +1,6 @@
 import St from 'gi://St';
+import Clutter from 'gi://Clutter';
+
 import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 
 export class Chat {
@@ -39,6 +41,9 @@ export class Chat {
         // Separator
         this.newSeparator = new PopupMenu.PopupSeparatorMenuItem();
 
+        this.blackColor = Clutter.Color.from_string('black')[1];
+        this.whiteColor = Clutter.Color.from_string('white')[1];
+
         this._addItems();
     }
 
@@ -75,8 +80,10 @@ export class Chat {
             style_class: 'input-chat',
             can_focus: false,
         });
-        inputBox.label.clutter_text.set_selected_text_color('black');
-        inputBox.label.clutter_text.set_selected_background_color('white');
+        inputBox.label.clutter_text.set_selected_text_color(this.blackColor);
+        inputBox.label.clutter_text.set_selected_background_color(
+            this.whiteColor,
+        );
         inputBox.set_style(`background-color: rgba(${color}, '0.3');`);
         inputBox.label.clutter_text.reactive = true;
         inputBox.label.clutter_text.selectable = true;
@@ -96,8 +103,10 @@ export class Chat {
             style_class: 'response-chat',
             can_focus: false,
         });
-        responseBox.label.clutter_text.set_selected_text_color('black');
-        responseBox.label.clutter_text.set_selected_background_color('white');
+        responseBox.label.clutter_text.set_selected_text_color(this.blackColor);
+        responseBox.label.clutter_text.set_selected_background_color(
+            this.whiteColor,
+        );
         responseBox.set_style(`background-color: rgba(${color}, '0.3');`);
         responseBox.label.clutter_text.reactive = true;
         responseBox.label.clutter_text.selectable = true;
