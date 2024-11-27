@@ -204,7 +204,12 @@ export class UI {
     }
 
     darkTheme(color, transparency) {
-        const lightnedColor = this.app.utils.lightnedColor(color);
+        const lightnedColor = this.app.utils.adjustColor(
+            color,
+            'lilighten',
+            1.3,
+            1.2,
+        );
         // appearance menu
         this.appearancemenu.menu.set_style(
             `background-color: rgba(${color}, ${transparency});`,
@@ -213,7 +218,7 @@ export class UI {
             `color: rgb(200, 200, 200);`,
         );
         this.appearancemenu.transparencyEntry.set_style(
-            `background-color: rgba(${lightnedColor}, ${transparency});`,
+            `background-color: rgba(${lightnedColor}, 0.75);`,
         );
 
         // main menu
@@ -222,7 +227,7 @@ export class UI {
         );
         this.mainmenu.userEntry.set_style(`color: rgb(200, 200, 200);`);
         this.mainmenu.userEntry.set_style(
-            `background-color: rgba(${lightnedColor}, ${transparency});`,
+            `background-color: rgba(${lightnedColor}, 0.75);`,
         );
 
         // chat
