@@ -1,20 +1,33 @@
 // import Sqlite
-import Sqlite from 'gi://Sqlite';
+import Gio from 'gi://Gio';
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 export class Database {
     constructor(app) {
         this.app = app;
-        this.db = null;
         this.dbPath = this.app.userSettings.HISTORY_FILE;
         this.initDatabase();
     }
 
+    executeSql(query) {
+        const subprocess = new Gio.Subprocess({
+            argv: ['sqlite3', this.dbPath, query],
+            flags:
+                Gio.SubprocessFlags.STDOUT_PIPE |
+                Gio.SubprocessFlags.STDERR_PIPE,
+        });
+
+        subprocess.init(null);
+
+        const [, stdout, stderr] = subprocess.communicate_utf8(null, null);
+        if (stderr.trim()) {
+            throw new Error(`SQLite error: ${stderr.trim()}`);
+        }
+        return stdout.trim();
+    }
+
     initDatabase() {
         try {
-            // Create database if not exists
-            this.db = Sqlite.open(this.dbPath);
-
             // Create "history" if not exists
             const createHistoryTableQuery = `
             CREATE TABLE IF NOT EXISTS history (
@@ -24,7 +37,7 @@ export class Database {
                 timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
             );
         `;
-            this.db.exec(createHistoryTableQuery);
+            this.executeSql(createHistoryTableQuery);
             this.addToHistory(
                 this.app.gemini.getTuneString('user'),
                 this.app.gemini.getTuneString('model'),
@@ -37,7 +50,7 @@ export class Database {
     getHistory() {
         try {
             const query = 'SELECT user, model FROM history';
-            const result = this.db.query(query);
+            const result = this.executeSql(query);
             const history = [];
             while (result.next()) {
                 history.push(
@@ -73,7 +86,7 @@ export class Database {
                 INSERT INTO history (user, model)
                 VALUES (?, ?);
             `;
-            this.db.exec(insertQuery, [user, model]);
+            this.executeSql(insertQuery, [user, model]);
         } catch (error) {
             console.error('Error adding to history:', error);
         }
@@ -87,7 +100,7 @@ export class Database {
             SET user = REPLACE(user, 'Undefined', '${location}')
             WHERE id = 1;
         `;
-            this.db.exec(updateQuery);
+            this.executeSql(updateQuery);
         } catch (error) {
             console.error('Error editing history location:', error);
         }
@@ -99,16 +112,18 @@ export class Database {
             DELETE FROM history
             WHERE id > (SELECT MIN(id) FROM history);
         `;
-            this.db.exec(deleteQuery);
+            this.executeSql(deleteQuery);
         } catch (error) {
             console.error('Error cleaning history:', error);
         }
     }
 
     closeDatabase() {
-        if (this.db) {
-            this.db.close();
-            this.db = null;
+        try {
+            this.executeSql('VACUUM');
+            this.executeSql('PRAGMA optimize');
+        } catch (error) {
+            console.error('Error closing database:', error);
         }
     }
 }
