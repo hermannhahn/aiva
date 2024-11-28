@@ -74,7 +74,6 @@ class DatabaseManager {
 
     cleanHistory() {
         try {
-            // Delete everthing except the first user and model in the list
             const deleteQuery = `
             DELETE FROM history
             WHERE id > (SELECT MIN(id) FROM history);
