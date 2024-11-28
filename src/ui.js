@@ -111,16 +111,6 @@ export class UI {
             this.appearancemenu.container.add_child(this.appearancemenu.menu);
             this.appearancemenu.isOpen = true;
 
-            // transparency entry clicked
-            this.appearancemenu.transparencyEntry.connect(
-                'clicked',
-                (_self) => {
-                    this.appearancemenu.transparencyEntry.clutter_text.set_text(
-                        '',
-                    );
-                },
-            );
-
             // transparency entry
             this.appearancemenu.transparencyEntry.clutter_text.connect(
                 'text-changed',
