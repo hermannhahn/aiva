@@ -111,6 +111,31 @@ export class UI {
             this.appearancemenu.container.add_child(this.appearancemenu.menu);
             this.appearancemenu.isOpen = true;
 
+            // transparency entry
+            this.appearancemenu.transparencyEntry.clutter_text.connect(
+                'activate',
+                (_self) => {
+                    this.appearancemenu.transparencyEntry.clutter_text.set_text(
+                        '',
+                    );
+                },
+            );
+            // transparency entry
+            this.appearancemenu.transparencyEntry.clutter_text.connect(
+                'text-changed',
+                (_self) => {
+                    const transparency =
+                        this.appearancemenu.transparencyEntry.clutter_text.text;
+                    if (transparency === '' || isNaN(parseInt(transparency))) {
+                        return;
+                    }
+                    this.appearancemenu.transparencyEntry.clutter_text.set_text(
+                        transparency,
+                    );
+                    this.setTheme(transparency, this.app.userSettings.COLOR);
+                },
+            );
+
             // transparency ok button
             this.appearancemenu.transparencyButton.connect(
                 'clicked',
