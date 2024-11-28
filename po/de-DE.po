@@ -156,101 +156,101 @@ msgstr ""
 msgid "Possible harassment in the question or answer."
 msgstr ""
 
-#: src/ai/gemini.js:265
+#: src/ai/gemini.js:266
 msgid "Hi, I'm"
 msgstr ""
 
-#: src/ai/gemini.js:265
+#: src/ai/gemini.js:266
 msgid "I'm from"
 msgstr ""
 
-#: src/ai/gemini.js:265
+#: src/ai/gemini.js:266
 msgid "and today is"
 msgstr ""
 
-#: src/ai/gemini.js:266
+#: src/ai/gemini.js:267
 msgid "Hi! I am"
 msgstr ""
 
-#: src/ai/gemini.js:266
+#: src/ai/gemini.js:267
 msgid "How can I help you today?"
 msgstr ""
 
-#: src/ai/gemini.js:276
+#: src/ai/gemini.js:277
 msgid "Generate a command line for the request"
 msgstr ""
 
-#: src/ai/gemini.js:277
+#: src/ai/gemini.js:278
 msgid "Return a JSON with the following keys"
 msgstr ""
 
-#: src/ai/gemini.js:278
+#: src/ai/gemini.js:279
 msgid ""
 "true If it is possible to achieve the purpose of the request with a command "
 "line."
 msgstr ""
 
-#: src/ai/gemini.js:278
+#: src/ai/gemini.js:279
 msgid "a Linux Ubuntu terminal command line to the request"
 msgstr ""
 
-#: src/ai/gemini.js:278
+#: src/ai/gemini.js:279
 msgid "false otherwise"
 msgstr ""
 
-#: src/ai/gemini.js:279
+#: src/ai/gemini.js:280
 msgid "text to be associated with the command line"
 msgstr ""
 
-#: src/ai/gemini.js:279
+#: src/ai/gemini.js:280
 msgid "informing action in success case"
 msgstr ""
 
-#: src/ai/gemini.js:279
+#: src/ai/gemini.js:280
 msgid "or failure text"
 msgstr ""
 
-#: src/ai/gemini.js:280
+#: src/ai/gemini.js:281
 msgid "command line for linux ubuntu that fulfills the request"
 msgstr ""
 
-#: src/ai/gemini.js:281
+#: src/ai/gemini.js:282
 msgid "Rules for commandline value"
 msgstr ""
 
-#: src/ai/gemini.js:281
+#: src/ai/gemini.js:282
 msgid "Do not use sudo"
 msgstr ""
 
-#: src/ai/gemini.js:281
+#: src/ai/gemini.js:282
 msgid "Prefer browser, firefox and google websites"
 msgstr ""
 
-#: src/ai/gemini.js:281
+#: src/ai/gemini.js:282
 msgid "Never generate destructive commands"
 msgstr ""
 
-#: src/ai/gemini.js:282
+#: src/ai/gemini.js:283
 msgid "Response example"
 msgstr ""
 
-#: src/ai/gemini.js:283
+#: src/ai/gemini.js:284
 msgid "Request"
 msgstr ""
 
-#: src/ai/gemini.js:283
+#: src/ai/gemini.js:284
 msgid "Generate a command line that search for santos ferry crossing"
 msgstr ""
 
-#: src/ai/gemini.js:284
+#: src/ai/gemini.js:285
 msgid "JSON Response"
 msgstr ""
 
-#: src/ai/gemini.js:284
+#: src/ai/gemini.js:285
 msgid "Searching for santos boat crossing..."
 msgstr ""
 
-#: src/ai/gemini.js:284
+#: src/ai/gemini.js:285
 msgid "boat+crossing+santos"
 msgstr ""
 

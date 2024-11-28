@@ -262,6 +262,7 @@ export class GoogleGemini {
         if (!location || location === 'Undefined') {
             location = this.app._getLocation();
         }
+
         const user = `${_("Hi, I'm")} ${this.app.userSettings.ASSIST_NAME}. ${_("I'm from")} ${location} ${_('and today is')} ${date}`;
         const model = `${_('Hi! I am')} ${this.app.userSettings.ASSIST_NAME}. ${_('How can I help you today?')}`;
 
