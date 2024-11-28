@@ -4,7 +4,8 @@ import Clutter from 'gi://Clutter';
 import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
 
 export class Chat {
-    constructor() {
+    constructor(utils) {
+        this.utils = utils;
         this._create();
     }
 
@@ -120,6 +121,14 @@ export class Chat {
         responseBox.label.clutter_text.selectable = true;
         responseBox.label.clutter_text.hover = true;
         responseBox.label.clutter_text.justify = true;
+        responseBox.label.clutter_text.connect(
+            'button-release-event',
+            (_self, event) => {
+                if (event.button === 2) {
+                    this.utils.copyToClipboard(responseBox.label.text);
+                }
+            },
+        );
         this.responseChat = responseBox;
         return responseBox;
     }
