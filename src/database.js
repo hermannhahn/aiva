@@ -4,7 +4,7 @@ export class Database {
     constructor(app) {
         this.app = app;
         this.db = null;
-        this.dbPath = this.app.EXT_DIR;
+        this.dbPath = this.app.userSettings.HISTORY_FILE;
         this.initDatabase();
     }
 
