@@ -101,7 +101,7 @@ const Aiva = GObject.registerClass(
                 ),
                 AZURE_SPEECH_VOICE: settings.get_string('azure-speech-voice'),
                 GEMINI_API_KEY: settings.get_string('gemini-api-key'),
-                HISTORY_FILE: GLib.build_filenamev([EXT_DIR, 'history.json']),
+                HISTORY_FILE: GLib.build_filenamev([EXT_DIR, 'history.sqlite']),
                 LOCATION: settings.get_string('location'),
                 RECURSIVE_TALK: settings.get_boolean('log-history'),
                 TRANSPARENCY: settings.get_string('theme-transparency'),
@@ -137,11 +137,11 @@ const Aiva = GObject.registerClass(
 
             // load settings
             this._loadSettings();
-            GLib.setenv(
-                'LANGUAGE',
-                this.userSettings.AZURE_SPEECH_LANGUAGE,
-                true,
-            );
+            // GLib.setenv(
+            //     'LANGUAGE',
+            //     this.userSettings.AZURE_SPEECH_LANGUAGE,
+            //     true,
+            // );
             console.log('[AIVA] Settings loaded!');
 
             // create instances
