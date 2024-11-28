@@ -573,7 +573,7 @@ export class Utils {
             role: 'user',
             parts: [
                 {
-                    text: this.app.gemini.getTuneString(),
+                    text: this.app.gemini.getTuneString('user'),
                 },
             ],
         });
@@ -581,13 +581,7 @@ export class Utils {
             role: 'model',
             parts: [
                 {
-                    text:
-                        _('Hi! I am') +
-                        ' ' +
-                        this.app.userSettings.ASSIST_NAME +
-                        _(', your helpfull assistant.') +
-                        ' ' +
-                        _('How can I help you today?'),
+                    text: this.app.gemini.getTuneString('model'),
                 },
             ],
         });
