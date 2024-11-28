@@ -1,7 +1,6 @@
-import GLib from 'gi://GLib';
 import Sqlite from 'gi://Sqlite';
 
-class DatabaseManager {
+export class Database {
     constructor(app) {
         this.app = app;
         this.db = null;
@@ -111,13 +110,3 @@ class DatabaseManager {
         }
     }
 }
-
-// Exemplo de uso:
-const dbPath = GLib.build_filenamev([
-    GLib.get_user_data_dir(),
-    'my_extension',
-    'database.sqlite',
-]);
-
-const dbManager = new DatabaseManager(dbPath);
-dbManager.closeDatabase();
