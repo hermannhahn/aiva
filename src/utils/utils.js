@@ -179,7 +179,7 @@ export class Utils {
         this.app.extension.clipboard.set_text(St.ClipboardType.CLIPBOARD, text);
     }
 
-    copySelectedText(responseChat, copyButton) {
+    copySelectedText(responseChat, copyButton = null) {
         let selectedText = responseChat.label.clutter_text.get_selection();
         if (selectedText) {
             this.app.extension.clipboard.set_text(
