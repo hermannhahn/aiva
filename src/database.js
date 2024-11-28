@@ -24,7 +24,10 @@ class DatabaseManager {
             );
         `;
             this.db.exec(createHistoryTableQuery);
-            this.addToHistory(this.app.gemini.getTuneString(user), this.app.gemini.getTuneString(model));
+            this.addToHistory(
+                this.app.gemini.getTuneString(user),
+                this.app.gemini.getTuneString(model),
+            );
         } catch (error) {
             console.error('Error initializing database:', error);
         }
@@ -66,16 +69,28 @@ class DatabaseManager {
     addToHistory(user, model) {
         try {
             const insertQuery = `
-            INSERT INTO history (user, model)
-            VALUES (?, ?);
-        `;
+                INSERT INTO history (user, model)
+                VALUES (?, ?);
+            `;
             this.db.exec(insertQuery, [user, model]);
         } catch (error) {
             console.error('Error adding to history:', error);
         }
     }
 
+    // Edit location on id 1 in user string, change "Undefined" to this.app.userSettings.LOCATION
     editHistoryLocation(location) {
+        try {
+            const updateQuery = `
+            UPDATE history
+            SET user = REPLACE(user, 'Undefined', '${location}')
+            WHERE id = 1;
+        `;
+            this.db.exec(updateQuery);
+        } catch (error) {
+            console.error('Error editing history location:', error);
+        }
+    }
 
     cleanHistory() {
         try {
