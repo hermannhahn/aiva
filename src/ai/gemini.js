@@ -268,7 +268,7 @@ export class GoogleGemini {
             '. ' +
             _("I'm in") +
             ' ' +
-            this.app.userSettings.LOCATION +
+            location +
             ' ' +
             _('and today is') +
             ' ' +
