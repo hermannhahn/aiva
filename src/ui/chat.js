@@ -43,8 +43,6 @@ export class Chat {
 
         this.blackColor = Clutter.Color.from_string('black')[1];
         this.whiteColor = Clutter.Color.from_string('white')[1];
-
-        this._addItems();
     }
 
     addItems() {
