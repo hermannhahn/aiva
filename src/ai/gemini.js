@@ -89,7 +89,7 @@ export class GoogleGemini {
                     this.app.chat.editResponse(aiResponse);
 
                     // Add to history
-                    this.app.utils.addToHistory(question, aiResponse);
+                    this.app.database.addToHistory(question, aiResponse);
                 },
             );
         } catch (error) {
