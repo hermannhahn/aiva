@@ -125,7 +125,7 @@ export class Chat {
             'button-release-event',
             (_self, event) => {
                 if (event.button === 2) {
-                    this.utils.copySelectedText(responseBox);
+                    this.utils.copySelectedText(responseBox, this.copyButton);
                 }
             },
         );
