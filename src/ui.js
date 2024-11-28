@@ -136,22 +136,6 @@ export class UI {
                 },
             );
 
-            // transparency ok button
-            this.appearancemenu.transparencyButton.connect(
-                'clicked',
-                (_self) => {
-                    const transparency =
-                        this.appearancemenu.transparencyEntry.clutter_text.text;
-                    if (transparency === '' || isNaN(parseInt(transparency))) {
-                        return;
-                    }
-                    this.appearancemenu.transparencyEntry.clutter_text.set_text(
-                        transparency,
-                    );
-                    this.setTheme(transparency, this.app.userSettings.COLOR);
-                },
-            );
-
             // Connect color buttons
             this.appearancemenu.colorBlueButton.connect('clicked', () => {
                 this.setTheme(this.app.userSettings.TRANSPARENCY, '5, 5, 25');
