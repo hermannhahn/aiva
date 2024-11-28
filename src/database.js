@@ -2,8 +2,10 @@ import GLib from 'gi://GLib';
 import Sqlite from 'gi://Sqlite';
 
 class DatabaseManager {
-    constructor(dbPath) {
-        this.dbPath = dbPath;
+    constructor(app) {
+        this.app = app;
+        this.db = null;
+        this.dbPath = this.app.EXT_DIR;
         this.initDatabase();
     }
 
@@ -22,6 +24,7 @@ class DatabaseManager {
             );
         `;
             this.db.exec(createHistoryTableQuery);
+            this.addToHistory(this.app.gemini.getTuneString(user), this.app.gemini.getTuneString(model));
         } catch (error) {
             console.error('Error initializing database:', error);
         }
@@ -71,6 +74,8 @@ class DatabaseManager {
             console.error('Error adding to history:', error);
         }
     }
+
+    editHistoryLocation(location) {
 
     cleanHistory() {
         try {
