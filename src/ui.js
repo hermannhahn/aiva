@@ -17,7 +17,7 @@ export class UI {
         this.interface = new Interface();
         this.mainmenu = new MainMenu();
         this.appearancemenu = new AppearanceMenu();
-        this.chat = new Chat();
+        this.chat = new Chat(this.app.utils);
     }
 
     /**
