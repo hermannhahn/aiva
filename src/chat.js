@@ -27,6 +27,7 @@ export class Chat {
      */
     init() {
         this.app.log('Initializing chat...');
+        this.isOpen = false;
 
         // if recursive talk is enabled
         if (this.app.userSettings.RECURSIVE_TALK) {
@@ -64,6 +65,10 @@ export class Chat {
      * @param {boolean} [speech=true] - speech text
      */
     addQuestion(text, speech = false) {
+        if (!this.isOpen) {
+            this.container.add_child(this.box.actor);
+            this.isOpen = true;
+        }
         const inputChat = this.app.ui.chat.question();
         this.app.ui.chat.box.addMenuItem(inputChat);
         text = this.app.utils.questionFormat(text);
