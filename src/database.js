@@ -60,6 +60,31 @@ class DatabaseManager {
         }
     }
 
+    addToHistory(user, model) {
+        try {
+            const insertQuery = `
+            INSERT INTO history (user, model)
+            VALUES (?, ?);
+        `;
+            this.db.exec(insertQuery, [user, model]);
+        } catch (error) {
+            console.error('Error adding to history:', error);
+        }
+    }
+
+    cleanHistory() {
+        try {
+            // Delete everthing except the first user and model in the list
+            const deleteQuery = `
+            DELETE FROM history
+            WHERE id > (SELECT MIN(id) FROM history);
+        `;
+            this.db.exec(deleteQuery);
+        } catch (error) {
+            console.error('Error cleaning history:', error);
+        }
+    }
+
     closeDatabase() {
         if (this.db) {
             this.db.close();
