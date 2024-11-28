@@ -258,7 +258,7 @@ export class GoogleGemini {
     getTuneString() {
         const date = new Date();
         let location = this.app.userSettings.LOCATION;
-        if (!location || location === undefined) {
+        if (!location || location === 'Undefined') {
             location = this.app._getLocation();
         }
         const introduction =
