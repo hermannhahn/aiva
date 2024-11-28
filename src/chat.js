@@ -66,7 +66,7 @@ export class Chat {
      */
     addQuestion(text, speech = false) {
         if (!this.isOpen) {
-            this.app.ui.chat.container.add_child(this.app.ui.chat.box.actor);
+            this.app.ui.chat.addItems();
             this.isOpen = true;
         }
         const inputChat = this.app.ui.chat.question();
