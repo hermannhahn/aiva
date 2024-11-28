@@ -36,14 +36,6 @@ export class AppearanceMenu {
             hover: true,
         });
 
-        // Create transparency ok button
-        this.transparencyButton = new St.Button({
-            label: 'OK',
-            style_class: 'transparency-ok-icon',
-            toggle_mode: true,
-            can_focus: true,
-        });
-
         // Create colors label
         this.colorsLabel = new St.Label({
             text: 'Color: ',
@@ -104,7 +96,6 @@ export class AppearanceMenu {
     _add() {
         this.menu.add_child(this.transparencyLabel);
         this.menu.add_child(this.transparencyEntry);
-        this.menu.add_child(this.transparencyButton);
         this.menu.add_child(this.colorsLabel);
         this.menu.add_child(this.colorBlueButton);
         this.menu.add_child(this.colorRedButton);
