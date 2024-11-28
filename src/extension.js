@@ -26,6 +26,7 @@ import * as PanelMenu from 'resource:///org/gnome/shell/ui/panelMenu.js';
 
 // App
 import {Logger} from './utils/logger.js';
+import {Database} from './database.js';
 import {Audio} from './audio.js';
 import {Interpreter} from './interpreter.js';
 import {Chat} from './chat.js';
@@ -114,6 +115,7 @@ const Aiva = GObject.registerClass(
          */
         _createInstances() {
             this.logger = new Logger(DEBUG);
+            this.database = new Database(this);
             this.gemini = new GoogleGemini(this);
             this.azure = new MicrosoftAzure(this);
             this.audio = new Audio(this);
