@@ -160,7 +160,7 @@
     background-color: rgba(54, 54, 54, 0.5);
 }
 .input-chat {
-    background-color: rgba(35, 35, 35, 0.1);
+    background-color: rgba(35, 35, 35, 0.2);
     border-radius: 10px;
     padding-left: 10px;
     padding-right: 10px;
@@ -174,11 +174,11 @@
     margin-right: 10px;
 }
 .input-chat:hover {
-    background-color: rgba(35, 35, 35, 0.2);
+    background-color: rgba(35, 35, 35, 0.3);
 }
 .copy-icon {
     background-image: url('assets/icon_copy.png');
-    background-color: rgba(35, 35, 35, 0.1);
+    background-color: rgba(35, 35, 75, 0.3);
     background-size: 26px;
     width: 24px;
     height: 24px;
@@ -188,7 +188,7 @@
 }
 .copy-icon:hover {
     background-image: url('assets/icon_copy.png');
-    background-color: rgba(34, 34, 34, 0.2);
+    background-color: rgba(34, 34, 34, 0.5);
 }
 .copy-icon:active {
     background-image: url('assets/icon_check.png');
