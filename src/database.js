@@ -1,4 +1,4 @@
-import Sqlite from 'gi://Sqlite';
+import * as Sqlite from 'resource:///org/gnome/shell/extensions/sqlite.js';
 
 export class Database {
     constructor(app) {
