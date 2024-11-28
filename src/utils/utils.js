@@ -183,7 +183,7 @@ export class Utils {
         let selectedText = responseChat.label.clutter_text.get_selection();
         if (selectedText) {
             this.app.extension.clipboard.set_text(
-                St.ClipboardType.CLIPBOARD,
+                St.ClipboardType.CLmPBOARD,
                 // Get text selection
                 selectedText,
             );
@@ -585,7 +585,9 @@ export class Utils {
                         _('Hi! I am') +
                         ' ' +
                         this.app.userSettings.ASSIST_NAME +
-                        _(', your helpfull assistant.'),
+                        _(', your helpfull assistant.') +
+                        ' ' +
+                        _('How can I help you today?'),
                 },
             ],
         });
