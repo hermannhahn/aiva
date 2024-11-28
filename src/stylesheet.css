@@ -188,7 +188,7 @@
 }
 .copy-icon:hover {
     background-image: url('assets/icon_copy.png');
-    background-color: rgba(34, 34, 34, 0.5);
+    background-color: rgba(34, 34, 75, 0.5);
 }
 .copy-icon:active {
     background-image: url('assets/icon_check.png');
