@@ -39,8 +39,15 @@ export class GoogleGemini {
         try {
             this.app.log('Getting response...');
             // Create http session
+            const models = [
+                'gemini-1.0-pro',
+                'gemini-1.5-flash-002',
+                'gemini-1.5-pro',
+            ];
+            const model = models[0];
+
             let _httpSession = new Soup.Session();
-            let url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.0-pro:generateContent?key=${this.GEMINI_API_KEY}`;
+            let url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${this.GEMINI_API_KEY}`;
 
             // Send async request
             var body = this.buildBody(question);
