@@ -253,37 +253,22 @@ export class GoogleGemini {
 
     /**
      * @description create tune string
+     * @param {string} [role='all'] type the role or leave empty
      * @returns {string} tune text
      */
-    getTuneString() {
+    getTuneString(role = 'user') {
         const date = new Date();
         let location = this.app.userSettings.LOCATION;
         if (!location || location === 'Undefined') {
             location = this.app._getLocation();
         }
-        const introduction =
-            _("Hi, I'm") +
-            ' ' +
-            this.app.userSettings.USERNAME +
-            '. ' +
-            _("I'm in") +
-            ' ' +
-            location +
-            ' ' +
-            _('and today is') +
-            ' ' +
-            date;
-        // const instructions =
-        //     _('If any of my interactions includes') +
-        //     ' ' +
-        //     _('a request to open apps or websites') +
-        //     ', ' +
-        //     _('ignore the request and returns') +
-        //     ': ' +
-        //     "'IdoNotRunCommands'" +
-        //     ' ' +
-        //     _('otherwise respond normally.');
-        return introduction;
+        const user = `${_("Hi, I'm")} ${this.app.userSettings.ASSIST_NAME}. ${_("I'm from")} ${location} ${_('and today is')} ${date}`;
+        const model = `${_('Hi! I am')} ${this.app.userSettings.ASSIST_NAME}. ${_('How can I help you today?')}`;
+
+        if (role === 'user') {
+            return user;
+        }
+        return model;
     }
 
     commandRequest(request) {
