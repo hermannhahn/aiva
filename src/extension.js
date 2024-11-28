@@ -283,6 +283,7 @@ export default class AivaExtension extends Extension {
             global.display.disconnect(this._shortcutBinding);
             this._shortcutBinding = null;
         }
+        this._app.database.closeDatabase();
         this._app.log('Disabling extension...');
         this._app.destroy();
         this._app = null;
