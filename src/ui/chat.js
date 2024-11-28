@@ -121,14 +121,11 @@ export class Chat {
         responseBox.label.clutter_text.selectable = true;
         responseBox.label.clutter_text.hover = true;
         responseBox.label.clutter_text.justify = true;
-        responseBox.label.clutter_text.connect(
-            'button-release-event',
-            (_self, event) => {
-                if (event.button === 2) {
-                    this.utils.copySelectedText(responseBox, this.copyButton);
-                }
-            },
-        );
+        responseBox.connect('button-release-event', (_self, event) => {
+            if (event.button === 2) {
+                this.utils.copySelectedText(responseBox, this.copyButton);
+            }
+        });
         this.responseChat = responseBox;
         return responseBox;
     }
