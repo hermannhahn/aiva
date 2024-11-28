@@ -116,7 +116,7 @@ export class UI {
                 'activate',
                 (_self) => {
                     this.appearancemenu.transparencyEntry.clutter_text.set_text(
-                        '',
+                        ' ',
                     );
                 },
             );
