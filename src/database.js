@@ -1,5 +1,5 @@
-const GLib = imports.gi.GLib;
-const Sqlite = imports.sqlite; // Certifique-se de usar um módulo SQLite compatível com seu ambiente
+import GLib from 'gi://GLib';
+import Sqlite from 'gi://Sqlite';
 
 class DatabaseManager {
     constructor(dbPath) {
