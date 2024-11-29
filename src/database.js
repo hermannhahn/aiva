@@ -57,8 +57,29 @@ export class Database {
         try {
             const query = 'SELECT user, model FROM history';
             const history = this.executeSql(query);
+            let result = [];
             if (history) {
-                return JSON.parse(history);
+                if (this.app.userSettings.RECURSIVE_TALK) {
+                    for (let i = 0; i < history.length; i) {
+                        result.push({
+                            role: 'user',
+                            parts: [
+                                {
+                                    text: history[i].user,
+                                },
+                            ],
+                        });
+                        result.push({
+                            role: 'model',
+                            parts: [
+                                {
+                                    text: history[i].model,
+                                },
+                            ],
+                        });
+                    }
+                    return result;
+                }
             }
             return [];
         } catch (error) {
