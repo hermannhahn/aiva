@@ -122,36 +122,6 @@ export class Database {
         }
     }
 
-    editHistoryLocation(location) {
-        try {
-            // Define o ID e a palavra a ser substituída
-            const id = 1; // ID fixo para este caso
-            const targetWord = 'Undefined'; // Palavra a ser substituída
-
-            // Obtém o valor atual da coluna "user"
-            const selectQuery = `SELECT user FROM history WHERE id = 1`;
-            const currentValue = this.executeSql(selectQuery);
-
-            // Verifica se foi retornado algum valor
-            if (!currentValue) {
-                throw new Error(`No user value found for ID ${id}`);
-            }
-
-            // Substitui a palavra no texto
-            const updatedValue = currentValue.replace(targetWord, location);
-
-            // Atualiza o valor no banco de dados
-            const updateQuery = `UPDATE history SET user = '${updatedValue.replace(/'/g, "''")}' WHERE id = ${id}`;
-            this.executeSql(updateQuery);
-
-            this.app.log(`User value updated successfully for ID ${id}.`);
-            return true;
-        } catch (error) {
-            this.app.log(`Error updating user value: ${error.message}`);
-            return false;
-        }
-    }
-
     async cleanHistory() {
         try {
             const deleteQuery = `
