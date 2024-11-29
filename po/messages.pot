@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-29 20:07-0300\n"
+"POT-Creation-Date: 2024-11-29 20:25-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,7 +27,7 @@ msgstr ""
 
 #: src/ai/azure.js:69 src/ai/azure.js:82 src/ai/azure.js:124
 #: src/ai/azure.js:133 src/ai/gemini.js:106 src/ai/gemini.js:198
-#: src/utils/utils.js:199
+#: src/utils/utils.js:213
 msgid "Sorry, I'm having connection trouble. Please try again."
 msgstr ""
 
@@ -262,31 +262,31 @@ msgstr ""
 msgid "Give me a moment to sort this out..."
 msgstr ""
 
-#: src/utils/utils.js:99
+#: src/utils/utils.js:104
 msgid "[ Selected Copied ]"
 msgstr ""
 
-#: src/utils/utils.js:113
+#: src/utils/utils.js:118
 msgid "[ Copied ]"
 msgstr ""
 
-#: src/utils/utils.js:179
+#: src/utils/utils.js:193
 msgid "Of course, searching..."
 msgstr ""
 
-#: src/utils/utils.js:182
+#: src/utils/utils.js:196
 msgid "Sure, searching..."
 msgstr ""
 
-#: src/utils/utils.js:194
+#: src/utils/utils.js:208
 msgid "Here are the main news"
 msgstr ""
 
-#: src/utils/utils.js:258
+#: src/utils/utils.js:288
 msgid "Leitura finalizada!"
 msgstr ""
 
-#: src/utils/utils.js:262 src/utils/utils.js:264
+#: src/utils/utils.js:292 src/utils/utils.js:294
 msgid "Failed to get text from clipboard"
 msgstr ""
 

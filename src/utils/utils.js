@@ -79,53 +79,63 @@ export class Utils {
      * @param {object} copyButton
      */
     copySelectedText(inputChat, responseChat, copyButton = null) {
+        // get text selection
         let qselectedText = inputChat.label.clutter_text.get_selection();
         let rselectedText = responseChat.label.clutter_text.get_selection();
+
+        // set if selection is from question or response
         let selectedText = null;
         if (rselectedText) {
             selectedText = rselectedText;
         } else if (qselectedText) {
             selectedText = qselectedText;
         }
+
+        // if there is a selected text
         if (selectedText) {
+            // copy selected text
             this.app.extension.clipboard.set_text(
                 St.ClipboardType.CLIPBOARD,
-                // Get text selection
                 selectedText,
             );
-            // Create label
+            // If the button is clicked
             if (copyButton) {
                 copyButton.label.clutter_text.set_markup(
                     _('[ Selected Copied ]'),
                 );
                 GLib.timeout_add(GLib.PRIORITY_DEFAULT, 3000, () => {
                     copyButton.label.clutter_text.set_markup('');
-                    return false; // Para garantir que o timeout execute apenas uma vez
+                    return false;
                 });
             }
+            // if not, copy all response
         } else {
             this.app.extension.clipboard.set_text(
                 St.ClipboardType.CLIPBOARD,
-                // Get text selection
                 responseChat.label.text,
             );
             if (copyButton) {
                 copyButton.label.clutter_text.set_markup(_('[ Copied ]'));
                 GLib.timeout_add(GLib.PRIORITY_DEFAULT, 3000, () => {
                     copyButton.label.clutter_text.set_markup('');
-                    return false; // Para garantir que o timeout execute apenas uma vez
+                    return false;
                 });
             }
             this.app.log(`Copied: ${responseChat.label.text}`);
         }
     }
 
+    /**
+     * @description fetch url rss
+     * @param {string} url
+     * @returns list
+     */
     fetchRSS(url) {
         return new Promise((resolve, reject) => {
             let session = new Soup.Session();
             let message = Soup.Message.new('GET', url);
 
-            // Envia a requisição de forma assíncrona e lê a resposta
+            // Send requisition
             session.send_and_read_async(
                 message,
                 GLib.PRIORITY_DEFAULT,
@@ -137,11 +147,10 @@ export class Utils {
                             responseBytes.get_data(),
                         );
 
-                        // Extrai as 10 primeiras notícias usando regex
+                        // Extract the first 10 news
                         let newsItems = [];
                         let itemRegex = /<item>(.*?)<\/item>/g;
                         let match;
-
                         while (
                             (match = itemRegex.exec(responseText)) !== null &&
                             newsItems.length < 10
@@ -155,6 +164,8 @@ export class Utils {
 
                             newsItems.push(title);
                         }
+
+                        // returns news items
                         resolve(newsItems);
                     } catch (error) {
                         reject(
@@ -168,7 +179,10 @@ export class Utils {
         });
     }
 
-    // Exemplo de uso da função
+    /**
+     * @description add to chat news from google
+     * @param {string} topic
+     */
     async readNews(topic = undefined) {
         try {
             let url = '';
@@ -201,6 +215,11 @@ export class Utils {
         }
     }
 
+    /**
+     * @description invert string, category first, news later.
+     * @param {string} newsString
+     * @returns inverted string
+     */
     swapNewspaperAndNews(newsString) {
         const newsArray = newsString.split('\n');
         for (let i = 0; i < newsArray.length; i++) {
@@ -212,6 +231,10 @@ export class Utils {
         return newsArray.join('\n');
     }
 
+    /**
+     * @description remove gnome notification by title
+     * @param {string} title
+     */
     removeNotificationByTitle(title) {
         // Obtenha todas as notificações ativas
         // eslint-disable-next-line no-unused-vars
@@ -234,7 +257,11 @@ export class Utils {
         }
     }
 
-    // Função para converter arquivo de áudio em base64
+    /**
+     * @description converts audio to base64
+     * @param {string} filePath
+     * @returns base64
+     */
     encodeFileToBase64(filePath) {
         try {
             const file = Gio.File.new_for_path(filePath);
@@ -246,6 +273,9 @@ export class Utils {
         }
     }
 
+    /**
+     * @description read clipboard text
+     */
     readClipboardText() {
         return new Promise((resolve, reject) => {
             this.app.extension.clipboard.get_text(
