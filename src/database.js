@@ -126,17 +126,33 @@ export class Database {
         }
     }
 
-    // Edit location on id 1 in user string, change "Undefined" to this.app.userSettings.LOCATION
-    async editHistoryLocation(location) {
+    editHistoryLocation(location) {
         try {
-            const updateQuery = `
-            UPDATE history
-            SET user = REPLACE(user, 'Undefined', '${location}')
-            WHERE id = 1;
-        `;
-            await this.executeSql(updateQuery);
+            // Define o ID e a palavra a ser substituída
+            const id = 1; // ID fixo para este caso
+            const targetWord = 'Undefined'; // Palavra a ser substituída
+
+            // Obtém o valor atual da coluna "user"
+            const selectQuery = `SELECT user FROM history WHERE id = 1`;
+            const currentValue = this.executeSql(selectQuery);
+
+            // Verifica se foi retornado algum valor
+            if (!currentValue) {
+                throw new Error(`No user value found for ID ${id}`);
+            }
+
+            // Substitui a palavra no texto
+            const updatedValue = currentValue.replace(targetWord, location);
+
+            // Atualiza o valor no banco de dados
+            const updateQuery = `UPDATE history SET user = '${updatedValue.replace(/'/g, "''")}' WHERE id = ${id}`;
+            this.executeSql(updateQuery);
+
+            this.app.log(`User value updated successfully for ID ${id}.`);
+            return true;
         } catch (error) {
-            console.error('Error editing history location:', error);
+            this.app.log(`Error updating user value: ${error.message}`);
+            return false;
         }
     }
 
