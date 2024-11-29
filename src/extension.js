@@ -89,8 +89,7 @@ const Aiva = GObject.registerClass(
                 location === 'undefined' ||
                 location === 'Undefined'
             ) {
-                location = this._getLocation();
-                settings.set_string('location', location);
+                this._setLocation();
             }
 
             // settings
@@ -208,7 +207,7 @@ const Aiva = GObject.registerClass(
             this.logger.logError(message);
         }
 
-        _getLocation() {
+        _setLocation() {
             try {
                 let url = 'https://api.myip.com';
                 let _httpSession = new Soup.Session();
@@ -222,7 +221,6 @@ const Aiva = GObject.registerClass(
                         let decoder = new TextDecoder('utf-8');
                         let response = decoder.decode(bytes.get_data());
                         const res = JSON.parse(response);
-                        console.log('Response: ' + res);
                         const ip = res.ip;
                         console.log('IP: ' + ip);
                         const country = res.country;
