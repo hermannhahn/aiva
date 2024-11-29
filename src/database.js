@@ -53,32 +53,37 @@ export class Database {
         }
     }
 
-    getHistory() {
+    async getHistory() {
         try {
             const query = 'SELECT user, model FROM history';
-            const result = this.executeSql(query);
+            const result = await this.executeSql(query);
             const history = [];
-            while (result.next()) {
-                history.push(
-                    {
-                        role: 'user',
-                        parts: [
+            if (result) {
+                const resultRows = result.split('\n').slice(1, -1);
+                for (const row of resultRows) {
+                    const values = row.split('|');
+                    if (values.length === 2) {
+                        history.push(
                             {
-                                text: result.get_value(0),
+                                role: 'user',
+                                parts: [
+                                    {
+                                        text: values[0],
+                                    },
+                                ],
                             },
-                        ],
-                    },
-                    {
-                        role: 'model',
-                        parts: [
                             {
-                                text: result.get_value(1),
+                                role: 'model',
+                                parts: [
+                                    {
+                                        text: values[1],
+                                    },
+                                ],
                             },
-                        ],
-                    },
-                );
+                        );
+                    }
+                }
             }
-            result.finalize();
             return history;
         } catch (error) {
             console.error('Error getting history:', error);
@@ -86,13 +91,13 @@ export class Database {
         }
     }
 
-    addToHistory(user, model) {
+    async addToHistory(user, model) {
         try {
             const insertQuery = `
                 INSERT INTO history (user, model)
                 VALUES (?, ?);
             `;
-            this.executeSql(insertQuery, [user, model]);
+            await this.executeSql(insertQuery, [user, model]);
         } catch (error) {
             console.error('Error adding to history:', error);
         }
