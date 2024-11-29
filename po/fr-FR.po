@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-28 16:03-0300\n"
+"POT-Creation-Date: 2024-11-29 15:06-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language fr-FR\n"
@@ -156,101 +156,101 @@ msgstr ""
 msgid "Possible harassment in the question or answer."
 msgstr ""
 
-#: src/ai/gemini.js:273
+#: src/ai/gemini.js:269
 msgid "Hi, I'm"
 msgstr ""
 
-#: src/ai/gemini.js:273
+#: src/ai/gemini.js:269
 msgid "I'm from"
 msgstr ""
 
-#: src/ai/gemini.js:273
+#: src/ai/gemini.js:269
 msgid "and today is"
 msgstr ""
 
-#: src/ai/gemini.js:274
+#: src/ai/gemini.js:270
 msgid "Hi! I am"
 msgstr ""
 
-#: src/ai/gemini.js:274
+#: src/ai/gemini.js:270
 msgid "How can I help you today?"
 msgstr ""
 
-#: src/ai/gemini.js:284
+#: src/ai/gemini.js:280
 msgid "Generate a command line for the request"
 msgstr ""
 
-#: src/ai/gemini.js:285
+#: src/ai/gemini.js:281
 msgid "Return a JSON with the following keys"
 msgstr ""
 
-#: src/ai/gemini.js:286
+#: src/ai/gemini.js:282
 msgid ""
 "true If it is possible to achieve the purpose of the request with a command "
 "line."
 msgstr ""
 
-#: src/ai/gemini.js:286
+#: src/ai/gemini.js:282
 msgid "a Linux Ubuntu terminal command line to the request"
 msgstr ""
 
-#: src/ai/gemini.js:286
+#: src/ai/gemini.js:282
 msgid "false otherwise"
 msgstr ""
 
-#: src/ai/gemini.js:287
+#: src/ai/gemini.js:283
 msgid "text to be associated with the command line"
 msgstr ""
 
-#: src/ai/gemini.js:287
+#: src/ai/gemini.js:283
 msgid "informing action in success case"
 msgstr ""
 
-#: src/ai/gemini.js:287
+#: src/ai/gemini.js:283
 msgid "or failure text"
 msgstr ""
 
-#: src/ai/gemini.js:288
+#: src/ai/gemini.js:284
 msgid "command line for linux ubuntu that fulfills the request"
 msgstr ""
 
-#: src/ai/gemini.js:289
+#: src/ai/gemini.js:285
 msgid "Rules for commandline value"
 msgstr ""
 
-#: src/ai/gemini.js:289
+#: src/ai/gemini.js:285
 msgid "Do not use sudo"
 msgstr ""
 
-#: src/ai/gemini.js:289
+#: src/ai/gemini.js:285
 msgid "Prefer browser, firefox and google websites"
 msgstr ""
 
-#: src/ai/gemini.js:289
+#: src/ai/gemini.js:285
 msgid "Never generate destructive commands"
 msgstr ""
 
-#: src/ai/gemini.js:290
+#: src/ai/gemini.js:286
 msgid "Response example"
 msgstr ""
 
-#: src/ai/gemini.js:291
+#: src/ai/gemini.js:287
 msgid "Request"
 msgstr ""
 
-#: src/ai/gemini.js:291
+#: src/ai/gemini.js:287
 msgid "Generate a command line that search for santos ferry crossing"
 msgstr ""
 
-#: src/ai/gemini.js:292
+#: src/ai/gemini.js:288
 msgid "JSON Response"
 msgstr ""
 
-#: src/ai/gemini.js:292
+#: src/ai/gemini.js:288
 msgid "Searching for santos boat crossing..."
 msgstr ""
 
-#: src/ai/gemini.js:292
+#: src/ai/gemini.js:288
 msgid "boat+crossing+santos"
 msgstr ""
 
