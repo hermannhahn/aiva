@@ -22,14 +22,12 @@ export class Utils {
     }
 
     /**
-     *
-     * @description // Format input chat
+     * @description format question
      * @param {string} text
-     * @returns {string} formated text
+     * @returns {string} formated question text
      */
     questionFormat(text) {
         text = this._pangoConvert(text);
-        // text = this._insertLineBreaks(text);
         text = text
             .replace(/&/g, '\u0026')
             .replace(/</g, '\u003c')
@@ -42,12 +40,21 @@ export class Utils {
         return text;
     }
 
+    /**
+     * @description format response
+     * @param {string} text
+     * @returns {string} formated response text
+     */
     responseFormat(text) {
         text = this._pangoConvert(text);
-        // text = this._insertLineBreaks(text);
         return text;
     }
 
+    /**
+     * @description create gnome notify
+     * @param {string} text
+     * @param {string} [type='normal']
+     */
     gnomeNotify(text, type = 'normal') {
         const command =
             'notify-send --urgency=' +
@@ -57,12 +64,29 @@ export class Utils {
         this.executeCommand(command);
     }
 
+    /**
+     * @description copy text to clipboard
+     * @param {string} text
+     */
     copyToClipboard(text) {
         this.app.extension.clipboard.set_text(St.ClipboardType.CLIPBOARD, text);
     }
 
-    copySelectedText(responseChat, copyButton = null) {
-        let selectedText = responseChat.label.clutter_text.get_selection();
+    /**
+     * @description copy selected text to clipboard
+     * @param {object} inputChat
+     * @param {object} responseChat
+     * @param {object} copyButton
+     */
+    copySelectedText(inputChat, responseChat, copyButton = null) {
+        let qselectedText = inputChat.label.clutter_text.get_selection();
+        let rselectedText = responseChat.label.clutter_text.get_selection();
+        let selectedText = null;
+        if (rselectedText) {
+            selectedText = rselectedText;
+        } else if (qselectedText) {
+            selectedText = qselectedText;
+        }
         if (selectedText) {
             this.app.extension.clipboard.set_text(
                 St.ClipboardType.CLIPBOARD,
@@ -247,7 +271,7 @@ export class Utils {
     }
 
     /**
-     *
+     * @description extract code and tts from text
      * @param {string} text
      * @returns {object} { code, tts }
      */

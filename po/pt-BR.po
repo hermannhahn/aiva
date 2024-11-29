@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-29 19:45-0300\n"
+"POT-Creation-Date: 2024-11-29 20:05-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -27,7 +27,7 @@ msgstr "leia o texto na área de transferência"
 
 #: src/ai/azure.js:69 src/ai/azure.js:82 src/ai/azure.js:124
 #: src/ai/azure.js:133 src/ai/gemini.js:106 src/ai/gemini.js:198
-#: src/utils/utils.js:175
+#: src/utils/utils.js:199
 #, fuzzy
 msgid "Sorry, I'm having connection trouble. Please try again."
 msgstr "Estou tendo problemas de conexão. Por favor, tente novamente."
@@ -278,33 +278,33 @@ msgstr "Estou pensando nisso..."
 msgid "Give me a moment to sort this out..."
 msgstr "Me dê um momento para organizar isso..."
 
-#: src/utils/utils.js:75
+#: src/utils/utils.js:99
 #, fuzzy
 msgid "[ Selected Copied ]"
 msgstr "Selecione a voz"
 
-#: src/utils/utils.js:89
+#: src/utils/utils.js:113
 msgid "[ Copied ]"
 msgstr "[ Copiado ]"
 
-#: src/utils/utils.js:155
+#: src/utils/utils.js:179
 msgid "Of course, searching..."
 msgstr "Com certeza, pesquisando..."
 
-#: src/utils/utils.js:158
+#: src/utils/utils.js:182
 msgid "Sure, searching..."
 msgstr "Claro, pesquisando..."
 
-#: src/utils/utils.js:170
+#: src/utils/utils.js:194
 #, fuzzy
 msgid "Here are the main news"
 msgstr "leia as notícias"
 
-#: src/utils/utils.js:234
+#: src/utils/utils.js:258
 msgid "Leitura finalizada!"
 msgstr "Leitura finalizada!"
 
-#: src/utils/utils.js:238 src/utils/utils.js:240
+#: src/utils/utils.js:262 src/utils/utils.js:264
 msgid "Failed to get text from clipboard"
 msgstr "Falha ao obter texto da área de transferência"
 
