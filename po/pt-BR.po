@@ -75,7 +75,7 @@ msgstr "Olá, eu sou"
 
 #: src/ai/gemini.js:269
 msgid "I'm from"
-msgstr ""
+msgstr "Eu sou de"
 
 #: src/ai/gemini.js:269
 msgid "and today is"
@@ -84,16 +84,16 @@ msgstr "e hoje é"
 #: src/ai/gemini.js:270
 #, fuzzy
 msgid "Hi! I am"
-msgstr "Olá, eu sou "
+msgstr "Olá, eu sou"
 
 #: src/ai/gemini.js:270
 msgid "How can I help you today?"
-msgstr ""
+msgstr "Como posso ajudar hoje?"
 
 #: src/ai/gemini.js:280
 #, fuzzy
 msgid "Generate a command line for the request"
-msgstr "Gerar uma linha de comando para esta solicitação"
+msgstr "Gere uma linha de comando para esta solicitação"
 
 #: src/ai/gemini.js:281
 msgid "Return a JSON with the following keys"
@@ -393,7 +393,7 @@ msgstr "abra o site"
 #: src/commands.js:28
 #, fuzzy
 msgid "open this site"
-msgstr "abra o site"
+msgstr "abre o site"
 
 #: src/commands.js:29
 msgid "open the website"
@@ -405,7 +405,7 @@ msgstr "abrir site"
 
 #: src/commands.js:31
 msgid "open online page"
-msgstr ""
+msgstr "abre a página"
 
 #: src/commands.js:32
 #, fuzzy
