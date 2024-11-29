@@ -227,6 +227,7 @@ const Aiva = GObject.registerClass(
                         this.userSettings.LOCATION = country;
                         this.settings.set_string('location', country);
                         console.log('Location: ' + country);
+                        this.app.database.editHistoryLocation(country);
                         return country;
                     },
                 );
