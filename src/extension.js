@@ -195,7 +195,7 @@ const Aiva = GObject.registerClass(
             this.logger.logError(message);
         }
 
-        _setLocation() {
+        setLocation() {
             try {
                 let url = 'https://api.myip.com';
                 let _httpSession = new Soup.Session();
