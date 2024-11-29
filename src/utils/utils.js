@@ -84,7 +84,7 @@ export class Utils {
         let selectedText = responseChat.label.clutter_text.get_selection();
         if (selectedText) {
             this.app.extension.clipboard.set_text(
-                St.ClipboardType.CLmPBOARD,
+                St.ClipboardType.CLIPBOARD,
                 // Get text selection
                 selectedText,
             );
