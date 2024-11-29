@@ -44,17 +44,20 @@ export class Interpreter {
 
     _slashCommands(text) {
         if (text.startsWith('/help')) {
-            this.app.chat.add(`
+            this.app.chat.editResponse(`
 HELP
 
 /settings   - Open settings
 /help       - Show this help
                 `);
+            return;
         }
 
         if (text.startsWith('/settings')) {
             this.app.openSettings();
+            return;
         }
+        this.app.chat.editResponse(_('Invalid command'));
     }
 
     _isDatabaseCommand(text) {
@@ -64,18 +67,46 @@ HELP
         const commands = {
             readClipboardText: [
                 _('read this text'),
+                _('please read this text'),
+                _('can you read this text?'),
                 _('read the text'),
+                _('please read the text'),
                 _('read the clipboard'),
+                _('please read the clipboard'),
+                _('can you read the clipboard?'),
                 _('read copied text'),
+                _('please read the copied text'),
                 _('read clipboard text'),
+                _('please read clipboard text'),
                 _('read this clipboard'),
+                _('can you read this clipboard?'),
+                _('read text from clipboard'),
+                _('please read text from clipboard'),
+                _('read the text from clipboard'),
                 _('read text in memory'),
-                _('read memorised text'),
+                _('please read text in memory'),
+                _('read memorized text'),
+                _('please read the memorized text'),
                 _('read for me'),
+                _('can you read for me?'),
                 _('read this for me'),
+                _('please read this for me'),
                 _('read text for me'),
+                _('could you read the text for me?'),
                 _('read this please'),
+                _('please read this'),
+                _('could you please read this?'),
                 _('you can read now'),
+                _('please read what’s copied'),
+                _('read what’s on the clipboard'),
+                _('read the copied content'),
+                _('please read the copied content'),
+                _('read the clipboard content'),
+                _('can you read what’s copied?'),
+                _('read the copied message'),
+                _('please read the copied message'),
+                _('read this text from memory'),
+                _('please read this text from memory'),
             ],
             openSite: [
                 _('open the site'),
