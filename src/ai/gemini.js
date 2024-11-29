@@ -302,6 +302,7 @@ ${_('JSON Response')}: {success: true, response: "${_('Searching for santos boat
      */
     buildBody(text) {
         const history = this.app.database.getHistory();
+        this.app.log(`History: ${history}`);
         if (history.length === 0) {
             this.app.log('No history found.');
             return this.buildNoHistoryBody(text);
