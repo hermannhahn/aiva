@@ -96,22 +96,6 @@ const Aiva = GObject.registerClass(
                 COLOR: settings.get_string('theme-color'),
                 USERNAME: username,
             };
-
-            // location
-            let location = settings.get_string('location');
-            if (
-                location === '' ||
-                location === null ||
-                location === undefined ||
-                location === 'undefined' ||
-                location === 'Undefined'
-            ) {
-                this.app.log('Location not set. Getting location...');
-                this._setLocation();
-            } else {
-                this.app.log('Location set to ' + location);
-                this.userSettings.LOCATION = location;
-            }
         }
 
         /**
@@ -146,6 +130,22 @@ const Aiva = GObject.registerClass(
             //     this.userSettings.AZURE_SPEECH_LANGUAGE,
             //     true,
             // );
+            // location
+            let location = this.extension.settings.get_string('location');
+            if (
+                location === '' ||
+                location === null ||
+                location === undefined ||
+                location === 'undefined' ||
+                location === 'Undefined'
+            ) {
+                this.app.log('Location not set. Getting location...');
+                this._setLocation();
+            } else {
+                this.app.log('Location set to ' + location);
+                this.userSettings.LOCATION = location;
+            }
+
             console.log('[AIVA] Settings loaded!');
 
             // create instances
