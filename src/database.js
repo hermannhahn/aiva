@@ -101,7 +101,7 @@ export class Database {
         try {
             const insertQuery = `
                 INSERT INTO history (user, model)
-                VALUES (?, ?, ?);
+                VALUES (?, ?);
             `;
             await this.executeSql(insertQuery, [user, model]);
         } catch (error) {
