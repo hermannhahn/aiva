@@ -31,10 +31,6 @@ msgstr ""
 msgid "Sorry, I'm having connection trouble. Please try again."
 msgstr ""
 
-#: src/ai/azure.js:150
-msgid "⏳"
-msgstr ""
-
 #: src/ai/azure.js:159 src/ai/azure.js:182 src/ai/azure.js:196
 msgid "Transcribe error!"
 msgstr ""

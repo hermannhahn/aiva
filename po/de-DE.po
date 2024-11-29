@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-29 17:22-0300\n"
+"POT-Creation-Date: 2024-11-29 17:23-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language de-DE\n"
@@ -28,10 +28,6 @@ msgstr ""
 #: src/ai/azure.js:133 src/ai/gemini.js:106 src/ai/gemini.js:198
 #: src/utils/utils.js:194
 msgid "Sorry, I'm having connection trouble. Please try again."
-msgstr ""
-
-#: src/ai/azure.js:150
-msgid "⏳"
 msgstr ""
 
 #: src/ai/azure.js:159 src/ai/azure.js:182 src/ai/azure.js:196
