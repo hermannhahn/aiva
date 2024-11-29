@@ -12,7 +12,7 @@ export class Database {
     executeSql(query) {
         try {
             const subprocess = new Gio.Subprocess({
-                argv: ['sqlite3', this.dbPath, query],
+                argv: ['sqlite3', '-separator', '|', this.dbPath, query],
                 flags:
                     Gio.SubprocessFlags.STDOUT_PIPE |
                     Gio.SubprocessFlags.STDERR_PIPE,
@@ -28,6 +28,61 @@ export class Database {
         } catch (error) {
             console.error('Error executing SQL query:', error);
             return null;
+        }
+    }
+
+    getHistory() {
+        try {
+            const query = 'SELECT user, model FROM history';
+            const rawResult = this.executeSql(query);
+
+            // Verifica se há resultado
+            if (!rawResult || typeof rawResult !== 'string') {
+                console.warn('No results from query:', query);
+                return [];
+            }
+
+            // Processa o resultado bruto para transformá-lo em objetos
+            const history = rawResult
+                .split('\n') // Divide as linhas
+                .map((line) => {
+                    const [user, model] = line.split('|'); // Supondo que '|' é o delimitador
+                    if (!user || !model) {
+                        console.warn('Incomplete data row:', line);
+                        return null; // Linha inválida
+                    }
+                    return {user, model};
+                })
+                .filter(Boolean); // Remove linhas inválidas
+
+            // Retorna vazio se não houver histórico
+            if (history.length === 0) {
+                console.warn('No valid history entries found.');
+                return [];
+            }
+
+            // Mapeia o histórico para o formato esperado
+            return history.flatMap((row) => [
+                {
+                    role: 'user',
+                    parts: [
+                        {
+                            text: row.user || '',
+                        },
+                    ],
+                },
+                {
+                    role: 'model',
+                    parts: [
+                        {
+                            text: row.model || '',
+                        },
+                    ],
+                },
+            ]);
+        } catch (error) {
+            console.error('Error getting history:', error);
+            return [];
         }
     }
 
@@ -68,40 +123,6 @@ export class Database {
             );
         } catch (error) {
             console.error('Error initializing database:', error);
-        }
-    }
-
-    getHistory() {
-        try {
-            const query = 'SELECT user, model FROM history';
-            const history = this.executeSql(query);
-            let result = [];
-            if (history) {
-                if (this.app.userSettings.RECURSIVE_TALK) {
-                    for (const row of history) {
-                        result.push({
-                            role: 'user',
-                            parts: [
-                                {
-                                    text: row.user,
-                                },
-                            ],
-                        });
-                        result.push({
-                            role: 'model',
-                            parts: [
-                                {
-                                    text: row.model,
-                                },
-                            ],
-                        });
-                    }
-                }
-            }
-            return result;
-        } catch (error) {
-            console.error('Error getting history:', error);
-            return [];
         }
     }
 
