@@ -94,10 +94,10 @@ export class Database {
     async addToHistory(user, model) {
         try {
             const insertQuery = `
-                INSERT INTO history (user, model)
-                VALUES (?, ?);
-            `;
-            await this.executeSql(insertQuery, [user, model]);
+            INSERT INTO history (user, model)
+            VALUES ('${user}', '${model}');
+        `;
+            await this.executeSql(insertQuery);
         } catch (error) {
             console.error('Error adding to history:', error);
         }
