@@ -40,6 +40,7 @@ export class Database {
                 user TEXT NOT NULL,
                 model TEXT NOT NULL,
                 timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+                UNIQUE(user, model) ON CONFLICT REPLACE
             );
         `;
             this.executeSql(createHistoryTableQuery);
