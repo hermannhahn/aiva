@@ -31,6 +31,24 @@ export class Database {
         }
     }
 
+    escapeString(value) {
+        return value.replace(/'/g, "''");
+    }
+
+    async addToHistory(user, model) {
+        try {
+            const escapedUser = this.escapeString(user);
+            const escapedModel = this.escapeString(model);
+            const insertQuery = `
+            INSERT INTO history (user, model)
+            VALUES ('${escapedUser}', '${escapedModel}');
+            `;
+            await this.executeSql(insertQuery);
+        } catch (error) {
+            console.error('Error adding to history:', error);
+        }
+    }
+
     async initDatabase() {
         try {
             // Create "history" if not exists
@@ -86,18 +104,6 @@ export class Database {
         } catch (error) {
             console.error('Error getting history:', error);
             return [];
-        }
-    }
-
-    async addToHistory(user, model) {
-        try {
-            const insertQuery = `
-            INSERT INTO history (user, model)
-            VALUES ('${user}', '${model}');
-        `;
-            await this.executeSql(insertQuery);
-        } catch (error) {
-            console.error('Error adding to history:', error);
         }
     }
 
