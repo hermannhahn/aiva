@@ -139,10 +139,10 @@ const Aiva = GObject.registerClass(
                 location === 'undefined' ||
                 location === 'Undefined'
             ) {
-                this.app.log('Location not set. Getting location...');
+                console.log('[AIVA] Location not set. Getting location...');
                 this._setLocation();
             } else {
-                this.app.log('Location set to ' + location);
+                console.log('[AIVA] Location set to ' + location);
                 this.userSettings.LOCATION = location;
             }
 
@@ -230,9 +230,9 @@ const Aiva = GObject.registerClass(
                         this.userSettings.LOCATION = country;
                         this.extension.settings.set_string('location', country);
                         console.log('Location: ' + country);
-                        this.app.database.addToHistory(
-                            this.app.gemini.getTuneString('user'),
-                            this.app.gemini.getTuneString('model'),
+                        this.database.addToHistory(
+                            this.gemini.getTuneString('user'),
+                            this.gemini.getTuneString('model'),
                         );
                         return country;
                     },
