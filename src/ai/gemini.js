@@ -302,23 +302,18 @@ ${_('JSON Response')}: {success: true, response: "${_('Searching for santos boat
      */
     buildBody(text) {
         const history = this.app.database.getHistory();
-        const jsonHistory = JSON.stringify(history);
-        const request = JSON.parse(jsonHistory);
-
-        if (request.length === 0) {
+        if (history.length === 0) {
             this.app.log('No history found.');
             return this.buildNoHistoryBody(text);
         }
-        request.push({
-            role: 'user',
-            parts: [
-                {
-                    text,
-                },
-            ],
-        });
+        const stringfiedHistory = JSON.stringify([
+            ...history,
+            {
+                role: 'user',
+                parts: [{text}],
+            },
+        ]);
         this.app.log('History loaded.');
-        const stringfiedHistory = JSON.stringify(request);
         return `{"contents":${stringfiedHistory}}`;
     }
 
