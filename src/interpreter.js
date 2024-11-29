@@ -13,8 +13,8 @@ export class Interpreter {
         this.app.ui.mainmenu.userEntry.clutter_text.reactive = false;
         this.app.log('Question: ' + question);
         this.app.log('Processing question...');
-        this.app.chat.addResponse('⌛');
-        this.app.ui.statusIcon('🤔');
+        this.app.chat.addResponse('...');
+        this.app.ui.statusIcon('⌛');
         const isDatabaseCommand = this._isLocalCommand(question);
 
         if (this._isSlashCommand(question)) {
