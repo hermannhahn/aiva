@@ -60,23 +60,25 @@ export class Database {
             let result = [];
             if (history) {
                 if (this.app.userSettings.RECURSIVE_TALK) {
-                    for (let i = 0; i < history.length; i) {
-                        result.push({
-                            role: 'user',
-                            parts: [
-                                {
-                                    text: history[i].user,
-                                },
-                            ],
-                        });
-                        result.push({
-                            role: 'model',
-                            parts: [
-                                {
-                                    text: history[i].model,
-                                },
-                            ],
-                        });
+                    if (history.length > 0) {
+                        for (let i = 0; i < history.length; i) {
+                            result.push({
+                                role: 'user',
+                                parts: [
+                                    {
+                                        text: history[i].user,
+                                    },
+                                ],
+                            });
+                            result.push({
+                                role: 'model',
+                                parts: [
+                                    {
+                                        text: history[i].model,
+                                    },
+                                ],
+                            });
+                        }
                     }
                     return result;
                 }
