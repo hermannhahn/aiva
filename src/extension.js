@@ -85,7 +85,9 @@ const Aiva = GObject.registerClass(
             if (
                 location === '' ||
                 location === null ||
-                location === undefined
+                location === undefined ||
+                location === 'undefined' ||
+                location === 'Undefined'
             ) {
                 location = this._getLocation();
                 settings.set_string('location', location);
