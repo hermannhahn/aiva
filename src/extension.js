@@ -80,18 +80,6 @@ const Aiva = GObject.registerClass(
                 settings.set_string('user-name', username);
             }
 
-            // location
-            let location = settings.get_string('location');
-            if (
-                location === '' ||
-                location === null ||
-                location === undefined ||
-                location === 'undefined' ||
-                location === 'Undefined'
-            ) {
-                this._setLocation();
-            }
-
             // settings
             this.userSettings = {
                 ASSIST_NAME: settings.get_string('assist-name'),
@@ -103,12 +91,27 @@ const Aiva = GObject.registerClass(
                 AZURE_SPEECH_VOICE: settings.get_string('azure-speech-voice'),
                 GEMINI_API_KEY: settings.get_string('gemini-api-key'),
                 HISTORY_FILE: GLib.build_filenamev([EXT_DIR, 'history.sqlite']),
-                LOCATION: settings.get_string('location'),
                 RECURSIVE_TALK: settings.get_boolean('log-history'),
                 TRANSPARENCY: settings.get_string('theme-transparency'),
                 COLOR: settings.get_string('theme-color'),
                 USERNAME: username,
             };
+
+            // location
+            let location = settings.get_string('location');
+            if (
+                location === '' ||
+                location === null ||
+                location === undefined ||
+                location === 'undefined' ||
+                location === 'Undefined'
+            ) {
+                this.app.log('Location not set. Getting location...');
+                this._setLocation();
+            } else {
+                this.app.log('Location set to ' + location);
+                this.userSettings.LOCATION = location;
+            }
         }
 
         /**
