@@ -57,7 +57,10 @@ export class Database {
         try {
             const query = 'SELECT user, model FROM history';
             const history = this.executeSql(query);
-            return history;
+            if (history) {
+                return JSON.parse(history);
+            }
+            return [];
         } catch (error) {
             console.error('Error getting history:', error);
             return [];
