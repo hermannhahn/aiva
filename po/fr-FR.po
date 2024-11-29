@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-29 19:39-0300\n"
+"POT-Creation-Date: 2024-11-29 19:43-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language fr-FR\n"
@@ -161,103 +161,103 @@ msgstr ""
 msgid "boat+crossing+santos"
 msgstr ""
 
-#: src/utils/phrases.js:4
+#: src/utils/phrases.js:6
 msgid "I will show it on screen."
 msgstr ""
 
-#: src/utils/phrases.js:5
+#: src/utils/phrases.js:7
 msgid "Displaying now."
 msgstr ""
 
-#: src/utils/phrases.js:6
+#: src/utils/phrases.js:8
 msgid "Here it is on screen."
 msgstr ""
 
-#: src/utils/phrases.js:7
+#: src/utils/phrases.js:9
 msgid "Showing on screen."
 msgstr ""
 
-#: src/utils/phrases.js:8
+#: src/utils/phrases.js:10
 msgid "On the screen now."
 msgstr ""
 
-#: src/utils/phrases.js:15
+#: src/utils/phrases.js:17
 msgid "Thinking..."
 msgstr ""
 
-#: src/utils/phrases.js:16
+#: src/utils/phrases.js:18
 msgid "Let me see..."
 msgstr ""
 
-#: src/utils/phrases.js:17
+#: src/utils/phrases.js:19
 msgid "Just a moment..."
 msgstr ""
 
-#: src/utils/phrases.js:18
+#: src/utils/phrases.js:20
 msgid "Hmm, let me think about that..."
 msgstr ""
 
-#: src/utils/phrases.js:19
+#: src/utils/phrases.js:21
 msgid "Give me a second..."
 msgstr ""
 
-#: src/utils/phrases.js:20
+#: src/utils/phrases.js:22
 msgid "Let me check..."
 msgstr ""
 
-#: src/utils/phrases.js:21
+#: src/utils/phrases.js:23
 msgid "Working on it..."
 msgstr ""
 
-#: src/utils/phrases.js:22
+#: src/utils/phrases.js:24
 msgid "Hold on a sec..."
 msgstr ""
 
-#: src/utils/phrases.js:23
+#: src/utils/phrases.js:25
 msgid "One moment, please..."
 msgstr ""
 
-#: src/utils/phrases.js:24
+#: src/utils/phrases.js:26
 msgid "Let me figure this out..."
 msgstr ""
 
-#: src/utils/phrases.js:25
+#: src/utils/phrases.js:27
 msgid "I'll get back to you in a sec..."
 msgstr ""
 
-#: src/utils/phrases.js:26
+#: src/utils/phrases.js:28
 msgid "Just thinking this through..."
 msgstr ""
 
-#: src/utils/phrases.js:27
+#: src/utils/phrases.js:29
 msgid "Let's see what I can find..."
 msgstr ""
 
-#: src/utils/phrases.js:28
+#: src/utils/phrases.js:30
 msgid "Give me a moment to process this..."
 msgstr ""
 
-#: src/utils/phrases.js:29
+#: src/utils/phrases.js:31
 msgid "Let me look into that..."
 msgstr ""
 
-#: src/utils/phrases.js:30
+#: src/utils/phrases.js:32
 msgid "I'm on it..."
 msgstr ""
 
-#: src/utils/phrases.js:31
+#: src/utils/phrases.js:33
 msgid "I'll need a moment for that..."
 msgstr ""
 
-#: src/utils/phrases.js:32
+#: src/utils/phrases.js:34
 msgid "Let me dig deeper..."
 msgstr ""
 
-#: src/utils/phrases.js:33
+#: src/utils/phrases.js:35
 msgid "I'm thinking it over..."
 msgstr ""
 
-#: src/utils/phrases.js:34
+#: src/utils/phrases.js:36
 msgid "Give me a moment to sort this out..."
 msgstr ""
 
