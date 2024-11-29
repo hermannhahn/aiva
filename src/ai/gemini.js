@@ -267,7 +267,7 @@ export class GoogleGemini {
         const date = new Date();
         let location = this.app.userSettings.LOCATION;
         if (!location || location === 'Undefined') {
-            location = this.app._getLocation() || 'Undefined';
+            location = this.app._setLocation() || 'Undefined';
         }
 
         const user = `${_("Hi, I'm")} ${this.app.userSettings.USERNAME}. ${_("I'm from")} ${location} ${_('and today is')} ${date}`;
