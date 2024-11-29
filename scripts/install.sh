@@ -16,6 +16,7 @@ sudo apt install notify-send -y
 sudo apt install sox -y
 sudo apt install gettext -y
 sudo apt install mediainfo -y
+sudo apt install sqlite3 -y
 npm install
 echo "Dependencies installed."
 echo "Installing extension..."
