@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-29 17:04-0300\n"
+"POT-Creation-Date: 2024-11-29 17:06-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -217,43 +217,541 @@ msgid "open the site"
 msgstr "abra o site"
 
 #: src/interpreter.js:113
+#, fuzzy
+msgid "please open the site"
+msgstr "abra o site"
+
+#: src/interpreter.js:114
+#, fuzzy
+msgid "could you open the site?"
+msgstr "abra o site"
+
+#: src/interpreter.js:115
+#, fuzzy
+msgid "can you open the site?"
+msgstr "abra o site"
+
+#: src/interpreter.js:116
+#, fuzzy
+msgid "open this site"
+msgstr "abra o site"
+
+#: src/interpreter.js:117
+#, fuzzy
+msgid "please open this site"
+msgstr "leia esse texto"
+
+#: src/interpreter.js:118
+#, fuzzy
+msgid "could you open this site?"
+msgstr "leia esse texto"
+
+#: src/interpreter.js:119
 msgid "open the website"
 msgstr "abre a página"
 
-#: src/interpreter.js:114
+#: src/interpreter.js:120
+#, fuzzy
+msgid "please open the website"
+msgstr "abre a página"
+
+#: src/interpreter.js:121
+#, fuzzy
+msgid "could you open the website?"
+msgstr "abre a página"
+
+#: src/interpreter.js:122
+#, fuzzy
+msgid "can you open the website?"
+msgstr "abre a página"
+
+#: src/interpreter.js:123
 msgid "open site"
 msgstr "abrir site"
 
-#: src/interpreter.js:115
-msgid "open website"
+#: src/interpreter.js:124
+#, fuzzy
+msgid "please open site"
+msgstr "abrir site"
+
+#: src/interpreter.js:125
+#, fuzzy
+msgid "could you open site?"
+msgstr "abrir site"
+
+#: src/interpreter.js:126
+#, fuzzy
+msgid "can you open site?"
+msgstr "leia esse texto"
+
+#: src/interpreter.js:127
+#, fuzzy
+msgid "open this website"
+msgstr "abre a página"
+
+#: src/interpreter.js:128
+#, fuzzy
+msgid "please open this website"
+msgstr "abre a página"
+
+#: src/interpreter.js:129
+msgid "open online page"
+msgstr ""
+
+#: src/interpreter.js:130
+#, fuzzy
+msgid "please open online page"
+msgstr "Regras para o valor da linha de comando"
+
+#: src/interpreter.js:131
+#, fuzzy
+msgid "open the page"
+msgstr "abra o site"
+
+#: src/interpreter.js:132
+#, fuzzy
+msgid "please open the page"
+msgstr "leia o texto"
+
+#: src/interpreter.js:133
+#, fuzzy
+msgid "open the link"
+msgstr "abra o site"
+
+#: src/interpreter.js:134
+#, fuzzy
+msgid "please open the link"
+msgstr "leia o texto que copiei"
+
+#: src/interpreter.js:135
+#, fuzzy
+msgid "open this link"
+msgstr "abra o site"
+
+#: src/interpreter.js:136
+#, fuzzy
+msgid "please open this link"
+msgstr "leia esse texto"
+
+#: src/interpreter.js:137
+#, fuzzy
+msgid "open web page"
 msgstr "abrir página"
 
-#: src/interpreter.js:118
+#: src/interpreter.js:138
+#, fuzzy
+msgid "please open web page"
+msgstr "leia o texto"
+
+#: src/interpreter.js:139
+#, fuzzy
+msgid "open the web page"
+msgstr "abre a página"
+
+#: src/interpreter.js:140
+#, fuzzy
+msgid "please open the web page"
+msgstr "abre a página"
+
+#: src/interpreter.js:141
+#, fuzzy
+msgid "go to the site"
+msgstr "abra o site"
+
+#: src/interpreter.js:142
+#, fuzzy
+msgid "please go to the site"
+msgstr "leia o texto"
+
+#: src/interpreter.js:143
+#, fuzzy
+msgid "go to the website"
+msgstr "abre a página"
+
+#: src/interpreter.js:144
+#, fuzzy
+msgid "please go to the website"
+msgstr "abre a página"
+
+#: src/interpreter.js:145
+#, fuzzy
+msgid "access the site"
+msgstr "abra o site"
+
+#: src/interpreter.js:146
+#, fuzzy
+msgid "please access the site"
+msgstr "leia o texto"
+
+#: src/interpreter.js:147
+#, fuzzy
+msgid "access the website"
+msgstr "abre a página"
+
+#: src/interpreter.js:148
+#, fuzzy
+msgid "please access the website"
+msgstr "abre a página"
+
+#: src/interpreter.js:149
+msgid "go online"
+msgstr ""
+
+#: src/interpreter.js:150
+msgid "please go online"
+msgstr ""
+
+#: src/interpreter.js:151
+#, fuzzy
+msgid "load the site"
+msgstr "abra o site"
+
+#: src/interpreter.js:152
+#, fuzzy
+msgid "please load the site"
+msgstr "leia o texto"
+
+#: src/interpreter.js:153
+#, fuzzy
+msgid "load the website"
+msgstr "abre a página"
+
+#: src/interpreter.js:154
+#, fuzzy
+msgid "please load the website"
+msgstr "leia o texto"
+
+#: src/interpreter.js:155
+#, fuzzy
+msgid "visit the site"
+msgstr "abra o site"
+
+#: src/interpreter.js:156
+#, fuzzy
+msgid "please visit the site"
+msgstr "leia o texto"
+
+#: src/interpreter.js:157
+#, fuzzy
+msgid "visit the website"
+msgstr "abre a página"
+
+#: src/interpreter.js:158
+#, fuzzy
+msgid "please visit the website"
+msgstr "abre a página"
+
+#: src/interpreter.js:159
+#, fuzzy
+msgid "can you visit the site?"
+msgstr "leia esse texto"
+
+#: src/interpreter.js:160
+#, fuzzy
+msgid "can you visit the website?"
+msgstr "abre a página"
+
+#: src/interpreter.js:161
+#, fuzzy
+msgid "navigate to the site"
+msgstr "abra o site"
+
+#: src/interpreter.js:162
+#, fuzzy
+msgid "please navigate to the site"
+msgstr "leia o texto"
+
+#: src/interpreter.js:163
+#, fuzzy
+msgid "navigate to the website"
+msgstr "abre a página"
+
+#: src/interpreter.js:164
+#, fuzzy
+msgid "please navigate to the website"
+msgstr "abre a página"
+
+#: src/interpreter.js:165
+#, fuzzy
+msgid "take me to the site"
+msgstr "abra o site"
+
+#: src/interpreter.js:166
+#, fuzzy
+msgid "please take me to the site"
+msgstr "leia o texto"
+
+#: src/interpreter.js:167
+#, fuzzy
+msgid "take me to the website"
+msgstr "abre a página"
+
+#: src/interpreter.js:168
+#, fuzzy
+msgid "please take me to the website"
+msgstr "abre a página"
+
+#: src/interpreter.js:171
 #, fuzzy
 msgid "open the channel"
 msgstr "abre o canal"
 
-#: src/interpreter.js:119
+#: src/interpreter.js:172
+#, fuzzy
+msgid "please open the channel"
+msgstr "abre o canal"
+
+#: src/interpreter.js:173
+#, fuzzy
+msgid "could you open the channel?"
+msgstr "abre o canal"
+
+#: src/interpreter.js:174
+#, fuzzy
+msgid "can you open the channel?"
+msgstr "abre o canal"
+
+#: src/interpreter.js:175
+#, fuzzy
+msgid "open this channel"
+msgstr "abre o canal"
+
+#: src/interpreter.js:176
+#, fuzzy
+msgid "please open this channel"
+msgstr "abre o canal"
+
+#: src/interpreter.js:177
 msgid "open channel"
 msgstr "abrir canal"
 
-#: src/interpreter.js:120
-msgid "open the youtube channel"
+#: src/interpreter.js:178
+#, fuzzy
+msgid "please open channel"
+msgstr "abrir canal"
+
+#: src/interpreter.js:179
+#, fuzzy
+msgid "could you open channel?"
+msgstr "abrir canal"
+
+#: src/interpreter.js:180
+#, fuzzy
+msgid "open the YouTube channel"
 msgstr "abra o canal do youtube"
 
-#: src/interpreter.js:121
-msgid "open youtube channel"
+#: src/interpreter.js:181
+#, fuzzy
+msgid "please open the YouTube channel"
+msgstr "abra o canal do youtube"
+
+#: src/interpreter.js:182
+#, fuzzy
+msgid "could you open the YouTube channel?"
+msgstr "abra o canal do youtube"
+
+#: src/interpreter.js:183
+#, fuzzy
+msgid "can you open the YouTube channel?"
+msgstr "abra o canal do youtube"
+
+#: src/interpreter.js:184
+#, fuzzy
+msgid "open this YouTube channel"
+msgstr "abra o canal do youtube"
+
+#: src/interpreter.js:185
+#, fuzzy
+msgid "please open this YouTube channel"
+msgstr "abra o canal do youtube"
+
+#: src/interpreter.js:186
+#, fuzzy
+msgid "open YouTube channel"
 msgstr "abrir canal do youtube"
 
-#: src/interpreter.js:122
-msgid "open youtube"
+#: src/interpreter.js:187
+#, fuzzy
+msgid "please open YouTube channel"
+msgstr "abrir canal do youtube"
+
+#: src/interpreter.js:188
+#, fuzzy
+msgid "open the channel on YouTube"
+msgstr "abre o canal"
+
+#: src/interpreter.js:189
+#, fuzzy
+msgid "please open the channel on YouTube"
+msgstr "abre o canal"
+
+#: src/interpreter.js:190
+#, fuzzy
+msgid "could you open the channel on YouTube?"
+msgstr "leia o texto pra mim"
+
+#: src/interpreter.js:191
+#, fuzzy
+msgid "can you open the channel on YouTube?"
+msgstr "abre o canal"
+
+#: src/interpreter.js:192
+#, fuzzy
+msgid "open this channel on YouTube"
+msgstr "abre o canal"
+
+#: src/interpreter.js:193
+msgid "please open this channel on YouTube"
+msgstr ""
+
+#: src/interpreter.js:194
+#, fuzzy
+msgid "go to the channel"
+msgstr "abre o canal"
+
+#: src/interpreter.js:195
+#, fuzzy
+msgid "please go to the channel"
+msgstr "abre o canal"
+
+#: src/interpreter.js:196
+#, fuzzy
+msgid "go to this channel"
+msgstr "abre o canal"
+
+#: src/interpreter.js:197
+#, fuzzy
+msgid "please go to this channel"
+msgstr "abre o canal"
+
+#: src/interpreter.js:198
+#, fuzzy
+msgid "access the channel"
+msgstr "abre o canal"
+
+#: src/interpreter.js:199
+#, fuzzy
+msgid "please access the channel"
+msgstr "abre o canal"
+
+#: src/interpreter.js:200
+#, fuzzy
+msgid "access this channel"
+msgstr "abre o canal"
+
+#: src/interpreter.js:201
+#, fuzzy
+msgid "please access this channel"
+msgstr "leia esse texto"
+
+#: src/interpreter.js:202
+#, fuzzy
+msgid "visit the channel"
+msgstr "abre o canal"
+
+#: src/interpreter.js:203
+#, fuzzy
+msgid "please visit the channel"
+msgstr "abre o canal"
+
+#: src/interpreter.js:204
+#, fuzzy
+msgid "visit this channel"
+msgstr "abre o canal"
+
+#: src/interpreter.js:205
+#, fuzzy
+msgid "please visit this channel"
+msgstr "abre o canal"
+
+#: src/interpreter.js:206
+#, fuzzy
+msgid "navigate to the channel"
+msgstr "abre o canal"
+
+#: src/interpreter.js:207
+#, fuzzy
+msgid "please navigate to the channel"
+msgstr "abre o canal"
+
+#: src/interpreter.js:208
+#, fuzzy
+msgid "navigate to this channel"
+msgstr "abre o canal"
+
+#: src/interpreter.js:209
+msgid "please navigate to this channel"
+msgstr ""
+
+#: src/interpreter.js:210
+#, fuzzy
+msgid "load the channel"
+msgstr "abre o canal"
+
+#: src/interpreter.js:211
+#, fuzzy
+msgid "please load the channel"
+msgstr "abre o canal"
+
+#: src/interpreter.js:212
+#, fuzzy
+msgid "load this channel"
+msgstr "abre o canal"
+
+#: src/interpreter.js:213
+#, fuzzy
+msgid "please load this channel"
+msgstr "leia esse texto"
+
+#: src/interpreter.js:214
+#, fuzzy
+msgid "open YouTube"
 msgstr "abrir youtube"
 
-#: src/interpreter.js:123
-msgid "on youtube"
-msgstr "no youtube"
+#: src/interpreter.js:215
+#, fuzzy
+msgid "please open YouTube"
+msgstr "abrir youtube"
 
-#: src/interpreter.js:143
+#: src/interpreter.js:216
+msgid "on YouTube"
+msgstr ""
+
+#: src/interpreter.js:217
+#, fuzzy
+msgid "open it on YouTube"
+msgstr "abrir youtube"
+
+#: src/interpreter.js:218
+msgid "please open it on YouTube"
+msgstr ""
+
+#: src/interpreter.js:219
+#, fuzzy
+msgid "could you open it on YouTube?"
+msgstr "leia o texto pra mim"
+
+#: src/interpreter.js:220
+msgid "can you open it on YouTube?"
+msgstr ""
+
+#: src/interpreter.js:221
+msgid "access the channel on YouTube"
+msgstr ""
+
+#: src/interpreter.js:222
+msgid "please access the channel on YouTube"
+msgstr ""
+
+#: src/interpreter.js:223
+msgid "visit the channel on YouTube"
+msgstr ""
+
+#: src/interpreter.js:224
+msgid "please visit the channel on YouTube"
+msgstr ""
+
+#: src/interpreter.js:244
 msgid "Starting reading..."
 msgstr "Iniciando a leitura..."
 
@@ -632,6 +1130,9 @@ msgstr "Salvar"
 #: src/prefs.js:287
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
+
+#~ msgid "on youtube"
+#~ msgstr "no youtube"
 
 #~ msgid "I'm in"
 #~ msgstr "Eu estou em"
