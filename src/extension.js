@@ -225,7 +225,7 @@ const Aiva = GObject.registerClass(
                         console.log('IP: ' + ip);
                         const country = res.country;
                         this.userSettings.LOCATION = country;
-                        this.settings.set_string('location', country);
+                        this.extension.settings.set_string('location', country);
                         console.log('Location: ' + country);
                         this.app.database.editHistoryLocation(country);
                         return country;
