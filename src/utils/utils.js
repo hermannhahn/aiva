@@ -1,9 +1,9 @@
 import GLib from 'gi://GLib';
 import Gio from 'gi://Gio';
 import St from 'gi://St';
-import Pango from 'gi://Pango';
-import PangoCairo from 'gi://PangoCairo';
-import Cairo from 'gi://cairo';
+// import Pango from 'gi://Pango';
+// import PangoCairo from 'gi://PangoCairo';
+// import Cairo from 'gi://cairo';
 import Soup from 'gi://Soup';
 
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
@@ -12,29 +12,7 @@ import {convertMD} from './md2pango.js';
 
 /**
  * @description app utilities
- * @example
- *
- * public function
- * questionFormat(text) - return formatted string
- * responseFormat(text) - return formatted string
- * scrollToBottom() - roll scroll to bottom
- * addToHistory(question, response) - add to history
- * loadHistoryFile() - return history array
- * gnomeNotify(text, type) - send gnome notification
- * removeNotificationByTitle(title) - remove gnome notification
- * copySelectedText(responseChat, copyButton) - copy full or selected text
- * randomPhraseToShowOnScreen() - return random prhase to long responses
- * randomPhraseToWaitResponse() - return random phrase to wait for response
- * encodeFileToBase64(path) - convert file to base64
- * extractCodeAndTTS(text, lang) - return text to speech and code example
- * executeCommand(cmd) - run terminal cmd
- * removeWavFiles() - remove temporary wav files
- * curl(url) - return curl response
- *
- * private function
- * _insertLineBreaks(text, maxWidth, font) - insert line breaks
- * _createHistoryFile() - create history file
- * _saveHistory() - save history file
+ * @param {object} app
  */
 export class Utils {
     constructor(app) {
@@ -45,10 +23,9 @@ export class Utils {
 
     /**
      *
-     * @param {*} text
-     * @returns
-     *
      * @description // Format input chat
+     * @param {string} text
+     * @returns {string} formated text
      */
     questionFormat(text) {
         text = this._pangoConvert(text);
@@ -62,15 +39,6 @@ export class Utils {
             .replace(/`/g, '\u0060')
             .replace(/:/g, '\u003a')
             .replace(/;/g, '\u003b');
-        // text = text
-        //     .replace(/&/g, '&amp;')
-        //     .replace(/</g, '&lt;')
-        //     .replace(/>/g, '&gt;')
-        //     .replace(/"/g, '&quot;')
-        //     .replace(/'/g, '&apos;')
-        //     .replace(/`/g, '&#96;')
-        //     .replace(/:/g, '&#58;')
-        //     .replace(/;/g, '&#59;');
         return text;
     }
 
@@ -97,73 +65,6 @@ export class Utils {
                 return GLib.SOURCE_REMOVE; // Remove o callback após execução
             });
         });
-    }
-
-    addToHistory(userQuestion, aiResponse) {
-        if (this.app.userSettings.RECURSIVE_TALK) {
-            this.app.chat.history.push({
-                role: 'user',
-                parts: [
-                    {
-                        text: userQuestion,
-                    },
-                ],
-            });
-            this.app.chat.history.push({
-                role: 'model',
-                parts: [
-                    {
-                        text: aiResponse,
-                    },
-                ],
-            });
-            this._saveHistory();
-        }
-    }
-
-    // Load history file
-    loadHistoryFile() {
-        let chatHistory = [];
-        // Reset chatHistory if RECURSIVE_TALK is disabled
-        if (this.app.userSettings.RECURSIVE_TALK === false) {
-            this.app.log(
-                `History reset to empty array: ${this.app.userSettings.HISTORY_FILE}`,
-            );
-            return chatHistory;
-        }
-
-        if (
-            GLib.file_test(
-                this.app.userSettings.HISTORY_FILE,
-                GLib.FileTest.IS_REGULAR,
-            )
-        ) {
-            try {
-                let file = Gio.File.new_for_path(
-                    this.app.userSettings.HISTORY_FILE,
-                );
-                let [, contents] = file.load_contents(null);
-
-                // Decodifica contents de Uint8Array para string
-                let decodedContents = new TextDecoder().decode(contents);
-
-                // Parse JSON
-                chatHistory = JSON.parse(decodedContents);
-                this.app.log(
-                    `History loaded from: ${this.app.userSettings.HISTORY_FILE}`,
-                );
-
-                return chatHistory;
-            } catch (e) {
-                logError(
-                    e,
-                    `Failed to load history: ${this.app.userSettings.HISTORY_FILE}`,
-                );
-                return [];
-            }
-        } else {
-            return this._createHistoryFile();
-        }
     }
 
     gnomeNotify(text, type = 'normal') {
@@ -529,114 +430,6 @@ export class Utils {
                 return res;
             },
         );
-    }
-
-    // insert line break at 730px, font Courier New, size 14px
-    _insertLineBreaks(text, maxWidth = 700, font = 'Monospace 14') {
-        // Cria uma superfície temporária e contexto Cairo para medir o texto
-        const surface = new Cairo.ImageSurface(Cairo.Format.ARGB32, 0, 0);
-        const cairoContext = new Cairo.Context(surface);
-
-        // Obtém o contexto Pango a partir do contexto Cairo
-        const layout = PangoCairo.create_layout(cairoContext);
-        layout.set_font_description(Pango.FontDescription.from_string(font));
-
-        let lines = [];
-        let currentLine = '';
-
-        for (let word of text.split(' ')) {
-            // Adiciona a palavra à linha de teste
-            let testLine = currentLine ? currentLine + ' ' + word : word;
-            layout.set_text(testLine, -1);
-
-            // Obtém o tamanho da linha em pixels
-            let [, logical] = layout.get_pixel_extents();
-
-            if (logical.width > maxWidth) {
-                // Adiciona a linha atual à lista de linhas e inicia uma nova linha
-                lines.push(currentLine);
-                currentLine = word;
-            } else {
-                currentLine = testLine;
-            }
-        }
-
-        // Adiciona a última linha
-        lines.push(currentLine);
-
-        return lines.join('\n');
-    }
-
-    _historyInitContent() {
-        let initContent = [];
-        initContent.push({
-            role: 'user',
-            parts: [
-                {
-                    text: this.app.gemini.getTuneString('user'),
-                },
-            ],
-        });
-        initContent.push({
-            role: 'model',
-            parts: [
-                {
-                    text: this.app.gemini.getTuneString('model'),
-                },
-            ],
-        });
-        return initContent;
-    }
-
-    // Create history.json file if not exist
-    _createHistoryFile() {
-        if (
-            !GLib.file_test(
-                this.app.userSettings.HISTORY_FILE,
-                GLib.FileTest.IS_REGULAR,
-            )
-        ) {
-            try {
-                let initialContent = JSON.stringify(
-                    this._historyInitContent(),
-                    null,
-                    2,
-                );
-                GLib.file_set_contents(
-                    this.app.userSettings.HISTORY_FILE,
-                    initialContent,
-                );
-                this.app.log(
-                    `History file created. : ${this.app.userSettings.HISTORY_FILE}`,
-                );
-                return this.loadHistoryFile();
-            } catch (e) {
-                logError(
-                    e,
-                    `Failed to create file: ${this.app.userSettings.HISTORY_FILE}`,
-                );
-                return [];
-            }
-        }
-        return this.loadHistoryFile();
-    }
-
-    // Save to history file
-    _saveHistory() {
-        try {
-            GLib.file_set_contents(
-                this.app.userSettings.HISTORY_FILE,
-                JSON.stringify(this.app.chat.history, null, 2),
-            );
-            this.app.log(
-                `History saved in: ${this.app.userSettings.HISTORY_FILE}`,
-            );
-        } catch (e) {
-            logError(
-                e,
-                `Failed to save history: ${this.app.userSettings.HISTORY_FILE}`,
-            );
-        }
     }
 
     findCategoryInArrays(string, commands) {
