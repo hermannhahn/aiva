@@ -326,11 +326,7 @@ ${_('JSON Response')}: {success: true, response: "${_('Searching for santos boat
         let request = [
             {
                 role: 'user',
-                parts: [
-                    {
-                        text,
-                    },
-                ],
+                parts: [{text}],
             },
         ];
         const stringfiedHistory = JSON.stringify(request);
