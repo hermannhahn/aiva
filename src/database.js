@@ -92,6 +92,12 @@ export class Database {
     }
 
     async addToHistory(user, model) {
+        this.app.log(
+            'User: ' +
+                user +
+                ' \n-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- \nModel: ' +
+                model,
+        );
         try {
             const insertQuery = `
                 INSERT INTO history (user, model)
