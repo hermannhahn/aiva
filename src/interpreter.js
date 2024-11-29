@@ -12,6 +12,7 @@ export class Interpreter {
         this.app.log('Question: ' + question);
         this.app.log('Processing question...');
         this.app.chat.addResponse('⌛');
+        this.app.ui.statusIcon('🤔');
         const isDatabaseCommand = this._isDatabaseCommand(question);
 
         if (this._isSlashCommand(question)) {
