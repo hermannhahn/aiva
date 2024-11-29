@@ -31,7 +31,7 @@ export class Database {
         }
     }
 
-    initDatabase() {
+    async initDatabase() {
         try {
             // Create "history" if not exists
             const createHistoryTableQuery = `
@@ -43,7 +43,7 @@ export class Database {
                 UNIQUE(user, model) ON CONFLICT REPLACE
             );
         `;
-            this.executeSql(createHistoryTableQuery);
+            await this.executeSql(createHistoryTableQuery);
             this.addToHistory(
                 this.app.gemini.getTuneString('user'),
                 this.app.gemini.getTuneString('model'),
@@ -53,10 +53,10 @@ export class Database {
         }
     }
 
-    async getHistory() {
+    getHistory() {
         try {
             const query = 'SELECT user, model FROM history';
-            const result = await this.executeSql(query);
+            const result = this.executeSql(query);
             const history = [];
             if (result) {
                 const resultRows = result.split('\n').slice(1, -1);
@@ -104,26 +104,26 @@ export class Database {
     }
 
     // Edit location on id 1 in user string, change "Undefined" to this.app.userSettings.LOCATION
-    editHistoryLocation(location) {
+    async editHistoryLocation(location) {
         try {
             const updateQuery = `
             UPDATE history
             SET user = REPLACE(user, 'Undefined', '${location}')
             WHERE id = 1;
         `;
-            this.executeSql(updateQuery);
+            await this.executeSql(updateQuery);
         } catch (error) {
             console.error('Error editing history location:', error);
         }
     }
 
-    cleanHistory() {
+    async cleanHistory() {
         try {
             const deleteQuery = `
             DELETE FROM history
             WHERE id > (SELECT MIN(id) FROM history);
         `;
-            this.executeSql(deleteQuery);
+            await this.executeSql(deleteQuery);
         } catch (error) {
             console.error('Error cleaning history:', error);
         }
