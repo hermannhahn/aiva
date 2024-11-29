@@ -117,10 +117,6 @@ export class Database {
             );
         `;
             await this.executeSql(createHistoryTableQuery);
-            this.addToHistory(
-                this.app.gemini.getTuneString('user'),
-                this.app.gemini.getTuneString('model'),
-            );
         } catch (error) {
             console.error('Error initializing database:', error);
         }
