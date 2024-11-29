@@ -9,10 +9,10 @@ export class Database {
         this.initDatabase();
     }
 
-    executeSql(query) {
+    executeSql(query, params = []) {
         try {
             const subprocess = new Gio.Subprocess({
-                argv: ['sqlite3', this.dbPath, query],
+                argv: ['sqlite3', this.dbPath, query, ...params],
                 flags:
                     Gio.SubprocessFlags.STDOUT_PIPE |
                     Gio.SubprocessFlags.STDERR_PIPE,
@@ -103,7 +103,7 @@ export class Database {
                 INSERT INTO history (user, model)
                 VALUES (?, ?, ?);
             `;
-            await this.executeSql(insertQuery, ['', user, model]);
+            await this.executeSql(insertQuery, [user, model]);
         } catch (error) {
             console.error('Error adding to history:', error);
         }
