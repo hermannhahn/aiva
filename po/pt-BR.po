@@ -16,13 +16,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/interpreter.js:62
+#: src/interpreter.js:61
 msgid "Invalid command"
 msgstr "Comando inválido"
 
-#: src/interpreter.js:86
-msgid "Starting reading..."
-msgstr "Iniciando a leitura..."
+#: src/interpreter.js:90
+#, fuzzy
+msgid "Error reading clipboard text"
+msgstr "leia o texto na área de transferência"
 
 #: src/ai/azure.js:69 src/ai/azure.js:82 src/ai/azure.js:124
 #: src/ai/azure.js:133 src/ai/gemini.js:106 src/ai/gemini.js:198
@@ -691,6 +692,9 @@ msgstr "Salvar"
 #: src/prefs.js:287
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
+
+#~ msgid "Starting reading..."
+#~ msgstr "Iniciando a leitura..."
 
 #~ msgid "open online page"
 #~ msgstr "abre a página"

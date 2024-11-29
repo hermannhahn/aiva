@@ -16,13 +16,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/interpreter.js:62
+#: src/interpreter.js:61
 msgid "Invalid command"
 msgstr ""
 
-#: src/interpreter.js:86
-msgid "Starting reading..."
-msgstr ""
+#: src/interpreter.js:90
+#, fuzzy
+msgid "Error reading clipboard text"
+msgstr "Código copiado al portapapeles"
 
 #: src/ai/azure.js:69 src/ai/azure.js:82 src/ai/azure.js:124
 #: src/ai/azure.js:133 src/ai/gemini.js:106 src/ai/gemini.js:198
@@ -640,10 +641,6 @@ msgstr ""
 
 #, fuzzy
 #~ msgid "can you read the clipboard?"
-#~ msgstr "Código copiado al portapapeles"
-
-#, fuzzy
-#~ msgid "please read clipboard text"
 #~ msgstr "Código copiado al portapapeles"
 
 #, fuzzy

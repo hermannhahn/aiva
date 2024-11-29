@@ -17,12 +17,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/interpreter.js:62
+#: src/interpreter.js:61
 msgid "Invalid command"
 msgstr ""
 
-#: src/interpreter.js:86
-msgid "Starting reading..."
+#: src/interpreter.js:90
+msgid "Error reading clipboard text"
 msgstr ""
 
 #: src/ai/azure.js:69 src/ai/azure.js:82 src/ai/azure.js:124

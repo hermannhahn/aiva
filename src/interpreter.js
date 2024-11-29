@@ -1,11 +1,13 @@
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 import {Commands} from './commands.js';
+import {Phrases} from './utils/phrases.js';
 
 export class Interpreter {
     constructor(app) {
         this.app = app;
         this.app.log('Interpreter loaded.');
         this.commands = new Commands();
+        this.phrases = new Phrases();
     }
 
     proccess(question) {
@@ -15,19 +17,16 @@ export class Interpreter {
         this.app.log('Processing question...');
         this.app.chat.addResponse('...');
         this.app.ui.statusIcon('⌛');
-        const isDatabaseCommand = this._isLocalCommand(question);
+        const isLocalCommand = this._isLocalCommand(question);
 
         if (this._isSlashCommand(question)) {
             // SLASH COMMANDS
             this.app.log('Slash command: ' + command);
             this._slashCommands(command);
-        } else if (isDatabaseCommand.success) {
+        } else if (isLocalCommand.success) {
             // DATABASE COMMANDS
             this.app.log('Local Voice command detected.');
-            this._localCommand(
-                isDatabaseCommand.command,
-                isDatabaseCommand.request,
-            );
+            this._localCommand(isLocalCommand.command, isLocalCommand.request);
         } else {
             // QUESTIONS
             this.app.log('Sending question to API...');
@@ -83,14 +82,14 @@ HELP
         switch (command) {
             case 'readClipboardText':
                 try {
-                    this.app.chat.editResponse(_('Starting reading...'));
+                    this.app.chat.editResponse(this.phrases.wait());
                     await this.app.utils.readClipboardText();
                     break;
                 } catch (error) {
-                    this.app.logError(
-                        'Erro ao obter texto da área de transferência:',
-                        error,
+                    this.app.chat.editResponse(
+                        _('Error reading clipboard text'),
                     );
+                    this.app.logError('Error reading clipboard text:', error);
                     break;
                 }
             case 'openYoutubeChannel':
