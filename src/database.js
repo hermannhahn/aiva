@@ -56,34 +56,7 @@ export class Database {
     getHistory() {
         try {
             const query = 'SELECT user, model FROM history';
-            const result = this.executeSql(query);
-            const history = [];
-            if (result) {
-                const resultRows = result.split('\n').slice(1, -1);
-                for (const row of resultRows) {
-                    const values = row.split('|');
-                    if (values.length === 2) {
-                        history.push(
-                            {
-                                role: 'user',
-                                parts: [
-                                    {
-                                        text: values[0],
-                                    },
-                                ],
-                            },
-                            {
-                                role: 'model',
-                                parts: [
-                                    {
-                                        text: values[1],
-                                    },
-                                ],
-                            },
-                        );
-                    }
-                }
-            }
+            const history = this.executeSql(query);
             return history;
         } catch (error) {
             console.error('Error getting history:', error);
