@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-29 17:13-0300\n"
+"POT-Creation-Date: 2024-11-29 17:16-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language de-DE\n"
@@ -16,648 +16,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/interpreter.js:60
+#: src/interpreter.js:62
 msgid "Invalid command"
 msgstr ""
 
-#: src/interpreter.js:69 src/commands.js:7
-msgid "read this text"
-msgstr ""
-
-#: src/interpreter.js:70 src/commands.js:8
-msgid "please read this text"
-msgstr ""
-
-#: src/interpreter.js:71 src/commands.js:9
-msgid "can you read this text?"
-msgstr ""
-
-#: src/interpreter.js:72 src/commands.js:10
-msgid "read the text"
-msgstr ""
-
-#: src/interpreter.js:73 src/commands.js:11
-msgid "please read the text"
-msgstr ""
-
-#: src/interpreter.js:74 src/commands.js:12
-#, fuzzy
-msgid "read the clipboard"
-msgstr "Code kopiert in die Zwischenablage"
-
-#: src/interpreter.js:75 src/commands.js:13
-#, fuzzy
-msgid "please read the clipboard"
-msgstr "Code kopiert in die Zwischenablage"
-
-#: src/interpreter.js:76 src/commands.js:14
-#, fuzzy
-msgid "can you read the clipboard?"
-msgstr "Code kopiert in die Zwischenablage"
-
-#: src/interpreter.js:77 src/commands.js:15
-msgid "read copied text"
-msgstr ""
-
-#: src/interpreter.js:78 src/commands.js:16
-msgid "please read the copied text"
-msgstr ""
-
-#: src/interpreter.js:79 src/commands.js:17
-msgid "read clipboard text"
-msgstr ""
-
-#: src/interpreter.js:80 src/commands.js:18
-#, fuzzy
-msgid "please read clipboard text"
-msgstr "Code kopiert in die Zwischenablage"
-
-#: src/interpreter.js:81 src/commands.js:19
-msgid "read this clipboard"
-msgstr ""
-
-#: src/interpreter.js:82 src/commands.js:20
-#, fuzzy
-msgid "can you read this clipboard?"
-msgstr "Code kopiert in die Zwischenablage"
-
-#: src/interpreter.js:83 src/commands.js:21
-#, fuzzy
-msgid "read text from clipboard"
-msgstr "Code kopiert in die Zwischenablage"
-
-#: src/interpreter.js:84 src/commands.js:22
-#, fuzzy
-msgid "please read text from clipboard"
-msgstr "Code kopiert in die Zwischenablage"
-
-#: src/interpreter.js:85 src/commands.js:23
-#, fuzzy
-msgid "read the text from clipboard"
-msgstr "Code kopiert in die Zwischenablage"
-
-#: src/interpreter.js:86 src/commands.js:24
-msgid "read text in memory"
-msgstr ""
-
-#: src/interpreter.js:87 src/commands.js:25
-msgid "please read text in memory"
-msgstr ""
-
-#: src/interpreter.js:88 src/commands.js:26
-msgid "read memorized text"
-msgstr ""
-
-#: src/interpreter.js:89 src/commands.js:27
-msgid "please read the memorized text"
-msgstr ""
-
-#: src/interpreter.js:90 src/commands.js:28
-msgid "read for me"
-msgstr ""
-
-#: src/interpreter.js:91 src/commands.js:29
-msgid "can you read for me?"
-msgstr ""
-
-#: src/interpreter.js:92 src/commands.js:30
-msgid "read this for me"
-msgstr ""
-
-#: src/interpreter.js:93 src/commands.js:31
-msgid "please read this for me"
-msgstr ""
-
-#: src/interpreter.js:94 src/commands.js:32
-msgid "read text for me"
-msgstr ""
-
-#: src/interpreter.js:95 src/commands.js:33
-msgid "could you read the text for me?"
-msgstr ""
-
-#: src/interpreter.js:96 src/commands.js:34
-msgid "read this please"
-msgstr ""
-
-#: src/interpreter.js:97 src/commands.js:35
-msgid "please read this"
-msgstr ""
-
-#: src/interpreter.js:98 src/commands.js:36
-msgid "could you please read this?"
-msgstr ""
-
-#: src/interpreter.js:99 src/commands.js:37
-msgid "you can read now"
-msgstr ""
-
-#: src/interpreter.js:100 src/commands.js:38
-#, fuzzy
-msgid "please read what's copied"
-msgstr "Code kopiert in die Zwischenablage"
-
-#: src/interpreter.js:101 src/commands.js:39
-#, fuzzy
-msgid "read what's on the clipboard"
-msgstr "Code kopiert in die Zwischenablage"
-
-#: src/interpreter.js:102 src/commands.js:40
-msgid "read the copied content"
-msgstr ""
-
-#: src/interpreter.js:103 src/commands.js:41
-msgid "please read the copied content"
-msgstr ""
-
-#: src/interpreter.js:104 src/commands.js:42
-#, fuzzy
-msgid "read the clipboard content"
-msgstr "Code kopiert in die Zwischenablage"
-
-#: src/interpreter.js:105 src/commands.js:43
-#, fuzzy
-msgid "can you read what's copied?"
-msgstr "Code kopiert in die Zwischenablage"
-
-#: src/interpreter.js:106 src/commands.js:44
-msgid "read the copied message"
-msgstr ""
-
-#: src/interpreter.js:107 src/commands.js:45
-msgid "please read the copied message"
-msgstr ""
-
-#: src/interpreter.js:108 src/commands.js:46
-msgid "read this text from memory"
-msgstr ""
-
-#: src/interpreter.js:109 src/commands.js:47
-msgid "please read this text from memory"
-msgstr ""
-
-#: src/interpreter.js:112 src/commands.js:50
-msgid "open the site"
-msgstr ""
-
-#: src/interpreter.js:113 src/commands.js:51
-#, fuzzy
-msgid "please open the site"
-msgstr "Code kopiert in die Zwischenablage"
-
-#: src/interpreter.js:114 src/commands.js:52
-msgid "could you open the site?"
-msgstr ""
-
-#: src/interpreter.js:115 src/commands.js:53
-#, fuzzy
-msgid "can you open the site?"
-msgstr "Code kopiert in die Zwischenablage"
-
-#: src/interpreter.js:116 src/commands.js:54
-msgid "open this site"
-msgstr ""
-
-#: src/interpreter.js:117 src/commands.js:55
-#, fuzzy
-msgid "please open this site"
-msgstr "Code kopiert in die Zwischenablage"
-
-#: src/interpreter.js:118 src/commands.js:56
-msgid "could you open this site?"
-msgstr ""
-
-#: src/interpreter.js:119 src/commands.js:57
-msgid "open the website"
-msgstr ""
-
-#: src/interpreter.js:120 src/commands.js:58
-msgid "please open the website"
-msgstr ""
-
-#: src/interpreter.js:121 src/commands.js:59
-msgid "could you open the website?"
-msgstr ""
-
-#: src/interpreter.js:122 src/commands.js:60
-#, fuzzy
-msgid "can you open the website?"
-msgstr "Code kopiert in die Zwischenablage"
-
-#: src/interpreter.js:123 src/commands.js:61
-msgid "open site"
-msgstr ""
-
-#: src/interpreter.js:124 src/commands.js:62
-msgid "please open site"
-msgstr ""
-
-#: src/interpreter.js:125 src/commands.js:63
-msgid "could you open site?"
-msgstr ""
-
-#: src/interpreter.js:126 src/commands.js:64
-#, fuzzy
-msgid "can you open site?"
-msgstr "Code kopiert in die Zwischenablage"
-
-#: src/interpreter.js:127 src/commands.js:65
-msgid "open this website"
-msgstr ""
-
-#: src/interpreter.js:128 src/commands.js:66
-msgid "please open this website"
-msgstr ""
-
-#: src/interpreter.js:129 src/commands.js:67
-msgid "open online page"
-msgstr ""
-
-#: src/interpreter.js:130 src/commands.js:68
-msgid "please open online page"
-msgstr ""
-
-#: src/interpreter.js:131 src/commands.js:69
-msgid "open the page"
-msgstr ""
-
-#: src/interpreter.js:132 src/commands.js:70
-#, fuzzy
-msgid "please open the page"
-msgstr "Code kopiert in die Zwischenablage"
-
-#: src/interpreter.js:133 src/commands.js:71
-msgid "open the link"
-msgstr ""
-
-#: src/interpreter.js:134 src/commands.js:72
-#, fuzzy
-msgid "please open the link"
-msgstr "Code kopiert in die Zwischenablage"
-
-#: src/interpreter.js:135 src/commands.js:73
-msgid "open this link"
-msgstr ""
-
-#: src/interpreter.js:136 src/commands.js:74
-#, fuzzy
-msgid "please open this link"
-msgstr "Code kopiert in die Zwischenablage"
-
-#: src/interpreter.js:137 src/commands.js:75
-msgid "open web page"
-msgstr ""
-
-#: src/interpreter.js:138 src/commands.js:76
-msgid "please open web page"
-msgstr ""
-
-#: src/interpreter.js:139 src/commands.js:77
-msgid "open the web page"
-msgstr ""
-
-#: src/interpreter.js:140 src/commands.js:78
-#, fuzzy
-msgid "please open the web page"
-msgstr "Code kopiert in die Zwischenablage"
-
-#: src/interpreter.js:141 src/commands.js:79
-msgid "go to the site"
-msgstr ""
-
-#: src/interpreter.js:142 src/commands.js:80
-msgid "please go to the site"
-msgstr ""
-
-#: src/interpreter.js:143 src/commands.js:81
-msgid "go to the website"
-msgstr ""
-
-#: src/interpreter.js:144 src/commands.js:82
-msgid "please go to the website"
-msgstr ""
-
-#: src/interpreter.js:145 src/commands.js:83
-msgid "access the site"
-msgstr ""
-
-#: src/interpreter.js:146 src/commands.js:84
-msgid "please access the site"
-msgstr ""
-
-#: src/interpreter.js:147 src/commands.js:85
-msgid "access the website"
-msgstr ""
-
-#: src/interpreter.js:148 src/commands.js:86
-msgid "please access the website"
-msgstr ""
-
-#: src/interpreter.js:149 src/commands.js:87
-msgid "go online"
-msgstr ""
-
-#: src/interpreter.js:150 src/commands.js:88
-msgid "please go online"
-msgstr ""
-
-#: src/interpreter.js:151 src/commands.js:89
-msgid "load the site"
-msgstr ""
-
-#: src/interpreter.js:152 src/commands.js:90
-#, fuzzy
-msgid "please load the site"
-msgstr "Code kopiert in die Zwischenablage"
-
-#: src/interpreter.js:153 src/commands.js:91
-msgid "load the website"
-msgstr ""
-
-#: src/interpreter.js:154 src/commands.js:92
-#, fuzzy
-msgid "please load the website"
-msgstr "Code kopiert in die Zwischenablage"
-
-#: src/interpreter.js:155 src/commands.js:93
-msgid "visit the site"
-msgstr ""
-
-#: src/interpreter.js:156 src/commands.js:94
-msgid "please visit the site"
-msgstr ""
-
-#: src/interpreter.js:157 src/commands.js:95
-msgid "visit the website"
-msgstr ""
-
-#: src/interpreter.js:158 src/commands.js:96
-msgid "please visit the website"
-msgstr ""
-
-#: src/interpreter.js:159 src/commands.js:97
-#, fuzzy
-msgid "can you visit the site?"
-msgstr "Code kopiert in die Zwischenablage"
-
-#: src/interpreter.js:160 src/commands.js:98
-msgid "can you visit the website?"
-msgstr ""
-
-#: src/interpreter.js:161 src/commands.js:99
-msgid "navigate to the site"
-msgstr ""
-
-#: src/interpreter.js:162 src/commands.js:100
-msgid "please navigate to the site"
-msgstr ""
-
-#: src/interpreter.js:163 src/commands.js:101
-msgid "navigate to the website"
-msgstr ""
-
-#: src/interpreter.js:164 src/commands.js:102
-msgid "please navigate to the website"
-msgstr ""
-
-#: src/interpreter.js:165 src/commands.js:103
-msgid "take me to the site"
-msgstr ""
-
-#: src/interpreter.js:166 src/commands.js:104
-msgid "please take me to the site"
-msgstr ""
-
-#: src/interpreter.js:167 src/commands.js:105
-msgid "take me to the website"
-msgstr ""
-
-#: src/interpreter.js:168 src/commands.js:106
-msgid "please take me to the website"
-msgstr ""
-
-#: src/interpreter.js:171 src/commands.js:109
-msgid "open the channel"
-msgstr ""
-
-#: src/interpreter.js:172 src/commands.js:110
-#, fuzzy
-msgid "please open the channel"
-msgstr "Code kopiert in die Zwischenablage"
-
-#: src/interpreter.js:173 src/commands.js:111
-msgid "could you open the channel?"
-msgstr ""
-
-#: src/interpreter.js:174 src/commands.js:112
-#, fuzzy
-msgid "can you open the channel?"
-msgstr "Code kopiert in die Zwischenablage"
-
-#: src/interpreter.js:175 src/commands.js:113
-msgid "open this channel"
-msgstr ""
-
-#: src/interpreter.js:176 src/commands.js:114
-msgid "please open this channel"
-msgstr ""
-
-#: src/interpreter.js:177 src/commands.js:115
-msgid "open channel"
-msgstr ""
-
-#: src/interpreter.js:178 src/commands.js:116
-msgid "please open channel"
-msgstr ""
-
-#: src/interpreter.js:179 src/commands.js:117
-msgid "could you open channel?"
-msgstr ""
-
-#: src/interpreter.js:180 src/commands.js:118
-msgid "open the YouTube channel"
-msgstr ""
-
-#: src/interpreter.js:181 src/commands.js:119
-msgid "please open the YouTube channel"
-msgstr ""
-
-#: src/interpreter.js:182 src/commands.js:120
-msgid "could you open the YouTube channel?"
-msgstr ""
-
-#: src/interpreter.js:183 src/commands.js:121
-msgid "can you open the YouTube channel?"
-msgstr ""
-
-#: src/interpreter.js:184 src/commands.js:122
-msgid "open this YouTube channel"
-msgstr ""
-
-#: src/interpreter.js:185 src/commands.js:123
-msgid "please open this YouTube channel"
-msgstr ""
-
-#: src/interpreter.js:186 src/commands.js:124
-msgid "open YouTube channel"
-msgstr ""
-
-#: src/interpreter.js:187 src/commands.js:125
-msgid "please open YouTube channel"
-msgstr ""
-
-#: src/interpreter.js:188 src/commands.js:126
-msgid "open the channel on YouTube"
-msgstr ""
-
-#: src/interpreter.js:189 src/commands.js:127
-msgid "please open the channel on YouTube"
-msgstr ""
-
-#: src/interpreter.js:190 src/commands.js:128
-msgid "could you open the channel on YouTube?"
-msgstr ""
-
-#: src/interpreter.js:191 src/commands.js:129
-msgid "can you open the channel on YouTube?"
-msgstr ""
-
-#: src/interpreter.js:192 src/commands.js:130
-msgid "open this channel on YouTube"
-msgstr ""
-
-#: src/interpreter.js:193 src/commands.js:131
-msgid "please open this channel on YouTube"
-msgstr ""
-
-#: src/interpreter.js:194 src/commands.js:132
-msgid "go to the channel"
-msgstr ""
-
-#: src/interpreter.js:195 src/commands.js:133
-msgid "please go to the channel"
-msgstr ""
-
-#: src/interpreter.js:196 src/commands.js:134
-msgid "go to this channel"
-msgstr ""
-
-#: src/interpreter.js:197 src/commands.js:135
-msgid "please go to this channel"
-msgstr ""
-
-#: src/interpreter.js:198 src/commands.js:136
-msgid "access the channel"
-msgstr ""
-
-#: src/interpreter.js:199 src/commands.js:137
-#, fuzzy
-msgid "please access the channel"
-msgstr "Code kopiert in die Zwischenablage"
-
-#: src/interpreter.js:200 src/commands.js:138
-msgid "access this channel"
-msgstr ""
-
-#: src/interpreter.js:201 src/commands.js:139
-msgid "please access this channel"
-msgstr ""
-
-#: src/interpreter.js:202 src/commands.js:140
-msgid "visit the channel"
-msgstr ""
-
-#: src/interpreter.js:203 src/commands.js:141
-msgid "please visit the channel"
-msgstr ""
-
-#: src/interpreter.js:204 src/commands.js:142
-msgid "visit this channel"
-msgstr ""
-
-#: src/interpreter.js:205 src/commands.js:143
-msgid "please visit this channel"
-msgstr ""
-
-#: src/interpreter.js:206 src/commands.js:144
-msgid "navigate to the channel"
-msgstr ""
-
-#: src/interpreter.js:207 src/commands.js:145
-msgid "please navigate to the channel"
-msgstr ""
-
-#: src/interpreter.js:208 src/commands.js:146
-msgid "navigate to this channel"
-msgstr ""
-
-#: src/interpreter.js:209 src/commands.js:147
-msgid "please navigate to this channel"
-msgstr ""
-
-#: src/interpreter.js:210 src/commands.js:148
-msgid "load the channel"
-msgstr ""
-
-#: src/interpreter.js:211 src/commands.js:149
-#, fuzzy
-msgid "please load the channel"
-msgstr "Code kopiert in die Zwischenablage"
-
-#: src/interpreter.js:212 src/commands.js:150
-msgid "load this channel"
-msgstr ""
-
-#: src/interpreter.js:213 src/commands.js:151
-#, fuzzy
-msgid "please load this channel"
-msgstr "Code kopiert in die Zwischenablage"
-
-#: src/interpreter.js:214 src/commands.js:152
-msgid "open YouTube"
-msgstr ""
-
-#: src/interpreter.js:215 src/commands.js:153
-msgid "please open YouTube"
-msgstr ""
-
-#: src/interpreter.js:216 src/commands.js:154
-msgid "on YouTube"
-msgstr ""
-
-#: src/interpreter.js:217 src/commands.js:155
-msgid "open it on YouTube"
-msgstr ""
-
-#: src/interpreter.js:218 src/commands.js:156
-msgid "please open it on YouTube"
-msgstr ""
-
-#: src/interpreter.js:219 src/commands.js:157
-msgid "could you open it on YouTube?"
-msgstr ""
-
-#: src/interpreter.js:220 src/commands.js:158
-msgid "can you open it on YouTube?"
-msgstr ""
-
-#: src/interpreter.js:221 src/commands.js:159
-msgid "access the channel on YouTube"
-msgstr ""
-
-#: src/interpreter.js:222 src/commands.js:160
-msgid "please access the channel on YouTube"
-msgstr ""
-
-#: src/interpreter.js:223 src/commands.js:161
-msgid "visit the channel on YouTube"
-msgstr ""
-
-#: src/interpreter.js:224 src/commands.js:162
-msgid "please visit the channel on YouTube"
-msgstr ""
-
-#: src/interpreter.js:244
+#: src/interpreter.js:86
 msgid "Starting reading..."
 msgstr ""
 
@@ -928,6 +291,643 @@ msgstr ""
 
 #: src/utils/utils.js:300 src/utils/utils.js:302
 msgid "Failed to get text from clipboard"
+msgstr ""
+
+#: src/commands.js:7
+msgid "read this text"
+msgstr ""
+
+#: src/commands.js:8
+msgid "please read this text"
+msgstr ""
+
+#: src/commands.js:9
+msgid "can you read this text?"
+msgstr ""
+
+#: src/commands.js:10
+msgid "read the text"
+msgstr ""
+
+#: src/commands.js:11
+msgid "please read the text"
+msgstr ""
+
+#: src/commands.js:12
+#, fuzzy
+msgid "read the clipboard"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/commands.js:13
+#, fuzzy
+msgid "please read the clipboard"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/commands.js:14
+#, fuzzy
+msgid "can you read the clipboard?"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/commands.js:15
+msgid "read copied text"
+msgstr ""
+
+#: src/commands.js:16
+msgid "please read the copied text"
+msgstr ""
+
+#: src/commands.js:17
+msgid "read clipboard text"
+msgstr ""
+
+#: src/commands.js:18
+#, fuzzy
+msgid "please read clipboard text"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/commands.js:19
+msgid "read this clipboard"
+msgstr ""
+
+#: src/commands.js:20
+#, fuzzy
+msgid "can you read this clipboard?"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/commands.js:21
+#, fuzzy
+msgid "read text from clipboard"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/commands.js:22
+#, fuzzy
+msgid "please read text from clipboard"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/commands.js:23
+#, fuzzy
+msgid "read the text from clipboard"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/commands.js:24
+msgid "read text in memory"
+msgstr ""
+
+#: src/commands.js:25
+msgid "please read text in memory"
+msgstr ""
+
+#: src/commands.js:26
+msgid "read memorized text"
+msgstr ""
+
+#: src/commands.js:27
+msgid "please read the memorized text"
+msgstr ""
+
+#: src/commands.js:28
+msgid "read for me"
+msgstr ""
+
+#: src/commands.js:29
+msgid "can you read for me?"
+msgstr ""
+
+#: src/commands.js:30
+msgid "read this for me"
+msgstr ""
+
+#: src/commands.js:31
+msgid "please read this for me"
+msgstr ""
+
+#: src/commands.js:32
+msgid "read text for me"
+msgstr ""
+
+#: src/commands.js:33
+msgid "could you read the text for me?"
+msgstr ""
+
+#: src/commands.js:34
+msgid "read this please"
+msgstr ""
+
+#: src/commands.js:35
+msgid "please read this"
+msgstr ""
+
+#: src/commands.js:36
+msgid "could you please read this?"
+msgstr ""
+
+#: src/commands.js:37
+msgid "you can read now"
+msgstr ""
+
+#: src/commands.js:38
+#, fuzzy
+msgid "please read what's copied"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/commands.js:39
+#, fuzzy
+msgid "read what's on the clipboard"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/commands.js:40
+msgid "read the copied content"
+msgstr ""
+
+#: src/commands.js:41
+msgid "please read the copied content"
+msgstr ""
+
+#: src/commands.js:42
+#, fuzzy
+msgid "read the clipboard content"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/commands.js:43
+#, fuzzy
+msgid "can you read what's copied?"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/commands.js:44
+msgid "read the copied message"
+msgstr ""
+
+#: src/commands.js:45
+msgid "please read the copied message"
+msgstr ""
+
+#: src/commands.js:46
+msgid "read this text from memory"
+msgstr ""
+
+#: src/commands.js:47
+msgid "please read this text from memory"
+msgstr ""
+
+#: src/commands.js:50
+msgid "open the site"
+msgstr ""
+
+#: src/commands.js:51
+#, fuzzy
+msgid "please open the site"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/commands.js:52
+msgid "could you open the site?"
+msgstr ""
+
+#: src/commands.js:53
+#, fuzzy
+msgid "can you open the site?"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/commands.js:54
+msgid "open this site"
+msgstr ""
+
+#: src/commands.js:55
+#, fuzzy
+msgid "please open this site"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/commands.js:56
+msgid "could you open this site?"
+msgstr ""
+
+#: src/commands.js:57
+msgid "open the website"
+msgstr ""
+
+#: src/commands.js:58
+msgid "please open the website"
+msgstr ""
+
+#: src/commands.js:59
+msgid "could you open the website?"
+msgstr ""
+
+#: src/commands.js:60
+#, fuzzy
+msgid "can you open the website?"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/commands.js:61
+msgid "open site"
+msgstr ""
+
+#: src/commands.js:62
+msgid "please open site"
+msgstr ""
+
+#: src/commands.js:63
+msgid "could you open site?"
+msgstr ""
+
+#: src/commands.js:64
+#, fuzzy
+msgid "can you open site?"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/commands.js:65
+msgid "open this website"
+msgstr ""
+
+#: src/commands.js:66
+msgid "please open this website"
+msgstr ""
+
+#: src/commands.js:67
+msgid "open online page"
+msgstr ""
+
+#: src/commands.js:68
+msgid "please open online page"
+msgstr ""
+
+#: src/commands.js:69
+msgid "open the page"
+msgstr ""
+
+#: src/commands.js:70
+#, fuzzy
+msgid "please open the page"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/commands.js:71
+msgid "open the link"
+msgstr ""
+
+#: src/commands.js:72
+#, fuzzy
+msgid "please open the link"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/commands.js:73
+msgid "open this link"
+msgstr ""
+
+#: src/commands.js:74
+#, fuzzy
+msgid "please open this link"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/commands.js:75
+msgid "open web page"
+msgstr ""
+
+#: src/commands.js:76
+msgid "please open web page"
+msgstr ""
+
+#: src/commands.js:77
+msgid "open the web page"
+msgstr ""
+
+#: src/commands.js:78
+#, fuzzy
+msgid "please open the web page"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/commands.js:79
+msgid "go to the site"
+msgstr ""
+
+#: src/commands.js:80
+msgid "please go to the site"
+msgstr ""
+
+#: src/commands.js:81
+msgid "go to the website"
+msgstr ""
+
+#: src/commands.js:82
+msgid "please go to the website"
+msgstr ""
+
+#: src/commands.js:83
+msgid "access the site"
+msgstr ""
+
+#: src/commands.js:84
+msgid "please access the site"
+msgstr ""
+
+#: src/commands.js:85
+msgid "access the website"
+msgstr ""
+
+#: src/commands.js:86
+msgid "please access the website"
+msgstr ""
+
+#: src/commands.js:87
+msgid "go online"
+msgstr ""
+
+#: src/commands.js:88
+msgid "please go online"
+msgstr ""
+
+#: src/commands.js:89
+msgid "load the site"
+msgstr ""
+
+#: src/commands.js:90
+#, fuzzy
+msgid "please load the site"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/commands.js:91
+msgid "load the website"
+msgstr ""
+
+#: src/commands.js:92
+#, fuzzy
+msgid "please load the website"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/commands.js:93
+msgid "visit the site"
+msgstr ""
+
+#: src/commands.js:94
+msgid "please visit the site"
+msgstr ""
+
+#: src/commands.js:95
+msgid "visit the website"
+msgstr ""
+
+#: src/commands.js:96
+msgid "please visit the website"
+msgstr ""
+
+#: src/commands.js:97
+#, fuzzy
+msgid "can you visit the site?"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/commands.js:98
+msgid "can you visit the website?"
+msgstr ""
+
+#: src/commands.js:99
+msgid "navigate to the site"
+msgstr ""
+
+#: src/commands.js:100
+msgid "please navigate to the site"
+msgstr ""
+
+#: src/commands.js:101
+msgid "navigate to the website"
+msgstr ""
+
+#: src/commands.js:102
+msgid "please navigate to the website"
+msgstr ""
+
+#: src/commands.js:103
+msgid "take me to the site"
+msgstr ""
+
+#: src/commands.js:104
+msgid "please take me to the site"
+msgstr ""
+
+#: src/commands.js:105
+msgid "take me to the website"
+msgstr ""
+
+#: src/commands.js:106
+msgid "please take me to the website"
+msgstr ""
+
+#: src/commands.js:109
+msgid "open the channel"
+msgstr ""
+
+#: src/commands.js:110
+#, fuzzy
+msgid "please open the channel"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/commands.js:111
+msgid "could you open the channel?"
+msgstr ""
+
+#: src/commands.js:112
+#, fuzzy
+msgid "can you open the channel?"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/commands.js:113
+msgid "open this channel"
+msgstr ""
+
+#: src/commands.js:114
+msgid "please open this channel"
+msgstr ""
+
+#: src/commands.js:115
+msgid "open channel"
+msgstr ""
+
+#: src/commands.js:116
+msgid "please open channel"
+msgstr ""
+
+#: src/commands.js:117
+msgid "could you open channel?"
+msgstr ""
+
+#: src/commands.js:118
+msgid "open the YouTube channel"
+msgstr ""
+
+#: src/commands.js:119
+msgid "please open the YouTube channel"
+msgstr ""
+
+#: src/commands.js:120
+msgid "could you open the YouTube channel?"
+msgstr ""
+
+#: src/commands.js:121
+msgid "can you open the YouTube channel?"
+msgstr ""
+
+#: src/commands.js:122
+msgid "open this YouTube channel"
+msgstr ""
+
+#: src/commands.js:123
+msgid "please open this YouTube channel"
+msgstr ""
+
+#: src/commands.js:124
+msgid "open YouTube channel"
+msgstr ""
+
+#: src/commands.js:125
+msgid "please open YouTube channel"
+msgstr ""
+
+#: src/commands.js:126
+msgid "open the channel on YouTube"
+msgstr ""
+
+#: src/commands.js:127
+msgid "please open the channel on YouTube"
+msgstr ""
+
+#: src/commands.js:128
+msgid "could you open the channel on YouTube?"
+msgstr ""
+
+#: src/commands.js:129
+msgid "can you open the channel on YouTube?"
+msgstr ""
+
+#: src/commands.js:130
+msgid "open this channel on YouTube"
+msgstr ""
+
+#: src/commands.js:131
+msgid "please open this channel on YouTube"
+msgstr ""
+
+#: src/commands.js:132
+msgid "go to the channel"
+msgstr ""
+
+#: src/commands.js:133
+msgid "please go to the channel"
+msgstr ""
+
+#: src/commands.js:134
+msgid "go to this channel"
+msgstr ""
+
+#: src/commands.js:135
+msgid "please go to this channel"
+msgstr ""
+
+#: src/commands.js:136
+msgid "access the channel"
+msgstr ""
+
+#: src/commands.js:137
+#, fuzzy
+msgid "please access the channel"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/commands.js:138
+msgid "access this channel"
+msgstr ""
+
+#: src/commands.js:139
+msgid "please access this channel"
+msgstr ""
+
+#: src/commands.js:140
+msgid "visit the channel"
+msgstr ""
+
+#: src/commands.js:141
+msgid "please visit the channel"
+msgstr ""
+
+#: src/commands.js:142
+msgid "visit this channel"
+msgstr ""
+
+#: src/commands.js:143
+msgid "please visit this channel"
+msgstr ""
+
+#: src/commands.js:144
+msgid "navigate to the channel"
+msgstr ""
+
+#: src/commands.js:145
+msgid "please navigate to the channel"
+msgstr ""
+
+#: src/commands.js:146
+msgid "navigate to this channel"
+msgstr ""
+
+#: src/commands.js:147
+msgid "please navigate to this channel"
+msgstr ""
+
+#: src/commands.js:148
+msgid "load the channel"
+msgstr ""
+
+#: src/commands.js:149
+#, fuzzy
+msgid "please load the channel"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/commands.js:150
+msgid "load this channel"
+msgstr ""
+
+#: src/commands.js:151
+#, fuzzy
+msgid "please load this channel"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/commands.js:152
+msgid "open YouTube"
+msgstr ""
+
+#: src/commands.js:153
+msgid "please open YouTube"
+msgstr ""
+
+#: src/commands.js:154
+msgid "on YouTube"
+msgstr ""
+
+#: src/commands.js:155
+msgid "open it on YouTube"
+msgstr ""
+
+#: src/commands.js:156
+msgid "please open it on YouTube"
+msgstr ""
+
+#: src/commands.js:157
+msgid "could you open it on YouTube?"
+msgstr ""
+
+#: src/commands.js:158
+msgid "can you open it on YouTube?"
+msgstr ""
+
+#: src/commands.js:159
+msgid "access the channel on YouTube"
+msgstr ""
+
+#: src/commands.js:160
+msgid "please access the channel on YouTube"
+msgstr ""
+
+#: src/commands.js:161
+msgid "visit the channel on YouTube"
+msgstr ""
+
+#: src/commands.js:162
+msgid "please visit the channel on YouTube"
 msgstr ""
 
 #: src/ui/mainmenu.js:30
