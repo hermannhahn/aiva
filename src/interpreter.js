@@ -1,5 +1,5 @@
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
-import {Commands} from './commands';
+import {Commands} from './commands.js';
 
 export class Interpreter {
     constructor(app) {
