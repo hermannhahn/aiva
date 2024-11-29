@@ -36,9 +36,13 @@ export class Chat {
             if (this.history.length > 0) {
                 this.app.log('History: ' + this.history);
                 this.app.log('Recursive talk history found.');
+            } else {
+                this.history = [];
+                this.app.log('Recursive talk history not found.');
             }
-            this.app.log('Recursive talk history loaded.');
+            this.app.log('Recursive talk history enabled.');
         } else {
+            this.history = [];
             this.app.log('Recursive talk is disabled.');
         }
 
