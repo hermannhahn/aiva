@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-29 17:03-0300\n"
+"POT-Creation-Date: 2024-11-29 17:04-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language fr-FR\n"
@@ -153,12 +153,13 @@ msgid "you can read now"
 msgstr ""
 
 #: src/interpreter.js:100
-msgid "please read what’s copied"
-msgstr ""
+#, fuzzy
+msgid "please read what's copied"
+msgstr "Code copié dans le presse-papier"
 
 #: src/interpreter.js:101
 #, fuzzy
-msgid "read what’s on the clipboard"
+msgid "read what's on the clipboard"
 msgstr "Code copié dans le presse-papier"
 
 #: src/interpreter.js:102
@@ -175,8 +176,9 @@ msgid "read the clipboard content"
 msgstr "Code copié dans le presse-papier"
 
 #: src/interpreter.js:105
-msgid "can you read what’s copied?"
-msgstr ""
+#, fuzzy
+msgid "can you read what's copied?"
+msgstr "Code copié dans le presse-papier"
 
 #: src/interpreter.js:106
 msgid "read the copied message"

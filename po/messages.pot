@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-29 17:03-0300\n"
+"POT-Creation-Date: 2024-11-29 17:04-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -146,11 +146,11 @@ msgid "you can read now"
 msgstr ""
 
 #: src/interpreter.js:100
-msgid "please read what’s copied"
+msgid "please read what's copied"
 msgstr ""
 
 #: src/interpreter.js:101
-msgid "read what’s on the clipboard"
+msgid "read what's on the clipboard"
 msgstr ""
 
 #: src/interpreter.js:102
@@ -166,7 +166,7 @@ msgid "read the clipboard content"
 msgstr ""
 
 #: src/interpreter.js:105
-msgid "can you read what’s copied?"
+msgid "can you read what's copied?"
 msgstr ""
 
 #: src/interpreter.js:106
