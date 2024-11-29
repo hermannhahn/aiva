@@ -18,7 +18,7 @@ msgstr ""
 
 #: src/interpreter.js:62
 msgid "Invalid command"
-msgstr ""
+msgstr "Comando inválido"
 
 #: src/interpreter.js:86
 msgid "Starting reading..."
