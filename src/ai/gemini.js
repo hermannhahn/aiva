@@ -267,10 +267,10 @@ export class GoogleGemini {
         const date = new Date();
         let location = this.app.userSettings.LOCATION;
         if (!location || location === 'Undefined') {
-            location = this.app._getLocation();
+            location = this.app._getLocation() || 'Undefined';
         }
 
-        const user = `${_("Hi, I'm")} ${this.app.userSettings.ASSIST_NAME}. ${_("I'm from")} ${location} ${_('and today is')} ${date}`;
+        const user = `${_("Hi, I'm")} ${this.app.userSettings.USERNAME}. ${_("I'm from")} ${location} ${_('and today is')} ${date}`;
         const model = `${_('Hi! I am')} ${this.app.userSettings.ASSIST_NAME}. ${_('How can I help you today?')}`;
 
         if (role === 'user') {
