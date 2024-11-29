@@ -301,22 +301,51 @@ ${_('JSON Response')}: {success: true, response: "${_('Searching for santos boat
      * @returns {string} body contents
      */
     buildBody(text) {
-        const history = this.app.database.getHistory();
-        this.app.log(`History: ${history}`);
-        if (history.length === 0) {
-            this.app.log('No history found.');
-            return this.buildNoHistoryBody(text);
+        try {
+            const history = this.app.database.getHistory();
+
+            // Log de histórico formatado para depuração
+            this.app.log(`History: ${JSON.stringify(history, null, 2)}`);
+
+            if (!Array.isArray(history) || history.length === 0) {
+                this.app.log('No history found.');
+                return this.buildNoHistoryBody(text);
+            }
+
+            // Adiciona a pergunta ao histórico
+            const stringfiedHistory = JSON.stringify([
+                ...history,
+                {
+                    role: 'user',
+                    parts: [{text: String(text) || ''}],
+                },
+            ]);
+
+            this.app.log('History loaded successfully.');
+            return `{"contents":${stringfiedHistory}}`;
+        } catch (error) {
+            this.app.log(`Error building body: ${error.message}`);
+            return null;
         }
-        const stringfiedHistory = JSON.stringify([
-            ...history,
-            {
-                role: 'user',
-                parts: [{text}],
-            },
-        ]);
-        this.app.log('History loaded.');
-        return `{"contents":${stringfiedHistory}}`;
     }
+
+    // buildBody(text) {
+    //     const history = this.app.database.getHistory();
+    //     this.app.log(`History: ${history}`);
+    //     if (history.length === 0) {
+    //         this.app.log('No history found.');
+    //         return this.buildNoHistoryBody(text);
+    //     }
+    //     const stringfiedHistory = JSON.stringify([
+    //         ...history,
+    //         {
+    //             role: 'user',
+    //             parts: [{text}],
+    //         },
+    //     ]);
+    //     this.app.log('History loaded.');
+    //     return `{"contents":${stringfiedHistory}}`;
+    // }
 
     /**
      * @description build body without history
