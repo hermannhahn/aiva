@@ -94,6 +94,7 @@ const Aiva = GObject.registerClass(
                 RECURSIVE_TALK: settings.get_boolean('log-history'),
                 TRANSPARENCY: settings.get_string('theme-transparency'),
                 COLOR: settings.get_string('theme-color'),
+                LOCATION: settings.get_string('location'),
                 USERNAME: username,
             };
         }
@@ -130,22 +131,6 @@ const Aiva = GObject.registerClass(
             //     this.userSettings.AZURE_SPEECH_LANGUAGE,
             //     true,
             // );
-            // location
-            let location = this.extension.settings.get_string('location');
-            if (
-                location === '' ||
-                location === null ||
-                location === undefined ||
-                location === 'undefined' ||
-                location === 'Undefined'
-            ) {
-                console.log('[AIVA] Location not set. Getting location...');
-                this._setLocation();
-            } else {
-                console.log('[AIVA] Location set to ' + location);
-                this.userSettings.LOCATION = location;
-            }
-
             console.log('[AIVA] Settings loaded!');
 
             // create instances
