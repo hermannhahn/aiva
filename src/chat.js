@@ -131,7 +131,11 @@ export class Chat {
             `<b>${this.app.userSettings.ASSIST_NAME}:</b> ${formatedText}`,
         );
         copyButton.connect('activate', (_self) => {
-            this.app.utils.copySelectedText(responseChat, copyButton);
+            this.app.utils.copySelectedText(
+                this.app.ui.chat.inputChat,
+                responseChat,
+                copyButton,
+            );
         });
         this.app.ui.chat.responseChat = responseChat;
 
