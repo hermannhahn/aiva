@@ -260,7 +260,7 @@ export class GoogleGemini {
 
     /**
      * @description create tune string
-     * @param {string} [role='all'] type the role or leave empty
+     * @param {string} [role='user'] type the role or leave empty
      * @returns {string} tune text
      */
     getTuneString(role = 'user') {
