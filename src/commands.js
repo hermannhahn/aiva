@@ -28,7 +28,7 @@ export class Commands {
                 _('open this site'),
                 _('open the website'),
                 _('open site'),
-                _('open online page'),
+                _('open page'),
                 _('open the page'),
                 _('open the link'),
                 _('open this link'),
