@@ -393,7 +393,7 @@ msgstr "abra o site"
 #: src/commands.js:28
 #, fuzzy
 msgid "open this site"
-msgstr "abre o site"
+msgstr "abre esse site"
 
 #: src/commands.js:29
 msgid "open the website"
@@ -406,22 +406,22 @@ msgstr "abrir site"
 #: src/commands.js:31
 #, fuzzy
 msgid "open page"
-msgstr "abra o site"
+msgstr "abrir página"
 
 #: src/commands.js:32
 #, fuzzy
 msgid "open the page"
-msgstr "abra o site"
+msgstr "entra na página"
 
 #: src/commands.js:33
 #, fuzzy
 msgid "open the link"
-msgstr "abra o site"
+msgstr "abre o link"
 
 #: src/commands.js:34
 #, fuzzy
 msgid "open this link"
-msgstr "abra o site"
+msgstr "abre esse link"
 
 #: src/commands.js:35
 #, fuzzy
@@ -431,71 +431,71 @@ msgstr "abrir página"
 #: src/commands.js:36
 #, fuzzy
 msgid "open the web page"
-msgstr "abre a página"
+msgstr "abra a página"
 
 #: src/commands.js:37
 #, fuzzy
 msgid "go to the site"
-msgstr "abra o site"
+msgstr "vai pro site"
 
 #: src/commands.js:38
 #, fuzzy
 msgid "go to the website"
-msgstr "abre a página"
+msgstr "vai pra página"
 
 #: src/commands.js:39
 #, fuzzy
 msgid "access the site"
-msgstr "abra o site"
+msgstr "acessa o site"
 
 #: src/commands.js:40
 #, fuzzy
 msgid "access the website"
-msgstr "abre a página"
+msgstr "acessa a página"
 
 #: src/commands.js:41
 msgid "go online"
-msgstr ""
+msgstr "entra no site"
 
 #: src/commands.js:42
 #, fuzzy
 msgid "load the site"
-msgstr "abra o site"
+msgstr "carrega o site"
 
 #: src/commands.js:43
 #, fuzzy
 msgid "load the website"
-msgstr "abre a página"
+msgstr "carrega a página"
 
 #: src/commands.js:44
 #, fuzzy
 msgid "visit the site"
-msgstr "abra o site"
+msgstr "visite o site"
 
 #: src/commands.js:45
 #, fuzzy
 msgid "visit the website"
-msgstr "abre a página"
+msgstr "visite a página"
 
 #: src/commands.js:46
 #, fuzzy
 msgid "navigate to the site"
-msgstr "abra o site"
+msgstr "navegue para o site"
 
 #: src/commands.js:47
 #, fuzzy
 msgid "navigate to the website"
-msgstr "abre a página"
+msgstr "navegue para a página"
 
 #: src/commands.js:48
 #, fuzzy
 msgid "take me to the site"
-msgstr "abra o site"
+msgstr "mostra o site"
 
 #: src/commands.js:49
 #, fuzzy
 msgid "take me to the website"
-msgstr "abre a página"
+msgstr "mostra a página"
 
 #: src/commands.js:52
 #, fuzzy
@@ -505,7 +505,7 @@ msgstr "abre o canal"
 #: src/commands.js:53
 #, fuzzy
 msgid "open this channel"
-msgstr "abre o canal"
+msgstr "abre esse canal"
 
 #: src/commands.js:54
 msgid "open channel"
@@ -514,7 +514,7 @@ msgstr "abrir canal"
 #: src/commands.js:55
 #, fuzzy
 msgid "open the YouTube channel"
-msgstr "abra o canal do youtube"
+msgstr "abre o canal do youtube"
 
 #: src/commands.js:56
 #, fuzzy
@@ -524,62 +524,62 @@ msgstr "abrir canal do youtube"
 #: src/commands.js:57
 #, fuzzy
 msgid "open the channel on YouTube"
-msgstr "abre o canal"
+msgstr "abre o canal do youtube"
 
 #: src/commands.js:58
 #, fuzzy
 msgid "open this channel on YouTube"
-msgstr "abre o canal"
+msgstr "abre esse canal do youtube"
 
 #: src/commands.js:59
 #, fuzzy
 msgid "go to the channel"
-msgstr "abre o canal"
+msgstr "vai no canal"
 
 #: src/commands.js:60
 #, fuzzy
 msgid "go to this channel"
-msgstr "abre o canal"
+msgstr "vai pro canal"
 
 #: src/commands.js:61
 #, fuzzy
 msgid "access the channel"
-msgstr "abre o canal"
+msgstr "acessa o canal"
 
 #: src/commands.js:62
 #, fuzzy
 msgid "access this channel"
-msgstr "abre o canal"
+msgstr "acessa esse canal"
 
 #: src/commands.js:63
 #, fuzzy
 msgid "visit the channel"
-msgstr "abre o canal"
+msgstr "visita o canal"
 
 #: src/commands.js:64
 #, fuzzy
 msgid "visit this channel"
-msgstr "abre o canal"
+msgstr "visita esse canal"
 
 #: src/commands.js:65
 #, fuzzy
 msgid "navigate to the channel"
-msgstr "abre o canal"
+msgstr "navegue para o canal"
 
 #: src/commands.js:66
 #, fuzzy
 msgid "navigate to this channel"
-msgstr "abre o canal"
+msgstr "navegue para esse canal"
 
 #: src/commands.js:67
 #, fuzzy
 msgid "load the channel"
-msgstr "abre o canal"
+msgstr "carrega o canal"
 
 #: src/commands.js:68
 #, fuzzy
 msgid "load this channel"
-msgstr "abre o canal"
+msgstr "carrega esse canal"
 
 #: src/commands.js:69
 #, fuzzy
@@ -588,20 +588,20 @@ msgstr "abrir youtube"
 
 #: src/commands.js:70
 msgid "on YouTube"
-msgstr ""
+msgstr "no youtube"
 
 #: src/commands.js:71
 #, fuzzy
 msgid "open it on YouTube"
-msgstr "abrir youtube"
+msgstr "abre no youtube"
 
 #: src/commands.js:72
 msgid "access the channel on YouTube"
-msgstr ""
+msgstr "acessa o canal do youtube"
 
 #: src/commands.js:73
 msgid "visit the channel on YouTube"
-msgstr ""
+msgstr "visita o canal do youtube"
 
 #: src/ui/mainmenu.js:30
 msgid "Ask me anything..."
@@ -613,7 +613,7 @@ msgstr "CONFIGURAÇÕES"
 
 #: src/prefs.js:74
 msgid "Gemini API Key"
-msgstr ""
+msgstr "Chave API (Gemini)"
 
 #: src/prefs.js:85
 msgid "Insert your Gemini API key here"
@@ -625,7 +625,7 @@ msgstr "Como obter a chave de API?"
 
 #: src/prefs.js:100
 msgid "Azure Speech API Key"
-msgstr "Chave API do Azure Speech"
+msgstr "Chave API (Azure Speech)"
 
 #: src/prefs.js:111
 msgid "Insert your Azure Speech API key here"
@@ -642,7 +642,7 @@ msgstr "ex: eastus, westus, ..."
 
 #: src/prefs.js:143
 msgid "Select Language"
-msgstr "Selecione a linguagem"
+msgstr "Selecione..."
 
 #: src/prefs.js:152
 msgid "English"
