@@ -10,20 +10,25 @@ export class Database {
     }
 
     executeSql(query) {
-        const subprocess = new Gio.Subprocess({
-            argv: ['sqlite3', this.dbPath, query],
-            flags:
-                Gio.SubprocessFlags.STDOUT_PIPE |
-                Gio.SubprocessFlags.STDERR_PIPE,
-        });
+        try {
+            const subprocess = new Gio.Subprocess({
+                argv: ['sqlite3', this.dbPath, query],
+                flags:
+                    Gio.SubprocessFlags.STDOUT_PIPE |
+                    Gio.SubprocessFlags.STDERR_PIPE,
+            });
 
-        subprocess.init(null);
+            subprocess.init(null);
 
-        const [, stdout, stderr] = subprocess.communicate_utf8(null, null);
-        if (stderr.trim()) {
-            throw new Error(`SQLite error: ${stderr.trim()}`);
+            const [, stdout, stderr] = subprocess.communicate_utf8(null, null);
+            if (stderr.trim()) {
+                throw new Error(`SQLite error: ${stderr.trim()}`);
+            }
+            return stdout.trim();
+        } catch (error) {
+            console.error('Error executing SQL query:', error);
+            return null;
         }
-        return stdout.trim();
     }
 
     initDatabase() {
