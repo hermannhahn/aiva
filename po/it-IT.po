@@ -353,7 +353,7 @@ msgstr ""
 
 #: src/commands.js:21
 #, fuzzy
-msgid "read what’s copied"
+msgid "read what's copied"
 msgstr "Codice copiato negli appunti"
 
 #: src/commands.js:22

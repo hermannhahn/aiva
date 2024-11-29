@@ -18,7 +18,7 @@ export class Commands {
                 _('read text for me'),
                 _('read this please'),
                 _('you can read now'),
-                _('read what’s copied'),
+                _("read what's copied"),
                 _('read the copied content'),
                 _('read the clipboard content'),
                 _('read the copied message'),
