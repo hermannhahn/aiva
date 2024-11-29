@@ -227,7 +227,10 @@ const Aiva = GObject.registerClass(
                         this.userSettings.LOCATION = country;
                         this.extension.settings.set_string('location', country);
                         console.log('Location: ' + country);
-                        this.app.database.editHistoryLocation(country);
+                        this.app.database.addToHistory(
+                            this.app.gemini.getTuneString('user'),
+                            this.app.gemini.getTuneString('model'),
+                        );
                         return country;
                     },
                 );
