@@ -46,6 +46,7 @@ export class Chat {
             this.app.log('Recursive talk is disabled.');
         }
 
+        this.app.setLocation();
         this.app.log('Chat initialized.');
     }
 
