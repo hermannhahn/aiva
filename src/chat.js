@@ -1,3 +1,5 @@
+import GLib from 'gi://GLib';
+
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 /**
@@ -165,5 +167,24 @@ export class Chat {
             this.app.log('Code copied to clipboard.');
         }
         this.app.utils.scrollToBottom();
+    }
+
+    scrollToBottom() {
+        // Força uma nova disposição do layout
+        this.app.ui.chat.responseChat.queue_relayout();
+
+        // Conecta ao sinal que notifica quando o layout estiver pronto
+        this.app.ui.chat.responseChat.connect('notify::height', (_self) => {
+            // Aguardar o ajuste da rolagem após o próximo loop do evento
+            GLib.idle_add(GLib.PRIORITY_DEFAULT, () => {
+                let vscrollBar = this.app.ui.chat.container.get_vscroll_bar();
+                let adjustment = vscrollBar.get_adjustment();
+
+                // Define o valor superior e garante a rolagem até o final
+                adjustment.set_value(adjustment.upper - adjustment.page_size);
+
+                return GLib.SOURCE_REMOVE; // Remove o callback após execução
+            });
+        });
     }
 }
