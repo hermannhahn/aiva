@@ -92,7 +92,7 @@ export class Utils {
                     return false; // Para garantir que o timeout execute apenas uma vez
                 });
             }
-            this.app.log(`Texto copiado: ${responseChat.label.text}`);
+            this.app.log(`Copied: ${responseChat.label.text}`);
         }
     }
 
