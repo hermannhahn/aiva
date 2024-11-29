@@ -67,7 +67,7 @@ export class Chat {
         if (speech) {
             this.app.azure.tts(text);
         }
-        this.app.utils.scrollToBottom();
+        this.scrollToBottom();
     }
 
     /**
@@ -91,7 +91,7 @@ export class Chat {
         if (speech) {
             this.app.azure.tts(text);
         }
-        this.app.utils.scrollToBottom();
+        this.scrollToBottom();
     }
 
     /**
@@ -112,7 +112,7 @@ export class Chat {
             this.app.utils.copyToClipboard(response.code);
             this.app.log('Code copied to clipboard.');
         }
-        this.app.utils.scrollToBottom();
+        this.scrollToBottom();
     }
 
     /**
@@ -143,7 +143,7 @@ export class Chat {
             this.app.utils.copyToClipboard(response.code);
             this.app.log('Code copied to clipboard.');
         }
-        this.app.utils.scrollToBottom();
+        this.scrollToBottom();
     }
 
     /**
@@ -166,7 +166,7 @@ export class Chat {
             this.app.utils.copyToClipboard(response.code);
             this.app.log('Code copied to clipboard.');
         }
-        this.app.utils.scrollToBottom();
+        this.scrollToBottom();
     }
 
     scrollToBottom() {
