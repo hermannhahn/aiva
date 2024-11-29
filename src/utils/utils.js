@@ -432,19 +432,6 @@ export class Utils {
         );
     }
 
-    findCategoryInArrays(string, commands) {
-        for (const category in commands) {
-            for (let i = 0; i < commands[category].length; i++) {
-                if (string.includes(commands[category][i])) {
-                    // remove category from string
-                    string = string.replace(commands[category][i], '');
-                    return {type: category, request: string};
-                }
-            }
-        }
-        return false;
-    }
-
     loadJsonFile = (filename) => {
         let contents;
         const datadir = Gio.File.new_for_path(
