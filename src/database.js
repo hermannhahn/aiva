@@ -80,10 +80,9 @@ export class Database {
                             });
                         }
                     }
-                    return result;
                 }
             }
-            return [];
+            return result;
         } catch (error) {
             console.error('Error getting history:', error);
             return [];
