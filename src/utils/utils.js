@@ -521,7 +521,10 @@ export class Utils {
                         );
                     }
 
-                    const responseText = message.response_body.data;
+                    // Get the response body as a string
+                    this.app.log(message.toString());
+                    this.app.log(message.response_body.data.toString());
+                    const responseText = message.response_body.data.toString();
 
                     // Remove HTML tags using a regular expression
                     const plainText = responseText.replace(/<[^>]*>/g, '');

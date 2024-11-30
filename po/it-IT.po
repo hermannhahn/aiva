@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-30 14:34-0300\n"
+"POT-Creation-Date: 2024-11-30 14:38-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language it-IT\n"
@@ -327,24 +327,24 @@ msgstr ""
 msgid "Look at example below:"
 msgstr ""
 
-#: src/utils/utils.js:541 src/utils/utils.js:562
+#: src/utils/utils.js:544 src/utils/utils.js:565
 msgid "Sure, wait a moment..."
 msgstr ""
 
-#: src/utils/utils.js:545
+#: src/utils/utils.js:548
 msgid "Please, select and copy the site's address first"
 msgstr ""
 
-#: src/utils/utils.js:547
+#: src/utils/utils.js:550
 msgid "or just copy the URL and say: "
 msgstr ""
 
-#: src/utils/utils.js:548
+#: src/utils/utils.js:551
 #, fuzzy
 msgid "Read this website"
 msgstr "Codice copiato negli appunti"
 
-#: src/utils/utils.js:566
+#: src/utils/utils.js:569
 msgid "Select and copy the site's address first."
 msgstr ""
 
