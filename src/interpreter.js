@@ -26,8 +26,6 @@ export class Interpreter {
         } else if (isLocalCommand.success) {
             // DATABASE COMMANDS
             this.app.log('Local Voice command detected.');
-            this.app.log('Command: ' + isLocalCommand.command);
-            this.app.log('Request: ' + isLocalCommand.request);
             this._localCommand(isLocalCommand.command, isLocalCommand.request);
         } else {
             // QUESTIONS
