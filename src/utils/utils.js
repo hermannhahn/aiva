@@ -246,9 +246,9 @@ export class Utils {
         for (let i = 0; i < notifications.length; i++) {
             let notification = notifications[i];
             if (notification.includes(title)) {
-                // Obtenha o ID da notificação
+                // get notification id
                 let notificationId = notification.split('\t')[0];
-                // Remova a notificação
+                // remove notification
                 GLib.spawn_command_line_async(
                     'notify-send -c ' + notificationId,
                 );
@@ -268,7 +268,7 @@ export class Utils {
             const [, contents] = file.load_contents(null);
             return GLib.base64_encode(contents);
         } catch (error) {
-            this.app.log('Erro ao ler o arquivo: ' + error);
+            this.app.log('Error while encoding file to base64: ' + error);
             return null;
         }
     }
@@ -285,7 +285,11 @@ export class Utils {
                         let clipboardText = result;
                         this.app.log('Clipboard: ' + clipboardText);
                         this.app.azure.tts(
-                            clipboardText + '\n ' + _('Leitura finalizada!'),
+                            _('Start reading...') +
+                                '\n ' +
+                                clipboardText +
+                                '\n ' +
+                                _('End of text!'),
                         );
                         resolve(clipboardText);
                     } else {
