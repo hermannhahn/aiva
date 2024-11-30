@@ -495,17 +495,23 @@ export class Utils {
      */
     readUrlText(url) {
         try {
-            // Create a Soup session for making HTTP requests
-            const res = this.curl(url);
-
-            if (!res) {
-                throw new Error('Failed to create HTTP request message.');
-            }
+            let _httpSession = new Soup.Session();
+            let message = Soup.Message.new('GET', url);
+            _httpSession.send_and_read_async(
+                message,
+                GLib.PRIORITY_DEFAULT,
+                null,
+                (_httpSession, result) => {
+                    let bytes = _httpSession.send_and_read_finish(result);
+                    let decoder = new TextDecoder('utf-8');
+                    let response = decoder.decode(bytes.get_data());
+                    const plainText = response.replace(/<[^>]*>/g, '');
+                    this.app.chat.editResponse(plainText);
+                    return plainText;
+                },
+            );
 
             // Remove HTML tags using a regular expression
-            const plainText = res.replace(/<[^>]*>/g, '');
-            this.app.chat.editResponse(plainText);
-            return plainText;
         } catch (error) {
             throw new Error(`Failed to complete request: ${error.message}`);
         }
