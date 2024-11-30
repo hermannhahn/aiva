@@ -51,7 +51,7 @@ msgstr ""
 
 #: src/ai/azure.js:69 src/ai/azure.js:82 src/ai/azure.js:124
 #: src/ai/azure.js:133 src/ai/gemini.js:121 src/ai/gemini.js:213
-#: src/utils/utils.js:214
+#: src/utils/utils.js:212
 msgid "Sorry, I'm having connection trouble. Please try again."
 msgstr ""
 
@@ -286,60 +286,60 @@ msgstr ""
 msgid "Give me a moment to sort this out..."
 msgstr ""
 
-#: src/utils/utils.js:104
+#: src/utils/utils.js:102
 msgid "[ Selected Copied ]"
 msgstr ""
 
-#: src/utils/utils.js:119
+#: src/utils/utils.js:117
 msgid "[ Copied ]"
 msgstr ""
 
-#: src/utils/utils.js:194
+#: src/utils/utils.js:192
 msgid "Of course, searching..."
 msgstr ""
 
-#: src/utils/utils.js:197
+#: src/utils/utils.js:195
 msgid "Sure, searching..."
 msgstr ""
 
-#: src/utils/utils.js:209
+#: src/utils/utils.js:207
 msgid "Here are the main news"
 msgstr ""
 
-#: src/utils/utils.js:288
+#: src/utils/utils.js:286
 msgid "Start reading..."
 msgstr ""
 
-#: src/utils/utils.js:292
+#: src/utils/utils.js:290
 msgid "End of text!"
 msgstr ""
 
-#: src/utils/utils.js:296 src/utils/utils.js:298
+#: src/utils/utils.js:294 src/utils/utils.js:296
 msgid "Failed to get text from clipboard"
 msgstr ""
 
-#: src/utils/utils.js:352
+#: src/utils/utils.js:350
 msgid "Look at example below:"
 msgstr ""
 
-#: src/utils/utils.js:542 src/utils/utils.js:563
+#: src/utils/utils.js:540 src/utils/utils.js:561
 msgid "Sure, wait a moment..."
 msgstr ""
 
-#: src/utils/utils.js:546
+#: src/utils/utils.js:544
 msgid "Please, select and copy the site's address first"
 msgstr ""
 
-#: src/utils/utils.js:548
+#: src/utils/utils.js:546
 msgid "or just copy the URL and say: "
 msgstr ""
 
-#: src/utils/utils.js:549
+#: src/utils/utils.js:547
 #, fuzzy
 msgid "Read this website"
 msgstr "Codice copiato negli appunti"
 
-#: src/utils/utils.js:567
+#: src/utils/utils.js:565
 msgid "Select and copy the site's address first."
 msgstr ""
 

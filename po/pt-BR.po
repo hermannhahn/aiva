@@ -52,7 +52,7 @@ msgstr "Eu não posso fazer isso agora. Tente novamente mais tarde."
 
 #: src/ai/azure.js:69 src/ai/azure.js:82 src/ai/azure.js:124
 #: src/ai/azure.js:133 src/ai/gemini.js:121 src/ai/gemini.js:213
-#: src/utils/utils.js:214
+#: src/utils/utils.js:212
 #, fuzzy
 msgid "Sorry, I'm having connection trouble. Please try again."
 msgstr "Estou tendo problemas de conexão. Por favor, tente novamente."
@@ -304,65 +304,65 @@ msgstr "Estou pensando nisso..."
 msgid "Give me a moment to sort this out..."
 msgstr "Me dê um momento para organizar isso..."
 
-#: src/utils/utils.js:104
+#: src/utils/utils.js:102
 #, fuzzy
 msgid "[ Selected Copied ]"
 msgstr "Selecione a voz"
 
-#: src/utils/utils.js:119
+#: src/utils/utils.js:117
 msgid "[ Copied ]"
 msgstr "[ Copiado ]"
 
-#: src/utils/utils.js:194
+#: src/utils/utils.js:192
 msgid "Of course, searching..."
 msgstr "Com certeza, pesquisando..."
 
-#: src/utils/utils.js:197
+#: src/utils/utils.js:195
 msgid "Sure, searching..."
 msgstr "Claro, pesquisando..."
 
-#: src/utils/utils.js:209
+#: src/utils/utils.js:207
 #, fuzzy
 msgid "Here are the main news"
 msgstr "leia as notícias"
 
-#: src/utils/utils.js:288
+#: src/utils/utils.js:286
 #, fuzzy
 msgid "Start reading..."
 msgstr "Iniciando a leitura..."
 
-#: src/utils/utils.js:292
+#: src/utils/utils.js:290
 msgid "End of text!"
 msgstr "Fim do texto!"
 
-#: src/utils/utils.js:296 src/utils/utils.js:298
+#: src/utils/utils.js:294 src/utils/utils.js:296
 msgid "Failed to get text from clipboard"
 msgstr "Falha ao obter texto da área de transferência"
 
-#: src/utils/utils.js:352
+#: src/utils/utils.js:350
 msgid "Look at example below:"
 msgstr "Veja o exemplo abaixo:"
 
-#: src/utils/utils.js:542 src/utils/utils.js:563
+#: src/utils/utils.js:540 src/utils/utils.js:561
 #, fuzzy
 msgid "Sure, wait a moment..."
 msgstr "Claro, só um momento..."
 
-#: src/utils/utils.js:546
+#: src/utils/utils.js:544
 #, fuzzy
 msgid "Please, select and copy the site's address first"
 msgstr "Por favor, selecione e copie o endereço do site primeiro."
 
-#: src/utils/utils.js:548
+#: src/utils/utils.js:546
 msgid "or just copy the URL and say: "
 msgstr "ou apenas copie a URL e diga: "
 
-#: src/utils/utils.js:549
+#: src/utils/utils.js:547
 #, fuzzy
 msgid "Read this website"
 msgstr "leia essa página"
 
-#: src/utils/utils.js:567
+#: src/utils/utils.js:565
 msgid "Select and copy the site's address first."
 msgstr "Selecione e copie o endereço do site primeiro."
 

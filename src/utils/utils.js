@@ -6,8 +6,6 @@ import St from 'gi://St';
 // import Cairo from 'gi://cairo';
 import Soup from 'gi://Soup';
 
-import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
-
 import {convertMD} from './md2pango.js';
 
 /**
