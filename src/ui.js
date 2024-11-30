@@ -5,6 +5,8 @@ import {Chat} from './ui/chat.js';
 import {Interface} from './ui/interface.js';
 import {MainMenu} from './ui/mainmenu.js';
 
+import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
+
 /**
  * @description app user interface
  * @param {object} app
