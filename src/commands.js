@@ -108,6 +108,7 @@ export class Commands {
     }
 
     findCategoryInArrays(string, commands) {
+        string = string.toLowerCase();
         for (const category in commands) {
             for (let i = 0; i < commands[category].length; i++) {
                 if (string.includes(commands[category][i])) {
