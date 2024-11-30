@@ -31,8 +31,8 @@ export class GoogleGemini {
     getTuneString(role = 'user') {
         const date = new Date();
         const location = this.app.userSettings.LOCATION;
-        const user = `${_('Hi, I am')} ${this.app.userSettings.USERNAME}. ${_('I am from')} ${location} ${_('and today is')} ${date}`;
-        const model = `${_('Hi! I am')} ${this.app.userSettings.ASSIST_NAME}. ${_('How can I help you today?')}`;
+        const user = `${this._('Hi, I am')} ${this.app.userSettings.USERNAME}. ${this._('I am from')} ${location} ${this._('and today is')} ${date}`;
+        const model = `${this._('Hi! I am')} ${this.app.userSettings.ASSIST_NAME}. ${this._('How can I help you today?')}`;
 
         if (role === 'user') {
             return user;
@@ -103,7 +103,7 @@ export class GoogleGemini {
 
                     if (aiResponse === undefined) {
                         this.app.chat.editResponse(
-                            _("Sorry, I can't answer this question now."),
+                            this._("Sorry, I can't answer this question now."),
                         );
                         return;
                     }
@@ -118,7 +118,9 @@ export class GoogleGemini {
             this.app.log('Error getting response.');
             this.app.logError(error);
             this.app.chat.editResponse(
-                _("Sorry, I'm having connection trouble. Please try again."),
+                this._(
+                    "Sorry, I'm having connection trouble. Please try again.",
+                ),
             );
         }
     }
@@ -160,7 +162,9 @@ export class GoogleGemini {
                         this.app.logError(res.error.message);
                         this.app.chat.editResponse(response, false);
                         this.app.azure.tts(
-                            _("Sorry, I can't do this now. Try again later."),
+                            this._(
+                                "Sorry, I can't do this now. Try again later.",
+                            ),
                         );
                         return;
                     }
@@ -169,7 +173,7 @@ export class GoogleGemini {
 
                     if (aiResponse === undefined) {
                         this.app.chat.editResponse(
-                            _("Sorry, I can't answer this question now."),
+                            this._("Sorry, I can't answer this question now."),
                         );
                         return;
                     }
@@ -192,7 +196,7 @@ export class GoogleGemini {
                             // eslint-disable-next-line no-unused-vars
                         } catch (error) {
                             this.app.chat.editResponse(
-                                _(
+                                this._(
                                     "Sorry, I can't do this now. Try again later.",
                                 ),
                             );
@@ -210,7 +214,9 @@ export class GoogleGemini {
         } catch (error) {
             this.app.logError(error);
             this.app.chat.editResponse(
-                _("Sorry, I'm having connection trouble. Please try again."),
+                this._(
+                    "Sorry, I'm having connection trouble. Please try again.",
+                ),
             );
         }
     }
@@ -234,25 +240,27 @@ export class GoogleGemini {
                         'HARM_CATEGORY_SEXUALLY_EXPLICIT'
                     ) {
                         aiResponse =
-                            _("Sorry, I can't answer this question.") +
+                            this._("Sorry, I can't answer this question.") +
                             ' ' +
-                            _(
+                            this._(
                                 'Possible sexually explicit content in the question or answer.',
                             );
                     }
                     if (safetyRating.category === 'HARM_CATEGORY_HATE_SPEECH') {
                         aiResponse =
-                            _("Sorry, I can't answer this question.") +
+                            this._("Sorry, I can't answer this question.") +
                             ' ' +
-                            _(
+                            this._(
                                 'Possible hate speech in the question or answer.',
                             );
                     }
                     if (safetyRating.category === 'HARM_CATEGORY_HARASSMENT') {
                         aiResponse =
-                            _("Sorry, I can't answer this question.") +
+                            this._("Sorry, I can't answer this question.") +
                             ' ' +
-                            _('Possible harassment in the question or answer.');
+                            this._(
+                                'Possible harassment in the question or answer.',
+                            );
                     }
                     if (
                         safetyRating.category ===
@@ -260,9 +268,9 @@ export class GoogleGemini {
                     ) {
                         aiResponse = 'tryRunCommand';
                         // aiResponse =
-                        //     _("Sorry, I can't answer this question.") +
+                        //     this._("Sorry, I can't answer this question.") +
                         //     ' ' +
-                        //     _(
+                        //     this._(
                         //         'Possible dangerous content in the question or answer.',
                         //     );
                     }
@@ -275,15 +283,15 @@ export class GoogleGemini {
 
     commandRequest(request) {
         const response = `
-${_('Generate a command line for the request')}: ${request}
-${_('Return a JSON with the following keys')}:
-'success' (${_('true If it is possible to achieve the purpose of the request with a command line.')} ${_('a Linux Ubuntu terminal command line to the request')}, ${_('false otherwise')}),
-'response' (${_('text to be associated with the command line')}, ${_('informing action in success case')}, ${_('or failure text')}),
-'commandline' (${_('command line for linux ubuntu that fulfills the request')}).
-${_('Rules for commandline value')}: ${_('Do not use sudo')}, ${_('Prefer browser, firefox and google websites')}, ${_('Never generate destructive commands')}.
-${_('Response example')}:
-${_('Request')}: "${_('Generate a command line that search for santos ferry crossing')}"
-${_('JSON Response')}: {success: true, response: "${_('Searching for santos boat crossing...')}", commandline: "firefox https://www.google.com/search?q=${_('boat+crossing+santos')}"}
+${this._('Generate a command line for the request')}: ${request}
+${this._('Return a JSON with the following keys')}:
+'success' (${this._('true If it is possible to achieve the purpose of the request with a command line.')} ${this._('a Linux Ubuntu terminal command line to the request')}, ${this._('false otherwise')}),
+'response' (${this._('text to be associated with the command line')}, ${this._('informing action in success case')}, ${this._('or failure text')}),
+'commandline' (${this._('command line for linux ubuntu that fulfills the request')}).
+${this._('Rules for commandline value')}: ${this._('Do not use sudo')}, ${this._('Prefer browser, firefox and google websites')}, ${this._('Never generate destructive commands')}.
+${this._('Response example')}:
+${this._('Request')}: "${this._('Generate a command line that search for santos ferry crossing')}"
+${this._('JSON Response')}: {success: true, response: "${this._('Searching for santos boat crossing...')}", commandline: "firefox https://www.google.com/search?q=${this._('boat+crossing+santos')}"}
 `;
         this.app.log('Command Request: ' + response);
         return response;
