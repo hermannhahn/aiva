@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-30 14:12-0300\n"
+"POT-Creation-Date: 2024-11-30 14:13-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language de-DE\n"
@@ -16,41 +16,41 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/interpreter.js:64
+#: src/interpreter.js:65
 msgid "Invalid command"
 msgstr ""
 
-#: src/interpreter.js:93
+#: src/interpreter.js:94
 #, fuzzy
 msgid "Error reading this site"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/interpreter.js:101
+#: src/interpreter.js:102
 #, fuzzy
 msgid "Error reading site"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/interpreter.js:110
+#: src/interpreter.js:111
 #, fuzzy
 msgid "Error reading clipboard text"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/interpreter.js:155
+#: src/interpreter.js:156
 #, fuzzy
 msgid "Error opening channel"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/interpreter.js:219
+#: src/interpreter.js:220
 #, fuzzy
 msgid "Error opening site"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/interpreter.js:250
+#: src/interpreter.js:251
 #, fuzzy
 msgid "Error opening app"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/interpreter.js:256
+#: src/interpreter.js:257
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr ""
 
