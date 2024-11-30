@@ -706,7 +706,7 @@ msgstr ""
 msgid "visit the channel on YouTube"
 msgstr ""
 
-#: src/ui/mainmenu.js:29
+#: src/ui/mainmenu.js:30
 msgid "Ask me anything..."
 msgstr ""
 

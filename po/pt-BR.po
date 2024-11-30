@@ -806,7 +806,7 @@ msgstr "acessa o canal do youtube"
 msgid "visit the channel on YouTube"
 msgstr "visita o canal do youtube"
 
-#: src/ui/mainmenu.js:29
+#: src/ui/mainmenu.js:30
 msgid "Ask me anything..."
 msgstr "Pergunte-me qualquer coisa..."
 
