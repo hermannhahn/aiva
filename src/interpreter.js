@@ -26,6 +26,8 @@ export class Interpreter {
         } else if (isLocalCommand.success) {
             // DATABASE COMMANDS
             this.app.log('Local Voice command detected.');
+            this.app.log('Command: ' + isLocalCommand.command);
+            this.app.log('Request: ' + isLocalCommand.request);
             this._localCommand(isLocalCommand.command, isLocalCommand.request);
         } else {
             // QUESTIONS
@@ -67,7 +69,9 @@ HELP
         let commands = this.commands.get();
 
         let commandToRun = this.commands.findCategoryInArrays(text, commands);
-        this.app.log('Command:' + commandToRun);
+        this.app.log('Command Type:' + commandToRun.type);
+        this.app.log('Command Request:' + commandToRun.request);
+
         if (commandToRun) {
             result.success = true;
             result.command = commandToRun.type;

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-30 13:38-0300\n"
+"POT-Creation-Date: 2024-11-30 13:45-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,31 +17,31 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/interpreter.js:61
+#: src/interpreter.js:63
 msgid "Invalid command"
 msgstr ""
 
-#: src/interpreter.js:88
+#: src/interpreter.js:92
 msgid "Error reading site"
 msgstr ""
 
-#: src/interpreter.js:97
+#: src/interpreter.js:101
 msgid "Error reading clipboard text"
 msgstr ""
 
-#: src/interpreter.js:142
+#: src/interpreter.js:146
 msgid "Error opening channel"
 msgstr ""
 
-#: src/interpreter.js:206
+#: src/interpreter.js:210
 msgid "Error opening site"
 msgstr ""
 
-#: src/interpreter.js:237
+#: src/interpreter.js:241
 msgid "Error opening app"
 msgstr ""
 
-#: src/interpreter.js:243
+#: src/interpreter.js:247
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr ""
 
