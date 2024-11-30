@@ -74,7 +74,6 @@ export class UI {
         // If press clear button
         this.mainmenu.clearButton.connect('clicked', (_self) => {
             this.mainmenu.userEntry.clutter_text.set_text('');
-            this.app.chat.history = [];
             this.container.box.remove_child(this.chat.container);
             this.chat.box = new PopupMenu.PopupMenuSection();
             this.chat.container.add_child(this.chat.box.actor);
