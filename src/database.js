@@ -1,6 +1,5 @@
 // import Sqlite
 import Gio from 'gi://Gio';
-import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 export class Database {
     constructor(app) {
