@@ -49,18 +49,18 @@ msgstr ""
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr ""
 
-#: src/ai/azure.js:67 src/ai/azure.js:80 src/ai/azure.js:122
-#: src/ai/azure.js:131 src/ai/gemini.js:122 src/ai/gemini.js:214
+#: src/ai/azure.js:68 src/ai/azure.js:81 src/ai/azure.js:123
+#: src/ai/azure.js:132 src/ai/gemini.js:122 src/ai/gemini.js:214
 #: src/utils/utils.js:212
 msgid "Sorry, I'm having connection trouble. Please try again."
 msgstr ""
 
-#: src/ai/azure.js:157 src/ai/azure.js:180 src/ai/azure.js:194
+#: src/ai/azure.js:158 src/ai/azure.js:181 src/ai/azure.js:195
 msgid "Transcribe error!"
 msgstr ""
 
-#: src/ai/azure.js:159 src/ai/azure.js:182 src/ai/azure.js:196
-#: src/ai/azure.js:239 src/ai/azure.js:248
+#: src/ai/azure.js:160 src/ai/azure.js:183 src/ai/azure.js:197
+#: src/ai/azure.js:240 src/ai/azure.js:249
 msgid "Sorry, I'm having trouble to listen you. Please try again."
 msgstr ""
 
