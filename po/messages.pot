@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-30 14:38-0300\n"
+"POT-Creation-Date: 2024-11-30 14:58-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -322,23 +322,23 @@ msgstr ""
 msgid "Look at example below:"
 msgstr ""
 
-#: src/utils/utils.js:544 src/utils/utils.js:565
+#: src/utils/utils.js:541 src/utils/utils.js:562
 msgid "Sure, wait a moment..."
 msgstr ""
 
-#: src/utils/utils.js:548
+#: src/utils/utils.js:545
 msgid "Please, select and copy the site's address first"
 msgstr ""
 
-#: src/utils/utils.js:550
+#: src/utils/utils.js:547
 msgid "or just copy the URL and say: "
 msgstr ""
 
-#: src/utils/utils.js:551
+#: src/utils/utils.js:548
 msgid "Read this website"
 msgstr ""
 
-#: src/utils/utils.js:569
+#: src/utils/utils.js:566
 msgid "Select and copy the site's address first."
 msgstr ""
 

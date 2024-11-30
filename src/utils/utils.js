@@ -512,19 +512,16 @@ export class Utils {
             null,
             (session, result) => {
                 try {
-                    // Complete the request and retrieve the response
-                    session.send_finish(result);
+                    let responseBytes = session.send_and_read_finish(result);
+                    let responseText = new TextDecoder('utf-8').decode(
+                        responseBytes.get_data(),
+                    );
 
-                    if (message.status_code !== 200) {
+                    if (responseText.length === 0) {
                         throw new Error(
                             `HTTP request failed with status code ${message.status_code}.`,
                         );
                     }
-
-                    // Get the response body as a string
-                    this.app.log(message.toString());
-                    this.app.log(message.response_body.data.toString());
-                    const responseText = message.response_body.data.toString();
 
                     // Remove HTML tags using a regular expression
                     const plainText = responseText.replace(/<[^>]*>/g, '');
