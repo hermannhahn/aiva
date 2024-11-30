@@ -79,7 +79,7 @@ HELP
         return result;
     }
 
-    async _localCommand(command, request) {
+    async _localCommand(command, request = undefined) {
         this.app.chat.editResponse(this.phrases.wait());
         switch (command) {
             case 'readThisSite':
