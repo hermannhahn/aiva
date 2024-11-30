@@ -126,11 +126,11 @@ const Aiva = GObject.registerClass(
 
             // load settings
             this._loadSettings();
-            // GLib.setenv(
-            //     'LANGUAGE',
-            //     this.userSettings.AZURE_SPEECH_LANGUAGE,
-            //     true,
-            // );
+            GLib.setenv(
+                'LANGUAGE',
+                this.userSettings.AZURE_SPEECH_LANGUAGE,
+                true,
+            );
             console.log('[AIVA] Settings loaded!');
 
             // create instances
