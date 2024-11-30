@@ -36,12 +36,12 @@ export class GoogleGemini {
         // const user = `${_("Hi, I'm")} ${this.app.userSettings.USERNAME}. ${_("I'm from")} ${location} ${_('and today is')} ${date}`;
         // const model = `${_('Hi! I am')} ${this.app.userSettings.ASSIST_NAME}. ${_('How can I help you today?')}`;
         const user =
-            _("Hi, I'm") +
+            _('Hi, I am') +
             ' ' +
             this.app.userSettings.USERNAME +
             '.' +
             ' ' +
-            _("I'm from") +
+            _('I am from') +
             ' ' +
             location +
             ' ' +
