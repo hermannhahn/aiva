@@ -35,7 +35,6 @@ export class Chat {
         this.history = this.app.database.getHistory();
         if (!this.history.length || this.history.length < 1) {
             this.app.setLocation();
-            this.app.log('Recursive talk history not found.');
         }
         this.app.log('Chat initialized.');
     }
