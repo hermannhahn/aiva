@@ -67,7 +67,7 @@ HELP
         let commands = this.commands.get();
 
         let commandToRun = this.commands.findCategoryInArrays(text, commands);
-
+        this.app.log('Command:' + commandToRun);
         if (commandToRun) {
             result.success = true;
             result.command = commandToRun.type;
