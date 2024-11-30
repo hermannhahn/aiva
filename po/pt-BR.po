@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-30 18:30-0300\n"
+"POT-Creation-Date: 2024-11-30 18:45-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -340,436 +340,285 @@ msgstr "Veja o exemplo abaixo:"
 
 #: src/commands.js:7
 #, fuzzy
-msgid "read this site"
-msgstr "leia esse site"
+msgid "read this"
+msgstr "leia essa url"
 
 #: src/commands.js:8
 #, fuzzy
-msgid "read that site"
-msgstr "leia este site"
+msgid "read that"
+msgstr "leia esta url"
 
 #: src/commands.js:9
 #, fuzzy
-msgid "read this website"
-msgstr "leia essa página"
+msgid "read text"
+msgstr "leia o texto"
 
 #: src/commands.js:10
 #, fuzzy
-msgid "read that website"
-msgstr "leia esta página"
+msgid "read copied"
+msgstr "leia o texto copiado"
 
 #: src/commands.js:11
 #, fuzzy
-msgid "read this web page"
-msgstr "ler essa página"
+msgid "read clipboard"
+msgstr "leia o texto que copiei"
 
 #: src/commands.js:12
 #, fuzzy
-msgid "read that web page"
-msgstr "ler esta página"
+msgid "read memorized"
+msgstr "leia o texto memorisado"
 
 #: src/commands.js:13
-#, fuzzy
-msgid "read this page"
-msgstr "leia pra mim essa página"
-
-#: src/commands.js:14
-#, fuzzy
-msgid "read that page"
-msgstr "leia pra mim esta página"
-
-#: src/commands.js:15
-#, fuzzy
-msgid "read this link"
-msgstr "leia esse link"
-
-#: src/commands.js:16
-#, fuzzy
-msgid "read that link"
-msgstr "leia este link"
-
-#: src/commands.js:17
-#, fuzzy
-msgid "read this url"
-msgstr "leia essa url"
-
-#: src/commands.js:18
-#, fuzzy
-msgid "read that url"
-msgstr "leia esta url"
-
-#: src/commands.js:19
-#, fuzzy
-msgid "read this address"
-msgstr "leia esse endereço"
-
-#: src/commands.js:20
-#, fuzzy
-msgid "read that address"
-msgstr "leia este endereço"
-
-#: src/commands.js:23
-#, fuzzy
-msgid "read the site"
-msgstr "leia o site"
-
-#: src/commands.js:24
-#, fuzzy
-msgid "read site"
-msgstr "ler site"
-
-#: src/commands.js:25
-#, fuzzy
-msgid "read the website"
-msgstr "leia a página"
-
-#: src/commands.js:26
-#, fuzzy
-msgid "read website"
-msgstr "ler página"
-
-#: src/commands.js:27
-#, fuzzy
-msgid "read the web page"
-msgstr "ler a página"
-
-#: src/commands.js:28
-#, fuzzy
-msgid "read web page"
-msgstr "leia página"
-
-#: src/commands.js:29
-#, fuzzy
-msgid "read the page"
-msgstr "leia pra mim a página"
-
-#: src/commands.js:30
-#, fuzzy
-msgid "read page"
-msgstr "ler pra mim a página"
-
-#: src/commands.js:31
-#, fuzzy
-msgid "read the link"
-msgstr "leia o link"
-
-#: src/commands.js:32
-msgid "read link"
-msgstr "ler link"
-
-#: src/commands.js:33
-#, fuzzy
-msgid "read the url"
-msgstr "leia a url"
-
-#: src/commands.js:34
-#, fuzzy
-msgid "read url"
-msgstr "ler url"
-
-#: src/commands.js:35
-#, fuzzy
-msgid "read the address"
-msgstr "leia o endereço"
-
-#: src/commands.js:36
-#, fuzzy
-msgid "read address"
-msgstr "ler endereço"
-
-#: src/commands.js:39
-msgid "read this text"
-msgstr "leia esse texto"
-
-#: src/commands.js:40
 msgid "read the text"
 msgstr "leia o texto"
 
-#: src/commands.js:41
+#: src/commands.js:14
 msgid "read the clipboard"
 msgstr "leia o texto que copiei"
 
-#: src/commands.js:42
-msgid "read copied text"
+#: src/commands.js:15
+#, fuzzy
+msgid "read the copied"
 msgstr "leia o texto copiado"
 
-#: src/commands.js:43
-msgid "read clipboard text"
-msgstr "leia o texto na área de transferência"
-
-#: src/commands.js:44
-msgid "read this clipboard"
-msgstr "leia esse texto"
-
-#: src/commands.js:45
+#: src/commands.js:16
 #, fuzzy
 msgid "read text from clipboard"
 msgstr "leia o texto que copiei"
 
-#: src/commands.js:46
-msgid "read text in memory"
+#: src/commands.js:17
+#, fuzzy
+msgid "read text from memory"
 msgstr "leia o texto na memória"
 
-#: src/commands.js:47
-#, fuzzy
-msgid "read memorized text"
-msgstr "leia o texto memorisado"
-
-#: src/commands.js:48
+#: src/commands.js:18
 msgid "read for me"
 msgstr "leia pra mim"
 
-#: src/commands.js:49
-msgid "read this for me"
-msgstr "leia isso pra mim"
-
-#: src/commands.js:50
-msgid "read text for me"
-msgstr "leia o texto pra mim"
-
-#: src/commands.js:51
-msgid "read this please"
-msgstr "leia isso por favor"
-
-#: src/commands.js:52
+#: src/commands.js:19
 msgid "you can read now"
 msgstr "pode ler agora"
 
-#: src/commands.js:53
+#: src/commands.js:20
 #, fuzzy
 msgid "read what's copied"
 msgstr "leia o texto copiado"
 
-#: src/commands.js:54
-#, fuzzy
-msgid "read the copied content"
-msgstr "leia o texto copiado"
-
-#: src/commands.js:55
-#, fuzzy
-msgid "read the clipboard content"
-msgstr "leia o texto que copiei"
-
-#: src/commands.js:56
-#, fuzzy
-msgid "read the copied message"
-msgstr "leia o texto copiado"
-
-#: src/commands.js:59
+#: src/commands.js:23
 #, fuzzy
 msgid "open the site"
 msgstr "abra o site"
 
-#: src/commands.js:60
+#: src/commands.js:24
 #, fuzzy
 msgid "open this site"
 msgstr "abre esse site"
 
-#: src/commands.js:61
+#: src/commands.js:25
 msgid "open the website"
 msgstr "abre a página"
 
-#: src/commands.js:62
+#: src/commands.js:26
 msgid "open site"
 msgstr "abrir site"
 
-#: src/commands.js:63
+#: src/commands.js:27
 #, fuzzy
 msgid "open page"
 msgstr "abrir página"
 
-#: src/commands.js:64
+#: src/commands.js:28
 #, fuzzy
 msgid "open the page"
 msgstr "entra na página"
 
-#: src/commands.js:65
+#: src/commands.js:29
 #, fuzzy
 msgid "open the link"
 msgstr "abre o link"
 
-#: src/commands.js:66
+#: src/commands.js:30
 #, fuzzy
 msgid "open this link"
 msgstr "abre esse link"
 
-#: src/commands.js:67
+#: src/commands.js:31
 #, fuzzy
 msgid "open web page"
 msgstr "abrir página"
 
-#: src/commands.js:68
+#: src/commands.js:32
 #, fuzzy
 msgid "open the web page"
 msgstr "abra a página"
 
-#: src/commands.js:69
+#: src/commands.js:33
 #, fuzzy
 msgid "go to the site"
 msgstr "vai pro site"
 
-#: src/commands.js:70
+#: src/commands.js:34
 #, fuzzy
 msgid "go to the website"
 msgstr "vai pra página"
 
-#: src/commands.js:71
+#: src/commands.js:35
 #, fuzzy
 msgid "access the site"
 msgstr "acessa o site"
 
-#: src/commands.js:72
+#: src/commands.js:36
 #, fuzzy
 msgid "access the website"
 msgstr "acessa a página"
 
-#: src/commands.js:73
+#: src/commands.js:37
 msgid "go online"
 msgstr "entra no site"
 
-#: src/commands.js:74
+#: src/commands.js:38
 #, fuzzy
 msgid "load the site"
 msgstr "carrega o site"
 
-#: src/commands.js:75
+#: src/commands.js:39
 #, fuzzy
 msgid "load the website"
 msgstr "carrega a página"
 
-#: src/commands.js:76
+#: src/commands.js:40
 #, fuzzy
 msgid "visit the site"
 msgstr "visite o site"
 
-#: src/commands.js:77
+#: src/commands.js:41
 #, fuzzy
 msgid "visit the website"
 msgstr "visite a página"
 
-#: src/commands.js:78
+#: src/commands.js:42
 #, fuzzy
 msgid "navigate to the site"
 msgstr "navegue para o site"
 
-#: src/commands.js:79
+#: src/commands.js:43
 #, fuzzy
 msgid "navigate to the website"
 msgstr "navegue para a página"
 
-#: src/commands.js:80
+#: src/commands.js:44
 #, fuzzy
 msgid "take me to the site"
 msgstr "mostra o site"
 
-#: src/commands.js:81
+#: src/commands.js:45
 #, fuzzy
 msgid "take me to the website"
 msgstr "mostra a página"
 
-#: src/commands.js:84
+#: src/commands.js:48
 #, fuzzy
 msgid "open the channel"
 msgstr "abre o canal"
 
-#: src/commands.js:85
+#: src/commands.js:49
 #, fuzzy
 msgid "open this channel"
 msgstr "abre esse canal"
 
-#: src/commands.js:86
+#: src/commands.js:50
 msgid "open channel"
 msgstr "abrir canal"
 
-#: src/commands.js:87
+#: src/commands.js:51
 #, fuzzy
 msgid "open the YouTube channel"
 msgstr "abre o canal do youtube"
 
-#: src/commands.js:88
+#: src/commands.js:52
 #, fuzzy
 msgid "open YouTube channel"
 msgstr "abrir canal do youtube"
 
-#: src/commands.js:89
+#: src/commands.js:53
 #, fuzzy
 msgid "open the channel on YouTube"
 msgstr "abre o canal do youtube"
 
-#: src/commands.js:90
+#: src/commands.js:54
 #, fuzzy
 msgid "open this channel on YouTube"
 msgstr "abre esse canal do youtube"
 
-#: src/commands.js:91
+#: src/commands.js:55
 #, fuzzy
 msgid "go to the channel"
 msgstr "vai no canal"
 
-#: src/commands.js:92
+#: src/commands.js:56
 #, fuzzy
 msgid "go to this channel"
 msgstr "vai pro canal"
 
-#: src/commands.js:93
+#: src/commands.js:57
 #, fuzzy
 msgid "access the channel"
 msgstr "acessa o canal"
 
-#: src/commands.js:94
+#: src/commands.js:58
 #, fuzzy
 msgid "access this channel"
 msgstr "acessa esse canal"
 
-#: src/commands.js:95
+#: src/commands.js:59
 #, fuzzy
 msgid "visit the channel"
 msgstr "visita o canal"
 
-#: src/commands.js:96
+#: src/commands.js:60
 #, fuzzy
 msgid "visit this channel"
 msgstr "visita esse canal"
 
-#: src/commands.js:97
+#: src/commands.js:61
 #, fuzzy
 msgid "navigate to the channel"
 msgstr "navegue para o canal"
 
-#: src/commands.js:98
+#: src/commands.js:62
 #, fuzzy
 msgid "navigate to this channel"
 msgstr "navegue para esse canal"
 
-#: src/commands.js:99
+#: src/commands.js:63
 #, fuzzy
 msgid "load the channel"
 msgstr "carrega o canal"
 
-#: src/commands.js:100
+#: src/commands.js:64
 #, fuzzy
 msgid "load this channel"
 msgstr "carrega esse canal"
 
-#: src/commands.js:101
+#: src/commands.js:65
 #, fuzzy
 msgid "open YouTube"
 msgstr "abrir youtube"
 
-#: src/commands.js:102
+#: src/commands.js:66
 msgid "on YouTube"
 msgstr "no youtube"
 
-#: src/commands.js:103
+#: src/commands.js:67
 #, fuzzy
 msgid "open it on YouTube"
 msgstr "abre no youtube"
 
-#: src/commands.js:104
+#: src/commands.js:68
 msgid "access the channel on YouTube"
 msgstr "acessa o canal do youtube"
 
-#: src/commands.js:105
+#: src/commands.js:69
 msgid "visit the channel on YouTube"
 msgstr "visita o canal do youtube"
 
@@ -861,6 +710,138 @@ msgstr "Salvar"
 #: src/prefs.js:287
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
+
+#, fuzzy
+#~ msgid "read this site"
+#~ msgstr "leia esse site"
+
+#, fuzzy
+#~ msgid "read that site"
+#~ msgstr "leia este site"
+
+#, fuzzy
+#~ msgid "read this website"
+#~ msgstr "leia essa página"
+
+#, fuzzy
+#~ msgid "read that website"
+#~ msgstr "leia esta página"
+
+#, fuzzy
+#~ msgid "read this web page"
+#~ msgstr "ler essa página"
+
+#, fuzzy
+#~ msgid "read that web page"
+#~ msgstr "ler esta página"
+
+#, fuzzy
+#~ msgid "read this page"
+#~ msgstr "leia pra mim essa página"
+
+#, fuzzy
+#~ msgid "read that page"
+#~ msgstr "leia pra mim esta página"
+
+#, fuzzy
+#~ msgid "read this link"
+#~ msgstr "leia esse link"
+
+#, fuzzy
+#~ msgid "read that link"
+#~ msgstr "leia este link"
+
+#, fuzzy
+#~ msgid "read this address"
+#~ msgstr "leia esse endereço"
+
+#, fuzzy
+#~ msgid "read that address"
+#~ msgstr "leia este endereço"
+
+#, fuzzy
+#~ msgid "read the site"
+#~ msgstr "leia o site"
+
+#, fuzzy
+#~ msgid "read site"
+#~ msgstr "ler site"
+
+#, fuzzy
+#~ msgid "read the website"
+#~ msgstr "leia a página"
+
+#, fuzzy
+#~ msgid "read website"
+#~ msgstr "ler página"
+
+#, fuzzy
+#~ msgid "read the web page"
+#~ msgstr "ler a página"
+
+#, fuzzy
+#~ msgid "read web page"
+#~ msgstr "leia página"
+
+#, fuzzy
+#~ msgid "read the page"
+#~ msgstr "leia pra mim a página"
+
+#, fuzzy
+#~ msgid "read page"
+#~ msgstr "ler pra mim a página"
+
+#, fuzzy
+#~ msgid "read the link"
+#~ msgstr "leia o link"
+
+#~ msgid "read link"
+#~ msgstr "ler link"
+
+#, fuzzy
+#~ msgid "read the url"
+#~ msgstr "leia a url"
+
+#, fuzzy
+#~ msgid "read url"
+#~ msgstr "ler url"
+
+#, fuzzy
+#~ msgid "read the address"
+#~ msgstr "leia o endereço"
+
+#, fuzzy
+#~ msgid "read address"
+#~ msgstr "ler endereço"
+
+#~ msgid "read this text"
+#~ msgstr "leia esse texto"
+
+#~ msgid "read clipboard text"
+#~ msgstr "leia o texto na área de transferência"
+
+#~ msgid "read this clipboard"
+#~ msgstr "leia esse texto"
+
+#~ msgid "read text in memory"
+#~ msgstr "leia o texto na memória"
+
+#~ msgid "read this for me"
+#~ msgstr "leia isso pra mim"
+
+#~ msgid "read text for me"
+#~ msgstr "leia o texto pra mim"
+
+#~ msgid "read this please"
+#~ msgstr "leia isso por favor"
+
+#, fuzzy
+#~ msgid "read the clipboard content"
+#~ msgstr "leia o texto que copiei"
+
+#, fuzzy
+#~ msgid "read the copied message"
+#~ msgstr "leia o texto copiado"
 
 #, fuzzy
 #~ msgid "Error reading this site"
@@ -973,10 +954,6 @@ msgstr "Suas preferências foram salvas"
 #, fuzzy
 #~ msgid "can you read what's copied?"
 #~ msgstr "leia esse texto"
-
-#, fuzzy
-#~ msgid "read this text from memory"
-#~ msgstr "leia o texto na memória"
 
 #, fuzzy
 #~ msgid "please read this text from memory"
