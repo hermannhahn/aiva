@@ -98,7 +98,7 @@ export class Utils {
                 St.ClipboardType.CLIPBOARD,
                 selectedText,
             );
-            // If the button is clicked
+            // set visual feedback
             if (copyButton) {
                 copyButton.label.clutter_text.set_markup(
                     _('[ Selected Copied ]'),
@@ -114,6 +114,7 @@ export class Utils {
                 St.ClipboardType.CLIPBOARD,
                 responseChat.label.text,
             );
+            // set visual feedback
             if (copyButton) {
                 copyButton.label.clutter_text.set_markup(_('[ Copied ]'));
                 GLib.timeout_add(GLib.PRIORITY_DEFAULT, 3000, () => {
@@ -236,13 +237,12 @@ export class Utils {
      * @param {string} title
      */
     removeNotificationByTitle(title) {
-        // Obtenha todas as notificações ativas
         // eslint-disable-next-line no-unused-vars
         let [stdout, stderr, status] =
             GLib.spawn_command_line_async('notify-send -l');
         let notifications = stdout.toString().split('\n');
 
-        // Pesquise a notificação com o título fornecido
+        // search title
         for (let i = 0; i < notifications.length; i++) {
             let notification = notifications[i];
             if (notification.includes(title)) {

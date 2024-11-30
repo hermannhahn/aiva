@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-29 20:25-0300\n"
+"POT-Creation-Date: 2024-11-29 21:04-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language es-ES\n"
@@ -27,7 +27,7 @@ msgstr "Código copiado al portapapeles"
 
 #: src/ai/azure.js:69 src/ai/azure.js:82 src/ai/azure.js:124
 #: src/ai/azure.js:133 src/ai/gemini.js:106 src/ai/gemini.js:198
-#: src/utils/utils.js:213
+#: src/utils/utils.js:214
 msgid "Sorry, I'm having connection trouble. Please try again."
 msgstr ""
 
@@ -266,19 +266,19 @@ msgstr ""
 msgid "[ Selected Copied ]"
 msgstr ""
 
-#: src/utils/utils.js:118
+#: src/utils/utils.js:119
 msgid "[ Copied ]"
 msgstr ""
 
-#: src/utils/utils.js:193
+#: src/utils/utils.js:194
 msgid "Of course, searching..."
 msgstr ""
 
-#: src/utils/utils.js:196
+#: src/utils/utils.js:197
 msgid "Sure, searching..."
 msgstr ""
 
-#: src/utils/utils.js:208
+#: src/utils/utils.js:209
 msgid "Here are the main news"
 msgstr ""
 
