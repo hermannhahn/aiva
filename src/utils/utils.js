@@ -489,4 +489,58 @@ export class Utils {
 
         return adjustedRgbString;
     }
+
+    /**
+     * @description Fetches and returns the text content of a website from the given URL, with all HTML tags removed.
+     * @param {string} url - The URL of the website to fetch.
+     * @returns {Promise<string>} - A promise that resolves to the plain text content of the website.
+     */
+    readUrlText(url) {
+        return new Promise((resolve, reject) => {
+            // Create a Soup session for making HTTP requests
+            const session = new Soup.Session();
+
+            // Create a new HTTP GET request
+            const message = Soup.Message.new('GET', url);
+
+            if (!message) {
+                reject(new Error('Failed to create HTTP request message.'));
+                return;
+            }
+
+            // Send the HTTP request
+            session.send_async(message, null, (session, result) => {
+                try {
+                    // Complete the request and retrieve the response
+                    session.send_finish(result);
+
+                    if (message.status_code !== 200) {
+                        reject(
+                            new Error(
+                                `HTTP request failed with status code ${message.status_code}`,
+                            ),
+                        );
+                        return;
+                    }
+
+                    const responseText = message.response_body.data;
+
+                    // Remove HTML tags using a regular expression
+                    const plainText = responseText.replace(/<[^>]*>/g, '');
+
+                    resolve(plainText);
+                } catch (error) {
+                    reject(error);
+                }
+            });
+        });
+    }
+
+    async readSite(url) {
+        try {
+            await this.readUrlText(url);
+        } catch (error) {
+            logError(error, 'Failed to fetch URL text');
+        }
+    }
 }
