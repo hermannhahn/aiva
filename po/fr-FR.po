@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-30 14:04-0300\n"
+"POT-Creation-Date: 2024-11-30 14:08-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language fr-FR\n"
@@ -16,41 +16,41 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/interpreter.js:60
+#: src/interpreter.js:64
 msgid "Invalid command"
 msgstr ""
 
-#: src/interpreter.js:89
+#: src/interpreter.js:94
 #, fuzzy
 msgid "Error reading this site"
 msgstr "Code copié dans le presse-papier"
 
-#: src/interpreter.js:97
+#: src/interpreter.js:103
 #, fuzzy
 msgid "Error reading site"
 msgstr "Code copié dans le presse-papier"
 
-#: src/interpreter.js:106
+#: src/interpreter.js:112
 #, fuzzy
 msgid "Error reading clipboard text"
 msgstr "Code copié dans le presse-papier"
 
-#: src/interpreter.js:151
+#: src/interpreter.js:159
 #, fuzzy
 msgid "Error opening channel"
 msgstr "Code copié dans le presse-papier"
 
-#: src/interpreter.js:215
+#: src/interpreter.js:225
 #, fuzzy
 msgid "Error opening site"
 msgstr "Code copié dans le presse-papier"
 
-#: src/interpreter.js:246
+#: src/interpreter.js:258
 #, fuzzy
 msgid "Error opening app"
 msgstr "Code copié dans le presse-papier"
 
-#: src/interpreter.js:252
+#: src/interpreter.js:265
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr ""
 
