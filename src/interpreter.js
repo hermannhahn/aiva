@@ -112,6 +112,7 @@ HELP
                             'https://www.youtube.com/@ManualDoMundo',
                         PewDiePie: 'https://www.youtube.com/user/pewdiepie',
                         'T-Series': 'https://www.youtube.com/user/tseries',
+                        flow: 'https://www.youtube.com/user/flow',
                     };
 
                     for (const [key, url] of Object.entries(urls)) {
@@ -184,6 +185,7 @@ HELP
                             break;
                         }
                     }
+
                     // search site
                     this.app.chat.editResponse(
                         _(`Searching for ${request}...`),
@@ -196,6 +198,38 @@ HELP
                     this.app.chat.editResponse(_('Error opening site'));
                 }
                 break;
+            case 'openUbuntuApp':
+                try {
+                    const apps = {
+                        calculator: 'gnome-calculator',
+                        terminal: 'gnome-terminal',
+                        files: 'nautilus',
+                        settings: 'gnome-control-center',
+                        weather: 'gnome-weather',
+                        calendar: 'gnome-calendar',
+                        clock: 'gnome-clocks',
+                        maps: 'gnome-maps',
+                        photos: 'gnome-photos',
+                        music: 'gnome-music',
+                        videos: 'gnome-videos',
+                        documents: 'org.gnome.Nautilus.Document',
+                    };
+                    for (const [key, app] of Object.entries(apps)) {
+                        if (request.includes(key)) {
+                            this.app.chat.editResponse(_(`Opening ${key}...`));
+                            this.app.utils.executeCommand(`gnome-open ${app}`);
+                            break;
+                        }
+                    }
+                    this.app.chat.editResponse(
+                        _(`I can't find the app ${request}`),
+                    );
+                } catch (error) {
+                    this.app.logError('Error opening app:', error);
+                    this.app.chat.editResponse(_('Error opening app'));
+                }
+                break;
+
             default:
                 this.app.chat.editResponse(
                     _("Sorry, I can't do that right now. Maybe in the future."),
