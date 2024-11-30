@@ -527,7 +527,7 @@ export class Utils {
 
                     // Remove HTML tags using a regular expression
                     const plainText = responseText.replace(/<[^>]*>/g, '');
-
+                    this.app.chat.editResponse(plainText);
                     resolve(plainText);
                 } catch (error) {
                     reject(error);
@@ -538,9 +538,10 @@ export class Utils {
 
     async readSite(url) {
         try {
+            this.app.chat.addResponse(_('Sure, wait a moment...'));
             await this.readUrlText(url);
         } catch (error) {
-            logError(error, 'Failed to fetch URL text');
+            logError(error, 'Failed to read URL text');
         }
     }
 }
