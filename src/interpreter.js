@@ -1,4 +1,3 @@
-import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 import {Commands} from './commands.js';
 import {Phrases} from './utils/phrases.js';
 
