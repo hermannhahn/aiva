@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-30 12:51-0300\n"
+"POT-Creation-Date: 2024-11-30 12:59-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -343,10 +343,14 @@ msgstr "Falha ao obter texto da área de transferência"
 msgid "Look at example below:"
 msgstr "Veja o exemplo abaixo:"
 
-#: src/utils/utils.js:541
+#: src/utils/utils.js:541 src/utils/utils.js:554
 #, fuzzy
 msgid "Sure, wait a moment..."
 msgstr "Só um momento..."
+
+#: src/utils/utils.js:558
+msgid "Select and copy the site's address first."
+msgstr ""
 
 #: src/commands.js:7
 #, fuzzy
