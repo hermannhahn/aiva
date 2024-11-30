@@ -23,22 +23,22 @@ msgstr "Comando inválido"
 #: src/interpreter.js:95
 #, fuzzy
 msgid "Error reading clipboard text"
-msgstr "leia o texto na área de transferência"
+msgstr "Falha ao obter texto da área de transferência"
 
 #: src/interpreter.js:140
 #, fuzzy
 msgid "Error opening channel"
-msgstr "abrir canal"
+msgstr "Falha ao abrir canal"
 
 #: src/interpreter.js:204
 #, fuzzy
 msgid "Error opening site"
-msgstr "abrir site"
+msgstr "Falha ao abrir site"
 
 #: src/interpreter.js:235
 #, fuzzy
 msgid "Error opening app"
-msgstr "abrir site"
+msgstr "Falha ao abrir aplicativo"
 
 #: src/interpreter.js:241
 #, fuzzy
@@ -63,12 +63,10 @@ msgid "Sorry, I'm having trouble to listen you. Please try again."
 msgstr "Estou tendo dificuldade de te escutar. Por favor, tente novamente."
 
 #: src/ai/gemini.js:35
-#, fuzzy
 msgid "Hi, I am"
 msgstr "Olá, eu sou"
 
 #: src/ai/gemini.js:35
-#, fuzzy
 msgid "I am from"
 msgstr "Eu sou de"
 
@@ -77,7 +75,6 @@ msgid "and today is"
 msgstr "e hoje é"
 
 #: src/ai/gemini.js:36
-#, fuzzy
 msgid "Hi! I am"
 msgstr "Olá, eu sou"
 
@@ -319,7 +316,7 @@ msgstr "Claro, pesquisando..."
 #: src/utils/utils.js:208
 #, fuzzy
 msgid "Here are the main news"
-msgstr "leia as notícias"
+msgstr "Aqui estão as principais notícias"
 
 #: src/utils/utils.js:287
 #, fuzzy
@@ -339,34 +336,28 @@ msgid "Look at example below:"
 msgstr "Veja o exemplo abaixo:"
 
 #: src/commands.js:7
-#, fuzzy
 msgid "read this"
-msgstr "leia essa url"
+msgstr "leia isso"
 
 #: src/commands.js:8
-#, fuzzy
 msgid "read that"
-msgstr "leia esta url"
+msgstr "leia isto"
 
 #: src/commands.js:9
-#, fuzzy
 msgid "read text"
-msgstr "leia o texto"
+msgstr "ler texto"
 
 #: src/commands.js:10
-#, fuzzy
 msgid "read copied"
-msgstr "leia o texto copiado"
+msgstr "ler texto copiado"
 
 #: src/commands.js:11
-#, fuzzy
 msgid "read clipboard"
-msgstr "leia o texto que copiei"
+msgstr "ler texto da área de transferência"
 
 #: src/commands.js:12
-#, fuzzy
 msgid "read memorized"
-msgstr "leia o texto memorisado"
+msgstr "ler texto memorizado"
 
 #: src/commands.js:13
 msgid "read the text"
@@ -374,20 +365,17 @@ msgstr "leia o texto"
 
 #: src/commands.js:14
 msgid "read the clipboard"
-msgstr "leia o texto que copiei"
+msgstr "leia o texto da área de transferência"
 
 #: src/commands.js:15
-#, fuzzy
 msgid "read the copied"
 msgstr "leia o texto copiado"
 
 #: src/commands.js:16
-#, fuzzy
 msgid "read text from clipboard"
 msgstr "leia o texto que copiei"
 
 #: src/commands.js:17
-#, fuzzy
 msgid "read text from memory"
 msgstr "leia o texto na memória"
 
@@ -405,12 +393,10 @@ msgid "read what's copied"
 msgstr "leia o texto copiado"
 
 #: src/commands.js:23
-#, fuzzy
 msgid "open the site"
 msgstr "abra o site"
 
 #: src/commands.js:24
-#, fuzzy
 msgid "open this site"
 msgstr "abre esse site"
 
@@ -423,52 +409,42 @@ msgid "open site"
 msgstr "abrir site"
 
 #: src/commands.js:27
-#, fuzzy
 msgid "open page"
 msgstr "abrir página"
 
 #: src/commands.js:28
-#, fuzzy
 msgid "open the page"
 msgstr "entra na página"
 
 #: src/commands.js:29
-#, fuzzy
 msgid "open the link"
 msgstr "abre o link"
 
 #: src/commands.js:30
-#, fuzzy
 msgid "open this link"
 msgstr "abre esse link"
 
 #: src/commands.js:31
-#, fuzzy
 msgid "open web page"
 msgstr "abrir página"
 
 #: src/commands.js:32
-#, fuzzy
 msgid "open the web page"
 msgstr "abra a página"
 
 #: src/commands.js:33
-#, fuzzy
 msgid "go to the site"
 msgstr "vai pro site"
 
 #: src/commands.js:34
-#, fuzzy
 msgid "go to the website"
 msgstr "vai pra página"
 
 #: src/commands.js:35
-#, fuzzy
 msgid "access the site"
 msgstr "acessa o site"
 
 #: src/commands.js:36
-#, fuzzy
 msgid "access the website"
 msgstr "acessa a página"
 
@@ -477,44 +453,37 @@ msgid "go online"
 msgstr "entra no site"
 
 #: src/commands.js:38
-#, fuzzy
 msgid "load the site"
 msgstr "carrega o site"
 
 #: src/commands.js:39
-#, fuzzy
 msgid "load the website"
 msgstr "carrega a página"
 
 #: src/commands.js:40
-#, fuzzy
 msgid "visit the site"
 msgstr "visite o site"
 
 #: src/commands.js:41
-#, fuzzy
 msgid "visit the website"
 msgstr "visite a página"
 
 #: src/commands.js:42
-#, fuzzy
 msgid "navigate to the site"
 msgstr "navegue para o site"
 
 #: src/commands.js:43
-#, fuzzy
 msgid "navigate to the website"
 msgstr "navegue para a página"
 
 #: src/commands.js:44
-#, fuzzy
 msgid "take me to the site"
-msgstr "mostra o site"
+msgstr "vá para o site"
 
 #: src/commands.js:45
 #, fuzzy
 msgid "take me to the website"
-msgstr "mostra a página"
+msgstr "vá para a página"
 
 #: src/commands.js:48
 #, fuzzy
