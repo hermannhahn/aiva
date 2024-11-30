@@ -420,8 +420,7 @@ export class Utils {
                 let bytes = _httpSession.send_and_read_finish(result);
                 let decoder = new TextDecoder('utf-8');
                 let response = decoder.decode(bytes.get_data());
-                const res = JSON.parse(response);
-                return res;
+                return response;
             },
         );
     }
@@ -492,44 +491,27 @@ export class Utils {
     /**
      * @description Fetches and returns the text content of a website from the given URL, with all HTML tags removed.
      * @param {string} url - The URL of the website to fetch.
-     * @returns {Promise<string>} - A promise that resolves to the plain text content of the website.
+     * @returns {string} - A promise that resolves to the plain text content of the website.
      */
     readUrlText(url) {
         try {
             // Create a Soup session for making HTTP requests
-            const session = new Soup.Session();
+            const res = this.curl(url);
 
-            // Create a new HTTP GET request
-            const message = Soup.Message.new('GET', url);
-
-            if (!message) {
+            if (!res) {
                 throw new Error('Failed to create HTTP request message.');
             }
 
-            // Send the HTTP request
-            session.send_async(
-                message,
-                GLib.PRIORITY_DEFAULT,
-                null,
-                (session, result) => {
-                    let responseBytes = session.send_and_read_finish(result);
-                    let responseText = new TextDecoder('utf-8').decode(
-                        responseBytes.get_data(),
-                    );
+            if (res.length === 0) {
+                throw new Error(
+                    `HTTP request failed with status code ${message.status_code}.`,
+                );
+            }
 
-                    if (responseText.length === 0) {
-                        throw new Error(
-                            `HTTP request failed with status code ${message.status_code}.`,
-                        );
-                    }
-
-                    // Remove HTML tags using a regular expression
-                    const plainText = responseText.replace(/<[^>]*>/g, '');
-                    // this.app.chat.editResponse(plainText);
-                    this.app.log(plainText);
-                    return plainText;
-                },
-            );
+            // Remove HTML tags using a regular expression
+            const plainText = res.replace(/<[^>]*>/g, '');
+            this.app.chat.editResponse(plainText);
+            return plainText;
         } catch (error) {
             throw new Error(`Failed to complete request: ${error.message}`);
         }
