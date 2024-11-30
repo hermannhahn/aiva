@@ -495,51 +495,44 @@ export class Utils {
      * @returns {Promise<string>} - A promise that resolves to the plain text content of the website.
      */
     readUrlText(url) {
-        return new Promise((resolve, reject) => {
-            // Create a Soup session for making HTTP requests
-            const session = new Soup.Session();
+        // Create a Soup session for making HTTP requests
+        const session = new Soup.Session();
 
-            // Create a new HTTP GET request
-            const message = Soup.Message.new('GET', url);
+        // Create a new HTTP GET request
+        const message = Soup.Message.new('GET', url);
 
-            if (!message) {
-                reject(new Error('Failed to create HTTP request message.'));
-                return;
-            }
+        if (!message) {
+            throw new Error('Failed to create HTTP request message.');
+        }
 
-            // Send the HTTP request
-            session.send_async(message, null, (session, result) => {
-                try {
-                    // Complete the request and retrieve the response
-                    session.send_finish(result);
+        // Send the HTTP request
+        session.send_async(message, null, (session, result) => {
+            try {
+                // Complete the request and retrieve the response
+                session.send_finish(result);
 
-                    if (message.status_code !== 200) {
-                        reject(
-                            new Error(
-                                `HTTP request failed with status code ${message.status_code}`,
-                            ),
-                        );
-                        return;
-                    }
-
-                    const responseText = message.response_body.data;
-
-                    // Remove HTML tags using a regular expression
-                    const plainText = responseText.replace(/<[^>]*>/g, '');
-                    this.app.chat.editResponse(plainText);
-                    resolve(plainText);
-                } catch (error) {
-                    reject(error);
+                if (message.status_code !== 200) {
+                    throw new Error(
+                        `HTTP request failed with status code ${message.status_code}.`,
+                    );
                 }
-            });
+
+                const responseText = message.response_body.data;
+
+                // Remove HTML tags using a regular expression
+                const plainText = responseText.replace(/<[^>]*>/g, '');
+                this.app.chat.editResponse(plainText);
+            } catch (error) {
+                throw new Error(`Failed to complete request: ${error.message}`);
+            }
         });
     }
 
-    async readSite(url) {
+    readSite(url) {
         try {
             if (url) {
                 this.app.chat.addResponse(_('Sure, wait a moment...'));
-                await this.readUrlText(url);
+                this.readUrlText(url);
             } else {
                 this.app.chat.addResponse(
                     _("Please, select and copy the site's address first") +
@@ -556,11 +549,11 @@ export class Utils {
     readThisSite() {
         this.app.extension.clipboard.get_text(
             St.ClipboardType.CLIPBOARD,
-            async (clipboard, result) => {
+            (clipboard, result) => {
                 if (result) {
                     let url = result;
                     this.app.chat.addResponse(_('Sure, wait a moment...'));
-                    await this.readUrlText(url);
+                    this.readUrlText(url);
                 } else {
                     this.app.chat.addResponse(
                         _("Select and copy the site's address first."),
