@@ -349,12 +349,10 @@ export class Utils {
             let nextMatch = text.match(regex);
             while (nextMatch) {
                 code += nextMatch[1];
-                text = text.replace(nextMatch[0], '');
+                text = text.replace(nextMatch[0], _('Look at example below:'));
                 nextMatch = text.match(regex);
             }
             this.app.log('code detected!');
-            // remove all matchs founded
-            text = text.replace(regex, _('Look at example below:'));
             let tts = formatTTS(text);
             return {code, tts};
         } else {
@@ -366,10 +364,8 @@ export class Utils {
     }
 
     /**
-     *
-     * @param {*} cmd
-     *
-     * execute command
+     * @description execute shell command
+     * @param {string} cmd
      */
     executeCommand(cmd) {
         const command = cmd;
@@ -389,11 +385,11 @@ export class Utils {
     }
 
     /**
-     * remove all .wav files from /tmp folder
+     * @description remove all gva .wav files from /tmp folder
      */
     removeWavFiles() {
         this.app.log('Removing all .wav files from /tmp folder');
-        const command = 'rm -rf /tmp/*gva*.wav';
+        const command = 'rm -rf /tmp/gva*.wav';
         const process = GLib.spawn_async(
             null, // pasta de trabalho
             ['/bin/sh', '-c', command], // comando e argumentos
