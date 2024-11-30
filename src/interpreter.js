@@ -99,12 +99,15 @@ HELP
                         sbt: 'https://www.youtube.com/@SBT/live',
                         'band news': 'https://www.youtube.com/@BandNews/live',
                         'globo news': 'https://www.youtube.com/@GloboNews/live',
-                        'jovem pan news': 'https://www.youtube.com/@JovemPanNews/live',
+                        'jovem pan news':
+                            'https://www.youtube.com/@JovemPanNews/live',
                         veja: 'https://www.youtube.com/@VEJA/live',
-                        record news: 'https://www.youtube.com/@recordnews/live',
+                        'record news':
+                            'https://www.youtube.com/@recordnews/live',
                         cultura: 'https://www.youtube.com/@cultura/live',
-                        canal brasil: 'https://www.youtube.com/@CanalBrasil/live',
-    'felipe neto': 'https://www.youtube.com/@felipeneto',
+                        'canal brasil':
+                            'https://www.youtube.com/@CanalBrasil/live',
+                        'felipe neto': 'https://www.youtube.com/@felipeneto',
                         'manual do mundo':
                             'https://www.youtube.com/@ManualDoMundo',
                     };

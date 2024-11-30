@@ -25,15 +25,15 @@ msgstr ""
 msgid "Error reading clipboard text"
 msgstr ""
 
-#: src/interpreter.js:121
+#: src/interpreter.js:124
 msgid "Error opening channel"
 msgstr ""
 
-#: src/interpreter.js:142
+#: src/interpreter.js:145
 msgid "Error opening site"
 msgstr ""
 
-#: src/interpreter.js:147
+#: src/interpreter.js:150
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr ""
 
