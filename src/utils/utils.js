@@ -506,26 +506,33 @@ export class Utils {
         }
 
         // Send the HTTP request
-        session.send_async(message, null, (session, result) => {
-            try {
-                // Complete the request and retrieve the response
-                session.send_finish(result);
+        session.send_async(
+            message,
+            GLib.PRIORITY_DEFAULT,
+            null,
+            (session, result) => {
+                try {
+                    // Complete the request and retrieve the response
+                    session.send_finish(result);
 
-                if (message.status_code !== 200) {
+                    if (message.status_code !== 200) {
+                        throw new Error(
+                            `HTTP request failed with status code ${message.status_code}.`,
+                        );
+                    }
+
+                    const responseText = message.response_body.data;
+
+                    // Remove HTML tags using a regular expression
+                    const plainText = responseText.replace(/<[^>]*>/g, '');
+                    this.app.chat.editResponse(plainText);
+                } catch (error) {
                     throw new Error(
-                        `HTTP request failed with status code ${message.status_code}.`,
+                        `Failed to complete request: ${error.message}`,
                     );
                 }
-
-                const responseText = message.response_body.data;
-
-                // Remove HTML tags using a regular expression
-                const plainText = responseText.replace(/<[^>]*>/g, '');
-                this.app.chat.editResponse(plainText);
-            } catch (error) {
-                throw new Error(`Failed to complete request: ${error.message}`);
-            }
-        });
+            },
+        );
     }
 
     readSite(url) {
