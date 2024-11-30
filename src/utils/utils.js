@@ -545,14 +545,14 @@ export class Utils {
         }
     }
 
-    async readThisSite() {
+    readThisSite() {
         this.app.extension.clipboard.get_text(
             St.ClipboardType.CLIPBOARD,
-            (clipboard, result) => {
+            async (clipboard, result) => {
                 if (result) {
                     let url = result;
                     this.app.chat.addResponse(_('Sure, wait a moment...'));
-                    this.readUrlText(url);
+                    await this.readUrlText(url);
                 } else {
                     this.app.chat.addResponse(
                         _("Select and copy the site's address first."),
