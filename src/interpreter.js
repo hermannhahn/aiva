@@ -81,6 +81,14 @@ HELP
     async _localCommand(command, request) {
         this.app.chat.editResponse(this.phrases.wait());
         switch (command) {
+            case 'readSite':
+                try {
+                    await this.app.utils.readSite(request);
+                } catch (error) {
+                    this.app.chat.editResponse(_('Error reading site'));
+                    this.app.logError('Error reading site:', error);
+                }
+                break;
             case 'readClipboardText':
                 try {
                     await this.app.utils.readClipboardText();

@@ -20,27 +20,32 @@ msgstr ""
 msgid "Invalid command"
 msgstr ""
 
-#: src/interpreter.js:89
+#: src/interpreter.js:88
+#, fuzzy
+msgid "Error reading site"
+msgstr "Code copié dans le presse-papier"
+
+#: src/interpreter.js:97
 #, fuzzy
 msgid "Error reading clipboard text"
 msgstr "Code copié dans le presse-papier"
 
-#: src/interpreter.js:134
+#: src/interpreter.js:142
 #, fuzzy
 msgid "Error opening channel"
 msgstr "Code copié dans le presse-papier"
 
-#: src/interpreter.js:198
+#: src/interpreter.js:206
 #, fuzzy
 msgid "Error opening site"
 msgstr "Code copié dans le presse-papier"
 
-#: src/interpreter.js:229
+#: src/interpreter.js:237
 #, fuzzy
 msgid "Error opening app"
 msgstr "Code copié dans le presse-papier"
 
-#: src/interpreter.js:235
+#: src/interpreter.js:243
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr ""
 
