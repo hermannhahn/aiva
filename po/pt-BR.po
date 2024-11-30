@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-30 12:32-0300\n"
+"POT-Creation-Date: 2024-11-30 12:36-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -344,298 +344,437 @@ msgid "Sure, wait a moment..."
 msgstr "Só um momento..."
 
 #: src/commands.js:7
+#, fuzzy
+msgid "read the site"
+msgstr "carrega o site"
+
+#: src/commands.js:8
+#, fuzzy
+msgid "read this site"
+msgstr "leia esse texto"
+
+#: src/commands.js:9
+#, fuzzy
+msgid "read that site"
+msgstr "leia o texto"
+
+#: src/commands.js:10
+#, fuzzy
+msgid "read site"
+msgstr "leia esse texto"
+
+#: src/commands.js:11
+#, fuzzy
+msgid "read the website"
+msgstr "carrega a página"
+
+#: src/commands.js:12
+#, fuzzy
+msgid "read this website"
+msgstr "abre a página"
+
+#: src/commands.js:13
+#, fuzzy
+msgid "read that website"
+msgstr "carrega a página"
+
+#: src/commands.js:14
+#, fuzzy
+msgid "read website"
+msgstr "carrega a página"
+
+#: src/commands.js:15
+#, fuzzy
+msgid "read the web page"
+msgstr "abra a página"
+
+#: src/commands.js:16
+#, fuzzy
+msgid "read this web page"
+msgstr "leia isso por favor"
+
+#: src/commands.js:17
+#, fuzzy
+msgid "read that web page"
+msgstr "abra a página"
+
+#: src/commands.js:18
+#, fuzzy
+msgid "read web page"
+msgstr "abrir página"
+
+#: src/commands.js:19
+#, fuzzy
+msgid "read the page"
+msgstr "leia o texto"
+
+#: src/commands.js:20
+#, fuzzy
+msgid "read this page"
+msgstr "leia isso por favor"
+
+#: src/commands.js:21
+#, fuzzy
+msgid "read that page"
+msgstr "leia isso por favor"
+
+#: src/commands.js:22
+#, fuzzy
+msgid "read page"
+msgstr "abrir página"
+
+#: src/commands.js:23
+#, fuzzy
+msgid "read the link"
+msgstr "abre o link"
+
+#: src/commands.js:24
+#, fuzzy
+msgid "read this link"
+msgstr "abre esse link"
+
+#: src/commands.js:25
+#, fuzzy
+msgid "read that link"
+msgstr "abre o link"
+
+#: src/commands.js:26
+msgid "read link"
+msgstr ""
+
+#: src/commands.js:27
+#, fuzzy
+msgid "read the url"
+msgstr "leia o texto"
+
+#: src/commands.js:28
+#, fuzzy
+msgid "read this url"
+msgstr "leia isso pra mim"
+
+#: src/commands.js:29
+#, fuzzy
+msgid "read that url"
+msgstr "leia isso pra mim"
+
+#: src/commands.js:30
+#, fuzzy
+msgid "read url"
+msgstr "leia pra mim"
+
+#: src/commands.js:31
+#, fuzzy
+msgid "read the address"
+msgstr "leia o texto"
+
+#: src/commands.js:32
+#, fuzzy
+msgid "read this address"
+msgstr "leia isso pra mim"
+
+#: src/commands.js:33
+#, fuzzy
+msgid "read that address"
+msgstr "leia isso pra mim"
+
+#: src/commands.js:34
+#, fuzzy
+msgid "read address"
+msgstr "leia pra mim"
+
+#: src/commands.js:37
 msgid "read this text"
 msgstr "leia esse texto"
 
-#: src/commands.js:8
+#: src/commands.js:38
 msgid "read the text"
 msgstr "leia o texto"
 
-#: src/commands.js:9
+#: src/commands.js:39
 msgid "read the clipboard"
 msgstr "leia o texto que copiei"
 
-#: src/commands.js:10
+#: src/commands.js:40
 msgid "read copied text"
 msgstr "leia o texto copiado"
 
-#: src/commands.js:11
+#: src/commands.js:41
 msgid "read clipboard text"
 msgstr "leia o texto na área de transferência"
 
-#: src/commands.js:12
+#: src/commands.js:42
 msgid "read this clipboard"
 msgstr "leia esse texto"
 
-#: src/commands.js:13
+#: src/commands.js:43
 #, fuzzy
 msgid "read text from clipboard"
 msgstr "leia o texto que copiei"
 
-#: src/commands.js:14
+#: src/commands.js:44
 msgid "read text in memory"
 msgstr "leia o texto na memória"
 
-#: src/commands.js:15
+#: src/commands.js:45
 #, fuzzy
 msgid "read memorized text"
 msgstr "leia o texto memorisado"
 
-#: src/commands.js:16
+#: src/commands.js:46
 msgid "read for me"
 msgstr "leia pra mim"
 
-#: src/commands.js:17
+#: src/commands.js:47
 msgid "read this for me"
 msgstr "leia isso pra mim"
 
-#: src/commands.js:18
+#: src/commands.js:48
 msgid "read text for me"
 msgstr "leia o texto pra mim"
 
-#: src/commands.js:19
+#: src/commands.js:49
 msgid "read this please"
 msgstr "leia isso por favor"
 
-#: src/commands.js:20
+#: src/commands.js:50
 msgid "you can read now"
 msgstr "pode ler agora"
 
-#: src/commands.js:21
+#: src/commands.js:51
 #, fuzzy
 msgid "read what's copied"
 msgstr "leia o texto copiado"
 
-#: src/commands.js:22
+#: src/commands.js:52
 #, fuzzy
 msgid "read the copied content"
 msgstr "leia o texto copiado"
 
-#: src/commands.js:23
+#: src/commands.js:53
 #, fuzzy
 msgid "read the clipboard content"
 msgstr "leia o texto que copiei"
 
-#: src/commands.js:24
+#: src/commands.js:54
 #, fuzzy
 msgid "read the copied message"
 msgstr "leia o texto copiado"
 
-#: src/commands.js:27
+#: src/commands.js:57
 #, fuzzy
 msgid "open the site"
 msgstr "abra o site"
 
-#: src/commands.js:28
+#: src/commands.js:58
 #, fuzzy
 msgid "open this site"
 msgstr "abre esse site"
 
-#: src/commands.js:29
+#: src/commands.js:59
 msgid "open the website"
 msgstr "abre a página"
 
-#: src/commands.js:30
+#: src/commands.js:60
 msgid "open site"
 msgstr "abrir site"
 
-#: src/commands.js:31
+#: src/commands.js:61
 #, fuzzy
 msgid "open page"
 msgstr "abrir página"
 
-#: src/commands.js:32
+#: src/commands.js:62
 #, fuzzy
 msgid "open the page"
 msgstr "entra na página"
 
-#: src/commands.js:33
+#: src/commands.js:63
 #, fuzzy
 msgid "open the link"
 msgstr "abre o link"
 
-#: src/commands.js:34
+#: src/commands.js:64
 #, fuzzy
 msgid "open this link"
 msgstr "abre esse link"
 
-#: src/commands.js:35
+#: src/commands.js:65
 #, fuzzy
 msgid "open web page"
 msgstr "abrir página"
 
-#: src/commands.js:36
+#: src/commands.js:66
 #, fuzzy
 msgid "open the web page"
 msgstr "abra a página"
 
-#: src/commands.js:37
+#: src/commands.js:67
 #, fuzzy
 msgid "go to the site"
 msgstr "vai pro site"
 
-#: src/commands.js:38
+#: src/commands.js:68
 #, fuzzy
 msgid "go to the website"
 msgstr "vai pra página"
 
-#: src/commands.js:39
+#: src/commands.js:69
 #, fuzzy
 msgid "access the site"
 msgstr "acessa o site"
 
-#: src/commands.js:40
+#: src/commands.js:70
 #, fuzzy
 msgid "access the website"
 msgstr "acessa a página"
 
-#: src/commands.js:41
+#: src/commands.js:71
 msgid "go online"
 msgstr "entra no site"
 
-#: src/commands.js:42
+#: src/commands.js:72
 #, fuzzy
 msgid "load the site"
 msgstr "carrega o site"
 
-#: src/commands.js:43
+#: src/commands.js:73
 #, fuzzy
 msgid "load the website"
 msgstr "carrega a página"
 
-#: src/commands.js:44
+#: src/commands.js:74
 #, fuzzy
 msgid "visit the site"
 msgstr "visite o site"
 
-#: src/commands.js:45
+#: src/commands.js:75
 #, fuzzy
 msgid "visit the website"
 msgstr "visite a página"
 
-#: src/commands.js:46
+#: src/commands.js:76
 #, fuzzy
 msgid "navigate to the site"
 msgstr "navegue para o site"
 
-#: src/commands.js:47
+#: src/commands.js:77
 #, fuzzy
 msgid "navigate to the website"
 msgstr "navegue para a página"
 
-#: src/commands.js:48
+#: src/commands.js:78
 #, fuzzy
 msgid "take me to the site"
 msgstr "mostra o site"
 
-#: src/commands.js:49
+#: src/commands.js:79
 #, fuzzy
 msgid "take me to the website"
 msgstr "mostra a página"
 
-#: src/commands.js:52
+#: src/commands.js:82
 #, fuzzy
 msgid "open the channel"
 msgstr "abre o canal"
 
-#: src/commands.js:53
+#: src/commands.js:83
 #, fuzzy
 msgid "open this channel"
 msgstr "abre esse canal"
 
-#: src/commands.js:54
+#: src/commands.js:84
 msgid "open channel"
 msgstr "abrir canal"
 
-#: src/commands.js:55
+#: src/commands.js:85
 #, fuzzy
 msgid "open the YouTube channel"
 msgstr "abre o canal do youtube"
 
-#: src/commands.js:56
+#: src/commands.js:86
 #, fuzzy
 msgid "open YouTube channel"
 msgstr "abrir canal do youtube"
 
-#: src/commands.js:57
+#: src/commands.js:87
 #, fuzzy
 msgid "open the channel on YouTube"
 msgstr "abre o canal do youtube"
 
-#: src/commands.js:58
+#: src/commands.js:88
 #, fuzzy
 msgid "open this channel on YouTube"
 msgstr "abre esse canal do youtube"
 
-#: src/commands.js:59
+#: src/commands.js:89
 #, fuzzy
 msgid "go to the channel"
 msgstr "vai no canal"
 
-#: src/commands.js:60
+#: src/commands.js:90
 #, fuzzy
 msgid "go to this channel"
 msgstr "vai pro canal"
 
-#: src/commands.js:61
+#: src/commands.js:91
 #, fuzzy
 msgid "access the channel"
 msgstr "acessa o canal"
 
-#: src/commands.js:62
+#: src/commands.js:92
 #, fuzzy
 msgid "access this channel"
 msgstr "acessa esse canal"
 
-#: src/commands.js:63
+#: src/commands.js:93
 #, fuzzy
 msgid "visit the channel"
 msgstr "visita o canal"
 
-#: src/commands.js:64
+#: src/commands.js:94
 #, fuzzy
 msgid "visit this channel"
 msgstr "visita esse canal"
 
-#: src/commands.js:65
+#: src/commands.js:95
 #, fuzzy
 msgid "navigate to the channel"
 msgstr "navegue para o canal"
 
-#: src/commands.js:66
+#: src/commands.js:96
 #, fuzzy
 msgid "navigate to this channel"
 msgstr "navegue para esse canal"
 
-#: src/commands.js:67
+#: src/commands.js:97
 #, fuzzy
 msgid "load the channel"
 msgstr "carrega o canal"
 
-#: src/commands.js:68
+#: src/commands.js:98
 #, fuzzy
 msgid "load this channel"
 msgstr "carrega esse canal"
 
-#: src/commands.js:69
+#: src/commands.js:99
 #, fuzzy
 msgid "open YouTube"
 msgstr "abrir youtube"
 
-#: src/commands.js:70
+#: src/commands.js:100
 msgid "on YouTube"
 msgstr "no youtube"
 
-#: src/commands.js:71
+#: src/commands.js:101
 #, fuzzy
 msgid "open it on YouTube"
 msgstr "abre no youtube"
 
-#: src/commands.js:72
+#: src/commands.js:102
 msgid "access the channel on YouTube"
 msgstr "acessa o canal do youtube"
 
-#: src/commands.js:73
+#: src/commands.js:103
 msgid "visit the channel on YouTube"
 msgstr "visita o canal do youtube"
 
@@ -865,10 +1004,6 @@ msgstr "Suas preferências foram salvas"
 #, fuzzy
 #~ msgid "can you open site?"
 #~ msgstr "leia esse texto"
-
-#, fuzzy
-#~ msgid "open this website"
-#~ msgstr "abre a página"
 
 #, fuzzy
 #~ msgid "please open this website"
