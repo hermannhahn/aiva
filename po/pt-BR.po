@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-30 19:50-0300\n"
+"POT-Creation-Date: 2024-11-30 19:51-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -490,87 +490,87 @@ msgstr "vá para a página"
 
 #: src/commands.js:48 src/commands.js:51
 #, fuzzy
-msgid "open the youTube channel"
+msgid "open the youtube channel"
 msgstr "abre o canal no youtube"
 
 #: src/commands.js:49
 #, fuzzy
-msgid "open this youTube channel"
+msgid "open this youtube channel"
 msgstr "abra o canal no youtube"
 
 #: src/commands.js:50 src/commands.js:52
 #, fuzzy
-msgid "open youTube channel"
+msgid "open youtube channel"
 msgstr "abrir canal no youtube"
 
 #: src/commands.js:53
 #, fuzzy
-msgid "open the channel on youTube"
+msgid "open the channel on youtube"
 msgstr "abre o canal no youtube"
 
 #: src/commands.js:54
 #, fuzzy
-msgid "open this channel on youTube"
+msgid "open this channel on youtube"
 msgstr "abre esse canal no youtube"
 
 #: src/commands.js:55
 #, fuzzy
-msgid "go to the youTube channel"
+msgid "go to the youtube channel"
 msgstr "abre o canal no youtube"
 
 #: src/commands.js:56
 #, fuzzy
-msgid "go to this youTube channel"
+msgid "go to this youtube channel"
 msgstr "abra o canal no youtube"
 
 #: src/commands.js:57
 #, fuzzy
-msgid "access the youTube channel"
+msgid "access the youtube channel"
 msgstr "acessa o canal no youtube"
 
 #: src/commands.js:58
 #, fuzzy
-msgid "access this youTube channel"
+msgid "access this youtube channel"
 msgstr "acessa esse canal no youtube"
 
 #: src/commands.js:59
 #, fuzzy
-msgid "visit the youTube channel"
+msgid "visit the youtube channel"
 msgstr "visita o canal no youtube"
 
 #: src/commands.js:60
 #, fuzzy
-msgid "visit this youTube channel"
+msgid "visit this youtube channel"
 msgstr "visita esse canal no youtube"
 
 #: src/commands.js:61
 #, fuzzy
-msgid "navigate to the youTube channel"
+msgid "navigate to the youtube channel"
 msgstr "navegue para o canal no youtube"
 
 #: src/commands.js:62
 #, fuzzy
-msgid "navigate to this youTube channel"
+msgid "navigate to this youtube channel"
 msgstr "navegue para esse canal no youtube"
 
 #: src/commands.js:63
 #, fuzzy
-msgid "load the youTube channel"
+msgid "load the youtube channel"
 msgstr "abre o canal no youtube"
 
 #: src/commands.js:64
 #, fuzzy
-msgid "load this youTube channel"
+msgid "load this youtube channel"
 msgstr "abra o canal no youtube"
 
 #: src/commands.js:65
 #, fuzzy
-msgid "access the channel on youTube"
+msgid "access the channel on youtube"
 msgstr "acessa o canal no youtube"
 
 #: src/commands.js:66
 #, fuzzy
-msgid "visit the channel on youTube"
+msgid "visit the channel on youtube"
 msgstr "visita o canal no youtube"
 
 #: src/ui/mainmenu.js:30

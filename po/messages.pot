@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-30 19:50-0300\n"
+"POT-Creation-Date: 2024-11-30 19:51-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -467,71 +467,71 @@ msgid "take me to the website"
 msgstr ""
 
 #: src/commands.js:48 src/commands.js:51
-msgid "open the youTube channel"
+msgid "open the youtube channel"
 msgstr ""
 
 #: src/commands.js:49
-msgid "open this youTube channel"
+msgid "open this youtube channel"
 msgstr ""
 
 #: src/commands.js:50 src/commands.js:52
-msgid "open youTube channel"
+msgid "open youtube channel"
 msgstr ""
 
 #: src/commands.js:53
-msgid "open the channel on youTube"
+msgid "open the channel on youtube"
 msgstr ""
 
 #: src/commands.js:54
-msgid "open this channel on youTube"
+msgid "open this channel on youtube"
 msgstr ""
 
 #: src/commands.js:55
-msgid "go to the youTube channel"
+msgid "go to the youtube channel"
 msgstr ""
 
 #: src/commands.js:56
-msgid "go to this youTube channel"
+msgid "go to this youtube channel"
 msgstr ""
 
 #: src/commands.js:57
-msgid "access the youTube channel"
+msgid "access the youtube channel"
 msgstr ""
 
 #: src/commands.js:58
-msgid "access this youTube channel"
+msgid "access this youtube channel"
 msgstr ""
 
 #: src/commands.js:59
-msgid "visit the youTube channel"
+msgid "visit the youtube channel"
 msgstr ""
 
 #: src/commands.js:60
-msgid "visit this youTube channel"
+msgid "visit this youtube channel"
 msgstr ""
 
 #: src/commands.js:61
-msgid "navigate to the youTube channel"
+msgid "navigate to the youtube channel"
 msgstr ""
 
 #: src/commands.js:62
-msgid "navigate to this youTube channel"
+msgid "navigate to this youtube channel"
 msgstr ""
 
 #: src/commands.js:63
-msgid "load the youTube channel"
+msgid "load the youtube channel"
 msgstr ""
 
 #: src/commands.js:64
-msgid "load this youTube channel"
+msgid "load this youtube channel"
 msgstr ""
 
 #: src/commands.js:65
-msgid "access the channel on youTube"
+msgid "access the channel on youtube"
 msgstr ""
 
 #: src/commands.js:66
-msgid "visit the channel on youTube"
+msgid "visit the channel on youtube"
 msgstr ""
 
 #: src/ui/mainmenu.js:30

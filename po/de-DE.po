@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-30 19:30-0300\n"
+"POT-Creation-Date: 2024-11-30 19:51-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language de-DE\n"
@@ -483,82 +483,88 @@ msgstr ""
 
 #: src/commands.js:48 src/commands.js:51
 #, fuzzy
-msgid "open the youTube channel"
+msgid "open the youtube channel"
 msgstr "Code kopiert in die Zwischenablage"
 
 #: src/commands.js:49
 #, fuzzy
-msgid "open this youTube channel"
+msgid "open this youtube channel"
 msgstr "Code kopiert in die Zwischenablage"
 
 #: src/commands.js:50 src/commands.js:52
 #, fuzzy
-msgid "open youTube channel"
+msgid "open youtube channel"
 msgstr "Code kopiert in die Zwischenablage"
 
 #: src/commands.js:53
 #, fuzzy
-msgid "open the channel on youTube"
+msgid "open the channel on youtube"
 msgstr "Code kopiert in die Zwischenablage"
 
 #: src/commands.js:54
-msgid "open this channel on youTube"
-msgstr ""
+#, fuzzy
+msgid "open this channel on youtube"
+msgstr "Code kopiert in die Zwischenablage"
 
 #: src/commands.js:55
-msgid "go to the youTube channel"
-msgstr ""
+#, fuzzy
+msgid "go to the youtube channel"
+msgstr "Code kopiert in die Zwischenablage"
 
 #: src/commands.js:56
 #, fuzzy
-msgid "go to this youTube channel"
+msgid "go to this youtube channel"
 msgstr "Code kopiert in die Zwischenablage"
 
 #: src/commands.js:57
 #, fuzzy
-msgid "access the youTube channel"
+msgid "access the youtube channel"
 msgstr "Code kopiert in die Zwischenablage"
 
 #: src/commands.js:58
 #, fuzzy
-msgid "access this youTube channel"
+msgid "access this youtube channel"
 msgstr "Code kopiert in die Zwischenablage"
 
 #: src/commands.js:59
-msgid "visit the youTube channel"
-msgstr ""
+#, fuzzy
+msgid "visit the youtube channel"
+msgstr "Code kopiert in die Zwischenablage"
 
 #: src/commands.js:60
-msgid "visit this youTube channel"
-msgstr ""
+#, fuzzy
+msgid "visit this youtube channel"
+msgstr "Code kopiert in die Zwischenablage"
 
 #: src/commands.js:61
-msgid "navigate to the youTube channel"
-msgstr ""
+#, fuzzy
+msgid "navigate to the youtube channel"
+msgstr "Code kopiert in die Zwischenablage"
 
 #: src/commands.js:62
 #, fuzzy
-msgid "navigate to this youTube channel"
+msgid "navigate to this youtube channel"
 msgstr "Code kopiert in die Zwischenablage"
 
 #: src/commands.js:63
 #, fuzzy
-msgid "load the youTube channel"
+msgid "load the youtube channel"
 msgstr "Code kopiert in die Zwischenablage"
 
 #: src/commands.js:64
 #, fuzzy
-msgid "load this youTube channel"
+msgid "load this youtube channel"
 msgstr "Code kopiert in die Zwischenablage"
 
 #: src/commands.js:65
 #, fuzzy
-msgid "access the channel on youTube"
+msgid "access the channel on youtube"
 msgstr "Code kopiert in die Zwischenablage"
 
 #: src/commands.js:66
-msgid "visit the channel on youTube"
-msgstr ""
+#, fuzzy
+msgid "visit the channel on youtube"
+msgstr "Code kopiert in die Zwischenablage"
 
 #: src/ui/mainmenu.js:30
 msgid "Ask me anything..."
