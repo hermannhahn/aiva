@@ -523,32 +523,32 @@ msgstr "abra o canal do youtube"
 #: src/commands.js:57
 #, fuzzy
 msgid "access the youTube channel"
-msgstr "acessa o canal"
+msgstr "acessa o canal do youtube"
 
 #: src/commands.js:58
 #, fuzzy
 msgid "access this youTube channel"
-msgstr "acessa esse canal"
+msgstr "acessa esse canal do youtube"
 
 #: src/commands.js:59
 #, fuzzy
 msgid "visit the youTube channel"
-msgstr "visita o canal"
+msgstr "visita o canal do youtube"
 
 #: src/commands.js:60
 #, fuzzy
 msgid "visit this youTube channel"
-msgstr "visita esse canal"
+msgstr "visita esse canal do youtube"
 
 #: src/commands.js:61
 #, fuzzy
 msgid "navigate to the youTube channel"
-msgstr "navegue para o canal"
+msgstr "navegue para o canal do youtube"
 
 #: src/commands.js:62
 #, fuzzy
 msgid "navigate to this youTube channel"
-msgstr "navegue para esse canal"
+msgstr "navegue para esse canal do youtube"
 
 #: src/commands.js:63
 #, fuzzy
