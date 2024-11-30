@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-30 18:45-0300\n"
+"POT-Creation-Date: 2024-11-30 18:58-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language it-IT\n"
@@ -477,92 +477,83 @@ msgstr ""
 msgid "take me to the website"
 msgstr ""
 
-#: src/commands.js:48
-msgid "open the channel"
-msgstr ""
+#: src/commands.js:48 src/commands.js:51
+#, fuzzy
+msgid "open the youTube channel"
+msgstr "Codice copiato negli appunti"
 
 #: src/commands.js:49
-msgid "open this channel"
-msgstr ""
+#, fuzzy
+msgid "open this youTube channel"
+msgstr "Codice copiato negli appunti"
 
-#: src/commands.js:50
-msgid "open channel"
-msgstr ""
-
-#: src/commands.js:51
-msgid "open the YouTube channel"
-msgstr ""
-
-#: src/commands.js:52
-msgid "open YouTube channel"
-msgstr ""
+#: src/commands.js:50 src/commands.js:52
+#, fuzzy
+msgid "open youTube channel"
+msgstr "Codice copiato negli appunti"
 
 #: src/commands.js:53
-msgid "open the channel on YouTube"
-msgstr ""
+#, fuzzy
+msgid "open the channel on youTube"
+msgstr "Codice copiato negli appunti"
 
 #: src/commands.js:54
-msgid "open this channel on YouTube"
+msgid "open this channel on youTube"
 msgstr ""
 
 #: src/commands.js:55
-msgid "go to the channel"
+msgid "go to the youTube channel"
 msgstr ""
 
 #: src/commands.js:56
-msgid "go to this channel"
-msgstr ""
+#, fuzzy
+msgid "go to this youTube channel"
+msgstr "Codice copiato negli appunti"
 
 #: src/commands.js:57
-msgid "access the channel"
-msgstr ""
+#, fuzzy
+msgid "access the youTube channel"
+msgstr "Codice copiato negli appunti"
 
 #: src/commands.js:58
-msgid "access this channel"
-msgstr ""
+#, fuzzy
+msgid "access this youTube channel"
+msgstr "Codice copiato negli appunti"
 
 #: src/commands.js:59
-msgid "visit the channel"
+msgid "visit the youTube channel"
 msgstr ""
 
 #: src/commands.js:60
-msgid "visit this channel"
+msgid "visit this youTube channel"
 msgstr ""
 
 #: src/commands.js:61
-msgid "navigate to the channel"
+msgid "navigate to the youTube channel"
 msgstr ""
 
 #: src/commands.js:62
-msgid "navigate to this channel"
-msgstr ""
+#, fuzzy
+msgid "navigate to this youTube channel"
+msgstr "Codice copiato negli appunti"
 
 #: src/commands.js:63
-msgid "load the channel"
-msgstr ""
+#, fuzzy
+msgid "load the youTube channel"
+msgstr "Codice copiato negli appunti"
 
 #: src/commands.js:64
-msgid "load this channel"
-msgstr ""
+#, fuzzy
+msgid "load this youTube channel"
+msgstr "Codice copiato negli appunti"
 
 #: src/commands.js:65
-msgid "open YouTube"
-msgstr ""
+#, fuzzy
+msgid "access the channel on youTube"
+msgstr "Codice copiato negli appunti"
 
 #: src/commands.js:66
-msgid "on YouTube"
-msgstr ""
-
-#: src/commands.js:67
-msgid "open it on YouTube"
-msgstr ""
-
-#: src/commands.js:68
-msgid "access the channel on YouTube"
-msgstr ""
-
-#: src/commands.js:69
-msgid "visit the channel on YouTube"
+msgid "visit the channel on youTube"
 msgstr ""
 
 #: src/ui/mainmenu.js:30
@@ -775,20 +766,4 @@ msgstr ""
 
 #, fuzzy
 #~ msgid "can you visit the site?"
-#~ msgstr "Codice copiato negli appunti"
-
-#, fuzzy
-#~ msgid "please open the channel"
-#~ msgstr "Codice copiato negli appunti"
-
-#, fuzzy
-#~ msgid "please access the channel"
-#~ msgstr "Codice copiato negli appunti"
-
-#, fuzzy
-#~ msgid "please load the channel"
-#~ msgstr "Codice copiato negli appunti"
-
-#, fuzzy
-#~ msgid "please load this channel"
 #~ msgstr "Codice copiato negli appunti"

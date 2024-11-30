@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-30 18:45-0300\n"
+"POT-Creation-Date: 2024-11-30 18:58-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -485,110 +485,89 @@ msgstr "vá para o site"
 msgid "take me to the website"
 msgstr "vá para a página"
 
-#: src/commands.js:48
+#: src/commands.js:48 src/commands.js:51
 #, fuzzy
-msgid "open the channel"
-msgstr "abre o canal"
+msgid "open the youTube channel"
+msgstr "abre o canal do youtube"
 
 #: src/commands.js:49
 #, fuzzy
-msgid "open this channel"
-msgstr "abre esse canal"
+msgid "open this youTube channel"
+msgstr "abra o canal do youtube"
 
-#: src/commands.js:50
-msgid "open channel"
-msgstr "abrir canal"
-
-#: src/commands.js:51
+#: src/commands.js:50 src/commands.js:52
 #, fuzzy
-msgid "open the YouTube channel"
-msgstr "abre o canal do youtube"
-
-#: src/commands.js:52
-#, fuzzy
-msgid "open YouTube channel"
+msgid "open youTube channel"
 msgstr "abrir canal do youtube"
 
 #: src/commands.js:53
 #, fuzzy
-msgid "open the channel on YouTube"
+msgid "open the channel on youTube"
 msgstr "abre o canal do youtube"
 
 #: src/commands.js:54
 #, fuzzy
-msgid "open this channel on YouTube"
+msgid "open this channel on youTube"
 msgstr "abre esse canal do youtube"
 
 #: src/commands.js:55
 #, fuzzy
-msgid "go to the channel"
-msgstr "vai no canal"
+msgid "go to the youTube channel"
+msgstr "abre o canal do youtube"
 
 #: src/commands.js:56
 #, fuzzy
-msgid "go to this channel"
-msgstr "vai pro canal"
+msgid "go to this youTube channel"
+msgstr "abra o canal do youtube"
 
 #: src/commands.js:57
 #, fuzzy
-msgid "access the channel"
+msgid "access the youTube channel"
 msgstr "acessa o canal"
 
 #: src/commands.js:58
 #, fuzzy
-msgid "access this channel"
+msgid "access this youTube channel"
 msgstr "acessa esse canal"
 
 #: src/commands.js:59
 #, fuzzy
-msgid "visit the channel"
+msgid "visit the youTube channel"
 msgstr "visita o canal"
 
 #: src/commands.js:60
 #, fuzzy
-msgid "visit this channel"
+msgid "visit this youTube channel"
 msgstr "visita esse canal"
 
 #: src/commands.js:61
 #, fuzzy
-msgid "navigate to the channel"
+msgid "navigate to the youTube channel"
 msgstr "navegue para o canal"
 
 #: src/commands.js:62
 #, fuzzy
-msgid "navigate to this channel"
+msgid "navigate to this youTube channel"
 msgstr "navegue para esse canal"
 
 #: src/commands.js:63
 #, fuzzy
-msgid "load the channel"
-msgstr "carrega o canal"
+msgid "load the youTube channel"
+msgstr "abre o canal do youtube"
 
 #: src/commands.js:64
 #, fuzzy
-msgid "load this channel"
-msgstr "carrega esse canal"
+msgid "load this youTube channel"
+msgstr "abra o canal do youtube"
 
 #: src/commands.js:65
 #, fuzzy
-msgid "open YouTube"
-msgstr "abrir youtube"
-
-#: src/commands.js:66
-msgid "on YouTube"
-msgstr "no youtube"
-
-#: src/commands.js:67
-#, fuzzy
-msgid "open it on YouTube"
-msgstr "abre no youtube"
-
-#: src/commands.js:68
-msgid "access the channel on YouTube"
+msgid "access the channel on youTube"
 msgstr "acessa o canal do youtube"
 
-#: src/commands.js:69
-msgid "visit the channel on YouTube"
+#: src/commands.js:66
+#, fuzzy
+msgid "visit the channel on youTube"
 msgstr "visita o canal do youtube"
 
 #: src/ui/mainmenu.js:30
@@ -679,6 +658,44 @@ msgstr "Salvar"
 #: src/prefs.js:287
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
+
+#, fuzzy
+#~ msgid "open the channel"
+#~ msgstr "abre o canal"
+
+#, fuzzy
+#~ msgid "open this channel"
+#~ msgstr "abre esse canal"
+
+#~ msgid "open channel"
+#~ msgstr "abrir canal"
+
+#, fuzzy
+#~ msgid "go to the channel"
+#~ msgstr "vai no canal"
+
+#, fuzzy
+#~ msgid "go to this channel"
+#~ msgstr "vai pro canal"
+
+#, fuzzy
+#~ msgid "load the channel"
+#~ msgstr "carrega o canal"
+
+#, fuzzy
+#~ msgid "load this channel"
+#~ msgstr "carrega esse canal"
+
+#, fuzzy
+#~ msgid "open YouTube"
+#~ msgstr "abrir youtube"
+
+#~ msgid "on YouTube"
+#~ msgstr "no youtube"
+
+#, fuzzy
+#~ msgid "open it on YouTube"
+#~ msgstr "abre no youtube"
 
 #, fuzzy
 #~ msgid "read this site"
@@ -1090,10 +1107,6 @@ msgstr "Suas preferências foram salvas"
 
 #, fuzzy
 #~ msgid "can you open the YouTube channel?"
-#~ msgstr "abra o canal do youtube"
-
-#, fuzzy
-#~ msgid "open this YouTube channel"
 #~ msgstr "abra o canal do youtube"
 
 #, fuzzy
