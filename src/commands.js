@@ -1,8 +1,8 @@
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 export class Commands {
-    constructor() {
-        this.local = {
+    get() {
+        const commands = {
             readThisSite: [
                 _('read this site'),
                 _('read that site'),
@@ -105,6 +105,7 @@ export class Commands {
                 _('visit the channel on YouTube'),
             ],
         };
+        return commands;
     }
 
     findCategoryInArrays(string, commands) {
