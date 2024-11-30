@@ -516,37 +516,4 @@ export class Utils {
             throw new Error(`Failed to complete request: ${error.message}`);
         }
     }
-
-    readSite(url) {
-        try {
-            if (url) {
-                this.readUrlText(url);
-            } else {
-                this.app.chat.editResponse(
-                    _("Please, select and copy the site's address first") +
-                        ' ' +
-                        _('or just copy the URL and say: ') +
-                        _('Read this website'),
-                );
-            }
-        } catch (error) {
-            logError(error, 'Failed to read URL text');
-        }
-    }
-
-    readThisSite() {
-        this.app.extension.clipboard.get_text(
-            St.ClipboardType.CLIPBOARD,
-            (clipboard, result) => {
-                if (result) {
-                    let url = result;
-                    this.readUrlText(url);
-                } else {
-                    this.app.chat.editResponse(
-                        _("Select and copy the site's address first."),
-                    );
-                }
-            },
-        );
-    }
 }
