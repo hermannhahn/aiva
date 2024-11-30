@@ -545,7 +545,8 @@ export class Utils {
                 this.app.chat.addResponse(
                     _("Please, select and copy the site's address first") +
                         ' ' +
-                        _("or just copy the URL and say: 'Read this website'"),
+                        _('or just copy the URL and say: ') +
+                        _('Read this website'),
                 );
             }
         } catch (error) {
