@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-30 18:58-0300\n"
+"POT-Creation-Date: 2024-11-30 19:27-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -20,10 +20,14 @@ msgstr ""
 msgid "Invalid command"
 msgstr "Comando inválido"
 
-#: src/interpreter.js:95
+#: src/interpreter.js:94
 #, fuzzy
 msgid "Error reading clipboard text"
 msgstr "Falha ao obter texto da área de transferência"
+
+#: src/interpreter.js:133 src/interpreter.js:197
+msgid "Searching for"
+msgstr ""
 
 #: src/interpreter.js:140
 #, fuzzy

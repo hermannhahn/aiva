@@ -85,7 +85,6 @@ HELP
     }
 
     async _localCommand(command, request = undefined) {
-        this.app.chat.editResponse(this.phrases.wait());
         switch (command) {
             case 'readClipboardText':
                 try {
@@ -99,6 +98,7 @@ HELP
                 break;
             case 'openYoutubeChannel':
                 try {
+                    this.app.chat.editResponse(this.phrases.wait());
                     const urls = {
                         'cnn brasil': 'https://www.youtube.com/@CNNbrasil/live',
                         'uol news': 'https://www.youtube.com/@uolnews/live',
@@ -125,12 +125,12 @@ HELP
                         if (request.includes(key)) {
                             this.app.chat.editResponse(_(`Opening ${key}...`));
                             this.app.utils.executeCommand(`firefox ${url}`);
-                            break;
+                            return;
                         }
                     }
                     // search channel
                     this.app.chat.editResponse(
-                        _(`Searching for ${request}...`),
+                        _('Searching for') + ` ${request}...`,
                     );
                     this.app.utils.executeCommand(
                         `firefox https://www.youtube.com/results?search_query=${request}`,
@@ -188,13 +188,13 @@ HELP
                         if (request.includes(key)) {
                             this.app.chat.editResponse(_(`Opening ${key}...`));
                             this.app.utils.executeCommand(`firefox ${url}`);
-                            break;
+                            return;
                         }
                     }
 
                     // search site
                     this.app.chat.editResponse(
-                        _(`Searching for ${request}...`),
+                        _('Searching for') + ` ${request}...`,
                     );
                     this.app.utils.executeCommand(
                         `firefox https://www.google.com/search?q=${request}`,
