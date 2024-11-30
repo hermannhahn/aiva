@@ -495,23 +495,23 @@ export class Utils {
      * @returns {Promise<string>} - A promise that resolves to the plain text content of the website.
      */
     readUrlText(url) {
-        // Create a Soup session for making HTTP requests
-        const session = new Soup.Session();
+        try {
+            // Create a Soup session for making HTTP requests
+            const session = new Soup.Session();
 
-        // Create a new HTTP GET request
-        const message = Soup.Message.new('GET', url);
+            // Create a new HTTP GET request
+            const message = Soup.Message.new('GET', url);
 
-        if (!message) {
-            throw new Error('Failed to create HTTP request message.');
-        }
+            if (!message) {
+                throw new Error('Failed to create HTTP request message.');
+            }
 
-        // Send the HTTP request
-        session.send_async(
-            message,
-            GLib.PRIORITY_DEFAULT,
-            null,
-            (session, result) => {
-                try {
+            // Send the HTTP request
+            session.send_async(
+                message,
+                GLib.PRIORITY_DEFAULT,
+                null,
+                (session, result) => {
                     let responseBytes = session.send_and_read_finish(result);
                     let responseText = new TextDecoder('utf-8').decode(
                         responseBytes.get_data(),
@@ -526,13 +526,11 @@ export class Utils {
                     // Remove HTML tags using a regular expression
                     const plainText = responseText.replace(/<[^>]*>/g, '');
                     this.app.chat.editResponse(plainText);
-                } catch (error) {
-                    throw new Error(
-                        `Failed to complete request: ${error.message}`,
-                    );
-                }
-            },
-        );
+                },
+            );
+        } catch (error) {
+            throw new Error(`Failed to complete request: ${error.message}`);
+        }
     }
 
     readSite(url) {
