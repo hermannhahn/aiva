@@ -525,7 +525,9 @@ export class Utils {
 
                     // Remove HTML tags using a regular expression
                     const plainText = responseText.replace(/<[^>]*>/g, '');
-                    this.app.chat.editResponse(plainText);
+                    // this.app.chat.editResponse(plainText);
+                    this.app.log(plainText);
+                    return plainText;
                 },
             );
         } catch (error) {
@@ -538,7 +540,7 @@ export class Utils {
             if (url) {
                 this.readUrlText(url);
             } else {
-                this.app.chat.addResponse(
+                this.app.chat.editResponse(
                     _("Please, select and copy the site's address first") +
                         ' ' +
                         _('or just copy the URL and say: ') +
@@ -558,7 +560,7 @@ export class Utils {
                     let url = result;
                     this.readUrlText(url);
                 } else {
-                    this.app.chat.addResponse(
+                    this.app.chat.editResponse(
                         _("Select and copy the site's address first."),
                     );
                 }
