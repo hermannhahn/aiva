@@ -79,19 +79,18 @@ HELP
     }
 
     async _localCommand(command, request) {
+        this.app.chat.editResponse(this.phrases.wait());
         switch (command) {
             case 'readClipboardText':
                 try {
-                    this.app.chat.editResponse(this.phrases.wait());
                     await this.app.utils.readClipboardText();
-                    break;
                 } catch (error) {
                     this.app.chat.editResponse(
                         _('Error reading clipboard text'),
                     );
                     this.app.logError('Error reading clipboard text:', error);
-                    break;
                 }
+                break;
             case 'openYoutubeChannel':
                 try {
                     const urls = {
@@ -112,9 +111,9 @@ HELP
                             return;
                         }
                     }
-                    this.app.gemini.runCommand(command + ' ' + request);
                 } catch (error) {
-                    this.app.logError('Erro ao abrir site:', error);
+                    this.app.logError('Error opening channel:', error);
+                    this.app.chat.editResponse(_('Error opening channel'));
                 }
                 break;
             case 'openSite':
@@ -132,12 +131,16 @@ HELP
                             return;
                         }
                     }
-                    this.app.gemini.runCommand(command + ' ' + request);
+                    break;
                 } catch (error) {
-                    this.app.logError('Erro ao abrir site:', error);
+                    this.app.logError('Error opening site:', error);
+                    this.app.chat.editResponse(_('Error opening site'));
                 }
                 break;
             default:
+                this.app.chat.editResponse(
+                    _("Sorry, I can't do that right now. Maybe in the future."),
+                );
                 break;
         }
     }
