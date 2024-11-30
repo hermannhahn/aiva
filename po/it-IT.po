@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-30 12:59-0300\n"
+"POT-Creation-Date: 2024-11-30 13:11-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language it-IT\n"
@@ -322,11 +322,15 @@ msgstr ""
 msgid "Look at example below:"
 msgstr ""
 
-#: src/utils/utils.js:541 src/utils/utils.js:554
+#: src/utils/utils.js:542 src/utils/utils.js:560
 msgid "Sure, wait a moment..."
 msgstr ""
 
-#: src/utils/utils.js:558
+#: src/utils/utils.js:546
+msgid "Please, select and copy the site's address first."
+msgstr ""
+
+#: src/utils/utils.js:564
 msgid "Select and copy the site's address first."
 msgstr ""
 

@@ -538,8 +538,14 @@ export class Utils {
 
     async readSite(url) {
         try {
-            this.app.chat.addResponse(_('Sure, wait a moment...'));
-            await this.readUrlText(url);
+            if (url) {
+                this.app.chat.addResponse(_('Sure, wait a moment...'));
+                await this.readUrlText(url);
+            } else {
+                this.app.chat.addResponse(
+                    _("Please, select and copy the site's address first."),
+                );
+            }
         } catch (error) {
             logError(error, 'Failed to read URL text');
         }
