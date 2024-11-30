@@ -351,141 +351,141 @@ msgstr "Só um momento..."
 #: src/commands.js:7
 #, fuzzy
 msgid "read the site"
-msgstr "carrega o site"
+msgstr "leia o site"
 
 #: src/commands.js:8
 #, fuzzy
 msgid "read this site"
-msgstr "leia esse texto"
+msgstr "leia esse site"
 
 #: src/commands.js:9
 #, fuzzy
 msgid "read that site"
-msgstr "leia o texto"
+msgstr "leia este site"
 
 #: src/commands.js:10
 #, fuzzy
 msgid "read site"
-msgstr "leia esse texto"
+msgstr "ler site"
 
 #: src/commands.js:11
 #, fuzzy
 msgid "read the website"
-msgstr "carrega a página"
+msgstr "leia a página"
 
 #: src/commands.js:12
 #, fuzzy
 msgid "read this website"
-msgstr "abre a página"
+msgstr "leia essa página"
 
 #: src/commands.js:13
 #, fuzzy
 msgid "read that website"
-msgstr "carrega a página"
+msgstr "leia esta página"
 
 #: src/commands.js:14
 #, fuzzy
 msgid "read website"
-msgstr "carrega a página"
+msgstr "ler página"
 
 #: src/commands.js:15
 #, fuzzy
 msgid "read the web page"
-msgstr "abra a página"
+msgstr "ler a página"
 
 #: src/commands.js:16
 #, fuzzy
 msgid "read this web page"
-msgstr "leia isso por favor"
+msgstr "ler essa página"
 
 #: src/commands.js:17
 #, fuzzy
 msgid "read that web page"
-msgstr "abra a página"
+msgstr "ler esta página"
 
 #: src/commands.js:18
 #, fuzzy
 msgid "read web page"
-msgstr "abrir página"
+msgstr "leia página"
 
 #: src/commands.js:19
 #, fuzzy
 msgid "read the page"
-msgstr "leia o texto"
+msgstr "leia pra mim a página"
 
 #: src/commands.js:20
 #, fuzzy
 msgid "read this page"
-msgstr "leia isso por favor"
+msgstr "leia pra mim essa página"
 
 #: src/commands.js:21
 #, fuzzy
 msgid "read that page"
-msgstr "leia isso por favor"
+msgstr "leia pra mim esta página"
 
 #: src/commands.js:22
 #, fuzzy
 msgid "read page"
-msgstr "abrir página"
+msgstr "ler pra mim a página"
 
 #: src/commands.js:23
 #, fuzzy
 msgid "read the link"
-msgstr "abre o link"
+msgstr "leia o link"
 
 #: src/commands.js:24
 #, fuzzy
 msgid "read this link"
-msgstr "abre esse link"
+msgstr "leia esse link"
 
 #: src/commands.js:25
 #, fuzzy
 msgid "read that link"
-msgstr "abre o link"
+msgstr "leia este link"
 
 #: src/commands.js:26
 msgid "read link"
-msgstr ""
+msgstr "ler link"
 
 #: src/commands.js:27
 #, fuzzy
 msgid "read the url"
-msgstr "leia o texto"
+msgstr "leia a url"
 
 #: src/commands.js:28
 #, fuzzy
 msgid "read this url"
-msgstr "leia isso pra mim"
+msgstr "leia essa url"
 
 #: src/commands.js:29
 #, fuzzy
 msgid "read that url"
-msgstr "leia isso pra mim"
+msgstr "leia esta url"
 
 #: src/commands.js:30
 #, fuzzy
 msgid "read url"
-msgstr "leia pra mim"
+msgstr "ler url"
 
 #: src/commands.js:31
 #, fuzzy
 msgid "read the address"
-msgstr "leia o texto"
+msgstr "leia o endereço"
 
 #: src/commands.js:32
 #, fuzzy
 msgid "read this address"
-msgstr "leia isso pra mim"
+msgstr "leia esse endereço"
 
 #: src/commands.js:33
 #, fuzzy
 msgid "read that address"
-msgstr "leia isso pra mim"
+msgstr "leia este endereço"
 
 #: src/commands.js:34
 #, fuzzy
 msgid "read address"
-msgstr "leia pra mim"
+msgstr "ler endereço"
 
 #: src/commands.js:37
 msgid "read this text"
