@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-30 14:09-0300\n"
+"POT-Creation-Date: 2024-11-30 14:10-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -55,19 +55,19 @@ msgstr "abrir site"
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr "Eu não posso fazer isso agora. Tente novamente mais tarde."
 
-#: src/ai/azure.js:67 src/ai/azure.js:80 src/ai/azure.js:122
-#: src/ai/azure.js:131 src/ai/gemini.js:122 src/ai/gemini.js:218
+#: src/ai/azure.js:68 src/ai/azure.js:83 src/ai/azure.js:126
+#: src/ai/azure.js:135 src/ai/gemini.js:122 src/ai/gemini.js:218
 #: src/utils/utils.js:212
 #, fuzzy
 msgid "Sorry, I'm having connection trouble. Please try again."
 msgstr "Estou tendo problemas de conexão. Por favor, tente novamente."
 
-#: src/ai/azure.js:157 src/ai/azure.js:180 src/ai/azure.js:194
+#: src/ai/azure.js:161 src/ai/azure.js:186 src/ai/azure.js:202
 msgid "Transcribe error!"
 msgstr "Erro na transcrição!"
 
-#: src/ai/azure.js:159 src/ai/azure.js:182 src/ai/azure.js:196
-#: src/ai/azure.js:239 src/ai/azure.js:248
+#: src/ai/azure.js:164 src/ai/azure.js:189 src/ai/azure.js:205
+#: src/ai/azure.js:249 src/ai/azure.js:258
 #, fuzzy
 msgid "Sorry, I'm having trouble to listen you. Please try again."
 msgstr "Estou tendo dificuldade de te escutar. Por favor, tente novamente."

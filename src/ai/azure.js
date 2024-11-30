@@ -64,7 +64,9 @@ export class MicrosoftAzure {
         if (!success) {
             this.app.log('Error creating temporary audio file.');
             this.app.chat.editResponse(
-                _("Sorry, I'm having connection trouble. Please try again."),
+                this._(
+                    "Sorry, I'm having connection trouble. Please try again.",
+                ),
                 false,
             );
             return;
@@ -77,7 +79,9 @@ export class MicrosoftAzure {
         } catch (e) {
             this.app.log('Error writing to temporary audio file: ' + e.message);
             this.app.chat.editResponse(
-                _("Sorry, I'm having connection trouble. Please try again."),
+                this._(
+                    "Sorry, I'm having connection trouble. Please try again.",
+                ),
                 false,
             );
             return;
@@ -118,7 +122,7 @@ export class MicrosoftAzure {
                 } else {
                     this.app.log('Requisition error: ' + stderr);
                     this.app.chat.editResponse(
-                        _(
+                        this._(
                             "Sorry, I'm having connection trouble. Please try again.",
                         ),
                         false,
@@ -127,7 +131,7 @@ export class MicrosoftAzure {
             } catch (e) {
                 this.app.log('Error processing response: ' + e.message);
                 this.app.chat.editResponse(
-                    _(
+                    this._(
                         "Sorry, I'm having connection trouble. Please try again.",
                     ),
                     false,
@@ -154,9 +158,11 @@ export class MicrosoftAzure {
         let [, audioBinary] = file.load_contents(null);
         if (!audioBinary) {
             this.app.log('Fail to load audio file.');
-            this.app.chat.editQuestion(_('Transcribe error!'));
+            this.app.chat.editQuestion(this._('Transcribe error!'));
             this.app.chat.editResponse(
-                _("Sorry, I'm having trouble to listen you. Please try again."),
+                this._(
+                    "Sorry, I'm having trouble to listen you. Please try again.",
+                ),
             );
             return;
         }
@@ -177,9 +183,11 @@ export class MicrosoftAzure {
         );
         if (!success) {
             this.app.log('Error creating temporary audio file.');
-            this.app.chat.editQuestion(_('Transcribe error!'));
+            this.app.chat.editQuestion(this._('Transcribe error!'));
             this.app.chat.editResponse(
-                _("Sorry, I'm having trouble to listen you. Please try again."),
+                this._(
+                    "Sorry, I'm having trouble to listen you. Please try again.",
+                ),
             );
             return;
         }
@@ -191,9 +199,11 @@ export class MicrosoftAzure {
             this.app.log(
                 'Erro ao escrever no arquivo temporário: ' + e.message,
             );
-            this.app.chat.editQuestion(_('Transcribe error!'));
+            this.app.chat.editQuestion(this._('Transcribe error!'));
             this.app.chat.editResponse(
-                _("Sorry, I'm having trouble to listen you. Please try again."),
+                this._(
+                    "Sorry, I'm having trouble to listen you. Please try again.",
+                ),
             );
             return;
         }
@@ -235,7 +245,7 @@ export class MicrosoftAzure {
                         this.app.log('Nenhuma transcrição encontrada.');
                         this.app.chat.editQuestion('Transcribe error!');
                         this.app.chat.editResponse(
-                            _(
+                            this._(
                                 "Sorry, I'm having trouble to listen you. Please try again.",
                             ),
                         );
@@ -244,7 +254,7 @@ export class MicrosoftAzure {
                     this.app.log('Erro na requisição: ' + stderr);
                     this.app.chat.editQuestion('Transcribe error!');
                     this.app.chat.editResponse(
-                        _(
+                        this._(
                             "Sorry, I'm having trouble to listen you. Please try again.",
                         ),
                     );
