@@ -1,8 +1,6 @@
 import GLib from 'gi://GLib';
 import Gio from 'gi://Gio';
 
-import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
-
 /**
  * @description audio player and recorder
  * @param {object} app
