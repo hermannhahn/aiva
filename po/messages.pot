@@ -21,31 +21,23 @@ msgstr ""
 msgid "Invalid command"
 msgstr ""
 
-#: src/interpreter.js:94
-msgid "Error reading this site"
-msgstr ""
-
-#: src/interpreter.js:102
-msgid "Error reading site"
-msgstr ""
-
-#: src/interpreter.js:111
+#: src/interpreter.js:95
 msgid "Error reading clipboard text"
 msgstr ""
 
-#: src/interpreter.js:156
+#: src/interpreter.js:140
 msgid "Error opening channel"
 msgstr ""
 
-#: src/interpreter.js:220
+#: src/interpreter.js:204
 msgid "Error opening site"
 msgstr ""
 
-#: src/interpreter.js:251
+#: src/interpreter.js:235
 msgid "Error opening app"
 msgstr ""
 
-#: src/interpreter.js:257
+#: src/interpreter.js:241
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr ""
 

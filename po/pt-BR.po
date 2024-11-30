@@ -20,37 +20,27 @@ msgstr ""
 msgid "Invalid command"
 msgstr "Comando inválido"
 
-#: src/interpreter.js:94
-#, fuzzy
-msgid "Error reading this site"
-msgstr "abrir site"
-
-#: src/interpreter.js:102
-#, fuzzy
-msgid "Error reading site"
-msgstr "abrir site"
-
-#: src/interpreter.js:111
+#: src/interpreter.js:95
 #, fuzzy
 msgid "Error reading clipboard text"
 msgstr "leia o texto na área de transferência"
 
-#: src/interpreter.js:156
+#: src/interpreter.js:140
 #, fuzzy
 msgid "Error opening channel"
 msgstr "abrir canal"
 
-#: src/interpreter.js:220
+#: src/interpreter.js:204
 #, fuzzy
 msgid "Error opening site"
 msgstr "abrir site"
 
-#: src/interpreter.js:251
+#: src/interpreter.js:235
 #, fuzzy
 msgid "Error opening app"
 msgstr "abrir site"
 
-#: src/interpreter.js:257
+#: src/interpreter.js:241
 #, fuzzy
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr "Eu não posso fazer isso agora. Tente novamente mais tarde."
@@ -871,6 +861,14 @@ msgstr "Salvar"
 #: src/prefs.js:287
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
+
+#, fuzzy
+#~ msgid "Error reading this site"
+#~ msgstr "abrir site"
+
+#, fuzzy
+#~ msgid "Error reading site"
+#~ msgstr "abrir site"
 
 #, fuzzy
 #~ msgid "Please, select and copy the site's address first"

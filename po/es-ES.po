@@ -20,37 +20,27 @@ msgstr ""
 msgid "Invalid command"
 msgstr ""
 
-#: src/interpreter.js:94
-#, fuzzy
-msgid "Error reading this site"
-msgstr "Código copiado al portapapeles"
-
-#: src/interpreter.js:102
-#, fuzzy
-msgid "Error reading site"
-msgstr "Código copiado al portapapeles"
-
-#: src/interpreter.js:111
+#: src/interpreter.js:95
 #, fuzzy
 msgid "Error reading clipboard text"
 msgstr "Código copiado al portapapeles"
 
-#: src/interpreter.js:156
+#: src/interpreter.js:140
 #, fuzzy
 msgid "Error opening channel"
 msgstr "Código copiado al portapapeles"
 
-#: src/interpreter.js:220
+#: src/interpreter.js:204
 #, fuzzy
 msgid "Error opening site"
 msgstr "Código copiado al portapapeles"
 
-#: src/interpreter.js:251
+#: src/interpreter.js:235
 #, fuzzy
 msgid "Error opening app"
 msgstr "Código copiado al portapapeles"
 
-#: src/interpreter.js:257
+#: src/interpreter.js:241
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr ""
 
@@ -802,6 +792,14 @@ msgstr ""
 #: src/prefs.js:287
 msgid "Your preferences have been saved"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Error reading this site"
+#~ msgstr "Código copiado al portapapeles"
+
+#, fuzzy
+#~ msgid "Error reading site"
+#~ msgstr "Código copiado al portapapeles"
 
 #, fuzzy
 #~ msgid "Read this website"
