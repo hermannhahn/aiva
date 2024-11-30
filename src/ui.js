@@ -1,5 +1,4 @@
 import * as PopupMenu from 'resource:///org/gnome/shell/ui/popupMenu.js';
-import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 import {AppearanceMenu} from './ui/appearancemenu.js';
 import {Chat} from './ui/chat.js';
