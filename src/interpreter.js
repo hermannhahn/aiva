@@ -118,9 +118,16 @@ HELP
                         if (request.includes(key)) {
                             this.app.chat.editResponse(_(`Opening ${key}...`));
                             this.app.utils.executeCommand(`firefox ${url}`);
-                            return;
+                            break;
                         }
                     }
+                    // search channel
+                    this.app.chat.editResponse(
+                        _(`Searching for ${request}...`),
+                    );
+                    this.app.utils.executeCommand(
+                        `firefox https://www.youtube.com/results?search_query=${request}`,
+                    );
                 } catch (error) {
                     this.app.logError('Error opening channel:', error);
                     this.app.chat.editResponse(_('Error opening channel'));
@@ -138,10 +145,16 @@ HELP
                         if (request.includes(key)) {
                             this.app.chat.editResponse(_(`Opening ${key}...`));
                             this.app.utils.executeCommand(`firefox ${url}`);
-                            return;
+                            break;
                         }
                     }
-                    break;
+                    // search site
+                    this.app.chat.editResponse(
+                        _(`Searching for ${request}...`),
+                    );
+                    this.app.utils.executeCommand(
+                        `firefox https://www.google.com/search?q=${request}`,
+                    );
                 } catch (error) {
                     this.app.logError('Error opening site:', error);
                     this.app.chat.editResponse(_('Error opening site'));
