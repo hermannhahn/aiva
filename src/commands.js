@@ -34,7 +34,6 @@ export class Commands {
                 _('go to the website'),
                 _('access the site'),
                 _('access the website'),
-                _('go online'),
                 _('load the site'),
                 _('load the website'),
                 _('visit the site'),
