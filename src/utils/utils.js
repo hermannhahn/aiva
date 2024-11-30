@@ -310,7 +310,7 @@ export class Utils {
      * @returns {object} { code, tts }
      */
     extractCodeAndTTS(text) {
-        const getTTS = (tts) => {
+        const formatTTS = (tts) => {
             tts = text.split('*').join('');
             tts = tts
                 .replace(/&/g, '')
@@ -353,14 +353,13 @@ export class Utils {
                 nextMatch = text.match(regex);
             }
             this.app.log('code detected!');
-            // remove code from tts
-            let tts = text.replace(match[0], '');
-            tts = getTTS(tts);
-
+            // remove all matchs founded
+            text = text.replace(regex, _('Look at example below:'));
+            let tts = formatTTS(text);
             return {code, tts};
         } else {
             // If not
-            let tts = getTTS(text);
+            let tts = formatTTS(text);
             this.app.log('code not detected!');
             return {code: null, tts};
         }
