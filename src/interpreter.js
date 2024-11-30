@@ -110,6 +110,8 @@ HELP
                         'felipe neto': 'https://www.youtube.com/@felipeneto',
                         'manual do mundo':
                             'https://www.youtube.com/@ManualDoMundo',
+                        PewDiePie: 'https://www.youtube.com/user/pewdiepie',
+                        'T-Series': 'https://www.youtube.com/user/tseries',
                     };
 
                     for (const [key, url] of Object.entries(urls)) {
