@@ -66,6 +66,15 @@ export class UI {
             this.app.interpreter.proccess(question);
         });
 
+        // If press enter button
+        this.mainmenu.enterButton.connect('clicked', (_self) => {
+            const question = this.mainmenu.userEntry.clutter_text.text;
+            this.mainmenu.userEntry.clutter_text.set_text('');
+            this.mainmenu.userEntry.clutter_text.reactive = false;
+            this.app.chat.addQuestion(question);
+            this.app.interpreter.proccess(question);
+        });
+
         // If press mic button
         this.mainmenu.micButton.connect('clicked', (_self) => {
             this.app.audio.record();
