@@ -543,7 +543,9 @@ export class Utils {
                 await this.readUrlText(url);
             } else {
                 this.app.chat.addResponse(
-                    _("Please, select and copy the site's address first."),
+                    _("Please, select and copy the site's address first") +
+                        ' ' +
+                        _("or just copy the URL and say: 'Read this website'"),
                 );
             }
         } catch (error) {
