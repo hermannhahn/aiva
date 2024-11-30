@@ -536,7 +536,6 @@ export class Utils {
     readSite(url) {
         try {
             if (url) {
-                this.app.chat.addResponse(_('Sure, wait a moment...'));
                 this.readUrlText(url);
             } else {
                 this.app.chat.addResponse(
@@ -557,7 +556,6 @@ export class Utils {
             (clipboard, result) => {
                 if (result) {
                     let url = result;
-                    this.app.chat.addResponse(_('Sure, wait a moment...'));
                     this.readUrlText(url);
                 } else {
                     this.app.chat.addResponse(
