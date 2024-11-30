@@ -348,391 +348,391 @@ msgstr "Código copiado al portapapeles"
 msgid "Select and copy the site's address first."
 msgstr ""
 
-#: src/commands.js:5
+#: src/commands.js:7
 #, fuzzy
 msgid "read this site"
 msgstr "Código copiado al portapapeles"
 
-#: src/commands.js:6
+#: src/commands.js:8
 #, fuzzy
 msgid "read that site"
 msgstr "Código copiado al portapapeles"
 
-#: src/commands.js:7
+#: src/commands.js:9
 #, fuzzy
 msgid "read this website"
 msgstr "Código copiado al portapapeles"
 
-#: src/commands.js:8
+#: src/commands.js:10
 #, fuzzy
 msgid "read that website"
 msgstr "Código copiado al portapapeles"
 
-#: src/commands.js:9
+#: src/commands.js:11
 #, fuzzy
 msgid "read this web page"
 msgstr "Código copiado al portapapeles"
 
-#: src/commands.js:10
+#: src/commands.js:12
 #, fuzzy
 msgid "read that web page"
 msgstr "Código copiado al portapapeles"
 
-#: src/commands.js:11
+#: src/commands.js:13
 #, fuzzy
 msgid "read this page"
 msgstr "Código copiado al portapapeles"
 
-#: src/commands.js:12
+#: src/commands.js:14
 #, fuzzy
 msgid "read that page"
 msgstr "Código copiado al portapapeles"
 
-#: src/commands.js:13
+#: src/commands.js:15
 #, fuzzy
 msgid "read this link"
 msgstr "Código copiado al portapapeles"
 
-#: src/commands.js:14
+#: src/commands.js:16
 #, fuzzy
 msgid "read that link"
 msgstr "Código copiado al portapapeles"
 
-#: src/commands.js:15
+#: src/commands.js:17
 msgid "read this url"
 msgstr ""
 
-#: src/commands.js:16
+#: src/commands.js:18
 msgid "read that url"
 msgstr ""
 
-#: src/commands.js:17
+#: src/commands.js:19
 msgid "read this address"
 msgstr ""
 
-#: src/commands.js:18
+#: src/commands.js:20
 msgid "read that address"
-msgstr ""
-
-#: src/commands.js:21
-#, fuzzy
-msgid "read the site"
-msgstr "Código copiado al portapapeles"
-
-#: src/commands.js:22
-msgid "read site"
 msgstr ""
 
 #: src/commands.js:23
 #, fuzzy
-msgid "read the website"
+msgid "read the site"
 msgstr "Código copiado al portapapeles"
 
 #: src/commands.js:24
+msgid "read site"
+msgstr ""
+
+#: src/commands.js:25
+#, fuzzy
+msgid "read the website"
+msgstr "Código copiado al portapapeles"
+
+#: src/commands.js:26
 #, fuzzy
 msgid "read website"
 msgstr "Código copiado al portapapeles"
 
-#: src/commands.js:25
+#: src/commands.js:27
 #, fuzzy
 msgid "read the web page"
 msgstr "Código copiado al portapapeles"
 
-#: src/commands.js:26
+#: src/commands.js:28
 msgid "read web page"
 msgstr ""
 
-#: src/commands.js:27
+#: src/commands.js:29
 #, fuzzy
 msgid "read the page"
 msgstr "Código copiado al portapapeles"
 
-#: src/commands.js:28
+#: src/commands.js:30
 #, fuzzy
 msgid "read page"
 msgstr "Código copiado al portapapeles"
 
-#: src/commands.js:29
+#: src/commands.js:31
 #, fuzzy
 msgid "read the link"
 msgstr "Código copiado al portapapeles"
 
-#: src/commands.js:30
-msgid "read link"
-msgstr ""
-
-#: src/commands.js:31
-#, fuzzy
-msgid "read the url"
-msgstr "Código copiado al portapapeles"
-
 #: src/commands.js:32
-msgid "read url"
+msgid "read link"
 msgstr ""
 
 #: src/commands.js:33
 #, fuzzy
-msgid "read the address"
+msgid "read the url"
 msgstr "Código copiado al portapapeles"
 
 #: src/commands.js:34
+msgid "read url"
+msgstr ""
+
+#: src/commands.js:35
+#, fuzzy
+msgid "read the address"
+msgstr "Código copiado al portapapeles"
+
+#: src/commands.js:36
 msgid "read address"
 msgstr ""
 
-#: src/commands.js:37
+#: src/commands.js:39
 msgid "read this text"
 msgstr ""
 
-#: src/commands.js:38
+#: src/commands.js:40
 msgid "read the text"
 msgstr ""
 
-#: src/commands.js:39
+#: src/commands.js:41
 #, fuzzy
 msgid "read the clipboard"
 msgstr "Código copiado al portapapeles"
 
-#: src/commands.js:40
+#: src/commands.js:42
 msgid "read copied text"
 msgstr ""
 
-#: src/commands.js:41
+#: src/commands.js:43
 msgid "read clipboard text"
 msgstr ""
 
-#: src/commands.js:42
+#: src/commands.js:44
 msgid "read this clipboard"
 msgstr ""
 
-#: src/commands.js:43
+#: src/commands.js:45
 #, fuzzy
 msgid "read text from clipboard"
 msgstr "Código copiado al portapapeles"
 
-#: src/commands.js:44
+#: src/commands.js:46
 msgid "read text in memory"
 msgstr ""
 
-#: src/commands.js:45
+#: src/commands.js:47
 msgid "read memorized text"
 msgstr ""
 
-#: src/commands.js:46
+#: src/commands.js:48
 msgid "read for me"
 msgstr ""
 
-#: src/commands.js:47
+#: src/commands.js:49
 msgid "read this for me"
 msgstr ""
 
-#: src/commands.js:48
+#: src/commands.js:50
 msgid "read text for me"
 msgstr ""
 
-#: src/commands.js:49
+#: src/commands.js:51
 msgid "read this please"
 msgstr ""
 
-#: src/commands.js:50
-msgid "you can read now"
-msgstr ""
-
-#: src/commands.js:51
-#, fuzzy
-msgid "read what's copied"
-msgstr "Código copiado al portapapeles"
-
 #: src/commands.js:52
-msgid "read the copied content"
+msgid "you can read now"
 msgstr ""
 
 #: src/commands.js:53
 #, fuzzy
-msgid "read the clipboard content"
+msgid "read what's copied"
 msgstr "Código copiado al portapapeles"
 
 #: src/commands.js:54
+msgid "read the copied content"
+msgstr ""
+
+#: src/commands.js:55
+#, fuzzy
+msgid "read the clipboard content"
+msgstr "Código copiado al portapapeles"
+
+#: src/commands.js:56
 msgid "read the copied message"
 msgstr ""
 
-#: src/commands.js:57
+#: src/commands.js:59
 msgid "open the site"
 msgstr ""
 
-#: src/commands.js:58
+#: src/commands.js:60
 msgid "open this site"
 msgstr ""
 
-#: src/commands.js:59
+#: src/commands.js:61
 msgid "open the website"
 msgstr ""
 
-#: src/commands.js:60
+#: src/commands.js:62
 msgid "open site"
 msgstr ""
 
-#: src/commands.js:61
+#: src/commands.js:63
 #, fuzzy
 msgid "open page"
 msgstr "Código copiado al portapapeles"
 
-#: src/commands.js:62
+#: src/commands.js:64
 msgid "open the page"
 msgstr ""
 
-#: src/commands.js:63
+#: src/commands.js:65
 msgid "open the link"
 msgstr ""
 
-#: src/commands.js:64
+#: src/commands.js:66
 msgid "open this link"
 msgstr ""
 
-#: src/commands.js:65
+#: src/commands.js:67
 msgid "open web page"
 msgstr ""
 
-#: src/commands.js:66
+#: src/commands.js:68
 msgid "open the web page"
 msgstr ""
 
-#: src/commands.js:67
+#: src/commands.js:69
 msgid "go to the site"
 msgstr ""
 
-#: src/commands.js:68
+#: src/commands.js:70
 msgid "go to the website"
 msgstr ""
 
-#: src/commands.js:69
+#: src/commands.js:71
 msgid "access the site"
 msgstr ""
 
-#: src/commands.js:70
+#: src/commands.js:72
 msgid "access the website"
 msgstr ""
 
-#: src/commands.js:71
+#: src/commands.js:73
 msgid "go online"
 msgstr ""
 
-#: src/commands.js:72
+#: src/commands.js:74
 msgid "load the site"
 msgstr ""
 
-#: src/commands.js:73
+#: src/commands.js:75
 msgid "load the website"
 msgstr ""
 
-#: src/commands.js:74
+#: src/commands.js:76
 msgid "visit the site"
 msgstr ""
 
-#: src/commands.js:75
+#: src/commands.js:77
 msgid "visit the website"
 msgstr ""
 
-#: src/commands.js:76
+#: src/commands.js:78
 msgid "navigate to the site"
 msgstr ""
 
-#: src/commands.js:77
+#: src/commands.js:79
 msgid "navigate to the website"
 msgstr ""
 
-#: src/commands.js:78
+#: src/commands.js:80
 msgid "take me to the site"
 msgstr ""
 
-#: src/commands.js:79
+#: src/commands.js:81
 msgid "take me to the website"
 msgstr ""
 
-#: src/commands.js:82
+#: src/commands.js:84
 msgid "open the channel"
 msgstr ""
 
-#: src/commands.js:83
+#: src/commands.js:85
 msgid "open this channel"
 msgstr ""
 
-#: src/commands.js:84
+#: src/commands.js:86
 msgid "open channel"
 msgstr ""
 
-#: src/commands.js:85
+#: src/commands.js:87
 msgid "open the YouTube channel"
 msgstr ""
 
-#: src/commands.js:86
+#: src/commands.js:88
 msgid "open YouTube channel"
 msgstr ""
 
-#: src/commands.js:87
+#: src/commands.js:89
 msgid "open the channel on YouTube"
 msgstr ""
 
-#: src/commands.js:88
+#: src/commands.js:90
 msgid "open this channel on YouTube"
 msgstr ""
 
-#: src/commands.js:89
+#: src/commands.js:91
 msgid "go to the channel"
 msgstr ""
 
-#: src/commands.js:90
+#: src/commands.js:92
 msgid "go to this channel"
 msgstr ""
 
-#: src/commands.js:91
+#: src/commands.js:93
 msgid "access the channel"
 msgstr ""
 
-#: src/commands.js:92
+#: src/commands.js:94
 msgid "access this channel"
 msgstr ""
 
-#: src/commands.js:93
+#: src/commands.js:95
 msgid "visit the channel"
 msgstr ""
 
-#: src/commands.js:94
+#: src/commands.js:96
 msgid "visit this channel"
 msgstr ""
 
-#: src/commands.js:95
+#: src/commands.js:97
 msgid "navigate to the channel"
 msgstr ""
 
-#: src/commands.js:96
+#: src/commands.js:98
 msgid "navigate to this channel"
 msgstr ""
 
-#: src/commands.js:97
+#: src/commands.js:99
 msgid "load the channel"
 msgstr ""
 
-#: src/commands.js:98
+#: src/commands.js:100
 msgid "load this channel"
 msgstr ""
 
-#: src/commands.js:99
+#: src/commands.js:101
 msgid "open YouTube"
 msgstr ""
 
-#: src/commands.js:100
+#: src/commands.js:102
 msgid "on YouTube"
 msgstr ""
 
-#: src/commands.js:101
+#: src/commands.js:103
 msgid "open it on YouTube"
 msgstr ""
 
-#: src/commands.js:102
+#: src/commands.js:104
 msgid "access the channel on YouTube"
 msgstr ""
 
-#: src/commands.js:103
+#: src/commands.js:105
 msgid "visit the channel on YouTube"
 msgstr ""
 
