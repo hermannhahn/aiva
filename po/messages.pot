@@ -80,23 +80,23 @@ msgstr ""
 msgid "Possible harassment in the question or answer."
 msgstr ""
 
-#: src/ai/gemini.js:272 src/utils/utils.js:504
+#: src/ai/gemini.js:272
 msgid "Hi, I'm"
 msgstr ""
 
-#: src/ai/gemini.js:277 src/utils/utils.js:509
+#: src/ai/gemini.js:277
 msgid "I'm from"
 msgstr ""
 
-#: src/ai/gemini.js:281 src/utils/utils.js:513
+#: src/ai/gemini.js:281
 msgid "and today is"
 msgstr ""
 
-#: src/ai/gemini.js:285 src/utils/utils.js:517
+#: src/ai/gemini.js:285
 msgid "Hi! I am"
 msgstr ""
 
-#: src/ai/gemini.js:290 src/utils/utils.js:522
+#: src/ai/gemini.js:290
 msgid "How can I help you today?"
 msgstr ""
 
