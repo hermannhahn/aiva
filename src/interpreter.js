@@ -64,7 +64,7 @@ HELP
     _isLocalCommand(text) {
         text = text.toLowerCase();
         let result = {success: false, command: '', request: ''};
-        let commands = this.commands.local;
+        let commands = this.commands.get();
 
         let commandToRun = this.commands.findCategoryInArrays(text, commands);
 
