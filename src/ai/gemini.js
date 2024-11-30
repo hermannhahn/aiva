@@ -33,7 +33,7 @@ export class GoogleGemini {
     getTuneString(role = 'user') {
         const date = new Date();
         const location = this.app.userSettings.LOCATION;
-        const user = `${_("Hi, I'm")} ${this.app.userSettings.USERNAME}. ${_("I'm from")} ${location} ${_('and today is')} ${date}`;
+        const user = `${_('Hi, I am')} ${this.app.userSettings.USERNAME}. ${_('I am from')} ${location} ${_('and today is')} ${date}`;
         const model = `${_('Hi! I am')} ${this.app.userSettings.ASSIST_NAME}. ${_('How can I help you today?')}`;
 
         if (role === 'user') {
