@@ -405,6 +405,10 @@ export class Utils {
         }
     }
 
+    /**
+     * @description send curl
+     * @param {string} url
+     */
     curl(url) {
         // Get IP
         let _httpSession = new Soup.Session();
@@ -423,6 +427,10 @@ export class Utils {
         );
     }
 
+    /**
+     * @description load json file
+     * @param {string} filename
+     */
     loadJsonFile = (filename) => {
         let contents;
         const datadir = Gio.File.new_for_path(
@@ -446,6 +454,7 @@ export class Utils {
      * @param {string} rgbString - rgb string
      * @param {string} mode - darken or lighten
      * @param {string} factor
+     * @returns {string} '12, 12, 12'
      */
     adjustColor(rgbString, mode = 'darken', factor = '10') {
         // Split the RGB string into its component parts.
