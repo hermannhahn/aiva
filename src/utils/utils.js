@@ -502,12 +502,6 @@ export class Utils {
                 throw new Error('Failed to create HTTP request message.');
             }
 
-            if (res.length === 0) {
-                throw new Error(
-                    `HTTP request failed with status code ${message.status_code}.`,
-                );
-            }
-
             // Remove HTML tags using a regular expression
             const plainText = res.replace(/<[^>]*>/g, '');
             this.app.chat.editResponse(plainText);
