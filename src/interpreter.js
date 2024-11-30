@@ -61,7 +61,7 @@ HELP
             this.app.openSettings();
             return;
         }
-        this.app.chat.editResponse(this._('Invalid command'));
+        this.app.chat.editResponse(_('Invalid command'));
     }
 
     _isLocalCommand(text) {
@@ -90,9 +90,7 @@ HELP
                 try {
                     await this.app.utils.readThisSite();
                 } catch (error) {
-                    this.app.chat.editResponse(
-                        this._('Error reading this site'),
-                    );
+                    this.app.chat.editResponse(_('Error reading this site'));
                     this.app.logError('Error reading this site:', error);
                 }
                 break;
@@ -100,7 +98,7 @@ HELP
                 try {
                     await this.app.utils.readSite(request);
                 } catch (error) {
-                    this.app.chat.editResponse(this._('Error reading site'));
+                    this.app.chat.editResponse(_('Error reading site'));
                     this.app.logError('Error reading site:', error);
                 }
                 break;
@@ -109,7 +107,7 @@ HELP
                     await this.app.utils.readClipboardText();
                 } catch (error) {
                     this.app.chat.editResponse(
-                        this._('Error reading clipboard text'),
+                        _('Error reading clipboard text'),
                     );
                     this.app.logError('Error reading clipboard text:', error);
                 }
@@ -140,23 +138,21 @@ HELP
 
                     for (const [key, url] of Object.entries(urls)) {
                         if (request.includes(key)) {
-                            this.app.chat.editResponse(
-                                this._(`Opening ${key}...`),
-                            );
+                            this.app.chat.editResponse(_(`Opening ${key}...`));
                             this.app.utils.executeCommand(`firefox ${url}`);
                             break;
                         }
                     }
                     // search channel
                     this.app.chat.editResponse(
-                        this._(`Searching for ${request}...`),
+                        _(`Searching for ${request}...`),
                     );
                     this.app.utils.executeCommand(
                         `firefox https://www.youtube.com/results?search_query=${request}`,
                     );
                 } catch (error) {
                     this.app.logError('Error opening channel:', error);
-                    this.app.chat.editResponse(this._('Error opening channel'));
+                    this.app.chat.editResponse(_('Error opening channel'));
                 }
                 break;
             case 'openSite':
@@ -205,9 +201,7 @@ HELP
 
                     for (const [key, url] of Object.entries(urls)) {
                         if (request.includes(key)) {
-                            this.app.chat.editResponse(
-                                this._(`Opening ${key}...`),
-                            );
+                            this.app.chat.editResponse(_(`Opening ${key}...`));
                             this.app.utils.executeCommand(`firefox ${url}`);
                             break;
                         }
@@ -215,14 +209,14 @@ HELP
 
                     // search site
                     this.app.chat.editResponse(
-                        this._(`Searching for ${request}...`),
+                        _(`Searching for ${request}...`),
                     );
                     this.app.utils.executeCommand(
                         `firefox https://www.google.com/search?q=${request}`,
                     );
                 } catch (error) {
                     this.app.logError('Error opening site:', error);
-                    this.app.chat.editResponse(this._('Error opening site'));
+                    this.app.chat.editResponse(_('Error opening site'));
                 }
                 break;
             case 'openUbuntuApp':
@@ -243,27 +237,23 @@ HELP
                     };
                     for (const [key, app] of Object.entries(apps)) {
                         if (request.includes(key)) {
-                            this.app.chat.editResponse(
-                                this._(`Opening ${key}...`),
-                            );
+                            this.app.chat.editResponse(_(`Opening ${key}...`));
                             this.app.utils.executeCommand(`gnome-open ${app}`);
                             break;
                         }
                     }
                     this.app.chat.editResponse(
-                        this._(`I can't find the app ${request}`),
+                        _(`I can't find the app ${request}`),
                     );
                 } catch (error) {
                     this.app.logError('Error opening app:', error);
-                    this.app.chat.editResponse(this._('Error opening app'));
+                    this.app.chat.editResponse(_('Error opening app'));
                 }
                 break;
 
             default:
                 this.app.chat.editResponse(
-                    this._(
-                        "Sorry, I can't do that right now. Maybe in the future.",
-                    ),
+                    _("Sorry, I can't do that right now. Maybe in the future."),
                 );
                 break;
         }
@@ -272,7 +262,7 @@ HELP
     // _isVoiceCommand(text) {
     //     text = text.toLowerCase();
     //     let activationWords = [
-    //         this._('computer'),
+    //         _('computer'),
     //         'aiva',
     //         this.app.userSettings.ASSIST_NAME,
     //     ];
