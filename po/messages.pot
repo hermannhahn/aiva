@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-11-30 00:15-0300\n"
+"POT-Creation-Date: 2024-11-30 00:18-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,7 +42,7 @@ msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr ""
 
 #: src/ai/azure.js:69 src/ai/azure.js:82 src/ai/azure.js:124
-#: src/ai/azure.js:133 src/ai/gemini.js:149 src/ai/gemini.js:241
+#: src/ai/azure.js:133 src/ai/gemini.js:123 src/ai/gemini.js:215
 #: src/utils/utils.js:214
 msgid "Sorry, I'm having connection trouble. Please try again."
 msgstr ""
@@ -56,125 +56,125 @@ msgstr ""
 msgid "Sorry, I'm having trouble to listen you. Please try again."
 msgstr ""
 
-#: src/ai/gemini.js:39
-msgid "Hi, I am"
+#: src/ai/gemini.js:36
+msgid "Hi, I'm"
 msgstr ""
 
-#: src/ai/gemini.js:42
-msgid "I am from"
+#: src/ai/gemini.js:36
+msgid "I'm from"
 msgstr ""
 
-#: src/ai/gemini.js:43
+#: src/ai/gemini.js:36
 msgid "and today is"
 msgstr ""
 
-#: src/ai/gemini.js:44
+#: src/ai/gemini.js:37
 msgid "Hi! I am"
 msgstr ""
 
-#: src/ai/gemini.js:47
+#: src/ai/gemini.js:37
 msgid "How can I help you today?"
 msgstr ""
 
-#: src/ai/gemini.js:134 src/ai/gemini.js:200
+#: src/ai/gemini.js:108 src/ai/gemini.js:174
 msgid "Sorry, I can't answer this question now."
 msgstr ""
 
-#: src/ai/gemini.js:191 src/ai/gemini.js:224
+#: src/ai/gemini.js:165 src/ai/gemini.js:198
 msgid "Sorry, I can't do this now. Try again later."
 msgstr ""
 
-#: src/ai/gemini.js:265 src/ai/gemini.js:273 src/ai/gemini.js:281
+#: src/ai/gemini.js:239 src/ai/gemini.js:247 src/ai/gemini.js:255
 msgid "Sorry, I can't answer this question."
 msgstr ""
 
-#: src/ai/gemini.js:268
+#: src/ai/gemini.js:242
 msgid "Possible sexually explicit content in the question or answer."
 msgstr ""
 
-#: src/ai/gemini.js:276
+#: src/ai/gemini.js:250
 msgid "Possible hate speech in the question or answer."
 msgstr ""
 
-#: src/ai/gemini.js:283
+#: src/ai/gemini.js:257
 msgid "Possible harassment in the question or answer."
 msgstr ""
 
-#: src/ai/gemini.js:306
+#: src/ai/gemini.js:280
 msgid "Generate a command line for the request"
 msgstr ""
 
-#: src/ai/gemini.js:307
+#: src/ai/gemini.js:281
 msgid "Return a JSON with the following keys"
 msgstr ""
 
-#: src/ai/gemini.js:308
+#: src/ai/gemini.js:282
 msgid ""
 "true If it is possible to achieve the purpose of the request with a command "
 "line."
 msgstr ""
 
-#: src/ai/gemini.js:308
+#: src/ai/gemini.js:282
 msgid "a Linux Ubuntu terminal command line to the request"
 msgstr ""
 
-#: src/ai/gemini.js:308
+#: src/ai/gemini.js:282
 msgid "false otherwise"
 msgstr ""
 
-#: src/ai/gemini.js:309
+#: src/ai/gemini.js:283
 msgid "text to be associated with the command line"
 msgstr ""
 
-#: src/ai/gemini.js:309
+#: src/ai/gemini.js:283
 msgid "informing action in success case"
 msgstr ""
 
-#: src/ai/gemini.js:309
+#: src/ai/gemini.js:283
 msgid "or failure text"
 msgstr ""
 
-#: src/ai/gemini.js:310
+#: src/ai/gemini.js:284
 msgid "command line for linux ubuntu that fulfills the request"
 msgstr ""
 
-#: src/ai/gemini.js:311
+#: src/ai/gemini.js:285
 msgid "Rules for commandline value"
 msgstr ""
 
-#: src/ai/gemini.js:311
+#: src/ai/gemini.js:285
 msgid "Do not use sudo"
 msgstr ""
 
-#: src/ai/gemini.js:311
+#: src/ai/gemini.js:285
 msgid "Prefer browser, firefox and google websites"
 msgstr ""
 
-#: src/ai/gemini.js:311
+#: src/ai/gemini.js:285
 msgid "Never generate destructive commands"
 msgstr ""
 
-#: src/ai/gemini.js:312
+#: src/ai/gemini.js:286
 msgid "Response example"
 msgstr ""
 
-#: src/ai/gemini.js:313
+#: src/ai/gemini.js:287
 msgid "Request"
 msgstr ""
 
-#: src/ai/gemini.js:313
+#: src/ai/gemini.js:287
 msgid "Generate a command line that search for santos ferry crossing"
 msgstr ""
 
-#: src/ai/gemini.js:314
+#: src/ai/gemini.js:288
 msgid "JSON Response"
 msgstr ""
 
-#: src/ai/gemini.js:314
+#: src/ai/gemini.js:288
 msgid "Searching for santos boat crossing..."
 msgstr ""
 
-#: src/ai/gemini.js:314
+#: src/ai/gemini.js:288
 msgid "boat+crossing+santos"
 msgstr ""
 
