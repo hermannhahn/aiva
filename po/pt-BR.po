@@ -346,15 +346,15 @@ msgstr "Veja o exemplo abaixo:"
 #: src/utils/utils.js:542 src/utils/utils.js:560
 #, fuzzy
 msgid "Sure, wait a moment..."
-msgstr "Só um momento..."
+msgstr "Claro, só um momento..."
 
 #: src/utils/utils.js:546
 msgid "Please, select and copy the site's address first."
-msgstr ""
+msgstr "Por favor, selecione e copie o endereço do site primeiro."
 
 #: src/utils/utils.js:564
 msgid "Select and copy the site's address first."
-msgstr ""
+msgstr "Selecione e copie o endereço do site primeiro."
 
 #: src/commands.js:7
 #, fuzzy
