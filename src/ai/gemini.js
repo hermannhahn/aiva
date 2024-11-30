@@ -26,6 +26,43 @@ export class GoogleGemini {
     }
 
     /**
+     * @description create tune string
+     * @param {string} [role='user'] type the role or leave empty for user role
+     * @returns {string} tune text
+     */
+    getTuneString(role = 'user') {
+        const date = new Date();
+        const location = this.app.userSettings.LOCATION;
+        // const user = `${_("Hi, I'm")} ${this.app.userSettings.USERNAME}. ${_("I'm from")} ${location} ${_('and today is')} ${date}`;
+        // const model = `${_('Hi! I am')} ${this.app.userSettings.ASSIST_NAME}. ${_('How can I help you today?')}`;
+        const user =
+            _("Hi, I'm") +
+            ' ' +
+            this.app.userSettings.USERNAME +
+            '.' +
+            ' ' +
+            _("I'm from") +
+            ' ' +
+            location +
+            ' ' +
+            _('and today is') +
+            ' ' +
+            date;
+        const model =
+            _('Hi! I am') +
+            ' ' +
+            this.app.userSettings.ASSIST_NAME +
+            '.' +
+            ' ' +
+            _('How can I help you today?');
+
+        if (role === 'user') {
+            return user;
+        }
+        return model;
+    }
+
+    /**
      * @description send question to API, get response and add to chat
      * @param {string} question
      * @param {boolean} [destroyLoop=false]
@@ -256,43 +293,6 @@ export class GoogleGemini {
             return aiResponse;
         }
         return false;
-    }
-
-    /**
-     * @description create tune string
-     * @param {string} [role='user'] type the role or leave empty for user role
-     * @returns {string} tune text
-     */
-    getTuneString(role = 'user') {
-        const date = new Date();
-        const location = this.app.userSettings.LOCATION;
-        // const user = `${_("Hi, I'm")} ${this.app.userSettings.USERNAME}. ${_("I'm from")} ${location} ${_('and today is')} ${date}`;
-        // const model = `${_('Hi! I am')} ${this.app.userSettings.ASSIST_NAME}. ${_('How can I help you today?')}`;
-        const user =
-            _("Hi, I'm") +
-            ' ' +
-            this.app.userSettings.USERNAME +
-            '.' +
-            ' ' +
-            _("I'm from") +
-            ' ' +
-            location +
-            ' ' +
-            _('and today is') +
-            ' ' +
-            date;
-        const model =
-            _('Hi! I am') +
-            ' ' +
-            this.app.userSettings.ASSIST_NAME +
-            '.' +
-            ' ' +
-            _('How can I help you today?');
-
-        if (role === 'user') {
-            return user;
-        }
-        return model;
     }
 
     commandRequest(request) {
