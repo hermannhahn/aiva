@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-01 02:31-0300\n"
+"POT-Creation-Date: 2024-12-01 16:44-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language it-IT\n"
@@ -320,327 +320,1034 @@ msgstr ""
 msgid "computer"
 msgstr ""
 
-#: src/commands.js:15
-#, fuzzy
-msgid "read this"
-msgstr "Codice copiato negli appunti"
-
-#: src/commands.js:16
-#, fuzzy
-msgid "read that"
-msgstr "Codice copiato negli appunti"
-
-#: src/commands.js:17
-#, fuzzy
-msgid "read text"
-msgstr "Codice copiato negli appunti"
-
-#: src/commands.js:18
-#, fuzzy
-msgid "read copied"
-msgstr "Codice copiato negli appunti"
-
-#: src/commands.js:19
-#, fuzzy
-msgid "read clipboard"
-msgstr "Codice copiato negli appunti"
-
-#: src/commands.js:20
-#, fuzzy
-msgid "read memorized"
-msgstr "Codice copiato negli appunti"
-
-#: src/commands.js:21
-msgid "read the text"
-msgstr ""
-
-#: src/commands.js:22
-#, fuzzy
-msgid "read the clipboard"
-msgstr "Codice copiato negli appunti"
-
-#: src/commands.js:23
-#, fuzzy
-msgid "read the copied"
-msgstr "Codice copiato negli appunti"
-
-#: src/commands.js:24
-#, fuzzy
-msgid "read text from clipboard"
-msgstr "Codice copiato negli appunti"
-
-#: src/commands.js:25
-#, fuzzy
-msgid "read text from memory"
-msgstr "Codice copiato negli appunti"
-
-#: src/commands.js:26
-msgid "read for me"
-msgstr ""
-
-#: src/commands.js:27
-msgid "you can read now"
-msgstr ""
-
-#: src/commands.js:28
-#, fuzzy
-msgid "read what's copied"
-msgstr "Codice copiato negli appunti"
-
-#: src/commands.js:31
-msgid "open the site"
-msgstr ""
-
-#: src/commands.js:32
-msgid "open this site"
-msgstr ""
-
-#: src/commands.js:33
-msgid "open the website"
-msgstr ""
-
-#: src/commands.js:34
-msgid "open site"
-msgstr ""
-
-#: src/commands.js:35
-#, fuzzy
-msgid "open page"
-msgstr "Codice copiato negli appunti"
-
-#: src/commands.js:36
-msgid "open the page"
-msgstr ""
-
-#: src/commands.js:37
-msgid "open the link"
-msgstr ""
-
-#: src/commands.js:38
-msgid "open this link"
-msgstr ""
-
-#: src/commands.js:39
-msgid "open web page"
-msgstr ""
-
-#: src/commands.js:40
-msgid "open the web page"
-msgstr ""
-
-#: src/commands.js:41
-msgid "go to the site"
-msgstr ""
-
-#: src/commands.js:42
-msgid "go to the website"
-msgstr ""
-
-#: src/commands.js:43
-msgid "access the site"
-msgstr ""
-
-#: src/commands.js:44
-msgid "access the website"
-msgstr ""
-
-#: src/commands.js:45
-msgid "load the site"
-msgstr ""
-
-#: src/commands.js:46
-msgid "load the website"
-msgstr ""
-
-#: src/commands.js:47
-msgid "visit the site"
-msgstr ""
-
-#: src/commands.js:48
-msgid "visit the website"
-msgstr ""
-
-#: src/commands.js:49
-msgid "navigate to the site"
-msgstr ""
-
-#: src/commands.js:50
-msgid "navigate to the website"
-msgstr ""
-
-#: src/commands.js:51
-msgid "take me to the site"
-msgstr ""
-
-#: src/commands.js:52
-msgid "take me to the website"
-msgstr ""
-
-#: src/commands.js:53 src/commands.js:56
-#, fuzzy
-msgid "open the youtube channel"
-msgstr "Codice copiato negli appunti"
-
-#: src/commands.js:54
-#, fuzzy
-msgid "open this youtube channel"
-msgstr "Codice copiato negli appunti"
-
-#: src/commands.js:55 src/commands.js:57
-#, fuzzy
-msgid "open youtube channel"
-msgstr "Codice copiato negli appunti"
-
-#: src/commands.js:58
-#, fuzzy
-msgid "open the channel on youtube"
-msgstr "Codice copiato negli appunti"
-
-#: src/commands.js:59
-#, fuzzy
-msgid "open this channel on youtube"
-msgstr "Codice copiato negli appunti"
-
-#: src/commands.js:60
-#, fuzzy
-msgid "go to the youtube channel"
-msgstr "Codice copiato negli appunti"
-
-#: src/commands.js:61
-#, fuzzy
-msgid "go to this youtube channel"
-msgstr "Codice copiato negli appunti"
-
-#: src/commands.js:62
-#, fuzzy
-msgid "access the youtube channel"
-msgstr "Codice copiato negli appunti"
-
-#: src/commands.js:63
-#, fuzzy
-msgid "access this youtube channel"
-msgstr "Codice copiato negli appunti"
-
-#: src/commands.js:64
-#, fuzzy
-msgid "visit the youtube channel"
-msgstr "Codice copiato negli appunti"
-
-#: src/commands.js:65
-#, fuzzy
-msgid "visit this youtube channel"
-msgstr "Codice copiato negli appunti"
-
-#: src/commands.js:66
-#, fuzzy
-msgid "navigate to the youtube channel"
-msgstr "Codice copiato negli appunti"
-
-#: src/commands.js:67
-#, fuzzy
-msgid "navigate to this youtube channel"
-msgstr "Codice copiato negli appunti"
-
-#: src/commands.js:68
-#, fuzzy
-msgid "load the youtube channel"
-msgstr "Codice copiato negli appunti"
-
-#: src/commands.js:69
-#, fuzzy
-msgid "load this youtube channel"
-msgstr "Codice copiato negli appunti"
-
-#: src/commands.js:70
-#, fuzzy
-msgid "access the channel on youtube"
-msgstr "Codice copiato negli appunti"
-
-#: src/commands.js:71
-#, fuzzy
-msgid "visit the channel on youtube"
-msgstr "Codice copiato negli appunti"
-
-#: src/commands.js:72
-#, fuzzy
-msgid "navigate to the channel on youtube"
-msgstr "Codice copiato negli appunti"
-
-#: src/commands.js:73
-#, fuzzy
-msgid "load the channel on youtube"
-msgstr "Codice copiato negli appunti"
-
-#: src/commands.js:74
-msgid "go to"
-msgstr ""
-
-#: src/commands.js:75
-msgid "load"
-msgstr ""
-
-#: src/commands.js:76
-msgid "visit"
-msgstr ""
-
-#: src/commands.js:77
-msgid "navigate to"
-msgstr ""
-
-#: src/commands.js:78
-msgid "access"
-msgstr ""
-
-#: src/commands.js:79
-msgid "take me to"
-msgstr ""
-
-#: src/commands.js:82
-msgid "open the app"
-msgstr ""
-
-#: src/commands.js:83
-#, fuzzy
-msgid "open this app"
-msgstr "Codice copiato negli appunti"
-
-#: src/commands.js:84
-#, fuzzy
-msgid "open the application"
-msgstr "Codice copiato negli appunti"
-
-#: src/commands.js:85
-msgid "open this application"
-msgstr ""
-
-#: src/commands.js:86
-#, fuzzy
-msgid "open app"
-msgstr "Codice copiato negli appunti"
-
-#: src/commands.js:87
-msgid "open application"
-msgstr ""
-
-#: src/commands.js:88
+#: src/commands.js:15 src/commands.js:270
 #, fuzzy
 msgid "open"
 msgstr "Codice copiato negli appunti"
 
-#: src/commands.js:89
+#: src/commands.js:16 src/commands.js:271
 msgid "start"
 msgstr ""
 
-#: src/commands.js:90
+#: src/commands.js:17 src/commands.js:272
 msgid "launch"
 msgstr ""
 
-#: src/commands.js:91
+#: src/commands.js:18 src/commands.js:273
 msgid "run"
 msgstr ""
 
-#: src/commands.js:92
+#: src/commands.js:19 src/commands.js:274
 msgid "execute"
+msgstr ""
+
+#: src/commands.js:20
+#, fuzzy
+msgid "read"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:21
+msgid "write"
+msgstr ""
+
+#: src/commands.js:22
+msgid "access"
+msgstr ""
+
+#: src/commands.js:23
+msgid "load"
+msgstr ""
+
+#: src/commands.js:24
+msgid "visit"
+msgstr ""
+
+#: src/commands.js:25
+msgid "browse"
+msgstr ""
+
+#: src/commands.js:26
+msgid "join"
+msgstr ""
+
+#: src/commands.js:27
+msgid "enter"
+msgstr ""
+
+#: src/commands.js:28
+msgid "navigate"
+msgstr ""
+
+#: src/commands.js:29
+msgid "go"
+msgstr ""
+
+#: src/commands.js:30
+msgid "take me"
+msgstr ""
+
+#: src/commands.js:37
+#, fuzzy
+msgid "this"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:38
+#, fuzzy
+msgid "that"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:39
+msgid "in"
+msgstr ""
+
+#: src/commands.js:40
+msgid "to"
+msgstr ""
+
+#: src/commands.js:41
+msgid "the"
+msgstr ""
+
+#: src/commands.js:42
+#, fuzzy
+msgid "on"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:43
+msgid "at"
+msgstr ""
+
+#: src/commands.js:44
+msgid "of"
+msgstr ""
+
+#: src/commands.js:45
+msgid "in the"
+msgstr ""
+
+#: src/commands.js:46
+msgid "to the"
+msgstr ""
+
+#: src/commands.js:47
+#, fuzzy
+msgid "in this"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:48
+#, fuzzy
+msgid "to this"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:49
+#, fuzzy
+msgid "in that"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:50
+#, fuzzy
+msgid "to that"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:57
+#, fuzzy
+msgid "website"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:58
+#, fuzzy
+msgid "webpage"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:59
+msgid "web"
+msgstr ""
+
+#: src/commands.js:60
+msgid "site"
+msgstr ""
+
+#: src/commands.js:61
+#, fuzzy
+msgid "page"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:62
+msgid "url"
+msgstr ""
+
+#: src/commands.js:63
+msgid "app"
+msgstr ""
+
+#: src/commands.js:64
+msgid "software"
+msgstr ""
+
+#: src/commands.js:65
+#, fuzzy
+msgid "application"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:73
+#, fuzzy
+msgid "read this"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:74
+#, fuzzy
+msgid "read that"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:75
+#, fuzzy
+msgid "read text"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:76
+#, fuzzy
+msgid "read copied"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:77
+#, fuzzy
+msgid "read clipboard"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:78
+#, fuzzy
+msgid "read memorized"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:79
+msgid "read the text"
+msgstr ""
+
+#: src/commands.js:80
+#, fuzzy
+msgid "read the clipboard"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:81
+#, fuzzy
+msgid "read the copied"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:82
+#, fuzzy
+msgid "read text from clipboard"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:83
+#, fuzzy
+msgid "read text from memory"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:84
+msgid "read for me"
+msgstr ""
+
+#: src/commands.js:85
+msgid "you can read now"
+msgstr ""
+
+#: src/commands.js:86
+#, fuzzy
+msgid "read what's copied"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:89
+msgid "go site"
+msgstr ""
+
+#: src/commands.js:90
+msgid "open site"
+msgstr ""
+
+#: src/commands.js:91
+msgid "access site"
+msgstr ""
+
+#: src/commands.js:92
+msgid "load site"
+msgstr ""
+
+#: src/commands.js:93
+#, fuzzy
+msgid "visit site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:94
+msgid "browse site"
+msgstr ""
+
+#: src/commands.js:95
+msgid "join site"
+msgstr ""
+
+#: src/commands.js:96
+#, fuzzy
+msgid "enter site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:97
+msgid "navigate site"
+msgstr ""
+
+#: src/commands.js:98
+#, fuzzy
+msgid "go page"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:99
+#, fuzzy
+msgid "open page"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:100
+#, fuzzy
+msgid "access page"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:101
+#, fuzzy
+msgid "load page"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:102
+msgid "visit page"
+msgstr ""
+
+#: src/commands.js:103
+#, fuzzy
+msgid "browse page"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:104
+#, fuzzy
+msgid "join page"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:105
+#, fuzzy
+msgid "enter page"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:106
+#, fuzzy
+msgid "navigate page"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:107
+msgid "go link"
+msgstr ""
+
+#: src/commands.js:108
+#, fuzzy
+msgid "open link"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:109
+msgid "access link"
+msgstr ""
+
+#: src/commands.js:110
+#, fuzzy
+msgid "load link"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:111
+msgid "visit link"
+msgstr ""
+
+#: src/commands.js:112
+msgid "browse link"
+msgstr ""
+
+#: src/commands.js:113
+msgid "join link"
+msgstr ""
+
+#: src/commands.js:114
+#, fuzzy
+msgid "enter link"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:115
+#, fuzzy
+msgid "navigate link"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:116
+#, fuzzy
+msgid "go website"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:117
+#, fuzzy
+msgid "open website"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:118
+#, fuzzy
+msgid "access website"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:119
+#, fuzzy
+msgid "load website"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:120
+#, fuzzy
+msgid "visit website"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:121
+#, fuzzy
+msgid "browse website"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:122
+#, fuzzy
+msgid "join website"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:123
+#, fuzzy
+msgid "enter website"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:124
+#, fuzzy
+msgid "navigate website"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:125
+#, fuzzy
+msgid "go webpage"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:126
+#, fuzzy
+msgid "open webpage"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:127
+#, fuzzy
+msgid "access webpage"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:128
+#, fuzzy
+msgid "load webpage"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:129
+#, fuzzy
+msgid "visit webpage"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:130
+#, fuzzy
+msgid "browse webpage"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:131
+#, fuzzy
+msgid "join webpage"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:132
+#, fuzzy
+msgid "enter webpage"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:133
+#, fuzzy
+msgid "navigate webpage"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:134
+msgid "go url"
+msgstr ""
+
+#: src/commands.js:135
+#, fuzzy
+msgid "open url"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:136
+msgid "access url"
+msgstr ""
+
+#: src/commands.js:137
+#, fuzzy
+msgid "load url"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:138
+msgid "visit url"
+msgstr ""
+
+#: src/commands.js:139
+msgid "browse url"
+msgstr ""
+
+#: src/commands.js:140
+msgid "join url"
+msgstr ""
+
+#: src/commands.js:141
+#, fuzzy
+msgid "enter url"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:142
+msgid "navigate url"
+msgstr ""
+
+#: src/commands.js:143
+msgid "go web"
+msgstr ""
+
+#: src/commands.js:144
+#, fuzzy
+msgid "open web"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:145
+msgid "access web"
+msgstr ""
+
+#: src/commands.js:146
+msgid "load web"
+msgstr ""
+
+#: src/commands.js:147
+msgid "visit web"
+msgstr ""
+
+#: src/commands.js:148
+msgid "browse web"
+msgstr ""
+
+#: src/commands.js:149
+msgid "join web"
+msgstr ""
+
+#: src/commands.js:150
+msgid "enter web"
+msgstr ""
+
+#: src/commands.js:151
+msgid "navigate web"
+msgstr ""
+
+#: src/commands.js:153
+#, fuzzy
+msgid "go the site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:154
+msgid "open the site"
+msgstr ""
+
+#: src/commands.js:155
+msgid "access the site"
+msgstr ""
+
+#: src/commands.js:156
+msgid "load the site"
+msgstr ""
+
+#: src/commands.js:157
+msgid "visit the site"
+msgstr ""
+
+#: src/commands.js:158
+#, fuzzy
+msgid "browse the site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:159
+#, fuzzy
+msgid "join the site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:160
+#, fuzzy
+msgid "enter the site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:161
+#, fuzzy
+msgid "navigate the site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:163
+#, fuzzy
+msgid "go this site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:164
+msgid "open this site"
+msgstr ""
+
+#: src/commands.js:165
+#, fuzzy
+msgid "access this site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:166
+#, fuzzy
+msgid "load this site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:167
+#, fuzzy
+msgid "visit this site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:168
+#, fuzzy
+msgid "browse this site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:169
+#, fuzzy
+msgid "join this site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:170
+#, fuzzy
+msgid "enter this site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:171
+#, fuzzy
+msgid "navigate this site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:173
+#, fuzzy
+msgid "go that site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:174
+#, fuzzy
+msgid "open that site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:175
+#, fuzzy
+msgid "access that site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:176
+#, fuzzy
+msgid "load that site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:177
+#, fuzzy
+msgid "visit that site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:178
+#, fuzzy
+msgid "browse that site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:179
+#, fuzzy
+msgid "join that site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:180
+#, fuzzy
+msgid "enter that site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:181
+#, fuzzy
+msgid "navigate that site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:183
+#, fuzzy
+msgid "go in site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:184
+#, fuzzy
+msgid "open in site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:185
+msgid "access in site"
+msgstr ""
+
+#: src/commands.js:186
+#, fuzzy
+msgid "load in site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:187
+#, fuzzy
+msgid "visit in site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:188
+#, fuzzy
+msgid "browse in site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:189
+#, fuzzy
+msgid "join in site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:190
+msgid "enter in site"
+msgstr ""
+
+#: src/commands.js:191
+msgid "navigate in site"
+msgstr ""
+
+#: src/commands.js:193
+#, fuzzy
+msgid "go in the site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:194
+#, fuzzy
+msgid "open in the site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:195
+#, fuzzy
+msgid "access in the site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:196
+#, fuzzy
+msgid "load in the site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:197
+#, fuzzy
+msgid "visit in the site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:198
+#, fuzzy
+msgid "browse in the site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:199
+#, fuzzy
+msgid "join in the site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:200
+#, fuzzy
+msgid "enter in the site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:201
+#, fuzzy
+msgid "navigate in the site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:203
+#, fuzzy
+msgid "go in this site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:204
+#, fuzzy
+msgid "open in this site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:205
+#, fuzzy
+msgid "access in this site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:206
+#, fuzzy
+msgid "load in this site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:207
+#, fuzzy
+msgid "visit in this site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:208
+#, fuzzy
+msgid "browse in this site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:209
+#, fuzzy
+msgid "join in this site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:210
+#, fuzzy
+msgid "enter in this site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:211
+#, fuzzy
+msgid "navigate in this site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:213
+#, fuzzy
+msgid "go in that site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:214
+#, fuzzy
+msgid "open in that site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:215
+#, fuzzy
+msgid "access in that site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:216
+#, fuzzy
+msgid "load in that site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:217
+#, fuzzy
+msgid "visit in that site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:218
+#, fuzzy
+msgid "browse in that site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:219
+#, fuzzy
+msgid "join in that site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:220
+#, fuzzy
+msgid "enter in that site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:221
+msgid "navigate in that site"
+msgstr ""
+
+#: src/commands.js:223
+msgid "go to site"
+msgstr ""
+
+#: src/commands.js:224
+#, fuzzy
+msgid "open to site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:225
+msgid "access to site"
+msgstr ""
+
+#: src/commands.js:226
+#, fuzzy
+msgid "load to site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:227
+#, fuzzy
+msgid "visit to site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:228
+#, fuzzy
+msgid "browse to site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:229
+msgid "join to site"
+msgstr ""
+
+#: src/commands.js:230
+msgid "enter to site"
+msgstr ""
+
+#: src/commands.js:231
+#, fuzzy
+msgid "navigate to site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:233
+msgid "go to the site"
+msgstr ""
+
+#: src/commands.js:234
+#, fuzzy
+msgid "open to the site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:235
+#, fuzzy
+msgid "access to the site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:236
+#, fuzzy
+msgid "load to the site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:237
+#, fuzzy
+msgid "visit to the site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:238
+#, fuzzy
+msgid "browse to the site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:239
+#, fuzzy
+msgid "join to the site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:240
+#, fuzzy
+msgid "enter to the site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:241
+msgid "navigate to the site"
+msgstr ""
+
+#: src/commands.js:243
+#, fuzzy
+msgid "go to this site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:244
+#, fuzzy
+msgid "open to this site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:245
+#, fuzzy
+msgid "access to this site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:246
+#, fuzzy
+msgid "load to this site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:247
+#, fuzzy
+msgid "visit to this site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:248
+#, fuzzy
+msgid "browse to this site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:249
+#, fuzzy
+msgid "join to this site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:250
+#, fuzzy
+msgid "enter to this site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:251
+#, fuzzy
+msgid "navigate to this site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:253
+#, fuzzy
+msgid "go to that site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:254
+#, fuzzy
+msgid "open to that site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:255
+#, fuzzy
+msgid "access to that site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:256
+#, fuzzy
+msgid "load to that site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:257
+#, fuzzy
+msgid "visit to that site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:258
+#, fuzzy
+msgid "browse to that site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:259
+msgid "join to that site"
+msgstr ""
+
+#: src/commands.js:260
+#, fuzzy
+msgid "enter to that site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:261
+#, fuzzy
+msgid "navigate to that site"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:264
+msgid "open the app"
+msgstr ""
+
+#: src/commands.js:265
+#, fuzzy
+msgid "open this app"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:266
+#, fuzzy
+msgid "open the application"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:267
+msgid "open this application"
+msgstr ""
+
+#: src/commands.js:268
+#, fuzzy
+msgid "open app"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:269
+msgid "open application"
 msgstr ""
 
 #: src/ui/mainmenu.js:30
@@ -732,15 +1439,67 @@ msgid "Your preferences have been saved"
 msgstr ""
 
 #, fuzzy
-#~ msgid "read this website"
+#~ msgid "open the youtube channel"
 #~ msgstr "Codice copiato negli appunti"
 
 #, fuzzy
-#~ msgid "read that website"
+#~ msgid "open this youtube channel"
 #~ msgstr "Codice copiato negli appunti"
 
 #, fuzzy
-#~ msgid "read this web page"
+#~ msgid "open youtube channel"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "open the channel on youtube"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "open this channel on youtube"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "go to the youtube channel"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "access the youtube channel"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "access this youtube channel"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "visit the youtube channel"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "visit this youtube channel"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "navigate to the youtube channel"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "load the youtube channel"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "load this youtube channel"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "access the channel on youtube"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "visit the channel on youtube"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "load the channel on youtube"
 #~ msgstr "Codice copiato negli appunti"
 
 #, fuzzy
@@ -764,43 +1523,11 @@ msgstr ""
 #~ msgstr "Codice copiato negli appunti"
 
 #, fuzzy
-#~ msgid "read the website"
-#~ msgstr "Codice copiato negli appunti"
-
-#, fuzzy
-#~ msgid "read the web page"
-#~ msgstr "Codice copiato negli appunti"
-
-#, fuzzy
-#~ msgid "read the page"
-#~ msgstr "Codice copiato negli appunti"
-
-#, fuzzy
-#~ msgid "read page"
-#~ msgstr "Codice copiato negli appunti"
-
-#, fuzzy
-#~ msgid "read the link"
-#~ msgstr "Codice copiato negli appunti"
-
-#, fuzzy
-#~ msgid "read the url"
-#~ msgstr "Codice copiato negli appunti"
-
-#, fuzzy
 #~ msgid "read the address"
 #~ msgstr "Codice copiato negli appunti"
 
 #, fuzzy
 #~ msgid "read the clipboard content"
-#~ msgstr "Codice copiato negli appunti"
-
-#, fuzzy
-#~ msgid "Error reading this site"
-#~ msgstr "Codice copiato negli appunti"
-
-#, fuzzy
-#~ msgid "Error reading site"
 #~ msgstr "Codice copiato negli appunti"
 
 #, fuzzy
@@ -833,20 +1560,4 @@ msgstr ""
 
 #, fuzzy
 #~ msgid "can you read what's copied?"
-#~ msgstr "Codice copiato negli appunti"
-
-#, fuzzy
-#~ msgid "please open the site"
-#~ msgstr "Codice copiato negli appunti"
-
-#, fuzzy
-#~ msgid "can you open the site?"
-#~ msgstr "Codice copiato negli appunti"
-
-#, fuzzy
-#~ msgid "can you open the website?"
-#~ msgstr "Codice copiato negli appunti"
-
-#, fuzzy
-#~ msgid "can you visit the site?"
 #~ msgstr "Codice copiato negli appunti"

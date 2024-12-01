@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-01 02:31-0300\n"
+"POT-Creation-Date: 2024-12-01 16:44-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -318,292 +318,888 @@ msgstr ""
 msgid "computer"
 msgstr ""
 
-#: src/commands.js:15
-msgid "read this"
-msgstr ""
-
-#: src/commands.js:16
-msgid "read that"
-msgstr ""
-
-#: src/commands.js:17
-msgid "read text"
-msgstr ""
-
-#: src/commands.js:18
-msgid "read copied"
-msgstr ""
-
-#: src/commands.js:19
-msgid "read clipboard"
-msgstr ""
-
-#: src/commands.js:20
-msgid "read memorized"
-msgstr ""
-
-#: src/commands.js:21
-msgid "read the text"
-msgstr ""
-
-#: src/commands.js:22
-msgid "read the clipboard"
-msgstr ""
-
-#: src/commands.js:23
-msgid "read the copied"
-msgstr ""
-
-#: src/commands.js:24
-msgid "read text from clipboard"
-msgstr ""
-
-#: src/commands.js:25
-msgid "read text from memory"
-msgstr ""
-
-#: src/commands.js:26
-msgid "read for me"
-msgstr ""
-
-#: src/commands.js:27
-msgid "you can read now"
-msgstr ""
-
-#: src/commands.js:28
-msgid "read what's copied"
-msgstr ""
-
-#: src/commands.js:31
-msgid "open the site"
-msgstr ""
-
-#: src/commands.js:32
-msgid "open this site"
-msgstr ""
-
-#: src/commands.js:33
-msgid "open the website"
-msgstr ""
-
-#: src/commands.js:34
-msgid "open site"
-msgstr ""
-
-#: src/commands.js:35
-msgid "open page"
-msgstr ""
-
-#: src/commands.js:36
-msgid "open the page"
-msgstr ""
-
-#: src/commands.js:37
-msgid "open the link"
-msgstr ""
-
-#: src/commands.js:38
-msgid "open this link"
-msgstr ""
-
-#: src/commands.js:39
-msgid "open web page"
-msgstr ""
-
-#: src/commands.js:40
-msgid "open the web page"
-msgstr ""
-
-#: src/commands.js:41
-msgid "go to the site"
-msgstr ""
-
-#: src/commands.js:42
-msgid "go to the website"
-msgstr ""
-
-#: src/commands.js:43
-msgid "access the site"
-msgstr ""
-
-#: src/commands.js:44
-msgid "access the website"
-msgstr ""
-
-#: src/commands.js:45
-msgid "load the site"
-msgstr ""
-
-#: src/commands.js:46
-msgid "load the website"
-msgstr ""
-
-#: src/commands.js:47
-msgid "visit the site"
-msgstr ""
-
-#: src/commands.js:48
-msgid "visit the website"
-msgstr ""
-
-#: src/commands.js:49
-msgid "navigate to the site"
-msgstr ""
-
-#: src/commands.js:50
-msgid "navigate to the website"
-msgstr ""
-
-#: src/commands.js:51
-msgid "take me to the site"
-msgstr ""
-
-#: src/commands.js:52
-msgid "take me to the website"
-msgstr ""
-
-#: src/commands.js:53 src/commands.js:56
-msgid "open the youtube channel"
-msgstr ""
-
-#: src/commands.js:54
-msgid "open this youtube channel"
-msgstr ""
-
-#: src/commands.js:55 src/commands.js:57
-msgid "open youtube channel"
-msgstr ""
-
-#: src/commands.js:58
-msgid "open the channel on youtube"
-msgstr ""
-
-#: src/commands.js:59
-msgid "open this channel on youtube"
-msgstr ""
-
-#: src/commands.js:60
-msgid "go to the youtube channel"
-msgstr ""
-
-#: src/commands.js:61
-msgid "go to this youtube channel"
-msgstr ""
-
-#: src/commands.js:62
-msgid "access the youtube channel"
-msgstr ""
-
-#: src/commands.js:63
-msgid "access this youtube channel"
-msgstr ""
-
-#: src/commands.js:64
-msgid "visit the youtube channel"
-msgstr ""
-
-#: src/commands.js:65
-msgid "visit this youtube channel"
-msgstr ""
-
-#: src/commands.js:66
-msgid "navigate to the youtube channel"
-msgstr ""
-
-#: src/commands.js:67
-msgid "navigate to this youtube channel"
-msgstr ""
-
-#: src/commands.js:68
-msgid "load the youtube channel"
-msgstr ""
-
-#: src/commands.js:69
-msgid "load this youtube channel"
-msgstr ""
-
-#: src/commands.js:70
-msgid "access the channel on youtube"
-msgstr ""
-
-#: src/commands.js:71
-msgid "visit the channel on youtube"
-msgstr ""
-
-#: src/commands.js:72
-msgid "navigate to the channel on youtube"
-msgstr ""
-
-#: src/commands.js:73
-msgid "load the channel on youtube"
-msgstr ""
-
-#: src/commands.js:74
-msgid "go to"
-msgstr ""
-
-#: src/commands.js:75
-msgid "load"
-msgstr ""
-
-#: src/commands.js:76
-msgid "visit"
-msgstr ""
-
-#: src/commands.js:77
-msgid "navigate to"
-msgstr ""
-
-#: src/commands.js:78
-msgid "access"
-msgstr ""
-
-#: src/commands.js:79
-msgid "take me to"
-msgstr ""
-
-#: src/commands.js:82
-msgid "open the app"
-msgstr ""
-
-#: src/commands.js:83
-msgid "open this app"
-msgstr ""
-
-#: src/commands.js:84
-msgid "open the application"
-msgstr ""
-
-#: src/commands.js:85
-msgid "open this application"
-msgstr ""
-
-#: src/commands.js:86
-msgid "open app"
-msgstr ""
-
-#: src/commands.js:87
-msgid "open application"
-msgstr ""
-
-#: src/commands.js:88
+#: src/commands.js:15 src/commands.js:270
 msgid "open"
 msgstr ""
 
-#: src/commands.js:89
+#: src/commands.js:16 src/commands.js:271
 msgid "start"
 msgstr ""
 
-#: src/commands.js:90
+#: src/commands.js:17 src/commands.js:272
 msgid "launch"
 msgstr ""
 
-#: src/commands.js:91
+#: src/commands.js:18 src/commands.js:273
 msgid "run"
 msgstr ""
 
-#: src/commands.js:92
+#: src/commands.js:19 src/commands.js:274
 msgid "execute"
+msgstr ""
+
+#: src/commands.js:20
+msgid "read"
+msgstr ""
+
+#: src/commands.js:21
+msgid "write"
+msgstr ""
+
+#: src/commands.js:22
+msgid "access"
+msgstr ""
+
+#: src/commands.js:23
+msgid "load"
+msgstr ""
+
+#: src/commands.js:24
+msgid "visit"
+msgstr ""
+
+#: src/commands.js:25
+msgid "browse"
+msgstr ""
+
+#: src/commands.js:26
+msgid "join"
+msgstr ""
+
+#: src/commands.js:27
+msgid "enter"
+msgstr ""
+
+#: src/commands.js:28
+msgid "navigate"
+msgstr ""
+
+#: src/commands.js:29
+msgid "go"
+msgstr ""
+
+#: src/commands.js:30
+msgid "take me"
+msgstr ""
+
+#: src/commands.js:37
+msgid "this"
+msgstr ""
+
+#: src/commands.js:38
+msgid "that"
+msgstr ""
+
+#: src/commands.js:39
+msgid "in"
+msgstr ""
+
+#: src/commands.js:40
+msgid "to"
+msgstr ""
+
+#: src/commands.js:41
+msgid "the"
+msgstr ""
+
+#: src/commands.js:42
+msgid "on"
+msgstr ""
+
+#: src/commands.js:43
+msgid "at"
+msgstr ""
+
+#: src/commands.js:44
+msgid "of"
+msgstr ""
+
+#: src/commands.js:45
+msgid "in the"
+msgstr ""
+
+#: src/commands.js:46
+msgid "to the"
+msgstr ""
+
+#: src/commands.js:47
+msgid "in this"
+msgstr ""
+
+#: src/commands.js:48
+msgid "to this"
+msgstr ""
+
+#: src/commands.js:49
+msgid "in that"
+msgstr ""
+
+#: src/commands.js:50
+msgid "to that"
+msgstr ""
+
+#: src/commands.js:57
+msgid "website"
+msgstr ""
+
+#: src/commands.js:58
+msgid "webpage"
+msgstr ""
+
+#: src/commands.js:59
+msgid "web"
+msgstr ""
+
+#: src/commands.js:60
+msgid "site"
+msgstr ""
+
+#: src/commands.js:61
+msgid "page"
+msgstr ""
+
+#: src/commands.js:62
+msgid "url"
+msgstr ""
+
+#: src/commands.js:63
+msgid "app"
+msgstr ""
+
+#: src/commands.js:64
+msgid "software"
+msgstr ""
+
+#: src/commands.js:65
+msgid "application"
+msgstr ""
+
+#: src/commands.js:73
+msgid "read this"
+msgstr ""
+
+#: src/commands.js:74
+msgid "read that"
+msgstr ""
+
+#: src/commands.js:75
+msgid "read text"
+msgstr ""
+
+#: src/commands.js:76
+msgid "read copied"
+msgstr ""
+
+#: src/commands.js:77
+msgid "read clipboard"
+msgstr ""
+
+#: src/commands.js:78
+msgid "read memorized"
+msgstr ""
+
+#: src/commands.js:79
+msgid "read the text"
+msgstr ""
+
+#: src/commands.js:80
+msgid "read the clipboard"
+msgstr ""
+
+#: src/commands.js:81
+msgid "read the copied"
+msgstr ""
+
+#: src/commands.js:82
+msgid "read text from clipboard"
+msgstr ""
+
+#: src/commands.js:83
+msgid "read text from memory"
+msgstr ""
+
+#: src/commands.js:84
+msgid "read for me"
+msgstr ""
+
+#: src/commands.js:85
+msgid "you can read now"
+msgstr ""
+
+#: src/commands.js:86
+msgid "read what's copied"
+msgstr ""
+
+#: src/commands.js:89
+msgid "go site"
+msgstr ""
+
+#: src/commands.js:90
+msgid "open site"
+msgstr ""
+
+#: src/commands.js:91
+msgid "access site"
+msgstr ""
+
+#: src/commands.js:92
+msgid "load site"
+msgstr ""
+
+#: src/commands.js:93
+msgid "visit site"
+msgstr ""
+
+#: src/commands.js:94
+msgid "browse site"
+msgstr ""
+
+#: src/commands.js:95
+msgid "join site"
+msgstr ""
+
+#: src/commands.js:96
+msgid "enter site"
+msgstr ""
+
+#: src/commands.js:97
+msgid "navigate site"
+msgstr ""
+
+#: src/commands.js:98
+msgid "go page"
+msgstr ""
+
+#: src/commands.js:99
+msgid "open page"
+msgstr ""
+
+#: src/commands.js:100
+msgid "access page"
+msgstr ""
+
+#: src/commands.js:101
+msgid "load page"
+msgstr ""
+
+#: src/commands.js:102
+msgid "visit page"
+msgstr ""
+
+#: src/commands.js:103
+msgid "browse page"
+msgstr ""
+
+#: src/commands.js:104
+msgid "join page"
+msgstr ""
+
+#: src/commands.js:105
+msgid "enter page"
+msgstr ""
+
+#: src/commands.js:106
+msgid "navigate page"
+msgstr ""
+
+#: src/commands.js:107
+msgid "go link"
+msgstr ""
+
+#: src/commands.js:108
+msgid "open link"
+msgstr ""
+
+#: src/commands.js:109
+msgid "access link"
+msgstr ""
+
+#: src/commands.js:110
+msgid "load link"
+msgstr ""
+
+#: src/commands.js:111
+msgid "visit link"
+msgstr ""
+
+#: src/commands.js:112
+msgid "browse link"
+msgstr ""
+
+#: src/commands.js:113
+msgid "join link"
+msgstr ""
+
+#: src/commands.js:114
+msgid "enter link"
+msgstr ""
+
+#: src/commands.js:115
+msgid "navigate link"
+msgstr ""
+
+#: src/commands.js:116
+msgid "go website"
+msgstr ""
+
+#: src/commands.js:117
+msgid "open website"
+msgstr ""
+
+#: src/commands.js:118
+msgid "access website"
+msgstr ""
+
+#: src/commands.js:119
+msgid "load website"
+msgstr ""
+
+#: src/commands.js:120
+msgid "visit website"
+msgstr ""
+
+#: src/commands.js:121
+msgid "browse website"
+msgstr ""
+
+#: src/commands.js:122
+msgid "join website"
+msgstr ""
+
+#: src/commands.js:123
+msgid "enter website"
+msgstr ""
+
+#: src/commands.js:124
+msgid "navigate website"
+msgstr ""
+
+#: src/commands.js:125
+msgid "go webpage"
+msgstr ""
+
+#: src/commands.js:126
+msgid "open webpage"
+msgstr ""
+
+#: src/commands.js:127
+msgid "access webpage"
+msgstr ""
+
+#: src/commands.js:128
+msgid "load webpage"
+msgstr ""
+
+#: src/commands.js:129
+msgid "visit webpage"
+msgstr ""
+
+#: src/commands.js:130
+msgid "browse webpage"
+msgstr ""
+
+#: src/commands.js:131
+msgid "join webpage"
+msgstr ""
+
+#: src/commands.js:132
+msgid "enter webpage"
+msgstr ""
+
+#: src/commands.js:133
+msgid "navigate webpage"
+msgstr ""
+
+#: src/commands.js:134
+msgid "go url"
+msgstr ""
+
+#: src/commands.js:135
+msgid "open url"
+msgstr ""
+
+#: src/commands.js:136
+msgid "access url"
+msgstr ""
+
+#: src/commands.js:137
+msgid "load url"
+msgstr ""
+
+#: src/commands.js:138
+msgid "visit url"
+msgstr ""
+
+#: src/commands.js:139
+msgid "browse url"
+msgstr ""
+
+#: src/commands.js:140
+msgid "join url"
+msgstr ""
+
+#: src/commands.js:141
+msgid "enter url"
+msgstr ""
+
+#: src/commands.js:142
+msgid "navigate url"
+msgstr ""
+
+#: src/commands.js:143
+msgid "go web"
+msgstr ""
+
+#: src/commands.js:144
+msgid "open web"
+msgstr ""
+
+#: src/commands.js:145
+msgid "access web"
+msgstr ""
+
+#: src/commands.js:146
+msgid "load web"
+msgstr ""
+
+#: src/commands.js:147
+msgid "visit web"
+msgstr ""
+
+#: src/commands.js:148
+msgid "browse web"
+msgstr ""
+
+#: src/commands.js:149
+msgid "join web"
+msgstr ""
+
+#: src/commands.js:150
+msgid "enter web"
+msgstr ""
+
+#: src/commands.js:151
+msgid "navigate web"
+msgstr ""
+
+#: src/commands.js:153
+msgid "go the site"
+msgstr ""
+
+#: src/commands.js:154
+msgid "open the site"
+msgstr ""
+
+#: src/commands.js:155
+msgid "access the site"
+msgstr ""
+
+#: src/commands.js:156
+msgid "load the site"
+msgstr ""
+
+#: src/commands.js:157
+msgid "visit the site"
+msgstr ""
+
+#: src/commands.js:158
+msgid "browse the site"
+msgstr ""
+
+#: src/commands.js:159
+msgid "join the site"
+msgstr ""
+
+#: src/commands.js:160
+msgid "enter the site"
+msgstr ""
+
+#: src/commands.js:161
+msgid "navigate the site"
+msgstr ""
+
+#: src/commands.js:163
+msgid "go this site"
+msgstr ""
+
+#: src/commands.js:164
+msgid "open this site"
+msgstr ""
+
+#: src/commands.js:165
+msgid "access this site"
+msgstr ""
+
+#: src/commands.js:166
+msgid "load this site"
+msgstr ""
+
+#: src/commands.js:167
+msgid "visit this site"
+msgstr ""
+
+#: src/commands.js:168
+msgid "browse this site"
+msgstr ""
+
+#: src/commands.js:169
+msgid "join this site"
+msgstr ""
+
+#: src/commands.js:170
+msgid "enter this site"
+msgstr ""
+
+#: src/commands.js:171
+msgid "navigate this site"
+msgstr ""
+
+#: src/commands.js:173
+msgid "go that site"
+msgstr ""
+
+#: src/commands.js:174
+msgid "open that site"
+msgstr ""
+
+#: src/commands.js:175
+msgid "access that site"
+msgstr ""
+
+#: src/commands.js:176
+msgid "load that site"
+msgstr ""
+
+#: src/commands.js:177
+msgid "visit that site"
+msgstr ""
+
+#: src/commands.js:178
+msgid "browse that site"
+msgstr ""
+
+#: src/commands.js:179
+msgid "join that site"
+msgstr ""
+
+#: src/commands.js:180
+msgid "enter that site"
+msgstr ""
+
+#: src/commands.js:181
+msgid "navigate that site"
+msgstr ""
+
+#: src/commands.js:183
+msgid "go in site"
+msgstr ""
+
+#: src/commands.js:184
+msgid "open in site"
+msgstr ""
+
+#: src/commands.js:185
+msgid "access in site"
+msgstr ""
+
+#: src/commands.js:186
+msgid "load in site"
+msgstr ""
+
+#: src/commands.js:187
+msgid "visit in site"
+msgstr ""
+
+#: src/commands.js:188
+msgid "browse in site"
+msgstr ""
+
+#: src/commands.js:189
+msgid "join in site"
+msgstr ""
+
+#: src/commands.js:190
+msgid "enter in site"
+msgstr ""
+
+#: src/commands.js:191
+msgid "navigate in site"
+msgstr ""
+
+#: src/commands.js:193
+msgid "go in the site"
+msgstr ""
+
+#: src/commands.js:194
+msgid "open in the site"
+msgstr ""
+
+#: src/commands.js:195
+msgid "access in the site"
+msgstr ""
+
+#: src/commands.js:196
+msgid "load in the site"
+msgstr ""
+
+#: src/commands.js:197
+msgid "visit in the site"
+msgstr ""
+
+#: src/commands.js:198
+msgid "browse in the site"
+msgstr ""
+
+#: src/commands.js:199
+msgid "join in the site"
+msgstr ""
+
+#: src/commands.js:200
+msgid "enter in the site"
+msgstr ""
+
+#: src/commands.js:201
+msgid "navigate in the site"
+msgstr ""
+
+#: src/commands.js:203
+msgid "go in this site"
+msgstr ""
+
+#: src/commands.js:204
+msgid "open in this site"
+msgstr ""
+
+#: src/commands.js:205
+msgid "access in this site"
+msgstr ""
+
+#: src/commands.js:206
+msgid "load in this site"
+msgstr ""
+
+#: src/commands.js:207
+msgid "visit in this site"
+msgstr ""
+
+#: src/commands.js:208
+msgid "browse in this site"
+msgstr ""
+
+#: src/commands.js:209
+msgid "join in this site"
+msgstr ""
+
+#: src/commands.js:210
+msgid "enter in this site"
+msgstr ""
+
+#: src/commands.js:211
+msgid "navigate in this site"
+msgstr ""
+
+#: src/commands.js:213
+msgid "go in that site"
+msgstr ""
+
+#: src/commands.js:214
+msgid "open in that site"
+msgstr ""
+
+#: src/commands.js:215
+msgid "access in that site"
+msgstr ""
+
+#: src/commands.js:216
+msgid "load in that site"
+msgstr ""
+
+#: src/commands.js:217
+msgid "visit in that site"
+msgstr ""
+
+#: src/commands.js:218
+msgid "browse in that site"
+msgstr ""
+
+#: src/commands.js:219
+msgid "join in that site"
+msgstr ""
+
+#: src/commands.js:220
+msgid "enter in that site"
+msgstr ""
+
+#: src/commands.js:221
+msgid "navigate in that site"
+msgstr ""
+
+#: src/commands.js:223
+msgid "go to site"
+msgstr ""
+
+#: src/commands.js:224
+msgid "open to site"
+msgstr ""
+
+#: src/commands.js:225
+msgid "access to site"
+msgstr ""
+
+#: src/commands.js:226
+msgid "load to site"
+msgstr ""
+
+#: src/commands.js:227
+msgid "visit to site"
+msgstr ""
+
+#: src/commands.js:228
+msgid "browse to site"
+msgstr ""
+
+#: src/commands.js:229
+msgid "join to site"
+msgstr ""
+
+#: src/commands.js:230
+msgid "enter to site"
+msgstr ""
+
+#: src/commands.js:231
+msgid "navigate to site"
+msgstr ""
+
+#: src/commands.js:233
+msgid "go to the site"
+msgstr ""
+
+#: src/commands.js:234
+msgid "open to the site"
+msgstr ""
+
+#: src/commands.js:235
+msgid "access to the site"
+msgstr ""
+
+#: src/commands.js:236
+msgid "load to the site"
+msgstr ""
+
+#: src/commands.js:237
+msgid "visit to the site"
+msgstr ""
+
+#: src/commands.js:238
+msgid "browse to the site"
+msgstr ""
+
+#: src/commands.js:239
+msgid "join to the site"
+msgstr ""
+
+#: src/commands.js:240
+msgid "enter to the site"
+msgstr ""
+
+#: src/commands.js:241
+msgid "navigate to the site"
+msgstr ""
+
+#: src/commands.js:243
+msgid "go to this site"
+msgstr ""
+
+#: src/commands.js:244
+msgid "open to this site"
+msgstr ""
+
+#: src/commands.js:245
+msgid "access to this site"
+msgstr ""
+
+#: src/commands.js:246
+msgid "load to this site"
+msgstr ""
+
+#: src/commands.js:247
+msgid "visit to this site"
+msgstr ""
+
+#: src/commands.js:248
+msgid "browse to this site"
+msgstr ""
+
+#: src/commands.js:249
+msgid "join to this site"
+msgstr ""
+
+#: src/commands.js:250
+msgid "enter to this site"
+msgstr ""
+
+#: src/commands.js:251
+msgid "navigate to this site"
+msgstr ""
+
+#: src/commands.js:253
+msgid "go to that site"
+msgstr ""
+
+#: src/commands.js:254
+msgid "open to that site"
+msgstr ""
+
+#: src/commands.js:255
+msgid "access to that site"
+msgstr ""
+
+#: src/commands.js:256
+msgid "load to that site"
+msgstr ""
+
+#: src/commands.js:257
+msgid "visit to that site"
+msgstr ""
+
+#: src/commands.js:258
+msgid "browse to that site"
+msgstr ""
+
+#: src/commands.js:259
+msgid "join to that site"
+msgstr ""
+
+#: src/commands.js:260
+msgid "enter to that site"
+msgstr ""
+
+#: src/commands.js:261
+msgid "navigate to that site"
+msgstr ""
+
+#: src/commands.js:264
+msgid "open the app"
+msgstr ""
+
+#: src/commands.js:265
+msgid "open this app"
+msgstr ""
+
+#: src/commands.js:266
+msgid "open the application"
+msgstr ""
+
+#: src/commands.js:267
+msgid "open this application"
+msgstr ""
+
+#: src/commands.js:268
+msgid "open app"
+msgstr ""
+
+#: src/commands.js:269
+msgid "open application"
 msgstr ""
 
 #: src/ui/mainmenu.js:30
