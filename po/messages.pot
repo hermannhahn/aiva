@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-01 01:44-0300\n"
+"POT-Creation-Date: 2024-12-01 02:05-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -527,27 +527,27 @@ msgid "visit the channel on youtube"
 msgstr ""
 
 #: src/commands.js:64
-msgid "open"
+msgid "navigate to the channel on youtube"
 msgstr ""
 
 #: src/commands.js:65
-msgid "go to"
+msgid "load the channel on youtube"
 msgstr ""
 
 #: src/commands.js:66
-msgid "load"
+msgid "go to"
 msgstr ""
 
 #: src/commands.js:67
-msgid "visit"
+msgid "load"
 msgstr ""
 
 #: src/commands.js:68
-msgid "navigate to"
+msgid "visit"
 msgstr ""
 
 #: src/commands.js:69
-msgid "take me to"
+msgid "navigate to"
 msgstr ""
 
 #: src/commands.js:70
@@ -555,18 +555,50 @@ msgid "access"
 msgstr ""
 
 #: src/commands.js:71
-msgid "start"
-msgstr ""
-
-#: src/commands.js:72
-msgid "launch"
-msgstr ""
-
-#: src/commands.js:73
-msgid "run"
+msgid "take me to"
 msgstr ""
 
 #: src/commands.js:74
+msgid "open the app"
+msgstr ""
+
+#: src/commands.js:75
+msgid "open this app"
+msgstr ""
+
+#: src/commands.js:76
+msgid "open the application"
+msgstr ""
+
+#: src/commands.js:77
+msgid "open this application"
+msgstr ""
+
+#: src/commands.js:78
+msgid "open app"
+msgstr ""
+
+#: src/commands.js:79
+msgid "open application"
+msgstr ""
+
+#: src/commands.js:80
+msgid "open"
+msgstr ""
+
+#: src/commands.js:81
+msgid "start"
+msgstr ""
+
+#: src/commands.js:82
+msgid "launch"
+msgstr ""
+
+#: src/commands.js:83
+msgid "run"
+msgstr ""
+
+#: src/commands.js:84
 msgid "execute"
 msgstr ""
 

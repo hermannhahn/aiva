@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-01 01:10-0300\n"
+"POT-Creation-Date: 2024-12-01 02:05-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language it-IT\n"
@@ -559,27 +559,28 @@ msgstr "Codice copiato negli appunti"
 
 #: src/commands.js:64
 #, fuzzy
-msgid "open"
+msgid "navigate to the channel on youtube"
 msgstr "Codice copiato negli appunti"
 
 #: src/commands.js:65
+#, fuzzy
+msgid "load the channel on youtube"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:66
 msgid "go to"
 msgstr ""
 
-#: src/commands.js:66
+#: src/commands.js:67
 msgid "load"
 msgstr ""
 
-#: src/commands.js:67
+#: src/commands.js:68
 msgid "visit"
 msgstr ""
 
-#: src/commands.js:68
-msgid "navigate to"
-msgstr ""
-
 #: src/commands.js:69
-msgid "take me to"
+msgid "navigate to"
 msgstr ""
 
 #: src/commands.js:70
@@ -587,18 +588,54 @@ msgid "access"
 msgstr ""
 
 #: src/commands.js:71
-msgid "start"
-msgstr ""
-
-#: src/commands.js:72
-msgid "launch"
-msgstr ""
-
-#: src/commands.js:73
-msgid "run"
+msgid "take me to"
 msgstr ""
 
 #: src/commands.js:74
+msgid "open the app"
+msgstr ""
+
+#: src/commands.js:75
+#, fuzzy
+msgid "open this app"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:76
+#, fuzzy
+msgid "open the application"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:77
+msgid "open this application"
+msgstr ""
+
+#: src/commands.js:78
+#, fuzzy
+msgid "open app"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:79
+msgid "open application"
+msgstr ""
+
+#: src/commands.js:80
+#, fuzzy
+msgid "open"
+msgstr "Codice copiato negli appunti"
+
+#: src/commands.js:81
+msgid "start"
+msgstr ""
+
+#: src/commands.js:82
+msgid "launch"
+msgstr ""
+
+#: src/commands.js:83
+msgid "run"
+msgstr ""
+
+#: src/commands.js:84
 msgid "execute"
 msgstr ""
 
@@ -689,10 +726,6 @@ msgstr ""
 #: src/prefs.js:287
 msgid "Your preferences have been saved"
 msgstr ""
-
-#, fuzzy
-#~ msgid "Error opening app"
-#~ msgstr "Codice copiato negli appunti"
 
 #, fuzzy
 #~ msgid "read this website"
@@ -808,10 +841,6 @@ msgstr ""
 
 #, fuzzy
 #~ msgid "can you open the website?"
-#~ msgstr "Codice copiato negli appunti"
-
-#, fuzzy
-#~ msgid "please open the link"
 #~ msgstr "Codice copiato negli appunti"
 
 #, fuzzy

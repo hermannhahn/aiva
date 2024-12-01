@@ -3,7 +3,7 @@ import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js'
 export class Commands {
     get() {
         const commands = {
-            readClipboardText: [
+            read_clipboard: [
                 _('read this'),
                 _('read that'),
                 _('read text'),
@@ -19,7 +19,7 @@ export class Commands {
                 _('you can read now'),
                 _("read what's copied"),
             ],
-            openAppOrSite: [
+            open_site: [
                 _('open the site'),
                 _('open this site'),
                 _('open the website'),
@@ -61,13 +61,23 @@ export class Commands {
                 _('load this youtube channel'),
                 _('access the channel on youtube'),
                 _('visit the channel on youtube'),
-                _('open'),
+                _('navigate to the channel on youtube'),
+                _('load the channel on youtube'),
                 _('go to'),
                 _('load'),
                 _('visit'),
                 _('navigate to'),
-                _('take me to'),
                 _('access'),
+                _('take me to'),
+            ],
+            open_app: [
+                _('open the app'),
+                _('open this app'),
+                _('open the application'),
+                _('open this application'),
+                _('open app'),
+                _('open application'),
+                _('open'),
                 _('start'),
                 _('launch'),
                 _('run'),
