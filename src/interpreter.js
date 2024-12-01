@@ -94,10 +94,8 @@ HELP
         let result = {success: false, command: '', request: ''};
 
         // local commands
-        let commands = this.commands.get();
         text = text.split(/\s+/).slice(0, 10).join(' ');
-
-        let commandToRun = this.commands.toolCommandActivation(text, commands);
+        let commandToRun = this.commands.toolCommandActivation(text);
 
         // if command is found
         if (commandToRun) {
