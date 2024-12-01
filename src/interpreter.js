@@ -71,9 +71,11 @@ HELP
         this.app.chat.editResponse(_('Invalid command'));
     }
 
-    _isVoiceCommand(commandList, commandSuffixList, commandOptions, request) {
+    _isVoiceCommand(commandList, commandSuffixList, commandOptions, question) {
         // Converta a string de entrada para letras minúsculas para uma comparação case-insensitive
-        const normalizedRequest = request.toLowerCase();
+        question = question.toLowerCase();
+        // cria uma string com as 10 primeiras palavras
+        let normalizedRequest = question.split(/\s+/).slice(0, 10).join(' ');
 
         for (const command of commandList) {
             for (const suffix of commandSuffixList) {
