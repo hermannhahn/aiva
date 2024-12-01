@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-01 02:27-0300\n"
+"POT-Creation-Date: 2024-12-01 02:30-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -314,291 +314,295 @@ msgstr ""
 msgid "Look at example below:"
 msgstr ""
 
-#: src/commands.js:7
-msgid "read this"
-msgstr ""
-
-#: src/commands.js:8
-msgid "read that"
-msgstr ""
-
-#: src/commands.js:9
-msgid "read text"
-msgstr ""
-
-#: src/commands.js:10
-msgid "read copied"
-msgstr ""
-
-#: src/commands.js:11
-msgid "read clipboard"
-msgstr ""
-
-#: src/commands.js:12
-msgid "read memorized"
-msgstr ""
-
-#: src/commands.js:13
-msgid "read the text"
-msgstr ""
-
-#: src/commands.js:14
-msgid "read the clipboard"
+#: src/commands.js:6
+msgid "computer"
 msgstr ""
 
 #: src/commands.js:15
-msgid "read the copied"
+msgid "read this"
 msgstr ""
 
 #: src/commands.js:16
-msgid "read text from clipboard"
+msgid "read that"
 msgstr ""
 
 #: src/commands.js:17
-msgid "read text from memory"
+msgid "read text"
 msgstr ""
 
 #: src/commands.js:18
-msgid "read for me"
+msgid "read copied"
 msgstr ""
 
 #: src/commands.js:19
-msgid "you can read now"
+msgid "read clipboard"
 msgstr ""
 
 #: src/commands.js:20
-msgid "read what's copied"
+msgid "read memorized"
+msgstr ""
+
+#: src/commands.js:21
+msgid "read the text"
+msgstr ""
+
+#: src/commands.js:22
+msgid "read the clipboard"
 msgstr ""
 
 #: src/commands.js:23
-msgid "open the site"
+msgid "read the copied"
 msgstr ""
 
 #: src/commands.js:24
-msgid "open this site"
+msgid "read text from clipboard"
 msgstr ""
 
 #: src/commands.js:25
-msgid "open the website"
+msgid "read text from memory"
 msgstr ""
 
 #: src/commands.js:26
-msgid "open site"
+msgid "read for me"
 msgstr ""
 
 #: src/commands.js:27
-msgid "open page"
+msgid "you can read now"
 msgstr ""
 
 #: src/commands.js:28
-msgid "open the page"
-msgstr ""
-
-#: src/commands.js:29
-msgid "open the link"
-msgstr ""
-
-#: src/commands.js:30
-msgid "open this link"
+msgid "read what's copied"
 msgstr ""
 
 #: src/commands.js:31
-msgid "open web page"
+msgid "open the site"
 msgstr ""
 
 #: src/commands.js:32
-msgid "open the web page"
+msgid "open this site"
 msgstr ""
 
 #: src/commands.js:33
-msgid "go to the site"
+msgid "open the website"
 msgstr ""
 
 #: src/commands.js:34
-msgid "go to the website"
+msgid "open site"
 msgstr ""
 
 #: src/commands.js:35
-msgid "access the site"
+msgid "open page"
 msgstr ""
 
 #: src/commands.js:36
-msgid "access the website"
+msgid "open the page"
 msgstr ""
 
 #: src/commands.js:37
-msgid "load the site"
+msgid "open the link"
 msgstr ""
 
 #: src/commands.js:38
-msgid "load the website"
+msgid "open this link"
 msgstr ""
 
 #: src/commands.js:39
-msgid "visit the site"
+msgid "open web page"
 msgstr ""
 
 #: src/commands.js:40
-msgid "visit the website"
+msgid "open the web page"
 msgstr ""
 
 #: src/commands.js:41
-msgid "navigate to the site"
+msgid "go to the site"
 msgstr ""
 
 #: src/commands.js:42
-msgid "navigate to the website"
+msgid "go to the website"
 msgstr ""
 
 #: src/commands.js:43
-msgid "take me to the site"
+msgid "access the site"
 msgstr ""
 
 #: src/commands.js:44
-msgid "take me to the website"
+msgid "access the website"
 msgstr ""
 
-#: src/commands.js:45 src/commands.js:48
-msgid "open the youtube channel"
+#: src/commands.js:45
+msgid "load the site"
 msgstr ""
 
 #: src/commands.js:46
-msgid "open this youtube channel"
+msgid "load the website"
 msgstr ""
 
-#: src/commands.js:47 src/commands.js:49
-msgid "open youtube channel"
+#: src/commands.js:47
+msgid "visit the site"
+msgstr ""
+
+#: src/commands.js:48
+msgid "visit the website"
+msgstr ""
+
+#: src/commands.js:49
+msgid "navigate to the site"
 msgstr ""
 
 #: src/commands.js:50
-msgid "open the channel on youtube"
+msgid "navigate to the website"
 msgstr ""
 
 #: src/commands.js:51
-msgid "open this channel on youtube"
+msgid "take me to the site"
 msgstr ""
 
 #: src/commands.js:52
-msgid "go to the youtube channel"
+msgid "take me to the website"
 msgstr ""
 
-#: src/commands.js:53
-msgid "go to this youtube channel"
+#: src/commands.js:53 src/commands.js:56
+msgid "open the youtube channel"
 msgstr ""
 
 #: src/commands.js:54
-msgid "access the youtube channel"
+msgid "open this youtube channel"
 msgstr ""
 
-#: src/commands.js:55
-msgid "access this youtube channel"
-msgstr ""
-
-#: src/commands.js:56
-msgid "visit the youtube channel"
-msgstr ""
-
-#: src/commands.js:57
-msgid "visit this youtube channel"
+#: src/commands.js:55 src/commands.js:57
+msgid "open youtube channel"
 msgstr ""
 
 #: src/commands.js:58
-msgid "navigate to the youtube channel"
+msgid "open the channel on youtube"
 msgstr ""
 
 #: src/commands.js:59
-msgid "navigate to this youtube channel"
+msgid "open this channel on youtube"
 msgstr ""
 
 #: src/commands.js:60
-msgid "load the youtube channel"
+msgid "go to the youtube channel"
 msgstr ""
 
 #: src/commands.js:61
-msgid "load this youtube channel"
+msgid "go to this youtube channel"
 msgstr ""
 
 #: src/commands.js:62
-msgid "access the channel on youtube"
+msgid "access the youtube channel"
 msgstr ""
 
 #: src/commands.js:63
-msgid "visit the channel on youtube"
+msgid "access this youtube channel"
 msgstr ""
 
 #: src/commands.js:64
-msgid "navigate to the channel on youtube"
+msgid "visit the youtube channel"
 msgstr ""
 
 #: src/commands.js:65
-msgid "load the channel on youtube"
+msgid "visit this youtube channel"
 msgstr ""
 
 #: src/commands.js:66
-msgid "go to"
+msgid "navigate to the youtube channel"
 msgstr ""
 
 #: src/commands.js:67
-msgid "load"
+msgid "navigate to this youtube channel"
 msgstr ""
 
 #: src/commands.js:68
-msgid "visit"
+msgid "load the youtube channel"
 msgstr ""
 
 #: src/commands.js:69
-msgid "navigate to"
+msgid "load this youtube channel"
 msgstr ""
 
 #: src/commands.js:70
-msgid "access"
+msgid "access the channel on youtube"
 msgstr ""
 
 #: src/commands.js:71
-msgid "take me to"
+msgid "visit the channel on youtube"
+msgstr ""
+
+#: src/commands.js:72
+msgid "navigate to the channel on youtube"
+msgstr ""
+
+#: src/commands.js:73
+msgid "load the channel on youtube"
 msgstr ""
 
 #: src/commands.js:74
-msgid "open the app"
+msgid "go to"
 msgstr ""
 
 #: src/commands.js:75
-msgid "open this app"
+msgid "load"
 msgstr ""
 
 #: src/commands.js:76
-msgid "open the application"
+msgid "visit"
 msgstr ""
 
 #: src/commands.js:77
-msgid "open this application"
+msgid "navigate to"
 msgstr ""
 
 #: src/commands.js:78
-msgid "open app"
+msgid "access"
 msgstr ""
 
 #: src/commands.js:79
-msgid "open application"
-msgstr ""
-
-#: src/commands.js:80
-msgid "open"
-msgstr ""
-
-#: src/commands.js:81
-msgid "start"
+msgid "take me to"
 msgstr ""
 
 #: src/commands.js:82
-msgid "launch"
+msgid "open the app"
 msgstr ""
 
 #: src/commands.js:83
-msgid "run"
+msgid "open this app"
 msgstr ""
 
 #: src/commands.js:84
+msgid "open the application"
+msgstr ""
+
+#: src/commands.js:85
+msgid "open this application"
+msgstr ""
+
+#: src/commands.js:86
+msgid "open app"
+msgstr ""
+
+#: src/commands.js:87
+msgid "open application"
+msgstr ""
+
+#: src/commands.js:88
+msgid "open"
+msgstr ""
+
+#: src/commands.js:89
+msgid "start"
+msgstr ""
+
+#: src/commands.js:90
+msgid "launch"
+msgstr ""
+
+#: src/commands.js:91
+msgid "run"
+msgstr ""
+
+#: src/commands.js:92
 msgid "execute"
 msgstr ""
 

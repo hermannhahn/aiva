@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-01 02:27-0300\n"
+"POT-Creation-Date: 2024-12-01 02:30-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language de-DE\n"
@@ -316,326 +316,330 @@ msgstr ""
 msgid "Look at example below:"
 msgstr ""
 
-#: src/commands.js:7
+#: src/commands.js:6
+msgid "computer"
+msgstr ""
+
+#: src/commands.js:15
 #, fuzzy
 msgid "read this"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:8
+#: src/commands.js:16
 #, fuzzy
 msgid "read that"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:9
+#: src/commands.js:17
 #, fuzzy
 msgid "read text"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:10
+#: src/commands.js:18
 #, fuzzy
 msgid "read copied"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:11
+#: src/commands.js:19
 #, fuzzy
 msgid "read clipboard"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:12
+#: src/commands.js:20
 #, fuzzy
 msgid "read memorized"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:13
+#: src/commands.js:21
 msgid "read the text"
 msgstr ""
 
-#: src/commands.js:14
+#: src/commands.js:22
 #, fuzzy
 msgid "read the clipboard"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:15
+#: src/commands.js:23
 #, fuzzy
 msgid "read the copied"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:16
+#: src/commands.js:24
 #, fuzzy
 msgid "read text from clipboard"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:17
+#: src/commands.js:25
 #, fuzzy
 msgid "read text from memory"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:18
+#: src/commands.js:26
 msgid "read for me"
 msgstr ""
 
-#: src/commands.js:19
+#: src/commands.js:27
 msgid "you can read now"
 msgstr ""
 
-#: src/commands.js:20
+#: src/commands.js:28
 #, fuzzy
 msgid "read what's copied"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:23
+#: src/commands.js:31
 msgid "open the site"
 msgstr ""
 
-#: src/commands.js:24
+#: src/commands.js:32
 msgid "open this site"
 msgstr ""
 
-#: src/commands.js:25
+#: src/commands.js:33
 msgid "open the website"
 msgstr ""
 
-#: src/commands.js:26
+#: src/commands.js:34
 msgid "open site"
 msgstr ""
 
-#: src/commands.js:27
+#: src/commands.js:35
 #, fuzzy
 msgid "open page"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:28
+#: src/commands.js:36
 msgid "open the page"
 msgstr ""
 
-#: src/commands.js:29
+#: src/commands.js:37
 msgid "open the link"
 msgstr ""
 
-#: src/commands.js:30
+#: src/commands.js:38
 msgid "open this link"
 msgstr ""
 
-#: src/commands.js:31
+#: src/commands.js:39
 msgid "open web page"
 msgstr ""
 
-#: src/commands.js:32
+#: src/commands.js:40
 msgid "open the web page"
 msgstr ""
 
-#: src/commands.js:33
+#: src/commands.js:41
 msgid "go to the site"
 msgstr ""
 
-#: src/commands.js:34
+#: src/commands.js:42
 msgid "go to the website"
 msgstr ""
 
-#: src/commands.js:35
+#: src/commands.js:43
 msgid "access the site"
 msgstr ""
 
-#: src/commands.js:36
+#: src/commands.js:44
 msgid "access the website"
 msgstr ""
 
-#: src/commands.js:37
+#: src/commands.js:45
 msgid "load the site"
 msgstr ""
 
-#: src/commands.js:38
+#: src/commands.js:46
 msgid "load the website"
 msgstr ""
 
-#: src/commands.js:39
+#: src/commands.js:47
 msgid "visit the site"
 msgstr ""
 
-#: src/commands.js:40
+#: src/commands.js:48
 msgid "visit the website"
 msgstr ""
 
-#: src/commands.js:41
+#: src/commands.js:49
 msgid "navigate to the site"
 msgstr ""
 
-#: src/commands.js:42
+#: src/commands.js:50
 msgid "navigate to the website"
 msgstr ""
 
-#: src/commands.js:43
+#: src/commands.js:51
 msgid "take me to the site"
 msgstr ""
 
-#: src/commands.js:44
+#: src/commands.js:52
 msgid "take me to the website"
 msgstr ""
 
-#: src/commands.js:45 src/commands.js:48
+#: src/commands.js:53 src/commands.js:56
 #, fuzzy
 msgid "open the youtube channel"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:46
+#: src/commands.js:54
 #, fuzzy
 msgid "open this youtube channel"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:47 src/commands.js:49
+#: src/commands.js:55 src/commands.js:57
 #, fuzzy
 msgid "open youtube channel"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:50
+#: src/commands.js:58
 #, fuzzy
 msgid "open the channel on youtube"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:51
+#: src/commands.js:59
 #, fuzzy
 msgid "open this channel on youtube"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:52
+#: src/commands.js:60
 #, fuzzy
 msgid "go to the youtube channel"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:53
+#: src/commands.js:61
 #, fuzzy
 msgid "go to this youtube channel"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:54
+#: src/commands.js:62
 #, fuzzy
 msgid "access the youtube channel"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:55
+#: src/commands.js:63
 #, fuzzy
 msgid "access this youtube channel"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:56
+#: src/commands.js:64
 #, fuzzy
 msgid "visit the youtube channel"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:57
+#: src/commands.js:65
 #, fuzzy
 msgid "visit this youtube channel"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:58
+#: src/commands.js:66
 #, fuzzy
 msgid "navigate to the youtube channel"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:59
+#: src/commands.js:67
 #, fuzzy
 msgid "navigate to this youtube channel"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:60
+#: src/commands.js:68
 #, fuzzy
 msgid "load the youtube channel"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:61
+#: src/commands.js:69
 #, fuzzy
 msgid "load this youtube channel"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:62
+#: src/commands.js:70
 #, fuzzy
 msgid "access the channel on youtube"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:63
+#: src/commands.js:71
 #, fuzzy
 msgid "visit the channel on youtube"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:64
+#: src/commands.js:72
 #, fuzzy
 msgid "navigate to the channel on youtube"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:65
+#: src/commands.js:73
 #, fuzzy
 msgid "load the channel on youtube"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:66
+#: src/commands.js:74
 msgid "go to"
 msgstr ""
 
-#: src/commands.js:67
+#: src/commands.js:75
 msgid "load"
 msgstr ""
 
-#: src/commands.js:68
+#: src/commands.js:76
 msgid "visit"
 msgstr ""
 
-#: src/commands.js:69
+#: src/commands.js:77
 msgid "navigate to"
 msgstr ""
 
-#: src/commands.js:70
+#: src/commands.js:78
 msgid "access"
 msgstr ""
 
-#: src/commands.js:71
+#: src/commands.js:79
 msgid "take me to"
 msgstr ""
 
-#: src/commands.js:74
+#: src/commands.js:82
 msgid "open the app"
 msgstr ""
 
-#: src/commands.js:75
+#: src/commands.js:83
 #, fuzzy
 msgid "open this app"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:76
+#: src/commands.js:84
 #, fuzzy
 msgid "open the application"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:77
+#: src/commands.js:85
 msgid "open this application"
 msgstr ""
 
-#: src/commands.js:78
+#: src/commands.js:86
 #, fuzzy
 msgid "open app"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:79
+#: src/commands.js:87
 msgid "open application"
 msgstr ""
 
-#: src/commands.js:80
+#: src/commands.js:88
 #, fuzzy
 msgid "open"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:81
+#: src/commands.js:89
 msgid "start"
 msgstr ""
 
-#: src/commands.js:82
+#: src/commands.js:90
 msgid "launch"
 msgstr ""
 
-#: src/commands.js:83
+#: src/commands.js:91
 msgid "run"
 msgstr ""
 
-#: src/commands.js:84
+#: src/commands.js:92
 msgid "execute"
 msgstr ""
 

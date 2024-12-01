@@ -1,7 +1,15 @@
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 export class Commands {
-    get() {
+    get(list) {
+        const activation = [
+            _('computer'),
+            'aiva',
+            this.app.userSettings.ASSIST_NAME,
+        ];
+        if (list === 'activation') {
+            return activation;
+        }
         const commands = {
             read_clipboard: [
                 _('read this'),
@@ -84,7 +92,10 @@ export class Commands {
                 _('execute'),
             ],
         };
-        return commands;
+        if (list === 'commands') {
+            return commands;
+        }
+        return false;
     }
 
     findCategoryInArrays(string, commands) {
@@ -96,6 +107,17 @@ export class Commands {
                     string = string.replace(commands[category][i], '');
                     return {type: category, request: string};
                 }
+            }
+        }
+        return false;
+    }
+
+    toolCommandActivation(string) {
+        string = string.toLowerCase();
+        let activation = this.get('activation');
+        for (let i = 0; i < activation.length; i++) {
+            if (string.includes(activation[i])) {
+                return true;
             }
         }
         return false;
