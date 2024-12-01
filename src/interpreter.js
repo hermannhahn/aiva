@@ -21,6 +21,7 @@ export class Interpreter {
         this.app.log('Processing question...');
         this.app.chat.addResponse('...');
         this.app.ui.statusIcon('⌛');
+
         const isVoiceCommand = this._isVoiceCommand(
             this.commands.get('commandList'),
             this.commands.get('commandSuffixList'),
@@ -32,15 +33,9 @@ export class Interpreter {
             // SLASH COMMANDS
             this.app.log('Slash command: ' + command);
             this._slashCommands(command);
-        } else if (this._isLocalCommand(question)) {
-            // LOCAL COMMANDS
-            this.app.log('Local command detected.');
-            this._localCommand(isLocalCommand.command, isLocalCommand.request);
-            this.app.gemini.toolCommand(question);
         } else if (isVoiceCommand) {
             // LOCAL COMMANDS
             this.app.log('Voice command detected.');
-            // this._localCommand(isLocalCommand.command, isLocalCommand.request);
             this.app.gemini.toolCommand(question);
         } else {
             // QUESTIONS
@@ -74,25 +69,6 @@ HELP
             return;
         }
         this.app.chat.editResponse(_('Invalid command'));
-    }
-
-    _isLocalCommand(text) {
-        text = text.toLowerCase();
-        let result = {command: '', request: ''};
-
-        // local commands
-        let commands = this.commands.get();
-        text = text.split(/\s+/).slice(0, 10).join(' ');
-        let commandToRun = this.commands.findCategoryInArrays(text, commands);
-
-        // if command is found
-        if (commandToRun) {
-            result.command = commandToRun.type;
-            result.request = commandToRun.request;
-            return result;
-        }
-
-        return false;
     }
 
     _isVoiceCommand(commandList, commandSuffixList, commandOptions, request) {
