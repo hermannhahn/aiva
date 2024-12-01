@@ -137,7 +137,7 @@ export class GoogleGemini {
             let url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.0-pro:generateContent?key=${this.GEMINI_API_KEY}`;
 
             // Send async request
-            let body = this.buildToolBody(request);
+            let body = this._buildToolBody(request);
             let message = Soup.Message.new('POST', url);
             let bytes = GLib.Bytes.new(body);
             message.set_request_body_from_bytes('application/json', bytes);
@@ -392,4 +392,90 @@ ${_('JSON Response')}: {success: true, response: "${_('Searching for santos boat
         const stringfiedHistory = JSON.stringify(request);
         return `{"contents":${stringfiedHistory}}`;
     }
+
+    _buildToolBody(text) {
+        let request = { "contents": {
+  "role": "user",
+  "parts": {
+    "text": "Which theaters in Mountain View show the Barbie movie?"
+  }
+},
+"tools": [
+  {
+    "function_declarations": [
+      {
+        "name": "find_movies",
+        "description": "find movie titles currently playing in theaters based on any description, genre, title words, etc.",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "location": {
+              "type": "string",
+              "description": "The city and state, e.g. San Francisco, CA or a zip code e.g. 95616"
+            },
+            "description": {
+              "type": "string",
+              "description": "Any kind of description including category or genre, title words, attributes, etc."
+            }
+          },
+          "required": [
+            "description"
+          ]
+        }
+      },
+      {
+        "name": "find_theaters",
+        "description": "find theaters based on location and optionally movie title which are is currently playing in theaters",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "location": {
+              "type": "string",
+              "description": "The city and state, e.g. San Francisco, CA or a zip code e.g. 95616"
+            },
+            "movie": {
+              "type": "string",
+              "description": "Any movie title"
+            }
+          },
+          "required": [
+            "location"
+          ]
+        }
+      },
+      {
+        "name": "get_showtimes",
+        "description": "Find the start times for movies playing in a specific theater",
+        "parameters": {
+          "type": "object",
+          "properties": {
+            "location": {
+              "type": "string",
+              "description": "The city and state, e.g. San Francisco, CA or a zip code e.g. 95616"
+            },
+            "movie": {
+              "type": "string",
+              "description": "Any movie title"
+            },
+            "theater": {
+              "type": "string",
+              "description": "Name of the theater"
+            },
+            "date": {
+              "type": "string",
+              "description": "Date for requested showtime"
+            }
+          },
+          "required": [
+            "location",
+            "movie",
+            "theater",
+            "date"
+          ]
+        }
+      }
+    ]
+  }
+]
+}
 }
