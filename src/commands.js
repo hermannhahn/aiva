@@ -81,15 +81,4 @@ export class Commands {
         }
         return false;
     }
-
-    toolCommandActivation(string) {
-        string = string.toLowerCase();
-        let activation = this.get('activation');
-        for (let i = 0; i < activation.length; i++) {
-            if (string.includes(activation[i])) {
-                return true;
-            }
-        }
-        return false;
-    }
 }
