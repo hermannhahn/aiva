@@ -19,7 +19,7 @@ export class Commands {
                 _('you can read now'),
                 _("read what's copied"),
             ],
-            openSite: [
+            openAppOrSite: [
                 _('open the site'),
                 _('open this site'),
                 _('open the website'),
@@ -42,8 +42,6 @@ export class Commands {
                 _('navigate to the website'),
                 _('take me to the site'),
                 _('take me to the website'),
-            ],
-            openYoutubeChannel: [
                 _('open the youtube channel'),
                 _('open this youtube channel'),
                 _('open youtube channel'),
@@ -63,6 +61,17 @@ export class Commands {
                 _('load this youtube channel'),
                 _('access the channel on youtube'),
                 _('visit the channel on youtube'),
+                _('open'),
+                _('go to'),
+                _('load'),
+                _('visit'),
+                _('navigate to'),
+                _('take me to'),
+                _('access'),
+                _('start'),
+                _('launch'),
+                _('run'),
+                _('execute'),
             ],
         };
         return commands;
