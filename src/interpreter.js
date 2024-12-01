@@ -100,8 +100,6 @@ HELP
 
         // if command is found
         if (commandToRun) {
-            // run tool command
-            this.app.gemini.toolCommand(text);
             result.success = true;
             result.request = commandToRun.request;
             return result;
