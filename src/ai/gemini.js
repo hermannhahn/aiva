@@ -419,7 +419,8 @@ ${_('JSON Response')}: {success: true, response: "${_('Searching for santos boat
                         },
                         {
                             name: 'read_clipboard',
-                            description: 'read text from clipboard',
+                            description:
+                                'read text from clipboard, or non specified source, like: read this for me',
                         },
                     ],
                 },
