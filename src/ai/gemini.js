@@ -403,24 +403,18 @@ ${_('JSON Response')}: {success: true, response: "${_('Searching for santos boat
                 {
                     function_declarations: [
                         {
-                            name: 'find_movies',
-                            description:
-                                'find movie titles currently playing in theaters based on any description, genre, title words, etc.',
+                            name: 'open_app',
+                            description: 'open app by name or description',
                             parameters: {
                                 type: 'object',
                                 properties: {
-                                    location: {
+                                    name: {
                                         type: 'string',
                                         description:
-                                            'The city and state, e.g. San Francisco, CA or a zip code e.g. 95616',
-                                    },
-                                    description: {
-                                        type: 'string',
-                                        description:
-                                            'Any kind of description including category or genre, title words, attributes, etc.',
+                                            'The name of the app e.g. Google Chrome',
                                     },
                                 },
-                                required: ['description'],
+                                required: ['name'],
                             },
                         },
                         {
