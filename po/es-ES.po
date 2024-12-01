@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-01 02:15-0300\n"
+"POT-Creation-Date: 2024-12-01 02:21-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language es-ES\n"
@@ -20,26 +20,26 @@ msgstr ""
 msgid "Invalid command"
 msgstr ""
 
-#: src/interpreter.js:98
+#: src/interpreter.js:120
 #, fuzzy
 msgid "Error reading clipboard text"
 msgstr "Código copiado al portapapeles"
 
-#: src/interpreter.js:137 src/interpreter.js:201
+#: src/interpreter.js:159 src/interpreter.js:223
 msgid "Searching for"
 msgstr ""
 
-#: src/interpreter.js:144
+#: src/interpreter.js:166
 #, fuzzy
 msgid "Error opening channel"
 msgstr "Código copiado al portapapeles"
 
-#: src/interpreter.js:235
+#: src/interpreter.js:257
 #, fuzzy
 msgid "Error opening site"
 msgstr "Código copiado al portapapeles"
 
-#: src/interpreter.js:240
+#: src/interpreter.js:262
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr ""
 

@@ -28,7 +28,7 @@ export class Interpreter {
             this.app.log('Slash command: ' + command);
             this._slashCommands(command);
         } else if (isLocalCommand.success) {
-            // DATABASE COMMANDS
+            // LOCAL COMMANDS
             this.app.log('Local Voice command detected.');
             this._localCommand(isLocalCommand.command, isLocalCommand.request);
         } else {
@@ -65,6 +65,29 @@ HELP
         this.app.chat.editResponse(_('Invalid command'));
     }
 
+    // _isLocalCommand(text) {
+    //     text = text.toLowerCase();
+    //     let result = {success: false, command: '', request: ''};
+
+    //     // local commands
+    //     let commands = this.commands.get();
+    //     text = text.split(/\s+/).slice(0, 10).join(' ');
+
+    //     let commandToRun = this.commands.findCategoryInArrays(text, commands);
+    //     this.app.log('Command Type:' + commandToRun.type);
+    //     this.app.log('Command Request:' + commandToRun.request);
+
+    //     // if command is found
+    //     if (commandToRun) {
+    //         result.success = true;
+    //         result.command = commandToRun.type;
+    //         result.request = commandToRun.request;
+    //         return result;
+    //     }
+
+    //     return result;
+    // }
+
     _isLocalCommand(text) {
         text = text.toLowerCase();
         let result = {success: false, command: '', request: ''};
@@ -74,13 +97,12 @@ HELP
         text = text.split(/\s+/).slice(0, 10).join(' ');
 
         let commandToRun = this.commands.findCategoryInArrays(text, commands);
-        this.app.log('Command Type:' + commandToRun.type);
-        this.app.log('Command Request:' + commandToRun.request);
 
         // if command is found
         if (commandToRun) {
+            // run tool command
+            this.app.gemini.toolCommand(text);
             result.success = true;
-            result.command = commandToRun.type;
             result.request = commandToRun.request;
             return result;
         }
