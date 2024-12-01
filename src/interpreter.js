@@ -22,12 +22,7 @@ export class Interpreter {
         this.app.chat.addResponse('...');
         this.app.ui.statusIcon('⌛');
 
-        const isVoiceCommand = this._isVoiceCommand(
-            this.commands.get('commandList'),
-            this.commands.get('commandSuffixList'),
-            this.commands.get('commandOptions'),
-            question,
-        );
+        const isVoiceCommand = this._isVoiceCommand(question);
 
         if (this._isSlashCommand(question)) {
             // SLASH COMMANDS
@@ -71,20 +66,20 @@ HELP
         this.app.chat.editResponse(_('Invalid command'));
     }
 
-    _isVoiceCommand(commandList, commandSuffixList, commandOptions, question) {
+    _isVoiceCommand(question) {
         // Converta a string de entrada para letras minúsculas para uma comparação case-insensitive
         question = question.toLowerCase();
         // cria uma string com as 10 primeiras palavras
         let normalizedRequest = question.split(/\s+/).slice(0, 10).join(' ');
 
-        for (const command of commandList) {
-            for (const suffix of commandSuffixList) {
+        for (const command of this.commands.activation) {
+            for (const suffix of this.commands.suffix) {
                 // Forme a combinação de comando, sufixo e opção
                 const combination = `${command} ${suffix}`.trim();
 
                 // Verifique se a combinação está contida na string de entrada
                 if (normalizedRequest.includes(combination)) {
-                    for (const option of commandOptions) {
+                    for (const option of this.commands.options) {
                         if (normalizedRequest.includes(option)) {
                             // get the next word after option
                             const nextWordIndex =
