@@ -32,6 +32,11 @@ export class Interpreter {
             // SLASH COMMANDS
             this.app.log('Slash command: ' + command);
             this._slashCommands(command);
+        } else if (this._isLocalCommand(question)) {
+            // LOCAL COMMANDS
+            this.app.log('Local command detected.');
+            this._localCommand(isLocalCommand.command, isLocalCommand.request);
+            this.app.gemini.toolCommand(question);
         } else if (isVoiceCommand) {
             // LOCAL COMMANDS
             this.app.log('Voice command detected.');
@@ -73,7 +78,7 @@ HELP
 
     _isLocalCommand(text) {
         text = text.toLowerCase();
-        let result = {success: false, command: '', request: ''};
+        let result = {command: '', request: ''};
 
         // local commands
         let commands = this.commands.get();
@@ -85,13 +90,12 @@ HELP
 
         // if command is found
         if (commandToRun) {
-            result.success = true;
             result.command = commandToRun.type;
             result.request = commandToRun.request;
             return result;
         }
 
-        return result;
+        return false;
     }
 
     _isVoiceCommand(commandList, commandSuffixList, commandOptions, request) {
