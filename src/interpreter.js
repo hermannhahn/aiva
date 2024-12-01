@@ -21,15 +21,15 @@ export class Interpreter {
         this.app.log('Processing question...');
         this.app.chat.addResponse('...');
         this.app.ui.statusIcon('⌛');
-        const isLocalCommand = this._isLocalCommand(question);
+        const isVoiceCommand = this._isVoiceCommand(this.commands.get('commandList'), this.commands.get('commandSuffixList'), this.commands.get('commandOptions'), question);
 
         if (this._isSlashCommand(question)) {
             // SLASH COMMANDS
             this.app.log('Slash command: ' + command);
             this._slashCommands(command);
-        } else if (isLocalCommand) {
+        } else if (isVoiceCommand.success) {
             // LOCAL COMMANDS
-            this.app.log('Local Voice command detected.');
+            this.app.log('Voice command detected.');
             // this._localCommand(isLocalCommand.command, isLocalCommand.request);
             this.app.gemini.toolCommand(question);
         } else {
@@ -89,22 +89,34 @@ HELP
     //     return result;
     // }
 
-    _isLocalCommand(text) {
-        text = text.toLowerCase();
-
-        // local commands
-        text = text.split(/\s+/).slice(0, 10).join(' ');
-        let commandToRun = this.commands.toolCommandActivation(text);
-
-        // if command is found
-        if (commandToRun) {
-            return true;
+        _isVoiceCommand(commandList, commandSuffixList, commandOptions, request) {
+            // Converta a string de entrada para letras minúsculas para uma comparação case-insensitive
+            const normalizedRequest = request.toLowerCase();
+        
+            for (const command of commandList) {
+                for (const suffix of commandSuffixList) {
+                    // Forme a combinação de comando, sufixo e opção
+                    const combination = `${command} ${suffix}`.trim();
+                    
+                    // Verifique se a combinação está contida na string de entrada
+                    if (normalizedRequest.includes(combination)) {
+                        for (const option of commandOptions) {
+                            if (normalizedRequest.includes(option)) {
+                                // get the next word after option
+                                const nextWordIndex = normalizedRequest.indexOf(option) + option.length + 1;
+                                const nextWord = normalizedRequest.substring(nextWordIndex).split(/\s+/)[0];
+                                return { success: true, command: command, request: nextWord };
+                            }
+                            
+                        }
+                        return { success: true, command: option };
+                    }
+                }
+            // Retorna false se nenhuma combinação for encontrada
+            return { success: false, command: null };
         }
-
-        return false;
-    }
-
-    async _localCommand(command, request = undefined) {
+        
+    async _voiceCommand(command, request = undefined) {
         switch (command) {
             case 'read_clipboard':
                 try {
