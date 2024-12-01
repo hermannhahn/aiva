@@ -125,6 +125,61 @@ export class GoogleGemini {
     }
 
     /**
+     * @description send a tool request to API
+     * @param {string} request
+     * @returns {jsonResponse} with tool name and args
+     */
+    toolCommand(request) {
+        try {
+            this.app.log('Getting command response...');
+            // Create http session
+            let _httpSession = new Soup.Session();
+            let url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.0-pro:generateContent?key=${this.GEMINI_API_KEY}`;
+
+            // Send async request
+            let body = this.buildToolBody(request);
+            let message = Soup.Message.new('POST', url);
+            let bytes = GLib.Bytes.new(body);
+            message.set_request_body_from_bytes('application/json', bytes);
+            _httpSession.send_and_read_async(
+                message,
+                GLib.PRIORITY_DEFAULT,
+                null,
+                (_httpSession, result) => {
+                    let bytes = _httpSession.send_and_read_finish(result);
+                    let decoder = new TextDecoder('utf-8');
+                    // Get response
+                    let response = decoder.decode(bytes.get_data());
+                    let res = JSON.parse(response);
+                    if (res.error?.code !== 401 && res.error !== undefined) {
+                        this.app.logError(res.error.message);
+                        this.app.chat.editResponse(response, false);
+                        this.app.azure.tts(
+                            _("Sorry, I can't do this now. Try again later."),
+                        );
+                        return;
+                    }
+                    let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
+
+                    if (aiResponse === undefined) {
+                        this.app.chat.editResponse(
+                            _("Sorry, I can't answer this question now."),
+                        );
+                        return;
+                    }
+
+                    // tool response
+                    let jsonResponse = {};
+                    jsonResponse = JSON.parse(aiResponse);
+                    this.app.log('Tool response: ' + jsonResponse);
+                },
+            );
+        } catch (error) {
+            throw new Error(`Tool command error: ${error.message}`);
+        }
+    }
+
+    /**
      * @description send request to API, speech response and run command
      * @param {string} request
      * @param {boolean} [destroyLoop=false]
