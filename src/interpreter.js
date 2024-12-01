@@ -21,7 +21,12 @@ export class Interpreter {
         this.app.log('Processing question...');
         this.app.chat.addResponse('...');
         this.app.ui.statusIcon('⌛');
-        const isVoiceCommand = this._isVoiceCommand(this.commands.get('commandList'), this.commands.get('commandSuffixList'), this.commands.get('commandOptions'), question);
+        const isVoiceCommand = this._isVoiceCommand(
+            this.commands.get('commandList'),
+            this.commands.get('commandSuffixList'),
+            this.commands.get('commandOptions'),
+            question,
+        );
 
         if (this._isSlashCommand(question)) {
             // SLASH COMMANDS
@@ -89,33 +94,47 @@ HELP
     //     return result;
     // }
 
-        _isVoiceCommand(commandList, commandSuffixList, commandOptions, request) {
-            // Converta a string de entrada para letras minúsculas para uma comparação case-insensitive
-            const normalizedRequest = request.toLowerCase();
-        
-            for (const command of commandList) {
-                for (const suffix of commandSuffixList) {
-                    // Forme a combinação de comando, sufixo e opção
-                    const combination = `${command} ${suffix}`.trim();
-                    
-                    // Verifique se a combinação está contida na string de entrada
-                    if (normalizedRequest.includes(combination)) {
-                        for (const option of commandOptions) {
-                            if (normalizedRequest.includes(option)) {
-                                // get the next word after option
-                                const nextWordIndex = normalizedRequest.indexOf(option) + option.length + 1;
-                                const nextWord = normalizedRequest.substring(nextWordIndex).split(/\s+/)[0];
-                                return { success: true, command: command, request: nextWord };
-                            }
-                            
+    _isVoiceCommand(commandList, commandSuffixList, commandOptions, request) {
+        // Converta a string de entrada para letras minúsculas para uma comparação case-insensitive
+        const normalizedRequest = request.toLowerCase();
+
+        for (const command of commandList) {
+            for (const suffix of commandSuffixList) {
+                // Forme a combinação de comando, sufixo e opção
+                const combination = `${command} ${suffix}`.trim();
+
+                // Verifique se a combinação está contida na string de entrada
+                if (normalizedRequest.includes(combination)) {
+                    for (const option of commandOptions) {
+                        if (normalizedRequest.includes(option)) {
+                            // get the next word after option
+                            const nextWordIndex =
+                                normalizedRequest.indexOf(option) +
+                                option.length +
+                                1;
+                            const request = normalizedRequest
+                                .substring(nextWordIndex)
+                                .split(/\s+/)[0];
+                            return {success: true, command, request};
                         }
-                        return { success: true, command: option };
                     }
+                    // get the next word after command suffix
+                    const nextWordIndex =
+                        normalizedRequest.indexOf(combination) +
+                        combination.length +
+                        1;
+                    const request = normalizedRequest
+                        .substring(nextWordIndex)
+                        .split(/\s+/)[0];
+                    return {success: true, command, request};
                 }
-            // Retorna false se nenhuma combinação for encontrada
-            return { success: false, command: null };
+            }
         }
-        
+
+        // Retorna false se nenhuma combinação for encontrada
+        return {success: false, command: null};
+    }
+
     async _voiceCommand(command, request = undefined) {
         switch (command) {
             case 'read_clipboard':

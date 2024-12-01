@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-01 16:53-0300\n"
+"POT-Creation-Date: 2024-12-01 16:56-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language it-IT\n"
@@ -16,30 +16,30 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/interpreter.js:66
+#: src/interpreter.js:71
 msgid "Invalid command"
 msgstr ""
 
-#: src/interpreter.js:126
+#: src/interpreter.js:145
 #, fuzzy
 msgid "Error reading clipboard text"
 msgstr "Codice copiato negli appunti"
 
-#: src/interpreter.js:165 src/interpreter.js:229
+#: src/interpreter.js:184 src/interpreter.js:248
 msgid "Searching for"
 msgstr ""
 
-#: src/interpreter.js:172
+#: src/interpreter.js:191
 #, fuzzy
 msgid "Error opening channel"
 msgstr "Codice copiato negli appunti"
 
-#: src/interpreter.js:263
+#: src/interpreter.js:282
 #, fuzzy
 msgid "Error opening site"
 msgstr "Codice copiato negli appunti"
 
-#: src/interpreter.js:268
+#: src/interpreter.js:287
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr ""
 
