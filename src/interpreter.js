@@ -91,7 +91,6 @@ HELP
 
     _isLocalCommand(text) {
         text = text.toLowerCase();
-        let result = {success: false, command: '', request: ''};
 
         // local commands
         text = text.split(/\s+/).slice(0, 10).join(' ');
@@ -99,11 +98,10 @@ HELP
 
         // if command is found
         if (commandToRun) {
-            result.success = true;
-            return result;
+            return true;
         }
 
-        return result;
+        return false;
     }
 
     async _localCommand(command, request = undefined) {
