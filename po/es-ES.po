@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-01 19:46-0300\n"
+"POT-Creation-Date: 2024-12-01 20:00-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language es-ES\n"
@@ -320,306 +320,179 @@ msgstr ""
 msgid "computer"
 msgstr ""
 
-#: src/commands.js:15 src/commands.js:106
+#: src/commands.js:12
 #, fuzzy
 msgid "open"
 msgstr "Código copiado al portapapeles"
 
-#: src/commands.js:16 src/commands.js:107
+#: src/commands.js:13
 msgid "start"
 msgstr ""
 
-#: src/commands.js:17 src/commands.js:108
+#: src/commands.js:14
 msgid "launch"
 msgstr ""
 
-#: src/commands.js:18 src/commands.js:109
+#: src/commands.js:15
 msgid "run"
 msgstr ""
 
-#: src/commands.js:19 src/commands.js:110
+#: src/commands.js:16
 msgid "execute"
 msgstr ""
 
-#: src/commands.js:20
+#: src/commands.js:17
 #, fuzzy
 msgid "read"
 msgstr "Código copiado al portapapeles"
 
-#: src/commands.js:21
+#: src/commands.js:18
 msgid "write"
 msgstr ""
 
-#: src/commands.js:22
+#: src/commands.js:19
 msgid "access"
 msgstr ""
 
-#: src/commands.js:23
+#: src/commands.js:20
 msgid "load"
 msgstr ""
 
-#: src/commands.js:24
+#: src/commands.js:21
 msgid "visit"
 msgstr ""
 
-#: src/commands.js:25
+#: src/commands.js:22
 msgid "browse"
 msgstr ""
 
-#: src/commands.js:26
+#: src/commands.js:23
 msgid "join"
 msgstr ""
 
-#: src/commands.js:27
+#: src/commands.js:24
 msgid "enter"
 msgstr ""
 
-#: src/commands.js:28
+#: src/commands.js:25
 msgid "navigate"
 msgstr ""
 
-#: src/commands.js:29
+#: src/commands.js:26
 msgid "go"
 msgstr ""
 
-#: src/commands.js:30
+#: src/commands.js:27
 msgid "take me"
 msgstr ""
 
-#: src/commands.js:37
+#: src/commands.js:31
 #, fuzzy
 msgid "this"
 msgstr "Código copiado al portapapeles"
 
-#: src/commands.js:38
+#: src/commands.js:32
 #, fuzzy
 msgid "that"
 msgstr "Código copiado al portapapeles"
 
-#: src/commands.js:39
+#: src/commands.js:33
 msgid "in"
 msgstr ""
 
-#: src/commands.js:40
+#: src/commands.js:34
 msgid "to"
 msgstr ""
 
-#: src/commands.js:41
+#: src/commands.js:35
 msgid "the"
 msgstr ""
 
-#: src/commands.js:42
+#: src/commands.js:36
 #, fuzzy
 msgid "on"
 msgstr "Código copiado al portapapeles"
 
-#: src/commands.js:43
+#: src/commands.js:37
 msgid "at"
 msgstr ""
 
-#: src/commands.js:44
+#: src/commands.js:38
 msgid "of"
 msgstr ""
 
-#: src/commands.js:45
+#: src/commands.js:39
 msgid "in the"
 msgstr ""
 
-#: src/commands.js:46
+#: src/commands.js:40
 msgid "to the"
 msgstr ""
 
-#: src/commands.js:47
+#: src/commands.js:41
 #, fuzzy
 msgid "in this"
 msgstr "Código copiado al portapapeles"
 
-#: src/commands.js:48
+#: src/commands.js:42
 #, fuzzy
 msgid "to this"
 msgstr "Código copiado al portapapeles"
 
-#: src/commands.js:49
+#: src/commands.js:43
 #, fuzzy
 msgid "in that"
 msgstr "Código copiado al portapapeles"
 
-#: src/commands.js:50
+#: src/commands.js:44
 #, fuzzy
 msgid "to that"
 msgstr "Código copiado al portapapeles"
 
-#: src/commands.js:57
+#: src/commands.js:48
 #, fuzzy
 msgid "website"
 msgstr "Código copiado al portapapeles"
 
-#: src/commands.js:58
+#: src/commands.js:49
 #, fuzzy
 msgid "webpage"
 msgstr "Código copiado al portapapeles"
 
-#: src/commands.js:59
+#: src/commands.js:50
 msgid "web"
 msgstr ""
 
-#: src/commands.js:60
+#: src/commands.js:51
 msgid "site"
 msgstr ""
 
-#: src/commands.js:61
+#: src/commands.js:52
 #, fuzzy
 msgid "page"
 msgstr "Código copiado al portapapeles"
 
-#: src/commands.js:62
+#: src/commands.js:53
 msgid "url"
 msgstr ""
 
-#: src/commands.js:63
+#: src/commands.js:54
 msgid "app"
 msgstr ""
 
-#: src/commands.js:64
+#: src/commands.js:55
 msgid "software"
 msgstr ""
 
-#: src/commands.js:65
+#: src/commands.js:56
 #, fuzzy
 msgid "application"
 msgstr "Código copiado al portapapeles"
 
-#: src/commands.js:73
+#: src/commands.js:61
 #, fuzzy
-msgid "read this"
+msgid "Read text from clipboard"
 msgstr "Código copiado al portapapeles"
-
-#: src/commands.js:74
-#, fuzzy
-msgid "read that"
-msgstr "Código copiado al portapapeles"
-
-#: src/commands.js:75
-#, fuzzy
-msgid "read text"
-msgstr "Código copiado al portapapeles"
-
-#: src/commands.js:76
-#, fuzzy
-msgid "read copied"
-msgstr "Código copiado al portapapeles"
-
-#: src/commands.js:77
-#, fuzzy
-msgid "read clipboard"
-msgstr "Código copiado al portapapeles"
-
-#: src/commands.js:78
-#, fuzzy
-msgid "read memorized"
-msgstr "Código copiado al portapapeles"
-
-#: src/commands.js:79
-msgid "read the text"
-msgstr ""
-
-#: src/commands.js:80
-#, fuzzy
-msgid "read the clipboard"
-msgstr "Código copiado al portapapeles"
-
-#: src/commands.js:81
-#, fuzzy
-msgid "read the copied"
-msgstr "Código copiado al portapapeles"
-
-#: src/commands.js:82
-#, fuzzy
-msgid "read text from clipboard"
-msgstr "Código copiado al portapapeles"
-
-#: src/commands.js:83
-#, fuzzy
-msgid "read text from memory"
-msgstr "Código copiado al portapapeles"
-
-#: src/commands.js:84
-msgid "read for me"
-msgstr ""
-
-#: src/commands.js:85
-msgid "you can read now"
-msgstr ""
-
-#: src/commands.js:86
-#, fuzzy
-msgid "read what's copied"
-msgstr "Código copiado al portapapeles"
-
-#: src/commands.js:89
-msgid "go site"
-msgstr ""
-
-#: src/commands.js:90
-msgid "open site"
-msgstr ""
-
-#: src/commands.js:91
-msgid "access site"
-msgstr ""
-
-#: src/commands.js:92
-msgid "load site"
-msgstr ""
-
-#: src/commands.js:93
-#, fuzzy
-msgid "visit site"
-msgstr "Código copiado al portapapeles"
-
-#: src/commands.js:94
-msgid "browse site"
-msgstr ""
-
-#: src/commands.js:95
-msgid "join site"
-msgstr ""
-
-#: src/commands.js:96
-#, fuzzy
-msgid "enter site"
-msgstr "Código copiado al portapapeles"
-
-#: src/commands.js:97
-msgid "navigate site"
-msgstr ""
-
-#: src/commands.js:100
-msgid "open the app"
-msgstr ""
-
-#: src/commands.js:101
-#, fuzzy
-msgid "open this app"
-msgstr "Código copiado al portapapeles"
-
-#: src/commands.js:102
-#, fuzzy
-msgid "open the application"
-msgstr "Código copiado al portapapeles"
-
-#: src/commands.js:103
-msgid "open this application"
-msgstr ""
-
-#: src/commands.js:104
-#, fuzzy
-msgid "open app"
-msgstr "Código copiado al portapapeles"
-
-#: src/commands.js:105
-msgid "open application"
-msgstr ""
 
 #: src/ui/mainmenu.js:30
 msgid "Ask me anything..."
@@ -708,6 +581,66 @@ msgstr ""
 #: src/prefs.js:287
 msgid "Your preferences have been saved"
 msgstr ""
+
+#, fuzzy
+#~ msgid "read this"
+#~ msgstr "Código copiado al portapapeles"
+
+#, fuzzy
+#~ msgid "read that"
+#~ msgstr "Código copiado al portapapeles"
+
+#, fuzzy
+#~ msgid "read text"
+#~ msgstr "Código copiado al portapapeles"
+
+#, fuzzy
+#~ msgid "read copied"
+#~ msgstr "Código copiado al portapapeles"
+
+#, fuzzy
+#~ msgid "read clipboard"
+#~ msgstr "Código copiado al portapapeles"
+
+#, fuzzy
+#~ msgid "read memorized"
+#~ msgstr "Código copiado al portapapeles"
+
+#, fuzzy
+#~ msgid "read the clipboard"
+#~ msgstr "Código copiado al portapapeles"
+
+#, fuzzy
+#~ msgid "read the copied"
+#~ msgstr "Código copiado al portapapeles"
+
+#, fuzzy
+#~ msgid "read text from memory"
+#~ msgstr "Código copiado al portapapeles"
+
+#, fuzzy
+#~ msgid "read what's copied"
+#~ msgstr "Código copiado al portapapeles"
+
+#, fuzzy
+#~ msgid "visit site"
+#~ msgstr "Código copiado al portapapeles"
+
+#, fuzzy
+#~ msgid "enter site"
+#~ msgstr "Código copiado al portapapeles"
+
+#, fuzzy
+#~ msgid "open this app"
+#~ msgstr "Código copiado al portapapeles"
+
+#, fuzzy
+#~ msgid "open the application"
+#~ msgstr "Código copiado al portapapeles"
+
+#, fuzzy
+#~ msgid "open app"
+#~ msgstr "Código copiado al portapapeles"
 
 #, fuzzy
 #~ msgid "go page"
