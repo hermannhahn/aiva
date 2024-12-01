@@ -143,7 +143,7 @@ HELP
                     this.app.chat.editResponse(_('Error opening channel'));
                 }
                 break;
-            case 'openSite':
+            case 'openAppOrSite':
                 try {
                     const urls = {
                         youtube: 'https://www.youtube.com',
@@ -195,20 +195,6 @@ HELP
                         }
                     }
 
-                    // search site
-                    this.app.chat.editResponse(
-                        _('Searching for') + ` ${request}...`,
-                    );
-                    this.app.utils.executeCommand(
-                        `firefox https://www.google.com/search?q=${request}`,
-                    );
-                } catch (error) {
-                    this.app.logError('Error opening site:', error);
-                    this.app.chat.editResponse(_('Error opening site'));
-                }
-                break;
-            case 'openUbuntuApp':
-                try {
                     const apps = {
                         calculator: 'gnome-calculator',
                         terminal: 'gnome-terminal',
@@ -227,18 +213,22 @@ HELP
                         if (request.includes(key)) {
                             this.app.chat.editResponse(_(`Opening ${key}...`));
                             this.app.utils.executeCommand(`gnome-open ${app}`);
-                            break;
+                            return;
                         }
                     }
+
+                    // search site
                     this.app.chat.editResponse(
-                        _(`I can't find the app ${request}`),
+                        _('Searching for') + ` ${request}...`,
+                    );
+                    this.app.utils.executeCommand(
+                        `firefox https://www.google.com/search?q=${request}`,
                     );
                 } catch (error) {
-                    this.app.logError('Error opening app:', error);
-                    this.app.chat.editResponse(_('Error opening app'));
+                    this.app.logError('Error opening site:', error);
+                    this.app.chat.editResponse(_('Error opening site'));
                 }
                 break;
-
             default:
                 this.app.chat.editResponse(
                     _("Sorry, I can't do that right now. Maybe in the future."),
