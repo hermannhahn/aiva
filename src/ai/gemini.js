@@ -418,58 +418,8 @@ ${_('JSON Response')}: {success: true, response: "${_('Searching for santos boat
                             },
                         },
                         {
-                            name: 'find_theaters',
-                            description:
-                                'find theaters based on location and optionally movie title which are is currently playing in theaters',
-                            parameters: {
-                                type: 'object',
-                                properties: {
-                                    location: {
-                                        type: 'string',
-                                        description:
-                                            'The city and state, e.g. San Francisco, CA or a zip code e.g. 95616',
-                                    },
-                                    movie: {
-                                        type: 'string',
-                                        description: 'Any movie title',
-                                    },
-                                },
-                                required: ['location'],
-                            },
-                        },
-                        {
-                            name: 'get_showtimes',
-                            description:
-                                'Find the start times for movies playing in a specific theater',
-                            parameters: {
-                                type: 'object',
-                                properties: {
-                                    location: {
-                                        type: 'string',
-                                        description:
-                                            'The city and state, e.g. San Francisco, CA or a zip code e.g. 95616',
-                                    },
-                                    movie: {
-                                        type: 'string',
-                                        description: 'Any movie title',
-                                    },
-                                    theater: {
-                                        type: 'string',
-                                        description: 'Name of the theater',
-                                    },
-                                    date: {
-                                        type: 'string',
-                                        description:
-                                            'Date for requested showtime',
-                                    },
-                                },
-                                required: [
-                                    'location',
-                                    'movie',
-                                    'theater',
-                                    'date',
-                                ],
-                            },
+                            name: 'read_clipboard',
+                            description: 'read text from clipboard',
                         },
                     ],
                 },
