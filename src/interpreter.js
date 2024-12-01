@@ -89,7 +89,7 @@ HELP
 
     async _localCommand(command, request = undefined) {
         switch (command) {
-            case 'readClipboardText':
+            case 'read_clipboard':
                 try {
                     await this.app.utils.readClipboardText();
                 } catch (error) {
@@ -99,7 +99,7 @@ HELP
                     this.app.logError('Error reading clipboard text:', error);
                 }
                 break;
-            case 'openYoutubeChannel':
+            case 'open_youtube_channel':
                 try {
                     this.app.chat.editResponse(this.phrases.wait());
                     const urls = {
@@ -143,7 +143,7 @@ HELP
                     this.app.chat.editResponse(_('Error opening channel'));
                 }
                 break;
-            case 'openAppOrSite':
+            case 'open_site':
                 try {
                     const urls = {
                         youtube: 'https://www.youtube.com',
@@ -195,6 +195,19 @@ HELP
                         }
                     }
 
+                    // search site
+                    this.app.chat.editResponse(
+                        _('Searching for') + ` ${request}...`,
+                    );
+                    this.app.utils.executeCommand(
+                        `firefox https://www.google.com/search?q=${request}`,
+                    );
+                } catch (error) {
+                    throw new Error('Error opening site:', error);
+                }
+                break;
+            case 'open_app':
+                try {
                     const apps = {
                         calculator: 'gnome-calculator',
                         terminal: 'gnome-terminal',
@@ -213,17 +226,9 @@ HELP
                         if (request.includes(key)) {
                             this.app.chat.editResponse(_(`Opening ${key}...`));
                             this.app.utils.executeCommand(`gnome-open ${app}`);
-                            return;
+                            break;
                         }
                     }
-
-                    // search site
-                    this.app.chat.editResponse(
-                        _('Searching for') + ` ${request}...`,
-                    );
-                    this.app.utils.executeCommand(
-                        `firefox https://www.google.com/search?q=${request}`,
-                    );
                 } catch (error) {
                     this.app.logError('Error opening site:', error);
                     this.app.chat.editResponse(_('Error opening site'));
