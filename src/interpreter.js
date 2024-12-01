@@ -32,7 +32,7 @@ export class Interpreter {
             // SLASH COMMANDS
             this.app.log('Slash command: ' + command);
             this._slashCommands(command);
-        } else if (isVoiceCommand.success) {
+        } else if (isVoiceCommand) {
             // LOCAL COMMANDS
             this.app.log('Voice command detected.');
             // this._localCommand(isLocalCommand.command, isLocalCommand.request);
@@ -71,28 +71,28 @@ HELP
         this.app.chat.editResponse(_('Invalid command'));
     }
 
-    // _isLocalCommand(text) {
-    //     text = text.toLowerCase();
-    //     let result = {success: false, command: '', request: ''};
+    _isLocalCommand(text) {
+        text = text.toLowerCase();
+        let result = {success: false, command: '', request: ''};
 
-    //     // local commands
-    //     let commands = this.commands.get();
-    //     text = text.split(/\s+/).slice(0, 10).join(' ');
+        // local commands
+        let commands = this.commands.get();
+        text = text.split(/\s+/).slice(0, 10).join(' ');
 
-    //     let commandToRun = this.commands.findCategoryInArrays(text, commands);
-    //     this.app.log('Command Type:' + commandToRun.type);
-    //     this.app.log('Command Request:' + commandToRun.request);
+        let commandToRun = this.commands.findCategoryInArrays(text, commands);
+        this.app.log('Command Type:' + commandToRun.type);
+        this.app.log('Command Request:' + commandToRun.request);
 
-    //     // if command is found
-    //     if (commandToRun) {
-    //         result.success = true;
-    //         result.command = commandToRun.type;
-    //         result.request = commandToRun.request;
-    //         return result;
-    //     }
+        // if command is found
+        if (commandToRun) {
+            result.success = true;
+            result.command = commandToRun.type;
+            result.request = commandToRun.request;
+            return result;
+        }
 
-    //     return result;
-    // }
+        return result;
+    }
 
     _isVoiceCommand(commandList, commandSuffixList, commandOptions, request) {
         // Converta a string de entrada para letras minúsculas para uma comparação case-insensitive
@@ -115,7 +115,7 @@ HELP
                             const request = normalizedRequest
                                 .substring(nextWordIndex)
                                 .split(/\s+/)[0];
-                            return {success: true, command, request};
+                            return {command, request};
                         }
                     }
                     // get the next word after command suffix
@@ -126,16 +126,16 @@ HELP
                     const request = normalizedRequest
                         .substring(nextWordIndex)
                         .split(/\s+/)[0];
-                    return {success: true, command, request};
+                    return {command, request};
                 }
             }
         }
 
         // Retorna false se nenhuma combinação for encontrada
-        return {success: false, command: null};
+        return false;
     }
 
-    async _voiceCommand(command, request = undefined) {
+    async _localCommand(command, request = undefined) {
         switch (command) {
             case 'read_clipboard':
                 try {
