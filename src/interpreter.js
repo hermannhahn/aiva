@@ -27,7 +27,7 @@ export class Interpreter {
             // SLASH COMMANDS
             this.app.log('Slash command: ' + command);
             this._slashCommands(command);
-        } else if (isLocalCommand.success) {
+        } else if (isLocalCommand) {
             // LOCAL COMMANDS
             this.app.log('Local Voice command detected.');
             // this._localCommand(isLocalCommand.command, isLocalCommand.request);
