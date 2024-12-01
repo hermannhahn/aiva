@@ -397,9 +397,7 @@ ${_('JSON Response')}: {success: true, response: "${_('Searching for santos boat
         let request = {
             contents: {
                 role: 'user',
-                parts: {
-                    text,
-                },
+                parts: [{text}],
             },
             tools: [
                 {
