@@ -30,7 +30,8 @@ export class Interpreter {
         } else if (isLocalCommand.success) {
             // LOCAL COMMANDS
             this.app.log('Local Voice command detected.');
-            this._localCommand(isLocalCommand.command, isLocalCommand.request);
+            // this._localCommand(isLocalCommand.command, isLocalCommand.request);
+            this.app.gemini.toolCommand(question);
         } else {
             // QUESTIONS
             this.app.log('Sending question to API...');
@@ -96,12 +97,11 @@ HELP
         let commands = this.commands.get();
         text = text.split(/\s+/).slice(0, 10).join(' ');
 
-        let commandToRun = this.commands.findCategoryInArrays(text, commands);
+        let commandToRun = this.commands.toolCommandActivation(text, commands);
 
         // if command is found
         if (commandToRun) {
             result.success = true;
-            result.request = commandToRun.request;
             return result;
         }
 
