@@ -83,10 +83,7 @@ HELP
         // local commands
         let commands = this.commands.get();
         text = text.split(/\s+/).slice(0, 10).join(' ');
-
         let commandToRun = this.commands.findCategoryInArrays(text, commands);
-        this.app.log('Command Type:' + commandToRun.type);
-        this.app.log('Command Request:' + commandToRun.request);
 
         // if command is found
         if (commandToRun) {

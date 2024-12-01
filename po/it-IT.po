@@ -20,26 +20,26 @@ msgstr ""
 msgid "Invalid command"
 msgstr ""
 
-#: src/interpreter.js:149
+#: src/interpreter.js:146
 #, fuzzy
 msgid "Error reading clipboard text"
 msgstr "Codice copiato negli appunti"
 
-#: src/interpreter.js:188 src/interpreter.js:252
+#: src/interpreter.js:185 src/interpreter.js:249
 msgid "Searching for"
 msgstr ""
 
-#: src/interpreter.js:195
+#: src/interpreter.js:192
 #, fuzzy
 msgid "Error opening channel"
 msgstr "Codice copiato negli appunti"
 
-#: src/interpreter.js:286
+#: src/interpreter.js:283
 #, fuzzy
 msgid "Error opening site"
 msgstr "Codice copiato negli appunti"
 
-#: src/interpreter.js:291
+#: src/interpreter.js:288
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr ""
 
