@@ -29,7 +29,7 @@ export class Interpreter {
             this.app.log('Slash command: ' + command);
             this._slashCommands(command);
         } else if (isVoiceCommand) {
-            // LOCAL COMMANDS
+            // VOICE COMMANDS
             this.app.log('Voice command detected.');
             this.app.gemini.toolCommand(question);
         } else {
