@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-02 16:22-0300\n"
+"POT-Creation-Date: 2024-12-02 16:26-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -79,7 +79,7 @@ msgstr "Olá, eu sou"
 msgid "How can I help you today?"
 msgstr "Como posso ajudar hoje?"
 
-#: src/ai/gemini.js:107 src/ai/gemini.js:169 src/ai/gemini.js:230
+#: src/ai/gemini.js:107 src/ai/gemini.js:168 src/ai/gemini.js:230
 #, fuzzy
 msgid "Sorry, I can't answer this question now."
 msgstr "Peço desculpas, eu não posso responder a esta pergunta."
