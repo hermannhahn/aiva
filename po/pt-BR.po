@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-02 17:44-0300\n"
+"POT-Creation-Date: 2024-12-02 17:48-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -43,7 +43,7 @@ msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr "Eu não posso fazer isso agora. Tente novamente mais tarde."
 
 #: src/ai/azure.js:68 src/ai/azure.js:81 src/ai/azure.js:123
-#: src/ai/azure.js:132 src/ai/gemini.js:138 src/utils/utils.js:213
+#: src/ai/azure.js:132 src/ai/gemini.js:140 src/utils/utils.js:213
 #, fuzzy
 msgid "Sorry, I'm having connection trouble. Please try again."
 msgstr "Estou tendo problemas de conexão. Por favor, tente novamente."
@@ -58,55 +58,55 @@ msgstr "Erro na transcrição!"
 msgid "Sorry, I'm having trouble to listen you. Please try again."
 msgstr "Estou tendo dificuldade de te escutar. Por favor, tente novamente."
 
-#: src/ai/gemini.js:35
+#: src/ai/gemini.js:37
 msgid "Hi, I am"
 msgstr "Olá, eu sou"
 
-#: src/ai/gemini.js:35
+#: src/ai/gemini.js:37
 msgid "I am from"
 msgstr "Eu sou de"
 
-#: src/ai/gemini.js:35
+#: src/ai/gemini.js:37
 msgid "and today is"
 msgstr "e hoje é"
 
-#: src/ai/gemini.js:36
+#: src/ai/gemini.js:38
 msgid "Hi! I am"
 msgstr "Olá, eu sou"
 
-#: src/ai/gemini.js:36
+#: src/ai/gemini.js:38
 msgid "How can I help you today?"
 msgstr "Como posso ajudar hoje?"
 
-#: src/ai/gemini.js:123
+#: src/ai/gemini.js:125
 #, fuzzy
 msgid "Sorry, I can't answer this question now."
 msgstr "Peço desculpas, eu não posso responder a esta pergunta."
 
-#: src/ai/gemini.js:174
+#: src/ai/gemini.js:176
 #, fuzzy
 msgid "Sorry, I can't do this now. Try again later."
 msgstr "Eu não posso fazer isso agora. Tente novamente mais tarde."
 
-#: src/ai/gemini.js:189
+#: src/ai/gemini.js:191
 #, fuzzy
 msgid "Sorry, I can't do this now. Maybe soon."
 msgstr "Eu não posso fazer isso agora. Tente novamente mais tarde."
 
-#: src/ai/gemini.js:228 src/ai/gemini.js:236 src/ai/gemini.js:244
+#: src/ai/gemini.js:230 src/ai/gemini.js:238 src/ai/gemini.js:246
 #, fuzzy
 msgid "Sorry, I can't answer this question."
 msgstr "Peço desculpas, eu não posso responder a esta pergunta."
 
-#: src/ai/gemini.js:231
+#: src/ai/gemini.js:233
 msgid "Possible sexually explicit content in the question or answer."
 msgstr "Possível conteúdo sexualmente explícito na pergunta ou resposta."
 
-#: src/ai/gemini.js:239
+#: src/ai/gemini.js:241
 msgid "Possible hate speech in the question or answer."
 msgstr "Possível discurso de ódio na pergunta ou resposta."
 
-#: src/ai/gemini.js:246
+#: src/ai/gemini.js:248
 msgid "Possible harassment in the question or answer."
 msgstr "Possível assédio na pergunta ou resposta."
 
