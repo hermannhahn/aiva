@@ -27,15 +27,13 @@ msgstr "Falha ao obter texto da área de transferência"
 
 #: src/interpreter.js:158 src/interpreter.js:222
 msgid "Searching for"
-msgstr ""
+msgstr "Pesquisando por"
 
 #: src/interpreter.js:165
-#, fuzzy
 msgid "Error opening channel"
 msgstr "Falha ao abrir canal"
 
 #: src/interpreter.js:256
-#, fuzzy
 msgid "Error opening site"
 msgstr "Falha ao abrir site"
 
@@ -336,180 +334,169 @@ msgstr "Veja o exemplo abaixo:"
 
 #: src/commands.js:6
 msgid "computer"
-msgstr ""
+msgstr "computador"
 
 #: src/commands.js:12
-#, fuzzy
 msgid "open"
-msgstr "abrir site"
+msgstr "abrir"
 
 #: src/commands.js:13
 msgid "start"
-msgstr ""
+msgstr "iniciar"
 
 #: src/commands.js:14
 msgid "launch"
-msgstr ""
+msgstr "lançar"
 
 #: src/commands.js:15
 msgid "run"
-msgstr ""
+msgstr "rodar"
 
 #: src/commands.js:16
 msgid "execute"
-msgstr ""
+msgstr "executar"
 
 #: src/commands.js:17
-#, fuzzy
 msgid "read"
-msgstr "leia isso"
+msgstr "ler"
 
 #: src/commands.js:18
 msgid "write"
-msgstr ""
+msgstr "escrever"
 
 #: src/commands.js:19
 msgid "access"
-msgstr ""
+msgstr "acessar"
 
 #: src/commands.js:20
 msgid "load"
-msgstr ""
+msgstr "carregar"
 
 #: src/commands.js:21
 msgid "visit"
-msgstr ""
+msgstr "visitar"
 
 #: src/commands.js:22
 msgid "browse"
-msgstr ""
+msgstr "navegar"
 
 #: src/commands.js:23
 msgid "join"
-msgstr ""
+msgstr "juntar"
 
 #: src/commands.js:24
 msgid "enter"
-msgstr ""
+msgstr "entrar"
 
 #: src/commands.js:25
-#, fuzzy
 msgid "navigate"
-msgstr "navegue para o site"
+msgstr "navegar"
 
 #: src/commands.js:26
 msgid "go"
-msgstr ""
+msgstr "ir"
 
 #: src/commands.js:27
-#, fuzzy
 msgid "take me"
-msgstr "vá para o site"
+msgstr "leve me"
 
 #: src/commands.js:31
 #, fuzzy
 msgid "this"
-msgstr "leia isso"
+msgstr "isso"
 
 #: src/commands.js:32
 #, fuzzy
 msgid "that"
-msgstr "leia isto"
+msgstr "aquilo"
 
 #: src/commands.js:33
 msgid "in"
-msgstr ""
+msgstr "em"
 
 #: src/commands.js:34
 msgid "to"
-msgstr ""
+msgstr "para"
 
 #: src/commands.js:35
 msgid "the"
-msgstr ""
+msgstr "o"
 
 #: src/commands.js:36
 #, fuzzy
 msgid "on"
-msgstr "abrir site"
+msgstr "em"
 
 #: src/commands.js:37
 msgid "at"
-msgstr ""
+msgstr "em"
 
 #: src/commands.js:38
 msgid "of"
-msgstr ""
+msgstr "de"
 
 #: src/commands.js:39
 msgid "in the"
-msgstr ""
+msgstr "no"
 
 #: src/commands.js:40
 #, fuzzy
 msgid "to the"
-msgstr "vai pro site"
+msgstr "para o"
 
 #: src/commands.js:41
 #, fuzzy
 msgid "in this"
-msgstr "leia isso"
+msgstr "nisso"
 
 #: src/commands.js:42
-#, fuzzy
 msgid "to this"
-msgstr "leia isso"
+msgstr "para isso"
 
 #: src/commands.js:43
-#, fuzzy
 msgid "in that"
-msgstr "leia isto"
+msgstr "naquilo"
 
 #: src/commands.js:44
-#, fuzzy
 msgid "to that"
-msgstr "leia isto"
+msgstr "para aquilo"
 
 #: src/commands.js:48
-#, fuzzy
 msgid "website"
-msgstr "abrir site"
+msgstr "website"
 
 #: src/commands.js:49
-#, fuzzy
 msgid "webpage"
-msgstr "abrir página"
+msgstr "página da web"
 
 #: src/commands.js:50
 msgid "web"
-msgstr ""
+msgstr "web"
 
 #: src/commands.js:51
-#, fuzzy
 msgid "site"
-msgstr "abrir site"
+msgstr "site"
 
 #: src/commands.js:52
-#, fuzzy
 msgid "page"
-msgstr "abrir página"
+msgstr "página"
 
 #: src/commands.js:53
 msgid "url"
-msgstr ""
+msgstr "url"
 
 #: src/commands.js:54
 msgid "app"
-msgstr ""
+msgstr "app"
 
 #: src/commands.js:55
 msgid "software"
-msgstr ""
+msgstr "programa"
 
 #: src/commands.js:56
 #, fuzzy
 msgid "application"
-msgstr "abre o link"
+msgstr "aplicativo"
 
 #: src/commands.js:61
 #, fuzzy
@@ -604,738 +591,3 @@ msgstr "Salvar"
 #: src/prefs.js:287
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
-
-#~ msgid "read this"
-#~ msgstr "leia isso"
-
-#~ msgid "read that"
-#~ msgstr "leia isto"
-
-#~ msgid "read text"
-#~ msgstr "ler texto"
-
-#~ msgid "read copied"
-#~ msgstr "ler texto copiado"
-
-#~ msgid "read clipboard"
-#~ msgstr "ler texto da área de transferência"
-
-#~ msgid "read memorized"
-#~ msgstr "ler texto memorizado"
-
-#~ msgid "read the text"
-#~ msgstr "leia o texto"
-
-#~ msgid "read the clipboard"
-#~ msgstr "leia o texto da área de transferência"
-
-#~ msgid "read the copied"
-#~ msgstr "leia o texto copiado"
-
-#~ msgid "read text from memory"
-#~ msgstr "leia o texto na memória"
-
-#~ msgid "read for me"
-#~ msgstr "leia pra mim"
-
-#~ msgid "you can read now"
-#~ msgstr "pode ler agora"
-
-#, fuzzy
-#~ msgid "read what's copied"
-#~ msgstr "leia o texto copiado"
-
-#, fuzzy
-#~ msgid "go site"
-#~ msgstr "abrir site"
-
-#~ msgid "open site"
-#~ msgstr "abrir site"
-
-#, fuzzy
-#~ msgid "access site"
-#~ msgstr "acessa o site"
-
-#, fuzzy
-#~ msgid "load site"
-#~ msgstr "carrega o site"
-
-#, fuzzy
-#~ msgid "visit site"
-#~ msgstr "visite o site"
-
-#, fuzzy
-#~ msgid "browse site"
-#~ msgstr "abrir site"
-
-#, fuzzy
-#~ msgid "join site"
-#~ msgstr "abrir site"
-
-#, fuzzy
-#~ msgid "enter site"
-#~ msgstr "abra o site"
-
-#, fuzzy
-#~ msgid "navigate site"
-#~ msgstr "navegue para o site"
-
-#, fuzzy
-#~ msgid "open the app"
-#~ msgstr "entra na página"
-
-#, fuzzy
-#~ msgid "open this app"
-#~ msgstr "abre esse site"
-
-#, fuzzy
-#~ msgid "open the application"
-#~ msgstr "abre o link"
-
-#, fuzzy
-#~ msgid "open this application"
-#~ msgstr "abre esse link"
-
-#, fuzzy
-#~ msgid "open app"
-#~ msgstr "abrir página"
-
-#, fuzzy
-#~ msgid "go page"
-#~ msgstr "abrir página"
-
-#~ msgid "open page"
-#~ msgstr "abrir página"
-
-#, fuzzy
-#~ msgid "access page"
-#~ msgstr "acessa o site"
-
-#, fuzzy
-#~ msgid "load page"
-#~ msgstr "abrir página"
-
-#, fuzzy
-#~ msgid "browse page"
-#~ msgstr "abrir página"
-
-#, fuzzy
-#~ msgid "join page"
-#~ msgstr "abrir página"
-
-#, fuzzy
-#~ msgid "enter page"
-#~ msgstr "entra na página"
-
-#, fuzzy
-#~ msgid "navigate page"
-#~ msgstr "navegue para o site"
-
-#, fuzzy
-#~ msgid "go link"
-#~ msgstr "abre o link"
-
-#, fuzzy
-#~ msgid "open link"
-#~ msgstr "abre o link"
-
-#, fuzzy
-#~ msgid "access link"
-#~ msgstr "acessa o site"
-
-#, fuzzy
-#~ msgid "join link"
-#~ msgstr "abre o link"
-
-#, fuzzy
-#~ msgid "enter link"
-#~ msgstr "abre o link"
-
-#, fuzzy
-#~ msgid "navigate link"
-#~ msgstr "navegue para o site"
-
-#, fuzzy
-#~ msgid "go website"
-#~ msgstr "vai pra página"
-
-#, fuzzy
-#~ msgid "open website"
-#~ msgstr "abre a página"
-
-#, fuzzy
-#~ msgid "access website"
-#~ msgstr "acessa a página"
-
-#, fuzzy
-#~ msgid "load website"
-#~ msgstr "carrega a página"
-
-#, fuzzy
-#~ msgid "visit website"
-#~ msgstr "visite a página"
-
-#, fuzzy
-#~ msgid "browse website"
-#~ msgstr "abre a página"
-
-#, fuzzy
-#~ msgid "join website"
-#~ msgstr "abre a página"
-
-#, fuzzy
-#~ msgid "enter website"
-#~ msgstr "abre a página"
-
-#, fuzzy
-#~ msgid "navigate website"
-#~ msgstr "navegue para a página"
-
-#, fuzzy
-#~ msgid "go webpage"
-#~ msgstr "abrir página"
-
-#, fuzzy
-#~ msgid "open webpage"
-#~ msgstr "abrir página"
-
-#, fuzzy
-#~ msgid "access webpage"
-#~ msgstr "acessa a página"
-
-#, fuzzy
-#~ msgid "load webpage"
-#~ msgstr "abrir página"
-
-#, fuzzy
-#~ msgid "visit webpage"
-#~ msgstr "visite a página"
-
-#, fuzzy
-#~ msgid "browse webpage"
-#~ msgstr "abrir página"
-
-#, fuzzy
-#~ msgid "join webpage"
-#~ msgstr "abrir página"
-
-#, fuzzy
-#~ msgid "enter webpage"
-#~ msgstr "abra a página"
-
-#, fuzzy
-#~ msgid "navigate webpage"
-#~ msgstr "navegue para a página"
-
-#, fuzzy
-#~ msgid "open url"
-#~ msgstr "abrir site"
-
-#, fuzzy
-#~ msgid "navigate url"
-#~ msgstr "navegue para o site"
-
-#, fuzzy
-#~ msgid "open web"
-#~ msgstr "abrir página"
-
-#, fuzzy
-#~ msgid "access web"
-#~ msgstr "acessa a página"
-
-#, fuzzy
-#~ msgid "load web"
-#~ msgstr "carrega a página"
-
-#, fuzzy
-#~ msgid "visit web"
-#~ msgstr "visite a página"
-
-#, fuzzy
-#~ msgid "enter web"
-#~ msgstr "abre a página"
-
-#, fuzzy
-#~ msgid "navigate web"
-#~ msgstr "navegue para o site"
-
-#, fuzzy
-#~ msgid "go the site"
-#~ msgstr "vai pro site"
-
-#~ msgid "open the site"
-#~ msgstr "abra o site"
-
-#~ msgid "access the site"
-#~ msgstr "acessa o site"
-
-#~ msgid "load the site"
-#~ msgstr "carrega o site"
-
-#~ msgid "visit the site"
-#~ msgstr "visite o site"
-
-#, fuzzy
-#~ msgid "browse the site"
-#~ msgstr "abra o site"
-
-#, fuzzy
-#~ msgid "join the site"
-#~ msgstr "abra o site"
-
-#, fuzzy
-#~ msgid "enter the site"
-#~ msgstr "abra o site"
-
-#, fuzzy
-#~ msgid "navigate the site"
-#~ msgstr "navegue para o site"
-
-#, fuzzy
-#~ msgid "go this site"
-#~ msgstr "abre esse site"
-
-#~ msgid "open this site"
-#~ msgstr "abre esse site"
-
-#, fuzzy
-#~ msgid "access this site"
-#~ msgstr "acessa o site"
-
-#, fuzzy
-#~ msgid "load this site"
-#~ msgstr "carrega o site"
-
-#, fuzzy
-#~ msgid "visit this site"
-#~ msgstr "visite o site"
-
-#, fuzzy
-#~ msgid "browse this site"
-#~ msgstr "abre esse site"
-
-#, fuzzy
-#~ msgid "join this site"
-#~ msgstr "abre esse site"
-
-#, fuzzy
-#~ msgid "enter this site"
-#~ msgstr "abre esse site"
-
-#, fuzzy
-#~ msgid "navigate this site"
-#~ msgstr "navegue para o site"
-
-#, fuzzy
-#~ msgid "go that site"
-#~ msgstr "vai pro site"
-
-#, fuzzy
-#~ msgid "open that site"
-#~ msgstr "abra o site"
-
-#, fuzzy
-#~ msgid "access that site"
-#~ msgstr "acessa o site"
-
-#, fuzzy
-#~ msgid "load that site"
-#~ msgstr "carrega o site"
-
-#, fuzzy
-#~ msgid "visit that site"
-#~ msgstr "visite o site"
-
-#, fuzzy
-#~ msgid "browse that site"
-#~ msgstr "abra o site"
-
-#, fuzzy
-#~ msgid "join that site"
-#~ msgstr "abra o site"
-
-#, fuzzy
-#~ msgid "enter that site"
-#~ msgstr "abra o site"
-
-#, fuzzy
-#~ msgid "navigate that site"
-#~ msgstr "navegue para o site"
-
-#, fuzzy
-#~ msgid "go in site"
-#~ msgstr "abrir site"
-
-#, fuzzy
-#~ msgid "open in site"
-#~ msgstr "abrir site"
-
-#, fuzzy
-#~ msgid "access in site"
-#~ msgstr "acessa o site"
-
-#, fuzzy
-#~ msgid "load in site"
-#~ msgstr "carrega o site"
-
-#, fuzzy
-#~ msgid "visit in site"
-#~ msgstr "visite o site"
-
-#, fuzzy
-#~ msgid "browse in site"
-#~ msgstr "abrir site"
-
-#, fuzzy
-#~ msgid "join in site"
-#~ msgstr "abre esse site"
-
-#, fuzzy
-#~ msgid "enter in site"
-#~ msgstr "abra o site"
-
-#, fuzzy
-#~ msgid "navigate in site"
-#~ msgstr "navegue para o site"
-
-#, fuzzy
-#~ msgid "go in the site"
-#~ msgstr "vai pro site"
-
-#, fuzzy
-#~ msgid "open in the site"
-#~ msgstr "abra o site"
-
-#, fuzzy
-#~ msgid "access in the site"
-#~ msgstr "acessa o site"
-
-#, fuzzy
-#~ msgid "load in the site"
-#~ msgstr "carrega o site"
-
-#, fuzzy
-#~ msgid "visit in the site"
-#~ msgstr "visite o site"
-
-#, fuzzy
-#~ msgid "browse in the site"
-#~ msgstr "abra o site"
-
-#, fuzzy
-#~ msgid "join in the site"
-#~ msgstr "abra o site"
-
-#, fuzzy
-#~ msgid "enter in the site"
-#~ msgstr "abra o site"
-
-#, fuzzy
-#~ msgid "navigate in the site"
-#~ msgstr "navegue para o site"
-
-#, fuzzy
-#~ msgid "go in this site"
-#~ msgstr "abre esse site"
-
-#, fuzzy
-#~ msgid "open in this site"
-#~ msgstr "abre esse site"
-
-#, fuzzy
-#~ msgid "access in this site"
-#~ msgstr "acessa o site"
-
-#, fuzzy
-#~ msgid "load in this site"
-#~ msgstr "carrega o site"
-
-#, fuzzy
-#~ msgid "visit in this site"
-#~ msgstr "visite o site"
-
-#, fuzzy
-#~ msgid "browse in this site"
-#~ msgstr "abre esse site"
-
-#, fuzzy
-#~ msgid "join in this site"
-#~ msgstr "abre esse site"
-
-#, fuzzy
-#~ msgid "enter in this site"
-#~ msgstr "abre esse site"
-
-#, fuzzy
-#~ msgid "navigate in this site"
-#~ msgstr "navegue para o site"
-
-#, fuzzy
-#~ msgid "go in that site"
-#~ msgstr "vai pro site"
-
-#, fuzzy
-#~ msgid "open in that site"
-#~ msgstr "abra o site"
-
-#, fuzzy
-#~ msgid "access in that site"
-#~ msgstr "acessa o site"
-
-#, fuzzy
-#~ msgid "load in that site"
-#~ msgstr "carrega o site"
-
-#, fuzzy
-#~ msgid "visit in that site"
-#~ msgstr "visite o site"
-
-#, fuzzy
-#~ msgid "browse in that site"
-#~ msgstr "abra o site"
-
-#, fuzzy
-#~ msgid "join in that site"
-#~ msgstr "abra o site"
-
-#, fuzzy
-#~ msgid "enter in that site"
-#~ msgstr "abra o site"
-
-#, fuzzy
-#~ msgid "navigate in that site"
-#~ msgstr "navegue para o site"
-
-#, fuzzy
-#~ msgid "go to site"
-#~ msgstr "vai pro site"
-
-#, fuzzy
-#~ msgid "open to site"
-#~ msgstr "abra o site"
-
-#, fuzzy
-#~ msgid "access to site"
-#~ msgstr "acessa o site"
-
-#, fuzzy
-#~ msgid "load to site"
-#~ msgstr "carrega o site"
-
-#, fuzzy
-#~ msgid "visit to site"
-#~ msgstr "visite o site"
-
-#, fuzzy
-#~ msgid "browse to site"
-#~ msgstr "abra o site"
-
-#, fuzzy
-#~ msgid "join to site"
-#~ msgstr "abra o site"
-
-#, fuzzy
-#~ msgid "enter to site"
-#~ msgstr "abra o site"
-
-#, fuzzy
-#~ msgid "navigate to site"
-#~ msgstr "navegue para o site"
-
-#~ msgid "go to the site"
-#~ msgstr "vai pro site"
-
-#, fuzzy
-#~ msgid "open to the site"
-#~ msgstr "abra o site"
-
-#, fuzzy
-#~ msgid "access to the site"
-#~ msgstr "acessa o site"
-
-#, fuzzy
-#~ msgid "load to the site"
-#~ msgstr "carrega o site"
-
-#, fuzzy
-#~ msgid "visit to the site"
-#~ msgstr "visite o site"
-
-#, fuzzy
-#~ msgid "browse to the site"
-#~ msgstr "vai pro site"
-
-#, fuzzy
-#~ msgid "join to the site"
-#~ msgstr "vai pro site"
-
-#, fuzzy
-#~ msgid "enter to the site"
-#~ msgstr "navegue para o site"
-
-#~ msgid "navigate to the site"
-#~ msgstr "navegue para o site"
-
-#, fuzzy
-#~ msgid "go to this site"
-#~ msgstr "vai pro site"
-
-#, fuzzy
-#~ msgid "open to this site"
-#~ msgstr "abre esse site"
-
-#, fuzzy
-#~ msgid "access to this site"
-#~ msgstr "acessa o site"
-
-#, fuzzy
-#~ msgid "load to this site"
-#~ msgstr "carrega o site"
-
-#, fuzzy
-#~ msgid "visit to this site"
-#~ msgstr "visite o site"
-
-#, fuzzy
-#~ msgid "browse to this site"
-#~ msgstr "abre esse site"
-
-#, fuzzy
-#~ msgid "join to this site"
-#~ msgstr "abre esse site"
-
-#, fuzzy
-#~ msgid "enter to this site"
-#~ msgstr "abre esse site"
-
-#, fuzzy
-#~ msgid "navigate to this site"
-#~ msgstr "navegue para o site"
-
-#, fuzzy
-#~ msgid "go to that site"
-#~ msgstr "vai pro site"
-
-#, fuzzy
-#~ msgid "open to that site"
-#~ msgstr "abra o site"
-
-#, fuzzy
-#~ msgid "access to that site"
-#~ msgstr "acessa o site"
-
-#, fuzzy
-#~ msgid "load to that site"
-#~ msgstr "carrega o site"
-
-#, fuzzy
-#~ msgid "visit to that site"
-#~ msgstr "visite o site"
-
-#, fuzzy
-#~ msgid "browse to that site"
-#~ msgstr "vai pro site"
-
-#, fuzzy
-#~ msgid "join to that site"
-#~ msgstr "vai pro site"
-
-#, fuzzy
-#~ msgid "enter to that site"
-#~ msgstr "navegue para o site"
-
-#, fuzzy
-#~ msgid "navigate to that site"
-#~ msgstr "navegue para o site"
-
-#~ msgid "open this link"
-#~ msgstr "abre esse link"
-
-#~ msgid "take me to the site"
-#~ msgstr "vá para o site"
-
-#~ msgid "take me to the website"
-#~ msgstr "vá para a página"
-
-#, fuzzy
-#~ msgid "open the youtube channel"
-#~ msgstr "abre o canal no youtube"
-
-#, fuzzy
-#~ msgid "open this youtube channel"
-#~ msgstr "abra o canal no youtube"
-
-#, fuzzy
-#~ msgid "open youtube channel"
-#~ msgstr "abrir canal no youtube"
-
-#, fuzzy
-#~ msgid "open the channel on youtube"
-#~ msgstr "abre o canal no youtube"
-
-#, fuzzy
-#~ msgid "open this channel on youtube"
-#~ msgstr "abre esse canal no youtube"
-
-#, fuzzy
-#~ msgid "go to the youtube channel"
-#~ msgstr "abre o canal no youtube"
-
-#, fuzzy
-#~ msgid "go to this youtube channel"
-#~ msgstr "abra o canal no youtube"
-
-#, fuzzy
-#~ msgid "access the youtube channel"
-#~ msgstr "acessa o canal no youtube"
-
-#, fuzzy
-#~ msgid "access this youtube channel"
-#~ msgstr "acessa esse canal no youtube"
-
-#, fuzzy
-#~ msgid "visit the youtube channel"
-#~ msgstr "visita o canal no youtube"
-
-#, fuzzy
-#~ msgid "visit this youtube channel"
-#~ msgstr "visita esse canal no youtube"
-
-#, fuzzy
-#~ msgid "navigate to the youtube channel"
-#~ msgstr "navegue para o canal no youtube"
-
-#, fuzzy
-#~ msgid "navigate to this youtube channel"
-#~ msgstr "navegue para esse canal no youtube"
-
-#, fuzzy
-#~ msgid "load the youtube channel"
-#~ msgstr "abre o canal no youtube"
-
-#, fuzzy
-#~ msgid "load this youtube channel"
-#~ msgstr "abra o canal no youtube"
-
-#, fuzzy
-#~ msgid "access the channel on youtube"
-#~ msgstr "acessa o canal no youtube"
-
-#, fuzzy
-#~ msgid "visit the channel on youtube"
-#~ msgstr "visita o canal no youtube"
-
-#, fuzzy
-#~ msgid "navigate to the channel on youtube"
-#~ msgstr "visita o canal no youtube"
-
-#, fuzzy
-#~ msgid "load the channel on youtube"
-#~ msgstr "abre o canal no youtube"
-
-#, fuzzy
-#~ msgid "Error opening app"
-#~ msgstr "Falha ao abrir aplicativo"
-
-#~ msgid "go online"
-#~ msgstr "entra no site"
