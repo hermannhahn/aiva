@@ -162,18 +162,21 @@ export class GoogleGemini {
                     let jsonResponse = {};
                     jsonResponse = JSON.stringify(res);
                     this.app.log('Tool response: ' + jsonResponse);
-                    let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
 
-                    if (aiResponse === undefined) {
+                    let toolResponse =
+                        res.candidates[0]?.content?.parts[0]?.functionCall;
+
+                    if (toolResponse === undefined) {
                         this.app.chat.editResponse(
-                            _("Sorry, I can't answer this question now."),
+                            _("Sorry, I can't do this now. Maybe soon."),
                         );
                         return;
                     }
 
                     // tool response
-                    jsonResponse = JSON.parse(aiResponse);
-                    this.app.log('Tool response: ' + jsonResponse);
+                    let tool = JSON.parse(toolResponse);
+                    this.app.log('Tool name: ' + tool.name);
+                    this.app.log('Tool args: ' + tool.args.name);
                 },
             );
         } catch (error) {
@@ -494,49 +497,6 @@ ${_('JSON Response')}: {success: true, response: "${_('Searching for santos boat
                                 'read text from clipboard, or non specified source, like: read this for me',
                         },
                     ],
-                },
-                {
-                    candidates: [
-                        {
-                            content: {
-                                parts: [
-                                    {
-                                        functionCall: {
-                                            name: 'open_app',
-                                            args: {name: 'YouTube'},
-                                        },
-                                    },
-                                ],
-                                role: 'model',
-                            },
-                            finishReason: 'STOP',
-                            index: 0,
-                            safetyRatings: [
-                                {
-                                    category: 'HARM_CATEGORY_DANGEROUS_CONTENT',
-                                    probability: 'NEGLIGIBLE',
-                                },
-                                {
-                                    category: 'HARM_CATEGORY_HATE_SPEECH',
-                                    probability: 'NEGLIGIBLE',
-                                },
-                                {
-                                    category: 'HARM_CATEGORY_HARASSMENT',
-                                    probability: 'NEGLIGIBLE',
-                                },
-                                {
-                                    category: 'HARM_CATEGORY_SEXUALLY_EXPLICIT',
-                                    probability: 'NEGLIGIBLE',
-                                },
-                            ],
-                        },
-                    ],
-                    usageMetadata: {
-                        promptTokenCount: 359,
-                        candidatesTokenCount: 15,
-                        totalTokenCount: 374,
-                    },
-                    modelVersion: 'gemini-1.0-pro',
                 },
             ],
         };
