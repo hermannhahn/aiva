@@ -159,6 +159,8 @@ export class GoogleGemini {
                         );
                         return;
                     }
+
+                    // DEBUG
                     // let jsonResponse = {};
                     // jsonResponse = JSON.stringify(res);
                     // this.app.log('Tool response: ' + jsonResponse);
