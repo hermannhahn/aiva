@@ -263,7 +263,7 @@ HELP
                     for (const [key, app] of Object.entries(apps)) {
                         if (request.includes(key)) {
                             this.app.chat.editResponse(_(`Opening ${key}...`));
-                            this.app.utils.executeCommand(`gnome-open ${app}`);
+                            this.app.utils.executeCommand(app);
                             break;
                         }
                     }
