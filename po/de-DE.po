@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-02 17:11-0300\n"
+"POT-Creation-Date: 2024-12-02 17:13-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language de-DE\n"
@@ -34,12 +34,12 @@ msgstr ""
 msgid "Error opening channel"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/interpreter.js:268
+#: src/interpreter.js:270
 #, fuzzy
 msgid "Error opening site"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/interpreter.js:273
+#: src/interpreter.js:275
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr ""
 

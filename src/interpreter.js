@@ -121,7 +121,7 @@ HELP
         return false;
     }
 
-    async _localCommand(command, request = undefined) {
+    async localCommand(command, request = undefined) {
         switch (command) {
             case 'read_clipboard':
                 try {
@@ -255,6 +255,8 @@ HELP
                         music: 'gnome-music',
                         videos: 'gnome-videos',
                         documents: 'org.gnome.Nautilus.Document',
+                        youtube: 'firefox https://www.youtube.com',
+                        'google drive': 'firefox https://drive.google.com',
                     };
                     for (const [key, app] of Object.entries(apps)) {
                         if (request.includes(key)) {
