@@ -22,16 +22,16 @@ export class Interpreter {
         this.app.chat.addResponse('...');
         this.app.ui.statusIcon('⌛');
 
-        const isVoiceCommand = this._isVoiceCommand(question);
+        // const isVoiceCommand = this._isVoiceCommand(question);
 
         if (this._isSlashCommand(question)) {
             // SLASH COMMANDS
             this.app.log('Slash command: ' + command);
             this._slashCommands(command);
-        } else if (isVoiceCommand) {
-            // VOICE COMMANDS
-            this.app.log('Voice command detected.');
-            this.app.gemini.toolCommand(question);
+            // } else if (isVoiceCommand) {
+            //     // VOICE COMMANDS
+            //     this.app.log('Voice command detected.');
+            //     this.app.gemini.toolCommand(question);
         } else {
             // QUESTIONS
             this.app.log('Sending question to API...');
