@@ -122,6 +122,8 @@ HELP
     }
 
     async localCommand(command, request = undefined) {
+        command = command.toLowerCase();
+        request = request?.toLowerCase();
         switch (command) {
             case 'read_clipboard':
                 try {
