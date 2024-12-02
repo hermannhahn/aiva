@@ -163,10 +163,10 @@ export class GoogleGemini {
                     jsonResponse = JSON.stringify(res);
                     this.app.log('Tool response: ' + jsonResponse);
 
-                    let toolResponse =
+                    let tool =
                         res.candidates[0]?.content?.parts[0]?.functionCall;
 
-                    if (toolResponse === undefined) {
+                    if (tool === undefined) {
                         this.app.chat.editResponse(
                             _("Sorry, I can't do this now. Maybe soon."),
                         );
@@ -174,7 +174,7 @@ export class GoogleGemini {
                     }
 
                     // tool response
-                    let tool = JSON.parse(toolResponse);
+                    // let tool = JSON.parse(toolResponse);
                     this.app.log('Tool name: ' + tool.name);
                     this.app.log('Tool args: ' + tool.args.name);
                 },
