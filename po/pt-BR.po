@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-02 15:52-0300\n"
+"POT-Creation-Date: 2024-12-02 15:58-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -525,7 +525,6 @@ msgid "in the-var-4"
 msgstr "em a"
 
 #: src/commands.js:57
-#, fuzzy
 msgid "in the-var-5"
 msgstr ""
 
@@ -580,12 +579,10 @@ msgid "in this-var-3"
 msgstr "nesta"
 
 #: src/commands.js:68
-#, fuzzy
 msgid "in this-var-4"
 msgstr ""
 
 #: src/commands.js:69
-#, fuzzy
 msgid "in this-var-5"
 msgstr ""
 
@@ -619,201 +616,211 @@ msgid "to this-var-5"
 msgstr "pra esta"
 
 #: src/commands.js:76
+#, fuzzy
+msgid "to this-var-6"
+msgstr "para isto"
+
+#: src/commands.js:77
+#, fuzzy
+msgid "to this-var-7"
+msgstr "para isto"
+
+#: src/commands.js:78
 msgid "in that"
 msgstr "naquilo"
 
-#: src/commands.js:77
+#: src/commands.js:79
 #, fuzzy
 msgid "in that-var-1"
 msgstr "naquele"
 
-#: src/commands.js:78
+#: src/commands.js:80
 #, fuzzy
 msgid "in that-var-2"
 msgstr "naquela"
 
-#: src/commands.js:79
+#: src/commands.js:81
 #, fuzzy
 msgid "in that-var-3"
 msgstr "naquele"
 
-#: src/commands.js:80
+#: src/commands.js:82
 #, fuzzy
 msgid "in that-var-4"
 msgstr "naquele"
 
-#: src/commands.js:81
+#: src/commands.js:83
 #, fuzzy
 msgid "in that-var-5"
 msgstr "naquele"
 
-#: src/commands.js:82
+#: src/commands.js:84
 msgid "to that"
 msgstr "para aquilo"
 
-#: src/commands.js:83
+#: src/commands.js:85
 #, fuzzy
 msgid "to that-var-1"
 msgstr "para aquele"
 
-#: src/commands.js:84
+#: src/commands.js:86
 #, fuzzy
 msgid "to that-var-2"
 msgstr "para aquela"
 
-#: src/commands.js:85
+#: src/commands.js:87
 #, fuzzy
 msgid "to that-var-3"
 msgstr "para aquele"
 
-#: src/commands.js:86
+#: src/commands.js:88
 #, fuzzy
 msgid "to that-var-4"
 msgstr "para aquele"
 
-#: src/commands.js:87
+#: src/commands.js:89
 #, fuzzy
 msgid "to that-var-5"
 msgstr "para aquele"
 
-#: src/commands.js:88
+#: src/commands.js:90
 #, fuzzy
 msgid "this"
 msgstr "isso"
 
-#: src/commands.js:89
+#: src/commands.js:91
 msgid "this-var-1"
 msgstr ""
 
-#: src/commands.js:90
+#: src/commands.js:92
 msgid "this-var-2"
 msgstr ""
 
-#: src/commands.js:91
+#: src/commands.js:93
 #, fuzzy
 msgid "this-var-3"
 msgstr "nisto"
 
-#: src/commands.js:92
+#: src/commands.js:94
 #, fuzzy
 msgid "this-var-4"
 msgstr "nisto"
 
-#: src/commands.js:93
+#: src/commands.js:95
 #, fuzzy
 msgid "this-var-5"
 msgstr "nisto"
 
-#: src/commands.js:94
+#: src/commands.js:96
 #, fuzzy
 msgid "that"
 msgstr "aquilo"
 
-#: src/commands.js:95
+#: src/commands.js:97
 msgid "that-var-1"
 msgstr ""
 
-#: src/commands.js:96
+#: src/commands.js:98
 msgid "that-var-2"
 msgstr ""
 
-#: src/commands.js:97
+#: src/commands.js:99
 #, fuzzy
 msgid "that-var-3"
 msgstr "naquele"
 
-#: src/commands.js:98
+#: src/commands.js:100
 #, fuzzy
 msgid "that-var-4"
 msgstr "naquele"
 
-#: src/commands.js:99
+#: src/commands.js:101
 #, fuzzy
 msgid "that-var-5"
 msgstr "naquele"
 
-#: src/commands.js:100
+#: src/commands.js:102
 msgid "in"
 msgstr "em"
 
-#: src/commands.js:101
+#: src/commands.js:103
 msgid "in-var-1"
 msgstr ""
 
-#: src/commands.js:102
+#: src/commands.js:104
 msgid "in-var-2"
 msgstr ""
 
-#: src/commands.js:103
+#: src/commands.js:105
 #, fuzzy
 msgid "in-var-3"
 msgstr "junta"
 
-#: src/commands.js:104
+#: src/commands.js:106
 #, fuzzy
 msgid "in-var-4"
 msgstr "junta"
 
-#: src/commands.js:105
+#: src/commands.js:107
 #, fuzzy
 msgid "in-var-5"
 msgstr "junta"
 
-#: src/commands.js:106
+#: src/commands.js:108
 msgid "to"
 msgstr "para"
 
-#: src/commands.js:107
+#: src/commands.js:109
 msgid "to-var-1"
 msgstr ""
 
-#: src/commands.js:108
+#: src/commands.js:110
 msgid "to-var-2"
 msgstr ""
 
-#: src/commands.js:109
+#: src/commands.js:111
 #, fuzzy
 msgid "to-var-3"
 msgstr "para a"
 
-#: src/commands.js:110
+#: src/commands.js:112
 #, fuzzy
 msgid "to-var-4"
 msgstr "para a"
 
-#: src/commands.js:111
+#: src/commands.js:113
 #, fuzzy
 msgid "to-var-5"
 msgstr "para a"
 
-#: src/commands.js:112
+#: src/commands.js:114
 msgid "the"
 msgstr "o"
 
-#: src/commands.js:113
+#: src/commands.js:115
 msgid "the-var-1"
 msgstr ""
 
-#: src/commands.js:114
+#: src/commands.js:116
 msgid "the-var-2"
 msgstr ""
 
-#: src/commands.js:115
+#: src/commands.js:117
 #, fuzzy
 msgid "the-var-3"
 msgstr "no"
 
-#: src/commands.js:116
+#: src/commands.js:118
 #, fuzzy
 msgid "the-var-4"
 msgstr "no"
 
-#: src/commands.js:117
+#: src/commands.js:119
 #, fuzzy
 msgid "the-var-5"
 msgstr "no"
 
-#: src/commands.js:122
+#: src/commands.js:124
 #, fuzzy
 msgid "Read text from clipboard"
 msgstr "leia o texto que copiei"

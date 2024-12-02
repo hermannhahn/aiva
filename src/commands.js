@@ -73,6 +73,8 @@ export class Commands {
             _('to this-var-3'),
             _('to this-var-4'),
             _('to this-var-5'),
+            _('to this-var-6'),
+            _('to this-var-7'),
             _('in that'),
             _('in that-var-1'),
             _('in that-var-2'),

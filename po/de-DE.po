@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-02 15:52-0300\n"
+"POT-Creation-Date: 2024-12-02 15:58-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language de-DE\n"
@@ -598,202 +598,212 @@ msgstr "Code kopiert in die Zwischenablage"
 
 #: src/commands.js:76
 #, fuzzy
-msgid "in that"
+msgid "to this-var-6"
 msgstr "Code kopiert in die Zwischenablage"
 
 #: src/commands.js:77
 #, fuzzy
-msgid "in that-var-1"
+msgid "to this-var-7"
 msgstr "Code kopiert in die Zwischenablage"
 
 #: src/commands.js:78
 #, fuzzy
-msgid "in that-var-2"
+msgid "in that"
 msgstr "Code kopiert in die Zwischenablage"
 
 #: src/commands.js:79
 #, fuzzy
-msgid "in that-var-3"
+msgid "in that-var-1"
 msgstr "Code kopiert in die Zwischenablage"
 
 #: src/commands.js:80
 #, fuzzy
-msgid "in that-var-4"
+msgid "in that-var-2"
 msgstr "Code kopiert in die Zwischenablage"
 
 #: src/commands.js:81
 #, fuzzy
-msgid "in that-var-5"
+msgid "in that-var-3"
 msgstr "Code kopiert in die Zwischenablage"
 
 #: src/commands.js:82
 #, fuzzy
-msgid "to that"
+msgid "in that-var-4"
 msgstr "Code kopiert in die Zwischenablage"
 
 #: src/commands.js:83
 #, fuzzy
-msgid "to that-var-1"
+msgid "in that-var-5"
 msgstr "Code kopiert in die Zwischenablage"
 
 #: src/commands.js:84
 #, fuzzy
-msgid "to that-var-2"
+msgid "to that"
 msgstr "Code kopiert in die Zwischenablage"
 
 #: src/commands.js:85
 #, fuzzy
-msgid "to that-var-3"
+msgid "to that-var-1"
 msgstr "Code kopiert in die Zwischenablage"
 
 #: src/commands.js:86
 #, fuzzy
-msgid "to that-var-4"
+msgid "to that-var-2"
 msgstr "Code kopiert in die Zwischenablage"
 
 #: src/commands.js:87
 #, fuzzy
-msgid "to that-var-5"
+msgid "to that-var-3"
 msgstr "Code kopiert in die Zwischenablage"
 
 #: src/commands.js:88
 #, fuzzy
-msgid "this"
+msgid "to that-var-4"
 msgstr "Code kopiert in die Zwischenablage"
 
 #: src/commands.js:89
+#, fuzzy
+msgid "to that-var-5"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/commands.js:90
+#, fuzzy
+msgid "this"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/commands.js:91
 msgid "this-var-1"
 msgstr ""
 
-#: src/commands.js:90
+#: src/commands.js:92
 msgid "this-var-2"
 msgstr ""
 
-#: src/commands.js:91
+#: src/commands.js:93
 #, fuzzy
 msgid "this-var-3"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:92
+#: src/commands.js:94
 #, fuzzy
 msgid "this-var-4"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:93
+#: src/commands.js:95
 #, fuzzy
 msgid "this-var-5"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:94
+#: src/commands.js:96
 #, fuzzy
 msgid "that"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:95
+#: src/commands.js:97
 msgid "that-var-1"
 msgstr ""
 
-#: src/commands.js:96
+#: src/commands.js:98
 msgid "that-var-2"
 msgstr ""
 
-#: src/commands.js:97
+#: src/commands.js:99
 #, fuzzy
 msgid "that-var-3"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:98
+#: src/commands.js:100
 #, fuzzy
 msgid "that-var-4"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:99
+#: src/commands.js:101
 #, fuzzy
 msgid "that-var-5"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:100
+#: src/commands.js:102
 msgid "in"
 msgstr ""
 
-#: src/commands.js:101
+#: src/commands.js:103
 msgid "in-var-1"
 msgstr ""
 
-#: src/commands.js:102
+#: src/commands.js:104
 msgid "in-var-2"
 msgstr ""
 
-#: src/commands.js:103
+#: src/commands.js:105
 #, fuzzy
 msgid "in-var-3"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:104
+#: src/commands.js:106
 #, fuzzy
 msgid "in-var-4"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:105
+#: src/commands.js:107
 #, fuzzy
 msgid "in-var-5"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:106
+#: src/commands.js:108
 msgid "to"
 msgstr ""
 
-#: src/commands.js:107
+#: src/commands.js:109
 msgid "to-var-1"
 msgstr ""
 
-#: src/commands.js:108
+#: src/commands.js:110
 msgid "to-var-2"
 msgstr ""
 
-#: src/commands.js:109
+#: src/commands.js:111
 #, fuzzy
 msgid "to-var-3"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:110
+#: src/commands.js:112
 #, fuzzy
 msgid "to-var-4"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:111
+#: src/commands.js:113
 #, fuzzy
 msgid "to-var-5"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:112
+#: src/commands.js:114
 msgid "the"
 msgstr ""
 
-#: src/commands.js:113
+#: src/commands.js:115
 msgid "the-var-1"
 msgstr ""
 
-#: src/commands.js:114
+#: src/commands.js:116
 msgid "the-var-2"
 msgstr ""
 
-#: src/commands.js:115
+#: src/commands.js:117
 #, fuzzy
 msgid "the-var-3"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:116
+#: src/commands.js:118
 #, fuzzy
 msgid "the-var-4"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:117
+#: src/commands.js:119
 #, fuzzy
 msgid "the-var-5"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/commands.js:122
+#: src/commands.js:124
 #, fuzzy
 msgid "Read text from clipboard"
 msgstr "Code kopiert in die Zwischenablage"
