@@ -86,6 +86,22 @@ export class GoogleGemini {
                         this.app.chat.editResponse(response);
                         return;
                     }
+
+                    let tool =
+                        res.candidates[0]?.content?.parts[0]?.functionCall;
+
+                    if (tool !== undefined) {
+                        // tool response
+                        this.app.log('Tool name: ' + tool.name);
+                        this.app.log('Tool args: ' + tool.args.name);
+
+                        this.app.interpreter.localCommand(
+                            tool.name,
+                            tool.args.name,
+                        );
+                        return;
+                    }
+
                     let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
                     this.app.log('Response: ' + aiResponse);
 
