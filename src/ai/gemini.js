@@ -106,24 +106,23 @@ export class GoogleGemini {
                             tool.name,
                             tool.args.name,
                         );
-                        return;
                     }
 
                     let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
+
+                    if (aiResponse === undefined) {
+                        return;
+                    }
+
                     this.app.log('Response: ' + aiResponse);
 
                     // Safety
                     let safetyReason = this.safetyReason(question, res);
-                    if (safetyReason && !this.block) {
-                        if (safetyReason === 'tryRunCommand') {
-                            this.block = true;
-                            this.runCommand(question);
-                            return;
-                        }
+
+                    if (safetyReason) {
                         this.app.chat.editResponse(safetyReason);
                         return;
                     }
-                    this.block = false;
 
                     if (aiResponse === undefined) {
                         this.app.chat.editResponse(
