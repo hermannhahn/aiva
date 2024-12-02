@@ -495,6 +495,49 @@ ${_('JSON Response')}: {success: true, response: "${_('Searching for santos boat
                         },
                     ],
                 },
+                {
+                    candidates: [
+                        {
+                            content: {
+                                parts: [
+                                    {
+                                        functionCall: {
+                                            name: 'open_app',
+                                            args: {name: 'YouTube'},
+                                        },
+                                    },
+                                ],
+                                role: 'model',
+                            },
+                            finishReason: 'STOP',
+                            index: 0,
+                            safetyRatings: [
+                                {
+                                    category: 'HARM_CATEGORY_DANGEROUS_CONTENT',
+                                    probability: 'NEGLIGIBLE',
+                                },
+                                {
+                                    category: 'HARM_CATEGORY_HATE_SPEECH',
+                                    probability: 'NEGLIGIBLE',
+                                },
+                                {
+                                    category: 'HARM_CATEGORY_HARASSMENT',
+                                    probability: 'NEGLIGIBLE',
+                                },
+                                {
+                                    category: 'HARM_CATEGORY_SEXUALLY_EXPLICIT',
+                                    probability: 'NEGLIGIBLE',
+                                },
+                            ],
+                        },
+                    ],
+                    usageMetadata: {
+                        promptTokenCount: 359,
+                        candidatesTokenCount: 15,
+                        totalTokenCount: 374,
+                    },
+                    modelVersion: 'gemini-1.0-pro',
+                },
             ],
         };
         const stringfiedHistory = JSON.stringify(request);
