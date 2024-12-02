@@ -342,11 +342,11 @@ msgstr "abrir"
 
 #: src/commands.js:13
 msgid "open-var-1"
-msgstr ""
+msgstr "abra"
 
 #: src/commands.js:14
 msgid "open-var-2"
-msgstr ""
+msgstr "abre"
 
 #: src/commands.js:15
 msgid "start"
@@ -355,12 +355,12 @@ msgstr "iniciar"
 #: src/commands.js:16
 #, fuzzy
 msgid "start-var-1"
-msgstr "iniciar"
+msgstr "inicia"
 
 #: src/commands.js:17
 #, fuzzy
 msgid "start-var-2"
-msgstr "iniciar"
+msgstr "inicie"
 
 #: src/commands.js:18
 msgid "launch"
@@ -369,12 +369,12 @@ msgstr "lançar"
 #: src/commands.js:19
 #, fuzzy
 msgid "launch-var-1"
-msgstr "lançar"
+msgstr "lança"
 
 #: src/commands.js:20
 #, fuzzy
 msgid "launch-var-2"
-msgstr "lançar"
+msgstr "lance"
 
 #: src/commands.js:21
 msgid "run"
@@ -382,11 +382,11 @@ msgstr "rodar"
 
 #: src/commands.js:22
 msgid "run-var-1"
-msgstr ""
+msgstr "roda"
 
 #: src/commands.js:23
 msgid "run-var-2"
-msgstr ""
+msgstr "rode"
 
 #: src/commands.js:24
 msgid "execute"
@@ -395,12 +395,12 @@ msgstr "executar"
 #: src/commands.js:25
 #, fuzzy
 msgid "execute-var-1"
-msgstr "executar"
+msgstr "executa"
 
 #: src/commands.js:26
 #, fuzzy
 msgid "execute-var-2"
-msgstr "executar"
+msgstr "execute"
 
 #: src/commands.js:27
 msgid "read"
@@ -408,11 +408,11 @@ msgstr "ler"
 
 #: src/commands.js:28
 msgid "read-var-1"
-msgstr ""
+msgstr "leia"
 
 #: src/commands.js:29
 msgid "read-var-2"
-msgstr ""
+msgstr "lê"
 
 #: src/commands.js:30
 msgid "write"
@@ -421,12 +421,12 @@ msgstr "escrever"
 #: src/commands.js:31
 #, fuzzy
 msgid "write-var-1"
-msgstr "escrever"
+msgstr "escreva"
 
 #: src/commands.js:32
 #, fuzzy
 msgid "write-var-2"
-msgstr "escrever"
+msgstr "escreve"
 
 #: src/commands.js:33
 msgid "access"
@@ -435,12 +435,12 @@ msgstr "acessar"
 #: src/commands.js:34
 #, fuzzy
 msgid "access-var-1"
-msgstr "acessar"
+msgstr "acessa"
 
 #: src/commands.js:35
 #, fuzzy
 msgid "access-var-2"
-msgstr "acessar"
+msgstr "acesse"
 
 #: src/commands.js:36
 msgid "load"
@@ -448,11 +448,11 @@ msgstr "carregar"
 
 #: src/commands.js:37
 msgid "load-var-1"
-msgstr ""
+msgstr "carrega"
 
 #: src/commands.js:38
 msgid "load-var-2"
-msgstr ""
+msgstr "carregue"
 
 #: src/commands.js:39
 msgid "visit"
@@ -461,12 +461,12 @@ msgstr "visitar"
 #: src/commands.js:40
 #, fuzzy
 msgid "visit-var-1"
-msgstr "visitar"
+msgstr "visita"
 
 #: src/commands.js:41
 #, fuzzy
 msgid "visit-var-2"
-msgstr "visitar"
+msgstr "visite"
 
 #: src/commands.js:42
 msgid "browse"
@@ -475,12 +475,12 @@ msgstr "navegar"
 #: src/commands.js:43
 #, fuzzy
 msgid "browse-var-1"
-msgstr "navegar"
+msgstr "navega"
 
 #: src/commands.js:44
 #, fuzzy
 msgid "browse-var-2"
-msgstr "navegar"
+msgstr "navegue"
 
 #: src/commands.js:45
 msgid "join"
@@ -488,11 +488,11 @@ msgstr "juntar"
 
 #: src/commands.js:46
 msgid "join-var-1"
-msgstr ""
+msgstr "junta"
 
 #: src/commands.js:47
 msgid "join-var-2"
-msgstr ""
+msgstr "junte"
 
 #: src/commands.js:48
 msgid "enter"
@@ -501,12 +501,12 @@ msgstr "entrar"
 #: src/commands.js:49
 #, fuzzy
 msgid "enter-var-1"
-msgstr "entrar"
+msgstr "entra"
 
 #: src/commands.js:50
 #, fuzzy
 msgid "enter-var-2"
-msgstr "entrar"
+msgstr "entre"
 
 #: src/commands.js:51
 msgid "navigate"
@@ -515,12 +515,12 @@ msgstr "navegar"
 #: src/commands.js:52
 #, fuzzy
 msgid "navigate-var-1"
-msgstr "navegar"
+msgstr "navega"
 
 #: src/commands.js:53
 #, fuzzy
 msgid "navigate-var-2"
-msgstr "navegar"
+msgstr "navegue"
 
 #: src/commands.js:54
 msgid "go"
@@ -541,16 +541,16 @@ msgstr "leve me"
 #: src/commands.js:58
 #, fuzzy
 msgid "take me-var-1"
-msgstr "leve me"
+msgstr "me leva"
 
 #: src/commands.js:59
 #, fuzzy
 msgid "take me-var-2"
-msgstr "leve me"
+msgstr "me leve"
 
 #: src/commands.js:63
 msgid "in the"
-msgstr "no"
+msgstr "em"
 
 #: src/commands.js:64
 #, fuzzy
@@ -560,7 +560,7 @@ msgstr "no"
 #: src/commands.js:65
 #, fuzzy
 msgid "in the-var-2"
-msgstr "no"
+msgstr "na"
 
 #: src/commands.js:66
 #, fuzzy
@@ -570,12 +570,12 @@ msgstr "para o"
 #: src/commands.js:67
 #, fuzzy
 msgid "to the-var-1"
-msgstr "para o"
+msgstr "para a"
 
 #: src/commands.js:68
 #, fuzzy
 msgid "to the-var-2"
-msgstr "para o"
+msgstr "pro"
 
 #: src/commands.js:69
 #, fuzzy
@@ -585,7 +585,7 @@ msgstr "nisso"
 #: src/commands.js:70
 #, fuzzy
 msgid "in this-var-1"
-msgstr "nisso"
+msgstr "nisto"
 
 #: src/commands.js:71
 #, fuzzy
@@ -599,7 +599,7 @@ msgstr "para isso"
 #: src/commands.js:73
 #, fuzzy
 msgid "to this-var-1"
-msgstr "para isso"
+msgstr "pra isso"
 
 #: src/commands.js:74
 #, fuzzy
@@ -613,12 +613,12 @@ msgstr "naquilo"
 #: src/commands.js:76
 #, fuzzy
 msgid "in that-var-1"
-msgstr "naquilo"
+msgstr "naquele"
 
 #: src/commands.js:77
 #, fuzzy
 msgid "in that-var-2"
-msgstr "naquilo"
+msgstr "naquela"
 
 #: src/commands.js:78
 msgid "to that"
@@ -627,12 +627,12 @@ msgstr "para aquilo"
 #: src/commands.js:79
 #, fuzzy
 msgid "to that-var-1"
-msgstr "para aquilo"
+msgstr "para aquele"
 
 #: src/commands.js:80
 #, fuzzy
 msgid "to that-var-2"
-msgstr "para aquilo"
+msgstr "para aquela"
 
 #: src/commands.js:81
 #, fuzzy
