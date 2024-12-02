@@ -267,6 +267,12 @@ HELP
                             break;
                         }
                     }
+
+                    this.app.chat.editResponse(
+                        _(
+                            `Sorry, I can't open ${request} right now. Maybe in the future.`,
+                        ),
+                    );
                 } catch (error) {
                     this.app.logError('Error opening site:', error);
                     this.app.chat.editResponse(_('Error opening site'));
