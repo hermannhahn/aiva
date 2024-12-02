@@ -547,17 +547,17 @@ msgstr "pro"
 #: src/commands.js:61
 #, fuzzy
 msgid "to the-var-3"
-msgstr "para a"
+msgstr "pra"
 
 #: src/commands.js:62
 #, fuzzy
 msgid "to the-var-4"
-msgstr "para a"
+msgstr "pra a"
 
 #: src/commands.js:63
 #, fuzzy
 msgid "to the-var-5"
-msgstr "para a"
+msgstr "pro o"
 
 #: src/commands.js:64
 #, fuzzy
@@ -572,22 +572,22 @@ msgstr "nisto"
 #: src/commands.js:66
 #, fuzzy
 msgid "in this-var-2"
-msgstr "nisso"
+msgstr "neste"
 
 #: src/commands.js:67
 #, fuzzy
 msgid "in this-var-3"
-msgstr "nisto"
+msgstr "nesta"
 
 #: src/commands.js:68
 #, fuzzy
 msgid "in this-var-4"
-msgstr "nisto"
+msgstr ""
 
 #: src/commands.js:69
 #, fuzzy
 msgid "in this-var-5"
-msgstr "nisto"
+msgstr ""
 
 #: src/commands.js:70
 msgid "to this"
@@ -596,27 +596,27 @@ msgstr "para isso"
 #: src/commands.js:71
 #, fuzzy
 msgid "to this-var-1"
-msgstr "pra isso"
+msgstr "para isto"
 
 #: src/commands.js:72
 #, fuzzy
 msgid "to this-var-2"
-msgstr "para isso"
+msgstr "pra isso"
 
 #: src/commands.js:73
 #, fuzzy
 msgid "to this-var-3"
-msgstr "pra isso"
+msgstr "pra isto"
 
 #: src/commands.js:74
 #, fuzzy
 msgid "to this-var-4"
-msgstr "pra isso"
+msgstr "pra este"
 
 #: src/commands.js:75
 #, fuzzy
 msgid "to this-var-5"
-msgstr "pra isso"
+msgstr "pra esta"
 
 #: src/commands.js:76
 msgid "in that"
