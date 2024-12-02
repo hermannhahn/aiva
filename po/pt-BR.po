@@ -517,17 +517,17 @@ msgstr "na"
 #: src/commands.js:55
 #, fuzzy
 msgid "in the-var-3"
-msgstr "no"
+msgstr "em o"
 
 #: src/commands.js:56
 #, fuzzy
 msgid "in the-var-4"
-msgstr "no"
+msgstr "em a"
 
 #: src/commands.js:57
 #, fuzzy
 msgid "in the-var-5"
-msgstr "no"
+msgstr ""
 
 #: src/commands.js:58
 #, fuzzy
