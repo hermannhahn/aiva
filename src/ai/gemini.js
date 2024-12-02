@@ -159,8 +159,9 @@ export class GoogleGemini {
                         );
                         return;
                     }
-                    const stringRes = JSON.stringify(res);
-                    this.app.log('Tool response: ' + stringRes);
+                    let jsonResponse = {};
+                    jsonResponse = JSON.parse(res.candidates[0]);
+                    this.app.log('Tool response: ' + jsonResponse);
                     let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
 
                     if (aiResponse === undefined) {
@@ -171,7 +172,6 @@ export class GoogleGemini {
                     }
 
                     // tool response
-                    let jsonResponse = {};
                     jsonResponse = JSON.parse(aiResponse);
                     this.app.log('Tool response: ' + jsonResponse);
                 },
