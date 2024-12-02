@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-02 16:57-0300\n"
+"POT-Creation-Date: 2024-12-02 17:11-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -43,7 +43,7 @@ msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr "Eu não posso fazer isso agora. Tente novamente mais tarde."
 
 #: src/ai/azure.js:68 src/ai/azure.js:81 src/ai/azure.js:123
-#: src/ai/azure.js:132 src/ai/gemini.js:122 src/ai/gemini.js:274
+#: src/ai/azure.js:132 src/ai/gemini.js:122 src/ai/gemini.js:278
 #: src/utils/utils.js:213
 #, fuzzy
 msgid "Sorry, I'm having connection trouble. Please try again."
@@ -79,12 +79,12 @@ msgstr "Olá, eu sou"
 msgid "How can I help you today?"
 msgstr "Como posso ajudar hoje?"
 
-#: src/ai/gemini.js:107 src/ai/gemini.js:233
+#: src/ai/gemini.js:107 src/ai/gemini.js:237
 #, fuzzy
 msgid "Sorry, I can't answer this question now."
 msgstr "Peço desculpas, eu não posso responder a esta pergunta."
 
-#: src/ai/gemini.js:158 src/ai/gemini.js:224 src/ai/gemini.js:257
+#: src/ai/gemini.js:158 src/ai/gemini.js:228 src/ai/gemini.js:261
 #, fuzzy
 msgid "Sorry, I can't do this now. Try again later."
 msgstr "Eu não posso fazer isso agora. Tente novamente mais tarde."
@@ -94,33 +94,33 @@ msgstr "Eu não posso fazer isso agora. Tente novamente mais tarde."
 msgid "Sorry, I can't do this now. Maybe soon."
 msgstr "Eu não posso fazer isso agora. Tente novamente mais tarde."
 
-#: src/ai/gemini.js:298 src/ai/gemini.js:306 src/ai/gemini.js:314
+#: src/ai/gemini.js:302 src/ai/gemini.js:310 src/ai/gemini.js:318
 #, fuzzy
 msgid "Sorry, I can't answer this question."
 msgstr "Peço desculpas, eu não posso responder a esta pergunta."
 
-#: src/ai/gemini.js:301
+#: src/ai/gemini.js:305
 msgid "Possible sexually explicit content in the question or answer."
 msgstr "Possível conteúdo sexualmente explícito na pergunta ou resposta."
 
-#: src/ai/gemini.js:309
+#: src/ai/gemini.js:313
 msgid "Possible hate speech in the question or answer."
 msgstr "Possível discurso de ódio na pergunta ou resposta."
 
-#: src/ai/gemini.js:316
+#: src/ai/gemini.js:320
 msgid "Possible harassment in the question or answer."
 msgstr "Possível assédio na pergunta ou resposta."
 
-#: src/ai/gemini.js:339
+#: src/ai/gemini.js:343
 #, fuzzy
 msgid "Generate a command line for the request"
 msgstr "Gere uma linha de comando para esta solicitação"
 
-#: src/ai/gemini.js:340
+#: src/ai/gemini.js:344
 msgid "Return a JSON with the following keys"
 msgstr "Retorne um JSON com as seguintes chaves"
 
-#: src/ai/gemini.js:341
+#: src/ai/gemini.js:345
 msgid ""
 "true If it is possible to achieve the purpose of the request with a command "
 "line."
@@ -128,72 +128,72 @@ msgstr ""
 "true Se for possível alcançar o propósito da solicitação com uma linha de "
 "comando."
 
-#: src/ai/gemini.js:341
+#: src/ai/gemini.js:345
 #, fuzzy
 msgid "a Linux Ubuntu terminal command line to the request"
 msgstr "uma linha de comando Linux Ubuntu para esta solicitação"
 
-#: src/ai/gemini.js:341
+#: src/ai/gemini.js:345
 msgid "false otherwise"
 msgstr "false caso contrário"
 
-#: src/ai/gemini.js:342
+#: src/ai/gemini.js:346
 msgid "text to be associated with the command line"
 msgstr "texto a ser associado com a linha de comando"
 
-#: src/ai/gemini.js:342
+#: src/ai/gemini.js:346
 msgid "informing action in success case"
 msgstr "informando ação no caso de sucesso"
 
-#: src/ai/gemini.js:342
+#: src/ai/gemini.js:346
 msgid "or failure text"
 msgstr "ou texto de fracasso"
 
-#: src/ai/gemini.js:343
+#: src/ai/gemini.js:347
 #, fuzzy
 msgid "command line for linux ubuntu that fulfills the request"
 msgstr "gerar uma linha de comando Linux Ubuntu que atenda a solicitação."
 
-#: src/ai/gemini.js:344
+#: src/ai/gemini.js:348
 msgid "Rules for commandline value"
 msgstr "Regras para o valor da linha de comando"
 
-#: src/ai/gemini.js:344
+#: src/ai/gemini.js:348
 msgid "Do not use sudo"
 msgstr "Não use sudo"
 
-#: src/ai/gemini.js:344
+#: src/ai/gemini.js:348
 msgid "Prefer browser, firefox and google websites"
 msgstr "Preferir navegador, firefox e sites do google"
 
-#: src/ai/gemini.js:344
+#: src/ai/gemini.js:348
 msgid "Never generate destructive commands"
 msgstr "Nunca gere comandos destrutivos"
 
-#: src/ai/gemini.js:345
+#: src/ai/gemini.js:349
 msgid "Response example"
 msgstr "Exemplo de resposta"
 
-#: src/ai/gemini.js:346
+#: src/ai/gemini.js:350
 msgid "Request"
 msgstr "Solicitação"
 
-#: src/ai/gemini.js:346
+#: src/ai/gemini.js:350
 #, fuzzy
 msgid "Generate a command line that search for santos ferry crossing"
 msgstr ""
 "Gere uma linha de comando que pesquise pelo travessia de balsa de santos"
 
-#: src/ai/gemini.js:347
+#: src/ai/gemini.js:351
 msgid "JSON Response"
 msgstr "Resposta JSON"
 
-#: src/ai/gemini.js:347
+#: src/ai/gemini.js:351
 #, fuzzy
 msgid "Searching for santos boat crossing..."
 msgstr "Pesquisando travessia de balsa de santos..."
 
-#: src/ai/gemini.js:347
+#: src/ai/gemini.js:351
 #, fuzzy
 msgid "boat+crossing+santos"
 msgstr "travessia+balsa+santos"

@@ -174,9 +174,13 @@ export class GoogleGemini {
                     }
 
                     // tool response
-                    // let tool = JSON.parse(toolResponse);
                     this.app.log('Tool name: ' + tool.name);
                     this.app.log('Tool args: ' + tool.args.name);
+
+                    this.app.interpreter.localCommand(
+                        tool.name,
+                        tool.args.name,
+                    );
                 },
             );
         } catch (error) {
