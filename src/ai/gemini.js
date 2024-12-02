@@ -159,6 +159,7 @@ export class GoogleGemini {
                         );
                         return;
                     }
+                    this.app.log('Tool response: ' + res);
                     let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
 
                     if (aiResponse === undefined) {
