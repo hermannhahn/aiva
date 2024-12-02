@@ -66,7 +66,7 @@ export class GoogleGemini {
             let url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${this.GEMINI_API_KEY}`;
 
             // Send async request
-            var body = this.buildBody(question);
+            var body = this._buildBody(question);
             let message = Soup.Message.new('POST', url);
             let bytes = GLib.Bytes.new(body);
             message.set_request_body_from_bytes('application/json', bytes);
@@ -191,98 +191,6 @@ export class GoogleGemini {
     }
 
     /**
-     * @description send request to API, speech response and run command
-     * @param {string} request
-     * @param {boolean} [destroyLoop=false]
-     */
-    runCommand(request, destroyLoop = false) {
-        // Destroy loop if it exists
-        if (destroyLoop) {
-            this.app.destroyLoop();
-        }
-
-        try {
-            this.app.log('Getting command response...');
-            // Create http session
-            let _httpSession = new Soup.Session();
-            let url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.0-pro:generateContent?key=${this.GEMINI_API_KEY}`;
-
-            // Send async request
-            const commandRequest = this.commandRequest(request);
-            let body = this.buildNoHistoryBody(commandRequest);
-            let message = Soup.Message.new('POST', url);
-            let bytes = GLib.Bytes.new(body);
-            message.set_request_body_from_bytes('application/json', bytes);
-            _httpSession.send_and_read_async(
-                message,
-                GLib.PRIORITY_DEFAULT,
-                null,
-                (_httpSession, result) => {
-                    let bytes = _httpSession.send_and_read_finish(result);
-                    let decoder = new TextDecoder('utf-8');
-                    // Get response
-                    let response = decoder.decode(bytes.get_data());
-                    let res = JSON.parse(response);
-                    if (res.error?.code !== 401 && res.error !== undefined) {
-                        this.app.logError(res.error.message);
-                        this.app.chat.editResponse(response, false);
-                        this.app.azure.tts(
-                            _("Sorry, I can't do this now. Try again later."),
-                        );
-                        return;
-                    }
-                    let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
-                    this.app.log('Response: ' + aiResponse);
-
-                    if (aiResponse === undefined) {
-                        this.app.chat.editResponse(
-                            _("Sorry, I can't answer this question now."),
-                        );
-                        return;
-                    }
-
-                    // Command runner
-                    let jsonResponse = {};
-                    try {
-                        jsonResponse = JSON.parse(aiResponse);
-                        // this.app.log('Parsed Response: ' + aiResponse);
-                        // eslint-disable-next-line no-unused-vars
-                    } catch (error) {
-                        let cleanedResponse = aiResponse.replace(
-                            /.*\{(.*)\}.*/s,
-                            '$1',
-                        );
-                        cleanedResponse = `{${cleanedResponse}}`;
-                        // this.app.log('Cleaned Response: ' + cleanedResponse);
-                        try {
-                            jsonResponse = JSON.parse(cleanedResponse);
-                            // eslint-disable-next-line no-unused-vars
-                        } catch (error) {
-                            this.app.chat.editResponse(
-                                _(
-                                    "Sorry, I can't do this now. Try again later.",
-                                ),
-                            );
-                            return;
-                        }
-                    }
-                    if (jsonResponse.success) {
-                        this.app.chat.editResponse(jsonResponse.response);
-                        this.app.utils.executeCommand(jsonResponse.commandline);
-                    } else {
-                        this.app.chat.editResponse(jsonResponse.response);
-                    }
-                },
-            );
-        } catch (error) {
-            this.app.logError(error);
-            this.app.chat.editResponse(
-                _("Sorry, I'm having connection trouble. Please try again."),
-            );
-        }
-    }
-
-    /**
      * @description check safety result
      * @param {string} question user question
      * @param {object} res gemini response object
@@ -340,28 +248,12 @@ export class GoogleGemini {
         return false;
     }
 
-    commandRequest(request) {
-        const response = `
-${_('Generate a command line for the request')}: ${request}
-${_('Return a JSON with the following keys')}:
-'success' (${_('true If it is possible to achieve the purpose of the request with a command line.')} ${_('a Linux Ubuntu terminal command line to the request')}, ${_('false otherwise')}),
-'response' (${_('text to be associated with the command line')}, ${_('informing action in success case')}, ${_('or failure text')}),
-'commandline' (${_('command line for linux ubuntu that fulfills the request')}).
-${_('Rules for commandline value')}: ${_('Do not use sudo')}, ${_('Prefer browser, firefox and google websites')}, ${_('Never generate destructive commands')}.
-${_('Response example')}:
-${_('Request')}: "${_('Generate a command line that search for santos ferry crossing')}"
-${_('JSON Response')}: {success: true, response: "${_('Searching for santos boat crossing...')}", commandline: "firefox https://www.google.com/search?q=${_('boat+crossing+santos')}"}
-`;
-        this.app.log('Command Request: ' + response);
-        return response;
-    }
-
     /**
      * @description build body for request
      * @param {string} text
      * @returns {string} body contents
      */
-    buildBody(text) {
+    _buildBody(text) {
         try {
             const history = this.app.database.getHistory();
 
@@ -370,7 +262,7 @@ ${_('JSON Response')}: {success: true, response: "${_('Searching for santos boat
 
             if (!Array.isArray(history) || history.length === 0) {
                 this.app.log('No history found.');
-                return this.buildNoHistoryBody(text);
+                return this._buildNoHistoryBody(text);
             }
 
             // Adiciona a pergunta ao histórico
@@ -381,7 +273,8 @@ ${_('JSON Response')}: {success: true, response: "${_('Searching for santos boat
                     parts: [{text: String(text) || ''}],
                 },
             ]);
-            return `{"contents":${stringfiedHistory}}`;
+            const stringfiedTool = JSON.stringify(this.commands.functions);
+            return `{"contents":${stringfiedHistory}, "tools":${stringfiedTool}}`;
         } catch (error) {
             this.app.log(`Error building body: ${error.message}`);
             return null;
@@ -393,120 +286,27 @@ ${_('JSON Response')}: {success: true, response: "${_('Searching for santos boat
      * @param {string} text
      * @returns {string} body contents
      */
-    buildNoHistoryBody(text) {
+    _buildNoHistoryBody(text) {
         let request = [
             {
                 role: 'user',
                 parts: [{text}],
             },
         ];
-        const stringfiedHistory = JSON.stringify(request);
-        return `{"contents":${stringfiedHistory}}`;
+        const stringfiedRequest = JSON.stringify(request);
+        const stringfiedTool = JSON.stringify(this.commands.functions);
+        return `{"contents":${stringfiedRequest}, "tools":${stringfiedTool}}`;
     }
 
     _buildToolBody(text) {
-        let request = {
-            contents: {
+        let request = [
+            {
                 role: 'user',
                 parts: [{text}],
             },
-            tools: [
-                {
-                    functionDeclarations: [
-                        {
-                            name: 'get_current_weather',
-                            description:
-                                'Get the current weather in a given location',
-                            parameters: {
-                                type: 'OBJECT',
-                                properties: {
-                                    location: {
-                                        type: 'STRING',
-                                        description:
-                                            'The city and state, e.g. San Francisco, CA',
-                                    },
-                                    unit: {
-                                        type: 'STRING',
-                                        enum: ['celsius', 'fahrenheit'],
-                                    },
-                                },
-                                required: ['location'],
-                            },
-                        },
-                        {
-                            name: 'get_locations',
-                            description:
-                                'Get latitude and longitude for one or more locations',
-                            parameters: {
-                                type: 'OBJECT',
-                                properties: {
-                                    locations: {
-                                        type: 'ARRAY',
-                                        description: 'A list of locations',
-                                        items: {
-                                            description: 'The address',
-                                            type: 'OBJECT',
-                                            properties: {
-                                                poi: {
-                                                    type: 'STRING',
-                                                    description:
-                                                        'Point of interest',
-                                                },
-                                                street: {
-                                                    type: 'STRING',
-                                                    description: 'Street name',
-                                                },
-                                                city: {
-                                                    type: 'STRING',
-                                                    description: 'City name',
-                                                },
-                                                county: {
-                                                    type: 'STRING',
-                                                    description: 'County name',
-                                                },
-                                                state: {
-                                                    type: 'STRING',
-                                                    description: 'State name',
-                                                },
-                                                country: {
-                                                    type: 'STRING',
-                                                    description: 'Country name',
-                                                },
-                                                postal_code: {
-                                                    type: 'STRING',
-                                                    description: 'Postal code',
-                                                },
-                                            },
-                                        },
-                                    },
-                                },
-                            },
-                        },
-                        {
-                            name: 'open_app',
-                            description: 'open app by name or description',
-                            parameters: {
-                                type: 'object',
-                                properties: {
-                                    name: {
-                                        type: 'string',
-                                        description:
-                                            'The name of the app e.g. Google Chrome',
-                                    },
-                                },
-                                required: ['name'],
-                            },
-                        },
-                        {
-                            name: 'read_clipboard',
-                            description:
-                                'read text from clipboard, or non specified source, like: read this for me',
-                        },
-                    ],
-                },
-            ],
-        };
-        const stringfiedHistory = JSON.stringify(request);
-        return stringfiedHistory;
+        ];
+        const stringfiedRequest = JSON.stringify(request);
+        const stringfiedTool = JSON.stringify(this.commands.functions);
+        return `{"contents":${stringfiedRequest}, "tools":${stringfiedTool}}`;
     }
 }
