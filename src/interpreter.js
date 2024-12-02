@@ -71,6 +71,7 @@ HELP
         question = question.toLowerCase();
         // cria uma string com as 10 primeiras palavras
         let normalizedRequest = question.split(/\s+/).slice(0, 10).join(' ');
+        let directRequest = question.split(/\s+/).slice(0, 3).join(' ');
 
         for (const command of this.commands.activation) {
             for (const suffix of this.commands.suffix) {
@@ -102,6 +103,17 @@ HELP
                         .split(/\s+/)[0];
                     return {command, request};
                 }
+            }
+        }
+        for (const command of this.commands.activation) {
+            if (directRequest.includes(command)) {
+                // get the next word after command
+                const nextWordIndex =
+                    directRequest.indexOf(command) + command.length + 1;
+                const request = directRequest
+                    .substring(nextWordIndex)
+                    .split(/\s+/)[0];
+                return {command, request};
             }
         }
 
