@@ -5,7 +5,6 @@ export class Commands {
         this.assistant = [
             _('computer'),
             'aiva',
-            this.app.userSettings.ASSIST_NAME,
         ];
 
         this.activation = [
