@@ -160,7 +160,7 @@ export class GoogleGemini {
                         return;
                     }
                     let jsonResponse = {};
-                    jsonResponse = JSON.parse(res.candidates[0].content);
+                    jsonResponse = JSON.stringify(res);
                     this.app.log('Tool response: ' + jsonResponse);
                     let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
 
