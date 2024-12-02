@@ -264,7 +264,7 @@ HELP
                         if (request.includes(key)) {
                             this.app.chat.editResponse(_(`Opening ${key}...`));
                             this.app.utils.executeCommand(app);
-                            break;
+                            return;
                         }
                     }
 
