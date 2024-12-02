@@ -401,7 +401,76 @@ ${_('JSON Response')}: {success: true, response: "${_('Searching for santos boat
             },
             tools: [
                 {
-                    function_declarations: [
+                    functionDeclarations: [
+                        {
+                            name: 'get_current_weather',
+                            description:
+                                'Get the current weather in a given location',
+                            parameters: {
+                                type: 'OBJECT',
+                                properties: {
+                                    location: {
+                                        type: 'STRING',
+                                        description:
+                                            'The city and state, e.g. San Francisco, CA',
+                                    },
+                                    unit: {
+                                        type: 'STRING',
+                                        enum: ['celsius', 'fahrenheit'],
+                                    },
+                                },
+                                required: ['location'],
+                            },
+                        },
+                        {
+                            name: 'get_locations',
+                            description:
+                                'Get latitude and longitude for one or more locations',
+                            parameters: {
+                                type: 'OBJECT',
+                                properties: {
+                                    locations: {
+                                        type: 'ARRAY',
+                                        description: 'A list of locations',
+                                        items: {
+                                            description: 'The address',
+                                            type: 'OBJECT',
+                                            properties: {
+                                                poi: {
+                                                    type: 'STRING',
+                                                    description:
+                                                        'Point of interest',
+                                                },
+                                                street: {
+                                                    type: 'STRING',
+                                                    description: 'Street name',
+                                                },
+                                                city: {
+                                                    type: 'STRING',
+                                                    description: 'City name',
+                                                },
+                                                county: {
+                                                    type: 'STRING',
+                                                    description: 'County name',
+                                                },
+                                                state: {
+                                                    type: 'STRING',
+                                                    description: 'State name',
+                                                },
+                                                country: {
+                                                    type: 'STRING',
+                                                    description: 'Country name',
+                                                },
+                                                postal_code: {
+                                                    type: 'STRING',
+                                                    description: 'Postal code',
+                                                },
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                        },
                         {
                             name: 'open_app',
                             description: 'open app by name or description',
