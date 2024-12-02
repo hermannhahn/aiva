@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-01 20:37-0300\n"
+"POT-Creation-Date: 2024-12-02 15:30-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -341,164 +341,440 @@ msgid "open"
 msgstr "abrir"
 
 #: src/commands.js:13
+msgid "open-var-1"
+msgstr ""
+
+#: src/commands.js:14
+msgid "open-var-2"
+msgstr ""
+
+#: src/commands.js:15
 msgid "start"
 msgstr "iniciar"
 
-#: src/commands.js:14
+#: src/commands.js:16
+#, fuzzy
+msgid "start-var-1"
+msgstr "iniciar"
+
+#: src/commands.js:17
+#, fuzzy
+msgid "start-var-2"
+msgstr "iniciar"
+
+#: src/commands.js:18
 msgid "launch"
 msgstr "lançar"
 
-#: src/commands.js:15
+#: src/commands.js:19
+#, fuzzy
+msgid "launch-var-1"
+msgstr "lançar"
+
+#: src/commands.js:20
+#, fuzzy
+msgid "launch-var-2"
+msgstr "lançar"
+
+#: src/commands.js:21
 msgid "run"
 msgstr "rodar"
 
-#: src/commands.js:16
+#: src/commands.js:22
+msgid "run-var-1"
+msgstr ""
+
+#: src/commands.js:23
+msgid "run-var-2"
+msgstr ""
+
+#: src/commands.js:24
 msgid "execute"
 msgstr "executar"
 
-#: src/commands.js:17
+#: src/commands.js:25
+#, fuzzy
+msgid "execute-var-1"
+msgstr "executar"
+
+#: src/commands.js:26
+#, fuzzy
+msgid "execute-var-2"
+msgstr "executar"
+
+#: src/commands.js:27
 msgid "read"
 msgstr "ler"
 
-#: src/commands.js:18
+#: src/commands.js:28
+msgid "read-var-1"
+msgstr ""
+
+#: src/commands.js:29
+msgid "read-var-2"
+msgstr ""
+
+#: src/commands.js:30
 msgid "write"
 msgstr "escrever"
 
-#: src/commands.js:19
-msgid "access"
-msgstr "acessar"
-
-#: src/commands.js:20
-msgid "load"
-msgstr "carregar"
-
-#: src/commands.js:21
-msgid "visit"
-msgstr "visitar"
-
-#: src/commands.js:22
-msgid "browse"
-msgstr "navegar"
-
-#: src/commands.js:23
-msgid "join"
-msgstr "juntar"
-
-#: src/commands.js:24
-msgid "enter"
-msgstr "entrar"
-
-#: src/commands.js:25
-msgid "navigate"
-msgstr "navegar"
-
-#: src/commands.js:26
-msgid "go"
-msgstr "ir"
-
-#: src/commands.js:27
-msgid "take me"
-msgstr "leve me"
-
 #: src/commands.js:31
 #, fuzzy
-msgid "this"
-msgstr "isso"
+msgid "write-var-1"
+msgstr "escrever"
 
 #: src/commands.js:32
 #, fuzzy
-msgid "that"
-msgstr "aquilo"
+msgid "write-var-2"
+msgstr "escrever"
 
 #: src/commands.js:33
-msgid "in"
-msgstr "em"
+msgid "access"
+msgstr "acessar"
 
 #: src/commands.js:34
-msgid "to"
-msgstr "para"
+#, fuzzy
+msgid "access-var-1"
+msgstr "acessar"
 
 #: src/commands.js:35
-msgid "the"
-msgstr "o"
+#, fuzzy
+msgid "access-var-2"
+msgstr "acessar"
 
 #: src/commands.js:36
-#, fuzzy
-msgid "on"
-msgstr "em"
+msgid "load"
+msgstr "carregar"
 
 #: src/commands.js:37
-msgid "at"
-msgstr "em"
+msgid "load-var-1"
+msgstr ""
 
 #: src/commands.js:38
-msgid "of"
-msgstr "de"
+msgid "load-var-2"
+msgstr ""
 
 #: src/commands.js:39
+msgid "visit"
+msgstr "visitar"
+
+#: src/commands.js:40
+#, fuzzy
+msgid "visit-var-1"
+msgstr "visitar"
+
+#: src/commands.js:41
+#, fuzzy
+msgid "visit-var-2"
+msgstr "visitar"
+
+#: src/commands.js:42
+msgid "browse"
+msgstr "navegar"
+
+#: src/commands.js:43
+#, fuzzy
+msgid "browse-var-1"
+msgstr "navegar"
+
+#: src/commands.js:44
+#, fuzzy
+msgid "browse-var-2"
+msgstr "navegar"
+
+#: src/commands.js:45
+msgid "join"
+msgstr "juntar"
+
+#: src/commands.js:46
+msgid "join-var-1"
+msgstr ""
+
+#: src/commands.js:47
+msgid "join-var-2"
+msgstr ""
+
+#: src/commands.js:48
+msgid "enter"
+msgstr "entrar"
+
+#: src/commands.js:49
+#, fuzzy
+msgid "enter-var-1"
+msgstr "entrar"
+
+#: src/commands.js:50
+#, fuzzy
+msgid "enter-var-2"
+msgstr "entrar"
+
+#: src/commands.js:51
+msgid "navigate"
+msgstr "navegar"
+
+#: src/commands.js:52
+#, fuzzy
+msgid "navigate-var-1"
+msgstr "navegar"
+
+#: src/commands.js:53
+#, fuzzy
+msgid "navigate-var-2"
+msgstr "navegar"
+
+#: src/commands.js:54
+msgid "go"
+msgstr "ir"
+
+#: src/commands.js:55
+msgid "go-var-1"
+msgstr ""
+
+#: src/commands.js:56
+msgid "go-var-2"
+msgstr ""
+
+#: src/commands.js:57
+msgid "take me"
+msgstr "leve me"
+
+#: src/commands.js:58
+#, fuzzy
+msgid "take me-var-1"
+msgstr "leve me"
+
+#: src/commands.js:59
+#, fuzzy
+msgid "take me-var-2"
+msgstr "leve me"
+
+#: src/commands.js:63
 msgid "in the"
 msgstr "no"
 
-#: src/commands.js:40
+#: src/commands.js:64
+#, fuzzy
+msgid "in the-var-1"
+msgstr "no"
+
+#: src/commands.js:65
+#, fuzzy
+msgid "in the-var-2"
+msgstr "no"
+
+#: src/commands.js:66
 #, fuzzy
 msgid "to the"
 msgstr "para o"
 
-#: src/commands.js:41
+#: src/commands.js:67
+#, fuzzy
+msgid "to the-var-1"
+msgstr "para o"
+
+#: src/commands.js:68
+#, fuzzy
+msgid "to the-var-2"
+msgstr "para o"
+
+#: src/commands.js:69
 #, fuzzy
 msgid "in this"
 msgstr "nisso"
 
-#: src/commands.js:42
+#: src/commands.js:70
+#, fuzzy
+msgid "in this-var-1"
+msgstr "nisso"
+
+#: src/commands.js:71
+#, fuzzy
+msgid "in this-var-2"
+msgstr "nisso"
+
+#: src/commands.js:72
 msgid "to this"
 msgstr "para isso"
 
-#: src/commands.js:43
+#: src/commands.js:73
+#, fuzzy
+msgid "to this-var-1"
+msgstr "para isso"
+
+#: src/commands.js:74
+#, fuzzy
+msgid "to this-var-2"
+msgstr "para isso"
+
+#: src/commands.js:75
 msgid "in that"
 msgstr "naquilo"
 
-#: src/commands.js:44
+#: src/commands.js:76
+#, fuzzy
+msgid "in that-var-1"
+msgstr "naquilo"
+
+#: src/commands.js:77
+#, fuzzy
+msgid "in that-var-2"
+msgstr "naquilo"
+
+#: src/commands.js:78
 msgid "to that"
 msgstr "para aquilo"
 
-#: src/commands.js:48
+#: src/commands.js:79
+#, fuzzy
+msgid "to that-var-1"
+msgstr "para aquilo"
+
+#: src/commands.js:80
+#, fuzzy
+msgid "to that-var-2"
+msgstr "para aquilo"
+
+#: src/commands.js:81
+#, fuzzy
+msgid "this"
+msgstr "isso"
+
+#: src/commands.js:82
+msgid "this-var-1"
+msgstr ""
+
+#: src/commands.js:83
+msgid "this-var-2"
+msgstr ""
+
+#: src/commands.js:84
+#, fuzzy
+msgid "that"
+msgstr "aquilo"
+
+#: src/commands.js:85
+msgid "that-var-1"
+msgstr ""
+
+#: src/commands.js:86
+msgid "that-var-2"
+msgstr ""
+
+#: src/commands.js:87
+msgid "in"
+msgstr "em"
+
+#: src/commands.js:88
+msgid "in-var-1"
+msgstr ""
+
+#: src/commands.js:89
+msgid "in-var-2"
+msgstr ""
+
+#: src/commands.js:90
+msgid "to"
+msgstr "para"
+
+#: src/commands.js:91
+msgid "to-var-1"
+msgstr ""
+
+#: src/commands.js:92
+msgid "to-var-2"
+msgstr ""
+
+#: src/commands.js:93
+msgid "the"
+msgstr "o"
+
+#: src/commands.js:94
+msgid "the-var-1"
+msgstr ""
+
+#: src/commands.js:95
+msgid "the-var-2"
+msgstr ""
+
+#: src/commands.js:96
+#, fuzzy
+msgid "on"
+msgstr "em"
+
+#: src/commands.js:97
+msgid "on-var-1"
+msgstr ""
+
+#: src/commands.js:98
+msgid "on-var-2"
+msgstr ""
+
+#: src/commands.js:99
+msgid "at"
+msgstr "em"
+
+#: src/commands.js:100
+msgid "at-var-1"
+msgstr ""
+
+#: src/commands.js:101
+msgid "at-var-2"
+msgstr ""
+
+#: src/commands.js:102
+msgid "of"
+msgstr "de"
+
+#: src/commands.js:103
+msgid "of-var-1"
+msgstr ""
+
+#: src/commands.js:104
+msgid "of-var-2"
+msgstr ""
+
+#: src/commands.js:108
 msgid "website"
 msgstr "website"
 
-#: src/commands.js:49
+#: src/commands.js:109
 msgid "webpage"
 msgstr "página da web"
 
-#: src/commands.js:50
+#: src/commands.js:110
 msgid "web"
 msgstr "web"
 
-#: src/commands.js:51
+#: src/commands.js:111
 msgid "site"
 msgstr "site"
 
-#: src/commands.js:52
+#: src/commands.js:112
 msgid "page"
 msgstr "página"
 
-#: src/commands.js:53
+#: src/commands.js:113
 msgid "url"
 msgstr "url"
 
-#: src/commands.js:54
+#: src/commands.js:114
 msgid "app"
 msgstr "app"
 
-#: src/commands.js:55
+#: src/commands.js:115
 msgid "software"
 msgstr "programa"
 
-#: src/commands.js:56
+#: src/commands.js:116
 #, fuzzy
 msgid "application"
 msgstr "aplicativo"
 
-#: src/commands.js:61
+#: src/commands.js:117
+msgid "text"
+msgstr ""
+
+#: src/commands.js:122
 #, fuzzy
 msgid "Read text from clipboard"
 msgstr "leia o texto que copiei"
