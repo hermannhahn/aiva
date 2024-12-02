@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-02 17:48-0300\n"
+"POT-Creation-Date: 2024-12-02 17:51-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -57,6 +57,487 @@ msgstr "Erro na transcrição!"
 #, fuzzy
 msgid "Sorry, I'm having trouble to listen you. Please try again."
 msgstr "Estou tendo dificuldade de te escutar. Por favor, tente novamente."
+
+#: src/ai/commands.js:5
+msgid "computer"
+msgstr "computador"
+
+#: src/ai/commands.js:8
+msgid "open"
+msgstr "abrir"
+
+#: src/ai/commands.js:9
+msgid "open-var-1"
+msgstr "abra"
+
+#: src/ai/commands.js:10
+msgid "open-var-2"
+msgstr "abre"
+
+#: src/ai/commands.js:11
+msgid "start"
+msgstr "iniciar"
+
+#: src/ai/commands.js:12
+#, fuzzy
+msgid "start-var-1"
+msgstr "inicia"
+
+#: src/ai/commands.js:13
+#, fuzzy
+msgid "start-var-2"
+msgstr "inicie"
+
+#: src/ai/commands.js:14
+msgid "launch"
+msgstr "lançar"
+
+#: src/ai/commands.js:15
+#, fuzzy
+msgid "launch-var-1"
+msgstr "lança"
+
+#: src/ai/commands.js:16
+#, fuzzy
+msgid "launch-var-2"
+msgstr "lance"
+
+#: src/ai/commands.js:17
+msgid "run"
+msgstr "rodar"
+
+#: src/ai/commands.js:18
+msgid "run-var-1"
+msgstr "roda"
+
+#: src/ai/commands.js:19
+msgid "run-var-2"
+msgstr "rode"
+
+#: src/ai/commands.js:20
+msgid "execute"
+msgstr "executar"
+
+#: src/ai/commands.js:21
+#, fuzzy
+msgid "execute-var-1"
+msgstr "executa"
+
+#: src/ai/commands.js:22
+#, fuzzy
+msgid "execute-var-2"
+msgstr "execute"
+
+#: src/ai/commands.js:23
+msgid "read"
+msgstr "ler"
+
+#: src/ai/commands.js:24
+msgid "read-var-1"
+msgstr "leia"
+
+#: src/ai/commands.js:25
+msgid "read-var-2"
+msgstr "lê"
+
+#: src/ai/commands.js:26
+msgid "access"
+msgstr "acessar"
+
+#: src/ai/commands.js:27
+#, fuzzy
+msgid "access-var-1"
+msgstr "acessa"
+
+#: src/ai/commands.js:28
+#, fuzzy
+msgid "access-var-2"
+msgstr "acesse"
+
+#: src/ai/commands.js:29
+msgid "load"
+msgstr "carregar"
+
+#: src/ai/commands.js:30
+msgid "load-var-1"
+msgstr "carrega"
+
+#: src/ai/commands.js:31
+msgid "load-var-2"
+msgstr "carregue"
+
+#: src/ai/commands.js:32
+msgid "visit"
+msgstr "visitar"
+
+#: src/ai/commands.js:33
+#, fuzzy
+msgid "visit-var-1"
+msgstr "visita"
+
+#: src/ai/commands.js:34
+#, fuzzy
+msgid "visit-var-2"
+msgstr "visite"
+
+#: src/ai/commands.js:35
+msgid "browse"
+msgstr "navegar"
+
+#: src/ai/commands.js:36
+#, fuzzy
+msgid "browse-var-1"
+msgstr "navega"
+
+#: src/ai/commands.js:37
+#, fuzzy
+msgid "browse-var-2"
+msgstr "navegue"
+
+#: src/ai/commands.js:38
+msgid "enter"
+msgstr "entrar"
+
+#: src/ai/commands.js:39
+#, fuzzy
+msgid "enter-var-1"
+msgstr "entra"
+
+#: src/ai/commands.js:40
+#, fuzzy
+msgid "enter-var-2"
+msgstr "entre"
+
+#: src/ai/commands.js:41
+msgid "navigate"
+msgstr "navegar"
+
+#: src/ai/commands.js:42
+#, fuzzy
+msgid "navigate-var-1"
+msgstr "navega"
+
+#: src/ai/commands.js:43
+#, fuzzy
+msgid "navigate-var-2"
+msgstr "navegue"
+
+#: src/ai/commands.js:44
+msgid "go"
+msgstr "ir"
+
+#: src/ai/commands.js:48
+msgid "in the"
+msgstr "em"
+
+#: src/ai/commands.js:49
+#, fuzzy
+msgid "in the-var-1"
+msgstr "no"
+
+#: src/ai/commands.js:50
+#, fuzzy
+msgid "in the-var-2"
+msgstr "na"
+
+#: src/ai/commands.js:51
+#, fuzzy
+msgid "in the-var-3"
+msgstr "em o"
+
+#: src/ai/commands.js:52
+#, fuzzy
+msgid "in the-var-4"
+msgstr "em a"
+
+#: src/ai/commands.js:53
+msgid "in the-var-5"
+msgstr ""
+
+#: src/ai/commands.js:54
+#, fuzzy
+msgid "to the"
+msgstr "para o"
+
+#: src/ai/commands.js:55
+#, fuzzy
+msgid "to the-var-1"
+msgstr "para a"
+
+#: src/ai/commands.js:56
+#, fuzzy
+msgid "to the-var-2"
+msgstr "pro"
+
+#: src/ai/commands.js:57
+#, fuzzy
+msgid "to the-var-3"
+msgstr "pra"
+
+#: src/ai/commands.js:58
+#, fuzzy
+msgid "to the-var-4"
+msgstr "pra a"
+
+#: src/ai/commands.js:59
+#, fuzzy
+msgid "to the-var-5"
+msgstr "pro o"
+
+#: src/ai/commands.js:60
+#, fuzzy
+msgid "in this"
+msgstr "nisso"
+
+#: src/ai/commands.js:61
+#, fuzzy
+msgid "in this-var-1"
+msgstr "nisto"
+
+#: src/ai/commands.js:62
+#, fuzzy
+msgid "in this-var-2"
+msgstr "neste"
+
+#: src/ai/commands.js:63
+#, fuzzy
+msgid "in this-var-3"
+msgstr "nesta"
+
+#: src/ai/commands.js:64
+msgid "in this-var-4"
+msgstr ""
+
+#: src/ai/commands.js:65
+msgid "in this-var-5"
+msgstr ""
+
+#: src/ai/commands.js:66
+msgid "to this"
+msgstr "para isso"
+
+#: src/ai/commands.js:67
+#, fuzzy
+msgid "to this-var-1"
+msgstr "para isto"
+
+#: src/ai/commands.js:68
+#, fuzzy
+msgid "to this-var-2"
+msgstr "pra isso"
+
+#: src/ai/commands.js:69
+#, fuzzy
+msgid "to this-var-3"
+msgstr "pra isto"
+
+#: src/ai/commands.js:70
+#, fuzzy
+msgid "to this-var-4"
+msgstr "pra este"
+
+#: src/ai/commands.js:71
+#, fuzzy
+msgid "to this-var-5"
+msgstr "pra esta"
+
+#: src/ai/commands.js:72
+#, fuzzy
+msgid "to this-var-6"
+msgstr "para este"
+
+#: src/ai/commands.js:73
+#, fuzzy
+msgid "to this-var-7"
+msgstr "para esta"
+
+#: src/ai/commands.js:74
+msgid "in that"
+msgstr "naquilo"
+
+#: src/ai/commands.js:75
+#, fuzzy
+msgid "in that-var-1"
+msgstr "naquele"
+
+#: src/ai/commands.js:76
+#, fuzzy
+msgid "in that-var-2"
+msgstr "naquela"
+
+#: src/ai/commands.js:77
+#, fuzzy
+msgid "in that-var-3"
+msgstr "em aquele"
+
+#: src/ai/commands.js:78
+#, fuzzy
+msgid "in that-var-4"
+msgstr "em aquela"
+
+#: src/ai/commands.js:79
+#, fuzzy
+msgid "in that-var-5"
+msgstr "em aquilo"
+
+#: src/ai/commands.js:80
+msgid "to that"
+msgstr "para aquilo"
+
+#: src/ai/commands.js:81
+#, fuzzy
+msgid "to that-var-1"
+msgstr "para aquele"
+
+#: src/ai/commands.js:82
+#, fuzzy
+msgid "to that-var-2"
+msgstr "para aquela"
+
+#: src/ai/commands.js:83
+#, fuzzy
+msgid "to that-var-3"
+msgstr "pra aquilo"
+
+#: src/ai/commands.js:84
+#, fuzzy
+msgid "to that-var-4"
+msgstr "pra aquele"
+
+#: src/ai/commands.js:85
+#, fuzzy
+msgid "to that-var-5"
+msgstr "pra aquela"
+
+#: src/ai/commands.js:86
+#, fuzzy
+msgid "this"
+msgstr "isso"
+
+#: src/ai/commands.js:87
+msgid "this-var-1"
+msgstr "isto"
+
+#: src/ai/commands.js:88
+msgid "this-var-2"
+msgstr "este"
+
+#: src/ai/commands.js:89
+#, fuzzy
+msgid "this-var-3"
+msgstr "neste"
+
+#: src/ai/commands.js:90
+#, fuzzy
+msgid "this-var-4"
+msgstr "nisto"
+
+#: src/ai/commands.js:91
+#, fuzzy
+msgid "this-var-5"
+msgstr "nista"
+
+#: src/ai/commands.js:92
+#, fuzzy
+msgid "that"
+msgstr "aquilo"
+
+#: src/ai/commands.js:93
+msgid "that-var-1"
+msgstr "aquele"
+
+#: src/ai/commands.js:94
+msgid "that-var-2"
+msgstr "aquela"
+
+#: src/ai/commands.js:95
+msgid "that-var-3"
+msgstr ""
+
+#: src/ai/commands.js:96
+msgid "that-var-4"
+msgstr ""
+
+#: src/ai/commands.js:97
+msgid "that-var-5"
+msgstr ""
+
+#: src/ai/commands.js:98
+msgid "in"
+msgstr "em"
+
+#: src/ai/commands.js:99
+msgid "in-var-1"
+msgstr "no"
+
+#: src/ai/commands.js:100
+msgid "in-var-2"
+msgstr "na"
+
+#: src/ai/commands.js:101
+#, fuzzy
+msgid "in-var-3"
+msgstr "em o"
+
+#: src/ai/commands.js:102
+#, fuzzy
+msgid "in-var-4"
+msgstr "em a"
+
+#: src/ai/commands.js:103
+#, fuzzy
+msgid "in-var-5"
+msgstr "ne"
+
+#: src/ai/commands.js:104
+msgid "to"
+msgstr "para"
+
+#: src/ai/commands.js:105
+msgid "to-var-1"
+msgstr "pro"
+
+#: src/ai/commands.js:106
+msgid "to-var-2"
+msgstr "pra"
+
+#: src/ai/commands.js:107
+#, fuzzy
+msgid "to-var-3"
+msgstr "para a"
+
+#: src/ai/commands.js:108
+#, fuzzy
+msgid "to-var-4"
+msgstr "para o"
+
+#: src/ai/commands.js:109
+msgid "to-var-5"
+msgstr ""
+
+#: src/ai/commands.js:110
+msgid "the"
+msgstr "o"
+
+#: src/ai/commands.js:111
+msgid "the-var-1"
+msgstr "a"
+
+#: src/ai/commands.js:112
+msgid "the-var-2"
+msgstr ""
+
+#: src/ai/commands.js:113
+msgid "the-var-3"
+msgstr ""
+
+#: src/ai/commands.js:114
+msgid "the-var-4"
+msgstr ""
+
+#: src/ai/commands.js:115
+msgid "the-var-5"
+msgstr ""
 
 #: src/ai/gemini.js:37
 msgid "Hi, I am"
@@ -248,487 +729,6 @@ msgstr "Falha ao obter texto da área de transferência"
 #: src/utils/utils.js:351
 msgid "Look at example below:"
 msgstr "Veja o exemplo abaixo:"
-
-#: src/commands.js:5
-msgid "computer"
-msgstr "computador"
-
-#: src/commands.js:8
-msgid "open"
-msgstr "abrir"
-
-#: src/commands.js:9
-msgid "open-var-1"
-msgstr "abra"
-
-#: src/commands.js:10
-msgid "open-var-2"
-msgstr "abre"
-
-#: src/commands.js:11
-msgid "start"
-msgstr "iniciar"
-
-#: src/commands.js:12
-#, fuzzy
-msgid "start-var-1"
-msgstr "inicia"
-
-#: src/commands.js:13
-#, fuzzy
-msgid "start-var-2"
-msgstr "inicie"
-
-#: src/commands.js:14
-msgid "launch"
-msgstr "lançar"
-
-#: src/commands.js:15
-#, fuzzy
-msgid "launch-var-1"
-msgstr "lança"
-
-#: src/commands.js:16
-#, fuzzy
-msgid "launch-var-2"
-msgstr "lance"
-
-#: src/commands.js:17
-msgid "run"
-msgstr "rodar"
-
-#: src/commands.js:18
-msgid "run-var-1"
-msgstr "roda"
-
-#: src/commands.js:19
-msgid "run-var-2"
-msgstr "rode"
-
-#: src/commands.js:20
-msgid "execute"
-msgstr "executar"
-
-#: src/commands.js:21
-#, fuzzy
-msgid "execute-var-1"
-msgstr "executa"
-
-#: src/commands.js:22
-#, fuzzy
-msgid "execute-var-2"
-msgstr "execute"
-
-#: src/commands.js:23
-msgid "read"
-msgstr "ler"
-
-#: src/commands.js:24
-msgid "read-var-1"
-msgstr "leia"
-
-#: src/commands.js:25
-msgid "read-var-2"
-msgstr "lê"
-
-#: src/commands.js:26
-msgid "access"
-msgstr "acessar"
-
-#: src/commands.js:27
-#, fuzzy
-msgid "access-var-1"
-msgstr "acessa"
-
-#: src/commands.js:28
-#, fuzzy
-msgid "access-var-2"
-msgstr "acesse"
-
-#: src/commands.js:29
-msgid "load"
-msgstr "carregar"
-
-#: src/commands.js:30
-msgid "load-var-1"
-msgstr "carrega"
-
-#: src/commands.js:31
-msgid "load-var-2"
-msgstr "carregue"
-
-#: src/commands.js:32
-msgid "visit"
-msgstr "visitar"
-
-#: src/commands.js:33
-#, fuzzy
-msgid "visit-var-1"
-msgstr "visita"
-
-#: src/commands.js:34
-#, fuzzy
-msgid "visit-var-2"
-msgstr "visite"
-
-#: src/commands.js:35
-msgid "browse"
-msgstr "navegar"
-
-#: src/commands.js:36
-#, fuzzy
-msgid "browse-var-1"
-msgstr "navega"
-
-#: src/commands.js:37
-#, fuzzy
-msgid "browse-var-2"
-msgstr "navegue"
-
-#: src/commands.js:38
-msgid "enter"
-msgstr "entrar"
-
-#: src/commands.js:39
-#, fuzzy
-msgid "enter-var-1"
-msgstr "entra"
-
-#: src/commands.js:40
-#, fuzzy
-msgid "enter-var-2"
-msgstr "entre"
-
-#: src/commands.js:41
-msgid "navigate"
-msgstr "navegar"
-
-#: src/commands.js:42
-#, fuzzy
-msgid "navigate-var-1"
-msgstr "navega"
-
-#: src/commands.js:43
-#, fuzzy
-msgid "navigate-var-2"
-msgstr "navegue"
-
-#: src/commands.js:44
-msgid "go"
-msgstr "ir"
-
-#: src/commands.js:48
-msgid "in the"
-msgstr "em"
-
-#: src/commands.js:49
-#, fuzzy
-msgid "in the-var-1"
-msgstr "no"
-
-#: src/commands.js:50
-#, fuzzy
-msgid "in the-var-2"
-msgstr "na"
-
-#: src/commands.js:51
-#, fuzzy
-msgid "in the-var-3"
-msgstr "em o"
-
-#: src/commands.js:52
-#, fuzzy
-msgid "in the-var-4"
-msgstr "em a"
-
-#: src/commands.js:53
-msgid "in the-var-5"
-msgstr ""
-
-#: src/commands.js:54
-#, fuzzy
-msgid "to the"
-msgstr "para o"
-
-#: src/commands.js:55
-#, fuzzy
-msgid "to the-var-1"
-msgstr "para a"
-
-#: src/commands.js:56
-#, fuzzy
-msgid "to the-var-2"
-msgstr "pro"
-
-#: src/commands.js:57
-#, fuzzy
-msgid "to the-var-3"
-msgstr "pra"
-
-#: src/commands.js:58
-#, fuzzy
-msgid "to the-var-4"
-msgstr "pra a"
-
-#: src/commands.js:59
-#, fuzzy
-msgid "to the-var-5"
-msgstr "pro o"
-
-#: src/commands.js:60
-#, fuzzy
-msgid "in this"
-msgstr "nisso"
-
-#: src/commands.js:61
-#, fuzzy
-msgid "in this-var-1"
-msgstr "nisto"
-
-#: src/commands.js:62
-#, fuzzy
-msgid "in this-var-2"
-msgstr "neste"
-
-#: src/commands.js:63
-#, fuzzy
-msgid "in this-var-3"
-msgstr "nesta"
-
-#: src/commands.js:64
-msgid "in this-var-4"
-msgstr ""
-
-#: src/commands.js:65
-msgid "in this-var-5"
-msgstr ""
-
-#: src/commands.js:66
-msgid "to this"
-msgstr "para isso"
-
-#: src/commands.js:67
-#, fuzzy
-msgid "to this-var-1"
-msgstr "para isto"
-
-#: src/commands.js:68
-#, fuzzy
-msgid "to this-var-2"
-msgstr "pra isso"
-
-#: src/commands.js:69
-#, fuzzy
-msgid "to this-var-3"
-msgstr "pra isto"
-
-#: src/commands.js:70
-#, fuzzy
-msgid "to this-var-4"
-msgstr "pra este"
-
-#: src/commands.js:71
-#, fuzzy
-msgid "to this-var-5"
-msgstr "pra esta"
-
-#: src/commands.js:72
-#, fuzzy
-msgid "to this-var-6"
-msgstr "para este"
-
-#: src/commands.js:73
-#, fuzzy
-msgid "to this-var-7"
-msgstr "para esta"
-
-#: src/commands.js:74
-msgid "in that"
-msgstr "naquilo"
-
-#: src/commands.js:75
-#, fuzzy
-msgid "in that-var-1"
-msgstr "naquele"
-
-#: src/commands.js:76
-#, fuzzy
-msgid "in that-var-2"
-msgstr "naquela"
-
-#: src/commands.js:77
-#, fuzzy
-msgid "in that-var-3"
-msgstr "em aquele"
-
-#: src/commands.js:78
-#, fuzzy
-msgid "in that-var-4"
-msgstr "em aquela"
-
-#: src/commands.js:79
-#, fuzzy
-msgid "in that-var-5"
-msgstr "em aquilo"
-
-#: src/commands.js:80
-msgid "to that"
-msgstr "para aquilo"
-
-#: src/commands.js:81
-#, fuzzy
-msgid "to that-var-1"
-msgstr "para aquele"
-
-#: src/commands.js:82
-#, fuzzy
-msgid "to that-var-2"
-msgstr "para aquela"
-
-#: src/commands.js:83
-#, fuzzy
-msgid "to that-var-3"
-msgstr "pra aquilo"
-
-#: src/commands.js:84
-#, fuzzy
-msgid "to that-var-4"
-msgstr "pra aquele"
-
-#: src/commands.js:85
-#, fuzzy
-msgid "to that-var-5"
-msgstr "pra aquela"
-
-#: src/commands.js:86
-#, fuzzy
-msgid "this"
-msgstr "isso"
-
-#: src/commands.js:87
-msgid "this-var-1"
-msgstr "isto"
-
-#: src/commands.js:88
-msgid "this-var-2"
-msgstr "este"
-
-#: src/commands.js:89
-#, fuzzy
-msgid "this-var-3"
-msgstr "neste"
-
-#: src/commands.js:90
-#, fuzzy
-msgid "this-var-4"
-msgstr "nisto"
-
-#: src/commands.js:91
-#, fuzzy
-msgid "this-var-5"
-msgstr "nista"
-
-#: src/commands.js:92
-#, fuzzy
-msgid "that"
-msgstr "aquilo"
-
-#: src/commands.js:93
-msgid "that-var-1"
-msgstr "aquele"
-
-#: src/commands.js:94
-msgid "that-var-2"
-msgstr "aquela"
-
-#: src/commands.js:95
-msgid "that-var-3"
-msgstr ""
-
-#: src/commands.js:96
-msgid "that-var-4"
-msgstr ""
-
-#: src/commands.js:97
-msgid "that-var-5"
-msgstr ""
-
-#: src/commands.js:98
-msgid "in"
-msgstr "em"
-
-#: src/commands.js:99
-msgid "in-var-1"
-msgstr "no"
-
-#: src/commands.js:100
-msgid "in-var-2"
-msgstr "na"
-
-#: src/commands.js:101
-#, fuzzy
-msgid "in-var-3"
-msgstr "em o"
-
-#: src/commands.js:102
-#, fuzzy
-msgid "in-var-4"
-msgstr "em a"
-
-#: src/commands.js:103
-#, fuzzy
-msgid "in-var-5"
-msgstr "ne"
-
-#: src/commands.js:104
-msgid "to"
-msgstr "para"
-
-#: src/commands.js:105
-msgid "to-var-1"
-msgstr "pro"
-
-#: src/commands.js:106
-msgid "to-var-2"
-msgstr "pra"
-
-#: src/commands.js:107
-#, fuzzy
-msgid "to-var-3"
-msgstr "para a"
-
-#: src/commands.js:108
-#, fuzzy
-msgid "to-var-4"
-msgstr "para o"
-
-#: src/commands.js:109
-msgid "to-var-5"
-msgstr ""
-
-#: src/commands.js:110
-msgid "the"
-msgstr "o"
-
-#: src/commands.js:111
-msgid "the-var-1"
-msgstr "a"
-
-#: src/commands.js:112
-msgid "the-var-2"
-msgstr ""
-
-#: src/commands.js:113
-msgid "the-var-3"
-msgstr ""
-
-#: src/commands.js:114
-msgid "the-var-4"
-msgstr ""
-
-#: src/commands.js:115
-msgid "the-var-5"
-msgstr ""
 
 #: src/ui/mainmenu.js:30
 msgid "Ask me anything..."
