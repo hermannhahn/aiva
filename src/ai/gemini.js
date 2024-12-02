@@ -159,9 +159,9 @@ export class GoogleGemini {
                         );
                         return;
                     }
-                    let jsonResponse = {};
-                    jsonResponse = JSON.stringify(res);
-                    this.app.log('Tool response: ' + jsonResponse);
+                    // let jsonResponse = {};
+                    // jsonResponse = JSON.stringify(res);
+                    // this.app.log('Tool response: ' + jsonResponse);
 
                     let tool =
                         res.candidates[0]?.content?.parts[0]?.functionCall;
