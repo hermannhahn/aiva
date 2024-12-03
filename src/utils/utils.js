@@ -353,6 +353,21 @@ export class Utils {
     }
 
     /**
+     * @description check if app is installed
+     * @param {string} command
+     * @returns {boolean} [true/false]
+     */
+    isAppInstalled(command) {
+        try {
+            const process = GLib.spawn_command_line_sync(`which ${command}`);
+            return process.returncode === 0;
+        } catch (error) {
+            this.app.logError('Error checking if app is installed:', error);
+            return false;
+        }
+    }
+
+    /**
      * @description remove all gva .wav files from /tmp folder
      */
     removeWavFiles() {
