@@ -36,6 +36,7 @@ import {Commands} from './commands.js';
 
 // API
 import {GoogleGemini} from './ai/gemini.js';
+import {GeminiFunctions} from './ai/gemini_functions.js';
 import {MicrosoftAzure} from './ai/azure.js';
 
 const Aiva = GObject.registerClass(
@@ -109,6 +110,7 @@ const Aiva = GObject.registerClass(
             this.commands = new Commands(this);
             this.database = new Database(this);
             this.gemini = new GoogleGemini(this);
+            this.functions = new GeminiFunctions(this);
             this.azure = new MicrosoftAzure(this);
             this.audio = new Audio(this);
             this.utils = new Utils(this);

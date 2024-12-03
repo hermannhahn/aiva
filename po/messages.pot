@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-03 14:32-0300\n"
+"POT-Creation-Date: 2024-12-03 14:33-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -33,6 +33,18 @@ msgstr ""
 #: src/ai/azure.js:160 src/ai/azure.js:183 src/ai/azure.js:197
 #: src/ai/azure.js:240 src/ai/azure.js:249
 msgid "Sorry, I'm having trouble to listen you. Please try again."
+msgstr ""
+
+#: src/ai/gemini_functions.js:25
+msgid "End of text!"
+msgstr ""
+
+#: src/ai/gemini_functions.js:29
+msgid "Failed to get text from clipboard"
+msgstr ""
+
+#: src/ai/gemini_functions.js:62
+msgid "Error opening site"
 msgstr ""
 
 #: src/ai/gemini.js:35
@@ -78,18 +90,6 @@ msgstr ""
 
 #: src/ai/gemini.js:201
 msgid "Possible dangerous content in the question or response."
-msgstr ""
-
-#: src/ai/functions.js:25
-msgid "End of text!"
-msgstr ""
-
-#: src/ai/functions.js:29
-msgid "Failed to get text from clipboard"
-msgstr ""
-
-#: src/ai/functions.js:62
-msgid "Error opening site"
 msgstr ""
 
 #: src/utils/phrases.js:6

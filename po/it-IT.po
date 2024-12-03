@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-03 14:20-0300\n"
+"POT-Creation-Date: 2024-12-03 14:33-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language it-IT\n"
@@ -33,6 +33,20 @@ msgstr ""
 #: src/ai/azure.js:240 src/ai/azure.js:249
 msgid "Sorry, I'm having trouble to listen you. Please try again."
 msgstr ""
+
+#: src/ai/gemini_functions.js:25
+msgid "End of text!"
+msgstr ""
+
+#: src/ai/gemini_functions.js:29
+#, fuzzy
+msgid "Failed to get text from clipboard"
+msgstr "Codice copiato negli appunti"
+
+#: src/ai/gemini_functions.js:62
+#, fuzzy
+msgid "Error opening site"
+msgstr "Codice copiato negli appunti"
 
 #: src/ai/gemini.js:35
 msgid "Hi, I am"
@@ -78,20 +92,6 @@ msgstr ""
 #: src/ai/gemini.js:201
 msgid "Possible dangerous content in the question or response."
 msgstr ""
-
-#: src/ai/functions.js:25
-msgid "End of text!"
-msgstr ""
-
-#: src/ai/functions.js:29
-#, fuzzy
-msgid "Failed to get text from clipboard"
-msgstr "Codice copiato negli appunti"
-
-#: src/ai/functions.js:62
-#, fuzzy
-msgid "Error opening site"
-msgstr "Codice copiato negli appunti"
 
 #: src/utils/phrases.js:6
 msgid "I will show it on screen."
