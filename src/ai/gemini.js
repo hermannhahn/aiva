@@ -164,7 +164,7 @@ export class GoogleGemini {
                             _("Sorry, I can't answer this question.") +
                             ' ' +
                             _(
-                                'Possible sexually explicit content in the question or answer.',
+                                'Possible sexually explicit content in the question or response.',
                             );
                     }
                     if (safetyRating.category === 'HARM_CATEGORY_HATE_SPEECH') {
@@ -172,26 +172,27 @@ export class GoogleGemini {
                             _("Sorry, I can't answer this question.") +
                             ' ' +
                             _(
-                                'Possible hate speech in the question or answer.',
+                                'Possible hate speech in the question or response.',
                             );
                     }
                     if (safetyRating.category === 'HARM_CATEGORY_HARASSMENT') {
                         aiResponse =
                             _("Sorry, I can't answer this question.") +
                             ' ' +
-                            _('Possible harassment in the question or answer.');
+                            _(
+                                'Possible harassment in the question or response.',
+                            );
                     }
                     if (
                         safetyRating.category ===
                         'HARM_CATEGORY_DANGEROUS_CONTENT'
                     ) {
-                        aiResponse = 'tryRunCommand';
-                        // aiResponse =
-                        //     _("Sorry, I can't answer this question.") +
-                        //     ' ' +
-                        //     _(
-                        //         'Possible dangerous content in the question or answer.',
-                        //     );
+                        aiResponse =
+                            _("Sorry, I can't answer this question.") +
+                            ' ' +
+                            _(
+                                'Possible dangerous content in the question or response.',
+                            );
                     }
                 }
             }
@@ -225,8 +226,8 @@ export class GoogleGemini {
                     parts: [{text: String(text) || ''}],
                 },
             ]);
-            const stringfiedTool = JSON.stringify(this._functions());
-            return `{"contents":${stringfiedHistory}, "tools":${stringfiedTool}}`;
+            const stringfiedTools = JSON.stringify(this._functions());
+            return `{"contents":${stringfiedHistory}, "tools":${stringfiedTools}}`;
         } catch (error) {
             this.app.log(`Error building body: ${error.message}`);
             return null;
@@ -246,8 +247,8 @@ export class GoogleGemini {
             },
         ];
         const stringfiedRequest = JSON.stringify(request);
-        const stringfiedTool = JSON.stringify(this._functions());
-        return `{"contents":${stringfiedRequest}, "tools":${stringfiedTool}}`;
+        const stringfiedTools = JSON.stringify(this._functions());
+        return `{"contents":${stringfiedRequest}, "tools":${stringfiedTools}}`;
     }
 
     _functions() {
