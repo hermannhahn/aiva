@@ -273,37 +273,6 @@ export class Utils {
     }
 
     /**
-     * @description read clipboard text
-     */
-    readClipboardText() {
-        return new Promise((resolve, reject) => {
-            this.app.extension.clipboard.get_text(
-                St.ClipboardType.CLIPBOARD,
-                (clipboard, result) => {
-                    if (result) {
-                        let clipboardText = result;
-                        this.app.log('Clipboard: ' + clipboardText);
-                        this.app.azure.tts(
-                            _('Start reading...') +
-                                '\n ' +
-                                clipboardText +
-                                '\n ' +
-                                _('End of text!'),
-                        );
-                        resolve(clipboardText);
-                    } else {
-                        this.app.log(_('Failed to get text from clipboard'));
-                        this.app.chat.editResponse(
-                            _('Failed to get text from clipboard'),
-                        );
-                        reject(new Error('Failed to get text from clipboard'));
-                    }
-                },
-            );
-        });
-    }
-
-    /**
      * @description extract code and tts from text
      * @param {string} text
      * @returns {object} { code, tts }
