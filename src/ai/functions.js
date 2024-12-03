@@ -5,7 +5,7 @@ import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js'
  * @description functions
  * @param {object} app
  */
-export class Functions {
+export class GeminiFunctions {
     constructor(app) {
         this.app = app;
         console.log('Functions loaded.');
