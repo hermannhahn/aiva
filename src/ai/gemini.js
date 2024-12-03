@@ -54,6 +54,8 @@ export class GoogleGemini {
 
         try {
             this.app.log('Getting response...');
+            this.app.log('Question: ' + question);
+
             // Create http session
             const models = [
                 'gemini-1.0-pro',
