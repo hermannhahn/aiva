@@ -53,7 +53,6 @@ export class GoogleGemini {
         }
 
         try {
-            this.app.log('Question: ' + question);
             this.app.log('Getting response...');
 
             // Create http session
@@ -69,6 +68,7 @@ export class GoogleGemini {
 
             // Send async request
             var body = this._buildBody(question);
+            this.app.log('Body Question: ' + body);
             let message = Soup.Message.new('POST', url);
             let bytes = GLib.Bytes.new(body);
             message.set_request_body_from_bytes('application/json', bytes);
