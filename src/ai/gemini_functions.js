@@ -66,12 +66,12 @@ export class GeminiFunctions {
                                 response: {
                                     type: 'string',
                                     description:
-                                        'Response text before run, e.g. "Sure, opening google..."',
+                                        'Response text before run, e.g. "Sure, opening google...". PS: Always in same language of user question.',
                                 },
                                 installInstructions: {
                                     type: 'string',
                                     description:
-                                        'The app and dependencies install instructions to run command line if needed.',
+                                        'The app and dependencies install instructions to run command line if needed. PS: Always in same language of user question.',
                                 },
                             },
                             required: ['commandLine', 'response'],
