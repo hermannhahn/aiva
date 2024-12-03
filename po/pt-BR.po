@@ -37,13 +37,12 @@ msgstr "Estou tendo dificuldade de te escutar. Por favor, tente novamente."
 #, fuzzy
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr ""
-"Eu não posso fazer isso agora. Talvez no futuro. Fique atento as "
-"atualizações."
+"Eu não posso fazer isso agora. Talvez no futuro."
 
 #: src/ai/gemini_functions.js:47 src/ai/gemini_functions.js:71
 #, fuzzy
 msgid "Response text before run, e.g.: "
-msgstr "texto de resposta antes de executar, por exemplo:"
+msgstr "Rexto de resposta antes de executar, por exemplo: "
 
 #: src/ai/gemini_functions.js:48
 #, fuzzy
