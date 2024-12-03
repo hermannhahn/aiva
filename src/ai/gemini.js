@@ -299,7 +299,8 @@ export class GoogleGemini {
                                 name: {
                                     type: 'string',
                                     description:
-                                        'The name of the app, e.g. "firefox"',                                }
+                                        'The name of the app, e.g. "firefox"',
+                                },
                                 args: {
                                     type: 'string',
                                     description:
