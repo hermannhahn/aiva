@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-03 00:06-0300\n"
+"POT-Creation-Date: 2024-12-03 00:07-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,43 +17,23 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/interpreter.js:49 src/ai/commands.js:27
-msgid "HELP"
-msgstr ""
-
-#: src/interpreter.js:51 src/ai/commands.js:29
-msgid "Commands"
-msgstr ""
-
-#: src/interpreter.js:56 src/ai/commands.js:34
-msgid "Open settings"
-msgstr ""
-
-#: src/interpreter.js:60 src/ai/commands.js:38
-msgid "Show this help"
-msgstr ""
-
-#: src/interpreter.js:72 src/ai/commands.js:21
-msgid "Invalid command"
-msgstr ""
-
-#: src/interpreter.js:84
+#: src/interpreter.js:54
 msgid "Error reading clipboard text"
 msgstr ""
 
-#: src/interpreter.js:123 src/interpreter.js:187
+#: src/interpreter.js:93 src/interpreter.js:157
 msgid "Searching for"
 msgstr ""
 
-#: src/interpreter.js:130
+#: src/interpreter.js:100
 msgid "Error opening channel"
 msgstr ""
 
-#: src/interpreter.js:229
+#: src/interpreter.js:199
 msgid "Error opening site"
 msgstr ""
 
-#: src/interpreter.js:234
+#: src/interpreter.js:204
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr ""
 
@@ -69,6 +49,26 @@ msgstr ""
 #: src/ai/azure.js:160 src/ai/azure.js:183 src/ai/azure.js:197
 #: src/ai/azure.js:240 src/ai/azure.js:249
 msgid "Sorry, I'm having trouble to listen you. Please try again."
+msgstr ""
+
+#: src/ai/commands.js:21
+msgid "Invalid command"
+msgstr ""
+
+#: src/ai/commands.js:27
+msgid "HELP"
+msgstr ""
+
+#: src/ai/commands.js:29
+msgid "Commands"
+msgstr ""
+
+#: src/ai/commands.js:34
+msgid "Open settings"
+msgstr ""
+
+#: src/ai/commands.js:38
+msgid "Show this help"
 msgstr ""
 
 #: src/ai/gemini.js:35

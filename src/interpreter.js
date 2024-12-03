@@ -10,7 +10,7 @@ export class Interpreter {
     constructor(app) {
         this.app = app;
         this.app.log('Interpreter loaded.');
-        this.commands = new Commands();
+        this.commands = new Commands(app);
         this.phrases = new Phrases();
     }
 
@@ -25,7 +25,7 @@ export class Interpreter {
         if (this._isSlashCommand(question)) {
             // SLASH COMMANDS
             this.app.log('Slash command: ' + command);
-            this._slashCommands(command);
+            this.commands.slash(command);
         } else {
             // QUESTIONS
             this.app.log('Sending question to API...');
@@ -40,36 +40,6 @@ export class Interpreter {
             return true;
         }
         return false;
-    }
-
-    _slashCommands(text) {
-        if (text.startsWith('/help')) {
-            this.app.chat.editResponse(
-                '\n' +
-                    _('HELP') +
-                    '\n\n' +
-                    _('Commands') +
-                    ':' +
-                    '\n' +
-                    '/settings' +
-                    ' - ' +
-                    _('Open settings') +
-                    '\n' +
-                    '/help    ' +
-                    ' - ' +
-                    _('Show this help') +
-                    '\n',
-            );
-            return;
-        }
-
-        if (text.startsWith('/settings')) {
-            this.app.openSettings();
-            return;
-        }
-
-        // else
-        this.app.chat.editResponse(_('Invalid command'));
     }
 
     async localCommand(command, request = undefined) {

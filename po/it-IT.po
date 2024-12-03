@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-03 00:06-0300\n"
+"POT-Creation-Date: 2024-12-03 00:07-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language it-IT\n"
@@ -16,47 +16,26 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/interpreter.js:49 src/ai/commands.js:27
-msgid "HELP"
-msgstr ""
-
-#: src/interpreter.js:51 src/ai/commands.js:29
-msgid "Commands"
-msgstr ""
-
-#: src/interpreter.js:56 src/ai/commands.js:34
-msgid "Open settings"
-msgstr ""
-
-#: src/interpreter.js:60 src/ai/commands.js:38
-#, fuzzy
-msgid "Show this help"
-msgstr "Codice copiato negli appunti"
-
-#: src/interpreter.js:72 src/ai/commands.js:21
-msgid "Invalid command"
-msgstr ""
-
-#: src/interpreter.js:84
+#: src/interpreter.js:54
 #, fuzzy
 msgid "Error reading clipboard text"
 msgstr "Codice copiato negli appunti"
 
-#: src/interpreter.js:123 src/interpreter.js:187
+#: src/interpreter.js:93 src/interpreter.js:157
 msgid "Searching for"
 msgstr ""
 
-#: src/interpreter.js:130
+#: src/interpreter.js:100
 #, fuzzy
 msgid "Error opening channel"
 msgstr "Codice copiato negli appunti"
 
-#: src/interpreter.js:229
+#: src/interpreter.js:199
 #, fuzzy
 msgid "Error opening site"
 msgstr "Codice copiato negli appunti"
 
-#: src/interpreter.js:234
+#: src/interpreter.js:204
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr ""
 
@@ -73,6 +52,27 @@ msgstr ""
 #: src/ai/azure.js:240 src/ai/azure.js:249
 msgid "Sorry, I'm having trouble to listen you. Please try again."
 msgstr ""
+
+#: src/ai/commands.js:21
+msgid "Invalid command"
+msgstr ""
+
+#: src/ai/commands.js:27
+msgid "HELP"
+msgstr ""
+
+#: src/ai/commands.js:29
+msgid "Commands"
+msgstr ""
+
+#: src/ai/commands.js:34
+msgid "Open settings"
+msgstr ""
+
+#: src/ai/commands.js:38
+#, fuzzy
+msgid "Show this help"
+msgstr "Codice copiato negli appunti"
 
 #: src/ai/gemini.js:35
 msgid "Hi, I am"
