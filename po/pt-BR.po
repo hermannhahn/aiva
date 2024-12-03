@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-03 14:05-0300\n"
+"POT-Creation-Date: 2024-12-03 14:06-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -87,11 +87,6 @@ msgstr "Possível assédio na pergunta ou resposta."
 #, fuzzy
 msgid "Possible dangerous content in the question or response."
 msgstr "Possível assédio na pergunta ou resposta."
-
-#: src/ai/functions.js:21
-#, fuzzy
-msgid "Start reading..."
-msgstr "Iniciando a leitura..."
 
 #: src/ai/functions.js:25
 msgid "End of text!"
@@ -343,6 +338,10 @@ msgstr "Salvar"
 #: src/prefs.js:287
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
+
+#, fuzzy
+#~ msgid "Start reading..."
+#~ msgstr "Iniciando a leitura..."
 
 #~ msgid "Searching for"
 #~ msgstr "Pesquisando por"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-03 14:05-0300\n"
+"POT-Creation-Date: 2024-12-03 14:06-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language it-IT\n"
@@ -77,10 +77,6 @@ msgstr ""
 
 #: src/ai/gemini.js:200
 msgid "Possible dangerous content in the question or response."
-msgstr ""
-
-#: src/ai/functions.js:21
-msgid "Start reading..."
 msgstr ""
 
 #: src/ai/functions.js:25

@@ -11,14 +11,14 @@ export class Functions {
         console.log('Functions loaded.');
     }
 
-    readClipboardText() {
+    readClipboardText(response) {
         this.app.extension.clipboard.get_text(
             St.ClipboardType.CLIPBOARD,
             (clipboard, result) => {
                 if (result) {
                     let clipboardText = result;
                     this.app.azure.tts(
-                        _('Start reading...') +
+                        response +
                             '\n ' +
                             clipboardText +
                             '\n ' +
