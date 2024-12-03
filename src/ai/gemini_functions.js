@@ -44,9 +44,7 @@ export class GeminiFunctions {
                             response: {
                                 type: 'string',
                                 description:
-                                    this.app.userSettings
-                                        .AZURE_SPEECH_LANGUAGE +
-                                    _(' response text before run, e.g. ') +
+                                    _('Response text before run, e.g.: ') +
                                     _('Sure, start reading...'),
                             },
                         },
@@ -70,19 +68,14 @@ export class GeminiFunctions {
                             response: {
                                 type: 'string',
                                 description:
-                                    this.app.userSettings
-                                        .AZURE_SPEECH_LANGUAGE +
-                                    _(' response text before run, e.g. ') +
+                                    _('Response text before run, e.g.: ') +
                                     _('Sure, opening google...'),
                             },
                             installInstructions: {
                                 type: 'string',
-                                description:
-                                    this.app.userSettings
-                                        .AZURE_SPEECH_LANGUAGE +
-                                    _(
-                                        ' install instructions for app and dependencies if needed.',
-                                    ),
+                                description: _(
+                                    'Install instructions for app and dependencies if needed.',
+                                ),
                             },
                         },
                         required: ['commandLine', 'response'],
