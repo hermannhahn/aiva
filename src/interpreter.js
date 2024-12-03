@@ -28,10 +28,6 @@ export class Interpreter {
             // SLASH COMMANDS
             this.app.log('Slash command: ' + command);
             this._slashCommands(command);
-            // } else if (isVoiceCommand) {
-            //     // VOICE COMMANDS
-            //     this.app.log('Voice command detected.');
-            //     this.app.gemini.toolCommand(question);
         } else {
             // QUESTIONS
             this.app.log('Sending question to API...');
@@ -50,12 +46,22 @@ export class Interpreter {
 
     _slashCommands(text) {
         if (text.startsWith('/help')) {
-            this.app.chat.editResponse(`
-HELP
-
-/settings   - Open settings
-/help       - Show this help
-                `);
+            this.app.chat.editResponse(
+                '\n' +
+                    _('HELP') +
+                    '\n' +
+                    _('Commands') +
+                    ':' +
+                    '\n' +
+                    '/settings' +
+                    ' - ' +
+                    _('Open settings') +
+                    '\n' +
+                    '/help    ' +
+                    ' - ' +
+                    _('Show this help') +
+                    '\n',
+            );
             return;
         }
 
@@ -64,61 +70,6 @@ HELP
             return;
         }
         this.app.chat.editResponse(_('Invalid command'));
-    }
-
-    _isVoiceCommand(question) {
-        // Converta a string de entrada para letras minúsculas para uma comparação case-insensitive
-        question = question.toLowerCase();
-        // cria uma string com as 10 primeiras palavras
-        let normalizedRequest = question.split(/\s+/).slice(0, 10).join(' ');
-        let directRequest = question.split(/\s+/).slice(0, 3).join(' ');
-
-        for (const command of this.commands.activation) {
-            for (const suffix of this.commands.suffix) {
-                // Forme a combinação de comando, sufixo e opção
-                const combination = `${command} ${suffix}`.trim();
-
-                // Verifique se a combinação está contida na string de entrada
-                if (normalizedRequest.includes(combination)) {
-                    for (const option of this.commands.options) {
-                        if (normalizedRequest.includes(option)) {
-                            // get the next word after option
-                            const nextWordIndex =
-                                normalizedRequest.indexOf(option) +
-                                option.length +
-                                1;
-                            const request = normalizedRequest
-                                .substring(nextWordIndex)
-                                .split(/\s+/)[0];
-                            return {command, request};
-                        }
-                    }
-                    // get the next word after command suffix
-                    const nextWordIndex =
-                        normalizedRequest.indexOf(combination) +
-                        combination.length +
-                        1;
-                    const request = normalizedRequest
-                        .substring(nextWordIndex)
-                        .split(/\s+/)[0];
-                    return {command, request};
-                }
-            }
-        }
-        for (const command of this.commands.activation) {
-            if (directRequest.includes(command)) {
-                // get the next word after command
-                const nextWordIndex =
-                    directRequest.indexOf(command) + command.length + 1;
-                const request = directRequest
-                    .substring(nextWordIndex)
-                    .split(/\s+/)[0];
-                return {command, request};
-            }
-        }
-
-        // Retorna false se nenhuma combinação for encontrada
-        return false;
     }
 
     async localCommand(command, request = undefined) {
