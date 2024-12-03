@@ -105,19 +105,131 @@ export class Database {
 
     async initDatabase() {
         try {
-            // Create "history" if not exists
+            // create "history" if not exists
             const createHistoryTableQuery = `
-            CREATE TABLE IF NOT EXISTS history (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                user TEXT NOT NULL,
-                model TEXT NOT NULL,
-                timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
-                UNIQUE(user, model) ON CONFLICT REPLACE
-            );
-        `;
+                CREATE TABLE IF NOT EXISTS history (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    user TEXT NOT NULL,
+                    model TEXT NOT NULL,
+                    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+                    UNIQUE(id) ON CONFLICT REPLACE
+                );
+            `;
+
+            // create "functions" if not exists
+            const createFunctions = `
+                CREATE TABLE IF NOT EXISTS functions (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    name TEXT NOT NULL,
+                    desc TEXT NOT NULL,
+                    UNIQUE(id) ON CONFLICT REPLACE
+                );
+            `;
+
+            // create "params" if not exists
+            const createParams = `
+                CREATE TABLE IF NOT EXISTS params (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    fid INTEGER NOT NULL,
+                    name TEXT NOT NULL,
+                    type TEXT NOT NULL,
+                    desc TEXT NOT NULL,
+                    UNIQUE(id) ON CONFLICT REPLACE,
+                    FOREIGN KEY (fid) REFERENCES functions(id) ON DELETE CASCADE
+                );
+            `;
+
+            // Initialize database
             await this.executeSql(createHistoryTableQuery);
+            await this.executeSql(createFunctions);
+            await this.executeSql(createParams);
         } catch (error) {
             console.error('Error initializing database:', error);
+        }
+    }
+
+    async addFunction(name, desc) {
+        try {
+            const insertQuery = `
+            INSERT INTO functions (name, desc)
+            VALUES ('${name}', '${desc}');
+            `;
+            await this.executeSql(insertQuery);
+        } catch (error) {
+            console.error('Error adding function:', error);
+        }
+    }
+
+    async addParam(fid, name, type, desc) {
+        try {
+            const insertQuery = `
+            INSERT INTO params (fid, name, type, desc)
+            VALUES ('${fid}', '${name}', '${type}', '${desc}');
+            `;
+            await this.executeSql(insertQuery);
+        } catch (error) {
+            console.error('Error adding param:', error);
+        }
+    }
+
+    async removeFunction(id) {
+        try {
+            const deleteQuery = `DELETE FROM functions WHERE id = ${id}`;
+            await this.executeSql(deleteQuery);
+        } catch (error) {
+            console.error('Error removing function:', error);
+        }
+    }
+
+    async removeParam(fid) {
+        try {
+            const deleteQuery = `DELETE FROM params WHERE fid = ${fid}`;
+            await this.executeSql(deleteQuery);
+        } catch (error) {
+            console.error('Error removing param:', error);
+        }
+    }
+
+    /**
+     * @description return functions and their parameters
+     */
+    getFunctions() {
+        try {
+            const functionsQuery = `SELECT id, name, desc FROM functions`;
+            const paramsQuery = `SELECT fid, name, type, desc FROM params`;
+
+            const functionsResult = this.executeSql(functionsQuery);
+            const paramsResult = this.executeSql(paramsQuery);
+
+            if (!functionsResult || !paramsResult) {
+                return [];
+            }
+
+            const functions = functionsResult
+                .split('\n')
+                .map((line) => {
+                    const [id, name, desc] = line.split('|');
+                    return {id, name, desc};
+                })
+                .filter(Boolean);
+
+            const params = paramsResult
+                .split('\n')
+                .map((line) => {
+                    const [fid, name, type, desc] = line.split('|');
+                    return {fid, name, type, desc};
+                })
+                .filter(Boolean);
+
+            const functionsWithParams = functions.map((func) => ({
+                ...func,
+                params: params.filter((param) => param.fid === func.id),
+            }));
+
+            return functionsWithParams;
+        } catch (error) {
+            console.error('Error getting functions:', error);
+            return [];
         }
     }
 
