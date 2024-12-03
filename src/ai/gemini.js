@@ -296,15 +296,19 @@ export class GoogleGemini {
                         parameters: {
                             type: 'object',
                             properties: {
-                                tts: {
+                                name: {
                                     type: 'string',
                                     description:
-                                        'The text to be spoken, e.g. "Sure, opening firefox.."',
-                                },
+                                        'The name of the app, e.g. "firefox"',                                }
                                 args: {
                                     type: 'string',
                                     description:
                                         'The args of the app e.g. "https://google.com --new-window"',
+                                },
+                                tts: {
+                                    type: 'string',
+                                    description:
+                                        'The text to be spoken, e.g. "Sure, opening firefox.."',
                                 },
                             },
                             required: ['tts'],
