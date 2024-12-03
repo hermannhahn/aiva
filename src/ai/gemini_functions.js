@@ -11,6 +11,27 @@ export class GeminiFunctions {
         console.log('Functions loaded.');
     }
 
+    init(command, args) {
+        command = command?.toLowerCase();
+        const commandLine = args.commandLine?.toLowerCase();
+        const response = args.response?.toLowerCase();
+        const installInstructions = args.installInstructions?.toLowerCase();
+
+        switch (command) {
+            case 'read_clipboard':
+                this.readClipboardText(response);
+                break;
+            case 'open_app':
+                this.openApp(commandLine, response, installInstructions);
+                break;
+            default:
+                this.app.chat.editResponse(
+                    _("Sorry, I can't do that right now. Maybe in the future."),
+                );
+                break;
+        }
+    }
+
     declarations() {
         return [
             {

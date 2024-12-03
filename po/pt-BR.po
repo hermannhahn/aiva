@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-03 15:07-0300\n"
+"POT-Creation-Date: 2024-12-03 15:09-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/interpreter.js:55
+#: src/interpreter.js:55 src/ai/gemini_functions.js:29
 #, fuzzy
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr "Eu não posso fazer isso agora. Tente novamente mais tarde."
@@ -37,46 +37,46 @@ msgstr "Erro na transcrição!"
 msgid "Sorry, I'm having trouble to listen you. Please try again."
 msgstr "Estou tendo dificuldade de te escutar. Por favor, tente novamente."
 
-#: src/ai/gemini_functions.js:20
+#: src/ai/gemini_functions.js:41
 msgid "read text from clipboard"
 msgstr "leia o texto que copiei"
 
-#: src/ai/gemini_functions.js:27 src/ai/gemini_functions.js:55
+#: src/ai/gemini_functions.js:48 src/ai/gemini_functions.js:76
 msgid "Response text before run, e.g."
 msgstr "Texto de resposta antes de executar, por exemplo:"
 
-#: src/ai/gemini_functions.js:29
+#: src/ai/gemini_functions.js:50
 #, fuzzy
 msgid "Sure, start reading..."
 msgstr "Claro, iniciando leitura..."
 
-#: src/ai/gemini_functions.js:39
+#: src/ai/gemini_functions.js:60
 msgid "To run apps, flatpak, snap, etc..."
 msgstr "Para rodar apps, flatpak, snap, etc..."
 
-#: src/ai/gemini_functions.js:48
+#: src/ai/gemini_functions.js:69
 msgid "Non-sudo command line to run, e.g."
 msgstr "Linha de comando non-sudo para executar, por exemplo:"
 
-#: src/ai/gemini_functions.js:57
+#: src/ai/gemini_functions.js:78
 #, fuzzy
 msgid "Sure, opening google..."
 msgstr "Claro, abrindo google..."
 
-#: src/ai/gemini_functions.js:63
+#: src/ai/gemini_functions.js:84
 msgid ""
 "The app and dependencies install instructions to run command line if needed."
 msgstr "Instruções para instalação do app e suas dependencias caso necessário."
 
-#: src/ai/gemini_functions.js:86
+#: src/ai/gemini_functions.js:107
 msgid "End of text!"
 msgstr "Fim do texto!"
 
-#: src/ai/gemini_functions.js:90
+#: src/ai/gemini_functions.js:111
 msgid "Failed to get text from clipboard"
 msgstr "Falha ao obter texto da área de transferência"
 
-#: src/ai/gemini_functions.js:123
+#: src/ai/gemini_functions.js:144
 msgid "Error opening site"
 msgstr "Falha ao abrir site"
 
