@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-03 00:46-0300\n"
+"POT-Creation-Date: 2024-12-03 00:59-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language de-DE\n"
@@ -83,21 +83,16 @@ msgstr ""
 msgid "Failed to get text from clipboard"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/functions.js:77 src/ai/functions.js:141
-msgid "Searching for"
+#: src/ai/functions.js:47
+msgid "Opening"
 msgstr ""
 
-#: src/ai/functions.js:84
-#, fuzzy
-msgid "Error opening channel"
-msgstr "Code kopiert in die Zwischenablage"
-
-#: src/ai/functions.js:183
+#: src/ai/functions.js:61
 #, fuzzy
 msgid "Error opening site"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/functions.js:188
+#: src/ai/functions.js:79
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr ""
 
@@ -333,6 +328,10 @@ msgstr ""
 #: src/prefs.js:287
 msgid "Your preferences have been saved"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Error opening channel"
+#~ msgstr "Code kopiert in die Zwischenablage"
 
 #, fuzzy
 #~ msgid "Error reading clipboard text"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-03 00:46-0300\n"
+"POT-Creation-Date: 2024-12-03 00:59-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -83,19 +83,15 @@ msgstr ""
 msgid "Failed to get text from clipboard"
 msgstr ""
 
-#: src/ai/functions.js:77 src/ai/functions.js:141
-msgid "Searching for"
+#: src/ai/functions.js:47
+msgid "Opening"
 msgstr ""
 
-#: src/ai/functions.js:84
-msgid "Error opening channel"
-msgstr ""
-
-#: src/ai/functions.js:183
+#: src/ai/functions.js:61
 msgid "Error opening site"
 msgstr ""
 
-#: src/ai/functions.js:188
+#: src/ai/functions.js:79
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr ""
 
