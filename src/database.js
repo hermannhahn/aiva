@@ -139,6 +139,9 @@ export class Database {
         try {
             await this.executeSql('VACUUM');
             await this.executeSql('PRAGMA optimize');
+            await this.executeSql('PRAGMA auto_vacuum');
+            await this.executeSql('PRAGMA journal_mode=WAL');
+            await this.executeSql('PRAGMA synchronous=NORMAL');
         } catch (error) {
             console.error('Error closing database:', error);
         }
