@@ -100,12 +100,16 @@ msgstr ""
 msgid "Response text before run, e.g."
 msgstr ""
 
+#: src/ai/gemini.js:276
+msgid "  '"
+msgstr ""
+
 #: src/ai/gemini.js:277
 msgid "Sure, start reading..."
 msgstr ""
 
-#: src/ai/gemini.js:276
-msgid "  '"
+#: src/ai/gemini.js:278
+msgid "'"
 msgstr ""
 
 #: src/ai/gemini.js:288
