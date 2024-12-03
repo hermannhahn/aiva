@@ -32,6 +32,7 @@ import {Interpreter} from './interpreter.js';
 import {Chat} from './chat.js';
 import {UI} from './ui.js';
 import {Utils} from './utils/utils.js';
+import {Commands} from './ai/commands.js';
 
 // API
 import {GoogleGemini} from './ai/gemini.js';
@@ -105,6 +106,7 @@ const Aiva = GObject.registerClass(
          */
         _createInstances() {
             this.logger = new Logger(DEBUG);
+            this.commands = new Commands(this);
             this.database = new Database(this);
             this.gemini = new GoogleGemini(this);
             this.azure = new MicrosoftAzure(this);
