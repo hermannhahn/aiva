@@ -272,7 +272,10 @@ export class GoogleGemini {
                                 response: {
                                     type: 'string',
                                     description: _(
-                                        'Response text before run, e.g. "Sure, start reading..."',
+                                        _('Response text before run, e.g.') +
+                                            ' "' +
+                                            _('Sure, start reading...') +
+                                            '"',
                                     ),
                                 },
                             },
