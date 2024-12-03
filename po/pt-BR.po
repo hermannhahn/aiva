@@ -214,7 +214,7 @@ msgstr "Me dê um momento para organizar isso..."
 #: src/utils/utils.js:103
 #, fuzzy
 msgid "[ Selected Copied ]"
-msgstr "Selecione a voz"
+msgstr "[ Seleção Copiada ]"
 
 #: src/utils/utils.js:118
 msgid "[ Copied ]"
