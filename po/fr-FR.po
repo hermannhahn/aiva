@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-03 14:33-0300\n"
+"POT-Creation-Date: 2024-12-03 14:53-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language fr-FR\n"
@@ -91,6 +91,36 @@ msgstr ""
 
 #: src/ai/gemini.js:201
 msgid "Possible dangerous content in the question or response."
+msgstr ""
+
+#: src/ai/gemini.js:268
+#, fuzzy
+msgid "read text from clipboard"
+msgstr "Code copié dans le presse-papier"
+
+#: src/ai/gemini.js:275
+msgid "Response text before run, e.g. \"Sure, start reading...\""
+msgstr ""
+
+#: src/ai/gemini.js:285
+msgid "To run apps, flatpak, snap, etc..."
+msgstr ""
+
+#: src/ai/gemini.js:294
+msgid "Non-sudo command line to run, e.g."
+msgstr ""
+
+#: src/ai/gemini.js:301
+msgid "Response text before run, e.g."
+msgstr ""
+
+#: src/ai/gemini.js:303
+msgid "Sure, opening google..."
+msgstr ""
+
+#: src/ai/gemini.js:309
+msgid ""
+"The app and dependencies install instructions to run command line if needed."
 msgstr ""
 
 #: src/utils/phrases.js:6
@@ -584,10 +614,6 @@ msgstr ""
 
 #, fuzzy
 #~ msgid "the-var-5"
-#~ msgstr "Code copié dans le presse-papier"
-
-#, fuzzy
-#~ msgid "Read text from clipboard"
 #~ msgstr "Code copié dans le presse-papier"
 
 #, fuzzy
