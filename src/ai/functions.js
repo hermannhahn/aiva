@@ -33,29 +33,30 @@ export class Functions {
         );
     }
 
-    openApp(command, args) {
+    openApp(commandLine, response, installInstructions) {
         try {
-            const apps = {
-                calculator: 'gnome-calculator',
-                terminal: 'gnome-terminal',
-                files: 'nautilus',
-                settings: 'gnome-control-center',
-                firefox: 'firefox',
-            };
-            for (const [key, app] of Object.entries(apps)) {
-                if (command.includes(key)) {
-                    this.app.chat.editResponse(`${_('Opening')} ${key}...`);
-                    const request = app + args;
-                    this.app.utils.executeCommand(request);
-                    return;
-                }
+            if (response) {
+                this.app.chat.editResponse(response);
             }
 
-            this.app.chat.editResponse(
-                _(
-                    `Sorry, I can't open ${command} right now. Maybe in the future.`,
-                ),
-            );
+            if (commandLine) {
+                // get first word from commandLine
+                const command = commandLine.split(' ')[0];
+
+                // check if app is installed
+                const isInstalled = this.app.utils.isAppInstalled(command);
+                if (!isInstalled) {
+                    if (installInstructions) {
+                        this.app.chat.editResponse(installInstructions);
+                        return;
+                    }
+                }
+
+                this.app.utils.executeCommand(commandLine);
+                return;
+            }
+
+            this.app.chat.editResponse(response);
         } catch (error) {
             this.app.logError('Error opening site:', error);
             this.app.chat.editResponse(_('Error opening site'));
