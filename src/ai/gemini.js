@@ -94,17 +94,33 @@ export class GoogleGemini {
                     jsonResponse = JSON.stringify(res);
                     this.app.log('Response: ' + jsonResponse);
 
-                    let tool =
+                    let toolzero =
                         res.candidates[0]?.content?.parts[0]?.functionCall;
 
-                    if (tool !== undefined) {
+                    if (toolzero !== undefined) {
                         // tool response
                         const args = {
-                            commandLine: tool.args.commandLine,
-                            response: tool.args.response,
-                            installInstructions: tool.args.installInstructions,
+                            commandLine: toolzero.args.commandLine,
+                            response: toolzero.args.response,
+                            installInstructions:
+                                toolzero.args.installInstructions,
                         };
-                        this.app.functions.callback(tool.name, args);
+                        this.app.functions.callback(toolzero.name, args);
+                        return;
+                    }
+
+                    let toolone =
+                        res.candidates[0]?.content?.parts[1]?.functionCall;
+
+                    if (toolone !== undefined) {
+                        // tool response
+                        const args = {
+                            commandLine: toolone.args.commandLine,
+                            response: toolone.args.response,
+                            installInstructions:
+                                toolone.args.installInstructions,
+                        };
+                        this.app.functions.callback(toolone.name, args);
                         return;
                     }
 
