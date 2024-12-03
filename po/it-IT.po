@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-03 00:39-0300\n"
+"POT-Creation-Date: 2024-12-03 00:46-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language it-IT\n"
@@ -68,6 +68,37 @@ msgstr ""
 
 #: src/ai/gemini.js:182
 msgid "Possible harassment in the question or answer."
+msgstr ""
+
+#: src/ai/functions.js:21
+msgid "Start reading..."
+msgstr ""
+
+#: src/ai/functions.js:25
+msgid "End of text!"
+msgstr ""
+
+#: src/ai/functions.js:29
+#, fuzzy
+msgid "Failed to get text from clipboard"
+msgstr "Codice copiato negli appunti"
+
+#: src/ai/functions.js:77 src/ai/functions.js:141
+msgid "Searching for"
+msgstr ""
+
+#: src/ai/functions.js:84
+#, fuzzy
+msgid "Error opening channel"
+msgstr "Codice copiato negli appunti"
+
+#: src/ai/functions.js:183
+#, fuzzy
+msgid "Error opening site"
+msgstr "Codice copiato negli appunti"
+
+#: src/ai/functions.js:188
+msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr ""
 
 #: src/utils/phrases.js:6
@@ -305,14 +336,6 @@ msgstr ""
 
 #, fuzzy
 #~ msgid "Error reading clipboard text"
-#~ msgstr "Codice copiato negli appunti"
-
-#, fuzzy
-#~ msgid "Error opening channel"
-#~ msgstr "Codice copiato negli appunti"
-
-#, fuzzy
-#~ msgid "Error opening site"
 #~ msgstr "Codice copiato negli appunti"
 
 #, fuzzy
@@ -1209,10 +1232,6 @@ msgstr ""
 
 #, fuzzy
 #~ msgid "please read text from clipboard"
-#~ msgstr "Codice copiato negli appunti"
-
-#, fuzzy
-#~ msgid "read the text from clipboard"
 #~ msgstr "Codice copiato negli appunti"
 
 #, fuzzy
