@@ -210,15 +210,16 @@ export class GoogleGemini {
         try {
             const history = this.app.database.getHistory();
 
-            // Log de histórico formatado para depuração
-            // this.app.log(`History: ${JSON.stringify(history, null, 2)}`);
-
             if (!Array.isArray(history) || history.length === 0) {
                 this.app.log('No history found.');
                 return this._buildNoHistoryBody(text);
             }
 
-            // Adiciona a pergunta ao histórico
+            if (!this.app.userSettings.RECURSIVE_TALK) {
+                this.app.log('History disabled.');
+                return this._buildNoHistoryBody(text);
+            }
+
             const stringfiedHistory = JSON.stringify([
                 ...history,
                 {
