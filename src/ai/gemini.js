@@ -275,73 +275,40 @@ export class GoogleGemini {
                         },
                     },
                     {
-                        name: 'get_locations',
-                        description:
-                            'Get latitude and longitude for one or more locations',
-                        parameters: {
-                            type: 'OBJECT',
-                            properties: {
-                                locations: {
-                                    type: 'ARRAY',
-                                    description: 'A list of locations',
-                                    items: {
-                                        description: 'The address',
-                                        type: 'OBJECT',
-                                        properties: {
-                                            poi: {
-                                                type: 'STRING',
-                                                description:
-                                                    'Point of interest',
-                                            },
-                                            street: {
-                                                type: 'STRING',
-                                                description: 'Street name',
-                                            },
-                                            city: {
-                                                type: 'STRING',
-                                                description: 'City name',
-                                            },
-                                            county: {
-                                                type: 'STRING',
-                                                description: 'County name',
-                                            },
-                                            state: {
-                                                type: 'STRING',
-                                                description: 'State name',
-                                            },
-                                            country: {
-                                                type: 'STRING',
-                                                description: 'Country name',
-                                            },
-                                            postal_code: {
-                                                type: 'STRING',
-                                                description: 'Postal code',
-                                            },
-                                        },
-                                    },
-                                },
-                            },
-                        },
-                    },
-                    {
-                        name: 'open_app',
-                        description: 'open app by name or description',
+                        name: 'read_clipboard',
+                        description: 'read text from clipboard',
                         parameters: {
                             type: 'object',
                             properties: {
-                                name: {
+                                tts: {
                                     type: 'string',
                                     description:
-                                        'The name of the app e.g. Google Chrome',
+                                        'The text to be spoken, e.g. "Sure, opening firefox.."',
                                 },
                             },
-                            required: ['name'],
+                            required: ['tts'],
                         },
                     },
                     {
-                        name: 'read_clipboard',
+                        name: 'open_ubuntu_app',
                         description:
-                            'read text from clipboard, or non specified source, like: read this for me',
+                            'Availables apps: firefox, nautilus, gnome-calculator, gnome-control-center, code, gnome-extentions, snap-store, gnome-calendar, gnome-clocks',
+                        parameters: {
+                            type: 'object',
+                            properties: {
+                                tts: {
+                                    type: 'string',
+                                    description:
+                                        'The text to be spoken, e.g. "Sure, opening firefox.."',
+                                },
+                                args: {
+                                    type: 'string',
+                                    description:
+                                        'The args of the app e.g. "https://google.com --new-window"',
+                                },
+                            },
+                            required: ['tts'],
+                        },
                     },
                 ],
             },
