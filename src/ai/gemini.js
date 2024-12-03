@@ -98,7 +98,11 @@ export class GoogleGemini {
                     if (tool !== undefined) {
                         // tool response
                         this.app.log('Tool name: ' + tool.name);
-                        this.app.log('Tool args: ' + tool.args.name);
+                        this.app.log('Tool args: ' + tool.args.commandline);
+                        this.app.log('Tool args: ' + tool.args.response);
+                        this.app.log(
+                            'Tool args: ' + tool.args.installInstructions,
+                        );
 
                         this.app.interpreter.localCommand(
                             tool.name,
@@ -278,7 +282,7 @@ export class GoogleGemini {
                         parameters: {
                             type: 'object',
                             properties: {
-                                commandline: {
+                                commandLine: {
                                     type: 'string',
                                     description:
                                         'Non-sudo command line to run, e.g. "firefox https://google.com --new-window"',
@@ -288,7 +292,7 @@ export class GoogleGemini {
                                     description:
                                         'Response text before run, e.g. "Sure, opening google..."',
                                 },
-                                install_instructions: {
+                                installInstructions: {
                                     type: 'string',
                                     description:
                                         'The app and dependencies install instructions to run command line if needed.',
