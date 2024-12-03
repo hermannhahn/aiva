@@ -262,13 +262,13 @@ export class GoogleGemini {
                         parameters: {
                             type: 'object',
                             properties: {
-                                tts: {
+                                response: {
                                     type: 'string',
                                     description:
-                                        'The text to be spoken, e.g. "Sure, opening firefox.."',
+                                        'Response text before run, e.g. "Sure, start reading..."',
                                 },
                             },
-                            required: ['tts'],
+                            required: ['response'],
                         },
                     },
                     {
