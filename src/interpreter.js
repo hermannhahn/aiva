@@ -33,10 +33,6 @@ export class Interpreter {
         this.app.ui.mainmenu.userEntry.clutter_text.reactive = true;
     }
 
-    callback(command, args) {
-        this.app.functions.init(command, args);
-    }
-
     _isSlashCommand(text) {
         if (text.startsWith('/')) {
             return true;
