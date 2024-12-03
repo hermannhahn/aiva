@@ -33,63 +33,62 @@ export class GeminiFunctions {
     }
 
     declarations() {
-        return [
-            {
-                functionDeclarations: [
-                    {
-                        name: 'read_clipboard',
-                        description: 'read text from clipboard',
-                        parameters: {
-                            type: 'object',
-                            properties: {
-                                response: {
-                                    type: 'string',
-                                    description:
-                                        this.app.userSettings
-                                            .AZURE_SPEECH_LANGUAGE +
-                                        ' response text before run, e.g. "' +
-                                        _('Sure, start reading...') +
-                                        '"',
-                                },
+        let result = {
+            functionDeclarations: [
+                {
+                    name: 'read_clipboard',
+                    description: 'read text from clipboard',
+                    parameters: {
+                        type: 'object',
+                        properties: {
+                            response: {
+                                type: 'string',
+                                description:
+                                    this.app.userSettings
+                                        .AZURE_SPEECH_LANGUAGE +
+                                    ' response text before run, e.g. "' +
+                                    _('Sure, start reading...') +
+                                    '"',
                             },
-                            required: ['response'],
                         },
+                        required: ['response'],
                     },
-                    {
-                        name: 'open_app',
-                        description:
-                            'To run apps, flatpak, snap, etc... [OS: Ubuntu 24.04.1 LTS]',
-                        parameters: {
-                            type: 'object',
-                            properties: {
-                                commandLine: {
-                                    type: 'string',
-                                    description:
-                                        'Non-sudo command line to run, e.g. "firefox https://google.com --new-window"',
-                                },
-                                response: {
-                                    type: 'string',
-                                    description:
-                                        this.app.userSettings
-                                            .AZURE_SPEECH_LANGUAGE +
-                                        ' response text before run, e.g. "' +
-                                        _('Sure, opening google...') +
-                                        '"',
-                                },
-                                installInstructions: {
-                                    type: 'string',
-                                    description:
-                                        this.app.userSettings
-                                            .AZURE_SPEECH_LANGUAGE +
-                                        ' app and dependencies install instructions to run command line, if needed.',
-                                },
+                },
+                {
+                    name: 'open_app',
+                    description:
+                        'To run apps, flatpak, snap, etc... [OS: Ubuntu 24.04.1 LTS]',
+                    parameters: {
+                        type: 'object',
+                        properties: {
+                            commandLine: {
+                                type: 'string',
+                                description:
+                                    'Non-sudo command line to run, e.g. "firefox https://google.com --new-window"',
                             },
-                            required: ['commandLine', 'response'],
+                            response: {
+                                type: 'string',
+                                description:
+                                    this.app.userSettings
+                                        .AZURE_SPEECH_LANGUAGE +
+                                    ' response text before run, e.g. "' +
+                                    _('Sure, opening google...') +
+                                    '"',
+                            },
+                            installInstructions: {
+                                type: 'string',
+                                description:
+                                    this.app.userSettings
+                                        .AZURE_SPEECH_LANGUAGE +
+                                    ' app and dependencies install instructions to run command line, if needed.',
+                            },
                         },
+                        required: ['commandLine', 'response'],
                     },
-                ],
-            },
-        ];
+                },
+            ],
+        };
+        return result;
     }
 
     _readClipboardText(response) {
