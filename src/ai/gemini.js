@@ -104,12 +104,13 @@ export class GoogleGemini {
                             'Tool iI: ' + tool.args.installInstructions,
                         );
 
-                        this.app.interpreter.callback(
-                            tool.name,
-                            tool.args.commandLine,
-                            tool.args.response,
-                            tool.args.installInstructions,
-                        );
+                        const args = {
+                            commandLine: tool.args.commandLine,
+                            response: tool.args.response,
+                            installInstructions: tool.args.installInstructions,
+                        };
+
+                        this.app.interpreter.callback(tool.name, args);
                     }
 
                     let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
