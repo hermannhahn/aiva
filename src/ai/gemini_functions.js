@@ -81,7 +81,7 @@ export class GeminiFunctions {
                                     description:
                                         this.app.userSettings
                                             .AZURE_SPEECH_LANGUAGE +
-                                        ' The app and dependencies install instructions to run command line if needed. PS: Always in same language of user question.',
+                                        ' app and dependencies install instructions to run command line, if needed.',
                                 },
                             },
                             required: ['commandLine', 'response'],
