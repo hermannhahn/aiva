@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-02 23:51-0300\n"
+"POT-Creation-Date: 2024-12-02 23:55-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,7 +42,7 @@ msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr ""
 
 #: src/ai/azure.js:68 src/ai/azure.js:81 src/ai/azure.js:123
-#: src/ai/azure.js:132 src/ai/gemini.js:144 src/utils/utils.js:213
+#: src/ai/azure.js:132 src/ai/gemini.js:140 src/utils/utils.js:213
 msgid "Sorry, I'm having connection trouble. Please try again."
 msgstr ""
 
@@ -479,43 +479,43 @@ msgstr ""
 msgid "the-var-5"
 msgstr ""
 
-#: src/ai/gemini.js:37
+#: src/ai/gemini.js:35
 msgid "Hi, I am"
 msgstr ""
 
-#: src/ai/gemini.js:37
+#: src/ai/gemini.js:35
 msgid "I am from"
 msgstr ""
 
-#: src/ai/gemini.js:37
+#: src/ai/gemini.js:35
 msgid "and today is"
 msgstr ""
 
-#: src/ai/gemini.js:38
+#: src/ai/gemini.js:36
 msgid "Hi! I am"
 msgstr ""
 
-#: src/ai/gemini.js:38
+#: src/ai/gemini.js:36
 msgid "How can I help you today?"
 msgstr ""
 
-#: src/ai/gemini.js:129
+#: src/ai/gemini.js:125
 msgid "Sorry, I can't answer this question now."
 msgstr ""
 
-#: src/ai/gemini.js:168 src/ai/gemini.js:176 src/ai/gemini.js:184
+#: src/ai/gemini.js:164 src/ai/gemini.js:172 src/ai/gemini.js:180
 msgid "Sorry, I can't answer this question."
 msgstr ""
 
-#: src/ai/gemini.js:171
+#: src/ai/gemini.js:167
 msgid "Possible sexually explicit content in the question or answer."
 msgstr ""
 
-#: src/ai/gemini.js:179
+#: src/ai/gemini.js:175
 msgid "Possible hate speech in the question or answer."
 msgstr ""
 
-#: src/ai/gemini.js:186
+#: src/ai/gemini.js:182
 msgid "Possible harassment in the question or answer."
 msgstr ""
 

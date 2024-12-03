@@ -1,7 +1,6 @@
 import Soup from 'gi://Soup';
 import GLib from 'gi://GLib';
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
-import {Commands} from './commands.js';
 
 /**
  * @description Google Gemini API
@@ -17,7 +16,6 @@ import {Commands} from './commands.js';
 export class GoogleGemini {
     constructor(app) {
         this.app = app;
-        this.commands = new Commands();
         this.USERNAME = app.userSettings.USERNAME;
         this.LOCATION = app.userSettings.LOCATION;
         this.GEMINI_API_KEY = app.userSettings.GEMINI_API_KEY;
@@ -113,8 +111,6 @@ export class GoogleGemini {
                     if (aiResponse === undefined) {
                         return;
                     }
-
-                    this.app.log('Response: ' + aiResponse);
 
                     // Safety
                     let safetyReason = this.safetyReason(question, res);
@@ -229,7 +225,7 @@ export class GoogleGemini {
                     parts: [{text: String(text) || ''}],
                 },
             ]);
-            const stringfiedTool = JSON.stringify(this.commands.functions);
+            const stringfiedTool = JSON.stringify(this._functions());
             return `{"contents":${stringfiedHistory}, "tools":${stringfiedTool}}`;
         } catch (error) {
             this.app.log(`Error building body: ${error.message}`);
@@ -250,19 +246,105 @@ export class GoogleGemini {
             },
         ];
         const stringfiedRequest = JSON.stringify(request);
-        const stringfiedTool = JSON.stringify(this.commands.functions);
+        const stringfiedTool = JSON.stringify(this._functions());
         return `{"contents":${stringfiedRequest}, "tools":${stringfiedTool}}`;
     }
 
-    _buildToolBody(text) {
-        let request = [
+    _functions() {
+        return [
             {
-                role: 'user',
-                parts: [{text}],
+                functionDeclarations: [
+                    {
+                        name: 'get_current_weather',
+                        description:
+                            'Get the current weather in a given location',
+                        parameters: {
+                            type: 'OBJECT',
+                            properties: {
+                                location: {
+                                    type: 'STRING',
+                                    description:
+                                        'The city and state, e.g. San Francisco, CA',
+                                },
+                                unit: {
+                                    type: 'STRING',
+                                    enum: ['celsius', 'fahrenheit'],
+                                },
+                            },
+                            required: ['location'],
+                        },
+                    },
+                    {
+                        name: 'get_locations',
+                        description:
+                            'Get latitude and longitude for one or more locations',
+                        parameters: {
+                            type: 'OBJECT',
+                            properties: {
+                                locations: {
+                                    type: 'ARRAY',
+                                    description: 'A list of locations',
+                                    items: {
+                                        description: 'The address',
+                                        type: 'OBJECT',
+                                        properties: {
+                                            poi: {
+                                                type: 'STRING',
+                                                description:
+                                                    'Point of interest',
+                                            },
+                                            street: {
+                                                type: 'STRING',
+                                                description: 'Street name',
+                                            },
+                                            city: {
+                                                type: 'STRING',
+                                                description: 'City name',
+                                            },
+                                            county: {
+                                                type: 'STRING',
+                                                description: 'County name',
+                                            },
+                                            state: {
+                                                type: 'STRING',
+                                                description: 'State name',
+                                            },
+                                            country: {
+                                                type: 'STRING',
+                                                description: 'Country name',
+                                            },
+                                            postal_code: {
+                                                type: 'STRING',
+                                                description: 'Postal code',
+                                            },
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                    },
+                    {
+                        name: 'open_app',
+                        description: 'open app by name or description',
+                        parameters: {
+                            type: 'object',
+                            properties: {
+                                name: {
+                                    type: 'string',
+                                    description:
+                                        'The name of the app e.g. Google Chrome',
+                                },
+                            },
+                            required: ['name'],
+                        },
+                    },
+                    {
+                        name: 'read_clipboard',
+                        description:
+                            'read text from clipboard, or non specified source, like: read this for me',
+                    },
+                ],
             },
         ];
-        const stringfiedRequest = JSON.stringify(request);
-        const stringfiedTool = JSON.stringify(this.commands.functions);
-        return `{"contents":${stringfiedRequest}, "tools":${stringfiedTool}}`;
     }
 }
