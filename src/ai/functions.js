@@ -62,17 +62,18 @@ export class Functions {
         }
     }
 
-    callback(command, request = undefined, args = undefined) {
-        command = command.toLowerCase();
-        request = request?.toLowerCase();
-        args = args?.toLowerCase();
+    callback(command, args) {
+        command = command?.toLowerCase();
+        const commandLine = args.commandLine?.toLowerCase();
+        const response = args.response?.toLowerCase();
+        const installInstructions = args.installInstructions?.toLowerCase();
 
         switch (command) {
             case 'read_clipboard':
-                this.readClipboardText();
+                this.readClipboardText(response);
                 break;
             case 'open_app':
-                this.openApp(request, args);
+                this.openApp(commandLine, response, installInstructions);
                 break;
             default:
                 this.app.chat.editResponse(
