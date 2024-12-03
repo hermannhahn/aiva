@@ -234,7 +234,9 @@ export class GoogleGemini {
                     parts: [{text: String(text) || ''}],
                 },
             ]);
-            const stringfiedTools = JSON.stringify(this._functions());
+            const stringfiedTools = JSON.stringify(
+                this.app.functions.declarations(),
+            );
             return `{"contents":${stringfiedHistory}, "tools":${stringfiedTools}}`;
         } catch (error) {
             this.app.log(`Error building body: ${error.message}`);
@@ -255,7 +257,9 @@ export class GoogleGemini {
             },
         ];
         const stringfiedRequest = JSON.stringify(request);
-        const stringfiedTools = JSON.stringify(this._functions());
+        const stringfiedTools = JSON.stringify(
+            this.app.functions.declarations(),
+        );
         return `{"contents":${stringfiedRequest}, "tools":${stringfiedTools}}`;
     }
 }
