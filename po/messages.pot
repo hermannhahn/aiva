@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-03 20:43-0300\n"
+"POT-Creation-Date: 2024-12-03 20:44-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,6 +34,10 @@ msgstr ""
 
 #: src/ai/gemini_functions.js:29
 msgid "Sorry, I can't do that right now. Maybe in the future."
+msgstr ""
+
+#: src/ai/gemini_functions.js:40
+msgid "read text from clipboard"
 msgstr ""
 
 #: src/ai/gemini_functions.js:47 src/ai/gemini_functions.js:71

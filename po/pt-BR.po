@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-03 20:35-0300\n"
+"POT-Creation-Date: 2024-12-03 20:44-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -37,6 +37,10 @@ msgstr "Estou tendo dificuldade de te escutar. Por favor, tente novamente."
 #, fuzzy
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr "Eu não posso fazer isso agora. Talvez no futuro."
+
+#: src/ai/gemini_functions.js:40
+msgid "read text from clipboard"
+msgstr "leia o texto que copiei"
 
 #: src/ai/gemini_functions.js:47 src/ai/gemini_functions.js:71
 msgid "Response text before run, e.g.: "
@@ -354,6 +358,3 @@ msgstr "Salvar"
 #: src/prefs.js:287
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
-
-#~ msgid "read text from clipboard"
-#~ msgstr "leia o texto que copiei"

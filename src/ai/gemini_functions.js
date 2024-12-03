@@ -37,7 +37,7 @@ export class GeminiFunctions {
             functionDeclarations: [
                 {
                     name: 'read_clipboard',
-                    description: 'read text from clipboard',
+                    description: _('read text from clipboard'),
                     parameters: {
                         type: 'object',
                         properties: {
