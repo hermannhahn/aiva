@@ -45,7 +45,7 @@ export class GeminiFunctions {
                                 response: {
                                     type: 'string',
                                     description:
-                                        'Response text before run, e.g. "Sure, start reading..."',
+                                        'Response text before run, e.g. "Sure, start reading...". PS: Always in same language of user question.',
                                 },
                             },
                             required: ['response'],
