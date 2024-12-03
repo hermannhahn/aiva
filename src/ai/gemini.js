@@ -98,15 +98,17 @@ export class GoogleGemini {
                     if (tool !== undefined) {
                         // tool response
                         this.app.log('Tool name: ' + tool.name);
-                        this.app.log('Tool args: ' + tool.args.commandline);
-                        this.app.log('Tool args: ' + tool.args.response);
+                        this.app.log('Tool cL: ' + tool.args.commandline);
+                        this.app.log('Tool res: ' + tool.args.response);
                         this.app.log(
-                            'Tool args: ' + tool.args.installInstructions,
+                            'Tool iI: ' + tool.args.installInstructions,
                         );
 
-                        this.app.interpreter.localCommand(
+                        this.app.interpreter.callback(
                             tool.name,
-                            tool.args.name,
+                            tool.args.commandLine,
+                            tool.args.response,
+                            tool.args.installInstructions,
                         );
                     }
 
