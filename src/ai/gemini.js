@@ -281,7 +281,7 @@ export class GoogleGemini {
                                 commandline: {
                                     type: 'string',
                                     description:
-                                        'The command line to run, e.g. "firefox https://google.com --new-window"',
+                                        'Non-sudo command line to run, e.g. "firefox https://google.com --new-window"',
                                 },
                                 response: {
                                     type: 'string',
@@ -291,7 +291,7 @@ export class GoogleGemini {
                                 install_instructions: {
                                     type: 'string',
                                     description:
-                                        'The app install and dependencies install instructions to run command line if needed.',
+                                        'The app and dependencies install instructions to run command line if needed.',
                                 },
                             },
                             required: ['commandline', 'response'],
