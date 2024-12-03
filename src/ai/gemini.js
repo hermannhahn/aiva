@@ -103,11 +103,17 @@ export class GoogleGemini {
                             installInstructions: tool.args.installInstructions,
                         };
                         this.app.functions.callback(tool.name, args);
+                        return;
                     }
 
                     let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
 
                     if (aiResponse === undefined) {
+                        this.app.chat.editResponse(
+                            _(
+                                "Sorry, I'm having connection trouble. Please try again.",
+                            ),
+                        );
                         return;
                     }
 
