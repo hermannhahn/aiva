@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-03 15:13-0300\n"
+"POT-Creation-Date: 2024-12-03 16:06-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language es-ES\n"
@@ -35,46 +35,16 @@ msgstr ""
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr ""
 
-#: src/ai/gemini_functions.js:41
-#, fuzzy
-msgid "read text from clipboard"
-msgstr "Código copiado al portapapeles"
-
-#: src/ai/gemini_functions.js:48 src/ai/gemini_functions.js:76
-msgid "Response text before run, e.g."
-msgstr ""
-
-#: src/ai/gemini_functions.js:50
-msgid "Sure, start reading..."
-msgstr ""
-
-#: src/ai/gemini_functions.js:60
-msgid "To run apps, flatpak, snap, etc..."
-msgstr ""
-
-#: src/ai/gemini_functions.js:69
-msgid "Non-sudo command line to run, e.g."
-msgstr ""
-
-#: src/ai/gemini_functions.js:78
-msgid "Sure, opening google..."
-msgstr ""
-
-#: src/ai/gemini_functions.js:84
-msgid ""
-"The app and dependencies install instructions to run command line if needed."
-msgstr ""
-
-#: src/ai/gemini_functions.js:107
+#: src/ai/gemini_functions.js:96
 msgid "End of text!"
 msgstr ""
 
-#: src/ai/gemini_functions.js:111
+#: src/ai/gemini_functions.js:100
 #, fuzzy
 msgid "Failed to get text from clipboard"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini_functions.js:144
+#: src/ai/gemini_functions.js:133
 #, fuzzy
 msgid "Error opening site"
 msgstr "Código copiado al portapapeles"
@@ -356,6 +326,10 @@ msgstr ""
 #: src/prefs.js:287
 msgid "Your preferences have been saved"
 msgstr ""
+
+#, fuzzy
+#~ msgid "read text from clipboard"
+#~ msgstr "Código copiado al portapapeles"
 
 #, fuzzy
 #~ msgid "Error opening channel"

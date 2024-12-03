@@ -38,17 +38,14 @@ export class GeminiFunctions {
                 functionDeclarations: [
                     {
                         name: 'read_clipboard',
-                        description: _('read text from clipboard'),
+                        description: 'read text from clipboard',
                         parameters: {
                             type: 'object',
                             properties: {
                                 response: {
                                     type: 'string',
                                     description:
-                                        _('Response text before run, e.g.') +
-                                        " '" +
-                                        _('Sure, start reading...') +
-                                        "'",
+                                        'Response text before run, e.g. "Sure, start reading..."',
                                 },
                             },
                             required: ['response'],
@@ -57,32 +54,24 @@ export class GeminiFunctions {
                     {
                         name: 'open_app',
                         description:
-                            _('To run apps, flatpak, snap, etc...') +
-                            ' [OS: Ubuntu 24.04.1 LTS]',
+                            'To run apps, flatpak, snap, etc... [OS: Ubuntu 24.04.1 LTS]',
                         parameters: {
                             type: 'object',
                             properties: {
                                 commandLine: {
                                     type: 'string',
                                     description:
-                                        _(
-                                            'Non-sudo command line to run, e.g.',
-                                        ) +
-                                        ' "firefox https://google.com --new-window"',
+                                        'Non-sudo command line to run, e.g. "firefox https://google.com --new-window"',
                                 },
                                 response: {
                                     type: 'string',
                                     description:
-                                        _('Response text before run, e.g.') +
-                                        ' "' +
-                                        _('Sure, opening google...') +
-                                        '"',
+                                        'Response text before run, e.g. "Sure, opening google..."',
                                 },
                                 installInstructions: {
                                     type: 'string',
-                                    description: _(
+                                    description:
                                         'The app and dependencies install instructions to run command line if needed.',
-                                    ),
                                 },
                             },
                             required: ['commandLine', 'response'],
