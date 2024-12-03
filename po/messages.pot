@@ -105,7 +105,7 @@ msgid "Sure, start reading..."
 msgstr ""
 
 #: src/ai/gemini.js:276
-msgid " \""
+msgid "  \""
 msgstr ""
 
 #: src/ai/gemini.js:288
