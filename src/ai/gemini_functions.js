@@ -11,7 +11,7 @@ export class GeminiFunctions {
         console.log('Functions loaded.');
     }
 
-    init(command, args) {
+    callback(command, args) {
         command = command?.toLowerCase();
         const commandLine = args.commandLine?.toLowerCase();
         const response = args.response?.toLowerCase();
