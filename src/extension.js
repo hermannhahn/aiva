@@ -32,7 +32,7 @@ import {Interpreter} from './interpreter.js';
 import {Chat} from './chat.js';
 import {UI} from './ui.js';
 import {Utils} from './utils/utils.js';
-import {Commands} from './ai/commands.js';
+import {Commands} from './commands.js';
 
 // API
 import {GoogleGemini} from './ai/gemini.js';
