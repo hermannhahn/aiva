@@ -22,8 +22,6 @@ export class Interpreter {
         this.app.chat.addResponse('...');
         this.app.ui.statusIcon('⌛');
 
-        // const isVoiceCommand = this._isVoiceCommand(question);
-
         if (this._isSlashCommand(question)) {
             // SLASH COMMANDS
             this.app.log('Slash command: ' + command);
@@ -49,7 +47,7 @@ export class Interpreter {
             this.app.chat.editResponse(
                 '\n' +
                     _('HELP') +
-                    '\n' +
+                    '\n\n' +
                     _('Commands') +
                     ':' +
                     '\n' +
@@ -69,6 +67,8 @@ export class Interpreter {
             this.app.openSettings();
             return;
         }
+
+        // else
         this.app.chat.editResponse(_('Invalid command'));
     }
 
