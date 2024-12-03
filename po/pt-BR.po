@@ -107,12 +107,12 @@ msgstr "leia o texto que copiei"
 
 #: src/ai/gemini.js:275 src/ai/gemini.js:304
 msgid "Response text before run, e.g."
-msgstr ""
+msgstr "Texto de resposta antes de executar, por exemplo:"
 
 #: src/ai/gemini.js:277
 #, fuzzy
 msgid "Sure, start reading..."
-msgstr "Iniciando a leitura..."
+msgstr "Claro, iniciando leitura..."
 
 #: src/ai/gemini.js:276
 msgid " \""
