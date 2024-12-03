@@ -97,20 +97,12 @@ export class GoogleGemini {
 
                     if (tool !== undefined) {
                         // tool response
-                        this.app.log('Tool name: ' + tool.name);
-                        this.app.log('Tool cL: ' + tool.args.commandLine);
-                        this.app.log('Tool res: ' + tool.args.response);
-                        this.app.log(
-                            'Tool iI: ' + tool.args.installInstructions,
-                        );
-
                         const args = {
                             commandLine: tool.args.commandLine,
                             response: tool.args.response,
                             installInstructions: tool.args.installInstructions,
                         };
-
-                        this.app.interpreter.callback(tool.name, args);
+                        this.app.functions.callback(tool.name, args);
                     }
 
                     let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
