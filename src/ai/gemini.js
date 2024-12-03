@@ -98,7 +98,7 @@ export class GoogleGemini {
                     if (tool !== undefined) {
                         // tool response
                         this.app.log('Tool name: ' + tool.name);
-                        this.app.log('Tool cL: ' + tool.args.commandline);
+                        this.app.log('Tool cL: ' + tool.args.commandLine);
                         this.app.log('Tool res: ' + tool.args.response);
                         this.app.log(
                             'Tool iI: ' + tool.args.installInstructions,
