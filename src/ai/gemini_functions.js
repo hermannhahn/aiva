@@ -46,7 +46,7 @@ export class GeminiFunctions {
                                 description:
                                     this.app.userSettings
                                         .AZURE_SPEECH_LANGUAGE +
-                                    ' response text before run, e.g. ' +
+                                    _(' response text before run, e.g. ') +
                                     _('Sure, start reading...'),
                             },
                         },
@@ -56,21 +56,23 @@ export class GeminiFunctions {
                 {
                     name: 'open_app',
                     description:
-                        'To run apps, flatpak, snap, etc... [OS: Ubuntu 24.04.1 LTS]',
+                        _('To run apps, flatpak, snap, etc...') +
+                        ' [OS: Ubuntu 24.04.1 LTS]',
                     parameters: {
                         type: 'object',
                         properties: {
                             commandLine: {
                                 type: 'string',
                                 description:
-                                    'Non-sudo command line to run, e.g. "firefox https://google.com --new-window"',
+                                    _('Non-sudo command line to run, e.g.') +
+                                    'firefox https://google.com --new-window',
                             },
                             response: {
                                 type: 'string',
                                 description:
                                     this.app.userSettings
                                         .AZURE_SPEECH_LANGUAGE +
-                                    ' response text before run, e.g. ' +
+                                    _(' response text before run, e.g. ') +
                                     _('Sure, opening google...'),
                             },
                             installInstructions: {
@@ -78,7 +80,9 @@ export class GeminiFunctions {
                                 description:
                                     this.app.userSettings
                                         .AZURE_SPEECH_LANGUAGE +
-                                    ' install instructions for app and dependencies if needed.',
+                                    _(
+                                        ' install instructions for app and dependencies if needed.',
+                                    ),
                             },
                         },
                         required: ['commandLine', 'response'],
