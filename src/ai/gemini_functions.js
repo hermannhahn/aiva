@@ -19,10 +19,10 @@ export class GeminiFunctions {
 
         switch (command) {
             case 'read_clipboard':
-                this.readClipboardText(response);
+                this._readClipboardText(response);
                 break;
             case 'open_app':
-                this.openApp(commandLine, response, installInstructions);
+                this._openApp(commandLine, response, installInstructions);
                 break;
             default:
                 this.app.chat.editResponse(
@@ -92,7 +92,7 @@ export class GeminiFunctions {
         ];
     }
 
-    readClipboardText(response) {
+    _readClipboardText(response) {
         this.app.extension.clipboard.get_text(
             St.ClipboardType.CLIPBOARD,
             (clipboard, result) => {
@@ -114,7 +114,7 @@ export class GeminiFunctions {
         );
     }
 
-    openApp(commandLine, response, installInstructions) {
+    _openApp(commandLine, response, installInstructions) {
         try {
             if (response) {
                 this.app.chat.editResponse(response);
