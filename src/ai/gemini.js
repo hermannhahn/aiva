@@ -271,12 +271,11 @@ export class GoogleGemini {
                             properties: {
                                 response: {
                                     type: 'string',
-                                    description: _(
+                                    description:
                                         _('Response text before run, e.g.') +
-                                            _("  '") +
-                                            _('Sure, start reading...') +
-                                            "'",
-                                    ),
+                                        " '" +
+                                        _('Sure, start reading...') +
+                                        "'",
                                 },
                             },
                             required: ['response'],
