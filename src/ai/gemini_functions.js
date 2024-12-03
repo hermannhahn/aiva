@@ -62,7 +62,7 @@ export class GeminiFunctions {
                             commandLine: {
                                 type: 'string',
                                 description:
-                                    _('Non-sudo command line to run, e.g.') +
+                                    _('Non-sudo command line to run, e.g.: ') +
                                     'firefox https://google.com --new-window',
                             },
                             response: {

@@ -49,7 +49,7 @@ msgid "To run apps, flatpak, snap, etc..."
 msgstr ""
 
 #: src/ai/gemini_functions.js:65
-msgid "Non-sudo command line to run, e.g."
+msgid "Non-sudo command line to run, e.g.: "
 msgstr ""
 
 #: src/ai/gemini_functions.js:72
