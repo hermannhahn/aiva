@@ -67,7 +67,7 @@ export class GoogleGemini {
             let url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${this.GEMINI_API_KEY}`;
 
             // Send async request
-            var body = this._buildBody(question);
+            let body = this._buildBody(question);
             this.app.log('Body Question: ' + body);
             let message = Soup.Message.new('POST', url);
             let bytes = GLib.Bytes.new(body);
