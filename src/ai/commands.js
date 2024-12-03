@@ -6,7 +6,7 @@ export class Commands {
         this.app.log('Commands loaded.');
     }
 
-    slashCommand(text) {
+    slash(text) {
         if (text.startsWith('/help')) {
             this._help();
             return;
