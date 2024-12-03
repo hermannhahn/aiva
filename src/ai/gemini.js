@@ -53,8 +53,8 @@ export class GoogleGemini {
         }
 
         try {
-            this.app.log('Getting response...');
             this.app.log('Question: ' + question);
+            this.app.log('Getting response...');
 
             // Create http session
             const models = [
