@@ -255,26 +255,6 @@ export class GoogleGemini {
             {
                 functionDeclarations: [
                     {
-                        name: 'get_current_weather',
-                        description:
-                            'Get the current weather in a given location',
-                        parameters: {
-                            type: 'OBJECT',
-                            properties: {
-                                location: {
-                                    type: 'STRING',
-                                    description:
-                                        'The city and state, e.g. San Francisco, CA',
-                                },
-                                unit: {
-                                    type: 'STRING',
-                                    enum: ['celsius', 'fahrenheit'],
-                                },
-                            },
-                            required: ['location'],
-                        },
-                    },
-                    {
                         name: 'read_clipboard',
                         description: 'read text from clipboard',
                         parameters: {
@@ -290,7 +270,7 @@ export class GoogleGemini {
                         },
                     },
                     {
-                        name: 'open_ubuntu_app',
+                        name: 'open_app',
                         description:
                             'Availables apps: firefox, nautilus, gnome-calculator, gnome-control-center, code, gnome-extentions, snap-store, gnome-calendar, gnome-clocks',
                         parameters: {
