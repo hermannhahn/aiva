@@ -301,7 +301,7 @@ export class GoogleGemini {
                                         'The app and dependencies install instructions to run command line if needed.',
                                 },
                             },
-                            required: ['commandline', 'response'],
+                            required: ['commandLine', 'response'],
                         },
                     },
                 ],
