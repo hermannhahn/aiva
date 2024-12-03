@@ -296,10 +296,9 @@ export class GoogleGemini {
                         parameters: {
                             type: 'object',
                             properties: {
-                                name: {
+                                app: {
                                     type: 'string',
-                                    description:
-                                        'The name of the app, e.g. "firefox"',
+                                    description: 'The app, e.g. "firefox"',
                                 },
                                 args: {
                                     type: 'string',
@@ -312,7 +311,7 @@ export class GoogleGemini {
                                         'The text to be spoken, e.g. "Sure, opening firefox.."',
                                 },
                             },
-                            required: ['tts'],
+                            required: ['name', 'tts'],
                         },
                     },
                 ],
