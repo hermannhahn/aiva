@@ -55,7 +55,7 @@ msgstr "Para rodar apps, flatpak, snap, etc..."
 #: src/ai/gemini_functions.js:65
 #, fuzzy
 msgid "Non-sudo command line to run, e.g.: "
-msgstr "Linha de comando non-sudo para executar, por exemplo:"
+msgstr "Linha de comando non-sudo para executar, por exemplo: "
 
 #: src/ai/gemini_functions.js:72
 #, fuzzy
