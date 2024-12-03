@@ -39,12 +39,10 @@ msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr "Eu não posso fazer isso agora. Talvez no futuro."
 
 #: src/ai/gemini_functions.js:47 src/ai/gemini_functions.js:71
-#, fuzzy
 msgid "Response text before run, e.g.: "
 msgstr "Rexto de resposta antes de executar, por exemplo: "
 
 #: src/ai/gemini_functions.js:48
-#, fuzzy
 msgid "Sure, start reading..."
 msgstr "Claro, iniciando leitura..."
 
@@ -53,17 +51,14 @@ msgid "To run apps, flatpak, snap, etc..."
 msgstr "Para rodar apps, flatpak, snap, etc..."
 
 #: src/ai/gemini_functions.js:65
-#, fuzzy
 msgid "Non-sudo command line to run, e.g.: "
 msgstr "Linha de comando non-sudo para executar, por exemplo: "
 
 #: src/ai/gemini_functions.js:72
-#, fuzzy
 msgid "Sure, opening google..."
 msgstr "Claro, abrindo google..."
 
 #: src/ai/gemini_functions.js:77
-#, fuzzy
 msgid "Install instructions for app and dependencies if needed."
 msgstr "Instruções para instalação do app e suas dependencias caso necessário."
 
@@ -111,22 +106,18 @@ msgid "Sorry, I can't answer this question."
 msgstr "Peço desculpas, eu não posso responder a esta pergunta."
 
 #: src/ai/gemini.js:174
-#, fuzzy
 msgid "Possible sexually explicit content in the question or response."
 msgstr "Possível conteúdo sexualmente explícito na pergunta ou resposta."
 
 #: src/ai/gemini.js:182
-#, fuzzy
 msgid "Possible hate speech in the question or response."
 msgstr "Possível discurso de ódio na pergunta ou resposta."
 
 #: src/ai/gemini.js:190
-#, fuzzy
 msgid "Possible harassment in the question or response."
 msgstr "Possível assédio na pergunta ou resposta."
 
 #: src/ai/gemini.js:201
-#, fuzzy
 msgid "Possible dangerous content in the question or response."
 msgstr "Possível assédio na pergunta ou resposta."
 
@@ -215,6 +206,7 @@ msgid "I'm on it..."
 msgstr "Estou nisso..."
 
 #: src/utils/phrases.js:33
+#, fuzzy
 msgid "I'll need a moment for that..."
 msgstr "Vou precisar de um momento para isso..."
 
@@ -223,6 +215,7 @@ msgid "Let me dig deeper..."
 msgstr "Vou me aprofundar..."
 
 #: src/utils/phrases.js:35
+#, fuzzy
 msgid "I'm thinking it over..."
 msgstr "Estou pensando nisso..."
 
@@ -231,7 +224,6 @@ msgid "Give me a moment to sort this out..."
 msgstr "Me dê um momento para organizar isso..."
 
 #: src/utils/utils.js:103
-#, fuzzy
 msgid "[ Selected Copied ]"
 msgstr "[ Seleção Copiada ]"
 
@@ -248,7 +240,6 @@ msgid "Sure, searching..."
 msgstr "Claro, pesquisando..."
 
 #: src/utils/utils.js:208
-#, fuzzy
 msgid "Here are the main news"
 msgstr "Aqui estão as principais notícias"
 
@@ -286,7 +277,7 @@ msgstr "CONFIGURAÇÕES"
 
 #: src/prefs.js:74
 msgid "Gemini API Key"
-msgstr "Chave API (Gemini)"
+msgstr "Chave API Gemini"
 
 #: src/prefs.js:85
 msgid "Insert your Gemini API key here"
@@ -298,7 +289,7 @@ msgstr "Como obter a chave de API?"
 
 #: src/prefs.js:100
 msgid "Azure Speech API Key"
-msgstr "Chave API (Azure Speech)"
+msgstr "Chave API Azure Speech"
 
 #: src/prefs.js:111
 msgid "Insert your Azure Speech API key here"
@@ -309,7 +300,6 @@ msgid "Azure Speech Region"
 msgstr "Região do Azure Speech"
 
 #: src/prefs.js:137
-#, fuzzy
 msgid "e.g.: eastus, westus..."
 msgstr "ex: eastus, westus, ..."
 
