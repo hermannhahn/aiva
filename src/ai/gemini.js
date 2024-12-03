@@ -274,26 +274,27 @@ export class GoogleGemini {
                     {
                         name: 'open_app',
                         description:
-                            'Availables apps: firefox, nautilus, gnome-calculator, gnome-control-center, code, gnome-extentions, snap-store, gnome-calendar, gnome-clocks',
+                            'To run apps, flatpak, snap, etc... [OS: Ubuntu 24.04.1 LTS]',
                         parameters: {
                             type: 'object',
                             properties: {
-                                app: {
-                                    type: 'string',
-                                    description: 'The app, e.g. "firefox"',
-                                },
-                                args: {
+                                commandline: {
                                     type: 'string',
                                     description:
-                                        'The args of the app e.g. "https://google.com --new-window"',
+                                        'The command line to run, e.g. "firefox https://google.com --new-window"',
                                 },
-                                tts: {
+                                response: {
                                     type: 'string',
                                     description:
-                                        'The text to be spoken, e.g. "Sure, opening firefox.."',
+                                        'Response text before run, e.g. "Sure, opening google..."',
+                                },
+                                install_instructions: {
+                                    type: 'string',
+                                    description:
+                                        'The app install and dependencies install instructions to run command line if needed.',
                                 },
                             },
-                            required: ['name', 'tts'],
+                            required: ['commandline', 'response'],
                         },
                     },
                 ],
