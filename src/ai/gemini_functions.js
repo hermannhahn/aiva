@@ -13,8 +13,8 @@ export class GeminiFunctions {
 
     callback(command, args) {
         command = command?.toLowerCase();
-        const commandLine = args.commandLine?.toLowerCase();
-        const response = args.response?.toLowerCase();
+        const commandLine = args.commandLine;
+        const response = args.response;
 
         switch (command) {
             case 'read_clipboard':
