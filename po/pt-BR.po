@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-03 22:57-0300\n"
+"POT-Creation-Date: 2024-12-03 23:44-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -53,329 +53,49 @@ msgstr ""
 msgid "pc"
 msgstr ""
 
-#: src/ai/gemini_functions.js:20
-msgid "open"
-msgstr "abrir"
-
-#: src/ai/gemini_functions.js:21
-msgid "close"
-msgstr "fechar"
-
-#: src/ai/gemini_functions.js:22
-msgid "search"
-msgstr "pesquisar"
-
-#: src/ai/gemini_functions.js:23 src/ai/gemini_functions.js:78
-msgid "play"
-msgstr "tocar"
-
-#: src/ai/gemini_functions.js:24
-msgid "start"
-msgstr "iniciar"
-
-#: src/ai/gemini_functions.js:25
-msgid "stop"
-msgstr "parar"
-
-#: src/ai/gemini_functions.js:26
-msgid "pause"
-msgstr "pausar"
-
-#: src/ai/gemini_functions.js:27
-msgid "resume"
-msgstr "retomar"
-
-#: src/ai/gemini_functions.js:28
-msgid "restart"
-msgstr "reiniciar"
-
-#: src/ai/gemini_functions.js:29
-msgid "reboot"
-msgstr "reiniciar"
-
-#: src/ai/gemini_functions.js:30
-msgid "shutdown"
-msgstr "desligar"
-
-#: src/ai/gemini_functions.js:31
-msgid "lock"
-msgstr "bloquear"
-
-#: src/ai/gemini_functions.js:32
-msgid "unlock"
-msgstr "desbloquear"
-
-#: src/ai/gemini_functions.js:33
-msgid "suspend"
-msgstr "suspender"
-
-#: src/ai/gemini_functions.js:34
-msgid "hibernate"
-msgstr "hibernar"
-
-#: src/ai/gemini_functions.js:35
-msgid "sleep"
-msgstr "dormir"
-
-#: src/ai/gemini_functions.js:36
-msgid "warn"
-msgstr "avisar"
-
-#: src/ai/gemini_functions.js:37
-msgid "remind"
-msgstr "lembrar"
-
-#: src/ai/gemini_functions.js:38
-msgid "remember"
-msgstr "lembrar"
-
-#: src/ai/gemini_functions.js:39
-msgid "watch"
-msgstr "assistir"
-
-#: src/ai/gemini_functions.js:40
-msgid "track"
-msgstr "seguir"
-
-#: src/ai/gemini_functions.js:41
-msgid "localize"
-msgstr "localizar"
-
-#: src/ai/gemini_functions.js:42
-msgid "find"
-msgstr "procurar"
-
-#: src/ai/gemini_functions.js:43
-msgid "locate"
-msgstr "encontrar"
-
-#: src/ai/gemini_functions.js:44
-msgid "create"
-msgstr "criar"
-
-#: src/ai/gemini_functions.js:45
-msgid "make"
-msgstr "fazer"
-
-#: src/ai/gemini_functions.js:46
-msgid "register"
-msgstr "registrar"
-
-#: src/ai/gemini_functions.js:47
-msgid "modify"
-msgstr "modificar"
-
-#: src/ai/gemini_functions.js:48
-msgid "get"
-msgstr "pegar"
-
-#: src/ai/gemini_functions.js:49
-msgid "send"
-msgstr "enviar"
-
-#: src/ai/gemini_functions.js:50
-msgid "receive"
-msgstr "receber"
-
-#: src/ai/gemini_functions.js:51
-msgid "download"
-msgstr ""
-
 #: src/ai/gemini_functions.js:52
-msgid "upload"
-msgstr ""
-
-#: src/ai/gemini_functions.js:53
-msgid "generate"
-msgstr "gerar"
-
-#: src/ai/gemini_functions.js:54
-msgid "paint"
-msgstr "pintar"
-
-#: src/ai/gemini_functions.js:55
-msgid "run"
-msgstr "rodar"
-
-#: src/ai/gemini_functions.js:56
-msgid "execute"
-msgstr "executar"
-
-#: src/ai/gemini_functions.js:57
-msgid "launch"
-msgstr "lançar"
-
-#: src/ai/gemini_functions.js:58
-msgid "browse"
-msgstr "vizualizar"
-
-#: src/ai/gemini_functions.js:59
-msgid "navigate"
-msgstr "navegar"
-
-#: src/ai/gemini_functions.js:60
-msgid "take me"
-msgstr "me leve"
-
-#: src/ai/gemini_functions.js:61
-msgid "show"
-msgstr "mostrar"
-
-#: src/ai/gemini_functions.js:62
-msgid "read"
-msgstr "ler"
-
-#: src/ai/gemini_functions.js:63
-msgid "write"
-msgstr "escrever"
-
-#: src/ai/gemini_functions.js:64
-msgid "copy"
-msgstr "copiar"
-
-#: src/ai/gemini_functions.js:65
-msgid "move"
-msgstr "mover"
-
-#: src/ai/gemini_functions.js:66
-msgid "delete"
-msgstr "deletar"
-
-#: src/ai/gemini_functions.js:67
-msgid "del"
-msgstr "apagar"
-
-#: src/ai/gemini_functions.js:68
-msgid "clean"
-msgstr "limpar"
-
-#: src/ai/gemini_functions.js:69
-msgid "clear"
-msgstr "limpar"
-
-#: src/ai/gemini_functions.js:70
-msgid "turn on"
-msgstr "ligar"
-
-#: src/ai/gemini_functions.js:71
-msgid "turn off"
-msgstr "desligar"
-
-#: src/ai/gemini_functions.js:72
-msgid "please"
-msgstr "por favor"
-
-#: src/ai/gemini_functions.js:73
-msgid "can you"
-msgstr "você pode"
-
-#: src/ai/gemini_functions.js:74
-msgid "would you"
-msgstr "você poderia"
-
-#: src/ai/gemini_functions.js:75
-msgid "could you"
-msgstr "você consegue"
-
-#: src/ai/gemini_functions.js:76
-msgid "paste"
-msgstr "colar"
-
-#: src/ai/gemini_functions.js:77
-msgid "speak"
-msgstr "conversar"
-
-#: src/ai/gemini_functions.js:79
-msgid "speech"
-msgstr "falar"
-
-#: src/ai/gemini_functions.js:80
-msgid "install"
-msgstr "instalar"
-
-#: src/ai/gemini_functions.js:81
-msgid "uninstall"
-msgstr "desinstalar"
-
-#: src/ai/gemini_functions.js:82
-msgid "add"
-msgstr "adicionar"
-
-#: src/ai/gemini_functions.js:83
-msgid "remove"
-msgstr "remover"
-
-#: src/ai/gemini_functions.js:84
-msgid "update"
-msgstr "atualizar"
-
-#: src/ai/gemini_functions.js:85
-msgid "edit"
-msgstr "editar"
-
-#: src/ai/gemini_functions.js:86
-msgid "change"
-msgstr "alterar"
-
-#: src/ai/gemini_functions.js:87
-msgid "configure"
-msgstr "configurar"
-
-#: src/ai/gemini_functions.js:88
-msgid "print"
-msgstr "imprimir"
-
-#: src/ai/gemini_functions.js:89
-msgid "check"
-msgstr "verificar"
-
-#: src/ai/gemini_functions.js:90
-msgid "access"
-msgstr "acessar"
-
-#: src/ai/gemini_functions.js:131
 #, fuzzy
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr "Eu não posso fazer isso agora. Talvez no futuro."
 
-#: src/ai/gemini_functions.js:143
+#: src/ai/gemini_functions.js:64
 msgid "To run apps, flatpak, snap, etc..."
 msgstr "Para rodar apps, flatpak, snap, etc..."
 
-#: src/ai/gemini_functions.js:151
+#: src/ai/gemini_functions.js:72
 msgid "Non-sudo command line to run, e.g.: "
 msgstr "Linha de comando non-sudo para executar, por exemplo: "
 
-#: src/ai/gemini_functions.js:157 src/ai/gemini_functions.js:179
+#: src/ai/gemini_functions.js:78 src/ai/gemini_functions.js:100
 msgid "Response text before run, e.g.: "
 msgstr "Rexto de resposta antes de executar, por exemplo: "
 
-#: src/ai/gemini_functions.js:158
+#: src/ai/gemini_functions.js:79
 msgid "Sure, opening google..."
 msgstr "Claro, abrindo google..."
 
-#: src/ai/gemini_functions.js:163
+#: src/ai/gemini_functions.js:84
 msgid "Install instructions for app and dependencies if needed."
 msgstr "Instruções para instalação do app e suas dependencias caso necessário."
 
-#: src/ai/gemini_functions.js:172
+#: src/ai/gemini_functions.js:93
 #, fuzzy
 msgid "read text from clipboard with tts"
 msgstr "leia o texto que copiei"
 
-#: src/ai/gemini_functions.js:180
+#: src/ai/gemini_functions.js:101
 msgid "Sure, start reading..."
 msgstr "Claro, iniciando leitura..."
 
-#: src/ai/gemini_functions.js:202
+#: src/ai/gemini_functions.js:123
 msgid "End of text!"
 msgstr "Fim do texto!"
 
-#: src/ai/gemini_functions.js:206
+#: src/ai/gemini_functions.js:127
 msgid "Failed to get text from clipboard"
 msgstr "Falha ao obter texto da área de transferência"
 
-#: src/ai/gemini_functions.js:239
+#: src/ai/gemini_functions.js:160
 msgid "Error opening site"
 msgstr "Falha ao abrir site"
 
@@ -659,3 +379,207 @@ msgstr "Salvar"
 #: src/prefs.js:287
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
+
+#~ msgid "open"
+#~ msgstr "abrir"
+
+#~ msgid "close"
+#~ msgstr "fechar"
+
+#~ msgid "search"
+#~ msgstr "pesquisar"
+
+#~ msgid "play"
+#~ msgstr "tocar"
+
+#~ msgid "start"
+#~ msgstr "iniciar"
+
+#~ msgid "stop"
+#~ msgstr "parar"
+
+#~ msgid "pause"
+#~ msgstr "pausar"
+
+#~ msgid "resume"
+#~ msgstr "retomar"
+
+#~ msgid "restart"
+#~ msgstr "reiniciar"
+
+#~ msgid "reboot"
+#~ msgstr "reiniciar"
+
+#~ msgid "shutdown"
+#~ msgstr "desligar"
+
+#~ msgid "lock"
+#~ msgstr "bloquear"
+
+#~ msgid "unlock"
+#~ msgstr "desbloquear"
+
+#~ msgid "suspend"
+#~ msgstr "suspender"
+
+#~ msgid "hibernate"
+#~ msgstr "hibernar"
+
+#~ msgid "sleep"
+#~ msgstr "dormir"
+
+#~ msgid "warn"
+#~ msgstr "avisar"
+
+#~ msgid "remind"
+#~ msgstr "lembrar"
+
+#~ msgid "remember"
+#~ msgstr "lembrar"
+
+#~ msgid "watch"
+#~ msgstr "assistir"
+
+#~ msgid "track"
+#~ msgstr "seguir"
+
+#~ msgid "localize"
+#~ msgstr "localizar"
+
+#~ msgid "find"
+#~ msgstr "procurar"
+
+#~ msgid "locate"
+#~ msgstr "encontrar"
+
+#~ msgid "create"
+#~ msgstr "criar"
+
+#~ msgid "make"
+#~ msgstr "fazer"
+
+#~ msgid "register"
+#~ msgstr "registrar"
+
+#~ msgid "modify"
+#~ msgstr "modificar"
+
+#~ msgid "get"
+#~ msgstr "pegar"
+
+#~ msgid "send"
+#~ msgstr "enviar"
+
+#~ msgid "receive"
+#~ msgstr "receber"
+
+#~ msgid "generate"
+#~ msgstr "gerar"
+
+#~ msgid "paint"
+#~ msgstr "pintar"
+
+#~ msgid "run"
+#~ msgstr "rodar"
+
+#~ msgid "execute"
+#~ msgstr "executar"
+
+#~ msgid "launch"
+#~ msgstr "lançar"
+
+#~ msgid "browse"
+#~ msgstr "vizualizar"
+
+#~ msgid "navigate"
+#~ msgstr "navegar"
+
+#~ msgid "take me"
+#~ msgstr "me leve"
+
+#~ msgid "show"
+#~ msgstr "mostrar"
+
+#~ msgid "read"
+#~ msgstr "ler"
+
+#~ msgid "write"
+#~ msgstr "escrever"
+
+#~ msgid "copy"
+#~ msgstr "copiar"
+
+#~ msgid "move"
+#~ msgstr "mover"
+
+#~ msgid "delete"
+#~ msgstr "deletar"
+
+#~ msgid "del"
+#~ msgstr "apagar"
+
+#~ msgid "clean"
+#~ msgstr "limpar"
+
+#~ msgid "clear"
+#~ msgstr "limpar"
+
+#~ msgid "turn on"
+#~ msgstr "ligar"
+
+#~ msgid "turn off"
+#~ msgstr "desligar"
+
+#~ msgid "please"
+#~ msgstr "por favor"
+
+#~ msgid "can you"
+#~ msgstr "você pode"
+
+#~ msgid "would you"
+#~ msgstr "você poderia"
+
+#~ msgid "could you"
+#~ msgstr "você consegue"
+
+#~ msgid "paste"
+#~ msgstr "colar"
+
+#~ msgid "speak"
+#~ msgstr "conversar"
+
+#~ msgid "speech"
+#~ msgstr "falar"
+
+#~ msgid "install"
+#~ msgstr "instalar"
+
+#~ msgid "uninstall"
+#~ msgstr "desinstalar"
+
+#~ msgid "add"
+#~ msgstr "adicionar"
+
+#~ msgid "remove"
+#~ msgstr "remover"
+
+#~ msgid "update"
+#~ msgstr "atualizar"
+
+#~ msgid "edit"
+#~ msgstr "editar"
+
+#~ msgid "change"
+#~ msgstr "alterar"
+
+#~ msgid "configure"
+#~ msgstr "configurar"
+
+#~ msgid "print"
+#~ msgstr "imprimir"
+
+#~ msgid "check"
+#~ msgstr "verificar"
+
+#~ msgid "access"
+#~ msgstr "acessar"
