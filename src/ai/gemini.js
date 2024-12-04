@@ -284,11 +284,20 @@ export class GoogleGemini {
         if (text.length < 3) {
             return false;
         }
+        // remove ",", ".", ";", "!", ":" from text
+        const punctuation = [',', '.', ';', '!', ':'];
+        let textWithoutPunctuation = text.join(' ');
+        for (const p of punctuation) {
+            textWithoutPunctuation = textWithoutPunctuation.replace(p, '');
+        }
+        text = textWithoutPunctuation.split(' ');
+
         for (const word of this.app.functions.activationWords) {
             if (text.includes(word)) {
                 return true;
             }
         }
+
         return false;
     }
 }
