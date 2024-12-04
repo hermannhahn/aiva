@@ -67,7 +67,7 @@ export class GeminiFunctions {
                 },
                 {
                     name: 'read_clipboard',
-                    description: _('read text from clipboard'),
+                    description: _('read text from clipboard with tts'),
                     parameters: {
                         type: 'object',
                         properties: {

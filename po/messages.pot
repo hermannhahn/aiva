@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-03 21:07-0300\n"
+"POT-Creation-Date: 2024-12-03 21:09-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -57,7 +57,7 @@ msgid "Install instructions for app and dependencies if needed."
 msgstr ""
 
 #: src/ai/gemini_functions.js:70
-msgid "read text from clipboard"
+msgid "read text from clipboard with tts"
 msgstr ""
 
 #: src/ai/gemini_functions.js:78
