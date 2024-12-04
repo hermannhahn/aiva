@@ -35,7 +35,7 @@ msgstr "Estou tendo dificuldade de te escutar. Por favor, tente novamente."
 
 #: src/ai/gemini_functions.js:13
 msgid "computer"
-msgstr ""
+msgstr "computador"
 
 #: src/ai/gemini_functions.js:14
 msgid "notebook"
@@ -55,127 +55,127 @@ msgstr ""
 
 #: src/ai/gemini_functions.js:20
 msgid "open"
-msgstr ""
+msgstr "abrir"
 
 #: src/ai/gemini_functions.js:21
 msgid "close"
-msgstr ""
+msgstr "fechar"
 
 #: src/ai/gemini_functions.js:22
 msgid "search"
-msgstr ""
+msgstr "pesquisar"
 
 #: src/ai/gemini_functions.js:23 src/ai/gemini_functions.js:78
 msgid "play"
-msgstr ""
+msgstr "tocar"
 
 #: src/ai/gemini_functions.js:24
 msgid "start"
-msgstr ""
+msgstr "iniciar"
 
 #: src/ai/gemini_functions.js:25
 msgid "stop"
-msgstr ""
+msgstr "parar"
 
 #: src/ai/gemini_functions.js:26
 msgid "pause"
-msgstr ""
+msgstr "pausar"
 
 #: src/ai/gemini_functions.js:27
 msgid "resume"
-msgstr ""
+msgstr "retomar"
 
 #: src/ai/gemini_functions.js:28
 msgid "restart"
-msgstr ""
+msgstr "reiniciar"
 
 #: src/ai/gemini_functions.js:29
 msgid "reboot"
-msgstr ""
+msgstr "reiniciar"
 
 #: src/ai/gemini_functions.js:30
 msgid "shutdown"
-msgstr ""
+msgstr "desligar"
 
 #: src/ai/gemini_functions.js:31
 msgid "lock"
-msgstr ""
+msgstr "bloquear"
 
 #: src/ai/gemini_functions.js:32
 msgid "unlock"
-msgstr ""
+msgstr "desbloquear"
 
 #: src/ai/gemini_functions.js:33
 msgid "suspend"
-msgstr ""
+msgstr "suspender"
 
 #: src/ai/gemini_functions.js:34
 msgid "hibernate"
-msgstr ""
+msgstr "hibernar"
 
 #: src/ai/gemini_functions.js:35
 msgid "sleep"
-msgstr ""
+msgstr "dormir"
 
 #: src/ai/gemini_functions.js:36
 msgid "warn"
-msgstr ""
+msgstr "avisar"
 
 #: src/ai/gemini_functions.js:37
 msgid "remind"
-msgstr ""
+msgstr "lembrar"
 
 #: src/ai/gemini_functions.js:38
 msgid "remember"
-msgstr ""
+msgstr "lembrar"
 
 #: src/ai/gemini_functions.js:39
 msgid "watch"
-msgstr ""
+msgstr "assistir"
 
 #: src/ai/gemini_functions.js:40
 msgid "track"
-msgstr ""
+msgstr "seguir"
 
 #: src/ai/gemini_functions.js:41
 msgid "localize"
-msgstr ""
+msgstr "localizar"
 
 #: src/ai/gemini_functions.js:42
 msgid "find"
-msgstr ""
+msgstr "procurar"
 
 #: src/ai/gemini_functions.js:43
 msgid "locate"
-msgstr ""
+msgstr "encontrar"
 
 #: src/ai/gemini_functions.js:44
 msgid "create"
-msgstr ""
+msgstr "criar"
 
 #: src/ai/gemini_functions.js:45
 msgid "make"
-msgstr ""
+msgstr "fazer"
 
 #: src/ai/gemini_functions.js:46
 msgid "register"
-msgstr ""
+msgstr "registrar"
 
 #: src/ai/gemini_functions.js:47
 msgid "modify"
-msgstr ""
+msgstr "modificar"
 
 #: src/ai/gemini_functions.js:48
 msgid "get"
-msgstr ""
+msgstr "pegar"
 
 #: src/ai/gemini_functions.js:49
 msgid "send"
-msgstr ""
+msgstr "enviar"
 
 #: src/ai/gemini_functions.js:50
 msgid "receive"
-msgstr ""
+msgstr "receber"
 
 #: src/ai/gemini_functions.js:51
 msgid "download"
@@ -187,151 +187,151 @@ msgstr ""
 
 #: src/ai/gemini_functions.js:53
 msgid "generate"
-msgstr ""
+msgstr "gerar"
 
 #: src/ai/gemini_functions.js:54
 msgid "paint"
-msgstr ""
+msgstr "pintar"
 
 #: src/ai/gemini_functions.js:55
 msgid "run"
-msgstr ""
+msgstr "rodar"
 
 #: src/ai/gemini_functions.js:56
 msgid "execute"
-msgstr ""
+msgstr "executar"
 
 #: src/ai/gemini_functions.js:57
 msgid "launch"
-msgstr ""
+msgstr "lançar"
 
 #: src/ai/gemini_functions.js:58
 msgid "browse"
-msgstr ""
+msgstr "vizualizar"
 
 #: src/ai/gemini_functions.js:59
 msgid "navigate"
-msgstr ""
+msgstr "navegar"
 
 #: src/ai/gemini_functions.js:60
 msgid "take me"
-msgstr ""
+msgstr "me leve"
 
 #: src/ai/gemini_functions.js:61
 msgid "show"
-msgstr ""
+msgstr "mostrar"
 
 #: src/ai/gemini_functions.js:62
 msgid "read"
-msgstr ""
+msgstr "ler"
 
 #: src/ai/gemini_functions.js:63
 msgid "write"
-msgstr ""
+msgstr "escrever"
 
 #: src/ai/gemini_functions.js:64
 msgid "copy"
-msgstr ""
+msgstr "copiar"
 
 #: src/ai/gemini_functions.js:65
 msgid "move"
-msgstr ""
+msgstr "mover"
 
 #: src/ai/gemini_functions.js:66
 msgid "delete"
-msgstr ""
+msgstr "deletar"
 
 #: src/ai/gemini_functions.js:67
 msgid "del"
-msgstr ""
+msgstr "apagar"
 
 #: src/ai/gemini_functions.js:68
 msgid "clean"
-msgstr ""
+msgstr "limpar"
 
 #: src/ai/gemini_functions.js:69
 msgid "clear"
-msgstr ""
+msgstr "limpar"
 
 #: src/ai/gemini_functions.js:70
 msgid "turn on"
-msgstr ""
+msgstr "ligar"
 
 #: src/ai/gemini_functions.js:71
 msgid "turn off"
-msgstr ""
+msgstr "desligar"
 
 #: src/ai/gemini_functions.js:72
 msgid "please"
-msgstr ""
+msgstr "por favor"
 
 #: src/ai/gemini_functions.js:73
 msgid "can you"
-msgstr ""
+msgstr "você pode"
 
 #: src/ai/gemini_functions.js:74
 msgid "would you"
-msgstr ""
+msgstr "você poderia"
 
 #: src/ai/gemini_functions.js:75
 msgid "could you"
-msgstr ""
+msgstr "você consegue"
 
 #: src/ai/gemini_functions.js:76
 msgid "paste"
-msgstr ""
+msgstr "colar"
 
 #: src/ai/gemini_functions.js:77
 msgid "speak"
-msgstr ""
+msgstr "conversar"
 
 #: src/ai/gemini_functions.js:79
 msgid "speech"
-msgstr ""
+msgstr "falar"
 
 #: src/ai/gemini_functions.js:80
 msgid "install"
-msgstr ""
+msgstr "instalar"
 
 #: src/ai/gemini_functions.js:81
 msgid "uninstall"
-msgstr ""
+msgstr "desinstalar"
 
 #: src/ai/gemini_functions.js:82
 msgid "add"
-msgstr ""
+msgstr "adicionar"
 
 #: src/ai/gemini_functions.js:83
 msgid "remove"
-msgstr ""
+msgstr "remover"
 
 #: src/ai/gemini_functions.js:84
 msgid "update"
-msgstr ""
+msgstr "atualizar"
 
 #: src/ai/gemini_functions.js:85
 msgid "edit"
-msgstr ""
+msgstr "editar"
 
 #: src/ai/gemini_functions.js:86
 msgid "change"
-msgstr ""
+msgstr "alterar"
 
 #: src/ai/gemini_functions.js:87
 msgid "configure"
-msgstr ""
+msgstr "configurar"
 
 #: src/ai/gemini_functions.js:88
 msgid "print"
-msgstr ""
+msgstr "imprimir"
 
 #: src/ai/gemini_functions.js:89
 msgid "check"
-msgstr ""
+msgstr "verificar"
 
 #: src/ai/gemini_functions.js:90
 msgid "access"
-msgstr ""
+msgstr "acessar"
 
 #: src/ai/gemini_functions.js:131
 #, fuzzy
