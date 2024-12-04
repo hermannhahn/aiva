@@ -94,36 +94,24 @@ export class GoogleGemini {
                     jsonResponse = JSON.stringify(res);
                     this.app.log('Response: ' + jsonResponse);
 
-                    let toolzero =
-                        res.candidates[0]?.content?.parts[0]?.functionCall;
+                    const parts = res.candidates[0]?.content?.parts;
 
-                    if (toolzero !== undefined) {
-                        // tool response
-                        const args = {
-                            commandLine: toolzero.args.commandLine,
-                            response: toolzero.args.response,
-                            installInstructions:
-                                toolzero.args.installInstructions,
-                        };
-                        this.app.functions.callback(toolzero.name, args);
-                        return;
+                    // tools callback
+                    for (const part of parts) {
+                        if (part.functionCall !== undefined) {
+                            const f = part.functionCall;
+
+                            const args = {
+                                commandLine: f.args.commandLine,
+                                response: f.args.response,
+                                installInstructions: f.args.installInstructions,
+                            };
+                            this.app.functions.callback(f.name, args);
+                            return;
+                        }
                     }
 
-                    let toolone =
-                        res.candidates[0]?.content?.parts[1]?.functionCall;
-
-                    if (toolone !== undefined) {
-                        // tool response
-                        const args = {
-                            commandLine: toolone.args.commandLine,
-                            response: toolone.args.response,
-                            installInstructions:
-                                toolone.args.installInstructions,
-                        };
-                        this.app.functions.callback(toolone.name, args);
-                        return;
-                    }
-
+                    // ai response
                     let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
 
                     if (aiResponse === undefined) {
@@ -135,7 +123,7 @@ export class GoogleGemini {
                         return;
                     }
 
-                    // Safety
+                    // safety warning
                     let safetyReason = this.safetyReason(question, res);
 
                     if (safetyReason) {
@@ -152,7 +140,7 @@ export class GoogleGemini {
 
                     this.app.chat.editResponse(aiResponse);
 
-                    // Add to history
+                    // add to history
                     this.app.database.addToHistory(question, aiResponse);
                 },
             );
