@@ -361,8 +361,8 @@ export class Utils {
         try {
             this.app.log('Checking if app is installed: ' + command);
             const process = GLib.spawn_command_line_sync(`which ${command}`);
-            this.app.log('Process: ' + JSON.stringify(process));
-            return process.returncode === 0;
+            this.app.log('Process: ' + process[0]);
+            return process[0];
         } catch (error) {
             this.app.logError('Error checking if app is installed:', error);
             return false;
