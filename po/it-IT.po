@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-03 23:54-0300\n"
+"POT-Creation-Date: 2024-12-04 00:15-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language it-IT\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: src/ai/azure.js:68 src/ai/azure.js:81 src/ai/azure.js:123
-#: src/ai/azure.js:132 src/ai/gemini.js:114 src/ai/gemini.js:145
+#: src/ai/azure.js:132 src/ai/gemini.js:122 src/ai/gemini.js:153
 #: src/utils/utils.js:213
 msgid "Sorry, I'm having connection trouble. Please try again."
 msgstr ""
@@ -82,48 +82,68 @@ msgstr ""
 msgid "Error opening site"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini.js:35
+#: src/ai/gemini.js:26
+msgid "computer"
+msgstr ""
+
+#: src/ai/gemini.js:27
+msgid "notebook"
+msgstr ""
+
+#: src/ai/gemini.js:28
+msgid "desktop"
+msgstr ""
+
+#: src/ai/gemini.js:29
+msgid "laptop"
+msgstr ""
+
+#: src/ai/gemini.js:30
+msgid "pc"
+msgstr ""
+
+#: src/ai/gemini.js:43
 msgid "Hi, I am"
 msgstr ""
 
-#: src/ai/gemini.js:35
+#: src/ai/gemini.js:43
 msgid "I am from"
 msgstr ""
 
-#: src/ai/gemini.js:35
+#: src/ai/gemini.js:43
 msgid "and today is"
 msgstr ""
 
-#: src/ai/gemini.js:36
+#: src/ai/gemini.js:44
 msgid "Hi! I am"
 msgstr ""
 
-#: src/ai/gemini.js:36
+#: src/ai/gemini.js:44
 msgid "How can I help you today?"
 msgstr ""
 
-#: src/ai/gemini.js:130
+#: src/ai/gemini.js:138
 msgid "Sorry, I can't answer this question now."
 msgstr ""
 
-#: src/ai/gemini.js:169 src/ai/gemini.js:177 src/ai/gemini.js:185
-#: src/ai/gemini.js:196
+#: src/ai/gemini.js:177 src/ai/gemini.js:185 src/ai/gemini.js:193
+#: src/ai/gemini.js:204
 msgid "Sorry, I can't answer this question."
 msgstr ""
 
-#: src/ai/gemini.js:172
+#: src/ai/gemini.js:180
 msgid "Possible sexually explicit content in the question or response."
 msgstr ""
 
-#: src/ai/gemini.js:180
+#: src/ai/gemini.js:188
 msgid "Possible hate speech in the question or response."
 msgstr ""
 
-#: src/ai/gemini.js:188
+#: src/ai/gemini.js:196
 msgid "Possible harassment in the question or response."
 msgstr ""
 
-#: src/ai/gemini.js:199
+#: src/ai/gemini.js:207
 msgid "Possible dangerous content in the question or response."
 msgstr ""
 

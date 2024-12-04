@@ -21,6 +21,14 @@ export class GoogleGemini {
         this.GEMINI_API_KEY = app.userSettings.GEMINI_API_KEY;
         this.afterTune = null;
         this.block = false;
+        this.activationWords = [
+            this.app.userSettings.ASSIST_NAME,
+            _('computer'),
+            _('notebook'),
+            _('desktop'),
+            _('laptop'),
+            _('pc'),
+        ];
         this.app.log('Google Gemini API loaded');
     }
 
@@ -213,7 +221,7 @@ export class GoogleGemini {
      */
     _buildBody(text) {
         try {
-            const history = this.app.database.getHistory();
+            let history = this.app.database.getHistory();
 
             if (!Array.isArray(history) || history.length === 0) {
                 this.app.log('No history found.');
@@ -235,13 +243,7 @@ export class GoogleGemini {
 
             // get first five words from text
             const firstFiveWords = text.split(' ').slice(0, 5);
-            if (this.app.funcions.isFunctionCall(firstFiveWords)) {
-                const stringfiedTools = JSON.stringify(
-                    this.app.functions.declarations(),
-                );
-                return `{"contents":${stringfiedHistory}, "tools":${stringfiedTools}}`;
-            }
-            return `{"contents":${stringfiedHistory}}`;
+            return this._createBody(stringfiedHistory, firstFiveWords);
         } catch (error) {
             this.app.log(`Error building body: ${error.message}`);
             return null;
@@ -255,19 +257,46 @@ export class GoogleGemini {
      */
     _buildNoHistoryBody(text) {
         try {
-            let request = [
+            const stringfiedRequest = JSON.stringify([
                 {
                     role: 'user',
                     parts: [{text}],
                 },
-            ];
-            const stringfiedRequest = JSON.stringify(request);
-            const stringfiedTools = JSON.stringify(
-                this.app.functions.declarations(),
-            );
-            return `{"contents":${stringfiedRequest}, "tools":${stringfiedTools}}`;
+            ]);
+            const firstFiveWords = text.split(' ').slice(0, 5);
+            return this._createBody(stringfiedRequest, firstFiveWords);
         } catch {
             throw new Error('Error building body');
         }
+    }
+
+    _createBody(request, firstFiveWords) {
+        try {
+            // get first five words from text
+            if (this.isFunctionCall(firstFiveWords)) {
+                const tools = JSON.stringify(this.app.functions.declarations());
+                return `{"contents":${request}, "tools":${tools}}`;
+            }
+            return `{"contents":${request}}`;
+        } catch {
+            throw new Error('Error building body');
+        }
+    }
+
+    /**
+     * @description check if in the first five words includes one of the activationWords list and one of the activationSuffix
+     * @param {string} text
+     * @returns {boolean} true/false
+     */
+    isFunctionCall(text) {
+        if (text.length < 3) {
+            return false;
+        }
+        for (const word of this.activationWords) {
+            if (text.includes(word)) {
+                return true;
+            }
+        }
+        return false;
     }
 }
