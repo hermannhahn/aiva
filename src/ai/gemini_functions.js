@@ -33,6 +33,12 @@ export class GeminiFunctions {
             _('read'),
             _('read_lang_var1'),
             _('read_lang_var2'),
+            _('search'),
+            _('search_lang_var1'),
+            _('search_lang_var2'),
+            _('find'),
+            _('find_lang_var1'),
+            _('find_lang_var2'),
         ];
         console.log('Functions loaded.');
     }

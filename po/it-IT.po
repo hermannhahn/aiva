@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-04 15:04-0300\n"
+"POT-Creation-Date: 2024-12-04 18:24-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language it-IT\n"
@@ -125,53 +125,77 @@ msgstr ""
 msgid "read_lang_var2"
 msgstr ""
 
-#: src/ai/gemini_functions.js:54
+#: src/ai/gemini_functions.js:36
+msgid "search"
+msgstr ""
+
+#: src/ai/gemini_functions.js:37
+msgid "search_lang_var1"
+msgstr ""
+
+#: src/ai/gemini_functions.js:38
+msgid "search_lang_var2"
+msgstr ""
+
+#: src/ai/gemini_functions.js:39
+msgid "find"
+msgstr ""
+
+#: src/ai/gemini_functions.js:40
+msgid "find_lang_var1"
+msgstr ""
+
+#: src/ai/gemini_functions.js:41
+msgid "find_lang_var2"
+msgstr ""
+
+#: src/ai/gemini_functions.js:60
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr ""
 
-#: src/ai/gemini_functions.js:66
+#: src/ai/gemini_functions.js:72
 msgid "To use when you want to open an application"
 msgstr ""
 
-#: src/ai/gemini_functions.js:74
+#: src/ai/gemini_functions.js:80
 msgid "Non-sudo command line to run, e.g.: "
 msgstr ""
 
-#: src/ai/gemini_functions.js:80 src/ai/gemini_functions.js:98
+#: src/ai/gemini_functions.js:86 src/ai/gemini_functions.js:104
 msgid "Response text before run, e.g.: "
 msgstr ""
 
-#: src/ai/gemini_functions.js:81
+#: src/ai/gemini_functions.js:87
 msgid "Sure, opening google..."
 msgstr ""
 
-#: src/ai/gemini_functions.js:90
+#: src/ai/gemini_functions.js:96
 #, fuzzy
 msgid "To use when you want to read the clipboard"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini_functions.js:99
+#: src/ai/gemini_functions.js:105
 msgid "Sure, start reading..."
 msgstr ""
 
-#: src/ai/gemini_functions.js:121
+#: src/ai/gemini_functions.js:127
 msgid "End of text!"
 msgstr ""
 
-#: src/ai/gemini_functions.js:125
+#: src/ai/gemini_functions.js:131
 #, fuzzy
 msgid "Failed to get text from clipboard"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini_functions.js:142
+#: src/ai/gemini_functions.js:148
 msgid "Please, install"
 msgstr ""
 
-#: src/ai/gemini_functions.js:146
+#: src/ai/gemini_functions.js:152
 msgid "first"
 msgstr ""
 
-#: src/ai/gemini_functions.js:163
+#: src/ai/gemini_functions.js:169
 #, fuzzy
 msgid "Error opening site"
 msgstr "Codice copiato negli appunti"
