@@ -125,7 +125,7 @@ export class GeminiFunctions {
         );
     }
 
-    _openApp(commandLine, response, installInstructions) {
+    _openApp(commandLine, response) {
         try {
             if (response) {
                 this.app.chat.editResponse(response);
