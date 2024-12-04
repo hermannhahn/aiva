@@ -242,7 +242,7 @@ export class GoogleGemini {
             ]);
 
             // get first five words from text
-            const firstFiveWords = text.split(' ').slice(0, 5);
+            const firstFiveWords = text.toLowerCase().split(' ').slice(0, 5);
             return this._createBody(stringfiedHistory, firstFiveWords);
         } catch (error) {
             this.app.log(`Error building body: ${error.message}`);
@@ -263,7 +263,7 @@ export class GoogleGemini {
                     parts: [{text}],
                 },
             ]);
-            const firstFiveWords = text.split(' ').slice(0, 5);
+            const firstFiveWords = text.toLowerCase().split(' ').slice(0, 5);
             return this._createBody(stringfiedRequest, firstFiveWords);
         } catch {
             throw new Error('Error building body');
@@ -289,7 +289,6 @@ export class GoogleGemini {
      * @returns {boolean} true/false
      */
     isFunctionCall(text) {
-        text = text.toLowerCase();
         if (text.length < 3) {
             return false;
         }
