@@ -8,13 +8,12 @@ import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js'
 export class GeminiFunctions {
     constructor(app) {
         this.app = app;
-        this.activationWords = [
-            this.app.userSettings.ASSIST_NAME,
-            _('computer'),
-            _('notebook'),
-            _('desktop'),
-            _('laptop'),
-            _('pc'),
+        this.readClipboardActivation = [
+            _('read'),
+            _('read_lang_var1'),
+            _('read_lang_var2'),
+        ];
+        this.openAppActivation = [
             _('open'),
             _('open_lang_var1'),
             _('open_lang_var2'),
@@ -30,15 +29,19 @@ export class GeminiFunctions {
             _('launch'),
             _('launch_lang_var1'),
             _('launch_lang_var2'),
-            _('read'),
-            _('read_lang_var1'),
-            _('read_lang_var2'),
+        ];
+        this.searchWebActivation = [
             _('search'),
             _('search_lang_var1'),
             _('search_lang_var2'),
             _('find'),
             _('find_lang_var1'),
             _('find_lang_var2'),
+        ];
+        this.activationWords = [
+            ...this.readClipboardActivation,
+            ...this.openAppActivation,
+            ...this.searchWebActivation,
         ];
         console.log('Functions loaded.');
     }
@@ -64,6 +67,11 @@ export class GeminiFunctions {
     }
 
     declarations() {
+        // let declarations = [];
+        // for (const word of words) {
+        //     if(this.
+        // }
+
         let result = {
             functionDeclarations: [
                 {
