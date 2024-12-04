@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-04 14:43-0300\n"
+"POT-Creation-Date: 2024-12-04 15:03-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language de-DE\n"
@@ -31,76 +31,150 @@ msgstr ""
 msgid "Sorry, I'm having trouble to listen you. Please try again."
 msgstr ""
 
+#: src/ai/gemini_functions.js:13 src/ai/gemini.js:26
+msgid "computer"
+msgstr ""
+
+#: src/ai/gemini_functions.js:14 src/ai/gemini.js:27
+msgid "notebook"
+msgstr ""
+
+#: src/ai/gemini_functions.js:15 src/ai/gemini.js:28
+msgid "desktop"
+msgstr ""
+
+#: src/ai/gemini_functions.js:16 src/ai/gemini.js:29
+msgid "laptop"
+msgstr ""
+
+#: src/ai/gemini_functions.js:17 src/ai/gemini.js:30
+msgid "pc"
+msgstr ""
+
+#: src/ai/gemini_functions.js:18
+#, fuzzy
+msgid "open"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/ai/gemini_functions.js:19
+msgid "open_lang_var1"
+msgstr ""
+
+#: src/ai/gemini_functions.js:20
+msgid "open_lang_var2"
+msgstr ""
+
+#: src/ai/gemini_functions.js:21
+msgid "run"
+msgstr ""
+
+#: src/ai/gemini_functions.js:22
+msgid "run_lang_var1"
+msgstr ""
+
+#: src/ai/gemini_functions.js:23
+msgid "run_lang_var2"
+msgstr ""
+
+#: src/ai/gemini_functions.js:24
+msgid "execute"
+msgstr ""
+
+#: src/ai/gemini_functions.js:25
+msgid "execute_lang_var1"
+msgstr ""
+
+#: src/ai/gemini_functions.js:26
+msgid "execute_lang_var2"
+msgstr ""
+
+#: src/ai/gemini_functions.js:27
+msgid "start"
+msgstr ""
+
 #: src/ai/gemini_functions.js:28
+msgid "start_lang_var1"
+msgstr ""
+
+#: src/ai/gemini_functions.js:29
+msgid "start_lang_var2"
+msgstr ""
+
+#: src/ai/gemini_functions.js:30
+msgid "launch"
+msgstr ""
+
+#: src/ai/gemini_functions.js:31
+msgid "launch_lang_var1"
+msgstr ""
+
+#: src/ai/gemini_functions.js:32
+msgid "launch_lang_var2"
+msgstr ""
+
+#: src/ai/gemini_functions.js:33
+#, fuzzy
+msgid "read"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/ai/gemini_functions.js:34
+msgid "read_lang_var1"
+msgstr ""
+
+#: src/ai/gemini_functions.js:35
+msgid "read_lang_var2"
+msgstr ""
+
+#: src/ai/gemini_functions.js:54
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr ""
 
-#: src/ai/gemini_functions.js:40
+#: src/ai/gemini_functions.js:66
 msgid "To use when you want to open an application"
 msgstr ""
 
-#: src/ai/gemini_functions.js:48
+#: src/ai/gemini_functions.js:74
 msgid "Non-sudo command line to run, e.g.: "
 msgstr ""
 
-#: src/ai/gemini_functions.js:54 src/ai/gemini_functions.js:72
+#: src/ai/gemini_functions.js:80 src/ai/gemini_functions.js:98
 msgid "Response text before run, e.g.: "
 msgstr ""
 
-#: src/ai/gemini_functions.js:55
+#: src/ai/gemini_functions.js:81
 msgid "Sure, opening google..."
 msgstr ""
 
-#: src/ai/gemini_functions.js:64
+#: src/ai/gemini_functions.js:90
 #, fuzzy
 msgid "To use when you want to read the clipboard"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini_functions.js:73
+#: src/ai/gemini_functions.js:99
 msgid "Sure, start reading..."
 msgstr ""
 
-#: src/ai/gemini_functions.js:95
+#: src/ai/gemini_functions.js:121
 msgid "End of text!"
 msgstr ""
 
-#: src/ai/gemini_functions.js:99
+#: src/ai/gemini_functions.js:125
 #, fuzzy
 msgid "Failed to get text from clipboard"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini_functions.js:116
+#: src/ai/gemini_functions.js:142
 msgid "Please, install"
 msgstr ""
 
-#: src/ai/gemini_functions.js:120
+#: src/ai/gemini_functions.js:146
 msgid "first"
 msgstr ""
 
-#: src/ai/gemini_functions.js:137
+#: src/ai/gemini_functions.js:163
 #, fuzzy
 msgid "Error opening site"
 msgstr "Code kopiert in die Zwischenablage"
-
-#: src/ai/gemini.js:26
-msgid "computer"
-msgstr ""
-
-#: src/ai/gemini.js:27
-msgid "notebook"
-msgstr ""
-
-#: src/ai/gemini.js:28
-msgid "desktop"
-msgstr ""
-
-#: src/ai/gemini.js:29
-msgid "laptop"
-msgstr ""
-
-#: src/ai/gemini.js:30
-msgid "pc"
-msgstr ""
 
 #: src/ai/gemini.js:43
 msgid "Hi, I am"
@@ -385,19 +459,11 @@ msgstr ""
 #~ msgstr "Code kopiert in die Zwischenablage"
 
 #, fuzzy
-#~ msgid "open"
-#~ msgstr "Code kopiert in die Zwischenablage"
-
-#, fuzzy
 #~ msgid "browse"
 #~ msgstr "Code kopiert in die Zwischenablage"
 
 #, fuzzy
 #~ msgid "navigate"
-#~ msgstr "Code kopiert in die Zwischenablage"
-
-#, fuzzy
-#~ msgid "read"
 #~ msgstr "Code kopiert in die Zwischenablage"
 
 #, fuzzy

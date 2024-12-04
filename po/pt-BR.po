@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-04 14:43-0300\n"
+"POT-Creation-Date: 2024-12-04 15:03-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -33,75 +33,147 @@ msgstr "Erro na transcrição!"
 msgid "Sorry, I'm having trouble to listen you. Please try again."
 msgstr "Estou tendo dificuldade de te escutar. Por favor, tente novamente."
 
+#: src/ai/gemini_functions.js:13 src/ai/gemini.js:26
+msgid "computer"
+msgstr "computador"
+
+#: src/ai/gemini_functions.js:14 src/ai/gemini.js:27
+msgid "notebook"
+msgstr ""
+
+#: src/ai/gemini_functions.js:15 src/ai/gemini.js:28
+msgid "desktop"
+msgstr ""
+
+#: src/ai/gemini_functions.js:16 src/ai/gemini.js:29
+msgid "laptop"
+msgstr ""
+
+#: src/ai/gemini_functions.js:17 src/ai/gemini.js:30
+msgid "pc"
+msgstr ""
+
+#: src/ai/gemini_functions.js:18
+msgid "open"
+msgstr "abrir"
+
+#: src/ai/gemini_functions.js:19
+msgid "open_lang_var1"
+msgstr ""
+
+#: src/ai/gemini_functions.js:20
+msgid "open_lang_var2"
+msgstr ""
+
+#: src/ai/gemini_functions.js:21
+msgid "run"
+msgstr "rodar"
+
+#: src/ai/gemini_functions.js:22
+msgid "run_lang_var1"
+msgstr ""
+
+#: src/ai/gemini_functions.js:23
+msgid "run_lang_var2"
+msgstr ""
+
+#: src/ai/gemini_functions.js:24
+msgid "execute"
+msgstr "executar"
+
+#: src/ai/gemini_functions.js:25
+msgid "execute_lang_var1"
+msgstr ""
+
+#: src/ai/gemini_functions.js:26
+msgid "execute_lang_var2"
+msgstr ""
+
+#: src/ai/gemini_functions.js:27
+msgid "start"
+msgstr "iniciar"
+
 #: src/ai/gemini_functions.js:28
+msgid "start_lang_var1"
+msgstr ""
+
+#: src/ai/gemini_functions.js:29
+msgid "start_lang_var2"
+msgstr ""
+
+#: src/ai/gemini_functions.js:30
+msgid "launch"
+msgstr "lançar"
+
+#: src/ai/gemini_functions.js:31
+msgid "launch_lang_var1"
+msgstr ""
+
+#: src/ai/gemini_functions.js:32
+msgid "launch_lang_var2"
+msgstr ""
+
+#: src/ai/gemini_functions.js:33
+msgid "read"
+msgstr "ler"
+
+#: src/ai/gemini_functions.js:34
+msgid "read_lang_var1"
+msgstr ""
+
+#: src/ai/gemini_functions.js:35
+msgid "read_lang_var2"
+msgstr ""
+
+#: src/ai/gemini_functions.js:54
 #, fuzzy
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr "Eu não posso fazer isso agora. Talvez no futuro."
 
-#: src/ai/gemini_functions.js:40
+#: src/ai/gemini_functions.js:66
 msgid "To use when you want to open an application"
 msgstr ""
 
-#: src/ai/gemini_functions.js:48
+#: src/ai/gemini_functions.js:74
 msgid "Non-sudo command line to run, e.g.: "
 msgstr "Linha de comando non-sudo para executar, por exemplo: "
 
-#: src/ai/gemini_functions.js:54 src/ai/gemini_functions.js:72
+#: src/ai/gemini_functions.js:80 src/ai/gemini_functions.js:98
 msgid "Response text before run, e.g.: "
 msgstr "Rexto de resposta antes de executar, por exemplo: "
 
-#: src/ai/gemini_functions.js:55
+#: src/ai/gemini_functions.js:81
 msgid "Sure, opening google..."
 msgstr "Claro, abrindo google..."
 
-#: src/ai/gemini_functions.js:64
+#: src/ai/gemini_functions.js:90
 msgid "To use when you want to read the clipboard"
 msgstr ""
 
-#: src/ai/gemini_functions.js:73
+#: src/ai/gemini_functions.js:99
 msgid "Sure, start reading..."
 msgstr "Claro, iniciando leitura..."
 
-#: src/ai/gemini_functions.js:95
+#: src/ai/gemini_functions.js:121
 msgid "End of text!"
 msgstr "Fim do texto!"
 
-#: src/ai/gemini_functions.js:99
+#: src/ai/gemini_functions.js:125
 msgid "Failed to get text from clipboard"
 msgstr "Falha ao obter texto da área de transferência"
 
-#: src/ai/gemini_functions.js:116
+#: src/ai/gemini_functions.js:142
 #, fuzzy
 msgid "Please, install"
 msgstr "instalar"
 
-#: src/ai/gemini_functions.js:120
+#: src/ai/gemini_functions.js:146
 msgid "first"
 msgstr ""
 
-#: src/ai/gemini_functions.js:137
+#: src/ai/gemini_functions.js:163
 msgid "Error opening site"
 msgstr "Falha ao abrir site"
-
-#: src/ai/gemini.js:26
-msgid "computer"
-msgstr "computador"
-
-#: src/ai/gemini.js:27
-msgid "notebook"
-msgstr ""
-
-#: src/ai/gemini.js:28
-msgid "desktop"
-msgstr ""
-
-#: src/ai/gemini.js:29
-msgid "laptop"
-msgstr ""
-
-#: src/ai/gemini.js:30
-msgid "pc"
-msgstr ""
 
 #: src/ai/gemini.js:43
 msgid "Hi, I am"
@@ -395,9 +467,6 @@ msgstr "Suas preferências foram salvas"
 #~ msgstr ""
 #~ "Instruções para instalação do app e suas dependencias caso necessário."
 
-#~ msgid "open"
-#~ msgstr "abrir"
-
 #~ msgid "close"
 #~ msgstr "fechar"
 
@@ -406,9 +475,6 @@ msgstr "Suas preferências foram salvas"
 
 #~ msgid "play"
 #~ msgstr "tocar"
-
-#~ msgid "start"
-#~ msgstr "iniciar"
 
 #~ msgid "stop"
 #~ msgstr "parar"
@@ -494,15 +560,6 @@ msgstr "Suas preferências foram salvas"
 #~ msgid "paint"
 #~ msgstr "pintar"
 
-#~ msgid "run"
-#~ msgstr "rodar"
-
-#~ msgid "execute"
-#~ msgstr "executar"
-
-#~ msgid "launch"
-#~ msgstr "lançar"
-
 #~ msgid "browse"
 #~ msgstr "vizualizar"
 
@@ -514,9 +571,6 @@ msgstr "Suas preferências foram salvas"
 
 #~ msgid "show"
 #~ msgstr "mostrar"
-
-#~ msgid "read"
-#~ msgstr "ler"
 
 #~ msgid "write"
 #~ msgstr "escrever"
