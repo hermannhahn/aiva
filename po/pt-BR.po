@@ -141,7 +141,7 @@ msgstr "Linha de comando non-sudo para executar, por exemplo: "
 
 #: src/ai/gemini_functions.js:80 src/ai/gemini_functions.js:98
 msgid "Response text before run, e.g.: "
-msgstr "Rexto de resposta antes de executar, por exemplo: "
+msgstr "Texto de resposta antes de executar, por exemplo: "
 
 #: src/ai/gemini_functions.js:81
 msgid "Sure, opening google..."
