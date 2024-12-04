@@ -12,10 +12,105 @@ export class GeminiFunctions {
             this.app.userSettings.ASSIST_NAME,
             _('computer'),
             _('notebook'),
+            _('desktop'),
+            _('laptop'),
             _('pc'),
+        ];
+        this.activationSuffix = [
+            _('open'),
+            _('close'),
+            _('search'),
+            _('play'),
+            _('start'),
+            _('stop'),
+            _('pause'),
+            _('resume'),
+            _('restart'),
+            _('reboot'),
+            _('shutdown'),
+            _('lock'),
+            _('unlock'),
+            _('suspend'),
+            _('hibernate'),
+            _('sleep'),
+            _('warn'),
+            _('remind'),
+            _('remember'),
+            _('watch'),
+            _('track'),
+            _('localize'),
+            _('find'),
+            _('locate'),
+            _('create'),
+            _('make'),
+            _('register'),
+            _('modify'),
+            _('get'),
+            _('send'),
+            _('receive'),
+            _('download'),
+            _('upload'),
+            _('generate'),
+            _('paint'),
+            _('run'),
+            _('execute'),
+            _('launch'),
+            _('browse'),
+            _('navigate'),
+            _('take me'),
+            _('show'),
+            _('read'),
+            _('write'),
+            _('copy'),
+            _('move'),
+            _('delete'),
+            _('del'),
+            _('clean'),
+            _('clear'),
+            _('turn on'),
+            _('turn off'),
+            _('please'),
+            _('can you'),
+            _('would you'),
+            _('could you'),
+            _('paste'),
+            _('speak'),
+            _('play'),
+            _('speech'),
+            _('install'),
+            _('uninstall'),
+            _('add'),
+            _('remove'),
+            _('update'),
+            _('edit'),
+            _('change'),
+            _('configure'),
+            _('print'),
+            _('check'),
+            _('access'),
         ];
 
         console.log('Functions loaded.');
+    }
+
+    /**
+     * @description check if in the first five words includes one of the activationWords list and one of the activationSuffix
+     * @param {string} text
+     * @returns {boolean} true/false
+     */
+    isFunctionCall(text) {
+        let firstFiveWords = text.split(' ').slice(0, 5);
+        if (firstFiveWords.length < 3) {
+            return false;
+        }
+        firstFiveWords = firstFiveWords.toLowerCase();
+        const hasActivationWord = firstFiveWords.some((word) =>
+            this.activationWords.includes(word.toLowerCase()),
+        );
+        const hasActivationSuffix = firstFiveWords.some((word) =>
+            this.activationSuffix.includes(word.toLowerCase()),
+        );
+        return hasActivationWord && hasActivationSuffix;
     }
 
     callback(command, args) {

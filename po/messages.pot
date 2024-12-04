@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-03 22:14-0300\n"
+"POT-Creation-Date: 2024-12-03 22:57-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,50 +41,338 @@ msgid "notebook"
 msgstr ""
 
 #: src/ai/gemini_functions.js:15
+msgid "desktop"
+msgstr ""
+
+#: src/ai/gemini_functions.js:16
+msgid "laptop"
+msgstr ""
+
+#: src/ai/gemini_functions.js:17
 msgid "pc"
 msgstr ""
 
+#: src/ai/gemini_functions.js:20
+msgid "open"
+msgstr ""
+
+#: src/ai/gemini_functions.js:21
+msgid "close"
+msgstr ""
+
+#: src/ai/gemini_functions.js:22
+msgid "search"
+msgstr ""
+
+#: src/ai/gemini_functions.js:23 src/ai/gemini_functions.js:78
+msgid "play"
+msgstr ""
+
+#: src/ai/gemini_functions.js:24
+msgid "start"
+msgstr ""
+
+#: src/ai/gemini_functions.js:25
+msgid "stop"
+msgstr ""
+
+#: src/ai/gemini_functions.js:26
+msgid "pause"
+msgstr ""
+
+#: src/ai/gemini_functions.js:27
+msgid "resume"
+msgstr ""
+
+#: src/ai/gemini_functions.js:28
+msgid "restart"
+msgstr ""
+
+#: src/ai/gemini_functions.js:29
+msgid "reboot"
+msgstr ""
+
+#: src/ai/gemini_functions.js:30
+msgid "shutdown"
+msgstr ""
+
+#: src/ai/gemini_functions.js:31
+msgid "lock"
+msgstr ""
+
+#: src/ai/gemini_functions.js:32
+msgid "unlock"
+msgstr ""
+
+#: src/ai/gemini_functions.js:33
+msgid "suspend"
+msgstr ""
+
+#: src/ai/gemini_functions.js:34
+msgid "hibernate"
+msgstr ""
+
+#: src/ai/gemini_functions.js:35
+msgid "sleep"
+msgstr ""
+
 #: src/ai/gemini_functions.js:36
-msgid "Sorry, I can't do that right now. Maybe in the future."
+msgid "warn"
+msgstr ""
+
+#: src/ai/gemini_functions.js:37
+msgid "remind"
+msgstr ""
+
+#: src/ai/gemini_functions.js:38
+msgid "remember"
+msgstr ""
+
+#: src/ai/gemini_functions.js:39
+msgid "watch"
+msgstr ""
+
+#: src/ai/gemini_functions.js:40
+msgid "track"
+msgstr ""
+
+#: src/ai/gemini_functions.js:41
+msgid "localize"
+msgstr ""
+
+#: src/ai/gemini_functions.js:42
+msgid "find"
+msgstr ""
+
+#: src/ai/gemini_functions.js:43
+msgid "locate"
+msgstr ""
+
+#: src/ai/gemini_functions.js:44
+msgid "create"
+msgstr ""
+
+#: src/ai/gemini_functions.js:45
+msgid "make"
+msgstr ""
+
+#: src/ai/gemini_functions.js:46
+msgid "register"
+msgstr ""
+
+#: src/ai/gemini_functions.js:47
+msgid "modify"
 msgstr ""
 
 #: src/ai/gemini_functions.js:48
-msgid "To run apps, flatpak, snap, etc..."
+msgid "get"
+msgstr ""
+
+#: src/ai/gemini_functions.js:49
+msgid "send"
+msgstr ""
+
+#: src/ai/gemini_functions.js:50
+msgid "receive"
+msgstr ""
+
+#: src/ai/gemini_functions.js:51
+msgid "download"
+msgstr ""
+
+#: src/ai/gemini_functions.js:52
+msgid "upload"
+msgstr ""
+
+#: src/ai/gemini_functions.js:53
+msgid "generate"
+msgstr ""
+
+#: src/ai/gemini_functions.js:54
+msgid "paint"
+msgstr ""
+
+#: src/ai/gemini_functions.js:55
+msgid "run"
 msgstr ""
 
 #: src/ai/gemini_functions.js:56
-msgid "Non-sudo command line to run, e.g.: "
+msgid "execute"
 msgstr ""
 
-#: src/ai/gemini_functions.js:62 src/ai/gemini_functions.js:84
-msgid "Response text before run, e.g.: "
+#: src/ai/gemini_functions.js:57
+msgid "launch"
+msgstr ""
+
+#: src/ai/gemini_functions.js:58
+msgid "browse"
+msgstr ""
+
+#: src/ai/gemini_functions.js:59
+msgid "navigate"
+msgstr ""
+
+#: src/ai/gemini_functions.js:60
+msgid "take me"
+msgstr ""
+
+#: src/ai/gemini_functions.js:61
+msgid "show"
+msgstr ""
+
+#: src/ai/gemini_functions.js:62
+msgid "read"
 msgstr ""
 
 #: src/ai/gemini_functions.js:63
-msgid "Sure, opening google..."
+msgid "write"
+msgstr ""
+
+#: src/ai/gemini_functions.js:64
+msgid "copy"
+msgstr ""
+
+#: src/ai/gemini_functions.js:65
+msgid "move"
+msgstr ""
+
+#: src/ai/gemini_functions.js:66
+msgid "delete"
+msgstr ""
+
+#: src/ai/gemini_functions.js:67
+msgid "del"
 msgstr ""
 
 #: src/ai/gemini_functions.js:68
-msgid "Install instructions for app and dependencies if needed."
+msgid "clean"
+msgstr ""
+
+#: src/ai/gemini_functions.js:69
+msgid "clear"
+msgstr ""
+
+#: src/ai/gemini_functions.js:70
+msgid "turn on"
+msgstr ""
+
+#: src/ai/gemini_functions.js:71
+msgid "turn off"
+msgstr ""
+
+#: src/ai/gemini_functions.js:72
+msgid "please"
+msgstr ""
+
+#: src/ai/gemini_functions.js:73
+msgid "can you"
+msgstr ""
+
+#: src/ai/gemini_functions.js:74
+msgid "would you"
+msgstr ""
+
+#: src/ai/gemini_functions.js:75
+msgid "could you"
+msgstr ""
+
+#: src/ai/gemini_functions.js:76
+msgid "paste"
 msgstr ""
 
 #: src/ai/gemini_functions.js:77
-msgid "read text from clipboard with tts"
+msgid "speak"
+msgstr ""
+
+#: src/ai/gemini_functions.js:79
+msgid "speech"
+msgstr ""
+
+#: src/ai/gemini_functions.js:80
+msgid "install"
+msgstr ""
+
+#: src/ai/gemini_functions.js:81
+msgid "uninstall"
+msgstr ""
+
+#: src/ai/gemini_functions.js:82
+msgid "add"
+msgstr ""
+
+#: src/ai/gemini_functions.js:83
+msgid "remove"
+msgstr ""
+
+#: src/ai/gemini_functions.js:84
+msgid "update"
 msgstr ""
 
 #: src/ai/gemini_functions.js:85
+msgid "edit"
+msgstr ""
+
+#: src/ai/gemini_functions.js:86
+msgid "change"
+msgstr ""
+
+#: src/ai/gemini_functions.js:87
+msgid "configure"
+msgstr ""
+
+#: src/ai/gemini_functions.js:88
+msgid "print"
+msgstr ""
+
+#: src/ai/gemini_functions.js:89
+msgid "check"
+msgstr ""
+
+#: src/ai/gemini_functions.js:90
+msgid "access"
+msgstr ""
+
+#: src/ai/gemini_functions.js:131
+msgid "Sorry, I can't do that right now. Maybe in the future."
+msgstr ""
+
+#: src/ai/gemini_functions.js:143
+msgid "To run apps, flatpak, snap, etc..."
+msgstr ""
+
+#: src/ai/gemini_functions.js:151
+msgid "Non-sudo command line to run, e.g.: "
+msgstr ""
+
+#: src/ai/gemini_functions.js:157 src/ai/gemini_functions.js:179
+msgid "Response text before run, e.g.: "
+msgstr ""
+
+#: src/ai/gemini_functions.js:158
+msgid "Sure, opening google..."
+msgstr ""
+
+#: src/ai/gemini_functions.js:163
+msgid "Install instructions for app and dependencies if needed."
+msgstr ""
+
+#: src/ai/gemini_functions.js:172
+msgid "read text from clipboard with tts"
+msgstr ""
+
+#: src/ai/gemini_functions.js:180
 msgid "Sure, start reading..."
 msgstr ""
 
-#: src/ai/gemini_functions.js:107
+#: src/ai/gemini_functions.js:202
 msgid "End of text!"
 msgstr ""
 
-#: src/ai/gemini_functions.js:111
+#: src/ai/gemini_functions.js:206
 msgid "Failed to get text from clipboard"
 msgstr ""
 
-#: src/ai/gemini_functions.js:144
+#: src/ai/gemini_functions.js:239
 msgid "Error opening site"
 msgstr ""
 
