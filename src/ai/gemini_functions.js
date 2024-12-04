@@ -99,15 +99,15 @@ export class GeminiFunctions {
      * @returns {boolean} true/false
      */
     isFunctionCall(text) {
-        let firstFiveWords = text.split(' ');
-        if (firstFiveWords.length < 3) {
+        text = text.toLowerCase();
+        text = text.split(' ');
+        if (text.length < 3) {
             return false;
         }
-        firstFiveWords = firstFiveWords.toLowerCase();
-        const hasActivationWord = firstFiveWords.some((word) =>
+        const hasActivationWord = text.some((word) =>
             this.activationWords.includes(word.toLowerCase()),
         );
-        const hasActivationSuffix = firstFiveWords.some((word) =>
+        const hasActivationSuffix = text.some((word) =>
             this.activationSuffix.includes(word.toLowerCase()),
         );
         return hasActivationWord && hasActivationSuffix;
