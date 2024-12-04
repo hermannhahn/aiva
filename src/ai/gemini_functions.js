@@ -8,6 +8,13 @@ import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js'
 export class GeminiFunctions {
     constructor(app) {
         this.app = app;
+        this.activationWords = [
+            this.app.userSettings.ASSIST_NAME,
+            _('computer'),
+            _('notebook'),
+            _('pc'),
+        ];
+
         console.log('Functions loaded.');
     }
 

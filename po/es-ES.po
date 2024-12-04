@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-03 21:09-0300\n"
+"POT-Creation-Date: 2024-12-03 22:14-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language es-ES\n"
@@ -31,49 +31,61 @@ msgstr ""
 msgid "Sorry, I'm having trouble to listen you. Please try again."
 msgstr ""
 
-#: src/ai/gemini_functions.js:29
+#: src/ai/gemini_functions.js:13
+msgid "computer"
+msgstr ""
+
+#: src/ai/gemini_functions.js:14
+msgid "notebook"
+msgstr ""
+
+#: src/ai/gemini_functions.js:15
+msgid "pc"
+msgstr ""
+
+#: src/ai/gemini_functions.js:36
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr ""
 
-#: src/ai/gemini_functions.js:41
+#: src/ai/gemini_functions.js:48
 msgid "To run apps, flatpak, snap, etc..."
 msgstr ""
 
-#: src/ai/gemini_functions.js:49
+#: src/ai/gemini_functions.js:56
 msgid "Non-sudo command line to run, e.g.: "
 msgstr ""
 
-#: src/ai/gemini_functions.js:55 src/ai/gemini_functions.js:77
+#: src/ai/gemini_functions.js:62 src/ai/gemini_functions.js:84
 msgid "Response text before run, e.g.: "
 msgstr ""
 
-#: src/ai/gemini_functions.js:56
+#: src/ai/gemini_functions.js:63
 msgid "Sure, opening google..."
 msgstr ""
 
-#: src/ai/gemini_functions.js:61
+#: src/ai/gemini_functions.js:68
 msgid "Install instructions for app and dependencies if needed."
 msgstr ""
 
-#: src/ai/gemini_functions.js:70
+#: src/ai/gemini_functions.js:77
 #, fuzzy
 msgid "read text from clipboard with tts"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini_functions.js:78
+#: src/ai/gemini_functions.js:85
 msgid "Sure, start reading..."
 msgstr ""
 
-#: src/ai/gemini_functions.js:100
+#: src/ai/gemini_functions.js:107
 msgid "End of text!"
 msgstr ""
 
-#: src/ai/gemini_functions.js:104
+#: src/ai/gemini_functions.js:111
 #, fuzzy
 msgid "Failed to get text from clipboard"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini_functions.js:137
+#: src/ai/gemini_functions.js:144
 #, fuzzy
 msgid "Error opening site"
 msgstr "Código copiado al portapapeles"
