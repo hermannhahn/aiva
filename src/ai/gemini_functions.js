@@ -8,30 +8,7 @@ import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js'
 export class GeminiFunctions {
     constructor(app) {
         this.app = app;
-        this.activationWords = [
-            this.app.userSettings.ASSIST_NAME,
-            _('computer'),
-            _('notebook'),
-            _('desktop'),
-            _('laptop'),
-            _('pc'),
-        ];
         console.log('Functions loaded.');
-    }
-
-    /**
-     * @description check if in the first five words includes one of the activationWords list and one of the activationSuffix
-     * @param {string} text
-     * @returns {boolean} true/false
-     */
-    isFunctionCall(text) {
-        if (text.length < 3) {
-            return false;
-        }
-        const hasActivationWord = text.some((word) =>
-            this.activationWords.includes(word.toLowerCase()),
-        );
-        return hasActivationWord;
     }
 
     callback(command, args) {
