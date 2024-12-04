@@ -78,12 +78,6 @@ export class GeminiFunctions {
                                     _('Response text before run, e.g.: ') +
                                     _('Sure, opening google...'),
                             },
-                            installInstructions: {
-                                type: 'string',
-                                description: _(
-                                    'Install instructions for app and dependencies if needed.',
-                                ),
-                            },
                         },
                         required: ['commandLine', 'response'],
                     },
@@ -145,7 +139,14 @@ export class GeminiFunctions {
                 const isInstalled = this.app.utils.isAppInstalled(command);
                 if (!isInstalled) {
                     if (installInstructions) {
-                        this.app.chat.editResponse(installInstructions);
+                        this.app.chat.editResponse(
+                            _('Please, install') +
+                                ' ' +
+                                command +
+                                ' ' +
+                                _('first') +
+                                '.',
+                        );
                         return;
                     }
                 }

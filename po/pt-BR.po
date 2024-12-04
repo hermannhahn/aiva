@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-03 23:44-0300\n"
+"POT-Creation-Date: 2024-12-03 23:50-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -66,7 +66,7 @@ msgstr "Para rodar apps, flatpak, snap, etc..."
 msgid "Non-sudo command line to run, e.g.: "
 msgstr "Linha de comando non-sudo para executar, por exemplo: "
 
-#: src/ai/gemini_functions.js:78 src/ai/gemini_functions.js:100
+#: src/ai/gemini_functions.js:78 src/ai/gemini_functions.js:94
 msgid "Response text before run, e.g.: "
 msgstr "Rexto de resposta antes de executar, por exemplo: "
 
@@ -74,28 +74,33 @@ msgstr "Rexto de resposta antes de executar, por exemplo: "
 msgid "Sure, opening google..."
 msgstr "Claro, abrindo google..."
 
-#: src/ai/gemini_functions.js:84
-msgid "Install instructions for app and dependencies if needed."
-msgstr "Instruções para instalação do app e suas dependencias caso necessário."
-
-#: src/ai/gemini_functions.js:93
+#: src/ai/gemini_functions.js:87
 #, fuzzy
 msgid "read text from clipboard with tts"
 msgstr "leia o texto que copiei"
 
-#: src/ai/gemini_functions.js:101
+#: src/ai/gemini_functions.js:95
 msgid "Sure, start reading..."
 msgstr "Claro, iniciando leitura..."
 
-#: src/ai/gemini_functions.js:123
+#: src/ai/gemini_functions.js:117
 msgid "End of text!"
 msgstr "Fim do texto!"
 
-#: src/ai/gemini_functions.js:127
+#: src/ai/gemini_functions.js:121
 msgid "Failed to get text from clipboard"
 msgstr "Falha ao obter texto da área de transferência"
 
-#: src/ai/gemini_functions.js:160
+#: src/ai/gemini_functions.js:143
+#, fuzzy
+msgid "Please, install"
+msgstr "instalar"
+
+#: src/ai/gemini_functions.js:147
+msgid "first"
+msgstr ""
+
+#: src/ai/gemini_functions.js:161
 msgid "Error opening site"
 msgstr "Falha ao abrir site"
 
@@ -380,6 +385,10 @@ msgstr "Salvar"
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
 
+#~ msgid "Install instructions for app and dependencies if needed."
+#~ msgstr ""
+#~ "Instruções para instalação do app e suas dependencias caso necessário."
+
 #~ msgid "open"
 #~ msgstr "abrir"
 
@@ -550,9 +559,6 @@ msgstr "Suas preferências foram salvas"
 
 #~ msgid "speech"
 #~ msgstr "falar"
-
-#~ msgid "install"
-#~ msgstr "instalar"
 
 #~ msgid "uninstall"
 #~ msgstr "desinstalar"
