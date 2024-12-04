@@ -232,10 +232,16 @@ export class GoogleGemini {
                     parts: [{text: String(text) || ''}],
                 },
             ]);
-            const stringfiedTools = JSON.stringify(
-                this.app.functions.declarations(),
-            );
-            return `{"contents":${stringfiedHistory}, "tools":${stringfiedTools}}`;
+
+            // get first five words from text
+            const firstFiveWords = text.split(' ').slice(0, 5);
+            if (this.app.funcions.isFunctionCall(firstFiveWords)) {
+                const stringfiedTools = JSON.stringify(
+                    this.app.functions.declarations(),
+                );
+                return `{"contents":${stringfiedHistory}, "tools":${stringfiedTools}}`;
+            }
+            return `{"contents":${stringfiedHistory}}`;
         } catch (error) {
             this.app.log(`Error building body: ${error.message}`);
             return null;
@@ -248,16 +254,20 @@ export class GoogleGemini {
      * @returns {string} body contents
      */
     _buildNoHistoryBody(text) {
-        let request = [
-            {
-                role: 'user',
-                parts: [{text}],
-            },
-        ];
-        const stringfiedRequest = JSON.stringify(request);
-        const stringfiedTools = JSON.stringify(
-            this.app.functions.declarations(),
-        );
-        return `{"contents":${stringfiedRequest}, "tools":${stringfiedTools}}`;
+        try {
+            let request = [
+                {
+                    role: 'user',
+                    parts: [{text}],
+                },
+            ];
+            const stringfiedRequest = JSON.stringify(request);
+            const stringfiedTools = JSON.stringify(
+                this.app.functions.declarations(),
+            );
+            return `{"contents":${stringfiedRequest}, "tools":${stringfiedTools}}`;
+        } catch {
+            throw new Error('Error building body');
+        }
     }
 }
