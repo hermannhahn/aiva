@@ -21,14 +21,6 @@ export class GoogleGemini {
         this.GEMINI_API_KEY = app.userSettings.GEMINI_API_KEY;
         this.afterTune = null;
         this.block = false;
-        this.activationWords = [
-            this.app.userSettings.ASSIST_NAME,
-            _('computer'),
-            _('notebook'),
-            _('desktop'),
-            _('laptop'),
-            _('pc'),
-        ];
         this.app.log('Google Gemini API loaded');
     }
 
@@ -275,8 +267,6 @@ export class GoogleGemini {
             // get first five words from text
             if (this.isFunctionCall(firstFiveWords)) {
                 const tools = JSON.stringify(this.app.functions.declarations());
-                // remove the first word from request
-                request = request.slice(1);
                 return `{"contents":${request}, "tools":${tools}}`;
             }
             return `{"contents":${request}}`;
@@ -294,7 +284,7 @@ export class GoogleGemini {
         if (text.length < 3) {
             return false;
         }
-        for (const word of this.activationWords) {
+        for (const word of this.app.functions.activationWords) {
             if (text.includes(word)) {
                 return true;
             }
