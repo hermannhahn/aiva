@@ -37,7 +37,7 @@ export class GeminiFunctions {
                 {
                     name: 'open_app',
                     description:
-                        _('To run apps, flatpak, snap, etc...') +
+                        _('To use when you want to open an application') +
                         ' [OS: Ubuntu 24.04.1 LTS]',
                     parameters: {
                         type: 'object',
@@ -46,7 +46,7 @@ export class GeminiFunctions {
                                 type: 'string',
                                 description:
                                     _('Non-sudo command line to run, e.g.: ') +
-                                    'firefox https://google.com --new-window',
+                                    'firefox https://google.com',
                             },
                             response: {
                                 type: 'string',
@@ -60,7 +60,9 @@ export class GeminiFunctions {
                 },
                 {
                     name: 'read_clipboard',
-                    description: _('read text from clipboard with tts'),
+                    description: _(
+                        'To use when you want to read the clipboard',
+                    ),
                     parameters: {
                         type: 'object',
                         properties: {

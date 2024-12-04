@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-04 00:25-0300\n"
+"POT-Creation-Date: 2024-12-04 13:15-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,14 +37,14 @@ msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr ""
 
 #: src/ai/gemini_functions.js:40
-msgid "To run apps, flatpak, snap, etc..."
+msgid "To use when you want to open an application"
 msgstr ""
 
 #: src/ai/gemini_functions.js:48
 msgid "Non-sudo command line to run, e.g.: "
 msgstr ""
 
-#: src/ai/gemini_functions.js:54 src/ai/gemini_functions.js:70
+#: src/ai/gemini_functions.js:54 src/ai/gemini_functions.js:72
 msgid "Response text before run, e.g.: "
 msgstr ""
 
@@ -52,31 +52,31 @@ msgstr ""
 msgid "Sure, opening google..."
 msgstr ""
 
-#: src/ai/gemini_functions.js:63
-msgid "read text from clipboard with tts"
+#: src/ai/gemini_functions.js:64
+msgid "To use when you want to read the clipboard"
 msgstr ""
 
-#: src/ai/gemini_functions.js:71
+#: src/ai/gemini_functions.js:73
 msgid "Sure, start reading..."
 msgstr ""
 
-#: src/ai/gemini_functions.js:93
+#: src/ai/gemini_functions.js:95
 msgid "End of text!"
 msgstr ""
 
-#: src/ai/gemini_functions.js:97
+#: src/ai/gemini_functions.js:99
 msgid "Failed to get text from clipboard"
 msgstr ""
 
-#: src/ai/gemini_functions.js:118
+#: src/ai/gemini_functions.js:120
 msgid "Please, install"
 msgstr ""
 
-#: src/ai/gemini_functions.js:122
+#: src/ai/gemini_functions.js:124
 msgid "first"
 msgstr ""
 
-#: src/ai/gemini_functions.js:135
+#: src/ai/gemini_functions.js:137
 msgid "Error opening site"
 msgstr ""
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-04 00:15-0300\n"
+"POT-Creation-Date: 2024-12-04 13:15-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -39,14 +39,14 @@ msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr "Eu não posso fazer isso agora. Talvez no futuro."
 
 #: src/ai/gemini_functions.js:40
-msgid "To run apps, flatpak, snap, etc..."
-msgstr "Para rodar apps, flatpak, snap, etc..."
+msgid "To use when you want to open an application"
+msgstr ""
 
 #: src/ai/gemini_functions.js:48
 msgid "Non-sudo command line to run, e.g.: "
 msgstr "Linha de comando non-sudo para executar, por exemplo: "
 
-#: src/ai/gemini_functions.js:54 src/ai/gemini_functions.js:70
+#: src/ai/gemini_functions.js:54 src/ai/gemini_functions.js:72
 msgid "Response text before run, e.g.: "
 msgstr "Rexto de resposta antes de executar, por exemplo: "
 
@@ -54,33 +54,32 @@ msgstr "Rexto de resposta antes de executar, por exemplo: "
 msgid "Sure, opening google..."
 msgstr "Claro, abrindo google..."
 
-#: src/ai/gemini_functions.js:63
-#, fuzzy
-msgid "read text from clipboard with tts"
-msgstr "leia o texto que copiei"
+#: src/ai/gemini_functions.js:64
+msgid "To use when you want to read the clipboard"
+msgstr ""
 
-#: src/ai/gemini_functions.js:71
+#: src/ai/gemini_functions.js:73
 msgid "Sure, start reading..."
 msgstr "Claro, iniciando leitura..."
 
-#: src/ai/gemini_functions.js:93
+#: src/ai/gemini_functions.js:95
 msgid "End of text!"
 msgstr "Fim do texto!"
 
-#: src/ai/gemini_functions.js:97
+#: src/ai/gemini_functions.js:99
 msgid "Failed to get text from clipboard"
 msgstr "Falha ao obter texto da área de transferência"
 
-#: src/ai/gemini_functions.js:118
+#: src/ai/gemini_functions.js:120
 #, fuzzy
 msgid "Please, install"
 msgstr "instalar"
 
-#: src/ai/gemini_functions.js:122
+#: src/ai/gemini_functions.js:124
 msgid "first"
 msgstr ""
 
-#: src/ai/gemini_functions.js:135
+#: src/ai/gemini_functions.js:137
 msgid "Error opening site"
 msgstr "Falha ao abrir site"
 
@@ -384,6 +383,13 @@ msgstr "Salvar"
 #: src/prefs.js:287
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
+
+#~ msgid "To run apps, flatpak, snap, etc..."
+#~ msgstr "Para rodar apps, flatpak, snap, etc..."
+
+#, fuzzy
+#~ msgid "read text from clipboard with tts"
+#~ msgstr "leia o texto que copiei"
 
 #~ msgid "Install instructions for app and dependencies if needed."
 #~ msgstr ""
