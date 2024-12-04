@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-04 13:15-0300\n"
+"POT-Creation-Date: 2024-12-04 14:43-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -70,12 +70,12 @@ msgstr "Fim do texto!"
 msgid "Failed to get text from clipboard"
 msgstr "Falha ao obter texto da área de transferência"
 
-#: src/ai/gemini_functions.js:120
+#: src/ai/gemini_functions.js:116
 #, fuzzy
 msgid "Please, install"
 msgstr "instalar"
 
-#: src/ai/gemini_functions.js:124
+#: src/ai/gemini_functions.js:120
 msgid "first"
 msgstr ""
 

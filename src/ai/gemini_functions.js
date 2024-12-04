@@ -105,10 +105,6 @@ export class GeminiFunctions {
 
     _openApp(commandLine, response) {
         try {
-            if (response) {
-                this.app.chat.editResponse(response);
-            }
-
             if (commandLine) {
                 // get first word from commandLine
                 const command = commandLine.split(' ')[0];
@@ -125,6 +121,10 @@ export class GeminiFunctions {
                             '.',
                     );
                     return;
+                }
+
+                if (response) {
+                    this.app.chat.editResponse(response);
                 }
 
                 this.app.utils.executeCommand(commandLine);
