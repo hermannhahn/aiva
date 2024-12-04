@@ -266,7 +266,9 @@ export class GoogleGemini {
         try {
             // get first five words from text
             if (this.isFunctionCall(firstFiveWords)) {
-                const tools = JSON.stringify(this.app.functions.declarations());
+                const tools = JSON.stringify(
+                    this.app.functions.declarations(firstFiveWords),
+                );
                 return `{"contents":${request}, "tools":${tools}}`;
             }
             return `{"contents":${request}}`;
