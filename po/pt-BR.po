@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-03 23:51-0300\n"
+"POT-Creation-Date: 2024-12-03 23:52-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -53,54 +53,54 @@ msgstr ""
 msgid "pc"
 msgstr ""
 
-#: src/ai/gemini_functions.js:52
+#: src/ai/gemini_functions.js:51
 #, fuzzy
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr "Eu não posso fazer isso agora. Talvez no futuro."
 
-#: src/ai/gemini_functions.js:64
+#: src/ai/gemini_functions.js:63
 msgid "To run apps, flatpak, snap, etc..."
 msgstr "Para rodar apps, flatpak, snap, etc..."
 
-#: src/ai/gemini_functions.js:72
+#: src/ai/gemini_functions.js:71
 msgid "Non-sudo command line to run, e.g.: "
 msgstr "Linha de comando non-sudo para executar, por exemplo: "
 
-#: src/ai/gemini_functions.js:78 src/ai/gemini_functions.js:94
+#: src/ai/gemini_functions.js:77 src/ai/gemini_functions.js:93
 msgid "Response text before run, e.g.: "
 msgstr "Rexto de resposta antes de executar, por exemplo: "
 
-#: src/ai/gemini_functions.js:79
+#: src/ai/gemini_functions.js:78
 msgid "Sure, opening google..."
 msgstr "Claro, abrindo google..."
 
-#: src/ai/gemini_functions.js:87
+#: src/ai/gemini_functions.js:86
 #, fuzzy
 msgid "read text from clipboard with tts"
 msgstr "leia o texto que copiei"
 
-#: src/ai/gemini_functions.js:95
+#: src/ai/gemini_functions.js:94
 msgid "Sure, start reading..."
 msgstr "Claro, iniciando leitura..."
 
-#: src/ai/gemini_functions.js:117
+#: src/ai/gemini_functions.js:116
 msgid "End of text!"
 msgstr "Fim do texto!"
 
-#: src/ai/gemini_functions.js:121
+#: src/ai/gemini_functions.js:120
 msgid "Failed to get text from clipboard"
 msgstr "Falha ao obter texto da área de transferência"
 
-#: src/ai/gemini_functions.js:142
+#: src/ai/gemini_functions.js:141
 #, fuzzy
 msgid "Please, install"
 msgstr "instalar"
 
-#: src/ai/gemini_functions.js:146
+#: src/ai/gemini_functions.js:145
 msgid "first"
 msgstr ""
 
-#: src/ai/gemini_functions.js:159
+#: src/ai/gemini_functions.js:158
 msgid "Error opening site"
 msgstr "Falha ao abrir site"
 

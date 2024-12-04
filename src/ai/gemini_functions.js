@@ -38,14 +38,13 @@ export class GeminiFunctions {
         command = command?.toLowerCase();
         const commandLine = args.commandLine?.toLowerCase();
         const response = args.response?.toLowerCase();
-        const installInstructions = args.installInstructions?.toLowerCase();
 
         switch (command) {
             case 'read_clipboard':
                 this._readClipboardText(response);
                 break;
             case 'open_app':
-                this._openApp(commandLine, response, installInstructions);
+                this._openApp(commandLine, response);
                 break;
             default:
                 this.app.chat.editResponse(
