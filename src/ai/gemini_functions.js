@@ -99,7 +99,7 @@ export class GeminiFunctions {
      * @returns {boolean} true/false
      */
     isFunctionCall(text) {
-        let firstFiveWords = text.split(' ').slice(0, 5);
+        let firstFiveWords = text.split(' ');
         if (firstFiveWords.length < 3) {
             return false;
         }
