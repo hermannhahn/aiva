@@ -59,11 +59,11 @@ msgstr "abrir"
 
 #: src/ai/gemini_functions.js:19
 msgid "open_lang_var1"
-msgstr ""
+msgstr "abra"
 
 #: src/ai/gemini_functions.js:20
 msgid "open_lang_var2"
-msgstr ""
+msgstr "abre"
 
 #: src/ai/gemini_functions.js:21
 msgid "run"
@@ -71,11 +71,11 @@ msgstr "rodar"
 
 #: src/ai/gemini_functions.js:22
 msgid "run_lang_var1"
-msgstr ""
+msgstr "rode"
 
 #: src/ai/gemini_functions.js:23
 msgid "run_lang_var2"
-msgstr ""
+msgstr "roda"
 
 #: src/ai/gemini_functions.js:24
 msgid "execute"
@@ -83,11 +83,11 @@ msgstr "executar"
 
 #: src/ai/gemini_functions.js:25
 msgid "execute_lang_var1"
-msgstr ""
+msgstr "execute"
 
 #: src/ai/gemini_functions.js:26
 msgid "execute_lang_var2"
-msgstr ""
+msgstr "executa"
 
 #: src/ai/gemini_functions.js:27
 msgid "start"
@@ -95,11 +95,11 @@ msgstr "iniciar"
 
 #: src/ai/gemini_functions.js:28
 msgid "start_lang_var1"
-msgstr ""
+msgstr "inicie"
 
 #: src/ai/gemini_functions.js:29
 msgid "start_lang_var2"
-msgstr ""
+msgstr "inicia"
 
 #: src/ai/gemini_functions.js:30
 msgid "launch"
@@ -107,11 +107,11 @@ msgstr "lançar"
 
 #: src/ai/gemini_functions.js:31
 msgid "launch_lang_var1"
-msgstr ""
+msgstr "lance"
 
 #: src/ai/gemini_functions.js:32
 msgid "launch_lang_var2"
-msgstr ""
+msgstr "lança"
 
 #: src/ai/gemini_functions.js:33
 msgid "read"
@@ -119,11 +119,11 @@ msgstr "ler"
 
 #: src/ai/gemini_functions.js:34
 msgid "read_lang_var1"
-msgstr ""
+msgstr "leia"
 
 #: src/ai/gemini_functions.js:35
 msgid "read_lang_var2"
-msgstr ""
+msgstr "lê"
 
 #: src/ai/gemini_functions.js:54
 #, fuzzy
@@ -132,7 +132,8 @@ msgstr "Eu não posso fazer isso agora. Talvez no futuro."
 
 #: src/ai/gemini_functions.js:66
 msgid "To use when you want to open an application"
-msgstr ""
+msgstr "Para usar quando quiser abrir um aplicativo"
+
 
 #: src/ai/gemini_functions.js:74
 msgid "Non-sudo command line to run, e.g.: "
@@ -148,7 +149,7 @@ msgstr "Claro, abrindo google..."
 
 #: src/ai/gemini_functions.js:90
 msgid "To use when you want to read the clipboard"
-msgstr ""
+msgstr "Para usar quando quiser ler a área de transferência"
 
 #: src/ai/gemini_functions.js:99
 msgid "Sure, start reading..."
@@ -163,13 +164,12 @@ msgid "Failed to get text from clipboard"
 msgstr "Falha ao obter texto da área de transferência"
 
 #: src/ai/gemini_functions.js:142
-#, fuzzy
 msgid "Please, install"
-msgstr "instalar"
+msgstr "Por favor, instale"
 
 #: src/ai/gemini_functions.js:146
 msgid "first"
-msgstr ""
+msgstr "primeiro"
 
 #: src/ai/gemini_functions.js:163
 msgid "Error opening site"
