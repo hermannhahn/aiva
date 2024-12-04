@@ -100,13 +100,7 @@ export class GoogleGemini {
                     for (const part of parts) {
                         if (part.functionCall !== undefined) {
                             const f = part.functionCall;
-
-                            const args = {
-                                commandLine: f.args.commandLine,
-                                response: f.args.response,
-                                installInstructions: f.args.installInstructions,
-                            };
-                            this.app.functions.callback(f.name, args);
+                            this.app.functions.callback(f.name, f.args);
                             return;
                         }
                     }
