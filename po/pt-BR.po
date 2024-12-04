@@ -132,12 +132,12 @@ msgstr "pesquisar"
 #: src/ai/gemini_functions.js:37
 #, fuzzy
 msgid "search_lang_var1"
-msgstr "inicie"
+msgstr "pesquise"
 
 #: src/ai/gemini_functions.js:38
 #, fuzzy
 msgid "search_lang_var2"
-msgstr "inicia"
+msgstr "pesquisa"
 
 #: src/ai/gemini_functions.js:39
 msgid "find"
@@ -146,12 +146,12 @@ msgstr "procurar"
 #: src/ai/gemini_functions.js:40
 #, fuzzy
 msgid "find_lang_var1"
-msgstr "rode"
+msgstr "procure"
 
 #: src/ai/gemini_functions.js:41
 #, fuzzy
 msgid "find_lang_var2"
-msgstr "roda"
+msgstr "procura"
 
 #: src/ai/gemini_functions.js:60
 #, fuzzy
