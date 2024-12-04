@@ -289,6 +289,7 @@ export class GoogleGemini {
      * @returns {boolean} true/false
      */
     isFunctionCall(text) {
+        text = text.toLowerCase();
         if (text.length < 3) {
             return false;
         }
