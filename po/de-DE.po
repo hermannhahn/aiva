@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-03 21:05-0300\n"
+"POT-Creation-Date: 2024-12-03 21:07-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language de-DE\n"
@@ -35,33 +35,33 @@ msgstr ""
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr ""
 
-#: src/ai/gemini_functions.js:40
+#: src/ai/gemini_functions.js:41
+msgid "To run apps, flatpak, snap, etc..."
+msgstr ""
+
+#: src/ai/gemini_functions.js:49
+msgid "Non-sudo command line to run, e.g.: "
+msgstr ""
+
+#: src/ai/gemini_functions.js:55 src/ai/gemini_functions.js:77
+msgid "Response text before run, e.g.: "
+msgstr ""
+
+#: src/ai/gemini_functions.js:56
+msgid "Sure, opening google..."
+msgstr ""
+
+#: src/ai/gemini_functions.js:61
+msgid "Install instructions for app and dependencies if needed."
+msgstr ""
+
+#: src/ai/gemini_functions.js:70
 #, fuzzy
 msgid "read text from clipboard"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini_functions.js:47 src/ai/gemini_functions.js:71
-msgid "Response text before run, e.g.: "
-msgstr ""
-
-#: src/ai/gemini_functions.js:48
+#: src/ai/gemini_functions.js:78
 msgid "Sure, start reading..."
-msgstr ""
-
-#: src/ai/gemini_functions.js:57
-msgid "To run apps, flatpak, snap, etc..."
-msgstr ""
-
-#: src/ai/gemini_functions.js:65
-msgid "Non-sudo command line to run, e.g.: "
-msgstr ""
-
-#: src/ai/gemini_functions.js:72
-msgid "Sure, opening google..."
-msgstr ""
-
-#: src/ai/gemini_functions.js:77
-msgid "Install instructions for app and dependencies if needed."
 msgstr ""
 
 #: src/ai/gemini_functions.js:100

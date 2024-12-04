@@ -36,22 +36,6 @@ export class GeminiFunctions {
         let result = {
             functionDeclarations: [
                 {
-                    name: 'read_clipboard',
-                    description: _('read text from clipboard'),
-                    parameters: {
-                        type: 'object',
-                        properties: {
-                            response: {
-                                type: 'string',
-                                description:
-                                    _('Response text before run, e.g.: ') +
-                                    _('Sure, start reading...'),
-                            },
-                        },
-                        required: ['response'],
-                    },
-                },
-                {
                     name: 'open_app',
                     description:
                         _('To run apps, flatpak, snap, etc...') +
@@ -79,6 +63,22 @@ export class GeminiFunctions {
                             },
                         },
                         required: ['commandLine', 'response'],
+                    },
+                },
+                {
+                    name: 'read_clipboard',
+                    description: _('read text from clipboard'),
+                    parameters: {
+                        type: 'object',
+                        properties: {
+                            response: {
+                                type: 'string',
+                                description:
+                                    _('Response text before run, e.g.: ') +
+                                    _('Sure, start reading...'),
+                            },
+                        },
+                        required: ['response'],
                     },
                 },
             ],
