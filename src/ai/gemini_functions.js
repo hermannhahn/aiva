@@ -138,17 +138,15 @@ export class GeminiFunctions {
                 // check if app is installed
                 const isInstalled = this.app.utils.isAppInstalled(command);
                 if (!isInstalled) {
-                    if (installInstructions) {
-                        this.app.chat.editResponse(
-                            _('Please, install') +
-                                ' ' +
-                                command +
-                                ' ' +
-                                _('first') +
-                                '.',
-                        );
-                        return;
-                    }
+                    this.app.chat.editResponse(
+                        _('Please, install') +
+                            ' ' +
+                            command +
+                            ' ' +
+                            _('first') +
+                            '.',
+                    );
+                    return;
                 }
 
                 this.app.utils.executeCommand(commandLine);

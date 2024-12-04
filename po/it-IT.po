@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-03 23:50-0300\n"
+"POT-Creation-Date: 2024-12-03 23:51-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language it-IT\n"
@@ -89,15 +89,15 @@ msgstr ""
 msgid "Failed to get text from clipboard"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini_functions.js:143
+#: src/ai/gemini_functions.js:142
 msgid "Please, install"
 msgstr ""
 
-#: src/ai/gemini_functions.js:147
+#: src/ai/gemini_functions.js:146
 msgid "first"
 msgstr ""
 
-#: src/ai/gemini_functions.js:161
+#: src/ai/gemini_functions.js:159
 #, fuzzy
 msgid "Error opening site"
 msgstr "Codice copiato negli appunti"

@@ -88,15 +88,15 @@ msgstr ""
 msgid "Failed to get text from clipboard"
 msgstr ""
 
-#: src/ai/gemini_functions.js:143
+#: src/ai/gemini_functions.js:142
 msgid "Please, install"
 msgstr ""
 
-#: src/ai/gemini_functions.js:147
+#: src/ai/gemini_functions.js:146
 msgid "first"
 msgstr ""
 
-#: src/ai/gemini_functions.js:161
+#: src/ai/gemini_functions.js:159
 msgid "Error opening site"
 msgstr ""
 
