@@ -183,6 +183,24 @@ export class GoogleGemini {
                 message,
                 GLib.PRIORITY_DEFAULT,
                 null,
+                (session, stream, bytesRead) => {
+                    let decoder = new TextDecoder('utf-8');
+                    let dataChunk = decoder.decode(stream.peek(bytesRead));
+                    accumulatedData += dataChunk;
+
+                    // Try parsing for complete sentences (replace with a proper parsing library)
+                    let potentialResponses = accumulatedData.split(/\.|\?|!/);
+                    for (let response of potentialResponses) {
+                        if (response.trim()) {
+                            // Update chat with the partial response
+                            this.app.chat.editResponse(response.trim());
+                            accumulatedData = accumulatedData.replace(
+                                response,
+                                '',
+                            );
+                        }
+                    }
+                },
                 (_httpSession, result) => {
                     let bytes = _httpSession.send_and_read_finish(result);
                     this.app.log('Response received.');
@@ -243,24 +261,6 @@ export class GoogleGemini {
 
                     // add to history
                     this.app.database.addToHistory(question, aiResponse);
-                },
-                (session, stream, bytesRead) => {
-                    let decoder = new TextDecoder('utf-8');
-                    let dataChunk = decoder.decode(stream.peek(bytesRead));
-                    accumulatedData += dataChunk;
-
-                    // Try parsing for complete sentences (replace with a proper parsing library)
-                    let potentialResponses = accumulatedData.split(/\.|\?|!/);
-                    for (let response of potentialResponses) {
-                        if (response.trim()) {
-                            // Update chat with the partial response
-                            this.app.chat.editResponse(response.trim());
-                            accumulatedData = accumulatedData.replace(
-                                response,
-                                '',
-                            );
-                        }
-                    }
                 },
             );
         } catch (error) {
