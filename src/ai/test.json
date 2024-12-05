@@ -1,64 +1,37 @@
 {
-  "contents": [
+  "candidates": [
     {
-      "role": "user",
-      "parts": [
-        {
-          "text": "Olá, eu sou Hermann. Eu sou de Brazil e hoje é Wed Dec 04 2024 22:07:32 GMT-0300 (Horário Padrão de Brasília)"
-        }
-      ]
-    },
-    {
-      "role": "model",
-      "parts": [{"text": "Olá, eu sou AIVA. Como posso ajudar hoje?"}]
-    },
-    {"role": "user", "parts": [{"text": "Olá, boa noite."}]},
-    {"role": "model", "parts": [{"text": "Boa noite, Hermann."}]},
-    {
-      "role": "user",
-      "parts": [{"text": "Pesquise, previne no YouTube e furacão limpos."}]
-    },
-    {"role": "model", "parts": [{"text": "**Pesquisa no YouTube:**"}]},
-    {"role": "user", "parts": [{"text": "abra o youtube por favor"}]}
-  ],
-  "tools": {
-    "declarations": [
-      {
-        "name": "browse_web",
-        "description": "To use when you want to browse the web [OS: Ubuntu 24.04.1 LTS]",
-        "parameters": {
-          "type": "object",
-          "properties": {
-            "url": {
-              "type": "string",
-              "description": "URL to browse, e.g.: https://google.com"
-            },
-            "response": {
-              "type": "string",
-              "description": "Texto de resposta antes de executar, por exemplo: Sure, opening..."
+      "content": {
+        "parts": [
+          {
+            "functionCall": {
+              "name": "browse_web",
+              "args": {"url": "https://youtube.com"}
             }
-          },
-          "required": ["url"]
-        }
+          }
+        ],
+        "role": "model"
       },
-      {
-        "name": "command_line",
-        "description": "Rodar comandos no terminal do usuário, por exemplo: . [OS: Ubuntu 24.04.1 LTS]",
-        "parameters": {
-          "type": "object",
-          "properties": {
-            "commandLine": {
-              "type": "string",
-              "description": "Linha de comando não-sudo, por exemplo: firefox https://google.com"
-            },
-            "response": {
-              "type": "string",
-              "description": "Texto de resposta antes de executar, por exemplo: Claro, abrindo google..."
-            }
-          },
-          "required": ["commandLine", "response"]
-        }
-      }
-    ]
-  }
+      "finishReason": "STOP",
+      "index": 0,
+      "safetyRatings": [
+        {
+          "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+          "probability": "NEGLIGIBLE"
+        },
+        {
+          "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+          "probability": "NEGLIGIBLE"
+        },
+        {"category": "HARM_CATEGORY_HATE_SPEECH", "probability": "NEGLIGIBLE"},
+        {"category": "HARM_CATEGORY_HARASSMENT", "probability": "NEGLIGIBLE"}
+      ]
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 235,
+    "candidatesTokenCount": 19,
+    "totalTokenCount": 254
+  },
+  "modelVersion": "gemini-1.0-pro"
 }
