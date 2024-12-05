@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-04 22:04-0300\n"
+"POT-Creation-Date: 2024-12-04 22:17-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language fr-FR\n"
@@ -171,37 +171,37 @@ msgstr ""
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr ""
 
-#: src/ai/gemini_functions.js:174
+#: src/ai/gemini_functions.js:178
 msgid "End of text!"
 msgstr ""
 
-#: src/ai/gemini_functions.js:178
+#: src/ai/gemini_functions.js:182
 #, fuzzy
 msgid "Failed to get text from clipboard"
 msgstr "Code copié dans le presse-papier"
 
-#: src/ai/gemini_functions.js:194
+#: src/ai/gemini_functions.js:198
 msgid "Please, install"
 msgstr ""
 
-#: src/ai/gemini_functions.js:198
+#: src/ai/gemini_functions.js:202
 msgid "first"
 msgstr ""
 
-#: src/ai/gemini_functions.js:215 src/ai/gemini_functions.js:268
+#: src/ai/gemini_functions.js:219 src/ai/gemini_functions.js:272
 #, fuzzy
 msgid "Error opening site"
 msgstr "Code copié dans le presse-papier"
 
-#: src/ai/gemini_functions.js:259
+#: src/ai/gemini_functions.js:263
 msgid "You don't have any browser installed."
 msgstr ""
 
-#: src/ai/gemini_functions.js:261
+#: src/ai/gemini_functions.js:265
 msgid "Please, install a browser and try again."
 msgstr ""
 
-#: src/ai/gemini_functions.js:263
+#: src/ai/gemini_functions.js:267
 msgid "Opening App Store..."
 msgstr ""
 
