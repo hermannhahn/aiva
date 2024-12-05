@@ -395,7 +395,6 @@ export class Utils {
      * @param {string} url
      */
     curl(url) {
-        // Get IP
         let _httpSession = new Soup.Session();
         let message = Soup.Message.new('GET', url);
         _httpSession.send_and_read_async(
