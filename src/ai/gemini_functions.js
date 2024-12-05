@@ -61,8 +61,7 @@ export class GeminiFunctions {
                     commandLine: {
                         type: 'string',
                         description:
-                            _('Command line to run, e.g.: ') +
-                            'gnome-software',
+                            _('Command line to run, e.g.: ') + 'gnome-software',
                     },
                     response: {
                         type: 'string',
@@ -89,7 +88,7 @@ export class GeminiFunctions {
 
         this._browseWebDeclaration = {
             name: 'browse_web',
-            description: _('Open url in the browser.')
+            description: _('Open url in the browser.'),
             parameters: {
                 type: 'object',
                 properties: {
