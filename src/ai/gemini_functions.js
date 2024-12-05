@@ -248,6 +248,8 @@ export class GeminiFunctions {
     declarations(text) {
         let functionDeclarations = [];
         const firstWords = text.toLowerCase().split(' ').slice(0, 5);
+        const allText = text.toLowerCase().split(' ');
+
         for (const word of firstWords) {
             if (this.readClipboardActivation.includes(word)) {
                 functionDeclarations.push(this._readClipboardDeclaration);
@@ -258,6 +260,8 @@ export class GeminiFunctions {
             if (this.cmdActivation.includes(word)) {
                 functionDeclarations.push(this._cmdDeclaration);
             }
+        }
+        for (const word of allText) {
             if (this.weatherActivation.includes(word)) {
                 functionDeclarations.push(this._weatherDeclaration);
             }
