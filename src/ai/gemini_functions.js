@@ -8,12 +8,14 @@ import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js'
 export class GeminiFunctions {
     constructor(app) {
         this.app = app;
+
         this.readClipboardActivation = [
             _('read'),
             _('read_lang_var1'),
             _('read_lang_var2'),
         ];
-        (this._readClipboardDeclaration = {
+
+        this._readClipboardDeclaration = {
             name: 'read_clipboard',
             description: _('To use when you want to read the clipboard'),
             parameters: {
@@ -28,25 +30,27 @@ export class GeminiFunctions {
                 },
                 required: ['response'],
             },
-        }),
-            (this.openAppActivation = [
-                _('open'),
-                _('open_lang_var1'),
-                _('open_lang_var2'),
-                _('run'),
-                _('run_lang_var1'),
-                _('run_lang_var2'),
-                _('execute'),
-                _('execute_lang_var1'),
-                _('execute_lang_var2'),
-                _('start'),
-                _('start_lang_var1'),
-                _('start_lang_var2'),
-                _('launch'),
-                _('launch_lang_var1'),
-                _('launch_lang_var2'),
-            ]);
-        (this._openAppDeclaration = {
+        };
+
+        this.openAppActivation = [
+            _('open'),
+            _('open_lang_var1'),
+            _('open_lang_var2'),
+            _('run'),
+            _('run_lang_var1'),
+            _('run_lang_var2'),
+            _('execute'),
+            _('execute_lang_var1'),
+            _('execute_lang_var2'),
+            _('start'),
+            _('start_lang_var1'),
+            _('start_lang_var2'),
+            _('launch'),
+            _('launch_lang_var1'),
+            _('launch_lang_var2'),
+        ];
+
+        this._openAppDeclaration = {
             name: 'open_app',
             description:
                 _('To use when you want to open an application') +
@@ -69,21 +73,23 @@ export class GeminiFunctions {
                 },
                 required: ['commandLine', 'response'],
             },
-        }),
-            (this.searchWebActivation = [
-                _('search'),
-                _('search_lang_var1'),
-                _('search_lang_var2'),
-                _('find'),
-                _('find_lang_var1'),
-                _('find_lang_var2'),
-            ]);
+        };
+
+        this.searchWebActivation = [
+            _('search'),
+            _('search_lang_var1'),
+            _('search_lang_var2'),
+            _('find'),
+            _('find_lang_var1'),
+            _('find_lang_var2'),
+        ];
 
         this.activationWords = [
             ...this.readClipboardActivation,
             ...this.openAppActivation,
             ...this.searchWebActivation,
         ];
+
         console.log('Functions loaded.');
     }
 
