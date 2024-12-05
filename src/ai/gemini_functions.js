@@ -97,7 +97,7 @@ export class GeminiFunctions {
         this.activationWords = [
             ...this.readClipboardActivation,
             ...this.cmdActivation,
-            ...this.searchWebActivation,
+            ...this.browseWebActivation,
         ];
 
         console.log('Functions loaded.');
