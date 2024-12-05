@@ -224,7 +224,7 @@ export class GoogleGemini {
                     }
 
                     // safety warning
-                    let safetyReason = this.safetyReason(question, res);
+                    let safetyReason = this.safetyReason(res);
 
                     if (safetyReason) {
                         this.app.chat.editResponse(safetyReason);
@@ -255,11 +255,10 @@ export class GoogleGemini {
 
     /**
      * @description check safety result
-     * @param {string} question user question
      * @param {object} res gemini response object
      * @returns {string|false} safety reason or false
      */
-    safetyReason(question, res) {
+    safetyReason(res) {
         let aiResponse = '';
         // SAFETY warning
         if (res.candidates[0].finishReason === 'SAFETY') {
