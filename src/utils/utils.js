@@ -451,12 +451,22 @@ export class Utils {
                     'Elemento com id="probabilidadeChuva" não encontrado',
                 );
             }
-            return {
+            let weather = {
                 city: city[1].trim(),
                 temperature: temperature[1].trim(),
                 thermalSensation: thermalSensation[1].trim(),
                 rainProbability: rainProbability[1].trim(),
             };
+
+            this.app.log('City:' + weather.city);
+            this.app.log('Temperature:' + weather.temperature);
+            this.app.log('Thermal Temperature:' + weather.thermalSensation);
+            this.app.log('Rain Probability:' + weather.rainProbability);
+            if (weather) {
+                this.app.chat.editResponse(
+                    `${_('The current temperature is')} ${weather.temperature}, with ${weather.rainProbability} of rain probability, and it feels like ${weather.thermalSensation}.`,
+                );
+            }
         } catch (error) {
             throw new Error(`Failed to complete request: ${error.message}`);
         }
