@@ -89,8 +89,7 @@ export class GeminiFunctions {
 
         this._browseWebDeclaration = {
             name: 'browse_web',
-            description:
-                _('Open url in the browser.');
+            description: _('Open url in the browser.')
             parameters: {
                 type: 'object',
                 properties: {
