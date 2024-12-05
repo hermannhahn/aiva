@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-04 22:27-0300\n"
+"POT-Creation-Date: 2024-12-04 22:46-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language es-ES\n"
@@ -153,58 +153,140 @@ msgstr ""
 msgid "find_lang_var2"
 msgstr ""
 
+#: src/ai/gemini_functions.js:87
+msgid "seek"
+msgstr ""
+
+#: src/ai/gemini_functions.js:88
+msgid "seek_lang_var1"
+msgstr ""
+
+#: src/ai/gemini_functions.js:89
+msgid "seek_lang_var2"
+msgstr ""
+
+#: src/ai/gemini_functions.js:90
+msgid "go"
+msgstr ""
+
 #: src/ai/gemini_functions.js:91
+msgid "go_lang_var1"
+msgstr ""
+
+#: src/ai/gemini_functions.js:92
+msgid "go_lang_var2"
+msgstr ""
+
+#: src/ai/gemini_functions.js:93
+#, fuzzy
+msgid "visit"
+msgstr "Código copiado al portapapeles"
+
+#: src/ai/gemini_functions.js:94
+msgid "visit_lang_var1"
+msgstr ""
+
+#: src/ai/gemini_functions.js:95
+msgid "visit_lang_var2"
+msgstr ""
+
+#: src/ai/gemini_functions.js:96
+#, fuzzy
+msgid "navigate"
+msgstr "Código copiado al portapapeles"
+
+#: src/ai/gemini_functions.js:97
+#, fuzzy
+msgid "navigate_lang_var1"
+msgstr "Código copiado al portapapeles"
+
+#: src/ai/gemini_functions.js:98
+#, fuzzy
+msgid "navigate_lang_var2"
+msgstr "Código copiado al portapapeles"
+
+#: src/ai/gemini_functions.js:99
+#, fuzzy
+msgid "browse"
+msgstr "Código copiado al portapapeles"
+
+#: src/ai/gemini_functions.js:100
+#, fuzzy
+msgid "browse_lang_var1"
+msgstr "Código copiado al portapapeles"
+
+#: src/ai/gemini_functions.js:101
+#, fuzzy
+msgid "browse_lang_var2"
+msgstr "Código copiado al portapapeles"
+
+#: src/ai/gemini_functions.js:102
+#, fuzzy
+msgid "access"
+msgstr "Código copiado al portapapeles"
+
+#: src/ai/gemini_functions.js:103
+#, fuzzy
+msgid "access_lang_var1"
+msgstr "Código copiado al portapapeles"
+
+#: src/ai/gemini_functions.js:104
+#, fuzzy
+msgid "access_lang_var2"
+msgstr "Código copiado al portapapeles"
+
+#: src/ai/gemini_functions.js:109
 #, fuzzy
 msgid "Open url in the browser."
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini_functions.js:98
+#: src/ai/gemini_functions.js:116
 msgid "URL to open, e.g.: "
 msgstr ""
 
-#: src/ai/gemini_functions.js:103
+#: src/ai/gemini_functions.js:121
 msgid "Response text before open, e.g.: "
 msgstr ""
 
-#: src/ai/gemini_functions.js:104
+#: src/ai/gemini_functions.js:122
 msgid "Sure, opening..."
 msgstr ""
 
-#: src/ai/gemini_functions.js:138
+#: src/ai/gemini_functions.js:156
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr ""
 
-#: src/ai/gemini_functions.js:171
+#: src/ai/gemini_functions.js:189
 msgid "End of text!"
 msgstr ""
 
-#: src/ai/gemini_functions.js:175
+#: src/ai/gemini_functions.js:193
 #, fuzzy
 msgid "Failed to get text from clipboard"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini_functions.js:191
+#: src/ai/gemini_functions.js:209
 msgid "Please, install"
 msgstr ""
 
-#: src/ai/gemini_functions.js:195
+#: src/ai/gemini_functions.js:213
 msgid "first"
 msgstr ""
 
-#: src/ai/gemini_functions.js:212 src/ai/gemini_functions.js:265
+#: src/ai/gemini_functions.js:230 src/ai/gemini_functions.js:283
 #, fuzzy
 msgid "Error opening site"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini_functions.js:256
+#: src/ai/gemini_functions.js:274
 msgid "You don't have any browser installed."
 msgstr ""
 
-#: src/ai/gemini_functions.js:258
+#: src/ai/gemini_functions.js:276
 msgid "Please, install a browser and try again."
 msgstr ""
 
-#: src/ai/gemini_functions.js:260
+#: src/ai/gemini_functions.js:278
 msgid "Opening App Store..."
 msgstr ""
 
@@ -495,18 +577,6 @@ msgstr ""
 #~ msgstr "Código copiado al portapapeles"
 
 #, fuzzy
-#~ msgid "browse"
-#~ msgstr "Código copiado al portapapeles"
-
-#, fuzzy
-#~ msgid "navigate"
-#~ msgstr "Código copiado al portapapeles"
-
-#, fuzzy
-#~ msgid "access"
-#~ msgstr "Código copiado al portapapeles"
-
-#, fuzzy
 #~ msgid "Error opening channel"
 #~ msgstr "Código copiado al portapapeles"
 
@@ -515,27 +585,11 @@ msgstr ""
 #~ msgstr "Código copiado al portapapeles"
 
 #, fuzzy
-#~ msgid "access-var-2"
-#~ msgstr "Código copiado al portapapeles"
-
-#, fuzzy
-#~ msgid "browse-var-2"
-#~ msgstr "Código copiado al portapapeles"
-
-#, fuzzy
 #~ msgid "enter-var-1"
 #~ msgstr "Código copiado al portapapeles"
 
 #, fuzzy
 #~ msgid "enter-var-2"
-#~ msgstr "Código copiado al portapapeles"
-
-#, fuzzy
-#~ msgid "navigate-var-1"
-#~ msgstr "Código copiado al portapapeles"
-
-#, fuzzy
-#~ msgid "navigate-var-2"
 #~ msgstr "Código copiado al portapapeles"
 
 #, fuzzy
@@ -808,10 +862,6 @@ msgstr ""
 
 #, fuzzy
 #~ msgid "read what's copied"
-#~ msgstr "Código copiado al portapapeles"
-
-#, fuzzy
-#~ msgid "visit site"
 #~ msgstr "Código copiado al portapapeles"
 
 #, fuzzy

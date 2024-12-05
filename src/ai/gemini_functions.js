@@ -84,6 +84,24 @@ export class GeminiFunctions {
             _('find'),
             _('find_lang_var1'),
             _('find_lang_var2'),
+            _('seek'),
+            _('seek_lang_var1'),
+            _('seek_lang_var2'),
+            _('go'),
+            _('go_lang_var1'),
+            _('go_lang_var2'),
+            _('visit'),
+            _('visit_lang_var1'),
+            _('visit_lang_var2'),
+            _('navigate'),
+            _('navigate_lang_var1'),
+            _('navigate_lang_var2'),
+            _('browse'),
+            _('browse_lang_var1'),
+            _('browse_lang_var2'),
+            _('access'),
+            _('access_lang_var1'),
+            _('access_lang_var2'),
         ];
 
         this._browseWebDeclaration = {
@@ -110,8 +128,8 @@ export class GeminiFunctions {
 
         this.activationWords = [
             ...this.readClipboardActivation,
-            ...this.cmdActivation,
             ...this.browseWebActivation,
+            ...this.cmdActivation,
         ];
 
         console.log('Functions loaded.');
