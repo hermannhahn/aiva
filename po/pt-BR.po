@@ -119,7 +119,7 @@ msgstr "lança"
 
 #: src/ai/gemini_functions.js:58
 msgid "Run non-sudo command line in terminal"
-msgstr "Rodar comandos no terminal, por exemplo: "
+msgstr "Rodar comandos no terminal"
 
 #: src/ai/gemini_functions.js:66
 msgid "Command line to run, e.g.: "
