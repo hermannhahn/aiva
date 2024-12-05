@@ -150,6 +150,9 @@ export class GeminiFunctions {
             if (this.readClipboardActivation.includes(word)) {
                 declarations.push(this._readClipboardDeclaration);
             }
+            if (this.browseWebActivation.includes(word)) {
+                declarations.push(this._browseWebDeclaration);
+            }
             if (this.cmdActivation.includes(word)) {
                 declarations.push(this._cmdDeclaration);
             }

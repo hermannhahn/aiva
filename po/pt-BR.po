@@ -177,35 +177,35 @@ msgstr "Claro, abrindo google..."
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr "Eu não posso fazer isso agora. Talvez no futuro."
 
-#: src/ai/gemini_functions.js:171
+#: src/ai/gemini_functions.js:174
 msgid "End of text!"
 msgstr "Fim do texto!"
 
-#: src/ai/gemini_functions.js:175
+#: src/ai/gemini_functions.js:178
 msgid "Failed to get text from clipboard"
 msgstr "Falha ao obter texto da área de transferência"
 
-#: src/ai/gemini_functions.js:191
+#: src/ai/gemini_functions.js:194
 msgid "Please, install"
 msgstr "Por favor, instale"
 
-#: src/ai/gemini_functions.js:195
+#: src/ai/gemini_functions.js:198
 msgid "first"
 msgstr "primeiro"
 
-#: src/ai/gemini_functions.js:212 src/ai/gemini_functions.js:265
+#: src/ai/gemini_functions.js:215 src/ai/gemini_functions.js:268
 msgid "Error opening site"
 msgstr "Falha ao abrir site"
 
-#: src/ai/gemini_functions.js:256
+#: src/ai/gemini_functions.js:259
 msgid "You don't have any browser installed."
 msgstr ""
 
-#: src/ai/gemini_functions.js:258
+#: src/ai/gemini_functions.js:261
 msgid "Please, install a browser and try again."
 msgstr ""
 
-#: src/ai/gemini_functions.js:260
+#: src/ai/gemini_functions.js:263
 msgid "Opening App Store..."
 msgstr ""
 
