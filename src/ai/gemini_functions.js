@@ -145,21 +145,21 @@ export class GeminiFunctions {
     }
 
     declarations(words) {
-        let declarations = [];
+        let functionDeclarations = [];
         for (const word of words) {
             if (this.readClipboardActivation.includes(word)) {
-                declarations.push(this._readClipboardDeclaration);
+                functionDeclarations.push(this._readClipboardDeclaration);
             }
             if (this.browseWebActivation.includes(word)) {
-                declarations.push(this._browseWebDeclaration);
+                functionDeclarations.push(this._browseWebDeclaration);
             }
             if (this.cmdActivation.includes(word)) {
-                declarations.push(this._cmdDeclaration);
+                functionDeclarations.push(this._cmdDeclaration);
             }
         }
         return [
             {
-                functionDeclarations: declarations,
+                functionDeclarations,
             },
         ];
     }
