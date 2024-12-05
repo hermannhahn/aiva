@@ -235,6 +235,8 @@ export class GeminiFunctions {
                 this._browseWeb(url, response);
                 break;
             case 'get_weather':
+                this._getWeather(url, response);
+                break;
             default:
                 this.app.chat.editResponse(
                     _("Sorry, I can't do that right now. Maybe in the future."),
@@ -255,6 +257,9 @@ export class GeminiFunctions {
             }
             if (this.cmdActivation.includes(word)) {
                 functionDeclarations.push(this._cmdDeclaration);
+            }
+            if (this.weatherActivation.includes(word)) {
+                functionDeclarations.push(this._weatherDeclaration);
             }
         }
         return [{functionDeclarations}];
