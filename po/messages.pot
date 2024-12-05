@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-05 00:38-0300\n"
+"POT-Creation-Date: 2024-12-05 00:46-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -528,39 +528,55 @@ msgstr ""
 msgid "blizzard_lang_var2"
 msgstr ""
 
-#: src/ai/gemini_functions.js:235
+#: src/ai/gemini_functions.js:208
+msgid "Get weather forecast"
+msgstr ""
+
+#: src/ai/gemini_functions.js:214
+msgid "Location, e.g.: London"
+msgstr ""
+
+#: src/ai/gemini_functions.js:219
+msgid "Response text before get weather, e.g.: "
+msgstr ""
+
+#: src/ai/gemini_functions.js:220
+msgid "Sure, getting weather forecast..."
+msgstr ""
+
+#: src/ai/gemini_functions.js:260
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr ""
 
-#: src/ai/gemini_functions.js:277
+#: src/ai/gemini_functions.js:302
 msgid "End of text!"
 msgstr ""
 
-#: src/ai/gemini_functions.js:281
+#: src/ai/gemini_functions.js:306
 msgid "Failed to get text from clipboard"
 msgstr ""
 
-#: src/ai/gemini_functions.js:297
+#: src/ai/gemini_functions.js:322
 msgid "Please, install"
 msgstr ""
 
-#: src/ai/gemini_functions.js:301
+#: src/ai/gemini_functions.js:326
 msgid "first"
 msgstr ""
 
-#: src/ai/gemini_functions.js:318 src/ai/gemini_functions.js:371
+#: src/ai/gemini_functions.js:343 src/ai/gemini_functions.js:396
 msgid "Error opening site"
 msgstr ""
 
-#: src/ai/gemini_functions.js:362
+#: src/ai/gemini_functions.js:387
 msgid "You don't have any browser installed."
 msgstr ""
 
-#: src/ai/gemini_functions.js:364
+#: src/ai/gemini_functions.js:389
 msgid "Please, install a browser and try again."
 msgstr ""
 
-#: src/ai/gemini_functions.js:366
+#: src/ai/gemini_functions.js:391
 msgid "Opening App Store..."
 msgstr ""
 

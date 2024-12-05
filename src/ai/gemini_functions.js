@@ -203,6 +203,27 @@ export class GeminiFunctions {
             _('blizzard_lang_var2'),
         ];
 
+        this._weatherDeclaration = {
+            name: 'get_weather',
+            description: _('Get weather forecast'),
+            parameters: {
+                type: 'object',
+                properties: {
+                    location: {
+                        type: 'string',
+                        description: _('Location, e.g.: London'),
+                    },
+                    response: {
+                        type: 'string',
+                        description:
+                            _('Response text before get weather, e.g.: ') +
+                            _('Sure, getting weather forecast...'),
+                    },
+                },
+                required: ['response'],
+            },
+        };
+
         this.activationWords = [
             ...this.toolsActivation,
             ...this.readClipboardActivation,
@@ -219,6 +240,7 @@ export class GeminiFunctions {
         const commandLine = args.commandLine;
         const response = args.response;
         const url = args.url;
+        const location = args.location || this.app.userSettings.LOCATION;
 
         switch (command) {
             case 'read_clipboard':
@@ -229,6 +251,9 @@ export class GeminiFunctions {
                 break;
             case 'browse_web':
                 this._browseWeb(url, response);
+                break;
+            case 'get_weather':
+                this._getWeather(location, response);
                 break;
             default:
                 this.app.chat.editResponse(
