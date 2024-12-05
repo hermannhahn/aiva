@@ -215,14 +215,14 @@ export class GeminiFunctions {
 
     _browseWeb(url, response) {
         try {
-            const msedgeIsInstalled = this.app.utils.isAppInstalled('msedge');
-            if (msedgeIsInstalled) {
-                if (response) {
-                    this.app.chat.editResponse(response);
-                }
-                this.app.utils.executeCommand(`msedge ${url}`);
-                return;
-            }
+            // const msedgeIsInstalled = this.app.utils.isAppInstalled('msedge');
+            // if (msedgeIsInstalled) {
+            //     if (response) {
+            //         this.app.chat.editResponse(response);
+            //     }
+            //     this.app.utils.executeCommand(`msedge ${url}`);
+            //     return;
+            // }
 
             const chromeIsInstalled =
                 this.app.utils.isAppInstalled('google-chrome');
