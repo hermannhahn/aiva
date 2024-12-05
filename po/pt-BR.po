@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-05 17:16-0300\n"
+"POT-Creation-Date: 2024-12-05 18:45-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -262,42 +262,323 @@ msgstr "Texto de resposta antes de executar, por exemplo: "
 msgid "Sure, opening..."
 msgstr "Claro, abrindo..."
 
+#: src/ai/gemini_functions.js:131
+msgid "weather"
+msgstr "tempo"
+
+#: src/ai/gemini_functions.js:132
+#, fuzzy
+msgid "weather_lang_var1"
+msgstr "clima"
+
+#: src/ai/gemini_functions.js:133
+msgid "forecast"
+msgstr "ṕrevisão"
+
+#: src/ai/gemini_functions.js:134
+#, fuzzy
+msgid "temperature"
+msgstr "temperatura"
+
+#: src/ai/gemini_functions.js:135
+msgid "humidity"
+msgstr "humidade"
+
+#: src/ai/gemini_functions.js:136
+#, fuzzy
+msgid "humidity_lang_var1"
+msgstr "humidades"
+
+#: src/ai/gemini_functions.js:137
+msgid "wind"
+msgstr "vento"
+
+#: src/ai/gemini_functions.js:138
+#, fuzzy
+msgid "wind_lang_var1"
+msgstr "ar"
+
+#: src/ai/gemini_functions.js:139
+#, fuzzy
+msgid "wind_lang_var2"
+msgstr "ventania"
+
+#: src/ai/gemini_functions.js:140
+msgid "precipitation"
+msgstr "precipitação"
+
+#: src/ai/gemini_functions.js:141
+#, fuzzy
+msgid "precipitation_lang_var1"
+msgstr "precipitações"
+
+#: src/ai/gemini_functions.js:142
+#, fuzzy
+msgid "precipitation_lang_var2"
+msgstr "precipitando"
+
+#: src/ai/gemini_functions.js:143
+msgid "cloud"
+msgstr "nuvem"
+
+#: src/ai/gemini_functions.js:144
+#, fuzzy
+msgid "cloud_lang_var1"
+msgstr "nublado"
+
+#: src/ai/gemini_functions.js:145
+msgid "climate"
+msgstr "clima"
+
+#: src/ai/gemini_functions.js:146
+msgid "rain"
+msgstr "chuva"
+
+#: src/ai/gemini_functions.js:147
+#, fuzzy
+msgid "rain_lang_var1"
+msgstr "chover"
+
+#: src/ai/gemini_functions.js:148
+#, fuzzy
+msgid "rain_lang_var2"
+msgstr "chovendo"
+
+#: src/ai/gemini_functions.js:149
+msgid "snow"
+msgstr "neve"
+
+#: src/ai/gemini_functions.js:150
+#, fuzzy
+msgid "snow_lang_var1"
+msgstr "nevar"
+
+#: src/ai/gemini_functions.js:151
+#, fuzzy
+msgid "snow_lang_var2"
+msgstr "nevando"
+
+#: src/ai/gemini_functions.js:152
+msgid "frost"
+msgstr "frio"
+
+#: src/ai/gemini_functions.js:153
+#, fuzzy
+msgid "frost_lang_var1"
+msgstr "congelando"
+
+#: src/ai/gemini_functions.js:154
+#, fuzzy
+msgid "frost_lang_var2"
+msgstr "congelar"
+
+#: src/ai/gemini_functions.js:155
+msgid "fog"
+msgstr "nevoa"
+
+#: src/ai/gemini_functions.js:156
+#, fuzzy
+msgid "fog_lang_var1"
+msgstr "nevoeiro"
+
+#: src/ai/gemini_functions.js:157
+#, fuzzy
+msgid "fog_lang_var2"
+msgstr "brisa"
+
 #: src/ai/gemini_functions.js:158
+#, fuzzy
+msgid "sun"
+msgstr "sol"
+
+#: src/ai/gemini_functions.js:159
+#, fuzzy
+msgid "sun_lang_var1"
+msgstr "ensolarado"
+
+#: src/ai/gemini_functions.js:160
+#, fuzzy
+msgid "sun_lang_var2"
+msgstr "calor"
+
+#: src/ai/gemini_functions.js:161
+msgid "clouds"
+msgstr "nuvens"
+
+#: src/ai/gemini_functions.js:162
+#, fuzzy
+msgid "clouds_lang_var1"
+msgstr "nevoeiro"
+
+#: src/ai/gemini_functions.js:163
+#, fuzzy
+msgid "clouds_lang_var2"
+msgstr "nevoada"
+
+#: src/ai/gemini_functions.js:164
+msgid "sky"
+msgstr "céu"
+
+#: src/ai/gemini_functions.js:165
+msgid "windy"
+msgstr "ventania"
+
+#: src/ai/gemini_functions.js:166
+#, fuzzy
+msgid "windy_lang_var1"
+msgstr "ventos"
+
+#: src/ai/gemini_functions.js:167
+msgid "humid"
+msgstr "humido"
+
+#: src/ai/gemini_functions.js:168
+#, fuzzy
+msgid "humid_lang_var1"
+msgstr "humidos"
+
+#: src/ai/gemini_functions.js:169
+#, fuzzy
+msgid "humid_lang_var2"
+msgstr "molhado"
+
+#: src/ai/gemini_functions.js:170
+msgid "dry"
+msgstr "seco"
+
+#: src/ai/gemini_functions.js:171
+#, fuzzy
+msgid "dry_lang_var1"
+msgstr "palha"
+
+#: src/ai/gemini_functions.js:172
+#, fuzzy
+msgid "dry_lang_var2"
+msgstr "deserto"
+
+#: src/ai/gemini_functions.js:173
+msgid "cold"
+msgstr "frio"
+
+#: src/ai/gemini_functions.js:174
+#, fuzzy
+msgid "cold_lang_var1"
+msgstr "gelado"
+
+#: src/ai/gemini_functions.js:175
+#, fuzzy
+msgid "cold_lang_var2"
+msgstr "gelando"
+
+#: src/ai/gemini_functions.js:176
+msgid "hot"
+msgstr "quente"
+
+#: src/ai/gemini_functions.js:177
+#, fuzzy
+msgid "hot_lang_var1"
+msgstr "calor"
+
+#: src/ai/gemini_functions.js:178
+#, fuzzy
+msgid "hot_lang_var2"
+msgstr "fogo"
+
+#: src/ai/gemini_functions.js:179
+msgid "warm"
+msgstr "esquentando"
+
+#: src/ai/gemini_functions.js:180
+#, fuzzy
+msgid "warm_lang_var1"
+msgstr "aquecendo"
+
+#: src/ai/gemini_functions.js:181
+msgid "mild"
+msgstr "calmo"
+
+#: src/ai/gemini_functions.js:182
+#, fuzzy
+msgid "mild_lang_var1"
+msgstr "amêno"
+
+#: src/ai/gemini_functions.js:183
+#, fuzzy
+msgid "mild_lang_var2"
+msgstr "suave"
+
+#: src/ai/gemini_functions.js:184
+msgid "freezing"
+msgstr "gelando"
+
+#: src/ai/gemini_functions.js:185
+#, fuzzy
+msgid "freezing_lang_var1"
+msgstr "esfriando"
+
+#: src/ai/gemini_functions.js:186
+msgid "blizzard"
+msgstr "nevoeiro"
+
+#: src/ai/gemini_functions.js:191
+#, fuzzy
+msgid "Get weather forecast"
+msgstr "Claro, obtendo informações do tempo..."
+
+#: src/ai/gemini_functions.js:197
+msgid "Location, e.g.: London"
+msgstr "Local, por exemplo: Londres"
+
+#: src/ai/gemini_functions.js:202
+#, fuzzy
+msgid "Response text before get weather, e.g.: "
+msgstr "Texto de resposta antes de executar, por exemplo: "
+
+#: src/ai/gemini_functions.js:203
+msgid "Sure, getting weather forecast..."
+msgstr "Claro, obtendo informações do tempo..."
+
+#: src/ai/gemini_functions.js:240
 #, fuzzy
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr "Eu não posso fazer isso agora. Talvez no futuro."
 
-#: src/ai/gemini_functions.js:192
+#: src/ai/gemini_functions.js:274
 msgid "End of text!"
 msgstr "Fim do texto!"
 
-#: src/ai/gemini_functions.js:196
+#: src/ai/gemini_functions.js:278
 msgid "Failed to get text from clipboard"
 msgstr "Falha ao obter texto da área de transferência"
 
-#: src/ai/gemini_functions.js:212
+#: src/ai/gemini_functions.js:294
 msgid "Please, install"
 msgstr "Por favor, instale"
 
-#: src/ai/gemini_functions.js:216
+#: src/ai/gemini_functions.js:298
 msgid "first"
 msgstr "primeiro"
 
-#: src/ai/gemini_functions.js:233 src/ai/gemini_functions.js:286
+#: src/ai/gemini_functions.js:315 src/ai/gemini_functions.js:368
 msgid "Error opening site"
 msgstr "Falha ao abrir site"
 
-#: src/ai/gemini_functions.js:277
+#: src/ai/gemini_functions.js:359
 msgid "You don't have any browser installed."
 msgstr "Você não tem nenhum navegador instalado."
 
-#: src/ai/gemini_functions.js:279
+#: src/ai/gemini_functions.js:361
 msgid "Please, install a browser and try again."
 msgstr "Por favor, instale um navegador e tente novamente."
 
-#: src/ai/gemini_functions.js:281
+#: src/ai/gemini_functions.js:363
 msgid "Opening App Store..."
 msgstr "Abrindo App Store..."
+
+#: src/ai/gemini_functions.js:381
+#, fuzzy
+msgid "Error getting weather"
+msgstr "Falha ao abrir site"
 
 #: src/ai/gemini.js:35
 msgid "Hi, I am"
@@ -583,222 +864,6 @@ msgstr "Salvar"
 #: src/prefs.js:287
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
-
-#~ msgid "weather"
-#~ msgstr "tempo"
-
-#, fuzzy
-#~ msgid "weather_lang_var1"
-#~ msgstr "clima"
-
-#~ msgid "forecast"
-#~ msgstr "ṕrevisão"
-
-#, fuzzy
-#~ msgid "temperature"
-#~ msgstr "temperatura"
-
-#~ msgid "humidity"
-#~ msgstr "humidade"
-
-#, fuzzy
-#~ msgid "humidity_lang_var1"
-#~ msgstr "humidades"
-
-#~ msgid "wind"
-#~ msgstr "vento"
-
-#, fuzzy
-#~ msgid "wind_lang_var1"
-#~ msgstr "ar"
-
-#, fuzzy
-#~ msgid "wind_lang_var2"
-#~ msgstr "ventania"
-
-#~ msgid "precipitation"
-#~ msgstr "precipitação"
-
-#, fuzzy
-#~ msgid "precipitation_lang_var1"
-#~ msgstr "precipitações"
-
-#, fuzzy
-#~ msgid "precipitation_lang_var2"
-#~ msgstr "precipitando"
-
-#~ msgid "cloud"
-#~ msgstr "nuvem"
-
-#, fuzzy
-#~ msgid "cloud_lang_var1"
-#~ msgstr "nublado"
-
-#~ msgid "climate"
-#~ msgstr "clima"
-
-#~ msgid "rain"
-#~ msgstr "chuva"
-
-#, fuzzy
-#~ msgid "rain_lang_var1"
-#~ msgstr "chover"
-
-#, fuzzy
-#~ msgid "rain_lang_var2"
-#~ msgstr "chovendo"
-
-#~ msgid "snow"
-#~ msgstr "neve"
-
-#, fuzzy
-#~ msgid "snow_lang_var1"
-#~ msgstr "nevar"
-
-#, fuzzy
-#~ msgid "snow_lang_var2"
-#~ msgstr "nevando"
-
-#~ msgid "frost"
-#~ msgstr "frio"
-
-#, fuzzy
-#~ msgid "frost_lang_var1"
-#~ msgstr "congelando"
-
-#, fuzzy
-#~ msgid "frost_lang_var2"
-#~ msgstr "congelar"
-
-#~ msgid "fog"
-#~ msgstr "nevoa"
-
-#, fuzzy
-#~ msgid "fog_lang_var1"
-#~ msgstr "nevoeiro"
-
-#, fuzzy
-#~ msgid "fog_lang_var2"
-#~ msgstr "brisa"
-
-#, fuzzy
-#~ msgid "sun"
-#~ msgstr "sol"
-
-#, fuzzy
-#~ msgid "sun_lang_var1"
-#~ msgstr "ensolarado"
-
-#, fuzzy
-#~ msgid "sun_lang_var2"
-#~ msgstr "calor"
-
-#~ msgid "clouds"
-#~ msgstr "nuvens"
-
-#, fuzzy
-#~ msgid "clouds_lang_var1"
-#~ msgstr "nevoeiro"
-
-#, fuzzy
-#~ msgid "clouds_lang_var2"
-#~ msgstr "nevoada"
-
-#~ msgid "sky"
-#~ msgstr "céu"
-
-#~ msgid "windy"
-#~ msgstr "ventania"
-
-#, fuzzy
-#~ msgid "windy_lang_var1"
-#~ msgstr "ventos"
-
-#~ msgid "humid"
-#~ msgstr "humido"
-
-#, fuzzy
-#~ msgid "humid_lang_var1"
-#~ msgstr "humidos"
-
-#, fuzzy
-#~ msgid "humid_lang_var2"
-#~ msgstr "molhado"
-
-#~ msgid "dry"
-#~ msgstr "seco"
-
-#, fuzzy
-#~ msgid "dry_lang_var1"
-#~ msgstr "palha"
-
-#, fuzzy
-#~ msgid "dry_lang_var2"
-#~ msgstr "deserto"
-
-#~ msgid "cold"
-#~ msgstr "frio"
-
-#, fuzzy
-#~ msgid "cold_lang_var1"
-#~ msgstr "gelado"
-
-#, fuzzy
-#~ msgid "cold_lang_var2"
-#~ msgstr "gelando"
-
-#~ msgid "hot"
-#~ msgstr "quente"
-
-#, fuzzy
-#~ msgid "hot_lang_var1"
-#~ msgstr "calor"
-
-#, fuzzy
-#~ msgid "hot_lang_var2"
-#~ msgstr "fogo"
-
-#~ msgid "warm"
-#~ msgstr "esquentando"
-
-#, fuzzy
-#~ msgid "warm_lang_var1"
-#~ msgstr "aquecendo"
-
-#~ msgid "mild"
-#~ msgstr "calmo"
-
-#, fuzzy
-#~ msgid "mild_lang_var1"
-#~ msgstr "amêno"
-
-#, fuzzy
-#~ msgid "mild_lang_var2"
-#~ msgstr "suave"
-
-#~ msgid "freezing"
-#~ msgstr "gelando"
-
-#, fuzzy
-#~ msgid "freezing_lang_var1"
-#~ msgstr "esfriando"
-
-#~ msgid "blizzard"
-#~ msgstr "nevoeiro"
-
-#~ msgid "Location, e.g.: London"
-#~ msgstr "Local, por exemplo: Londres"
-
-#, fuzzy
-#~ msgid "Response text before get weather, e.g.: "
-#~ msgstr "Texto de resposta antes de executar, por exemplo: "
-
-#~ msgid "Sure, getting weather forecast..."
-#~ msgstr "Claro, obtendo informações do tempo..."
-
-#, fuzzy
-#~ msgid "Error getting weather"
-#~ msgstr "Falha ao abrir site"
 
 #, fuzzy
 #~ msgid "weather_lang_var2"

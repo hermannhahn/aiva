@@ -127,8 +127,89 @@ export class GeminiFunctions {
             },
         };
 
+        this.weatherActivation = [
+            _('weather'),
+            _('weather_lang_var1'),
+            _('forecast'),
+            _('temperature'),
+            _('humidity'),
+            _('humidity_lang_var1'),
+            _('wind'),
+            _('wind_lang_var1'),
+            _('wind_lang_var2'),
+            _('precipitation'),
+            _('precipitation_lang_var1'),
+            _('precipitation_lang_var2'),
+            _('cloud'),
+            _('cloud_lang_var1'),
+            _('climate'),
+            _('rain'),
+            _('rain_lang_var1'),
+            _('rain_lang_var2'),
+            _('snow'),
+            _('snow_lang_var1'),
+            _('snow_lang_var2'),
+            _('frost'),
+            _('frost_lang_var1'),
+            _('frost_lang_var2'),
+            _('fog'),
+            _('fog_lang_var1'),
+            _('fog_lang_var2'),
+            _('sun'),
+            _('sun_lang_var1'),
+            _('sun_lang_var2'),
+            _('clouds'),
+            _('clouds_lang_var1'),
+            _('clouds_lang_var2'),
+            _('sky'),
+            _('windy'),
+            _('windy_lang_var1'),
+            _('humid'),
+            _('humid_lang_var1'),
+            _('humid_lang_var2'),
+            _('dry'),
+            _('dry_lang_var1'),
+            _('dry_lang_var2'),
+            _('cold'),
+            _('cold_lang_var1'),
+            _('cold_lang_var2'),
+            _('hot'),
+            _('hot_lang_var1'),
+            _('hot_lang_var2'),
+            _('warm'),
+            _('warm_lang_var1'),
+            _('mild'),
+            _('mild_lang_var1'),
+            _('mild_lang_var2'),
+            _('freezing'),
+            _('freezing_lang_var1'),
+            _('blizzard'),
+        ];
+
+        this._weatherDeclaration = {
+            name: 'get_weather',
+            description: _('Get weather forecast'),
+            parameters: {
+                type: 'object',
+                properties: {
+                    location: {
+                        type: 'string',
+                        description: _('Location, e.g.: London'),
+                    },
+                    response: {
+                        type: 'string',
+                        description:
+                            _('Response text before get weather, e.g.: ') +
+                            _('Sure, getting weather forecast...'),
+                    },
+                },
+                required: ['response'],
+            },
+        };
+
         this.activationWords = [
             ...this.toolsActivation,
+            ...this.weatherActivation,
             ...this.readClipboardActivation,
             ...this.browseWebActivation,
             ...this.cmdActivation,
@@ -153,6 +234,7 @@ export class GeminiFunctions {
             case 'browse_web':
                 this._browseWeb(url, response);
                 break;
+            case 'get_weather':
             default:
                 this.app.chat.editResponse(
                     _("Sorry, I can't do that right now. Maybe in the future."),
@@ -284,6 +366,19 @@ export class GeminiFunctions {
         } catch (error) {
             this.app.logError('Error opening site:', error);
             this.app.chat.editResponse(_('Error opening site'));
+        }
+    }
+
+    _getWeather(location, response) {
+        try {
+            if (response) {
+                this.app.chat.editResponse(response);
+            }
+            this.app.log('Getting weather from ' + location);
+            this.app.utils.getCurrentLocalWeather();
+        } catch (error) {
+            this.app.logError('Error getting weather:', error);
+            this.app.chat.editResponse(_('Error getting weather'));
         }
     }
 }
