@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-04 22:46-0300\n"
+"POT-Creation-Date: 2024-12-04 23:51-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language it-IT\n"
@@ -18,7 +18,7 @@ msgstr ""
 
 #: src/ai/azure.js:68 src/ai/azure.js:81 src/ai/azure.js:123
 #: src/ai/azure.js:132 src/ai/gemini.js:114 src/ai/gemini.js:145
-#: src/utils/utils.js:213
+#: src/ai/gemini.js:221 src/ai/gemini.js:270 src/utils/utils.js:213
 msgid "Sorry, I'm having connection trouble. Please try again."
 msgstr ""
 
@@ -310,28 +310,28 @@ msgstr ""
 msgid "How can I help you today?"
 msgstr ""
 
-#: src/ai/gemini.js:130
+#: src/ai/gemini.js:130 src/ai/gemini.js:237
 msgid "Sorry, I can't answer this question now."
 msgstr ""
 
-#: src/ai/gemini.js:169 src/ai/gemini.js:177 src/ai/gemini.js:185
-#: src/ai/gemini.js:196
+#: src/ai/gemini.js:294 src/ai/gemini.js:302 src/ai/gemini.js:310
+#: src/ai/gemini.js:321
 msgid "Sorry, I can't answer this question."
 msgstr ""
 
-#: src/ai/gemini.js:172
+#: src/ai/gemini.js:297
 msgid "Possible sexually explicit content in the question or response."
 msgstr ""
 
-#: src/ai/gemini.js:180
+#: src/ai/gemini.js:305
 msgid "Possible hate speech in the question or response."
 msgstr ""
 
-#: src/ai/gemini.js:188
+#: src/ai/gemini.js:313
 msgid "Possible harassment in the question or response."
 msgstr ""
 
-#: src/ai/gemini.js:199
+#: src/ai/gemini.js:324
 msgid "Possible dangerous content in the question or response."
 msgstr ""
 

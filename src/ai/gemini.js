@@ -148,6 +148,131 @@ export class GoogleGemini {
     }
 
     /**
+     * @description send question to API and stream response into the chat
+     * @param {string} question
+     * @param {boolean} [destroyLoop=false]
+     */
+    stream(question, destroyLoop = false) {
+        // Destroy loop if it exists
+        if (destroyLoop) {
+            this.destroyLoop();
+        }
+
+        try {
+            this.app.log('Getting response...');
+
+            // Create http session
+            const models = [
+                'gemini-1.0-pro',
+                'gemini-1.5-flash-002',
+                'gemini-1.5-pro',
+            ];
+            const model = models[0];
+
+            let _httpSession = new Soup.Session();
+            let url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${this.GEMINI_API_KEY}`;
+
+            // Send async request
+            let body = this._buildBody(question);
+            this.app.log('Body Question: ' + body);
+            let message = Soup.Message.new('POST', url);
+            let bytes = GLib.Bytes.new(body);
+            let accumulatedData = '';
+            message.set_request_body_from_bytes('application/json', bytes);
+            _httpSession.send_and_read_async(
+                message,
+                GLib.PRIORITY_DEFAULT,
+                null,
+                (_httpSession, result) => {
+                    let bytes = _httpSession.send_and_read_finish(result);
+                    this.app.log('Response received.');
+                    let decoder = new TextDecoder('utf-8');
+                    // Get response
+                    let response = decoder.decode(bytes.get_data());
+                    let res = JSON.parse(response);
+                    if (res.error?.code !== 401 && res.error !== undefined) {
+                        this.app.logError(res.error.message);
+                        this.app.chat.editResponse(response);
+                        return;
+                    }
+
+                    // DEBUG
+                    let jsonResponse = {};
+                    jsonResponse = JSON.stringify(res);
+                    this.app.log('Response: ' + jsonResponse);
+
+                    const parts = res.candidates[0]?.content?.parts;
+
+                    // tools callback
+                    for (const part of parts) {
+                        if (part.functionCall !== undefined) {
+                            const f = part.functionCall;
+                            this.app.functions.callback(f.name, f.args);
+                            return;
+                        }
+                    }
+
+                    // ai response
+                    let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
+
+                    if (aiResponse === undefined) {
+                        this.app.chat.editResponse(
+                            _(
+                                "Sorry, I'm having connection trouble. Please try again.",
+                            ),
+                        );
+                        return;
+                    }
+
+                    // safety warning
+                    let safetyReason = this.safetyReason(question, res);
+
+                    if (safetyReason) {
+                        this.app.chat.editResponse(safetyReason);
+                        return;
+                    }
+
+                    if (aiResponse === undefined) {
+                        this.app.chat.editResponse(
+                            _("Sorry, I can't answer this question now."),
+                        );
+                        return;
+                    }
+
+                    this.app.chat.editResponse(aiResponse);
+
+                    // add to history
+                    this.app.database.addToHistory(question, aiResponse);
+                },
+                (session, stream, bytesRead) => {
+                    let decoder = new TextDecoder('utf-8');
+                    let dataChunk = decoder.decode(stream.peek(bytesRead));
+                    accumulatedData += dataChunk;
+
+                    // Try parsing for complete sentences (replace with a proper parsing library)
+                    let potentialResponses = accumulatedData.split(/\.|\?|!/);
+                    for (let response of potentialResponses) {
+                        if (response.trim()) {
+                            // Update chat with the partial response
+                            this.app.chat.editResponse(response.trim());
+                            accumulatedData = accumulatedData.replace(
+                                response,
+                                '',
+                            );
+                        }
+                    }
+                },
+            );
+        } catch (error) {
+            this.app.log('Error getting response.');
+            this.app.logError(error);
+            this.app.chat.editResponse(
+                _("Sorry, I'm having connection trouble. Please try again."),
+            );
+        }
+    }
+
+    /**
      * @description check safety result
      * @param {string} question user question
      * @param {object} res gemini response object
