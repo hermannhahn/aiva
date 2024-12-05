@@ -62,13 +62,13 @@ export class GeminiFunctions {
                         type: 'string',
                         description:
                             _('Command line to run, e.g.: ') +
-                            'firefox https://google.com',
+                            'gnome-software',
                     },
                     response: {
                         type: 'string',
                         description:
                             _('Response text before run, e.g.: ') +
-                            _('Sure, opening google...'),
+                            _('Sure, opening GNOME Software...'),
                     },
                 },
                 required: ['commandLine', 'response'],
@@ -90,20 +90,19 @@ export class GeminiFunctions {
         this._browseWebDeclaration = {
             name: 'browse_web',
             description:
-                _('To use when you want to browse the web') +
-                ' [OS: Ubuntu 24.04.1 LTS]',
+                _('Open url in the browser.');
             parameters: {
                 type: 'object',
                 properties: {
                     url: {
                         type: 'string',
                         description:
-                            _('URL to browse, e.g.: ') + 'https://google.com',
+                            _('URL to open, e.g.: ') + 'https://google.com',
                     },
                     response: {
                         type: 'string',
                         description:
-                            _('Response text before run, e.g.: ') +
+                            _('Response text before open, e.g.: ') +
                             _('Sure, opening...'),
                     },
                 },

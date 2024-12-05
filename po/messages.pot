@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-04 22:18-0300\n"
+"POT-Creation-Date: 2024-12-04 22:26-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -49,7 +49,6 @@ msgid "Clipboard Text-to-Speech"
 msgstr ""
 
 #: src/ai/gemini_functions.js:27 src/ai/gemini_functions.js:70
-#: src/ai/gemini_functions.js:106
 msgid "Response text before run, e.g.: "
 msgstr ""
 
@@ -126,7 +125,7 @@ msgid "Command line to run, e.g.: "
 msgstr ""
 
 #: src/ai/gemini_functions.js:71
-msgid "Sure, opening google..."
+msgid "Sure, opening GNOME Software..."
 msgstr ""
 
 #: src/ai/gemini_functions.js:82
@@ -154,50 +153,54 @@ msgid "find_lang_var2"
 msgstr ""
 
 #: src/ai/gemini_functions.js:93
-msgid "To use when you want to browse the web"
+msgid "Open url in the browser."
 msgstr ""
 
-#: src/ai/gemini_functions.js:101
-msgid "URL to browse, e.g.: "
+#: src/ai/gemini_functions.js:100
+msgid "URL to open, e.g.: "
 msgstr ""
 
-#: src/ai/gemini_functions.js:107
+#: src/ai/gemini_functions.js:105
+msgid "Response text before open, e.g.: "
+msgstr ""
+
+#: src/ai/gemini_functions.js:106
 msgid "Sure, opening..."
 msgstr ""
 
-#: src/ai/gemini_functions.js:141
+#: src/ai/gemini_functions.js:140
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr ""
 
-#: src/ai/gemini_functions.js:174
+#: src/ai/gemini_functions.js:173
 msgid "End of text!"
 msgstr ""
 
-#: src/ai/gemini_functions.js:178
+#: src/ai/gemini_functions.js:177
 msgid "Failed to get text from clipboard"
 msgstr ""
 
-#: src/ai/gemini_functions.js:194
+#: src/ai/gemini_functions.js:193
 msgid "Please, install"
 msgstr ""
 
-#: src/ai/gemini_functions.js:198
+#: src/ai/gemini_functions.js:197
 msgid "first"
 msgstr ""
 
-#: src/ai/gemini_functions.js:215 src/ai/gemini_functions.js:268
+#: src/ai/gemini_functions.js:214 src/ai/gemini_functions.js:267
 msgid "Error opening site"
 msgstr ""
 
-#: src/ai/gemini_functions.js:259
+#: src/ai/gemini_functions.js:258
 msgid "You don't have any browser installed."
 msgstr ""
 
-#: src/ai/gemini_functions.js:261
+#: src/ai/gemini_functions.js:260
 msgid "Please, install a browser and try again."
 msgstr ""
 
-#: src/ai/gemini_functions.js:263
+#: src/ai/gemini_functions.js:262
 msgid "Opening App Store..."
 msgstr ""
 
