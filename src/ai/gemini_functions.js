@@ -92,6 +92,23 @@ export class GeminiFunctions {
             description:
                 _('To use when you want to browse the web') +
                 ' [OS: Ubuntu 24.04.1 LTS]',
+            parameters: {
+                type: 'object',
+                properties: {
+                    url: {
+                        type: 'string',
+                        description:
+                            _('URL to browse, e.g.: ') + 'https://google.com',
+                    },
+                    response: {
+                        type: 'string',
+                        description:
+                            _('Response text before run, e.g.: ') +
+                            _('Sure, opening...'),
+                    },
+                },
+                required: ['url'],
+            },
         };
 
         this.activationWords = [
@@ -186,6 +203,59 @@ export class GeminiFunctions {
             }
 
             this.app.chat.editResponse(response);
+        } catch (error) {
+            this.app.logError('Error opening site:', error);
+            this.app.chat.editResponse(_('Error opening site'));
+        }
+    }
+
+    _browseWeb(url, response) {
+        try {
+            const msedgeIsInstalled = this.app.utils.isAppInstalled('msedge');
+            if (msedgeIsInstalled) {
+                if (response) {
+                    this.app.chat.editResponse(response);
+                }
+                this.app.utils.executeCommand(`msedge ${url}`);
+                return;
+            }
+
+            const chromeIsInstalled =
+                this.app.utils.isAppInstalled('google-chrome');
+            if (chromeIsInstalled) {
+                if (response) {
+                    this.app.chat.editResponse(response);
+                }
+                this.app.utils.executeCommand(`google-chrome ${url}`);
+                return;
+            }
+
+            const operaIsInstalled = this.app.utils.isAppInstalled('opera');
+            if (operaIsInstalled) {
+                if (response) {
+                    this.app.chat.editResponse(response);
+                }
+                this.app.utils.executeCommand(`opera ${url}`);
+                return;
+            }
+
+            const firefoxIsInstalled = this.app.utils.isAppInstalled('firefox');
+            if (firefoxIsInstalled) {
+                if (response) {
+                    this.app.chat.editResponse(response);
+                }
+                this.app.utils.executeCommand(`firefox ${url}`);
+                return;
+            }
+
+            this.app.chat.editResponse(
+                _("You don't have any browser installed.") +
+                    ' ' +
+                    _('Please, install a browser and try again.') +
+                    ' ' +
+                    _('Opening App Store...'),
+            );
+            this.app.utils.executeCommand('gnome-software');
         } catch (error) {
             this.app.logError('Error opening site:', error);
             this.app.chat.editResponse(_('Error opening site'));

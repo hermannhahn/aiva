@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-04 21:36-0300\n"
+"POT-Creation-Date: 2024-12-04 22:03-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language es-ES\n"
@@ -49,6 +49,7 @@ msgid "Clipboard Text-to-Speech"
 msgstr ""
 
 #: src/ai/gemini_functions.js:27 src/ai/gemini_functions.js:70
+#: src/ai/gemini_functions.js:106
 msgid "Response text before run, e.g.: "
 msgstr ""
 
@@ -158,31 +159,51 @@ msgstr ""
 msgid "To use when you want to browse the web"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini_functions.js:120
+#: src/ai/gemini_functions.js:101
+msgid "URL to browse, e.g.: "
+msgstr ""
+
+#: src/ai/gemini_functions.js:107
+msgid "Sure, opening..."
+msgstr ""
+
+#: src/ai/gemini_functions.js:137
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr ""
 
-#: src/ai/gemini_functions.js:150
+#: src/ai/gemini_functions.js:167
 msgid "End of text!"
 msgstr ""
 
-#: src/ai/gemini_functions.js:154
+#: src/ai/gemini_functions.js:171
 #, fuzzy
 msgid "Failed to get text from clipboard"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini_functions.js:170
+#: src/ai/gemini_functions.js:187
 msgid "Please, install"
 msgstr ""
 
-#: src/ai/gemini_functions.js:174
+#: src/ai/gemini_functions.js:191
 msgid "first"
 msgstr ""
 
-#: src/ai/gemini_functions.js:191
+#: src/ai/gemini_functions.js:208 src/ai/gemini_functions.js:261
 #, fuzzy
 msgid "Error opening site"
 msgstr "Código copiado al portapapeles"
+
+#: src/ai/gemini_functions.js:252
+msgid "You don't have any browser installed."
+msgstr ""
+
+#: src/ai/gemini_functions.js:254
+msgid "Please, install a browser and try again."
+msgstr ""
+
+#: src/ai/gemini_functions.js:256
+msgid "Opening App Store..."
+msgstr ""
 
 #: src/ai/gemini.js:35
 msgid "Hi, I am"
