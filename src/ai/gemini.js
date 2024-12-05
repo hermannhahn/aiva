@@ -213,6 +213,8 @@ export class GoogleGemini {
 
                     // ai response
                     let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
+                    this.app.log('AI RESPONSE: ' + aiResponse);
+                    this.app.log('RES ONLY: ' + JSON.stringify(res));
 
                     if (aiResponse === undefined) {
                         this.app.chat.editResponse(
@@ -224,12 +226,12 @@ export class GoogleGemini {
                     }
 
                     // safety warning
-                    let safetyReason = this.safetyReason(res);
+                    // let safetyReason = this.safetyReason(res);
 
-                    if (safetyReason) {
-                        this.app.chat.editResponse(safetyReason);
-                        return;
-                    }
+                    // if (safetyReason) {
+                    //     this.app.chat.editResponse(safetyReason);
+                    //     return;
+                    // }
 
                     if (aiResponse === undefined) {
                         this.app.chat.editResponse(
@@ -260,7 +262,7 @@ export class GoogleGemini {
      */
     safetyReason(res) {
         let aiResponse = '';
-        this.app.log('RESSSSSSSSSS' + JSON.stringify(res));
+        this.app.log('RESSSSSSSSSS: ' + JSON.stringify(res));
         // SAFETY warning
         if (res && res.candidates[0]?.finishReason === 'SAFETY') {
             // get safety reason
