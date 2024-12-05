@@ -157,11 +157,7 @@ export class GeminiFunctions {
                 functionDeclarations.push(this._cmdDeclaration);
             }
         }
-        return [
-            {
-                functionDeclarations,
-            },
-        ];
+        return [{functionDeclarations}];
     }
 
     _readClipboardText(response) {
