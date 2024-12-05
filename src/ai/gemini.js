@@ -183,7 +183,7 @@ export class GoogleGemini {
                 message,
                 GLib.PRIORITY_DEFAULT,
                 null,
-                (session, stream, bytesRead) => {
+                (_httpSession, stream, bytesRead) => {
                     let decoder = new TextDecoder('utf-8');
                     let dataChunk = decoder.decode(stream.peek(bytesRead));
                     accumulatedData += dataChunk;
@@ -193,7 +193,7 @@ export class GoogleGemini {
                     for (let response of potentialResponses) {
                         if (response.trim()) {
                             // Update chat with the partial response
-                            this.app.chat.editResponse(response.trim());
+                            this.app.chat.add(response.trim(), false);
                             accumulatedData = accumulatedData.replace(
                                 response,
                                 '',
@@ -201,67 +201,67 @@ export class GoogleGemini {
                         }
                     }
                 },
-                // (_httpSession, result) => {
-                //     let bytes = _httpSession.send_and_read_finish(result);
-                //     this.app.log('Response received.');
-                //     let decoder = new TextDecoder('utf-8');
-                //     // Get response
-                //     let response = decoder.decode(bytes.get_data());
-                //     let res = JSON.parse(response);
-                //     if (res.error?.code !== 401 && res.error !== undefined) {
-                //         this.app.logError(res.error.message);
-                //         this.app.chat.editResponse(response);
-                //         return;
-                //     }
+                (_httpSession, result) => {
+                    let bytes = _httpSession.send_and_read_finish(result);
+                    this.app.log('Response received.');
+                    let decoder = new TextDecoder('utf-8');
+                    // Get response
+                    let response = decoder.decode(bytes.get_data());
+                    let res = JSON.parse(response);
+                    if (res.error?.code !== 401 && res.error !== undefined) {
+                        this.app.logError(res.error.message);
+                        this.app.chat.editResponse(response);
+                        return;
+                    }
 
-                //     // DEBUG
-                //     let jsonResponse = {};
-                //     jsonResponse = JSON.stringify(res);
-                //     this.app.log('Response: ' + jsonResponse);
+                    // DEBUG
+                    let jsonResponse = {};
+                    jsonResponse = JSON.stringify(res);
+                    this.app.log('Response: ' + jsonResponse);
 
-                //     const parts = res.candidates[0]?.content?.parts;
+                    const parts = res.candidates[0]?.content?.parts;
 
-                //     // tools callback
-                //     for (const part of parts) {
-                //         if (part.functionCall !== undefined) {
-                //             const f = part.functionCall;
-                //             this.app.functions.callback(f.name, f.args);
-                //             return;
-                //         }
-                //     }
+                    // tools callback
+                    for (const part of parts) {
+                        if (part.functionCall !== undefined) {
+                            const f = part.functionCall;
+                            this.app.functions.callback(f.name, f.args);
+                            return;
+                        }
+                    }
 
-                //     // ai response
-                //     let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
+                    // ai response
+                    let aiResponse = res.candidates[0]?.content?.parts[0]?.text;
 
-                //     if (aiResponse === undefined) {
-                //         this.app.chat.editResponse(
-                //             _(
-                //                 "Sorry, I'm having connection trouble. Please try again.",
-                //             ),
-                //         );
-                //         return;
-                //     }
+                    if (aiResponse === undefined) {
+                        this.app.chat.editResponse(
+                            _(
+                                "Sorry, I'm having connection trouble. Please try again.",
+                            ),
+                        );
+                        return;
+                    }
 
-                //     // safety warning
-                //     let safetyReason = this.safetyReason(question, res);
+                    // safety warning
+                    let safetyReason = this.safetyReason(question, res);
 
-                //     if (safetyReason) {
-                //         this.app.chat.editResponse(safetyReason);
-                //         return;
-                //     }
+                    if (safetyReason) {
+                        this.app.chat.editResponse(safetyReason);
+                        return;
+                    }
 
-                //     if (aiResponse === undefined) {
-                //         this.app.chat.editResponse(
-                //             _("Sorry, I can't answer this question now."),
-                //         );
-                //         return;
-                //     }
+                    if (aiResponse === undefined) {
+                        this.app.chat.editResponse(
+                            _("Sorry, I can't answer this question now."),
+                        );
+                        return;
+                    }
 
-                //     this.app.chat.editResponse(aiResponse);
+                    this.app.chat.editResponse(aiResponse);
 
-                //     // add to history
-                //     this.app.database.addToHistory(question, aiResponse);
-                // },
+                    // add to history
+                    this.app.database.addToHistory(question, aiResponse);
+                },
             );
         } catch (error) {
             this.app.log('Error getting response.');
