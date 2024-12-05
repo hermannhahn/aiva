@@ -410,6 +410,23 @@ export class Utils {
         );
     }
 
+    getCurrentLocalWeather(url = 'https://www.cptec.inpe.br/') {
+        try {
+            let response = this.curl(url);
+            // Use regex para extrair o conteúdo com id="cidade"
+            let match = response.match(
+                /<[^>]*id=["']cidade["'][^>]*>(.*?)<\/[^>]+>/,
+            );
+            if (match && match[1]) {
+                this.app.log(match[1].trim());
+            } else {
+                this.app.log('Elemento com id="cidade" não encontrado');
+            }
+        } catch (error) {
+            throw new Error(`Failed to complete request: ${error.message}`);
+        }
+    }
+
     /**
      * @description load json file
      * @param {string} filename
