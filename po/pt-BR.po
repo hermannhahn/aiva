@@ -118,14 +118,12 @@ msgid "launch_lang_var2"
 msgstr "lança"
 
 #: src/ai/gemini_functions.js:56
-#, fuzzy
 msgid "Run non-sudo command line in terminal"
-msgstr "Linha de comando non-sudo para executar, por exemplo: "
+msgstr "Rodar comandos no terminal do usuário, por exemplo: "
 
 #: src/ai/gemini_functions.js:64
-#, fuzzy
 msgid "Command line to run, e.g.: "
-msgstr "Linha de comando non-sudo para executar, por exemplo: "
+msgstr "Linha de comando não-sudo, por exemplo: "
 
 #: src/ai/gemini_functions.js:71
 msgid "Sure, opening google..."
