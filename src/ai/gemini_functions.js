@@ -1,6 +1,4 @@
 import St from 'gi://St';
-import Soup from 'gi://Soup';
-import GLib from 'gi://GLib';
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 /**
@@ -404,23 +402,12 @@ export class GeminiFunctions {
             if (response) {
                 this.app.chat.editResponse(response);
             }
-            let url = '';
-            let _httpSession = new Soup.Session();
-            let message = Soup.Message.new('GET', url);
-            _httpSession.send_and_read_async(
-                message,
-                GLib.PRIORITY_DEFAULT,
-                null,
-                (_httpSession, result) => {
-                    let bytes = _httpSession.send_and_read_finish(result);
-                    let decoder = new TextDecoder('utf-8');
-                    response = decoder.decode(bytes.get_data());
-                    this.app.log(JSON.stringify(response));
-                    if (response) {
-                        this.app.chat.editResponse(location);
-                    }
-                },
-            );
+            const weather = this.app.utils.getCurrentLocalWeather();
+            this.app.log('Weather:' + weather);
+            this.app.log('Location:' + location);
+            if (weather) {
+                this.app.chat.editResponse(weather);
+            }
         } catch (error) {
             this.app.logError('Error getting weather:', error);
             this.app.chat.editResponse(_('Error getting weather'));
