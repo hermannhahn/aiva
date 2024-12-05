@@ -150,24 +150,57 @@ export class GeminiFunctions {
             _('cloud'),
             _('cloud_lang_var1'),
             _('cloud_lang_var2'),
-            _('weather'),
             _('climate'),
-            _('humidity'),
-            _('wind'),
-            _('temperature'),
+            _('climate_lang_var1'),
+            _('climate_lang_var2'),
             _('rain'),
+            _('rain_lang_var1'),
+            _('rain_lang_var2'),
             _('snow'),
+            _('snow_lang_var1'),
+            _('snow_lang_var2'),
             _('frost'),
+            _('frost_lang_var1'),
+            _('frost_lang_var2'),
             _('fog'),
+            _('fog_lang_var1'),
+            _('fog_lang_var2'),
             _('sun'),
+            _('sun_lang_var1'),
+            _('sun_lang_var2'),
             _('clouds'),
+            _('clouds_lang_var1'),
+            _('clouds_lang_var2'),
             _('sky'),
+            _('sky_lang_var1'),
+            _('sky_lang_var2'),
             _('windy'),
+            _('windy_lang_var1'),
+            _('windy_lang_var2'),
             _('humid'),
+            _('humid_lang_var1'),
+            _('humid_lang_var2'),
             _('dry'),
+            _('dry_lang_var1'),
+            _('dry_lang_var2'),
             _('cold'),
+            _('cold_lang_var1'),
+            _('cold_lang_var2'),
+            _('hot'),
+            _('hot_lang_var1'),
+            _('hot_lang_var2'),
             _('warm'),
+            _('warm_lang_var1'),
+            _('warm_lang_var2'),
             _('mild'),
+            _('mild_lang_var1'),
+            _('mild_lang_var2'),
+            _('freezing'),
+            _('freezing_lang_var1'),
+            _('freezing_lang_var2'),
+            _('blizzard'),
+            _('blizzard_lang_var1'),
+            _('blizzard_lang_var2'),
         ];
 
         this.activationWords = [
@@ -175,6 +208,7 @@ export class GeminiFunctions {
             ...this.readClipboardActivation,
             ...this.browseWebActivation,
             ...this.cmdActivation,
+            ...this.weatherActivation,
         ];
 
         console.log('Functions loaded.');
@@ -204,9 +238,10 @@ export class GeminiFunctions {
         }
     }
 
-    declarations(words) {
+    declarations(text) {
         let functionDeclarations = [];
-        for (const word of words) {
+        const firstWords = text.toLowerCase().split(' ').slice(0, 5);
+        for (const word of firstWords) {
             if (this.readClipboardActivation.includes(word)) {
                 functionDeclarations.push(this._readClipboardDeclaration);
             }
@@ -215,6 +250,14 @@ export class GeminiFunctions {
             }
             if (this.cmdActivation.includes(word)) {
                 functionDeclarations.push(this._cmdDeclaration);
+            }
+        }
+        if (functionDeclarations.length === 0) {
+            const allText = text.toLowerCase().split(' ');
+            for (const word of allText) {
+                if (this.weatherActivation.includes(word)) {
+                    functionDeclarations.push(this._weatherDeclaration);
+                }
             }
         }
         return [{functionDeclarations}];

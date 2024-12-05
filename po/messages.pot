@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-05 00:33-0300\n"
+"POT-Creation-Date: 2024-12-05 00:38-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -240,7 +240,7 @@ msgstr ""
 msgid "Sure, opening..."
 msgstr ""
 
-#: src/ai/gemini_functions.js:132 src/ai/gemini_functions.js:153
+#: src/ai/gemini_functions.js:132
 msgid "weather"
 msgstr ""
 
@@ -264,7 +264,7 @@ msgstr ""
 msgid "forecast_lang_var2"
 msgstr ""
 
-#: src/ai/gemini_functions.js:138 src/ai/gemini_functions.js:157
+#: src/ai/gemini_functions.js:138
 msgid "temperature"
 msgstr ""
 
@@ -276,7 +276,7 @@ msgstr ""
 msgid "temperature_lang_var2"
 msgstr ""
 
-#: src/ai/gemini_functions.js:141 src/ai/gemini_functions.js:155
+#: src/ai/gemini_functions.js:141
 msgid "humidity"
 msgstr ""
 
@@ -288,7 +288,7 @@ msgstr ""
 msgid "humidity_lang_var2"
 msgstr ""
 
-#: src/ai/gemini_functions.js:144 src/ai/gemini_functions.js:156
+#: src/ai/gemini_functions.js:144
 msgid "wind"
 msgstr ""
 
@@ -324,12 +324,28 @@ msgstr ""
 msgid "cloud_lang_var2"
 msgstr ""
 
-#: src/ai/gemini_functions.js:154
+#: src/ai/gemini_functions.js:153
 msgid "climate"
 msgstr ""
 
-#: src/ai/gemini_functions.js:158
+#: src/ai/gemini_functions.js:154
+msgid "climate_lang_var1"
+msgstr ""
+
+#: src/ai/gemini_functions.js:155
+msgid "climate_lang_var2"
+msgstr ""
+
+#: src/ai/gemini_functions.js:156
 msgid "rain"
+msgstr ""
+
+#: src/ai/gemini_functions.js:157
+msgid "rain_lang_var1"
+msgstr ""
+
+#: src/ai/gemini_functions.js:158
+msgid "rain_lang_var2"
 msgstr ""
 
 #: src/ai/gemini_functions.js:159
@@ -337,82 +353,214 @@ msgid "snow"
 msgstr ""
 
 #: src/ai/gemini_functions.js:160
-msgid "frost"
+msgid "snow_lang_var1"
 msgstr ""
 
 #: src/ai/gemini_functions.js:161
-msgid "fog"
+msgid "snow_lang_var2"
 msgstr ""
 
 #: src/ai/gemini_functions.js:162
-msgid "sun"
+msgid "frost"
 msgstr ""
 
 #: src/ai/gemini_functions.js:163
-msgid "clouds"
+msgid "frost_lang_var1"
 msgstr ""
 
 #: src/ai/gemini_functions.js:164
-msgid "sky"
+msgid "frost_lang_var2"
 msgstr ""
 
 #: src/ai/gemini_functions.js:165
-msgid "windy"
+msgid "fog"
 msgstr ""
 
 #: src/ai/gemini_functions.js:166
-msgid "humid"
+msgid "fog_lang_var1"
 msgstr ""
 
 #: src/ai/gemini_functions.js:167
-msgid "dry"
+msgid "fog_lang_var2"
 msgstr ""
 
 #: src/ai/gemini_functions.js:168
-msgid "cold"
+msgid "sun"
 msgstr ""
 
 #: src/ai/gemini_functions.js:169
-msgid "warm"
+msgid "sun_lang_var1"
 msgstr ""
 
 #: src/ai/gemini_functions.js:170
+msgid "sun_lang_var2"
+msgstr ""
+
+#: src/ai/gemini_functions.js:171
+msgid "clouds"
+msgstr ""
+
+#: src/ai/gemini_functions.js:172
+msgid "clouds_lang_var1"
+msgstr ""
+
+#: src/ai/gemini_functions.js:173
+msgid "clouds_lang_var2"
+msgstr ""
+
+#: src/ai/gemini_functions.js:174
+msgid "sky"
+msgstr ""
+
+#: src/ai/gemini_functions.js:175
+msgid "sky_lang_var1"
+msgstr ""
+
+#: src/ai/gemini_functions.js:176
+msgid "sky_lang_var2"
+msgstr ""
+
+#: src/ai/gemini_functions.js:177
+msgid "windy"
+msgstr ""
+
+#: src/ai/gemini_functions.js:178
+msgid "windy_lang_var1"
+msgstr ""
+
+#: src/ai/gemini_functions.js:179
+msgid "windy_lang_var2"
+msgstr ""
+
+#: src/ai/gemini_functions.js:180
+msgid "humid"
+msgstr ""
+
+#: src/ai/gemini_functions.js:181
+msgid "humid_lang_var1"
+msgstr ""
+
+#: src/ai/gemini_functions.js:182
+msgid "humid_lang_var2"
+msgstr ""
+
+#: src/ai/gemini_functions.js:183
+msgid "dry"
+msgstr ""
+
+#: src/ai/gemini_functions.js:184
+msgid "dry_lang_var1"
+msgstr ""
+
+#: src/ai/gemini_functions.js:185
+msgid "dry_lang_var2"
+msgstr ""
+
+#: src/ai/gemini_functions.js:186
+msgid "cold"
+msgstr ""
+
+#: src/ai/gemini_functions.js:187
+msgid "cold_lang_var1"
+msgstr ""
+
+#: src/ai/gemini_functions.js:188
+msgid "cold_lang_var2"
+msgstr ""
+
+#: src/ai/gemini_functions.js:189
+msgid "hot"
+msgstr ""
+
+#: src/ai/gemini_functions.js:190
+msgid "hot_lang_var1"
+msgstr ""
+
+#: src/ai/gemini_functions.js:191
+msgid "hot_lang_var2"
+msgstr ""
+
+#: src/ai/gemini_functions.js:192
+msgid "warm"
+msgstr ""
+
+#: src/ai/gemini_functions.js:193
+msgid "warm_lang_var1"
+msgstr ""
+
+#: src/ai/gemini_functions.js:194
+msgid "warm_lang_var2"
+msgstr ""
+
+#: src/ai/gemini_functions.js:195
 msgid "mild"
 msgstr ""
 
+#: src/ai/gemini_functions.js:196
+msgid "mild_lang_var1"
+msgstr ""
+
+#: src/ai/gemini_functions.js:197
+msgid "mild_lang_var2"
+msgstr ""
+
+#: src/ai/gemini_functions.js:198
+msgid "freezing"
+msgstr ""
+
+#: src/ai/gemini_functions.js:199
+msgid "freezing_lang_var1"
+msgstr ""
+
+#: src/ai/gemini_functions.js:200
+msgid "freezing_lang_var2"
+msgstr ""
+
 #: src/ai/gemini_functions.js:201
+msgid "blizzard"
+msgstr ""
+
+#: src/ai/gemini_functions.js:202
+msgid "blizzard_lang_var1"
+msgstr ""
+
+#: src/ai/gemini_functions.js:203
+msgid "blizzard_lang_var2"
+msgstr ""
+
+#: src/ai/gemini_functions.js:235
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr ""
 
-#: src/ai/gemini_functions.js:234
+#: src/ai/gemini_functions.js:277
 msgid "End of text!"
 msgstr ""
 
-#: src/ai/gemini_functions.js:238
+#: src/ai/gemini_functions.js:281
 msgid "Failed to get text from clipboard"
 msgstr ""
 
-#: src/ai/gemini_functions.js:254
+#: src/ai/gemini_functions.js:297
 msgid "Please, install"
 msgstr ""
 
-#: src/ai/gemini_functions.js:258
+#: src/ai/gemini_functions.js:301
 msgid "first"
 msgstr ""
 
-#: src/ai/gemini_functions.js:275 src/ai/gemini_functions.js:328
+#: src/ai/gemini_functions.js:318 src/ai/gemini_functions.js:371
 msgid "Error opening site"
 msgstr ""
 
-#: src/ai/gemini_functions.js:319
+#: src/ai/gemini_functions.js:362
 msgid "You don't have any browser installed."
 msgstr ""
 
-#: src/ai/gemini_functions.js:321
+#: src/ai/gemini_functions.js:364
 msgid "Please, install a browser and try again."
 msgstr ""
 
-#: src/ai/gemini_functions.js:323
+#: src/ai/gemini_functions.js:366
 msgid "Opening App Store..."
 msgstr ""
 
