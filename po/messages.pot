@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-05 12:30-0300\n"
+"POT-Creation-Date: 2024-12-05 15:19-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -608,24 +608,24 @@ msgstr ""
 msgid "Sorry, I can't answer this question now."
 msgstr ""
 
-#: src/ai/gemini.js:274 src/ai/gemini.js:282 src/ai/gemini.js:290
-#: src/ai/gemini.js:301
+#: src/ai/gemini.js:275 src/ai/gemini.js:283 src/ai/gemini.js:291
+#: src/ai/gemini.js:302
 msgid "Sorry, I can't answer this question."
 msgstr ""
 
-#: src/ai/gemini.js:277
+#: src/ai/gemini.js:278
 msgid "Possible sexually explicit content in the question or response."
 msgstr ""
 
-#: src/ai/gemini.js:285
+#: src/ai/gemini.js:286
 msgid "Possible hate speech in the question or response."
 msgstr ""
 
-#: src/ai/gemini.js:293
+#: src/ai/gemini.js:294
 msgid "Possible harassment in the question or response."
 msgstr ""
 
-#: src/ai/gemini.js:304
+#: src/ai/gemini.js:305
 msgid "Possible dangerous content in the question or response."
 msgstr ""
 

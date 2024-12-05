@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-05 12:30-0300\n"
+"POT-Creation-Date: 2024-12-05 15:19-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -682,25 +682,25 @@ msgstr "Como posso ajudar hoje?"
 msgid "Sorry, I can't answer this question now."
 msgstr "Peço desculpas, eu não posso responder a esta pergunta."
 
-#: src/ai/gemini.js:274 src/ai/gemini.js:282 src/ai/gemini.js:290
-#: src/ai/gemini.js:301
+#: src/ai/gemini.js:275 src/ai/gemini.js:283 src/ai/gemini.js:291
+#: src/ai/gemini.js:302
 #, fuzzy
 msgid "Sorry, I can't answer this question."
 msgstr "Peço desculpas, eu não posso responder a esta pergunta."
 
-#: src/ai/gemini.js:277
+#: src/ai/gemini.js:278
 msgid "Possible sexually explicit content in the question or response."
 msgstr "Possível conteúdo sexualmente explícito na pergunta ou resposta."
 
-#: src/ai/gemini.js:285
+#: src/ai/gemini.js:286
 msgid "Possible hate speech in the question or response."
 msgstr "Possível discurso de ódio na pergunta ou resposta."
 
-#: src/ai/gemini.js:293
+#: src/ai/gemini.js:294
 msgid "Possible harassment in the question or response."
 msgstr "Possível assédio na pergunta ou resposta."
 
-#: src/ai/gemini.js:304
+#: src/ai/gemini.js:305
 msgid "Possible dangerous content in the question or response."
 msgstr "Possível assédio na pergunta ou resposta."
 
