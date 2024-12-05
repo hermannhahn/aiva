@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-05 11:58-0300\n"
+"POT-Creation-Date: 2024-12-05 12:11-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -581,6 +581,10 @@ msgid "Opening App Store..."
 msgstr ""
 
 #: src/ai/gemini_functions.js:413
+msgid "The current temperature is"
+msgstr ""
+
+#: src/ai/gemini_functions.js:418
 msgid "Error getting weather"
 msgstr ""
 

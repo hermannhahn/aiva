@@ -403,10 +403,15 @@ export class GeminiFunctions {
                 this.app.chat.editResponse(response);
             }
             const weather = this.app.utils.getCurrentLocalWeather();
-            this.app.log('Weather:' + weather);
+            this.app.log('City:' + weather.city);
+            this.app.log('Temperature:' + weather.temperature);
+            this.app.log('Thermal Temperature:' + weather.thermalSensation);
+            this.app.log('Rain Probability:' + weather.rainProbability);
             this.app.log('Location:' + location);
             if (weather) {
-                this.app.chat.editResponse(weather);
+                this.app.chat.editResponse(
+                    `${_('The current temperature is')} ${weather.temperature}, with ${weather.rainProbability} of rain probability, and it feels like ${weather.thermalSensation}.`,
+                );
             }
         } catch (error) {
             this.app.logError('Error getting weather:', error);
