@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-04 21:18-0300\n"
+"POT-Creation-Date: 2024-12-04 21:36-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -46,8 +46,8 @@ msgid "read_lang_var2"
 msgstr "lê"
 
 #: src/ai/gemini_functions.js:20
-msgid "To use when you want to read the clipboard"
-msgstr "Para usar quando quiser ler a área de transferência"
+msgid "Clipboard Text-to-Speech"
+msgstr ""
 
 #: src/ai/gemini_functions.js:27 src/ai/gemini_functions.js:70
 msgid "Response text before run, e.g.: "
@@ -57,15 +57,15 @@ msgstr "Texto de resposta antes de executar, por exemplo: "
 msgid "Sure, start reading..."
 msgstr "Claro, iniciando leitura..."
 
-#: src/ai/gemini_functions.js:36
+#: src/ai/gemini_functions.js:36 src/ai/gemini_functions.js:79
 msgid "open"
 msgstr "abrir"
 
-#: src/ai/gemini_functions.js:37
+#: src/ai/gemini_functions.js:37 src/ai/gemini_functions.js:80
 msgid "open_lang_var1"
 msgstr "abra"
 
-#: src/ai/gemini_functions.js:38
+#: src/ai/gemini_functions.js:38 src/ai/gemini_functions.js:81
 msgid "open_lang_var2"
 msgstr "abre"
 
@@ -118,67 +118,74 @@ msgid "launch_lang_var2"
 msgstr "lança"
 
 #: src/ai/gemini_functions.js:56
-msgid "To use when you want to open an application"
-msgstr "Para usar quando quiser abrir um aplicativo"
+#, fuzzy
+msgid "Run non-sudo command line in terminal"
+msgstr "Linha de comando non-sudo para executar, por exemplo: "
 
 #: src/ai/gemini_functions.js:64
-msgid "Non-sudo command line to run, e.g.: "
+#, fuzzy
+msgid "Command line to run, e.g.: "
 msgstr "Linha de comando non-sudo para executar, por exemplo: "
 
 #: src/ai/gemini_functions.js:71
 msgid "Sure, opening google..."
 msgstr "Claro, abrindo google..."
 
-#: src/ai/gemini_functions.js:79
+#: src/ai/gemini_functions.js:82
 msgid "search"
 msgstr "pesquisar"
 
-#: src/ai/gemini_functions.js:80
+#: src/ai/gemini_functions.js:83
 #, fuzzy
 msgid "search_lang_var1"
 msgstr "pesquise"
 
-#: src/ai/gemini_functions.js:81
+#: src/ai/gemini_functions.js:84
 #, fuzzy
 msgid "search_lang_var2"
 msgstr "pesquisa"
 
-#: src/ai/gemini_functions.js:82
+#: src/ai/gemini_functions.js:85
 msgid "find"
 msgstr "procurar"
 
-#: src/ai/gemini_functions.js:83
+#: src/ai/gemini_functions.js:86
 #, fuzzy
 msgid "find_lang_var1"
 msgstr "procure"
 
-#: src/ai/gemini_functions.js:84
+#: src/ai/gemini_functions.js:87
 #, fuzzy
 msgid "find_lang_var2"
 msgstr "procura"
 
-#: src/ai/gemini_functions.js:110
+#: src/ai/gemini_functions.js:93
+#, fuzzy
+msgid "To use when you want to browse the web"
+msgstr "Para usar quando quiser ler a área de transferência"
+
+#: src/ai/gemini_functions.js:120
 #, fuzzy
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr "Eu não posso fazer isso agora. Talvez no futuro."
 
-#: src/ai/gemini_functions.js:140
+#: src/ai/gemini_functions.js:150
 msgid "End of text!"
 msgstr "Fim do texto!"
 
-#: src/ai/gemini_functions.js:144
+#: src/ai/gemini_functions.js:154
 msgid "Failed to get text from clipboard"
 msgstr "Falha ao obter texto da área de transferência"
 
-#: src/ai/gemini_functions.js:161
+#: src/ai/gemini_functions.js:170
 msgid "Please, install"
 msgstr "Por favor, instale"
 
-#: src/ai/gemini_functions.js:165
+#: src/ai/gemini_functions.js:174
 msgid "first"
 msgstr "primeiro"
 
-#: src/ai/gemini_functions.js:182
+#: src/ai/gemini_functions.js:191
 msgid "Error opening site"
 msgstr "Falha ao abrir site"
 
@@ -462,6 +469,9 @@ msgstr "Salvar"
 #: src/prefs.js:287
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
+
+#~ msgid "To use when you want to open an application"
+#~ msgstr "Para usar quando quiser abrir um aplicativo"
 
 #~ msgid "computer"
 #~ msgstr "computador"

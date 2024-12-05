@@ -17,7 +17,7 @@ export class GeminiFunctions {
 
         this._readClipboardDeclaration = {
             name: 'read_clipboard',
-            description: _('To use when you want to read the clipboard'),
+            description: _('Clipboard Text-to-Speech'),
             parameters: {
                 type: 'object',
                 properties: {
@@ -32,7 +32,7 @@ export class GeminiFunctions {
             },
         };
 
-        this.openAppActivation = [
+        this.cmdActivation = [
             _('open'),
             _('open_lang_var1'),
             _('open_lang_var2'),
@@ -50,18 +50,18 @@ export class GeminiFunctions {
             _('launch_lang_var2'),
         ];
 
-        this._openAppDeclaration = {
-            name: 'open_app',
+        this._cmdDeclaration = {
+            name: 'command_line',
             description:
-                _('To use when you want to open an application') +
-                ' [OS: Ubuntu 24.04.1 LTS]',
+                _('Run non-sudo command line in terminal') +
+                '. [OS: Ubuntu 24.04.1 LTS]',
             parameters: {
                 type: 'object',
                 properties: {
                     commandLine: {
                         type: 'string',
                         description:
-                            _('Non-sudo command line to run, e.g.: ') +
+                            _('Command line to run, e.g.: ') +
                             'firefox https://google.com',
                     },
                     response: {
@@ -75,7 +75,10 @@ export class GeminiFunctions {
             },
         };
 
-        this.searchWebActivation = [
+        this.browseWebActivation = [
+            _('open'),
+            _('open_lang_var1'),
+            _('open_lang_var2'),
             _('search'),
             _('search_lang_var1'),
             _('search_lang_var2'),
@@ -84,9 +87,16 @@ export class GeminiFunctions {
             _('find_lang_var2'),
         ];
 
+        this._browseWebDeclaration = {
+            name: 'browse_web',
+            description:
+                _('To use when you want to browse the web') +
+                ' [OS: Ubuntu 24.04.1 LTS]',
+        };
+
         this.activationWords = [
             ...this.readClipboardActivation,
-            ...this.openAppActivation,
+            ...this.cmdActivation,
             ...this.searchWebActivation,
         ];
 
@@ -102,8 +112,8 @@ export class GeminiFunctions {
             case 'read_clipboard':
                 this._readClipboardText(response);
                 break;
-            case 'open_app':
-                this._openApp(commandLine, response);
+            case 'command_line':
+                this._commandLine(commandLine, response);
                 break;
             default:
                 this.app.chat.editResponse(
@@ -119,8 +129,8 @@ export class GeminiFunctions {
             if (this.readClipboardActivation.includes(word)) {
                 declarations.push(this._readClipboardDeclaration);
             }
-            if (this.openAppActivation.includes(word)) {
-                declarations.push(this._openAppDeclaration);
+            if (this.cmdActivation.includes(word)) {
+                declarations.push(this._cmdDeclaration);
             }
         }
         return {declarations};
@@ -148,10 +158,9 @@ export class GeminiFunctions {
         );
     }
 
-    _openApp(commandLine, response) {
+    _commandLine(commandLine, response) {
         try {
             if (commandLine) {
-                // get first word from commandLine
                 const command = commandLine.split(' ')[0];
 
                 // check if app is installed
