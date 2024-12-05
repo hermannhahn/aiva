@@ -396,25 +396,29 @@ export class Utils {
      */
     curl(url) {
         try {
-        let _httpSession = new Soup.Session();
-        let message = Soup.Message.new('GET', url);
-        _httpSession.send_and_read_async(
-            message,
-            GLib.PRIORITY_DEFAULT,
-            null,
-            (_httpSession, result) => {
-                let bytes = _httpSession.send_and_read_finish(result);
-                let decoder = new TextDecoder('utf-8');
-                let response = decoder.decode(bytes.get_data());
-                return response;
-            },
-        );
+            let _httpSession = new Soup.Session();
+            let message = Soup.Message.new('GET', url);
+            _httpSession.send_and_read_async(
+                message,
+                GLib.PRIORITY_DEFAULT,
+                null,
+                (_httpSession, result) => {
+                    let bytes = _httpSession.send_and_read_finish(result);
+                    let decoder = new TextDecoder('utf-8');
+                    let response = decoder.decode(bytes.get_data());
+                    return response;
+                },
+            );
+        } catch {
+            throw new Error('Failed to complete request.');
         }
     }
 
     getCurrentLocalWeather(url = 'https://www.cptec.inpe.br/') {
         try {
             let response = this.curl(url);
+            response = JSON.parse(response);
+
             // Use regex para extrair o conteúdo com id="cidade"
             let city = response.match(
                 /<[^>]*id=["']cidade_uf["'][^>]*>(.*?)<\/[^>]+>/,
