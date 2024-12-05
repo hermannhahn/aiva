@@ -124,6 +124,7 @@ export class GeminiFunctions {
         command = command?.toLowerCase();
         const commandLine = args.commandLine;
         const response = args.response;
+        const url = args.url;
 
         switch (command) {
             case 'read_clipboard':
@@ -131,6 +132,9 @@ export class GeminiFunctions {
                 break;
             case 'command_line':
                 this._commandLine(commandLine, response);
+                break;
+            case 'browse_web':
+                this._browseWeb(url, response);
                 break;
             default:
                 this.app.chat.editResponse(
