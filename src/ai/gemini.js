@@ -177,30 +177,11 @@ export class GoogleGemini {
             this.app.log('Body Question: ' + body);
             let message = Soup.Message.new('POST', url);
             let bytes = GLib.Bytes.new(body);
-            let accumulatedData = '';
             message.set_request_body_from_bytes('application/json', bytes);
             _httpSession.send_and_read_async(
                 message,
                 GLib.PRIORITY_DEFAULT,
                 null,
-                (_httpSession, stream, bytesRead) => {
-                    let decoder = new TextDecoder('utf-8');
-                    let dataChunk = decoder.decode(stream.peek(bytesRead));
-                    accumulatedData += dataChunk;
-
-                    // Try parsing for complete sentences (replace with a proper parsing library)
-                    let potentialResponses = accumulatedData.split(/\.|\?|!/);
-                    for (let response of potentialResponses) {
-                        if (response.trim()) {
-                            // Update chat with the partial response
-                            this.app.chat.add(response.trim(), false);
-                            accumulatedData = accumulatedData.replace(
-                                response,
-                                '',
-                            );
-                        }
-                    }
-                },
                 (_httpSession, result) => {
                     let bytes = _httpSession.send_and_read_finish(result);
                     this.app.log('Response received.');
