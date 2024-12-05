@@ -451,6 +451,12 @@ export class Utils {
                     'Elemento com id="probabilidadeChuva" não encontrado',
                 );
             }
+            return {
+                city: city[1].trim(),
+                temperature: temperature[1].trim(),
+                thermalSensation: thermalSensation[1].trim(),
+                rainProbability: rainProbability[1].trim(),
+            };
         } catch (error) {
             throw new Error(`Failed to complete request: ${error.message}`);
         }
