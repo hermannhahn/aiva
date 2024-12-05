@@ -255,9 +255,6 @@ export class GeminiFunctions {
             if (this.readClipboardActivation.includes(word)) {
                 functionDeclarations.push(this._readClipboardDeclaration);
             }
-            if (this.weatherActivation.includes(word)) {
-                functionDeclarations.push(this._weatherDeclaration);
-            }
             if (this.browseWebActivation.includes(word)) {
                 functionDeclarations.push(this._browseWebDeclaration);
             }
@@ -265,8 +262,8 @@ export class GeminiFunctions {
                 functionDeclarations.push(this._cmdDeclaration);
             }
         }
-        for (const word of allText) {
-            if (this.weatherActivation.includes(word)) {
+        for (const weatherword of allText) {
+            if (this.weatherActivation.includes(weatherword)) {
                 functionDeclarations.push(this._weatherDeclaration);
             }
         }
