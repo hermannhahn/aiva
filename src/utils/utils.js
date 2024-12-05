@@ -414,13 +414,42 @@ export class Utils {
         try {
             let response = this.curl(url);
             // Use regex para extrair o conteúdo com id="cidade"
-            let match = response.match(
-                /<[^>]*id=["']cidade["'][^>]*>(.*?)<\/[^>]+>/,
+            let city = response.match(
+                /<[^>]*id=["']cidade_uf["'][^>]*>(.*?)<\/[^>]+>/,
             );
-            if (match && match[1]) {
-                this.app.log(match[1].trim());
+            let temperature = response.match(
+                /<[^>]*id=["']temperaturaPrev["'][^>]*>(.*?)<\/[^>]+>/,
+            );
+            let thermalSensation = response.match(
+                /<[^>]*id=["']sensacaoTerm["'][^>]*>(.*?)<\/[^>]+>/,
+            );
+            let rainProbability = response.match(
+                /<[^>]*id=["']probabilidadeChuva["'][^>]*>(.*?)<\/[^>]+>/,
+            );
+
+            if (city && city[1]) {
+                this.app.log(city[1].trim());
             } else {
                 this.app.log('Elemento com id="cidade" não encontrado');
+            }
+            if (temperature && temperature[1]) {
+                this.app.log(temperature[1].trim());
+            } else {
+                this.app.log(
+                    'Elemento com id="temperaturaPrev" não encontrado',
+                );
+            }
+            if (thermalSensation && thermalSensation[1]) {
+                this.app.log(thermalSensation[1].trim());
+            } else {
+                this.app.log('Elemento com id="sensacaoTerm" não encontrado');
+            }
+            if (rainProbability && rainProbability[1]) {
+                this.app.log(rainProbability[1].trim());
+            } else {
+                this.app.log(
+                    'Elemento com id="probabilidadeChuva" não encontrado',
+                );
             }
         } catch (error) {
             throw new Error(`Failed to complete request: ${error.message}`);
