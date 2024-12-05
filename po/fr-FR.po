@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-05 00:10-0300\n"
+"POT-Creation-Date: 2024-12-05 00:24-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language fr-FR\n"
@@ -252,41 +252,196 @@ msgstr ""
 msgid "Sure, opening..."
 msgstr ""
 
+#: src/ai/gemini_functions.js:132 src/ai/gemini_functions.js:153
+msgid "weather"
+msgstr ""
+
+#: src/ai/gemini_functions.js:133
+#, fuzzy
+msgid "weather_lang_var1"
+msgstr "Code copié dans le presse-papier"
+
+#: src/ai/gemini_functions.js:134
+#, fuzzy
+msgid "weather_lang_var2"
+msgstr "Code copié dans le presse-papier"
+
+#: src/ai/gemini_functions.js:135
+msgid "forecast"
+msgstr ""
+
+#: src/ai/gemini_functions.js:136
+#, fuzzy
+msgid "forecast_lang_var1"
+msgstr "Code copié dans le presse-papier"
+
+#: src/ai/gemini_functions.js:137
+#, fuzzy
+msgid "forecast_lang_var2"
+msgstr "Code copié dans le presse-papier"
+
+#: src/ai/gemini_functions.js:138 src/ai/gemini_functions.js:157
+msgid "temperature"
+msgstr ""
+
+#: src/ai/gemini_functions.js:139
+#, fuzzy
+msgid "temperature_lang_var1"
+msgstr "Code copié dans le presse-papier"
+
+#: src/ai/gemini_functions.js:140
+#, fuzzy
+msgid "temperature_lang_var2"
+msgstr "Code copié dans le presse-papier"
+
+#: src/ai/gemini_functions.js:141 src/ai/gemini_functions.js:155
+msgid "humidity"
+msgstr ""
+
+#: src/ai/gemini_functions.js:142
+#, fuzzy
+msgid "humidity_lang_var1"
+msgstr "Code copié dans le presse-papier"
+
+#: src/ai/gemini_functions.js:143
+#, fuzzy
+msgid "humidity_lang_var2"
+msgstr "Code copié dans le presse-papier"
+
+#: src/ai/gemini_functions.js:144 src/ai/gemini_functions.js:156
+msgid "wind"
+msgstr ""
+
+#: src/ai/gemini_functions.js:145
+#, fuzzy
+msgid "wind_lang_var1"
+msgstr "Code copié dans le presse-papier"
+
+#: src/ai/gemini_functions.js:146
+#, fuzzy
+msgid "wind_lang_var2"
+msgstr "Code copié dans le presse-papier"
+
+#: src/ai/gemini_functions.js:147
+#, fuzzy
+msgid "precipitation"
+msgstr "Code copié dans le presse-papier"
+
+#: src/ai/gemini_functions.js:148
+#, fuzzy
+msgid "precipitation_lang_var1"
+msgstr "Code copié dans le presse-papier"
+
+#: src/ai/gemini_functions.js:149
+#, fuzzy
+msgid "precipitation_lang_var2"
+msgstr "Code copié dans le presse-papier"
+
+#: src/ai/gemini_functions.js:150
+msgid "cloud"
+msgstr ""
+
+#: src/ai/gemini_functions.js:151
+#, fuzzy
+msgid "cloud_lang_var1"
+msgstr "Code copié dans le presse-papier"
+
+#: src/ai/gemini_functions.js:152
+#, fuzzy
+msgid "cloud_lang_var2"
+msgstr "Code copié dans le presse-papier"
+
+#: src/ai/gemini_functions.js:154
+msgid "climate"
+msgstr ""
+
 #: src/ai/gemini_functions.js:158
+msgid "rain"
+msgstr ""
+
+#: src/ai/gemini_functions.js:159
+msgid "snow"
+msgstr ""
+
+#: src/ai/gemini_functions.js:160
+msgid "frost"
+msgstr ""
+
+#: src/ai/gemini_functions.js:161
+msgid "fog"
+msgstr ""
+
+#: src/ai/gemini_functions.js:162
+msgid "sun"
+msgstr ""
+
+#: src/ai/gemini_functions.js:163
+msgid "clouds"
+msgstr ""
+
+#: src/ai/gemini_functions.js:164
+msgid "sky"
+msgstr ""
+
+#: src/ai/gemini_functions.js:165
+msgid "windy"
+msgstr ""
+
+#: src/ai/gemini_functions.js:166
+msgid "humid"
+msgstr ""
+
+#: src/ai/gemini_functions.js:167
+msgid "dry"
+msgstr ""
+
+#: src/ai/gemini_functions.js:168
+msgid "cold"
+msgstr ""
+
+#: src/ai/gemini_functions.js:169
+msgid "warm"
+msgstr ""
+
+#: src/ai/gemini_functions.js:170
+msgid "mild"
+msgstr ""
+
+#: src/ai/gemini_functions.js:201
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr ""
 
-#: src/ai/gemini_functions.js:191
+#: src/ai/gemini_functions.js:234
 msgid "End of text!"
 msgstr ""
 
-#: src/ai/gemini_functions.js:195
+#: src/ai/gemini_functions.js:238
 #, fuzzy
 msgid "Failed to get text from clipboard"
 msgstr "Code copié dans le presse-papier"
 
-#: src/ai/gemini_functions.js:211
+#: src/ai/gemini_functions.js:254
 msgid "Please, install"
 msgstr ""
 
-#: src/ai/gemini_functions.js:215
+#: src/ai/gemini_functions.js:258
 msgid "first"
 msgstr ""
 
-#: src/ai/gemini_functions.js:232 src/ai/gemini_functions.js:285
+#: src/ai/gemini_functions.js:275 src/ai/gemini_functions.js:328
 #, fuzzy
 msgid "Error opening site"
 msgstr "Code copié dans le presse-papier"
 
-#: src/ai/gemini_functions.js:276
+#: src/ai/gemini_functions.js:319
 msgid "You don't have any browser installed."
 msgstr ""
 
-#: src/ai/gemini_functions.js:278
+#: src/ai/gemini_functions.js:321
 msgid "Please, install a browser and try again."
 msgstr ""
 
-#: src/ai/gemini_functions.js:280
+#: src/ai/gemini_functions.js:323
 msgid "Opening App Store..."
 msgstr ""
 
@@ -818,10 +973,6 @@ msgstr ""
 
 #, fuzzy
 #~ msgid "page"
-#~ msgstr "Code copié dans le presse-papier"
-
-#, fuzzy
-#~ msgid "application"
 #~ msgstr "Code copié dans le presse-papier"
 
 #, fuzzy
