@@ -395,6 +395,7 @@ export class Utils {
      * @param {string} url
      */
     curl(url) {
+        try {
         let _httpSession = new Soup.Session();
         let message = Soup.Message.new('GET', url);
         _httpSession.send_and_read_async(
@@ -408,6 +409,7 @@ export class Utils {
                 return response;
             },
         );
+        }
     }
 
     getCurrentLocalWeather(url = 'https://www.cptec.inpe.br/') {
