@@ -266,9 +266,13 @@ export class GeminiFunctions {
     declarations(text) {
         let functionDeclarations = [];
         const firstWords = text.toLowerCase().split(' ').slice(0, 5);
+        const allText = text.toLowerCase().split(' ');
         for (const word of firstWords) {
             if (this.readClipboardActivation.includes(word)) {
                 functionDeclarations.push(this._readClipboardDeclaration);
+            }
+            if (this.weatherActivation.includes(word)) {
+                functionDeclarations.push(this._weatherDeclaration);
             }
             if (this.browseWebActivation.includes(word)) {
                 functionDeclarations.push(this._browseWebDeclaration);
@@ -277,12 +281,9 @@ export class GeminiFunctions {
                 functionDeclarations.push(this._cmdDeclaration);
             }
         }
-        if (functionDeclarations.length === 0) {
-            const allText = text.toLowerCase().split(' ');
-            for (const word of allText) {
-                if (this.weatherActivation.includes(word)) {
-                    functionDeclarations.push(this._weatherDeclaration);
-                }
+        for (const word of allText) {
+            if (this.weatherActivation.includes(word)) {
+                functionDeclarations.push(this._weatherDeclaration);
             }
         }
         return [{functionDeclarations}];
