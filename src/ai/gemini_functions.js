@@ -9,6 +9,8 @@ export class GeminiFunctions {
     constructor(app) {
         this.app = app;
 
+        this.toolsActivation = ['aiva', this.app.userSettings.ASSIST_NAME];
+
         this.readClipboardActivation = [
             _('read'),
             _('read_lang_var1'),
