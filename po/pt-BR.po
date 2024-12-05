@@ -119,16 +119,16 @@ msgstr "lança"
 
 #: src/ai/gemini_functions.js:56
 msgid "Run non-sudo command line in terminal"
-msgstr "Rodar comandos no terminal do usuário, por exemplo: "
+msgstr "Rodar comandos no terminal, por exemplo: "
 
 #: src/ai/gemini_functions.js:64
 msgid "Command line to run, e.g.: "
-msgstr "Linha de comando não-sudo, por exemplo: "
+msgstr "Linha de comando, por exemplo: "
 
 #: src/ai/gemini_functions.js:70
 #, fuzzy
 msgid "Sure, opening GNOME Software..."
-msgstr "Claro, abrindo google..."
+msgstr "Claro, abrindo GNOME Software..."
 
 #: src/ai/gemini_functions.js:81
 msgid "search"
@@ -160,11 +160,11 @@ msgstr "procura"
 
 #: src/ai/gemini_functions.js:91
 msgid "Open url in the browser."
-msgstr ""
+msgstr "Abrir URL no navegador."
 
 #: src/ai/gemini_functions.js:98
 msgid "URL to open, e.g.: "
-msgstr ""
+msgstr  "URL para abrir, por exemplo: "
 
 #: src/ai/gemini_functions.js:103
 #, fuzzy
@@ -174,7 +174,7 @@ msgstr "Texto de resposta antes de executar, por exemplo: "
 #: src/ai/gemini_functions.js:104
 #, fuzzy
 msgid "Sure, opening..."
-msgstr "Claro, abrindo google..."
+msgstr "Claro, abrindo..."
 
 #: src/ai/gemini_functions.js:138
 #, fuzzy
@@ -203,15 +203,15 @@ msgstr "Falha ao abrir site"
 
 #: src/ai/gemini_functions.js:256
 msgid "You don't have any browser installed."
-msgstr ""
+msgstr "Você não tem nenhum navegador instalado."
 
 #: src/ai/gemini_functions.js:258
 msgid "Please, install a browser and try again."
-msgstr ""
+msgstr "Por favor, instale um navegador e tente novamente."
 
 #: src/ai/gemini_functions.js:260
 msgid "Opening App Store..."
-msgstr ""
+msgstr "Abrindo App Store..."
 
 #: src/ai/gemini.js:35
 msgid "Hi, I am"
