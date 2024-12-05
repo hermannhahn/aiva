@@ -66,11 +66,12 @@ export class GeminiFunctions {
         }
     }
 
-    declarations() {
-        // let declarations = [];
-        // for (const word of words) {
-        //     if(this.
-        // }
+    declarations(words) {
+        let declarations = [];
+        for (const word of words) {
+            if(this.readClipboardActivation.includes(word)) {
+                declarations.push(this._readClipboardDeclaration)
+        }
 
         let result = {
             functionDeclarations: [
@@ -98,28 +99,31 @@ export class GeminiFunctions {
                         required: ['commandLine', 'response'],
                     },
                 },
-                {
-                    name: 'read_clipboard',
-                    description: _(
-                        'To use when you want to read the clipboard',
-                    ),
-                    parameters: {
-                        type: 'object',
-                        properties: {
-                            response: {
-                                type: 'string',
-                                description:
-                                    _('Response text before run, e.g.: ') +
-                                    _('Sure, start reading...'),
-                            },
-                        },
-                        required: ['response'],
-                    },
-                },
             ],
         };
         return result;
     }
+
+    _readClipboardDeclaration = 
+        {
+            name: 'read_clipboard',
+            description: _(
+                'To use when you want to read the clipboard',
+            ),
+            parameters: {
+                type: 'object',
+                properties: {
+                    response: {
+                        type: 'string',
+                        description:
+                            _('Response text before run, e.g.: ') +
+                            _('Sure, start reading...'),
+                    },
+                },
+                required: ['response'],
+            },
+        },
+
 
     _readClipboardText(response) {
         this.app.extension.clipboard.get_text(
