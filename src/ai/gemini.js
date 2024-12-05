@@ -261,7 +261,7 @@ export class GoogleGemini {
     safetyReason(res) {
         let aiResponse = '';
         // SAFETY warning
-        if (res.candidates[0].finishReason === 'SAFETY') {
+        if (res.candidates[0]?.finishReason === 'SAFETY') {
             // get safety reason
             for (let i = 0; i < res.candidates[0].safetyRatings.length; i++) {
                 let safetyRating = res.candidates[0].safetyRatings[i];
