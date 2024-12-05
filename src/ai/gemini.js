@@ -358,9 +358,7 @@ export class GoogleGemini {
                 },
             ]);
 
-            // get first five words from text
-            const firstFiveWords = text.toLowerCase().split(' ').slice(0, 5);
-            return this._createBody(stringfiedHistory, firstFiveWords);
+            return this._createBody(stringfiedHistory, text);
         } catch (error) {
             this.app.log(`Error building body: ${error.message}`);
             return null;
@@ -380,51 +378,24 @@ export class GoogleGemini {
                     parts: [{text}],
                 },
             ]);
-            const firstFiveWords = text.toLowerCase().split(' ').slice(0, 5);
-            return this._createBody(stringfiedRequest, firstFiveWords);
+            return this._createBody(stringfiedRequest, text);
         } catch {
             throw new Error('Error building body');
         }
     }
 
-    _createBody(request, firstFiveWords) {
+    _createBody(request, text) {
         try {
+            const declarations = this.app.functions.declarations(text);
+
             // get first five words from text
-            if (this.isFunctionCall(firstFiveWords)) {
-                const tools = JSON.stringify(
-                    this.app.functions.declarations(firstFiveWords),
-                );
+            if (declarations) {
+                const tools = JSON.stringify(declarations);
                 return `{"contents":${request}, "tools":${tools}}`;
             }
             return `{"contents":${request}}`;
         } catch {
             throw new Error('Error building body');
         }
-    }
-
-    /**
-     * @description check if in the first five words includes one of the activationWords list and one of the activationSuffix
-     * @param {string} text
-     * @returns {boolean} true/false
-     */
-    isFunctionCall(text) {
-        if (text.length < 3) {
-            return false;
-        }
-        // remove ",", ".", ";", "!", ":" from text
-        const punctuation = [',', '.', ';', '!', ':'];
-        let textWithoutPunctuation = text.join(' ');
-        for (const p of punctuation) {
-            textWithoutPunctuation = textWithoutPunctuation.replace(p, '');
-        }
-        text = textWithoutPunctuation.split(' ');
-
-        for (const word of this.app.functions.activationWords) {
-            if (text.includes(word)) {
-                return true;
-            }
-        }
-
-        return false;
     }
 }
