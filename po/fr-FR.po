@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-04 21:12-0300\n"
+"POT-Creation-Date: 2024-12-04 21:16-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language fr-FR\n"
@@ -44,138 +44,138 @@ msgstr ""
 msgid "read_lang_var2"
 msgstr ""
 
-#: src/ai/gemini_functions.js:17
-#, fuzzy
-msgid "open"
-msgstr "Code copié dans le presse-papier"
-
 #: src/ai/gemini_functions.js:18
-msgid "open_lang_var1"
-msgstr ""
-
-#: src/ai/gemini_functions.js:19
-msgid "open_lang_var2"
-msgstr ""
-
-#: src/ai/gemini_functions.js:20
-msgid "run"
-msgstr ""
-
-#: src/ai/gemini_functions.js:21
-msgid "run_lang_var1"
-msgstr ""
-
-#: src/ai/gemini_functions.js:22
-msgid "run_lang_var2"
-msgstr ""
-
-#: src/ai/gemini_functions.js:23
-msgid "execute"
-msgstr ""
-
-#: src/ai/gemini_functions.js:24
-msgid "execute_lang_var1"
-msgstr ""
-
-#: src/ai/gemini_functions.js:25
-msgid "execute_lang_var2"
-msgstr ""
-
-#: src/ai/gemini_functions.js:26
-msgid "start"
-msgstr ""
-
-#: src/ai/gemini_functions.js:27
-msgid "start_lang_var1"
-msgstr ""
-
-#: src/ai/gemini_functions.js:28
-msgid "start_lang_var2"
-msgstr ""
-
-#: src/ai/gemini_functions.js:29
-msgid "launch"
-msgstr ""
-
-#: src/ai/gemini_functions.js:30
-msgid "launch_lang_var1"
-msgstr ""
-
-#: src/ai/gemini_functions.js:31
-msgid "launch_lang_var2"
-msgstr ""
-
-#: src/ai/gemini_functions.js:34
-msgid "search"
-msgstr ""
-
-#: src/ai/gemini_functions.js:35
-msgid "search_lang_var1"
-msgstr ""
-
-#: src/ai/gemini_functions.js:36
-msgid "search_lang_var2"
-msgstr ""
-
-#: src/ai/gemini_functions.js:37
-msgid "find"
-msgstr ""
-
-#: src/ai/gemini_functions.js:38
-msgid "find_lang_var1"
-msgstr ""
-
-#: src/ai/gemini_functions.js:39
-msgid "find_lang_var2"
-msgstr ""
-
-#: src/ai/gemini_functions.js:63
-msgid "Sorry, I can't do that right now. Maybe in the future."
-msgstr ""
-
-#: src/ai/gemini_functions.js:81
-msgid "To use when you want to open an application"
-msgstr ""
-
-#: src/ai/gemini_functions.js:89
-msgid "Non-sudo command line to run, e.g.: "
-msgstr ""
-
-#: src/ai/gemini_functions.js:95 src/ai/gemini_functions.js:119
-msgid "Response text before run, e.g.: "
-msgstr ""
-
-#: src/ai/gemini_functions.js:96
-msgid "Sure, opening google..."
-msgstr ""
-
-#: src/ai/gemini_functions.js:111
 #, fuzzy
 msgid "To use when you want to read the clipboard"
 msgstr "Code copié dans le presse-papier"
 
-#: src/ai/gemini_functions.js:120
+#: src/ai/gemini_functions.js:25 src/ai/gemini_functions.js:66
+msgid "Response text before run, e.g.: "
+msgstr ""
+
+#: src/ai/gemini_functions.js:26
 msgid "Sure, start reading..."
 msgstr ""
 
-#: src/ai/gemini_functions.js:139
+#: src/ai/gemini_functions.js:33
+#, fuzzy
+msgid "open"
+msgstr "Code copié dans le presse-papier"
+
+#: src/ai/gemini_functions.js:34
+msgid "open_lang_var1"
+msgstr ""
+
+#: src/ai/gemini_functions.js:35
+msgid "open_lang_var2"
+msgstr ""
+
+#: src/ai/gemini_functions.js:36
+msgid "run"
+msgstr ""
+
+#: src/ai/gemini_functions.js:37
+msgid "run_lang_var1"
+msgstr ""
+
+#: src/ai/gemini_functions.js:38
+msgid "run_lang_var2"
+msgstr ""
+
+#: src/ai/gemini_functions.js:39
+msgid "execute"
+msgstr ""
+
+#: src/ai/gemini_functions.js:40
+msgid "execute_lang_var1"
+msgstr ""
+
+#: src/ai/gemini_functions.js:41
+msgid "execute_lang_var2"
+msgstr ""
+
+#: src/ai/gemini_functions.js:42
+msgid "start"
+msgstr ""
+
+#: src/ai/gemini_functions.js:43
+msgid "start_lang_var1"
+msgstr ""
+
+#: src/ai/gemini_functions.js:44
+msgid "start_lang_var2"
+msgstr ""
+
+#: src/ai/gemini_functions.js:45
+msgid "launch"
+msgstr ""
+
+#: src/ai/gemini_functions.js:46
+msgid "launch_lang_var1"
+msgstr ""
+
+#: src/ai/gemini_functions.js:47
+msgid "launch_lang_var2"
+msgstr ""
+
+#: src/ai/gemini_functions.js:52
+msgid "To use when you want to open an application"
+msgstr ""
+
+#: src/ai/gemini_functions.js:60
+msgid "Non-sudo command line to run, e.g.: "
+msgstr ""
+
+#: src/ai/gemini_functions.js:67
+msgid "Sure, opening google..."
+msgstr ""
+
+#: src/ai/gemini_functions.js:74
+msgid "search"
+msgstr ""
+
+#: src/ai/gemini_functions.js:75
+msgid "search_lang_var1"
+msgstr ""
+
+#: src/ai/gemini_functions.js:76
+msgid "search_lang_var2"
+msgstr ""
+
+#: src/ai/gemini_functions.js:77
+msgid "find"
+msgstr ""
+
+#: src/ai/gemini_functions.js:78
+msgid "find_lang_var1"
+msgstr ""
+
+#: src/ai/gemini_functions.js:79
+msgid "find_lang_var2"
+msgstr ""
+
+#: src/ai/gemini_functions.js:104
+msgid "Sorry, I can't do that right now. Maybe in the future."
+msgstr ""
+
+#: src/ai/gemini_functions.js:134
 msgid "End of text!"
 msgstr ""
 
-#: src/ai/gemini_functions.js:143
+#: src/ai/gemini_functions.js:138
 #, fuzzy
 msgid "Failed to get text from clipboard"
 msgstr "Code copié dans le presse-papier"
 
-#: src/ai/gemini_functions.js:160
+#: src/ai/gemini_functions.js:155
 msgid "Please, install"
 msgstr ""
 
-#: src/ai/gemini_functions.js:164
+#: src/ai/gemini_functions.js:159
 msgid "first"
 msgstr ""
 
-#: src/ai/gemini_functions.js:181
+#: src/ai/gemini_functions.js:176
 #, fuzzy
 msgid "Error opening site"
 msgstr "Code copié dans le presse-papier"
