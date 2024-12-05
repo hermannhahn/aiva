@@ -55,15 +55,14 @@ export class GeminiFunctions {
         this._cmdDeclaration = {
             name: 'command_line',
             description:
-                _('Run non-sudo command line in terminal') +
+                _('Run non-sudo commandline in the user terminal') +
                 '. [OS: Ubuntu 24.04.1 LTS]',
             parameters: {
                 type: 'object',
                 properties: {
                     commandLine: {
                         type: 'string',
-                        description:
-                            _('Command line to run, e.g.: ') + 'gnome-software',
+                        description: _('commandline to run'),
                     },
                     response: {
                         type: 'string',

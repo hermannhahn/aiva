@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-05 16:36-0300\n"
+"POT-Creation-Date: 2024-12-05 17:16-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -49,7 +49,7 @@ msgstr "lê"
 msgid "Clipboard Text-to-Speech"
 msgstr ""
 
-#: src/ai/gemini_functions.js:29 src/ai/gemini_functions.js:71
+#: src/ai/gemini_functions.js:29 src/ai/gemini_functions.js:70
 msgid "Response text before run, e.g.: "
 msgstr "Texto de resposta antes de executar, por exemplo: "
 
@@ -57,15 +57,15 @@ msgstr "Texto de resposta antes de executar, por exemplo: "
 msgid "Sure, start reading..."
 msgstr "Claro, iniciando leitura..."
 
-#: src/ai/gemini_functions.js:38 src/ai/gemini_functions.js:80
+#: src/ai/gemini_functions.js:38 src/ai/gemini_functions.js:79
 msgid "open"
 msgstr "abrir"
 
-#: src/ai/gemini_functions.js:39 src/ai/gemini_functions.js:81
+#: src/ai/gemini_functions.js:39 src/ai/gemini_functions.js:80
 msgid "open_lang_var1"
 msgstr "abra"
 
-#: src/ai/gemini_functions.js:40 src/ai/gemini_functions.js:82
+#: src/ai/gemini_functions.js:40 src/ai/gemini_functions.js:81
 msgid "open_lang_var2"
 msgstr "abre"
 
@@ -118,182 +118,184 @@ msgid "launch_lang_var2"
 msgstr "lança"
 
 #: src/ai/gemini_functions.js:58
-msgid "Run non-sudo command line in terminal"
+#, fuzzy
+msgid "Run non-sudo commandline in the user terminal"
 msgstr "Rodar comandos no terminal"
 
-#: src/ai/gemini_functions.js:66
-msgid "Command line to run, e.g.: "
+#: src/ai/gemini_functions.js:65
+#, fuzzy
+msgid "commandline to run"
 msgstr "Linha de comando, por exemplo: "
 
-#: src/ai/gemini_functions.js:72
+#: src/ai/gemini_functions.js:71
 #, fuzzy
 msgid "Sure, opening GNOME Software..."
 msgstr "Claro, abrindo GNOME Software..."
 
-#: src/ai/gemini_functions.js:83
+#: src/ai/gemini_functions.js:82
 msgid "search"
 msgstr "pesquisar"
 
-#: src/ai/gemini_functions.js:84
+#: src/ai/gemini_functions.js:83
 #, fuzzy
 msgid "search_lang_var1"
 msgstr "pesquise"
 
-#: src/ai/gemini_functions.js:85
+#: src/ai/gemini_functions.js:84
 #, fuzzy
 msgid "search_lang_var2"
 msgstr "pesquisa"
 
-#: src/ai/gemini_functions.js:86
+#: src/ai/gemini_functions.js:85
 msgid "find"
 msgstr "procurar"
 
-#: src/ai/gemini_functions.js:87
+#: src/ai/gemini_functions.js:86
 #, fuzzy
 msgid "find_lang_var1"
 msgstr "procure"
 
-#: src/ai/gemini_functions.js:88
+#: src/ai/gemini_functions.js:87
 #, fuzzy
 msgid "find_lang_var2"
 msgstr "procura"
 
-#: src/ai/gemini_functions.js:89
+#: src/ai/gemini_functions.js:88
 msgid "seek"
 msgstr "vasculhar"
 
-#: src/ai/gemini_functions.js:90
+#: src/ai/gemini_functions.js:89
 #, fuzzy
 msgid "seek_lang_var1"
 msgstr "vasculhe"
 
-#: src/ai/gemini_functions.js:91
+#: src/ai/gemini_functions.js:90
 #, fuzzy
 msgid "seek_lang_var2"
 msgstr "vasculha"
 
-#: src/ai/gemini_functions.js:92
+#: src/ai/gemini_functions.js:91
 msgid "go"
 msgstr "vá para"
 
-#: src/ai/gemini_functions.js:93
+#: src/ai/gemini_functions.js:92
 #, fuzzy
 msgid "go_lang_var1"
 msgstr "vai na"
 
-#: src/ai/gemini_functions.js:94
+#: src/ai/gemini_functions.js:93
 #, fuzzy
 msgid "go_lang_var2"
 msgstr "vai no"
 
-#: src/ai/gemini_functions.js:95
+#: src/ai/gemini_functions.js:94
 msgid "visit"
 msgstr "visitar"
 
-#: src/ai/gemini_functions.js:96
+#: src/ai/gemini_functions.js:95
 #, fuzzy
 msgid "visit_lang_var1"
 msgstr "visite"
 
-#: src/ai/gemini_functions.js:97
+#: src/ai/gemini_functions.js:96
 #, fuzzy
 msgid "visit_lang_var2"
 msgstr "visita"
 
-#: src/ai/gemini_functions.js:98
+#: src/ai/gemini_functions.js:97
 msgid "navigate"
 msgstr "navegar"
 
-#: src/ai/gemini_functions.js:99
+#: src/ai/gemini_functions.js:98
 #, fuzzy
 msgid "navigate_lang_var1"
 msgstr "navegue"
 
-#: src/ai/gemini_functions.js:100
+#: src/ai/gemini_functions.js:99
 #, fuzzy
 msgid "navigate_lang_var2"
 msgstr "navega"
 
-#: src/ai/gemini_functions.js:101
+#: src/ai/gemini_functions.js:100
 msgid "browse"
 msgstr "vizualizar"
 
-#: src/ai/gemini_functions.js:102
+#: src/ai/gemini_functions.js:101
 #, fuzzy
 msgid "browse_lang_var1"
 msgstr "visualize"
 
-#: src/ai/gemini_functions.js:103
+#: src/ai/gemini_functions.js:102
 #, fuzzy
 msgid "browse_lang_var2"
 msgstr "visualiza"
 
-#: src/ai/gemini_functions.js:104
+#: src/ai/gemini_functions.js:103
 msgid "access"
 msgstr "acessar"
 
-#: src/ai/gemini_functions.js:105
+#: src/ai/gemini_functions.js:104
 #, fuzzy
 msgid "access_lang_var1"
 msgstr "acesse"
 
-#: src/ai/gemini_functions.js:106
+#: src/ai/gemini_functions.js:105
 #, fuzzy
 msgid "access_lang_var2"
 msgstr "acessa"
 
-#: src/ai/gemini_functions.js:111
+#: src/ai/gemini_functions.js:110
 msgid "Open url in the browser."
 msgstr "Abrir URL no navegador."
 
-#: src/ai/gemini_functions.js:118
+#: src/ai/gemini_functions.js:117
 msgid "URL to open, e.g.: "
 msgstr "URL para abrir, por exemplo: "
 
-#: src/ai/gemini_functions.js:123
+#: src/ai/gemini_functions.js:122
 #, fuzzy
 msgid "Response text before open, e.g.: "
 msgstr "Texto de resposta antes de executar, por exemplo: "
 
-#: src/ai/gemini_functions.js:124
+#: src/ai/gemini_functions.js:123
 #, fuzzy
 msgid "Sure, opening..."
 msgstr "Claro, abrindo..."
 
-#: src/ai/gemini_functions.js:159
+#: src/ai/gemini_functions.js:158
 #, fuzzy
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr "Eu não posso fazer isso agora. Talvez no futuro."
 
-#: src/ai/gemini_functions.js:193
+#: src/ai/gemini_functions.js:192
 msgid "End of text!"
 msgstr "Fim do texto!"
 
-#: src/ai/gemini_functions.js:197
+#: src/ai/gemini_functions.js:196
 msgid "Failed to get text from clipboard"
 msgstr "Falha ao obter texto da área de transferência"
 
-#: src/ai/gemini_functions.js:213
+#: src/ai/gemini_functions.js:212
 msgid "Please, install"
 msgstr "Por favor, instale"
 
-#: src/ai/gemini_functions.js:217
+#: src/ai/gemini_functions.js:216
 msgid "first"
 msgstr "primeiro"
 
-#: src/ai/gemini_functions.js:234 src/ai/gemini_functions.js:287
+#: src/ai/gemini_functions.js:233 src/ai/gemini_functions.js:286
 msgid "Error opening site"
 msgstr "Falha ao abrir site"
 
-#: src/ai/gemini_functions.js:278
+#: src/ai/gemini_functions.js:277
 msgid "You don't have any browser installed."
 msgstr "Você não tem nenhum navegador instalado."
 
-#: src/ai/gemini_functions.js:280
+#: src/ai/gemini_functions.js:279
 msgid "Please, install a browser and try again."
 msgstr "Por favor, instale um navegador e tente novamente."
 
-#: src/ai/gemini_functions.js:282
+#: src/ai/gemini_functions.js:281
 msgid "Opening App Store..."
 msgstr "Abrindo App Store..."
 
