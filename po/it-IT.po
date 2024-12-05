@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-05 16:25-0300\n"
+"POT-Creation-Date: 2024-12-05 16:36-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language it-IT\n"
@@ -252,321 +252,43 @@ msgstr ""
 msgid "Sure, opening..."
 msgstr ""
 
-#: src/ai/gemini_functions.js:132
-msgid "weather"
-msgstr ""
-
-#: src/ai/gemini_functions.js:133
-#, fuzzy
-msgid "weather_lang_var1"
-msgstr "Codice copiato negli appunti"
-
-#: src/ai/gemini_functions.js:134
-msgid "forecast"
-msgstr ""
-
-#: src/ai/gemini_functions.js:135
-msgid "temperature"
-msgstr ""
-
-#: src/ai/gemini_functions.js:136
-msgid "humidity"
-msgstr ""
-
-#: src/ai/gemini_functions.js:137
-#, fuzzy
-msgid "humidity_lang_var1"
-msgstr "Codice copiato negli appunti"
-
-#: src/ai/gemini_functions.js:138
-msgid "wind"
-msgstr ""
-
-#: src/ai/gemini_functions.js:139
-#, fuzzy
-msgid "wind_lang_var1"
-msgstr "Codice copiato negli appunti"
-
-#: src/ai/gemini_functions.js:140
-#, fuzzy
-msgid "wind_lang_var2"
-msgstr "Codice copiato negli appunti"
-
-#: src/ai/gemini_functions.js:141
-#, fuzzy
-msgid "precipitation"
-msgstr "Codice copiato negli appunti"
-
-#: src/ai/gemini_functions.js:142
-#, fuzzy
-msgid "precipitation_lang_var1"
-msgstr "Codice copiato negli appunti"
-
-#: src/ai/gemini_functions.js:143
-#, fuzzy
-msgid "precipitation_lang_var2"
-msgstr "Codice copiato negli appunti"
-
-#: src/ai/gemini_functions.js:144
-msgid "cloud"
-msgstr ""
-
-#: src/ai/gemini_functions.js:145
-#, fuzzy
-msgid "cloud_lang_var1"
-msgstr "Codice copiato negli appunti"
-
-#: src/ai/gemini_functions.js:146
-msgid "climate"
-msgstr ""
-
-#: src/ai/gemini_functions.js:147
-msgid "rain"
-msgstr ""
-
-#: src/ai/gemini_functions.js:148
-#, fuzzy
-msgid "rain_lang_var1"
-msgstr "Codice copiato negli appunti"
-
-#: src/ai/gemini_functions.js:149
-#, fuzzy
-msgid "rain_lang_var2"
-msgstr "Codice copiato negli appunti"
-
-#: src/ai/gemini_functions.js:150
-msgid "snow"
-msgstr ""
-
-#: src/ai/gemini_functions.js:151
-#, fuzzy
-msgid "snow_lang_var1"
-msgstr "Codice copiato negli appunti"
-
-#: src/ai/gemini_functions.js:152
-#, fuzzy
-msgid "snow_lang_var2"
-msgstr "Codice copiato negli appunti"
-
-#: src/ai/gemini_functions.js:153
-msgid "frost"
-msgstr ""
-
-#: src/ai/gemini_functions.js:154
-#, fuzzy
-msgid "frost_lang_var1"
-msgstr "Codice copiato negli appunti"
-
-#: src/ai/gemini_functions.js:155
-#, fuzzy
-msgid "frost_lang_var2"
-msgstr "Codice copiato negli appunti"
-
-#: src/ai/gemini_functions.js:156
-msgid "fog"
-msgstr ""
-
-#: src/ai/gemini_functions.js:157
-#, fuzzy
-msgid "fog_lang_var1"
-msgstr "Codice copiato negli appunti"
-
-#: src/ai/gemini_functions.js:158
-#, fuzzy
-msgid "fog_lang_var2"
-msgstr "Codice copiato negli appunti"
-
 #: src/ai/gemini_functions.js:159
-msgid "sun"
-msgstr ""
-
-#: src/ai/gemini_functions.js:160
-#, fuzzy
-msgid "sun_lang_var1"
-msgstr "Codice copiato negli appunti"
-
-#: src/ai/gemini_functions.js:161
-#, fuzzy
-msgid "sun_lang_var2"
-msgstr "Codice copiato negli appunti"
-
-#: src/ai/gemini_functions.js:162
-msgid "clouds"
-msgstr ""
-
-#: src/ai/gemini_functions.js:163
-#, fuzzy
-msgid "clouds_lang_var1"
-msgstr "Codice copiato negli appunti"
-
-#: src/ai/gemini_functions.js:164
-#, fuzzy
-msgid "clouds_lang_var2"
-msgstr "Codice copiato negli appunti"
-
-#: src/ai/gemini_functions.js:165
-msgid "sky"
-msgstr ""
-
-#: src/ai/gemini_functions.js:166
-msgid "windy"
-msgstr ""
-
-#: src/ai/gemini_functions.js:167
-#, fuzzy
-msgid "windy_lang_var1"
-msgstr "Codice copiato negli appunti"
-
-#: src/ai/gemini_functions.js:168
-msgid "humid"
-msgstr ""
-
-#: src/ai/gemini_functions.js:169
-#, fuzzy
-msgid "humid_lang_var1"
-msgstr "Codice copiato negli appunti"
-
-#: src/ai/gemini_functions.js:170
-#, fuzzy
-msgid "humid_lang_var2"
-msgstr "Codice copiato negli appunti"
-
-#: src/ai/gemini_functions.js:171
-msgid "dry"
-msgstr ""
-
-#: src/ai/gemini_functions.js:172
-#, fuzzy
-msgid "dry_lang_var1"
-msgstr "Codice copiato negli appunti"
-
-#: src/ai/gemini_functions.js:173
-#, fuzzy
-msgid "dry_lang_var2"
-msgstr "Codice copiato negli appunti"
-
-#: src/ai/gemini_functions.js:174
-msgid "cold"
-msgstr ""
-
-#: src/ai/gemini_functions.js:175
-#, fuzzy
-msgid "cold_lang_var1"
-msgstr "Codice copiato negli appunti"
-
-#: src/ai/gemini_functions.js:176
-#, fuzzy
-msgid "cold_lang_var2"
-msgstr "Codice copiato negli appunti"
-
-#: src/ai/gemini_functions.js:177
-msgid "hot"
-msgstr ""
-
-#: src/ai/gemini_functions.js:178
-#, fuzzy
-msgid "hot_lang_var1"
-msgstr "Codice copiato negli appunti"
-
-#: src/ai/gemini_functions.js:179
-#, fuzzy
-msgid "hot_lang_var2"
-msgstr "Codice copiato negli appunti"
-
-#: src/ai/gemini_functions.js:180
-msgid "warm"
-msgstr ""
-
-#: src/ai/gemini_functions.js:181
-#, fuzzy
-msgid "warm_lang_var1"
-msgstr "Codice copiato negli appunti"
-
-#: src/ai/gemini_functions.js:182
-msgid "mild"
-msgstr ""
-
-#: src/ai/gemini_functions.js:183
-#, fuzzy
-msgid "mild_lang_var1"
-msgstr "Codice copiato negli appunti"
-
-#: src/ai/gemini_functions.js:184
-#, fuzzy
-msgid "mild_lang_var2"
-msgstr "Codice copiato negli appunti"
-
-#: src/ai/gemini_functions.js:185
-msgid "freezing"
-msgstr ""
-
-#: src/ai/gemini_functions.js:186
-#, fuzzy
-msgid "freezing_lang_var1"
-msgstr "Codice copiato negli appunti"
-
-#: src/ai/gemini_functions.js:187
-msgid "blizzard"
-msgstr ""
-
-#: src/ai/gemini_functions.js:192
-msgid "Get weather forecast"
-msgstr ""
-
-#: src/ai/gemini_functions.js:198
-msgid "Location, e.g.: London"
-msgstr ""
-
-#: src/ai/gemini_functions.js:203
-msgid "Response text before get weather, e.g.: "
-msgstr ""
-
-#: src/ai/gemini_functions.js:204
-msgid "Sure, getting weather forecast..."
-msgstr ""
-
-#: src/ai/gemini_functions.js:244
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr ""
 
-#: src/ai/gemini_functions.js:284
+#: src/ai/gemini_functions.js:193
 msgid "End of text!"
 msgstr ""
 
-#: src/ai/gemini_functions.js:288
+#: src/ai/gemini_functions.js:197
 #, fuzzy
 msgid "Failed to get text from clipboard"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini_functions.js:304
+#: src/ai/gemini_functions.js:213
 msgid "Please, install"
 msgstr ""
 
-#: src/ai/gemini_functions.js:308
+#: src/ai/gemini_functions.js:217
 msgid "first"
 msgstr ""
 
-#: src/ai/gemini_functions.js:325 src/ai/gemini_functions.js:378
+#: src/ai/gemini_functions.js:234 src/ai/gemini_functions.js:287
 #, fuzzy
 msgid "Error opening site"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini_functions.js:369
+#: src/ai/gemini_functions.js:278
 msgid "You don't have any browser installed."
 msgstr ""
 
-#: src/ai/gemini_functions.js:371
+#: src/ai/gemini_functions.js:280
 msgid "Please, install a browser and try again."
 msgstr ""
 
-#: src/ai/gemini_functions.js:373
+#: src/ai/gemini_functions.js:282
 msgid "Opening App Store..."
 msgstr ""
-
-#: src/ai/gemini_functions.js:391
-#, fuzzy
-msgid "Error getting weather"
-msgstr "Codice copiato negli appunti"
 
 #: src/ai/gemini.js:35
 msgid "Hi, I am"
@@ -849,6 +571,142 @@ msgstr ""
 #: src/prefs.js:287
 msgid "Your preferences have been saved"
 msgstr ""
+
+#, fuzzy
+#~ msgid "weather_lang_var1"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "humidity_lang_var1"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "wind_lang_var1"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "wind_lang_var2"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "precipitation"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "precipitation_lang_var1"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "precipitation_lang_var2"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "cloud_lang_var1"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "rain_lang_var1"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "rain_lang_var2"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "snow_lang_var1"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "snow_lang_var2"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "frost_lang_var1"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "frost_lang_var2"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "fog_lang_var1"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "fog_lang_var2"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "sun_lang_var1"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "sun_lang_var2"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "clouds_lang_var1"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "clouds_lang_var2"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "windy_lang_var1"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "humid_lang_var1"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "humid_lang_var2"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "dry_lang_var1"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "dry_lang_var2"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "cold_lang_var1"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "cold_lang_var2"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "hot_lang_var1"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "hot_lang_var2"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "warm_lang_var1"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "mild_lang_var1"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "mild_lang_var2"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "freezing_lang_var1"
+#~ msgstr "Codice copiato negli appunti"
+
+#, fuzzy
+#~ msgid "Error getting weather"
+#~ msgstr "Codice copiato negli appunti"
 
 #, fuzzy
 #~ msgid "weather_lang_var2"
