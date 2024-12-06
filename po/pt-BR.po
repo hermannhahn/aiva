@@ -527,7 +527,7 @@ msgstr "Informações sobre tempo e previsão."
 
 #: src/ai/gemini_functions.js:198
 msgid "Leave empty to get weather from user location"
-msgstr ""
+msgstr "Deixe em branco para obter o tempo da localização do usuário"
 
 #: src/ai/gemini_functions.js:200
 #, fuzzy
