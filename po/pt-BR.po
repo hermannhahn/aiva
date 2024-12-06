@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-06 15:31-0300\n"
+"POT-Creation-Date: 2024-12-06 15:33-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -521,61 +521,56 @@ msgid "blizzard"
 msgstr "nevoeiro"
 
 #: src/ai/gemini_functions.js:191
-#, fuzzy
-msgid "Get weather forecast"
-msgstr "Claro, obtendo informações do tempo..."
+msgid "Weather and forecast for user location."
+msgstr ""
 
-#: src/ai/gemini_functions.js:197
-msgid "Location, e.g.: London"
-msgstr "Local, por exemplo: Londres"
-
-#: src/ai/gemini_functions.js:202
+#: src/ai/gemini_functions.js:198
 #, fuzzy
 msgid "Response text before get weather, e.g.: "
 msgstr "Texto de resposta antes de executar, por exemplo: "
 
-#: src/ai/gemini_functions.js:203
+#: src/ai/gemini_functions.js:199
 msgid "Sure, getting weather forecast..."
 msgstr "Claro, obtendo informações do tempo..."
 
-#: src/ai/gemini_functions.js:242
+#: src/ai/gemini_functions.js:238
 #, fuzzy
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr "Eu não posso fazer isso agora. Talvez no futuro."
 
-#: src/ai/gemini_functions.js:283
+#: src/ai/gemini_functions.js:279
 msgid "End of text!"
 msgstr "Fim do texto!"
 
-#: src/ai/gemini_functions.js:287
+#: src/ai/gemini_functions.js:283
 msgid "Failed to get text from clipboard"
 msgstr "Falha ao obter texto da área de transferência"
 
-#: src/ai/gemini_functions.js:303
+#: src/ai/gemini_functions.js:299
 msgid "Please, install"
 msgstr "Por favor, instale"
 
-#: src/ai/gemini_functions.js:307
+#: src/ai/gemini_functions.js:303
 msgid "first"
 msgstr "primeiro"
 
-#: src/ai/gemini_functions.js:324 src/ai/gemini_functions.js:377
+#: src/ai/gemini_functions.js:320 src/ai/gemini_functions.js:373
 msgid "Error opening site"
 msgstr "Falha ao abrir site"
 
-#: src/ai/gemini_functions.js:368
+#: src/ai/gemini_functions.js:364
 msgid "You don't have any browser installed."
 msgstr "Você não tem nenhum navegador instalado."
 
-#: src/ai/gemini_functions.js:370
+#: src/ai/gemini_functions.js:366
 msgid "Please, install a browser and try again."
 msgstr "Por favor, instale um navegador e tente novamente."
 
-#: src/ai/gemini_functions.js:372
+#: src/ai/gemini_functions.js:368
 msgid "Opening App Store..."
 msgstr "Abrindo App Store..."
 
-#: src/ai/gemini_functions.js:390
+#: src/ai/gemini_functions.js:386
 #, fuzzy
 msgid "Error getting weather"
 msgstr "Falha ao abrir site"
@@ -860,6 +855,13 @@ msgstr "Salvar"
 #: src/prefs.js:287
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
+
+#, fuzzy
+#~ msgid "Get weather forecast"
+#~ msgstr "Claro, obtendo informações do tempo..."
+
+#~ msgid "Location, e.g.: London"
+#~ msgstr "Local, por exemplo: Londres"
 
 #, fuzzy
 #~ msgid "weather_lang_var2"
