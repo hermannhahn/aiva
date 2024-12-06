@@ -418,77 +418,74 @@ export class Utils {
         try {
             let _httpSession = new Soup.Session();
             let message = Soup.Message.new('GET', url);
+
+            // Adiciona o cabeçalho User-Agent e Geolocation
+            message.request_headers.append(
+                'User-Agent',
+                'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3',
+            );
+            // Adiciona o cabeçalho de localização geográfica (substitua pelas coordenadas reais)
+            message.request_headers.append('Geolocation', '34.0522;-118.2437');
+
             _httpSession.send_and_read_async(
                 message,
                 GLib.PRIORITY_DEFAULT,
                 null,
                 (_httpSession, result) => {
-                    let bytes = _httpSession.send_and_read_finish(result);
-                    let decoder = new TextDecoder('utf-8');
-                    let response = decoder.decode(bytes.get_data());
-                    this.app.log('Weather Tool: ' + response);
-                    // Use regex para extrair o conteúdo com id="cidade"
-                    let city = response.match(
-                        /<[^>]*id=["']cidade_uf["'][^>]*>(.*?)<\/[^>]+>/,
-                    );
-                    let temperature = response.match(
-                        /<[^>]*id=["']temperaturaPrev["'][^>]*>(.*?)<\/[^>]+>/,
-                    );
-                    let thermalSensation = response.match(
-                        /<[^>]*id=["']sensacaoTerm["'][^>]*>(.*?)<\/[^>]+>/,
-                    );
-                    let rainProbability = response.match(
-                        /<[^>]*id=["']probabilidadeChuva["'][^>]*>(.*?)<\/[^>]+>/,
-                    );
+                    try {
+                        let bytes = _httpSession.send_and_read_finish(result);
+                        let decoder = new TextDecoder('utf-8');
+                        let response = decoder.decode(bytes.get_data());
 
-                    if (city && city[1]) {
-                        this.app.log(city[1].trim());
-                    } else {
-                        this.app.log('Elemento com id="cidade" não encontrado');
-                    }
-                    if (temperature && temperature[1]) {
-                        this.app.log(temperature[1].trim());
-                    } else {
-                        this.app.log(
-                            'Elemento com id="temperaturaPrev" não encontrado',
-                        );
-                    }
-                    if (thermalSensation && thermalSensation[1]) {
-                        this.app.log(thermalSensation[1].trim());
-                    } else {
-                        this.app.log(
-                            'Elemento com id="sensacaoTerm" não encontrado',
-                        );
-                    }
-                    if (rainProbability && rainProbability[1]) {
-                        this.app.log(rainProbability[1].trim());
-                    } else {
-                        this.app.log(
-                            'Elemento com id="probabilidadeChuva" não encontrado',
-                        );
-                    }
-                    let weather = {
-                        city: city[1].trim(),
-                        temperature: temperature[1].trim(),
-                        thermalSensation: thermalSensation[1].trim(),
-                        rainProbability: rainProbability[1].trim(),
-                    };
+                        this.app.log('Weather Tool: ' + response);
 
-                    this.app.log('City:' + weather.city);
-                    this.app.log('Temperature:' + weather.temperature);
-                    this.app.log(
-                        'Thermal Temperature:' + weather.thermalSensation,
-                    );
-                    this.app.log('Rain Probability:' + weather.rainProbability);
-                    if (weather) {
+                        // Extração usando regex
+                        let city = response.match(
+                            /<[^>]*id=["']cidade_uf["'][^>]*>(.*?)<\/[^>]+>/,
+                        );
+                        let temperature = response.match(
+                            /<[^>]*id=["']temperaturaPrev["'][^>]*>(.*?)<\/[^>]+>/,
+                        );
+                        let thermalSensation = response.match(
+                            /<[^>]*id=["']sensacaoTerm["'][^>]*>(.*?)<\/[^>]+>/,
+                        );
+                        let rainProbability = response.match(
+                            /<[^>]*id=["']probabilidadeChuva["'][^>]*>(.*?)<\/[^>]+>/,
+                        );
+
+                        // Tratamento e log dos dados extraídos
+                        let weather = {
+                            city: city?.[1]?.trim() || 'N/A',
+                            temperature: temperature?.[1]?.trim() || 'N/A',
+                            thermalSensation:
+                                thermalSensation?.[1]?.trim() || 'N/A',
+                            rainProbability:
+                                rainProbability?.[1]?.trim() || 'N/A',
+                        };
+
+                        this.app.log(`City: ${weather.city}`);
+                        this.app.log(`Temperature: ${weather.temperature}`);
+                        this.app.log(
+                            `Thermal Sensation: ${weather.thermalSensation}`,
+                        );
+                        this.app.log(
+                            `Rain Probability: ${weather.rainProbability}`,
+                        );
+
+                        // Atualiza o chat com a resposta formatada
                         this.app.chat.editResponse(
-                            `${_('The current temperature is')} ${weather.temperature}, with ${weather.rainProbability} of rain probability, and it feels like ${weather.thermalSensation}.`,
+                            `${_('The current temperature is')} ${weather.temperature}, ${_('with')} ${weather.rainProbability} ${_('of rain probability')}, ${_('and it feels like')} ${weather.thermalSensation}.`,
+                        );
+                    } catch (innerError) {
+                        this.app.log(
+                            `Failed to process response: ${innerError.message}`,
                         );
                     }
                 },
             );
         } catch (error) {
-            throw new Error(`Failed to complete request: ${error.message}`);
+            this.app.log(`Failed to complete request: ${error.message}`);
+            throw new Error(`Request error: ${error.message}`);
         }
     }
 
