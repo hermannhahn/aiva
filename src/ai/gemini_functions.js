@@ -195,7 +195,9 @@ export class GeminiFunctions {
                     location: {
                         type: 'string',
                         description:
-                            _('Leave empty to get weather from user location') +
+                            _(
+                                "Don't provide a location to get weather from user location",
+                            ) +
                             ', ' +
                             _('or provide a location, e.g.: London, UK'),
                     },

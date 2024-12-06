@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-06 19:19-0300\n"
+"POT-Creation-Date: 2024-12-06 19:20-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -468,59 +468,59 @@ msgstr ""
 msgid "Get Weather and forecast."
 msgstr ""
 
-#: src/ai/gemini_functions.js:198
-msgid "Leave empty to get weather from user location"
+#: src/ai/gemini_functions.js:199
+msgid "Don't provide a location to get weather from user location"
 msgstr ""
 
-#: src/ai/gemini_functions.js:200
+#: src/ai/gemini_functions.js:202
 msgid "or provide a location, e.g.: London, UK"
 msgstr ""
 
-#: src/ai/gemini_functions.js:205
+#: src/ai/gemini_functions.js:207
 msgid "Response text before get weather, e.g.: "
 msgstr ""
 
-#: src/ai/gemini_functions.js:206
+#: src/ai/gemini_functions.js:208
 msgid "Sure, getting weather forecast..."
 msgstr ""
 
-#: src/ai/gemini_functions.js:245
+#: src/ai/gemini_functions.js:247
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr ""
 
-#: src/ai/gemini_functions.js:286
+#: src/ai/gemini_functions.js:288
 msgid "End of text!"
 msgstr ""
 
-#: src/ai/gemini_functions.js:290
+#: src/ai/gemini_functions.js:292
 msgid "Failed to get text from clipboard"
 msgstr ""
 
-#: src/ai/gemini_functions.js:306
+#: src/ai/gemini_functions.js:308
 msgid "Please, install"
 msgstr ""
 
-#: src/ai/gemini_functions.js:310
+#: src/ai/gemini_functions.js:312
 msgid "first"
 msgstr ""
 
-#: src/ai/gemini_functions.js:327 src/ai/gemini_functions.js:380
+#: src/ai/gemini_functions.js:329 src/ai/gemini_functions.js:382
 msgid "Error opening site"
 msgstr ""
 
-#: src/ai/gemini_functions.js:371
+#: src/ai/gemini_functions.js:373
 msgid "You don't have any browser installed."
 msgstr ""
 
-#: src/ai/gemini_functions.js:373
+#: src/ai/gemini_functions.js:375
 msgid "Please, install a browser and try again."
 msgstr ""
 
-#: src/ai/gemini_functions.js:375
+#: src/ai/gemini_functions.js:377
 msgid "Opening App Store..."
 msgstr ""
 
-#: src/ai/gemini_functions.js:393
+#: src/ai/gemini_functions.js:395
 msgid "Error getting weather"
 msgstr ""
 
