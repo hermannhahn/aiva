@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-06 19:20-0300\n"
+"POT-Creation-Date: 2024-12-06 20:20-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -456,7 +456,7 @@ msgstr "palha"
 msgid "dry_lang_var2"
 msgstr "deserto"
 
-#: src/ai/gemini_functions.js:173
+#: src/ai/gemini_functions.js:173 src/utils/utils.js:497
 msgid "cold"
 msgstr "frio"
 
@@ -470,7 +470,7 @@ msgstr "gelado"
 msgid "cold_lang_var2"
 msgstr "gelando"
 
-#: src/ai/gemini_functions.js:176
+#: src/ai/gemini_functions.js:176 src/utils/utils.js:512
 msgid "hot"
 msgstr "quente"
 
@@ -484,7 +484,7 @@ msgstr "calor"
 msgid "hot_lang_var2"
 msgstr "fogo"
 
-#: src/ai/gemini_functions.js:179
+#: src/ai/gemini_functions.js:179 src/utils/utils.js:509
 msgid "warm"
 msgstr "esquentando"
 
@@ -493,7 +493,7 @@ msgstr "esquentando"
 msgid "warm_lang_var1"
 msgstr "aquecendo"
 
-#: src/ai/gemini_functions.js:181
+#: src/ai/gemini_functions.js:181 src/utils/utils.js:503
 msgid "mild"
 msgstr "calmo"
 
@@ -528,7 +528,8 @@ msgstr "Informações sobre tempo e previsão."
 #: src/ai/gemini_functions.js:199
 #, fuzzy
 msgid "Don't provide a location to get weather from user location"
-msgstr "Não forneça uma localização para obter o clima da localização do usuário"
+msgstr ""
+"Não forneça uma localização para obter o clima da localização do usuário"
 
 #: src/ai/gemini_functions.js:202
 msgid "or provide a location, e.g.: London, UK"
@@ -756,6 +757,61 @@ msgstr "Aqui estão as principais notícias"
 #: src/utils/utils.js:320
 msgid "Look at example below:"
 msgstr "Veja o exemplo abaixo:"
+
+#: src/utils/utils.js:470
+msgid "clear"
+msgstr "limpar"
+
+#: src/utils/utils.js:472
+#, fuzzy
+msgid "few clouds"
+msgstr "nuvens"
+
+#: src/utils/utils.js:474
+msgid "scattered clouds"
+msgstr ""
+
+#: src/utils/utils.js:476
+#, fuzzy
+msgid "broken clouds"
+msgstr "nuvens"
+
+#: src/utils/utils.js:478
+#, fuzzy
+msgid "overcast"
+msgstr "ṕrevisão"
+
+#: src/utils/utils.js:480 src/utils/utils.js:491
+msgid "unknown"
+msgstr ""
+
+#: src/utils/utils.js:487
+msgid "night"
+msgstr ""
+
+#: src/utils/utils.js:489
+#, fuzzy
+msgid "day"
+msgstr "seco"
+
+#: src/utils/utils.js:514
+#, fuzzy
+msgid "unknown temperature"
+msgstr "temperatura"
+
+#: src/utils/utils.js:519
+#, fuzzy
+msgid "rainy"
+msgstr "chuva"
+
+#: src/utils/utils.js:522
+#, fuzzy
+msgid "snowy"
+msgstr "neve"
+
+#: src/utils/utils.js:524
+msgid "sunny"
+msgstr ""
 
 #: src/utils/utils.js:527
 msgid "Now it is"
@@ -1072,9 +1128,6 @@ msgstr "Suas preferências foram salvas"
 #~ msgstr "apagar"
 
 #~ msgid "clean"
-#~ msgstr "limpar"
-
-#~ msgid "clear"
 #~ msgstr "limpar"
 
 #~ msgid "turn on"

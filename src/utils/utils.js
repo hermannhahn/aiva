@@ -467,61 +467,61 @@ export class Utils {
                         function cloudCloverString() {
                             switch (res.current.cloud_cover) {
                                 case 0:
-                                    return 'clear';
+                                    return _('clear');
                                 case 1:
-                                    return 'few clouds';
+                                    return _('few clouds');
                                 case 2:
-                                    return 'scattered clouds';
+                                    return _('scattered clouds');
                                 case 3:
-                                    return 'broken clouds';
+                                    return _('broken clouds');
                                 case 4:
-                                    return 'overcast';
+                                    return _('overcast');
                                 default:
-                                    return 'unknown';
+                                    return _('unknown');
                             }
                         }
 
                         function isDayString() {
                             switch (res.current.is_day) {
                                 case 0:
-                                    return 'night';
+                                    return _('night');
                                 case 1:
-                                    return 'day';
+                                    return _('day');
                                 default:
-                                    return 'unknown';
+                                    return _('unknown');
                             }
                         }
 
                         function sensationString() {
                             if (res.current.apparent_temperature < 10) {
-                                return 'cold';
+                                return _('cold');
                             }
                             if (
                                 res.current.apparent_temperature >= 10 &&
                                 res.current.apparent_temperature < 25
                             ) {
-                                return 'mild';
+                                return _('mild');
                             }
                             if (
                                 res.current.apparent_temperature >= 25 &&
                                 res.current.apparent_temperature < 35
                             ) {
-                                return 'warm';
+                                return _('warm');
                             }
                             if (res.current.apparent_temperature >= 35) {
-                                return 'hot';
+                                return _('hot');
                             }
-                            return 'unknown';
+                            return _('unknown temperature');
                         }
 
                         function climeStatusString() {
                             if (res.current.precipitation > 0) {
-                                return 'rainy';
+                                return _('rainy');
                             }
                             if (res.current.snowfall > 0) {
-                                return 'snowy';
+                                return _('snowy');
                             }
-                            return 'sunny';
+                            return _('sunny');
                         }
 
                         let weatherDescription = `${_('Now it is')} ${isDayString()} ${_('in')} ${this.loc} ${_('and it is')} ${climeStatusString()}. ${_('The weather is')} ${sensationString()}, ${_('the sky is')} ${cloudCloverString()}, ${_('the temperature is')} ${res.current.temperature_2m}${res.current_units.temperature_2m}, ${_('but it feels like')} ${res.current.apparent_temperature}${res.current_units.apparent_temperature}. ${_('The humidity is')} ${res.current.relative_humidity_2m}%.`;

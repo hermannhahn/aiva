@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-06 19:21-0300\n"
+"POT-Creation-Date: 2024-12-06 20:20-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -408,7 +408,7 @@ msgstr ""
 msgid "dry_lang_var2"
 msgstr ""
 
-#: src/ai/gemini_functions.js:173
+#: src/ai/gemini_functions.js:173 src/utils/utils.js:497
 msgid "cold"
 msgstr ""
 
@@ -420,7 +420,7 @@ msgstr ""
 msgid "cold_lang_var2"
 msgstr ""
 
-#: src/ai/gemini_functions.js:176
+#: src/ai/gemini_functions.js:176 src/utils/utils.js:512
 msgid "hot"
 msgstr ""
 
@@ -432,7 +432,7 @@ msgstr ""
 msgid "hot_lang_var2"
 msgstr ""
 
-#: src/ai/gemini_functions.js:179
+#: src/ai/gemini_functions.js:179 src/utils/utils.js:509
 msgid "warm"
 msgstr ""
 
@@ -440,7 +440,7 @@ msgstr ""
 msgid "warm_lang_var1"
 msgstr ""
 
-#: src/ai/gemini_functions.js:181
+#: src/ai/gemini_functions.js:181 src/utils/utils.js:503
 msgid "mild"
 msgstr ""
 
@@ -691,6 +691,54 @@ msgstr ""
 
 #: src/utils/utils.js:320
 msgid "Look at example below:"
+msgstr ""
+
+#: src/utils/utils.js:470
+msgid "clear"
+msgstr ""
+
+#: src/utils/utils.js:472
+msgid "few clouds"
+msgstr ""
+
+#: src/utils/utils.js:474
+msgid "scattered clouds"
+msgstr ""
+
+#: src/utils/utils.js:476
+msgid "broken clouds"
+msgstr ""
+
+#: src/utils/utils.js:478
+msgid "overcast"
+msgstr ""
+
+#: src/utils/utils.js:480 src/utils/utils.js:491
+msgid "unknown"
+msgstr ""
+
+#: src/utils/utils.js:487
+msgid "night"
+msgstr ""
+
+#: src/utils/utils.js:489
+msgid "day"
+msgstr ""
+
+#: src/utils/utils.js:514
+msgid "unknown temperature"
+msgstr ""
+
+#: src/utils/utils.js:519
+msgid "rainy"
+msgstr ""
+
+#: src/utils/utils.js:522
+msgid "snowy"
+msgstr ""
+
+#: src/utils/utils.js:524
+msgid "sunny"
 msgstr ""
 
 #: src/utils/utils.js:527
