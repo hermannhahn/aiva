@@ -531,12 +531,10 @@ msgid "Don't provide a location to get weather from user location"
 msgstr "Não forneça uma localização para obter o clima da localização do usuário"
 
 #: src/ai/gemini_functions.js:202
-#, fuzzy
 msgid "or provide a location, e.g.: London, UK"
 msgstr "ou forneça uma localização, por exemplo: London, UK"
 
 #: src/ai/gemini_functions.js:207
-#, fuzzy
 msgid "Response text before get weather, e.g.: "
 msgstr "Texto de resposta antes de executar, por exemplo: "
 
