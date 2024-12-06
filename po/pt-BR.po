@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-06 20:20-0300\n"
+"POT-Creation-Date: 2024-12-06 20:39-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -797,47 +797,44 @@ msgstr "dia"
 msgid "unknown temperature"
 msgstr "temperatura desconhecida"
 
-#: src/utils/utils.js:519
-msgid "rainy"
-msgstr "chuva"
+#: src/utils/utils.js:520
+msgid " It's raining"
+msgstr ""
 
-#: src/utils/utils.js:522
-msgid "snowy"
-msgstr "neve"
+#: src/utils/utils.js:523
+msgid " It's snowing"
+msgstr ""
 
-#: src/utils/utils.js:524
-msgid "sunny"
+#: src/utils/utils.js:526
+#, fuzzy
+msgid " It's sunny"
 msgstr "ensolarado"
 
-#: src/utils/utils.js:527
+#: src/utils/utils.js:531
 msgid "Now it is"
 msgstr "Agora é"
 
-#: src/utils/utils.js:527
+#: src/utils/utils.js:531
 msgid "in"
 msgstr "em"
 
-#: src/utils/utils.js:527
-msgid "and it is"
-msgstr "e está"
-
-#: src/utils/utils.js:527
-msgid "The weather is"
-msgstr "O tempo está"
-
-#: src/utils/utils.js:527
+#: src/utils/utils.js:531
 msgid "the sky is"
 msgstr "o céu está"
 
-#: src/utils/utils.js:527
+#: src/utils/utils.js:531
+msgid "The weather is"
+msgstr "O tempo está"
+
+#: src/utils/utils.js:531
 msgid "the temperature is"
 msgstr "a temperatura é de"
 
-#: src/utils/utils.js:527
+#: src/utils/utils.js:531
 msgid "but it feels like"
 msgstr "mas a sensação é de"
 
-#: src/utils/utils.js:527
+#: src/utils/utils.js:531
 msgid "The humidity is"
 msgstr "A humidade do ar é de"
 
@@ -948,6 +945,15 @@ msgstr "Salvar"
 #: src/prefs.js:287
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
+
+#~ msgid "rainy"
+#~ msgstr "chuva"
+
+#~ msgid "snowy"
+#~ msgstr "neve"
+
+#~ msgid "and it is"
+#~ msgstr "e está"
 
 #, fuzzy
 #~ msgid "Leave empty if no location was provided"

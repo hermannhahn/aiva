@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-06 20:20-0300\n"
+"POT-Creation-Date: 2024-12-06 20:39-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language es-ES\n"
@@ -786,49 +786,45 @@ msgstr ""
 msgid "unknown temperature"
 msgstr "Código copiado al portapapeles"
 
-#: src/utils/utils.js:519
-msgid "rainy"
+#: src/utils/utils.js:520
+msgid " It's raining"
 msgstr ""
 
-#: src/utils/utils.js:522
-msgid "snowy"
+#: src/utils/utils.js:523
+msgid " It's snowing"
 msgstr ""
 
-#: src/utils/utils.js:524
-msgid "sunny"
+#: src/utils/utils.js:526
+msgid " It's sunny"
 msgstr ""
 
-#: src/utils/utils.js:527
+#: src/utils/utils.js:531
 msgid "Now it is"
 msgstr ""
 
-#: src/utils/utils.js:527
+#: src/utils/utils.js:531
 msgid "in"
 msgstr ""
 
-#: src/utils/utils.js:527
-msgid "and it is"
+#: src/utils/utils.js:531
+msgid "the sky is"
 msgstr ""
 
-#: src/utils/utils.js:527
+#: src/utils/utils.js:531
 #, fuzzy
 msgid "The weather is"
 msgstr "Código copiado al portapapeles"
 
-#: src/utils/utils.js:527
-msgid "the sky is"
-msgstr ""
-
-#: src/utils/utils.js:527
+#: src/utils/utils.js:531
 #, fuzzy
 msgid "the temperature is"
 msgstr "Código copiado al portapapeles"
 
-#: src/utils/utils.js:527
+#: src/utils/utils.js:531
 msgid "but it feels like"
 msgstr ""
 
-#: src/utils/utils.js:527
+#: src/utils/utils.js:531
 #, fuzzy
 msgid "The humidity is"
 msgstr "Código copiado al portapapeles"

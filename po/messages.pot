@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-06 20:23-0300\n"
+"POT-Creation-Date: 2024-12-06 20:39-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -729,47 +729,43 @@ msgstr ""
 msgid "unknown temperature"
 msgstr ""
 
-#: src/utils/utils.js:519
-msgid "rainy"
+#: src/utils/utils.js:520
+msgid " It's raining"
 msgstr ""
 
-#: src/utils/utils.js:522
-msgid "snowy"
+#: src/utils/utils.js:523
+msgid " It's snowing"
 msgstr ""
 
-#: src/utils/utils.js:524
-msgid "sunny"
+#: src/utils/utils.js:526
+msgid " It's sunny"
 msgstr ""
 
-#: src/utils/utils.js:527
+#: src/utils/utils.js:531
 msgid "Now it is"
 msgstr ""
 
-#: src/utils/utils.js:527
+#: src/utils/utils.js:531
 msgid "in"
 msgstr ""
 
-#: src/utils/utils.js:527
-msgid "and it is"
-msgstr ""
-
-#: src/utils/utils.js:527
-msgid "The weather is"
-msgstr ""
-
-#: src/utils/utils.js:527
+#: src/utils/utils.js:531
 msgid "the sky is"
 msgstr ""
 
-#: src/utils/utils.js:527
+#: src/utils/utils.js:531
+msgid "The weather is"
+msgstr ""
+
+#: src/utils/utils.js:531
 msgid "the temperature is"
 msgstr ""
 
-#: src/utils/utils.js:527
+#: src/utils/utils.js:531
 msgid "but it feels like"
 msgstr ""
 
-#: src/utils/utils.js:527
+#: src/utils/utils.js:531
 msgid "The humidity is"
 msgstr ""
 

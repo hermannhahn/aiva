@@ -514,17 +514,21 @@ export class Utils {
                             return _('unknown temperature');
                         }
 
-                        function climeStatusString() {
+                        function climeStatus() {
+                            let clime = '';
                             if (res.current.precipitation > 0) {
-                                return _('rainy');
+                                clime = _(" It's raining");
                             }
                             if (res.current.snowfall > 0) {
-                                return _('snowy');
+                                clime = _(" It's snowing");
                             }
-                            return _('sunny');
+                            if (res.current.is_day === 1) {
+                                clime = _(" It's sunny");
+                            }
+                            return clime;
                         }
 
-                        let weatherDescription = `${_('Now it is')} ${isDayString()} ${_('in')} ${this.loc} ${_('and it is')} ${climeStatusString()}. ${_('The weather is')} ${sensationString()}, ${_('the sky is')} ${cloudCloverString()}, ${_('the temperature is')} ${res.current.temperature_2m}${res.current_units.temperature_2m}, ${_('but it feels like')} ${res.current.apparent_temperature}${res.current_units.apparent_temperature}. ${_('The humidity is')} ${res.current.relative_humidity_2m}%.`;
+                        let weatherDescription = `${_('Now it is')} ${isDayString()} ${_('in')} ${this.loc}. ${climeStatus()}${_('the sky is')} ${cloudCloverString()},  ${_('The weather is')} ${sensationString()}, ${_('the temperature is')} ${res.current.temperature_2m}${res.current_units.temperature_2m}, ${_('but it feels like')} ${res.current.apparent_temperature}${res.current_units.apparent_temperature}. ${_('The humidity is')} ${res.current.relative_humidity_2m}%.`;
                         this.app.chat.editResponse(weatherDescription);
                     } catch (error) {
                         this.app.log(`Failed to process response: ${error}`);
