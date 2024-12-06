@@ -192,6 +192,13 @@ export class GeminiFunctions {
             parameters: {
                 type: 'object',
                 properties: {
+                    location: {
+                        type: 'string',
+                        description:
+                            _('Location to get weather, e.g.: ') +
+                            _('London, UK'),
+                        default: 'userLocation',
+                    },
                     response: {
                         type: 'string',
                         description:

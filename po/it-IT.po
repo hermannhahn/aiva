@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-06 16:58-0300\n"
+"POT-Creation-Date: 2024-12-06 16:59-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language it-IT\n"
@@ -519,53 +519,61 @@ msgid "Weather and forecast for user location."
 msgstr ""
 
 #: src/ai/gemini_functions.js:198
-msgid "Response text before get weather, e.g.: "
+msgid "Location to get weather, e.g.: "
 msgstr ""
 
 #: src/ai/gemini_functions.js:199
+msgid "London, UK"
+msgstr ""
+
+#: src/ai/gemini_functions.js:205
+msgid "Response text before get weather, e.g.: "
+msgstr ""
+
+#: src/ai/gemini_functions.js:206
 #, fuzzy
 msgid "Sure, getting weather forecast..."
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini_functions.js:238
+#: src/ai/gemini_functions.js:245
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr ""
 
-#: src/ai/gemini_functions.js:279
+#: src/ai/gemini_functions.js:286
 msgid "End of text!"
 msgstr ""
 
-#: src/ai/gemini_functions.js:283
+#: src/ai/gemini_functions.js:290
 #, fuzzy
 msgid "Failed to get text from clipboard"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini_functions.js:299
+#: src/ai/gemini_functions.js:306
 msgid "Please, install"
 msgstr ""
 
-#: src/ai/gemini_functions.js:303
+#: src/ai/gemini_functions.js:310
 msgid "first"
 msgstr ""
 
-#: src/ai/gemini_functions.js:320 src/ai/gemini_functions.js:373
+#: src/ai/gemini_functions.js:327 src/ai/gemini_functions.js:380
 #, fuzzy
 msgid "Error opening site"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini_functions.js:364
+#: src/ai/gemini_functions.js:371
 msgid "You don't have any browser installed."
 msgstr ""
 
-#: src/ai/gemini_functions.js:366
+#: src/ai/gemini_functions.js:373
 msgid "Please, install a browser and try again."
 msgstr ""
 
-#: src/ai/gemini_functions.js:368
+#: src/ai/gemini_functions.js:375
 msgid "Opening App Store..."
 msgstr ""
 
-#: src/ai/gemini_functions.js:386
+#: src/ai/gemini_functions.js:393
 #, fuzzy
 msgid "Error getting weather"
 msgstr "Codice copiato negli appunti"

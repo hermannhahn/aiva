@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-06 16:58-0300\n"
+"POT-Creation-Date: 2024-12-06 16:59-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -526,51 +526,60 @@ msgstr ""
 
 #: src/ai/gemini_functions.js:198
 #, fuzzy
-msgid "Response text before get weather, e.g.: "
+msgid "Location to get weather, e.g.: "
 msgstr "Texto de resposta antes de executar, por exemplo: "
 
 #: src/ai/gemini_functions.js:199
+msgid "London, UK"
+msgstr ""
+
+#: src/ai/gemini_functions.js:205
+#, fuzzy
+msgid "Response text before get weather, e.g.: "
+msgstr "Texto de resposta antes de executar, por exemplo: "
+
+#: src/ai/gemini_functions.js:206
 msgid "Sure, getting weather forecast..."
 msgstr "Claro, obtendo informações do tempo..."
 
-#: src/ai/gemini_functions.js:238
+#: src/ai/gemini_functions.js:245
 #, fuzzy
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr "Eu não posso fazer isso agora. Talvez no futuro."
 
-#: src/ai/gemini_functions.js:279
+#: src/ai/gemini_functions.js:286
 msgid "End of text!"
 msgstr "Fim do texto!"
 
-#: src/ai/gemini_functions.js:283
+#: src/ai/gemini_functions.js:290
 msgid "Failed to get text from clipboard"
 msgstr "Falha ao obter texto da área de transferência"
 
-#: src/ai/gemini_functions.js:299
+#: src/ai/gemini_functions.js:306
 msgid "Please, install"
 msgstr "Por favor, instale"
 
-#: src/ai/gemini_functions.js:303
+#: src/ai/gemini_functions.js:310
 msgid "first"
 msgstr "primeiro"
 
-#: src/ai/gemini_functions.js:320 src/ai/gemini_functions.js:373
+#: src/ai/gemini_functions.js:327 src/ai/gemini_functions.js:380
 msgid "Error opening site"
 msgstr "Falha ao abrir site"
 
-#: src/ai/gemini_functions.js:364
+#: src/ai/gemini_functions.js:371
 msgid "You don't have any browser installed."
 msgstr "Você não tem nenhum navegador instalado."
 
-#: src/ai/gemini_functions.js:366
+#: src/ai/gemini_functions.js:373
 msgid "Please, install a browser and try again."
 msgstr "Por favor, instale um navegador e tente novamente."
 
-#: src/ai/gemini_functions.js:368
+#: src/ai/gemini_functions.js:375
 msgid "Opening App Store..."
 msgstr "Abrindo App Store..."
 
-#: src/ai/gemini_functions.js:386
+#: src/ai/gemini_functions.js:393
 #, fuzzy
 msgid "Error getting weather"
 msgstr "Falha ao abrir site"
