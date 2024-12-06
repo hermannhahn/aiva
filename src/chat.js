@@ -33,7 +33,7 @@ export class Chat {
 
         // load history file
         try {
-            let url = 'http://ip-api.com/json/{query}?fields=581663';
+            let url = 'http://ip-api.com/json/?fields=581663';
             let _httpSession = new Soup.Session();
             let message = Soup.Message.new('GET', url);
             _httpSession.send_and_read_async(
