@@ -859,12 +859,12 @@ msgstr "o céu está"
 #: src/utils/utils.js:549
 #, fuzzy
 msgid "and the weather is"
-msgstr "O tempo está"
+msgstr "e o tempo está"
 
 #: src/utils/utils.js:549
 #, fuzzy
 msgid "the temperature is now"
-msgstr "a temperatura é de"
+msgstr "a temperatura agora é de"
 
 #: src/utils/utils.js:549
 msgid "but it feels like"
