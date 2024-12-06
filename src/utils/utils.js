@@ -418,7 +418,7 @@ export class Utils {
         try {
             this.lat = this.app.userSettings.LAT;
             this.lon = this.app.userSettings.LON;
-            this.loc = this.app.userSettings.LOCATION;
+            this.loc = this.app.userSettings.CITY;
 
             if (location !== 'userLocation') {
                 let coordURL = `https://www.mapquestapi.com/geocoding/v1/address?key=KEY&location=${location}`;
