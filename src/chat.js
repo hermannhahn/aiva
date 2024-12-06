@@ -1,4 +1,5 @@
 import GLib from 'gi://GLib';
+import Soup from 'gi://Soup';
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 /**
@@ -31,9 +32,60 @@ export class Chat {
         this.isOpen = false;
 
         // load history file
-        this.history = this.app.database.getHistory();
-        if (!this.history.length || this.history.length < 1) {
-            this.app.setLocation();
+        try {
+            let url = 'http://ip-api.com/json/{query}?fields=581663';
+            let _httpSession = new Soup.Session();
+            let message = Soup.Message.new('GET', url);
+            _httpSession.send_and_read_async(
+                message,
+                GLib.PRIORITY_DEFAULT,
+                null,
+                (_httpSession, result) => {
+                    let bytes = _httpSession.send_and_read_finish(result);
+                    let decoder = new TextDecoder('utf-8');
+                    let response = decoder.decode(bytes.get_data());
+                    const res = JSON.parse(response);
+                    const ip = res.query;
+                    const status = res.status;
+                    const errorMessage = res.message;
+                    const country = res.country;
+                    const countryCode = res.countryCode;
+                    const region = res.region;
+                    const regionName = res.regionName;
+                    const city = res.city;
+                    const district = res.district;
+                    console.log('IP: ' + ip);
+                    console.log('Status: ' + status);
+                    console.log('Message: ' + errorMessage);
+                    console.log('Country: ' + country);
+                    console.log('Country Code: ' + countryCode);
+                    console.log('Region: ' + region);
+                    console.log('Region Name: ' + regionName);
+                    console.log('City: ' + city);
+                    console.log('District: ' + district);
+                    this.app.userSettings.LOCATION = country;
+                    this.app.userSettings.IP = ip;
+                    this.app.userSettings.COUNTRY = country;
+                    this.app.userSettings.COUNTRY_CODE = countryCode;
+                    this.app.userSettings.REGION = region;
+                    this.app.userSettings.REGION_NAME = regionName;
+                    this.app.userSettings.CITY = city;
+                    this.app.userSettings.DISTRICT = district;
+                    this.app.extension.settings.set_string(
+                        'location',
+                        `${city}, ${regionName}, ${country}`,
+                    );
+                    this.history = this.app.database.getHistory();
+                    if (!this.history.length || this.history.length < 1) {
+                        this.app.database.addToHistory(
+                            this.app.gemini.getTuneString('user'),
+                            this.app.gemini.getTuneString('model'),
+                        );
+                    }
+                },
+            );
+        } catch (error) {
+            this.logError('Error getting location: ' + error);
         }
         this.app.log('Chat initialized.');
     }
