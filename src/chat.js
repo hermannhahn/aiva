@@ -45,8 +45,12 @@ export class Chat {
                     let decoder = new TextDecoder('utf-8');
                     let response = decoder.decode(bytes.get_data());
                     const res = JSON.parse(response);
-                    const ip = res.query;
                     const status = res.status;
+                    if (status !== 'success') {
+                        this.logError('Error getting location: ' + res.message);
+                        return;
+                    }
+                    const ip = res.query;
                     const errorMessage = res.message;
                     const country = res.country;
                     const countryCode = res.countryCode;
