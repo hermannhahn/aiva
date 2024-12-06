@@ -528,12 +528,12 @@ msgstr "Informações sobre tempo e previsão."
 #: src/ai/gemini_functions.js:198
 #, fuzzy
 msgid "Leave empty if no location was provided"
-msgstr "Deixe em branco para localização atual do usuário, ou"
+msgstr "Deixe em branco se nenhuma localização foi fornecida"
 
 #: src/ai/gemini_functions.js:200
 #, fuzzy
 msgid "or provide a location, e.g.: London, UK"
-msgstr "informe uma localização, por exemplo: "
+msgstr "ou forneça uma localização, por exemplo: London, UK"
 
 #: src/ai/gemini_functions.js:205
 #, fuzzy
