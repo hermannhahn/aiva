@@ -761,22 +761,22 @@ msgstr "Veja o exemplo abaixo:"
 #: src/utils/utils.js:527
 #, fuzzy
 msgid "Now it is"
-msgstr "está"
+msgstr "Agora é"
 
 #: src/utils/utils.js:527
 #, fuzzy
 msgid "in"
-msgstr "procurar"
+msgstr "em"
 
 #: src/utils/utils.js:527
 #, fuzzy
 msgid "and it is"
-msgstr "e hoje é"
+msgstr "e está"
 
 #: src/utils/utils.js:527
 #, fuzzy
 msgid "The weather is"
-msgstr "tempo"
+msgstr "O tempo está"
 
 #: src/utils/utils.js:527
 msgid "the sky is"
