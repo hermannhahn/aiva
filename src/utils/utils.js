@@ -498,7 +498,16 @@ export class Utils {
                         //   }
 
                         this.app.chat.editResponse(
-                            `\n${_('Temperature')}: ${res.current.temperature_2m}°C\n${_('Humidity')}: ${res.current.relative_humidity_2m}%\n${_('Apparent temperature')}: ${res.current.apparent_temperature}°C\n${_('Cloud cover')}: ${res.current.cloud_cover}%\n${_('Precipitation')}: ${res.current.precipitation}mm\n${_('Rain')}: ${res.current.rain}mm\n${_('Showers')}: ${res.current.showers}mm\n${_('Snowfall')}: ${res.current.snowfall}cm`,
+                            `${_('Current weather')}: Temperature: ${res.current.temperature_2m}°C
+Humidity: ${res.current.relative_humidity_2m}%
+Apparent temperature: ${res.current.apparent_temperature}°C
+Cloud cover: ${res.current.cloud_cover}%
+Precipitation: ${res.current.precipitation}mm
+Rain: ${res.current.rain}mm
+Showers: ${res.current.showers}mm
+Snowfall: ${res.current.snowfall}cm
+`,
+                            // `\n${_('Temperature')}: ${res.current.temperature_2m}°C\n${_('Humidity')}: ${res.current.relative_humidity_2m}%\n${_('Apparent temperature')}: ${res.current.apparent_temperature}°C\n${_('Cloud cover')}: ${res.current.cloud_cover}%\n${_('Precipitation')}: ${res.current.precipitation}mm\n${_('Rain')}: ${res.current.rain}mm\n${_('Showers')}: ${res.current.showers}mm\n${_('Snowfall')}: ${res.current.snowfall}cm`,
                         );
                     } catch (error) {
                         this.app.log(`Failed to process response: ${error}`);

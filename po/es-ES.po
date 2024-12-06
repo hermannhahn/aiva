@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-06 16:08-0300\n"
+"POT-Creation-Date: 2024-12-06 16:12-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language es-ES\n"
@@ -741,39 +741,8 @@ msgstr ""
 
 #: src/utils/utils.js:501
 #, fuzzy
-msgid "Temperature"
+msgid "Current weather"
 msgstr "Código copiado al portapapeles"
-
-#: src/utils/utils.js:501
-#, fuzzy
-msgid "Humidity"
-msgstr "Código copiado al portapapeles"
-
-#: src/utils/utils.js:501
-#, fuzzy
-msgid "Apparent temperature"
-msgstr "Código copiado al portapapeles"
-
-#: src/utils/utils.js:501
-msgid "Cloud cover"
-msgstr ""
-
-#: src/utils/utils.js:501
-#, fuzzy
-msgid "Precipitation"
-msgstr "Código copiado al portapapeles"
-
-#: src/utils/utils.js:501
-msgid "Rain"
-msgstr ""
-
-#: src/utils/utils.js:501
-msgid "Showers"
-msgstr ""
-
-#: src/utils/utils.js:501
-msgid "Snowfall"
-msgstr ""
 
 #: src/commands.js:21
 msgid "Invalid command"
@@ -883,6 +852,22 @@ msgstr ""
 #: src/prefs.js:287
 msgid "Your preferences have been saved"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Temperature"
+#~ msgstr "Código copiado al portapapeles"
+
+#, fuzzy
+#~ msgid "Humidity"
+#~ msgstr "Código copiado al portapapeles"
+
+#, fuzzy
+#~ msgid "Apparent temperature"
+#~ msgstr "Código copiado al portapapeles"
+
+#, fuzzy
+#~ msgid "Precipitation"
+#~ msgstr "Código copiado al portapapeles"
 
 #, fuzzy
 #~ msgid "weather_lang_var2"

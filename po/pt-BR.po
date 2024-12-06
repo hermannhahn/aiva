@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-06 16:08-0300\n"
+"POT-Creation-Date: 2024-12-06 16:12-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -750,39 +750,8 @@ msgstr "Veja o exemplo abaixo:"
 
 #: src/utils/utils.js:501
 #, fuzzy
-msgid "Temperature"
-msgstr "temperatura"
-
-#: src/utils/utils.js:501
-#, fuzzy
-msgid "Humidity"
-msgstr "humidade"
-
-#: src/utils/utils.js:501
-#, fuzzy
-msgid "Apparent temperature"
-msgstr "temperatura"
-
-#: src/utils/utils.js:501
-msgid "Cloud cover"
-msgstr ""
-
-#: src/utils/utils.js:501
-#, fuzzy
-msgid "Precipitation"
-msgstr "precipitação"
-
-#: src/utils/utils.js:501
-msgid "Rain"
-msgstr ""
-
-#: src/utils/utils.js:501
-msgid "Showers"
-msgstr ""
-
-#: src/utils/utils.js:501
-msgid "Snowfall"
-msgstr ""
+msgid "Current weather"
+msgstr "Falha ao abrir site"
 
 #: src/commands.js:21
 msgid "Invalid command"
@@ -891,6 +860,22 @@ msgstr "Salvar"
 #: src/prefs.js:287
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
+
+#, fuzzy
+#~ msgid "Temperature"
+#~ msgstr "temperatura"
+
+#, fuzzy
+#~ msgid "Humidity"
+#~ msgstr "humidade"
+
+#, fuzzy
+#~ msgid "Apparent temperature"
+#~ msgstr "temperatura"
+
+#, fuzzy
+#~ msgid "Precipitation"
+#~ msgstr "precipitação"
 
 #, fuzzy
 #~ msgid "Get weather forecast"
