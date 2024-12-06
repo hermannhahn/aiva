@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-05 20:32-0300\n"
+"POT-Creation-Date: 2024-12-06 01:32-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -689,7 +689,7 @@ msgstr ""
 msgid "Look at example below:"
 msgstr ""
 
-#: src/utils/utils.js:473
+#: src/utils/utils.js:486
 msgid "The current temperature is"
 msgstr ""
 

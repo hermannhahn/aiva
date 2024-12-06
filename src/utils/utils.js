@@ -416,63 +416,78 @@ export class Utils {
 
     getCurrentLocalWeather(url = 'https://www.cptec.inpe.br/') {
         try {
-            let response = this.curl(url);
-            response = JSON.parse(response);
+            let _httpSession = new Soup.Session();
+            let message = Soup.Message.new('GET', url);
+            _httpSession.send_and_read_async(
+                message,
+                GLib.PRIORITY_DEFAULT,
+                null,
+                (_httpSession, result) => {
+                    let bytes = _httpSession.send_and_read_finish(result);
+                    let decoder = new TextDecoder('utf-8');
+                    let response = decoder.decode(bytes.get_data());
+                    response = JSON.parse(response);
 
-            // Use regex para extrair o conteúdo com id="cidade"
-            let city = response.match(
-                /<[^>]*id=["']cidade_uf["'][^>]*>(.*?)<\/[^>]+>/,
-            );
-            let temperature = response.match(
-                /<[^>]*id=["']temperaturaPrev["'][^>]*>(.*?)<\/[^>]+>/,
-            );
-            let thermalSensation = response.match(
-                /<[^>]*id=["']sensacaoTerm["'][^>]*>(.*?)<\/[^>]+>/,
-            );
-            let rainProbability = response.match(
-                /<[^>]*id=["']probabilidadeChuva["'][^>]*>(.*?)<\/[^>]+>/,
-            );
+                    // Use regex para extrair o conteúdo com id="cidade"
+                    let city = response.match(
+                        /<[^>]*id=["']cidade_uf["'][^>]*>(.*?)<\/[^>]+>/,
+                    );
+                    let temperature = response.match(
+                        /<[^>]*id=["']temperaturaPrev["'][^>]*>(.*?)<\/[^>]+>/,
+                    );
+                    let thermalSensation = response.match(
+                        /<[^>]*id=["']sensacaoTerm["'][^>]*>(.*?)<\/[^>]+>/,
+                    );
+                    let rainProbability = response.match(
+                        /<[^>]*id=["']probabilidadeChuva["'][^>]*>(.*?)<\/[^>]+>/,
+                    );
 
-            if (city && city[1]) {
-                this.app.log(city[1].trim());
-            } else {
-                this.app.log('Elemento com id="cidade" não encontrado');
-            }
-            if (temperature && temperature[1]) {
-                this.app.log(temperature[1].trim());
-            } else {
-                this.app.log(
-                    'Elemento com id="temperaturaPrev" não encontrado',
-                );
-            }
-            if (thermalSensation && thermalSensation[1]) {
-                this.app.log(thermalSensation[1].trim());
-            } else {
-                this.app.log('Elemento com id="sensacaoTerm" não encontrado');
-            }
-            if (rainProbability && rainProbability[1]) {
-                this.app.log(rainProbability[1].trim());
-            } else {
-                this.app.log(
-                    'Elemento com id="probabilidadeChuva" não encontrado',
-                );
-            }
-            let weather = {
-                city: city[1].trim(),
-                temperature: temperature[1].trim(),
-                thermalSensation: thermalSensation[1].trim(),
-                rainProbability: rainProbability[1].trim(),
-            };
+                    if (city && city[1]) {
+                        this.app.log(city[1].trim());
+                    } else {
+                        this.app.log('Elemento com id="cidade" não encontrado');
+                    }
+                    if (temperature && temperature[1]) {
+                        this.app.log(temperature[1].trim());
+                    } else {
+                        this.app.log(
+                            'Elemento com id="temperaturaPrev" não encontrado',
+                        );
+                    }
+                    if (thermalSensation && thermalSensation[1]) {
+                        this.app.log(thermalSensation[1].trim());
+                    } else {
+                        this.app.log(
+                            'Elemento com id="sensacaoTerm" não encontrado',
+                        );
+                    }
+                    if (rainProbability && rainProbability[1]) {
+                        this.app.log(rainProbability[1].trim());
+                    } else {
+                        this.app.log(
+                            'Elemento com id="probabilidadeChuva" não encontrado',
+                        );
+                    }
+                    let weather = {
+                        city: city[1].trim(),
+                        temperature: temperature[1].trim(),
+                        thermalSensation: thermalSensation[1].trim(),
+                        rainProbability: rainProbability[1].trim(),
+                    };
 
-            this.app.log('City:' + weather.city);
-            this.app.log('Temperature:' + weather.temperature);
-            this.app.log('Thermal Temperature:' + weather.thermalSensation);
-            this.app.log('Rain Probability:' + weather.rainProbability);
-            if (weather) {
-                this.app.chat.editResponse(
-                    `${_('The current temperature is')} ${weather.temperature}, with ${weather.rainProbability} of rain probability, and it feels like ${weather.thermalSensation}.`,
-                );
-            }
+                    this.app.log('City:' + weather.city);
+                    this.app.log('Temperature:' + weather.temperature);
+                    this.app.log(
+                        'Thermal Temperature:' + weather.thermalSensation,
+                    );
+                    this.app.log('Rain Probability:' + weather.rainProbability);
+                    if (weather) {
+                        this.app.chat.editResponse(
+                            `${_('The current temperature is')} ${weather.temperature}, with ${weather.rainProbability} of rain probability, and it feels like ${weather.thermalSensation}.`,
+                        );
+                    }
+                },
+            );
         } catch (error) {
             throw new Error(`Failed to complete request: ${error.message}`);
         }
