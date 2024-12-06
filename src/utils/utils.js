@@ -524,7 +524,7 @@ export class Utils {
                             return 'sunny';
                         }
 
-                        let weatherDescription = `${_('In')} ${this.loc} ${_('to')}${isDayString()} ${_('it is')} ${climeStatusString()}. ${_('and')} ${sensationString()}, ${_('the sky is')} ${cloudCloverString()}, ${_('the temperature is')} ${res.current.temperature_2m}${res.current_units.temperature_2m}, ${_('but it feels like')} ${res.current.apparent_temperature}${res.current_units.apparent_temperature}. ${_('The humidity is')} ${res.current.relative_humidity_2m}%.`;
+                        let weatherDescription = `${_('In')} ${this.loc} ${_('to' + isDayString())} ${_('it is')} ${climeStatusString()}. ${_('and')} ${sensationString()}, ${_('the sky is')} ${cloudCloverString()}, ${_('the temperature is')} ${res.current.temperature_2m}${res.current_units.temperature_2m}, ${_('but it feels like')} ${res.current.apparent_temperature}${res.current_units.apparent_temperature}. ${_('The humidity is')} ${res.current.relative_humidity_2m}%.`;
                         this.app.chat.editResponse(weatherDescription);
                     } catch (error) {
                         this.app.log(`Failed to process response: ${error}`);
