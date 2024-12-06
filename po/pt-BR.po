@@ -774,7 +774,7 @@ msgstr "nuvens dispersas"
 #: src/utils/utils.js:476
 #, fuzzy
 msgid "broken clouds"
-msgstr "nublado"
+msgstr "nuvens esparsas"
 
 #: src/utils/utils.js:478
 #, fuzzy
@@ -783,28 +783,28 @@ msgstr "ṕrevisão"
 
 #: src/utils/utils.js:482
 msgid "mist"
-msgstr ""
+msgstr "neblinado"
 
 #: src/utils/utils.js:484
 msgid "haze"
-msgstr ""
+msgstr "neblinado"
 
 #: src/utils/utils.js:486
 msgid "dust"
-msgstr ""
+msgstr"empoeirado"
+
 
 #: src/utils/utils.js:488
 msgid "sand"
-msgstr ""
+msgstr "arenoso"
 
 #: src/utils/utils.js:490
-#, fuzzy
 msgid "ash"
-msgstr "Espanhol"
+msgstr "esfumaçado"
 
 #: src/utils/utils.js:492
 msgid "squall"
-msgstr ""
+msgstr "tempestade"
 
 #: src/utils/utils.js:494
 msgid "tornado"
@@ -832,16 +832,15 @@ msgstr "temperatura desconhecida"
 
 #: src/utils/utils.js:538
 msgid " and raining"
-msgstr ""
+msgstr "e chovendo"
 
 #: src/utils/utils.js:541
 msgid " and snowing"
-msgstr ""
+msgstr "e nevando"
 
 #: src/utils/utils.js:544
-#, fuzzy
 msgid " and sunny"
-msgstr "ensolarado"
+msgstr "e ensolarado"
 
 #: src/utils/utils.js:549
 msgid "Now it is"
@@ -852,17 +851,14 @@ msgid "in"
 msgstr "em"
 
 #: src/utils/utils.js:549
-#, fuzzy
 msgid "The sky is"
 msgstr "o céu está"
 
 #: src/utils/utils.js:549
-#, fuzzy
 msgid "and the weather is"
 msgstr "e o tempo está"
 
 #: src/utils/utils.js:549
-#, fuzzy
 msgid "the temperature is now"
 msgstr "a temperatura agora é de"
 
@@ -871,7 +867,6 @@ msgid "but it feels like"
 msgstr "mas a sensação é de"
 
 #: src/utils/utils.js:549
-#, fuzzy
 msgid "The humidity of the air is"
 msgstr "A humidade do ar é de"
 
