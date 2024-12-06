@@ -426,7 +426,6 @@ export class Utils {
                     let bytes = _httpSession.send_and_read_finish(result);
                     let decoder = new TextDecoder('utf-8');
                     let response = decoder.decode(bytes.get_data());
-                    response = JSON.parse(response);
 
                     // Use regex para extrair o conteúdo com id="cidade"
                     let city = response.match(
