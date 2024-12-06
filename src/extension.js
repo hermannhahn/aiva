@@ -15,7 +15,6 @@ import St from 'gi://St';
 import GObject from 'gi://GObject';
 import Clutter from 'gi://Clutter';
 import GLib from 'gi://GLib';
-import Soup from 'gi://Soup';
 import Gio from 'gi://Gio';
 import {
     Extension,
@@ -198,40 +197,6 @@ const Aiva = GObject.registerClass(
          */
         logError(message) {
             this.logger.logError(message);
-        }
-
-        setLocation() {
-            try {
-                let url = 'https://api.myip.com';
-                let _httpSession = new Soup.Session();
-                let message = Soup.Message.new('GET', url);
-                _httpSession.send_and_read_async(
-                    message,
-                    GLib.PRIORITY_DEFAULT,
-                    null,
-                    (_httpSession, result) => {
-                        let bytes = _httpSession.send_and_read_finish(result);
-                        let decoder = new TextDecoder('utf-8');
-                        let response = decoder.decode(bytes.get_data());
-                        const res = JSON.parse(response);
-                        const ip = res.ip;
-                        console.log('IP: ' + ip);
-                        const country = res.country;
-                        this.userSettings.LOCATION = country;
-                        this.extension.settings.set_string('location', country);
-                        console.log('Location: ' + country);
-                        this.database.addToHistory(
-                            this.gemini.getTuneString('user'),
-                            this.gemini.getTuneString('model'),
-                        );
-                        return country;
-                    },
-                );
-                return null;
-            } catch (error) {
-                this.logError('Error getting location: ' + error);
-                return null;
-            }
         }
     },
 );
