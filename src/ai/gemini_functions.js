@@ -195,10 +195,9 @@ export class GeminiFunctions {
                     location: {
                         type: 'string',
                         description:
-                            _('Leave empty for current user location, or') +
-                            ' ' +
-                            _('provide a location, e.g.: ') +
-                            _('London, UK'),
+                            _('Leave empty if no location was provided') +
+                            '. ' +
+                            _('or provide a location, e.g.: London, UK'),
                     },
                     response: {
                         type: 'string',
