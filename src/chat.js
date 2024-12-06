@@ -33,7 +33,7 @@ export class Chat {
 
         // load history file
         try {
-            let url = 'http://ip-api.com/json/?fields=581663';
+            let url = 'http://ip-api.com/json/?fields=573919';
             let _httpSession = new Soup.Session();
             let message = Soup.Message.new('GET', url);
             _httpSession.send_and_read_async(
@@ -56,6 +56,8 @@ export class Chat {
                     const regionName = res.regionName;
                     const city = res.city;
                     const district = res.district;
+                    const lat = res.lat;
+                    const lon = res.lon;
                     this.app.userSettings.LOCATION = country;
                     this.app.userSettings.IP = ip;
                     this.app.userSettings.COUNTRY = country;
@@ -64,6 +66,8 @@ export class Chat {
                     this.app.userSettings.REGION_NAME = regionName;
                     this.app.userSettings.CITY = city;
                     this.app.userSettings.DISTRICT = district;
+                    this.app.userSettings.LAT = lat;
+                    this.app.userSettings.LON = lon;
                     this.app.extension.settings.set_string(
                         'location',
                         `${city}, ${regionName}, ${country}`,
