@@ -522,7 +522,7 @@ msgstr "nevoeiro"
 
 #: src/ai/gemini_functions.js:191
 msgid "Weather and forecast for user location."
-msgstr ""
+msgstr "Previsão do tempo para localização do usuário."
 
 #: src/ai/gemini_functions.js:198
 #, fuzzy
