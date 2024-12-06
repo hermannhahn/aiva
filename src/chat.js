@@ -45,6 +45,7 @@ export class Chat {
                     let decoder = new TextDecoder('utf-8');
                     let response = decoder.decode(bytes.get_data());
                     const res = JSON.parse(response);
+                    this.app.log(JSON.stringify(res));
                     const status = res.status;
                     if (status !== 'success') {
                         this.app.log('Error getting location: ' + res.message);
