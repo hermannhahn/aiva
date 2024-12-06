@@ -414,11 +414,39 @@ export class Utils {
         }
     }
 
-    getCurrentLocalWeather() {
+    getCurrentLocalWeather(location = undefined) {
         try {
-            let lat = this.app.userSettings.LAT;
-            let lon = this.app.userSettings.LON;
-            let url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,rain,showers,snowfall,cloud_cover`;
+            this.lat = this.app.userSettings.LAT;
+            this.lon = this.app.userSettings.LON;
+            if (location !== undefined) {
+                let coordURL = `https://www.mapquestapi.com/geocoding/v1/address?key=KEY&location=${location}`;
+                let _httpSessionCoord = new Soup.Session();
+                let messageCoord = Soup.Message.new('GET', coordURL);
+
+                _httpSessionCoord.send_and_read_async(
+                    messageCoord,
+                    GLib.PRIORITY_DEFAULT,
+                    null,
+                    (_httpSessionCoord, result) => {
+                        try {
+                            let bytes =
+                                _httpSession.send_and_read_finish(result);
+                            let decoder = new TextDecoder('utf-8');
+                            let response = decoder.decode(bytes.get_data());
+                            let res = response.results[0]?.locations[0]?.latLng;
+                            this.lat = res.lat;
+                            this.lon = res.lng;
+                        } catch (error) {
+                            this.app.log(
+                                `Failed to process response: ${error}`,
+                            );
+                        }
+                    },
+                );
+            }
+
+            // curl
+            let url = `https://api.open-meteo.com/v1/forecast?latitude=${this.lat}&longitude=${this.lon}&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,rain,showers,snowfall,cloud_cover`;
             let _httpSession = new Soup.Session();
             let message = Soup.Message.new('GET', url);
 
@@ -431,9 +459,46 @@ export class Utils {
                         let bytes = _httpSession.send_and_read_finish(result);
                         let decoder = new TextDecoder('utf-8');
                         let response = decoder.decode(bytes.get_data());
+                        let res = JSON.parse(response);
+                        // res example
+                        // {
+                        //     "latitude": -24.0,
+                        //     "longitude": -46.25,
+                        //     "generationtime_ms": 0.04792213439941406,
+                        //     "utc_offset_seconds": 0,
+                        //     "timezone": "GMT",
+                        //     "timezone_abbreviation": "GMT",
+                        //     "elevation": 5.0,
+                        //     "current_units": {
+                        //       "time": "iso8601",
+                        //       "interval": "seconds",
+                        //       "temperature_2m": "°C",
+                        //       "relative_humidity_2m": "%",
+                        //       "apparent_temperature": "°C",
+                        //       "is_day": "",
+                        //       "precipitation": "mm",
+                        //       "rain": "mm",
+                        //       "showers": "mm",
+                        //       "snowfall": "cm",
+                        //       "cloud_cover": "%"
+                        //     },
+                        //     "current": {
+                        //       "time": "2024-12-06T18:30",
+                        //       "interval": 900,
+                        //       "temperature_2m": 28.9,
+                        //       "relative_humidity_2m": 72,
+                        //       "apparent_temperature": 34.1,
+                        //       "is_day": 1,
+                        //       "precipitation": 0.0,
+                        //       "rain": 0.0,
+                        //       "showers": 0.0,
+                        //       "snowfall": 0.0,
+                        //       "cloud_cover": 0
+                        //     }
+                        //   }
 
-                        this.app.log(
-                            'Weather Tool: ' + JSON.stringify(response),
+                        this.app.chat.editResponse(
+                            `\n${_('Temperature')}: ${res.current.temperature_2m}°C\n${_('Humidity')}: ${res.current.relative_humidity_2m}%\n${_('Apparent temperature')}: ${res.current.apparent_temperature}°C\n${_('Cloud cover')}: ${res.current.cloud_cover}%\n${_('Precipitation')}: ${res.current.precipitation}mm\n${_('Rain')}: ${res.current.rain}mm\n${_('Showers')}: ${res.current.showers}mm\n${_('Snowfall')}: ${res.current.snowfall}cm`,
                         );
                     } catch (error) {
                         this.app.log(`Failed to process response: ${error}`);
