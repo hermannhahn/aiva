@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-06 20:39-0300\n"
+"POT-Creation-Date: 2024-12-06 20:48-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language es-ES\n"
@@ -365,7 +365,7 @@ msgstr "Código copiado al portapapeles"
 msgid "frost_lang_var2"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini_functions.js:155
+#: src/ai/gemini_functions.js:155 src/utils/utils.js:480
 msgid "fog"
 msgstr ""
 
@@ -448,7 +448,7 @@ msgstr "Código copiado al portapapeles"
 msgid "dry_lang_var2"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini_functions.js:173 src/utils/utils.js:497
+#: src/ai/gemini_functions.js:173 src/utils/utils.js:515
 msgid "cold"
 msgstr ""
 
@@ -462,7 +462,7 @@ msgstr "Código copiado al portapapeles"
 msgid "cold_lang_var2"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini_functions.js:176 src/utils/utils.js:512
+#: src/ai/gemini_functions.js:176 src/utils/utils.js:530
 msgid "hot"
 msgstr ""
 
@@ -476,7 +476,7 @@ msgstr "Código copiado al portapapeles"
 msgid "hot_lang_var2"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini_functions.js:179 src/utils/utils.js:509
+#: src/ai/gemini_functions.js:179 src/utils/utils.js:527
 msgid "warm"
 msgstr ""
 
@@ -485,7 +485,7 @@ msgstr ""
 msgid "warm_lang_var1"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini_functions.js:181 src/utils/utils.js:503
+#: src/ai/gemini_functions.js:181 src/utils/utils.js:521
 msgid "mild"
 msgstr ""
 
@@ -769,64 +769,97 @@ msgstr ""
 msgid "overcast"
 msgstr "Código copiado al portapapeles"
 
-#: src/utils/utils.js:480 src/utils/utils.js:491
+#: src/utils/utils.js:482
+msgid "mist"
+msgstr ""
+
+#: src/utils/utils.js:484
+msgid "haze"
+msgstr ""
+
+#: src/utils/utils.js:486
+msgid "dust"
+msgstr ""
+
+#: src/utils/utils.js:488
+msgid "sand"
+msgstr ""
+
+#: src/utils/utils.js:490
+msgid "ash"
+msgstr ""
+
+#: src/utils/utils.js:492
+msgid "squall"
+msgstr ""
+
+#: src/utils/utils.js:494
+msgid "tornado"
+msgstr ""
+
+#: src/utils/utils.js:496
+msgid "hurricane"
+msgstr ""
+
+#: src/utils/utils.js:498 src/utils/utils.js:509
 msgid "unknown"
 msgstr ""
 
-#: src/utils/utils.js:487
+#: src/utils/utils.js:505
 msgid "night"
 msgstr ""
 
-#: src/utils/utils.js:489
+#: src/utils/utils.js:507
 msgid "day"
 msgstr ""
 
-#: src/utils/utils.js:514
+#: src/utils/utils.js:532
 #, fuzzy
 msgid "unknown temperature"
 msgstr "Código copiado al portapapeles"
 
-#: src/utils/utils.js:520
-msgid " It's raining"
+#: src/utils/utils.js:538
+msgid " and raining"
 msgstr ""
 
-#: src/utils/utils.js:523
-msgid " It's snowing"
+#: src/utils/utils.js:541
+msgid " and snowing"
 msgstr ""
 
-#: src/utils/utils.js:526
-msgid " It's sunny"
+#: src/utils/utils.js:544
+msgid " and sunny"
 msgstr ""
 
-#: src/utils/utils.js:531
+#: src/utils/utils.js:549
 msgid "Now it is"
 msgstr ""
 
-#: src/utils/utils.js:531
+#: src/utils/utils.js:549
 msgid "in"
 msgstr ""
 
-#: src/utils/utils.js:531
-msgid "the sky is"
-msgstr ""
-
-#: src/utils/utils.js:531
+#: src/utils/utils.js:549
 #, fuzzy
-msgid "The weather is"
+msgid "The sky is"
 msgstr "Código copiado al portapapeles"
 
-#: src/utils/utils.js:531
+#: src/utils/utils.js:549
 #, fuzzy
-msgid "the temperature is"
+msgid "and the weather is"
 msgstr "Código copiado al portapapeles"
 
-#: src/utils/utils.js:531
+#: src/utils/utils.js:549
+#, fuzzy
+msgid "the temperature is now"
+msgstr "Código copiado al portapapeles"
+
+#: src/utils/utils.js:549
 msgid "but it feels like"
 msgstr ""
 
-#: src/utils/utils.js:531
+#: src/utils/utils.js:549
 #, fuzzy
-msgid "The humidity is"
+msgid "The humidity of the air is"
 msgstr "Código copiado al portapapeles"
 
 #: src/commands.js:21

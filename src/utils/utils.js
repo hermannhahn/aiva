@@ -476,6 +476,24 @@ export class Utils {
                                     return _('broken clouds');
                                 case 4:
                                     return _('overcast');
+                                case 5:
+                                    return _('fog');
+                                case 6:
+                                    return _('mist');
+                                case 7:
+                                    return _('haze');
+                                case 8:
+                                    return _('dust');
+                                case 9:
+                                    return _('sand');
+                                case 10:
+                                    return _('ash');
+                                case 11:
+                                    return _('squall');
+                                case 12:
+                                    return _('tornado');
+                                case 13:
+                                    return _('hurricane');
                                 default:
                                     return _('unknown');
                             }
@@ -517,18 +535,18 @@ export class Utils {
                         function climeStatus() {
                             let clime = '';
                             if (res.current.precipitation > 0) {
-                                clime = _(" It's raining");
+                                clime = _(' and raining');
                             }
                             if (res.current.snowfall > 0) {
-                                clime = _(" It's snowing");
+                                clime = _(' and snowing');
                             }
                             if (res.current.is_day === 1) {
-                                clime = _(" It's sunny");
+                                clime = _(' and sunny');
                             }
                             return clime;
                         }
 
-                        let weatherDescription = `${_('Now it is')} ${isDayString()} ${_('in')} ${this.loc}. ${climeStatus()}${_('the sky is')} ${cloudCloverString()},  ${_('The weather is')} ${sensationString()}, ${_('the temperature is')} ${res.current.temperature_2m}${res.current_units.temperature_2m}, ${_('but it feels like')} ${res.current.apparent_temperature}${res.current_units.apparent_temperature}. ${_('The humidity is')} ${res.current.relative_humidity_2m}%.`;
+                        let weatherDescription = `${_('Now it is')} ${isDayString()}${climeStatus()} ${_('in')} ${this.loc}. ${_('The sky is')} ${cloudCloverString()} ${_('and the weather is')} ${sensationString()}, ${_('the temperature is now')} ${res.current.temperature_2m}${res.current_units.temperature_2m}, ${_('but it feels like')} ${res.current.apparent_temperature}${res.current_units.apparent_temperature}. ${_('The humidity of the air is')} ${res.current.relative_humidity_2m}%.`;
                         this.app.chat.editResponse(weatherDescription);
                     } catch (error) {
                         this.app.log(`Failed to process response: ${error}`);
