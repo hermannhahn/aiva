@@ -414,13 +414,13 @@ export class Utils {
         }
     }
 
-    getCurrentLocalWeather(location = undefined) {
+    getCurrentLocalWeather(location = 'userLocation') {
         try {
             this.lat = this.app.userSettings.LAT;
             this.lon = this.app.userSettings.LON;
             this.loc = this.app.userSettings.LOCATION;
 
-            if (location !== undefined) {
+            if (location !== 'userLocation') {
                 let coordURL = `https://www.mapquestapi.com/geocoding/v1/address?key=KEY&location=${location}`;
                 let _httpSessionCoord = new Soup.Session();
                 let messageCoord = Soup.Message.new('GET', coordURL);
