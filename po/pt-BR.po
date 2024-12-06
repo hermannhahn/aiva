@@ -760,21 +760,21 @@ msgstr "Veja o exemplo abaixo:"
 
 #: src/utils/utils.js:470
 msgid "clear"
-msgstr "limpar"
+msgstr "limpo"
 
 #: src/utils/utils.js:472
 #, fuzzy
 msgid "few clouds"
-msgstr "nuvens"
+msgstr "poucas nuvens"
 
 #: src/utils/utils.js:474
 msgid "scattered clouds"
-msgstr ""
+msgstr "nuvens dispersas"
 
 #: src/utils/utils.js:476
 #, fuzzy
 msgid "broken clouds"
-msgstr "nuvens"
+msgstr "nublado"
 
 #: src/utils/utils.js:478
 #, fuzzy
@@ -783,35 +783,31 @@ msgstr "ṕrevisão"
 
 #: src/utils/utils.js:480 src/utils/utils.js:491
 msgid "unknown"
-msgstr ""
+msgstr "desconhecida"
 
 #: src/utils/utils.js:487
 msgid "night"
-msgstr ""
+msgstr "noite"
 
 #: src/utils/utils.js:489
-#, fuzzy
 msgid "day"
-msgstr "seco"
+msgstr "dia"
 
 #: src/utils/utils.js:514
-#, fuzzy
 msgid "unknown temperature"
-msgstr "temperatura"
+msgstr "temperatura desconhecida"
 
 #: src/utils/utils.js:519
-#, fuzzy
 msgid "rainy"
 msgstr "chuva"
 
 #: src/utils/utils.js:522
-#, fuzzy
 msgid "snowy"
 msgstr "neve"
 
 #: src/utils/utils.js:524
 msgid "sunny"
-msgstr ""
+msgstr "ensolarado"
 
 #: src/utils/utils.js:527
 msgid "Now it is"
