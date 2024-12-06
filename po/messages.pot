@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-06 16:12-0300\n"
+"POT-Creation-Date: 2024-12-06 16:58-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -685,8 +685,36 @@ msgstr ""
 msgid "Look at example below:"
 msgstr ""
 
-#: src/utils/utils.js:501
-msgid "Current weather"
+#: src/utils/utils.js:527
+msgid "In"
+msgstr ""
+
+#: src/utils/utils.js:527
+msgid "to"
+msgstr ""
+
+#: src/utils/utils.js:527
+msgid "it is"
+msgstr ""
+
+#: src/utils/utils.js:527
+msgid "and"
+msgstr ""
+
+#: src/utils/utils.js:527
+msgid "the sky is"
+msgstr ""
+
+#: src/utils/utils.js:527
+msgid "the temperature is"
+msgstr ""
+
+#: src/utils/utils.js:527
+msgid "but it feels like"
+msgstr ""
+
+#: src/utils/utils.js:527
+msgid "The humidity is"
 msgstr ""
 
 #: src/commands.js:21

@@ -418,6 +418,8 @@ export class Utils {
         try {
             this.lat = this.app.userSettings.LAT;
             this.lon = this.app.userSettings.LON;
+            this.loc = this.app.userSettings.LOCATION;
+
             if (location !== undefined) {
                 let coordURL = `https://www.mapquestapi.com/geocoding/v1/address?key=KEY&location=${location}`;
                 let _httpSessionCoord = new Soup.Session();
@@ -436,6 +438,7 @@ export class Utils {
                             let res = response.results[0]?.locations[0]?.latLng;
                             this.lat = res.lat;
                             this.lon = res.lng;
+                            this.loc = location;
                         } catch (error) {
                             this.app.log(
                                 `Failed to process response: ${error}`,
@@ -460,55 +463,69 @@ export class Utils {
                         let decoder = new TextDecoder('utf-8');
                         let response = decoder.decode(bytes.get_data());
                         let res = JSON.parse(response);
-                        // res example
-                        // {
-                        //     "latitude": -24.0,
-                        //     "longitude": -46.25,
-                        //     "generationtime_ms": 0.04792213439941406,
-                        //     "utc_offset_seconds": 0,
-                        //     "timezone": "GMT",
-                        //     "timezone_abbreviation": "GMT",
-                        //     "elevation": 5.0,
-                        //     "current_units": {
-                        //       "time": "iso8601",
-                        //       "interval": "seconds",
-                        //       "temperature_2m": "°C",
-                        //       "relative_humidity_2m": "%",
-                        //       "apparent_temperature": "°C",
-                        //       "is_day": "",
-                        //       "precipitation": "mm",
-                        //       "rain": "mm",
-                        //       "showers": "mm",
-                        //       "snowfall": "cm",
-                        //       "cloud_cover": "%"
-                        //     },
-                        //     "current": {
-                        //       "time": "2024-12-06T18:30",
-                        //       "interval": 900,
-                        //       "temperature_2m": 28.9,
-                        //       "relative_humidity_2m": 72,
-                        //       "apparent_temperature": 34.1,
-                        //       "is_day": 1,
-                        //       "precipitation": 0.0,
-                        //       "rain": 0.0,
-                        //       "showers": 0.0,
-                        //       "snowfall": 0.0,
-                        //       "cloud_cover": 0
-                        //     }
-                        //   }
 
-                        this.app.chat.editResponse(
-                            `${_('Current weather')}: Temperature: ${res.current.temperature_2m}°C
-Humidity: ${res.current.relative_humidity_2m}%
-Apparent temperature: ${res.current.apparent_temperature}°C
-Cloud cover: ${res.current.cloud_cover}%
-Precipitation: ${res.current.precipitation}mm
-Rain: ${res.current.rain}mm
-Showers: ${res.current.showers}mm
-Snowfall: ${res.current.snowfall}cm
-`,
-                            // `\n${_('Temperature')}: ${res.current.temperature_2m}°C\n${_('Humidity')}: ${res.current.relative_humidity_2m}%\n${_('Apparent temperature')}: ${res.current.apparent_temperature}°C\n${_('Cloud cover')}: ${res.current.cloud_cover}%\n${_('Precipitation')}: ${res.current.precipitation}mm\n${_('Rain')}: ${res.current.rain}mm\n${_('Showers')}: ${res.current.showers}mm\n${_('Snowfall')}: ${res.current.snowfall}cm`,
-                        );
+                        function cloudCloverString() {
+                            switch (res.current.cloud_cover) {
+                                case 0:
+                                    return 'clear';
+                                case 1:
+                                    return 'few clouds';
+                                case 2:
+                                    return 'scattered clouds';
+                                case 3:
+                                    return 'broken clouds';
+                                case 4:
+                                    return 'overcast';
+                                default:
+                                    return 'unknown';
+                            }
+                        }
+
+                        function isDayString() {
+                            switch (res.current.is_day) {
+                                case 0:
+                                    return 'night';
+                                case 1:
+                                    return 'day';
+                                default:
+                                    return 'unknown';
+                            }
+                        }
+
+                        function sensationString() {
+                            if (res.current.apparent_temperature < 10) {
+                                return 'cold';
+                            }
+                            if (
+                                res.current.apparent_temperature >= 10 &&
+                                res.current.apparent_temperature < 25
+                            ) {
+                                return 'mild';
+                            }
+                            if (
+                                res.current.apparent_temperature >= 25 &&
+                                res.current.apparent_temperature < 35
+                            ) {
+                                return 'warm';
+                            }
+                            if (res.current.apparent_temperature >= 35) {
+                                return 'hot';
+                            }
+                            return 'unknown';
+                        }
+
+                        function climeStatusString() {
+                            if (res.current.precipitation > 0) {
+                                return 'rainy';
+                            }
+                            if (res.current.snowfall > 0) {
+                                return 'snowy';
+                            }
+                            return 'sunny';
+                        }
+
+                        let weatherDescription = `${_('In')} ${this.loc} ${_('to')}${isDayString()} ${_('it is')} ${climeStatusString()}. ${_('and')} ${sensationString()}, ${_('the sky is')} ${cloudCloverString()}, ${_('the temperature is')} ${res.current.temperature_2m}${res.current_units.temperature_2m}, ${_('but it feels like')} ${res.current.apparent_temperature}${res.current_units.apparent_temperature}. ${_('The humidity is')} ${res.current.relative_humidity_2m}%.`;
+                        this.app.chat.editResponse(weatherDescription);
                     } catch (error) {
                         this.app.log(`Failed to process response: ${error}`);
                     }

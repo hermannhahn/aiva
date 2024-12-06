@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-06 16:12-0300\n"
+"POT-Creation-Date: 2024-12-06 16:58-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language de-DE\n"
@@ -739,9 +739,38 @@ msgstr ""
 msgid "Look at example below:"
 msgstr ""
 
-#: src/utils/utils.js:501
+#: src/utils/utils.js:527
+msgid "In"
+msgstr ""
+
+#: src/utils/utils.js:527
+msgid "to"
+msgstr ""
+
+#: src/utils/utils.js:527
+msgid "it is"
+msgstr ""
+
+#: src/utils/utils.js:527
+msgid "and"
+msgstr ""
+
+#: src/utils/utils.js:527
+msgid "the sky is"
+msgstr ""
+
+#: src/utils/utils.js:527
 #, fuzzy
-msgid "Current weather"
+msgid "the temperature is"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/utils/utils.js:527
+msgid "but it feels like"
+msgstr ""
+
+#: src/utils/utils.js:527
+#, fuzzy
+msgid "The humidity is"
 msgstr "Code kopiert in die Zwischenablage"
 
 #: src/commands.js:21
@@ -852,6 +881,10 @@ msgstr ""
 #: src/prefs.js:287
 msgid "Your preferences have been saved"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Current weather"
+#~ msgstr "Code kopiert in die Zwischenablage"
 
 #, fuzzy
 #~ msgid "Temperature"

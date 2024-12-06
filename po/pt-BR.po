@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-06 16:12-0300\n"
+"POT-Creation-Date: 2024-12-06 16:58-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -748,10 +748,41 @@ msgstr "Aqui estão as principais notícias"
 msgid "Look at example below:"
 msgstr "Veja o exemplo abaixo:"
 
-#: src/utils/utils.js:501
+#: src/utils/utils.js:527
+msgid "In"
+msgstr ""
+
+#: src/utils/utils.js:527
 #, fuzzy
-msgid "Current weather"
-msgstr "Falha ao abrir site"
+msgid "to"
+msgstr "parar"
+
+#: src/utils/utils.js:527
+msgid "it is"
+msgstr ""
+
+#: src/utils/utils.js:527
+#, fuzzy
+msgid "and"
+msgstr "adicionar"
+
+#: src/utils/utils.js:527
+msgid "the sky is"
+msgstr ""
+
+#: src/utils/utils.js:527
+#, fuzzy
+msgid "the temperature is"
+msgstr "temperatura"
+
+#: src/utils/utils.js:527
+msgid "but it feels like"
+msgstr ""
+
+#: src/utils/utils.js:527
+#, fuzzy
+msgid "The humidity is"
+msgstr "humidade"
 
 #: src/commands.js:21
 msgid "Invalid command"
@@ -862,6 +893,10 @@ msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
 
 #, fuzzy
+#~ msgid "Current weather"
+#~ msgstr "Falha ao abrir site"
+
+#, fuzzy
 #~ msgid "Temperature"
 #~ msgstr "temperatura"
 
@@ -922,9 +957,6 @@ msgstr "Suas preferências foram salvas"
 
 #~ msgid "play"
 #~ msgstr "tocar"
-
-#~ msgid "stop"
-#~ msgstr "parar"
 
 #~ msgid "pause"
 #~ msgstr "pausar"
@@ -1057,9 +1089,6 @@ msgstr "Suas preferências foram salvas"
 
 #~ msgid "uninstall"
 #~ msgstr "desinstalar"
-
-#~ msgid "add"
-#~ msgstr "adicionar"
 
 #~ msgid "remove"
 #~ msgstr "remover"
