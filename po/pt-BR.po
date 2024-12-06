@@ -764,22 +764,18 @@ msgid "Look at example below:"
 msgstr "Veja o exemplo abaixo:"
 
 #: src/utils/utils.js:527
-#, fuzzy
 msgid "Now it is"
 msgstr "Agora é"
 
 #: src/utils/utils.js:527
-#, fuzzy
 msgid "in"
 msgstr "em"
 
 #: src/utils/utils.js:527
-#, fuzzy
 msgid "and it is"
 msgstr "e está"
 
 #: src/utils/utils.js:527
-#, fuzzy
 msgid "The weather is"
 msgstr "O tempo está"
 
@@ -788,7 +784,6 @@ msgid "the sky is"
 msgstr "o céu está"
 
 #: src/utils/utils.js:527
-#, fuzzy
 msgid "the temperature is"
 msgstr "a temperatura é de"
 
@@ -797,7 +792,6 @@ msgid "but it feels like"
 msgstr "mas a sensação é de"
 
 #: src/utils/utils.js:527
-#, fuzzy
 msgid "The humidity is"
 msgstr "A humidade do ar é de"
 
