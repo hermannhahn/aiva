@@ -45,29 +45,17 @@ export class Chat {
                     let decoder = new TextDecoder('utf-8');
                     let response = decoder.decode(bytes.get_data());
                     const res = JSON.parse(response);
-                    this.app.log(JSON.stringify(res));
                     const status = res.status;
                     if (status !== 'success') {
                         this.app.log('Error getting location: ' + res.message);
-                        return;
                     }
                     const ip = res.query;
-                    const errorMessage = res.message;
                     const country = res.country;
                     const countryCode = res.countryCode;
                     const region = res.region;
                     const regionName = res.regionName;
                     const city = res.city;
                     const district = res.district;
-                    console.log('IP: ' + ip);
-                    console.log('Status: ' + status);
-                    console.log('Message: ' + errorMessage);
-                    console.log('Country: ' + country);
-                    console.log('Country Code: ' + countryCode);
-                    console.log('Region: ' + region);
-                    console.log('Region Name: ' + regionName);
-                    console.log('City: ' + city);
-                    console.log('District: ' + district);
                     this.app.userSettings.LOCATION = country;
                     this.app.userSettings.IP = ip;
                     this.app.userSettings.COUNTRY = country;
