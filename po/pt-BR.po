@@ -523,7 +523,7 @@ msgstr "nevoeiro"
 #: src/ai/gemini_functions.js:191
 #, fuzzy
 msgid "Info about Weather and forecast."
-msgstr "Claro, obtendo informações do tempo..."
+msgstr "Informações sobre tempo e previsão."
 
 #: src/ai/gemini_functions.js:198
 #, fuzzy
@@ -760,39 +760,39 @@ msgstr "Veja o exemplo abaixo:"
 
 #: src/utils/utils.js:527
 msgid "In"
-msgstr ""
+msgstr "Em"
 
 #: src/utils/utils.js:527
 #, fuzzy
 msgid "to"
-msgstr "parar"
+msgstr "para"
 
 #: src/utils/utils.js:527
 msgid "it is"
-msgstr ""
+msgstr "está"
 
 #: src/utils/utils.js:527
 #, fuzzy
 msgid "and"
-msgstr "adicionar"
+msgstr "e"
 
 #: src/utils/utils.js:527
 msgid "the sky is"
-msgstr ""
+msgstr "o céu está"
 
 #: src/utils/utils.js:527
 #, fuzzy
 msgid "the temperature is"
-msgstr "temperatura"
+msgstr "a temperatura é de"
 
 #: src/utils/utils.js:527
 msgid "but it feels like"
-msgstr ""
+msgstr "mas a sensação é de"
 
 #: src/utils/utils.js:527
 #, fuzzy
 msgid "The humidity is"
-msgstr "humidade"
+msgstr "A humidade do ar é de"
 
 #: src/commands.js:21
 msgid "Invalid command"
