@@ -47,7 +47,7 @@ export class Chat {
                     const res = JSON.parse(response);
                     const status = res.status;
                     if (status !== 'success') {
-                        this.logError('Error getting location: ' + res.message);
+                        this.app.log('Error getting location: ' + res.message);
                         return;
                     }
                     const ip = res.query;
