@@ -739,19 +739,16 @@ msgid "unknown temperature"
 msgstr "temperatura desconhecida"
 
 #: src/utils/utils.js:392
-#, fuzzy
 msgid ", is raining"
-msgstr ", e chovendo"
+msgstr ", está chovendo"
 
 #: src/utils/utils.js:395
-#, fuzzy
 msgid ", is snowing"
-msgstr " e nevando"
+msgstr ", está nevando"
 
 #: src/utils/utils.js:398
-#, fuzzy
 msgid ", is sunny"
-msgstr " e está ensolarado"
+msgstr ", está ensolarado"
 
 #: src/commands.js:21
 msgid "Invalid command"
