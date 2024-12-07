@@ -465,58 +465,58 @@ msgstr "Abrindo App Store..."
 msgid "Error getting weather"
 msgstr "Falha ao abrir site"
 
-#: src/ai/gemini/declarations.js:14
+#: src/ai/gemini/declarations.js:13
 msgid "Clipboard Text-to-Speech"
 msgstr ""
 
-#: src/ai/gemini/declarations.js:21 src/ai/gemini/declarations.js:44
+#: src/ai/gemini/declarations.js:20 src/ai/gemini/declarations.js:43
 msgid "Response text before run, e.g.: "
 msgstr "Texto de resposta antes de executar, por exemplo: "
 
-#: src/ai/gemini/declarations.js:22
+#: src/ai/gemini/declarations.js:21
 msgid "Sure, start reading..."
 msgstr "Claro, iniciando leitura..."
 
-#: src/ai/gemini/declarations.js:32
+#: src/ai/gemini/declarations.js:31
 msgid "Run non-sudo commandline in the user terminal"
 msgstr "Rodar comandos no terminal"
 
-#: src/ai/gemini/declarations.js:39
+#: src/ai/gemini/declarations.js:38
 msgid "commandline to run"
 msgstr "linha de comando para rodar"
 
-#: src/ai/gemini/declarations.js:45
+#: src/ai/gemini/declarations.js:44
 msgid "Sure, opening GNOME Software..."
 msgstr "Claro, abrindo GNOME Software..."
 
-#: src/ai/gemini/declarations.js:54
+#: src/ai/gemini/declarations.js:53
 msgid "Open url in the browser."
 msgstr "Abrir URL no navegador."
 
-#: src/ai/gemini/declarations.js:61
+#: src/ai/gemini/declarations.js:60
 msgid "URL to open, e.g.: "
 msgstr "URL para abrir, por exemplo: "
 
-#: src/ai/gemini/declarations.js:66
+#: src/ai/gemini/declarations.js:65
 msgid "Response text before open, e.g.: "
 msgstr "Texto de resposta antes de executar, por exemplo: "
 
-#: src/ai/gemini/declarations.js:67
+#: src/ai/gemini/declarations.js:66
 msgid "Sure, opening..."
 msgstr "Claro, abrindo..."
 
-#: src/ai/gemini/declarations.js:76
+#: src/ai/gemini/declarations.js:75
 msgid "show the weather for today."
 msgstr "exiba informações sobre tempo para hoje"
 
-#: src/ai/gemini/declarations.js:84
+#: src/ai/gemini/declarations.js:83
 #, fuzzy
 msgid "Provide a location, e.g.: \"New York, NY\" (always use this format)"
 msgstr ""
 "ou forneça uma localização, por exemplo: \"New York, NY\" (sempre use este "
 "formato)"
 
-#: src/ai/gemini/declarations.js:88
+#: src/ai/gemini/declarations.js:87
 #, fuzzy
 msgid "or don't provide a location to show weather from user location"
 msgstr ""

@@ -464,55 +464,55 @@ msgstr ""
 msgid "Error getting weather"
 msgstr ""
 
-#: src/ai/gemini/declarations.js:14
+#: src/ai/gemini/declarations.js:13
 msgid "Clipboard Text-to-Speech"
 msgstr ""
 
-#: src/ai/gemini/declarations.js:21 src/ai/gemini/declarations.js:44
+#: src/ai/gemini/declarations.js:20 src/ai/gemini/declarations.js:43
 msgid "Response text before run, e.g.: "
 msgstr ""
 
-#: src/ai/gemini/declarations.js:22
+#: src/ai/gemini/declarations.js:21
 msgid "Sure, start reading..."
 msgstr ""
 
-#: src/ai/gemini/declarations.js:32
+#: src/ai/gemini/declarations.js:31
 msgid "Run non-sudo commandline in the user terminal"
 msgstr ""
 
-#: src/ai/gemini/declarations.js:39
+#: src/ai/gemini/declarations.js:38
 msgid "commandline to run"
 msgstr ""
 
-#: src/ai/gemini/declarations.js:45
+#: src/ai/gemini/declarations.js:44
 msgid "Sure, opening GNOME Software..."
 msgstr ""
 
-#: src/ai/gemini/declarations.js:54
+#: src/ai/gemini/declarations.js:53
 msgid "Open url in the browser."
 msgstr ""
 
-#: src/ai/gemini/declarations.js:61
+#: src/ai/gemini/declarations.js:60
 msgid "URL to open, e.g.: "
 msgstr ""
 
-#: src/ai/gemini/declarations.js:66
+#: src/ai/gemini/declarations.js:65
 msgid "Response text before open, e.g.: "
 msgstr ""
 
-#: src/ai/gemini/declarations.js:67
+#: src/ai/gemini/declarations.js:66
 msgid "Sure, opening..."
 msgstr ""
 
-#: src/ai/gemini/declarations.js:76
+#: src/ai/gemini/declarations.js:75
 msgid "show the weather for today."
 msgstr ""
 
-#: src/ai/gemini/declarations.js:84
+#: src/ai/gemini/declarations.js:83
 msgid "Provide a location, e.g.: \"New York, NY\" (always use this format)"
 msgstr ""
 
-#: src/ai/gemini/declarations.js:88
+#: src/ai/gemini/declarations.js:87
 msgid "or don't provide a location to show weather from user location"
 msgstr ""
 
