@@ -188,7 +188,7 @@ export class GeminiFunctions {
 
         this._weatherDeclaration = {
             name: 'get_weather',
-            description: _('get weather.'),
+            description: _('get weather for today.'),
             parameters: {
                 type: 'object',
                 properties: {
@@ -196,11 +196,11 @@ export class GeminiFunctions {
                         type: 'string',
                         description:
                             _(
-                                "Don't provide a location to get weather from user location",
+                                'Provide a location, e.g.: "New York, NY" (always use this format)',
                             ) +
                             ' ' +
                             _(
-                                'or provide a location, e.g.: "New York, NY" (always use this format)',
+                                "or don't provide a location to get weather from user location",
                             ),
                     },
                 },

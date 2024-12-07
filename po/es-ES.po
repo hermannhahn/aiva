@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-07 11:21-0300\n"
+"POT-Creation-Date: 2024-12-07 11:45-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language es-ES\n"
@@ -516,15 +516,15 @@ msgstr "Código copiado al portapapeles"
 
 #: src/ai/gemini_functions.js:191
 #, fuzzy
-msgid "get weather."
+msgid "get weather for today."
 msgstr "Código copiado al portapapeles"
 
 #: src/ai/gemini_functions.js:199
-msgid "Don't provide a location to get weather from user location"
+msgid "Provide a location, e.g.: \"New York, NY\" (always use this format)"
 msgstr ""
 
 #: src/ai/gemini_functions.js:203
-msgid "or provide a location, e.g.: \"New York, NY\" (always use this format)"
+msgid "or don't provide a location to get weather from user location"
 msgstr ""
 
 #: src/ai/gemini_functions.js:246

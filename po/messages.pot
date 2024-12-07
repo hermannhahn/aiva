@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-07 11:29-0300\n"
+"POT-Creation-Date: 2024-12-07 11:45-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -465,15 +465,15 @@ msgid "blizzard"
 msgstr ""
 
 #: src/ai/gemini_functions.js:191
-msgid "get weather."
+msgid "get weather for today."
 msgstr ""
 
 #: src/ai/gemini_functions.js:199
-msgid "Don't provide a location to get weather from user location"
+msgid "Provide a location, e.g.: \"New York, NY\" (always use this format)"
 msgstr ""
 
 #: src/ai/gemini_functions.js:203
-msgid "or provide a location, e.g.: \"New York, NY\" (always use this format)"
+msgid "or don't provide a location to get weather from user location"
 msgstr ""
 
 #: src/ai/gemini_functions.js:246
