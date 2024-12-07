@@ -8,7 +8,7 @@ export class FunctionsActivations {
     constructor(app) {
         this.app = app;
 
-        this.tools = ['aiva', this.app.userSettings.ASSIST_NAME];
+        this.assitname = ['aiva', this.app.userSettings.ASSIST_NAME];
 
         this.readClipboard = [
             _('read'),
@@ -124,11 +124,11 @@ export class FunctionsActivations {
         ];
 
         this.words = [
-            ...this.toolsActivation,
-            ...this.weatherActivation,
-            ...this.readClipboardActivation,
-            ...this.browseWebActivation,
-            ...this.cmdActivation,
+            ...this.assitname,
+            ...this.weather,
+            ...this.readClipboard,
+            ...this.browseWeb,
+            ...this.cmd,
         ];
 
         console.log('Functions loaded.');
