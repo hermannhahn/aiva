@@ -521,7 +521,6 @@ msgid "blizzard"
 msgstr "nevoeiro"
 
 #: src/ai/gemini_functions.js:191
-#, fuzzy
 msgid "Get Weather and forecast."
 msgstr "Informações sobre tempo e previsão."
 
