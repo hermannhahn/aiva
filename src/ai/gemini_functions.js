@@ -200,7 +200,7 @@ export class GeminiFunctions {
                             ) +
                             ', ' +
                             _(
-                                'or provide a location, e.g.: "London, UK" (always use this format)',
+                                'or provide a location, e.g.: "New York, NY" (always use this format)',
                             ),
                     },
                     response: {
