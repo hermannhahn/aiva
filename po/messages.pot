@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-07 19:53-0300\n"
+"POT-Creation-Date: 2024-12-07 20:12-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -209,227 +209,219 @@ msgid "access_lang_var2"
 msgstr ""
 
 #: src/ai/gemini/activations.js:68
-msgid "weather"
+msgid "how is the weather"
 msgstr ""
 
 #: src/ai/gemini/activations.js:69
-msgid "weather_lang_var1"
+msgid "what is the temperature"
 msgstr ""
 
 #: src/ai/gemini/activations.js:70
-msgid "forecast"
+msgid "what's the weather like"
 msgstr ""
 
 #: src/ai/gemini/activations.js:71
-msgid "temperature"
+msgid "is it raining"
 msgstr ""
 
 #: src/ai/gemini/activations.js:72
-msgid "humidity"
+msgid "is it sunny"
 msgstr ""
 
 #: src/ai/gemini/activations.js:73
-msgid "humidity_lang_var1"
+msgid "is it snowing"
 msgstr ""
 
 #: src/ai/gemini/activations.js:74
-msgid "wind"
+msgid "is it windy"
 msgstr ""
 
 #: src/ai/gemini/activations.js:75
-msgid "wind_lang_var1"
+msgid "what's the forecast"
 msgstr ""
 
 #: src/ai/gemini/activations.js:76
-msgid "wind_lang_var2"
+msgid "what's the weather forecast"
 msgstr ""
 
 #: src/ai/gemini/activations.js:77
-msgid "precipitation"
+msgid "how hot is it outside"
 msgstr ""
 
 #: src/ai/gemini/activations.js:78
-msgid "precipitation_lang_var1"
+msgid "how cold is it outside"
 msgstr ""
 
 #: src/ai/gemini/activations.js:79
-msgid "precipitation_lang_var2"
+msgid "is it cloudy"
 msgstr ""
 
 #: src/ai/gemini/activations.js:80
-msgid "cloud"
+msgid "is there a storm coming"
 msgstr ""
 
 #: src/ai/gemini/activations.js:81
-msgid "cloud_lang_var1"
+msgid "what's the humidity level"
 msgstr ""
 
 #: src/ai/gemini/activations.js:82
-msgid "climate"
+msgid "is it going to rain today"
 msgstr ""
 
 #: src/ai/gemini/activations.js:83
-msgid "rain"
+msgid "will it snow tomorrow"
 msgstr ""
 
 #: src/ai/gemini/activations.js:84
-msgid "rain_lang_var1"
+msgid "what's the weather like this week"
 msgstr ""
 
 #: src/ai/gemini/activations.js:85
-msgid "rain_lang_var2"
+msgid "do I need an umbrella"
 msgstr ""
 
 #: src/ai/gemini/activations.js:86
-msgid "snow"
+msgid "do I need a jacket"
 msgstr ""
 
 #: src/ai/gemini/activations.js:87
-msgid "snow_lang_var1"
+msgid "how warm is it outside"
 msgstr ""
 
 #: src/ai/gemini/activations.js:88
-msgid "snow_lang_var2"
+msgid "is there a chance of rain"
 msgstr ""
 
 #: src/ai/gemini/activations.js:89
-msgid "frost"
+msgid "is it foggy"
 msgstr ""
 
 #: src/ai/gemini/activations.js:90
-msgid "frost_lang_var1"
+msgid "is it freezing"
 msgstr ""
 
 #: src/ai/gemini/activations.js:91
-msgid "frost_lang_var2"
+msgid "what's the high for today"
 msgstr ""
 
 #: src/ai/gemini/activations.js:92
-msgid "fog"
+msgid "what's the low for today"
 msgstr ""
 
 #: src/ai/gemini/activations.js:93
-msgid "fog_lang_var1"
+msgid "how's the weather right now"
 msgstr ""
 
 #: src/ai/gemini/activations.js:94
-msgid "fog_lang_var2"
+msgid "should I bring a coat"
 msgstr ""
 
 #: src/ai/gemini/activations.js:95
-msgid "sun"
+msgid "what's the wind speed"
 msgstr ""
 
 #: src/ai/gemini/activations.js:96
-msgid "sun_lang_var1"
+msgid "is it stormy"
 msgstr ""
 
 #: src/ai/gemini/activations.js:97
-msgid "sun_lang_var2"
+msgid "is it drizzling"
 msgstr ""
 
 #: src/ai/gemini/activations.js:98
-msgid "clouds"
+msgid "is there thunder"
 msgstr ""
 
 #: src/ai/gemini/activations.js:99
-msgid "clouds_lang_var1"
+msgid "is it lightning"
 msgstr ""
 
 #: src/ai/gemini/activations.js:100
-msgid "clouds_lang_var2"
+msgid "is it mild outside"
 msgstr ""
 
 #: src/ai/gemini/activations.js:101
-msgid "sky"
+msgid "what's the air pressure"
 msgstr ""
 
 #: src/ai/gemini/activations.js:102
-msgid "windy"
+msgid "is there a heatwave"
 msgstr ""
 
 #: src/ai/gemini/activations.js:103
-msgid "windy_lang_var1"
+msgid "is it chilly"
 msgstr ""
 
 #: src/ai/gemini/activations.js:104
-msgid "humid"
+msgid "is it overcast"
 msgstr ""
 
 #: src/ai/gemini/activations.js:105
-msgid "humid_lang_var1"
+msgid "is the weather clear"
 msgstr ""
 
 #: src/ai/gemini/activations.js:106
-msgid "humid_lang_var2"
+msgid "will it be hot this weekend"
 msgstr ""
 
 #: src/ai/gemini/activations.js:107
-msgid "dry"
+msgid "is it safe to go outside"
 msgstr ""
 
 #: src/ai/gemini/activations.js:108
-msgid "dry_lang_var1"
+msgid "is there a hurricane warning"
 msgstr ""
 
 #: src/ai/gemini/activations.js:109
-msgid "dry_lang_var2"
+msgid "what's the UV index today"
 msgstr ""
 
 #: src/ai/gemini/activations.js:110
-msgid "cold"
+msgid "what time will it rain"
 msgstr ""
 
 #: src/ai/gemini/activations.js:111
-msgid "cold_lang_var1"
+msgid "is it good weather for a walk"
 msgstr ""
 
 #: src/ai/gemini/activations.js:112
-msgid "cold_lang_var2"
+msgid "is it safe to drive in this weather"
 msgstr ""
 
 #: src/ai/gemini/activations.js:113
-msgid "hot"
+msgid "will it be sunny later"
 msgstr ""
 
 #: src/ai/gemini/activations.js:114
-msgid "hot_lang_var1"
+msgid "how long will it rain"
 msgstr ""
 
 #: src/ai/gemini/activations.js:115
-msgid "hot_lang_var2"
+msgid "are there any weather alerts"
 msgstr ""
 
 #: src/ai/gemini/activations.js:116
-msgid "warm"
+msgid "will it clear up later"
 msgstr ""
 
 #: src/ai/gemini/activations.js:117
-msgid "warm_lang_var1"
+msgid "should I expect hail"
 msgstr ""
 
 #: src/ai/gemini/activations.js:118
-msgid "mild"
+msgid "will there be a frost tonight"
 msgstr ""
 
 #: src/ai/gemini/activations.js:119
-msgid "mild_lang_var1"
+msgid "is there a cold front coming"
 msgstr ""
 
 #: src/ai/gemini/activations.js:120
-msgid "mild_lang_var2"
+msgid "what's the dew point"
 msgstr ""
 
 #: src/ai/gemini/activations.js:121
-msgid "freezing"
-msgstr ""
-
-#: src/ai/gemini/activations.js:122
-msgid "freezing_lang_var1"
-msgstr ""
-
-#: src/ai/gemini/activations.js:123
-msgid "blizzard"
+msgid "how's the visibility today"
 msgstr ""
 
 #: src/ai/gemini/functions.js:45

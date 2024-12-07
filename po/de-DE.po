@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-07 19:53-0300\n"
+"POT-Creation-Date: 2024-12-07 20:12-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language de-DE\n"
@@ -220,266 +220,233 @@ msgid "access_lang_var2"
 msgstr "Code kopiert in die Zwischenablage"
 
 #: src/ai/gemini/activations.js:68
-msgid "weather"
-msgstr ""
+#, fuzzy
+msgid "how is the weather"
+msgstr "Code kopiert in die Zwischenablage"
 
 #: src/ai/gemini/activations.js:69
 #, fuzzy
-msgid "weather_lang_var1"
+msgid "what is the temperature"
 msgstr "Code kopiert in die Zwischenablage"
 
 #: src/ai/gemini/activations.js:70
 #, fuzzy
-msgid "forecast"
+msgid "what's the weather like"
 msgstr "Code kopiert in die Zwischenablage"
 
 #: src/ai/gemini/activations.js:71
-#, fuzzy
-msgid "temperature"
-msgstr "Code kopiert in die Zwischenablage"
+msgid "is it raining"
+msgstr ""
 
 #: src/ai/gemini/activations.js:72
-#, fuzzy
-msgid "humidity"
-msgstr "Code kopiert in die Zwischenablage"
+msgid "is it sunny"
+msgstr ""
 
 #: src/ai/gemini/activations.js:73
-#, fuzzy
-msgid "humidity_lang_var1"
-msgstr "Code kopiert in die Zwischenablage"
+msgid "is it snowing"
+msgstr ""
 
 #: src/ai/gemini/activations.js:74
-msgid "wind"
+msgid "is it windy"
 msgstr ""
 
 #: src/ai/gemini/activations.js:75
 #, fuzzy
-msgid "wind_lang_var1"
+msgid "what's the forecast"
 msgstr "Code kopiert in die Zwischenablage"
 
 #: src/ai/gemini/activations.js:76
 #, fuzzy
-msgid "wind_lang_var2"
+msgid "what's the weather forecast"
 msgstr "Code kopiert in die Zwischenablage"
 
 #: src/ai/gemini/activations.js:77
-#, fuzzy
-msgid "precipitation"
-msgstr "Code kopiert in die Zwischenablage"
+msgid "how hot is it outside"
+msgstr ""
 
 #: src/ai/gemini/activations.js:78
-#, fuzzy
-msgid "precipitation_lang_var1"
-msgstr "Code kopiert in die Zwischenablage"
+msgid "how cold is it outside"
+msgstr ""
 
 #: src/ai/gemini/activations.js:79
-#, fuzzy
-msgid "precipitation_lang_var2"
-msgstr "Code kopiert in die Zwischenablage"
+msgid "is it cloudy"
+msgstr ""
 
 #: src/ai/gemini/activations.js:80
-msgid "cloud"
+msgid "is there a storm coming"
 msgstr ""
 
 #: src/ai/gemini/activations.js:81
-#, fuzzy
-msgid "cloud_lang_var1"
-msgstr "Code kopiert in die Zwischenablage"
+msgid "what's the humidity level"
+msgstr ""
 
 #: src/ai/gemini/activations.js:82
-msgid "climate"
+msgid "is it going to rain today"
 msgstr ""
 
 #: src/ai/gemini/activations.js:83
-msgid "rain"
+msgid "will it snow tomorrow"
 msgstr ""
 
 #: src/ai/gemini/activations.js:84
 #, fuzzy
-msgid "rain_lang_var1"
+msgid "what's the weather like this week"
 msgstr "Code kopiert in die Zwischenablage"
 
 #: src/ai/gemini/activations.js:85
-#, fuzzy
-msgid "rain_lang_var2"
-msgstr "Code kopiert in die Zwischenablage"
+msgid "do I need an umbrella"
+msgstr ""
 
 #: src/ai/gemini/activations.js:86
-msgid "snow"
+msgid "do I need a jacket"
 msgstr ""
 
 #: src/ai/gemini/activations.js:87
-#, fuzzy
-msgid "snow_lang_var1"
-msgstr "Code kopiert in die Zwischenablage"
+msgid "how warm is it outside"
+msgstr ""
 
 #: src/ai/gemini/activations.js:88
-#, fuzzy
-msgid "snow_lang_var2"
-msgstr "Code kopiert in die Zwischenablage"
+msgid "is there a chance of rain"
+msgstr ""
 
 #: src/ai/gemini/activations.js:89
-msgid "frost"
+msgid "is it foggy"
 msgstr ""
 
 #: src/ai/gemini/activations.js:90
 #, fuzzy
-msgid "frost_lang_var1"
+msgid "is it freezing"
 msgstr "Code kopiert in die Zwischenablage"
 
 #: src/ai/gemini/activations.js:91
 #, fuzzy
-msgid "frost_lang_var2"
+msgid "what's the high for today"
 msgstr "Code kopiert in die Zwischenablage"
 
 #: src/ai/gemini/activations.js:92
-msgid "fog"
-msgstr ""
+#, fuzzy
+msgid "what's the low for today"
+msgstr "Code kopiert in die Zwischenablage"
 
 #: src/ai/gemini/activations.js:93
 #, fuzzy
-msgid "fog_lang_var1"
+msgid "how's the weather right now"
 msgstr "Code kopiert in die Zwischenablage"
 
 #: src/ai/gemini/activations.js:94
-#, fuzzy
-msgid "fog_lang_var2"
-msgstr "Code kopiert in die Zwischenablage"
+msgid "should I bring a coat"
+msgstr ""
 
 #: src/ai/gemini/activations.js:95
-msgid "sun"
+msgid "what's the wind speed"
 msgstr ""
 
 #: src/ai/gemini/activations.js:96
-#, fuzzy
-msgid "sun_lang_var1"
-msgstr "Code kopiert in die Zwischenablage"
+msgid "is it stormy"
+msgstr ""
 
 #: src/ai/gemini/activations.js:97
-#, fuzzy
-msgid "sun_lang_var2"
-msgstr "Code kopiert in die Zwischenablage"
+msgid "is it drizzling"
+msgstr ""
 
 #: src/ai/gemini/activations.js:98
-msgid "clouds"
+msgid "is there thunder"
 msgstr ""
 
 #: src/ai/gemini/activations.js:99
-#, fuzzy
-msgid "clouds_lang_var1"
-msgstr "Code kopiert in die Zwischenablage"
+msgid "is it lightning"
+msgstr ""
 
 #: src/ai/gemini/activations.js:100
-#, fuzzy
-msgid "clouds_lang_var2"
-msgstr "Code kopiert in die Zwischenablage"
+msgid "is it mild outside"
+msgstr ""
 
 #: src/ai/gemini/activations.js:101
-msgid "sky"
+msgid "what's the air pressure"
 msgstr ""
 
 #: src/ai/gemini/activations.js:102
-msgid "windy"
+msgid "is there a heatwave"
 msgstr ""
 
 #: src/ai/gemini/activations.js:103
-#, fuzzy
-msgid "windy_lang_var1"
-msgstr "Code kopiert in die Zwischenablage"
+msgid "is it chilly"
+msgstr ""
 
 #: src/ai/gemini/activations.js:104
-msgid "humid"
-msgstr ""
+#, fuzzy
+msgid "is it overcast"
+msgstr "Code kopiert in die Zwischenablage"
 
 #: src/ai/gemini/activations.js:105
 #, fuzzy
-msgid "humid_lang_var1"
+msgid "is the weather clear"
 msgstr "Code kopiert in die Zwischenablage"
 
 #: src/ai/gemini/activations.js:106
-#, fuzzy
-msgid "humid_lang_var2"
-msgstr "Code kopiert in die Zwischenablage"
+msgid "will it be hot this weekend"
+msgstr ""
 
 #: src/ai/gemini/activations.js:107
-msgid "dry"
+msgid "is it safe to go outside"
 msgstr ""
 
 #: src/ai/gemini/activations.js:108
-#, fuzzy
-msgid "dry_lang_var1"
-msgstr "Code kopiert in die Zwischenablage"
+msgid "is there a hurricane warning"
+msgstr ""
 
 #: src/ai/gemini/activations.js:109
-#, fuzzy
-msgid "dry_lang_var2"
-msgstr "Code kopiert in die Zwischenablage"
+msgid "what's the UV index today"
+msgstr ""
 
 #: src/ai/gemini/activations.js:110
-msgid "cold"
+msgid "what time will it rain"
 msgstr ""
 
 #: src/ai/gemini/activations.js:111
 #, fuzzy
-msgid "cold_lang_var1"
+msgid "is it good weather for a walk"
 msgstr "Code kopiert in die Zwischenablage"
 
 #: src/ai/gemini/activations.js:112
-#, fuzzy
-msgid "cold_lang_var2"
-msgstr "Code kopiert in die Zwischenablage"
+msgid "is it safe to drive in this weather"
+msgstr ""
 
 #: src/ai/gemini/activations.js:113
-msgid "hot"
+msgid "will it be sunny later"
 msgstr ""
 
 #: src/ai/gemini/activations.js:114
-#, fuzzy
-msgid "hot_lang_var1"
-msgstr "Code kopiert in die Zwischenablage"
+msgid "how long will it rain"
+msgstr ""
 
 #: src/ai/gemini/activations.js:115
-#, fuzzy
-msgid "hot_lang_var2"
-msgstr "Code kopiert in die Zwischenablage"
+msgid "are there any weather alerts"
+msgstr ""
 
 #: src/ai/gemini/activations.js:116
-msgid "warm"
+msgid "will it clear up later"
 msgstr ""
 
 #: src/ai/gemini/activations.js:117
-#, fuzzy
-msgid "warm_lang_var1"
-msgstr "Code kopiert in die Zwischenablage"
+msgid "should I expect hail"
+msgstr ""
 
 #: src/ai/gemini/activations.js:118
-msgid "mild"
+msgid "will there be a frost tonight"
 msgstr ""
 
 #: src/ai/gemini/activations.js:119
-#, fuzzy
-msgid "mild_lang_var1"
-msgstr "Code kopiert in die Zwischenablage"
+msgid "is there a cold front coming"
+msgstr ""
 
 #: src/ai/gemini/activations.js:120
-#, fuzzy
-msgid "mild_lang_var2"
-msgstr "Code kopiert in die Zwischenablage"
+msgid "what's the dew point"
+msgstr ""
 
 #: src/ai/gemini/activations.js:121
-#, fuzzy
-msgid "freezing"
-msgstr "Code kopiert in die Zwischenablage"
-
-#: src/ai/gemini/activations.js:122
-#, fuzzy
-msgid "freezing_lang_var1"
-msgstr "Code kopiert in die Zwischenablage"
-
-#: src/ai/gemini/activations.js:123
-#, fuzzy
-msgid "blizzard"
-msgstr "Code kopiert in die Zwischenablage"
+msgid "how's the visibility today"
+msgstr ""
 
 #: src/ai/gemini/functions.js:45
 msgid "Sorry, I can't do that right now. Maybe in the future."
@@ -913,23 +880,159 @@ msgid "Your preferences have been saved"
 msgstr ""
 
 #, fuzzy
+#~ msgid "weather_lang_var1"
+#~ msgstr "Code kopiert in die Zwischenablage"
+
+#, fuzzy
+#~ msgid "forecast"
+#~ msgstr "Code kopiert in die Zwischenablage"
+
+#, fuzzy
+#~ msgid "temperature"
+#~ msgstr "Code kopiert in die Zwischenablage"
+
+#, fuzzy
+#~ msgid "humidity"
+#~ msgstr "Code kopiert in die Zwischenablage"
+
+#, fuzzy
+#~ msgid "humidity_lang_var1"
+#~ msgstr "Code kopiert in die Zwischenablage"
+
+#, fuzzy
+#~ msgid "wind_lang_var1"
+#~ msgstr "Code kopiert in die Zwischenablage"
+
+#, fuzzy
+#~ msgid "wind_lang_var2"
+#~ msgstr "Code kopiert in die Zwischenablage"
+
+#, fuzzy
+#~ msgid "precipitation"
+#~ msgstr "Code kopiert in die Zwischenablage"
+
+#, fuzzy
+#~ msgid "precipitation_lang_var1"
+#~ msgstr "Code kopiert in die Zwischenablage"
+
+#, fuzzy
+#~ msgid "precipitation_lang_var2"
+#~ msgstr "Code kopiert in die Zwischenablage"
+
+#, fuzzy
+#~ msgid "cloud_lang_var1"
+#~ msgstr "Code kopiert in die Zwischenablage"
+
+#, fuzzy
+#~ msgid "rain_lang_var1"
+#~ msgstr "Code kopiert in die Zwischenablage"
+
+#, fuzzy
+#~ msgid "rain_lang_var2"
+#~ msgstr "Code kopiert in die Zwischenablage"
+
+#, fuzzy
+#~ msgid "snow_lang_var1"
+#~ msgstr "Code kopiert in die Zwischenablage"
+
+#, fuzzy
+#~ msgid "snow_lang_var2"
+#~ msgstr "Code kopiert in die Zwischenablage"
+
+#, fuzzy
+#~ msgid "frost_lang_var1"
+#~ msgstr "Code kopiert in die Zwischenablage"
+
+#, fuzzy
+#~ msgid "frost_lang_var2"
+#~ msgstr "Code kopiert in die Zwischenablage"
+
+#, fuzzy
+#~ msgid "fog_lang_var1"
+#~ msgstr "Code kopiert in die Zwischenablage"
+
+#, fuzzy
+#~ msgid "fog_lang_var2"
+#~ msgstr "Code kopiert in die Zwischenablage"
+
+#, fuzzy
+#~ msgid "sun_lang_var1"
+#~ msgstr "Code kopiert in die Zwischenablage"
+
+#, fuzzy
+#~ msgid "sun_lang_var2"
+#~ msgstr "Code kopiert in die Zwischenablage"
+
+#, fuzzy
+#~ msgid "clouds_lang_var1"
+#~ msgstr "Code kopiert in die Zwischenablage"
+
+#, fuzzy
+#~ msgid "clouds_lang_var2"
+#~ msgstr "Code kopiert in die Zwischenablage"
+
+#, fuzzy
+#~ msgid "windy_lang_var1"
+#~ msgstr "Code kopiert in die Zwischenablage"
+
+#, fuzzy
+#~ msgid "humid_lang_var1"
+#~ msgstr "Code kopiert in die Zwischenablage"
+
+#, fuzzy
+#~ msgid "humid_lang_var2"
+#~ msgstr "Code kopiert in die Zwischenablage"
+
+#, fuzzy
+#~ msgid "dry_lang_var1"
+#~ msgstr "Code kopiert in die Zwischenablage"
+
+#, fuzzy
+#~ msgid "dry_lang_var2"
+#~ msgstr "Code kopiert in die Zwischenablage"
+
+#, fuzzy
+#~ msgid "cold_lang_var1"
+#~ msgstr "Code kopiert in die Zwischenablage"
+
+#, fuzzy
+#~ msgid "cold_lang_var2"
+#~ msgstr "Code kopiert in die Zwischenablage"
+
+#, fuzzy
+#~ msgid "hot_lang_var1"
+#~ msgstr "Code kopiert in die Zwischenablage"
+
+#, fuzzy
+#~ msgid "hot_lang_var2"
+#~ msgstr "Code kopiert in die Zwischenablage"
+
+#, fuzzy
+#~ msgid "warm_lang_var1"
+#~ msgstr "Code kopiert in die Zwischenablage"
+
+#, fuzzy
+#~ msgid "mild_lang_var1"
+#~ msgstr "Code kopiert in die Zwischenablage"
+
+#, fuzzy
+#~ msgid "mild_lang_var2"
+#~ msgstr "Code kopiert in die Zwischenablage"
+
+#, fuzzy
+#~ msgid "freezing_lang_var1"
+#~ msgstr "Code kopiert in die Zwischenablage"
+
+#, fuzzy
+#~ msgid "blizzard"
+#~ msgstr "Code kopiert in die Zwischenablage"
+
+#, fuzzy
 #~ msgid "unknown temperature"
 #~ msgstr "Code kopiert in die Zwischenablage"
 
 #, fuzzy
-#~ msgid "show the weather for today."
-#~ msgstr "Code kopiert in die Zwischenablage"
-
-#, fuzzy
-#~ msgid "overcast"
-#~ msgstr "Code kopiert in die Zwischenablage"
-
-#, fuzzy
 #~ msgid "The sky is"
-#~ msgstr "Code kopiert in die Zwischenablage"
-
-#, fuzzy
-#~ msgid "Get Weather and forecast."
 #~ msgstr "Code kopiert in die Zwischenablage"
 
 #, fuzzy

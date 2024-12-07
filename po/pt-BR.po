@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-07 19:53-0300\n"
+"POT-Creation-Date: 2024-12-07 20:12-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -210,228 +210,237 @@ msgid "access_lang_var2"
 msgstr "acessa"
 
 #: src/ai/gemini/activations.js:68
-msgid "weather"
-msgstr "tempo"
+#, fuzzy
+msgid "how is the weather"
+msgstr "exiba informações sobre tempo para hoje"
 
 #: src/ai/gemini/activations.js:69
-msgid "weather_lang_var1"
-msgstr "clima"
+#, fuzzy
+msgid "what is the temperature"
+msgstr "a temperatura agora é de"
 
 #: src/ai/gemini/activations.js:70
-msgid "forecast"
-msgstr "ṕrevisão"
+#, fuzzy
+msgid "what's the weather like"
+msgstr "o tempo está"
 
 #: src/ai/gemini/activations.js:71
-msgid "temperature"
-msgstr "temperatura"
+#, fuzzy
+msgid "is it raining"
+msgstr " e está chovendo"
 
 #: src/ai/gemini/activations.js:72
-msgid "humidity"
-msgstr "humidade"
+#, fuzzy
+msgid "is it sunny"
+msgstr " e está ensolarado"
 
 #: src/ai/gemini/activations.js:73
-msgid "humidity_lang_var1"
-msgstr "humidades"
+#, fuzzy
+msgid "is it snowing"
+msgstr " e está nevando"
 
 #: src/ai/gemini/activations.js:74
-msgid "wind"
-msgstr "vento"
+#, fuzzy
+msgid "is it windy"
+msgstr "ventania"
 
 #: src/ai/gemini/activations.js:75
-msgid "wind_lang_var1"
-msgstr "ar"
+#, fuzzy
+msgid "what's the forecast"
+msgstr "Informações sobre tempo e previsão."
 
 #: src/ai/gemini/activations.js:76
-msgid "wind_lang_var2"
-msgstr "ventania"
+#, fuzzy
+msgid "what's the weather forecast"
+msgstr "exiba informações sobre tempo para hoje"
 
 #: src/ai/gemini/activations.js:77
-msgid "precipitation"
-msgstr "precipitação"
+msgid "how hot is it outside"
+msgstr ""
 
 #: src/ai/gemini/activations.js:78
-msgid "precipitation_lang_var1"
-msgstr "precipitações"
+msgid "how cold is it outside"
+msgstr ""
 
 #: src/ai/gemini/activations.js:79
-msgid "precipitation_lang_var2"
-msgstr "precipitando"
+msgid "is it cloudy"
+msgstr ""
 
 #: src/ai/gemini/activations.js:80
-msgid "cloud"
-msgstr "nuvem"
+msgid "is there a storm coming"
+msgstr ""
 
 #: src/ai/gemini/activations.js:81
-msgid "cloud_lang_var1"
-msgstr "nublado"
+msgid "what's the humidity level"
+msgstr ""
 
 #: src/ai/gemini/activations.js:82
-msgid "climate"
-msgstr "clima"
+msgid "is it going to rain today"
+msgstr ""
 
 #: src/ai/gemini/activations.js:83
-msgid "rain"
-msgstr "chuva"
+msgid "will it snow tomorrow"
+msgstr ""
 
 #: src/ai/gemini/activations.js:84
-msgid "rain_lang_var1"
-msgstr "chover"
+#, fuzzy
+msgid "what's the weather like this week"
+msgstr "o tempo está"
 
 #: src/ai/gemini/activations.js:85
-msgid "rain_lang_var2"
-msgstr "chovendo"
+msgid "do I need an umbrella"
+msgstr ""
 
 #: src/ai/gemini/activations.js:86
-msgid "snow"
-msgstr "neve"
+msgid "do I need a jacket"
+msgstr ""
 
 #: src/ai/gemini/activations.js:87
-msgid "snow_lang_var1"
-msgstr "nevar"
+msgid "how warm is it outside"
+msgstr ""
 
 #: src/ai/gemini/activations.js:88
-msgid "snow_lang_var2"
-msgstr "nevando"
+msgid "is there a chance of rain"
+msgstr ""
 
 #: src/ai/gemini/activations.js:89
-msgid "frost"
-msgstr "frio"
+msgid "is it foggy"
+msgstr ""
 
 #: src/ai/gemini/activations.js:90
-msgid "frost_lang_var1"
-msgstr "congelando"
+#, fuzzy
+msgid "is it freezing"
+msgstr "frio"
 
 #: src/ai/gemini/activations.js:91
-msgid "frost_lang_var2"
-msgstr "congelar"
+#, fuzzy
+msgid "what's the high for today"
+msgstr "exiba informações sobre tempo para hoje"
 
 #: src/ai/gemini/activations.js:92
-msgid "fog"
-msgstr "nevoa"
+#, fuzzy
+msgid "what's the low for today"
+msgstr "exiba informações sobre tempo para hoje"
 
 #: src/ai/gemini/activations.js:93
-msgid "fog_lang_var1"
-msgstr "nevoeiro"
+#, fuzzy
+msgid "how's the weather right now"
+msgstr "exiba informações sobre tempo para hoje"
 
 #: src/ai/gemini/activations.js:94
-msgid "fog_lang_var2"
-msgstr "brisa"
+msgid "should I bring a coat"
+msgstr ""
 
 #: src/ai/gemini/activations.js:95
-msgid "sun"
-msgstr "sol"
+msgid "what's the wind speed"
+msgstr ""
 
 #: src/ai/gemini/activations.js:96
-msgid "sun_lang_var1"
-msgstr "ensolarado"
+msgid "is it stormy"
+msgstr ""
 
 #: src/ai/gemini/activations.js:97
-msgid "sun_lang_var2"
-msgstr "calor"
+msgid "is it drizzling"
+msgstr ""
 
 #: src/ai/gemini/activations.js:98
-msgid "clouds"
-msgstr "nuvens"
+msgid "is there thunder"
+msgstr ""
 
 #: src/ai/gemini/activations.js:99
-msgid "clouds_lang_var1"
-msgstr "nevoeiro"
+msgid "is it lightning"
+msgstr ""
 
 #: src/ai/gemini/activations.js:100
-msgid "clouds_lang_var2"
-msgstr "nevoada"
+msgid "is it mild outside"
+msgstr ""
 
 #: src/ai/gemini/activations.js:101
-msgid "sky"
-msgstr "céu"
+msgid "what's the air pressure"
+msgstr ""
 
 #: src/ai/gemini/activations.js:102
-msgid "windy"
-msgstr "ventania"
+msgid "is there a heatwave"
+msgstr ""
 
 #: src/ai/gemini/activations.js:103
-msgid "windy_lang_var1"
-msgstr "ventos"
+msgid "is it chilly"
+msgstr ""
 
 #: src/ai/gemini/activations.js:104
-msgid "humid"
-msgstr "humido"
+#, fuzzy
+msgid "is it overcast"
+msgstr "ṕrevisão"
 
 #: src/ai/gemini/activations.js:105
-msgid "humid_lang_var1"
-msgstr "humidos"
+#, fuzzy
+msgid "is the weather clear"
+msgstr "o tempo está"
 
 #: src/ai/gemini/activations.js:106
-msgid "humid_lang_var2"
-msgstr "molhado"
+msgid "will it be hot this weekend"
+msgstr ""
 
 #: src/ai/gemini/activations.js:107
-msgid "dry"
-msgstr "seco"
+msgid "is it safe to go outside"
+msgstr ""
 
 #: src/ai/gemini/activations.js:108
-msgid "dry_lang_var1"
-msgstr "palha"
+msgid "is there a hurricane warning"
+msgstr ""
 
 #: src/ai/gemini/activations.js:109
-msgid "dry_lang_var2"
-msgstr "deserto"
+msgid "what's the UV index today"
+msgstr ""
 
 #: src/ai/gemini/activations.js:110
-msgid "cold"
-msgstr "frio"
+msgid "what time will it rain"
+msgstr ""
 
 #: src/ai/gemini/activations.js:111
-msgid "cold_lang_var1"
-msgstr "gelado"
+#, fuzzy
+msgid "is it good weather for a walk"
+msgstr "exiba informações sobre tempo para hoje"
 
 #: src/ai/gemini/activations.js:112
-msgid "cold_lang_var2"
-msgstr "gelando"
+msgid "is it safe to drive in this weather"
+msgstr ""
 
 #: src/ai/gemini/activations.js:113
-msgid "hot"
-msgstr "quente"
+msgid "will it be sunny later"
+msgstr ""
 
 #: src/ai/gemini/activations.js:114
-msgid "hot_lang_var1"
-msgstr "pegando fogo"
+msgid "how long will it rain"
+msgstr ""
 
 #: src/ai/gemini/activations.js:115
-msgid "hot_lang_var2"
-msgstr "calorento"
+msgid "are there any weather alerts"
+msgstr ""
 
 #: src/ai/gemini/activations.js:116
-msgid "warm"
-msgstr "calor"
+msgid "will it clear up later"
+msgstr ""
 
 #: src/ai/gemini/activations.js:117
-msgid "warm_lang_var1"
-msgstr "sufocante"
+msgid "should I expect hail"
+msgstr ""
 
 #: src/ai/gemini/activations.js:118
-msgid "mild"
-msgstr "agradável"
+msgid "will there be a frost tonight"
+msgstr ""
 
 #: src/ai/gemini/activations.js:119
-msgid "mild_lang_var1"
-msgstr "amêno"
+msgid "is there a cold front coming"
+msgstr ""
 
 #: src/ai/gemini/activations.js:120
-msgid "mild_lang_var2"
-msgstr "gostoso"
+msgid "what's the dew point"
+msgstr ""
 
 #: src/ai/gemini/activations.js:121
-msgid "freezing"
-msgstr "frio"
-
-#: src/ai/gemini/activations.js:122
-msgid "freezing_lang_var1"
-msgstr "congelando"
-
-#: src/ai/gemini/activations.js:123
-msgid "blizzard"
-msgstr "nevoeiro"
+msgid "how's the visibility today"
+msgstr ""
 
 #: src/ai/gemini/functions.js:45
 msgid "Sorry, I can't do that right now. Maybe in the future."
@@ -869,6 +878,168 @@ msgstr "Salvar"
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
 
+#~ msgid "weather"
+#~ msgstr "tempo"
+
+#~ msgid "weather_lang_var1"
+#~ msgstr "clima"
+
+#~ msgid "forecast"
+#~ msgstr "ṕrevisão"
+
+#~ msgid "temperature"
+#~ msgstr "temperatura"
+
+#~ msgid "humidity"
+#~ msgstr "humidade"
+
+#~ msgid "humidity_lang_var1"
+#~ msgstr "humidades"
+
+#~ msgid "wind"
+#~ msgstr "vento"
+
+#~ msgid "wind_lang_var1"
+#~ msgstr "ar"
+
+#~ msgid "wind_lang_var2"
+#~ msgstr "ventania"
+
+#~ msgid "precipitation"
+#~ msgstr "precipitação"
+
+#~ msgid "precipitation_lang_var1"
+#~ msgstr "precipitações"
+
+#~ msgid "precipitation_lang_var2"
+#~ msgstr "precipitando"
+
+#~ msgid "cloud"
+#~ msgstr "nuvem"
+
+#~ msgid "cloud_lang_var1"
+#~ msgstr "nublado"
+
+#~ msgid "climate"
+#~ msgstr "clima"
+
+#~ msgid "rain"
+#~ msgstr "chuva"
+
+#~ msgid "rain_lang_var1"
+#~ msgstr "chover"
+
+#~ msgid "rain_lang_var2"
+#~ msgstr "chovendo"
+
+#~ msgid "snow"
+#~ msgstr "neve"
+
+#~ msgid "snow_lang_var1"
+#~ msgstr "nevar"
+
+#~ msgid "snow_lang_var2"
+#~ msgstr "nevando"
+
+#~ msgid "frost"
+#~ msgstr "frio"
+
+#~ msgid "frost_lang_var1"
+#~ msgstr "congelando"
+
+#~ msgid "frost_lang_var2"
+#~ msgstr "congelar"
+
+#~ msgid "fog"
+#~ msgstr "nevoa"
+
+#~ msgid "fog_lang_var1"
+#~ msgstr "nevoeiro"
+
+#~ msgid "fog_lang_var2"
+#~ msgstr "brisa"
+
+#~ msgid "sun"
+#~ msgstr "sol"
+
+#~ msgid "sun_lang_var1"
+#~ msgstr "ensolarado"
+
+#~ msgid "sun_lang_var2"
+#~ msgstr "calor"
+
+#~ msgid "clouds"
+#~ msgstr "nuvens"
+
+#~ msgid "clouds_lang_var1"
+#~ msgstr "nevoeiro"
+
+#~ msgid "clouds_lang_var2"
+#~ msgstr "nevoada"
+
+#~ msgid "sky"
+#~ msgstr "céu"
+
+#~ msgid "windy_lang_var1"
+#~ msgstr "ventos"
+
+#~ msgid "humid"
+#~ msgstr "humido"
+
+#~ msgid "humid_lang_var1"
+#~ msgstr "humidos"
+
+#~ msgid "humid_lang_var2"
+#~ msgstr "molhado"
+
+#~ msgid "dry"
+#~ msgstr "seco"
+
+#~ msgid "dry_lang_var1"
+#~ msgstr "palha"
+
+#~ msgid "dry_lang_var2"
+#~ msgstr "deserto"
+
+#~ msgid "cold"
+#~ msgstr "frio"
+
+#~ msgid "cold_lang_var1"
+#~ msgstr "gelado"
+
+#~ msgid "cold_lang_var2"
+#~ msgstr "gelando"
+
+#~ msgid "hot"
+#~ msgstr "quente"
+
+#~ msgid "hot_lang_var1"
+#~ msgstr "pegando fogo"
+
+#~ msgid "hot_lang_var2"
+#~ msgstr "calorento"
+
+#~ msgid "warm"
+#~ msgstr "calor"
+
+#~ msgid "warm_lang_var1"
+#~ msgstr "sufocante"
+
+#~ msgid "mild"
+#~ msgstr "agradável"
+
+#~ msgid "mild_lang_var1"
+#~ msgstr "amêno"
+
+#~ msgid "mild_lang_var2"
+#~ msgstr "gostoso"
+
+#~ msgid "freezing_lang_var1"
+#~ msgstr "congelando"
+
+#~ msgid "blizzard"
+#~ msgstr "nevoeiro"
+
 #, fuzzy
 #~ msgid "is cold"
 #~ msgstr "frio"
@@ -886,9 +1057,6 @@ msgstr "Suas preferências foram salvas"
 
 #~ msgid "unknown temperature"
 #~ msgstr "temperatura desconhecida"
-
-#~ msgid "show the weather for today."
-#~ msgstr "exiba informações sobre tempo para hoje"
 
 #~ msgid "Of course, searching..."
 #~ msgstr "Com certeza, pesquisando..."
@@ -914,10 +1082,6 @@ msgstr "Suas preferências foram salvas"
 #~ msgid "broken clouds"
 #~ msgstr "nuvens esparsas"
 
-#, fuzzy
-#~ msgid "overcast"
-#~ msgstr "ṕrevisão"
-
 #~ msgid "mist"
 #~ msgstr "neblinado"
 
@@ -938,9 +1102,6 @@ msgstr "Suas preferências foram salvas"
 
 #~ msgid "The sky is"
 #~ msgstr "o céu está"
-
-#~ msgid "Get Weather and forecast."
-#~ msgstr "Informações sobre tempo e previsão."
 
 #~ msgid "Response text before get weather, e.g.: "
 #~ msgstr "Texto de resposta antes de executar, por exemplo: "
