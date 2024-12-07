@@ -13,9 +13,10 @@ import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js'
  * @param {object} app
  */
 export class Utils {
-    constructor(log, logError) {
-        this.log = log;
-        this.logError = logError;
+    constructor(app) {
+        this.app = app;
+        this.log = app.log;
+        this.logError = app.logError;
         this._pangoConvert = convertMD;
         this.log('Utils loaded.');
     }
