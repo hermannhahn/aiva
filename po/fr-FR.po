@@ -365,7 +365,7 @@ msgstr "Code copié dans le presse-papier"
 msgid "frost_lang_var2"
 msgstr "Code copié dans le presse-papier"
 
-#: src/ai/gemini_functions.js:155 src/utils/utils.js:521
+#: src/ai/gemini_functions.js:155 src/utils/utils.js:524
 msgid "fog"
 msgstr ""
 
@@ -448,7 +448,7 @@ msgstr "Code copié dans le presse-papier"
 msgid "dry_lang_var2"
 msgstr "Code copié dans le presse-papier"
 
-#: src/ai/gemini_functions.js:173 src/utils/utils.js:559
+#: src/ai/gemini_functions.js:173 src/utils/utils.js:562
 msgid "cold"
 msgstr ""
 
@@ -462,7 +462,7 @@ msgstr "Code copié dans le presse-papier"
 msgid "cold_lang_var2"
 msgstr "Code copié dans le presse-papier"
 
-#: src/ai/gemini_functions.js:176 src/utils/utils.js:583
+#: src/ai/gemini_functions.js:176 src/utils/utils.js:586
 msgid "hot"
 msgstr ""
 
@@ -476,7 +476,7 @@ msgstr "Code copié dans le presse-papier"
 msgid "hot_lang_var2"
 msgstr "Code copié dans le presse-papier"
 
-#: src/ai/gemini_functions.js:179 src/utils/utils.js:577
+#: src/ai/gemini_functions.js:179 src/utils/utils.js:580
 msgid "warm"
 msgstr ""
 
@@ -485,7 +485,7 @@ msgstr ""
 msgid "warm_lang_var1"
 msgstr "Code copié dans le presse-papier"
 
-#: src/ai/gemini_functions.js:181 src/utils/utils.js:568
+#: src/ai/gemini_functions.js:181 src/utils/utils.js:571
 msgid "mild"
 msgstr ""
 
@@ -739,116 +739,116 @@ msgstr ""
 msgid "Look at example below:"
 msgstr ""
 
-#: src/utils/utils.js:509
+#: src/utils/utils.js:512
 msgid "clear"
 msgstr ""
 
-#: src/utils/utils.js:511
+#: src/utils/utils.js:514
 msgid "few clouds"
 msgstr ""
 
-#: src/utils/utils.js:514
+#: src/utils/utils.js:517
 msgid "scattered clouds"
 msgstr ""
 
-#: src/utils/utils.js:517
+#: src/utils/utils.js:520
 msgid "broken clouds"
 msgstr ""
 
-#: src/utils/utils.js:519
+#: src/utils/utils.js:522
 #, fuzzy
 msgid "overcast"
 msgstr "Code copié dans le presse-papier"
 
-#: src/utils/utils.js:523
+#: src/utils/utils.js:526
 msgid "mist"
 msgstr ""
 
-#: src/utils/utils.js:525
+#: src/utils/utils.js:528
 msgid "haze"
 msgstr ""
 
-#: src/utils/utils.js:527
+#: src/utils/utils.js:530
 msgid "dust"
 msgstr ""
 
-#: src/utils/utils.js:529
+#: src/utils/utils.js:532
 msgid "sand"
 msgstr ""
 
-#: src/utils/utils.js:531
+#: src/utils/utils.js:534
 msgid "ash"
 msgstr ""
 
-#: src/utils/utils.js:533
+#: src/utils/utils.js:536
 msgid "squall"
 msgstr ""
 
-#: src/utils/utils.js:535
+#: src/utils/utils.js:538
 msgid "tornado"
 msgstr ""
 
-#: src/utils/utils.js:537
+#: src/utils/utils.js:540
 msgid "hurricane"
 msgstr ""
 
-#: src/utils/utils.js:539 src/utils/utils.js:550
+#: src/utils/utils.js:542 src/utils/utils.js:553
 msgid "unknown"
 msgstr ""
 
-#: src/utils/utils.js:546
+#: src/utils/utils.js:549
 msgid "night"
 msgstr ""
 
-#: src/utils/utils.js:548
+#: src/utils/utils.js:551
 msgid "day"
 msgstr ""
 
-#: src/utils/utils.js:585
+#: src/utils/utils.js:588
 #, fuzzy
 msgid "unknown temperature"
 msgstr "Code copié dans le presse-papier"
 
-#: src/utils/utils.js:591
+#: src/utils/utils.js:594
 msgid " and raining"
 msgstr ""
 
-#: src/utils/utils.js:594
+#: src/utils/utils.js:597
 msgid " and snowing"
 msgstr ""
 
-#: src/utils/utils.js:597
+#: src/utils/utils.js:600
 msgid " and sunny"
 msgstr ""
 
-#: src/utils/utils.js:602
+#: src/utils/utils.js:605
 msgid "Now it is"
 msgstr ""
 
-#: src/utils/utils.js:602
+#: src/utils/utils.js:605
 msgid "in"
 msgstr ""
 
-#: src/utils/utils.js:602
+#: src/utils/utils.js:605
 #, fuzzy
 msgid "The sky is"
 msgstr "Code copié dans le presse-papier"
 
-#: src/utils/utils.js:602
+#: src/utils/utils.js:605
 #, fuzzy
 msgid "and the weather is"
 msgstr "Code copié dans le presse-papier"
 
-#: src/utils/utils.js:602
+#: src/utils/utils.js:605
 #, fuzzy
 msgid "the temperature is now"
 msgstr "Code copié dans le presse-papier"
 
-#: src/utils/utils.js:602
+#: src/utils/utils.js:605
 msgid "but it feels like"
 msgstr ""
 
-#: src/utils/utils.js:602
+#: src/utils/utils.js:605
 #, fuzzy
 msgid "The humidity of the air is"
 msgstr "Code copié dans le presse-papier"
