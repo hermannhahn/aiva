@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-07 13:34-0300\n"
+"POT-Creation-Date: 2024-12-07 15:19-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language it-IT\n"
@@ -407,7 +407,8 @@ msgstr "Codice copiato negli appunti"
 msgid "dry_lang_var2"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini/activations.js:110 src/utils/utils.js:520
+#: src/ai/gemini/activations.js:110 src/ai/gemini/functions.js:221
+#: src/utils/utils.js:520
 msgid "cold"
 msgstr ""
 
@@ -421,7 +422,8 @@ msgstr "Codice copiato negli appunti"
 msgid "cold_lang_var2"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini/activations.js:113 src/utils/utils.js:544
+#: src/ai/gemini/activations.js:113 src/ai/gemini/functions.js:236
+#: src/utils/utils.js:544
 msgid "hot"
 msgstr ""
 
@@ -435,7 +437,8 @@ msgstr "Codice copiato negli appunti"
 msgid "hot_lang_var2"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini/activations.js:116 src/utils/utils.js:538
+#: src/ai/gemini/activations.js:116 src/ai/gemini/functions.js:233
+#: src/utils/utils.js:538
 msgid "warm"
 msgstr ""
 
@@ -444,7 +447,8 @@ msgstr ""
 msgid "warm_lang_var1"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini/activations.js:118 src/utils/utils.js:529
+#: src/ai/gemini/activations.js:118 src/ai/gemini/functions.js:227
+#: src/utils/utils.js:529
 msgid "mild"
 msgstr ""
 
@@ -473,45 +477,101 @@ msgstr "Codice copiato negli appunti"
 msgid "blizzard"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini/functions.js:42
+#: src/ai/gemini/functions.js:45
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr ""
 
-#: src/ai/gemini/functions.js:59
+#: src/ai/gemini/functions.js:62
 msgid "End of text!"
 msgstr ""
 
-#: src/ai/gemini/functions.js:63
+#: src/ai/gemini/functions.js:66
 #, fuzzy
 msgid "Failed to get text from clipboard"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini/functions.js:79
+#: src/ai/gemini/functions.js:82
 msgid "Please, install"
 msgstr ""
 
-#: src/ai/gemini/functions.js:83
+#: src/ai/gemini/functions.js:86
 msgid "first"
 msgstr ""
 
-#: src/ai/gemini/functions.js:100 src/ai/gemini/functions.js:153
+#: src/ai/gemini/functions.js:103 src/ai/gemini/functions.js:156
 #, fuzzy
 msgid "Error opening site"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini/functions.js:144
+#: src/ai/gemini/functions.js:147
 msgid "You don't have any browser installed."
 msgstr ""
 
-#: src/ai/gemini/functions.js:146
+#: src/ai/gemini/functions.js:149
 msgid "Please, install a browser and try again."
 msgstr ""
 
-#: src/ai/gemini/functions.js:148
+#: src/ai/gemini/functions.js:151
 msgid "Opening App Store..."
 msgstr ""
 
-#: src/ai/gemini/functions.js:163
+#: src/ai/gemini/functions.js:211 src/utils/utils.js:507
+msgid "night"
+msgstr ""
+
+#: src/ai/gemini/functions.js:213 src/utils/utils.js:509
+msgid "day"
+msgstr ""
+
+#: src/ai/gemini/functions.js:215 src/utils/utils.js:511
+msgid "unknown"
+msgstr ""
+
+#: src/ai/gemini/functions.js:238 src/utils/utils.js:546
+#, fuzzy
+msgid "unknown temperature"
+msgstr "Codice copiato negli appunti"
+
+#: src/ai/gemini/functions.js:244 src/utils/utils.js:552
+msgid " and raining"
+msgstr ""
+
+#: src/ai/gemini/functions.js:247 src/utils/utils.js:555
+msgid " and snowing"
+msgstr ""
+
+#: src/ai/gemini/functions.js:250 src/utils/utils.js:558
+msgid " and sunny"
+msgstr ""
+
+#: src/ai/gemini/functions.js:255 src/utils/utils.js:563
+msgid "Now it is"
+msgstr ""
+
+#: src/ai/gemini/functions.js:255 src/utils/utils.js:563
+msgid "in"
+msgstr ""
+
+#: src/ai/gemini/functions.js:255 src/utils/utils.js:563
+#, fuzzy
+msgid "and the weather is"
+msgstr "Codice copiato negli appunti"
+
+#: src/ai/gemini/functions.js:255 src/utils/utils.js:563
+#, fuzzy
+msgid "the temperature is now"
+msgstr "Codice copiato negli appunti"
+
+#: src/ai/gemini/functions.js:255 src/utils/utils.js:563
+msgid "but it feels like"
+msgstr ""
+
+#: src/ai/gemini/functions.js:255 src/utils/utils.js:563
+#, fuzzy
+msgid "The humidity of the air is"
+msgstr "Codice copiato negli appunti"
+
+#: src/ai/gemini/functions.js:261
 #, fuzzy
 msgid "Error getting weather"
 msgstr "Codice copiato negli appunti"
@@ -738,62 +798,6 @@ msgstr ""
 #: src/utils/utils.js:320
 msgid "Look at example below:"
 msgstr ""
-
-#: src/utils/utils.js:507
-msgid "night"
-msgstr ""
-
-#: src/utils/utils.js:509
-msgid "day"
-msgstr ""
-
-#: src/utils/utils.js:511
-msgid "unknown"
-msgstr ""
-
-#: src/utils/utils.js:546
-#, fuzzy
-msgid "unknown temperature"
-msgstr "Codice copiato negli appunti"
-
-#: src/utils/utils.js:552
-msgid " and raining"
-msgstr ""
-
-#: src/utils/utils.js:555
-msgid " and snowing"
-msgstr ""
-
-#: src/utils/utils.js:558
-msgid " and sunny"
-msgstr ""
-
-#: src/utils/utils.js:563
-msgid "Now it is"
-msgstr ""
-
-#: src/utils/utils.js:563
-msgid "in"
-msgstr ""
-
-#: src/utils/utils.js:563
-#, fuzzy
-msgid "and the weather is"
-msgstr "Codice copiato negli appunti"
-
-#: src/utils/utils.js:563
-#, fuzzy
-msgid "the temperature is now"
-msgstr "Codice copiato negli appunti"
-
-#: src/utils/utils.js:563
-msgid "but it feels like"
-msgstr ""
-
-#: src/utils/utils.js:563
-#, fuzzy
-msgid "The humidity of the air is"
-msgstr "Codice copiato negli appunti"
 
 #: src/commands.js:21
 msgid "Invalid command"

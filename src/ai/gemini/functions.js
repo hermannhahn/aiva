@@ -1,4 +1,7 @@
 import St from 'gi://St';
+import Soup from 'gi://Soup';
+import GLib from 'gi://GLib';
+
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 import {FunctionsActivations} from './activations.js';
 import {FunctionsDeclarations} from './declarations.js';
@@ -155,9 +158,104 @@ export class GeminiFunctions {
     }
 
     _getWeather(location) {
+        this.app.log('Getting weather from ' + location);
+        this.lat = this.app.userSettings.LAT;
+        this.lon = this.app.userSettings.LON;
+        this.loc = this.app.userSettings.CITY;
+
+        if (location !== undefined) {
+            try {
+                this.loc = location;
+                let coordURL = `https://geocode.maps.co/search?q=${location}&api_key=6753c06c9c8c8475490416eox643a09`;
+                let _httpSessionCoord = new Soup.Session();
+                let messageCoord = Soup.Message.new('GET', coordURL);
+
+                _httpSessionCoord.send_and_read_async(
+                    messageCoord,
+                    GLib.PRIORITY_DEFAULT,
+                    null,
+                    (_httpSessionCoord, result) => {
+                        let bytes =
+                            _httpSessionCoord.send_and_read_finish(result);
+                        let decoder = new TextDecoder('utf-8');
+                        let response = decoder.decode(bytes.get_data());
+                        let res = JSON.parse(response);
+                        this.lat = res[0]?.lat;
+                        this.lon = res[0]?.lon;
+                    },
+                );
+            } catch (error) {
+                this.app.log(`Failed to process response: ${error}`);
+            }
+        }
+
         try {
-            this.app.log('Getting weather from ' + location);
-            this.app.utils.getCurrentLocalWeather(location);
+            // curl
+            let url = `https://api.open-meteo.com/v1/forecast?latitude=${this.lat}&longitude=${this.lon}&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,rain,showers,snowfall,cloud_cover`;
+            let _httpSession = new Soup.Session();
+            let message = Soup.Message.new('GET', url);
+
+            _httpSession.send_and_read_async(
+                message,
+                GLib.PRIORITY_DEFAULT,
+                null,
+                (_httpSession, result) => {
+                    let bytes = _httpSession.send_and_read_finish(result);
+                    let decoder = new TextDecoder('utf-8');
+                    let response = decoder.decode(bytes.get_data());
+                    let res = JSON.parse(response);
+
+                    function isDayString() {
+                        switch (res.current.is_day) {
+                            case 0:
+                                return _('night');
+                            case 1:
+                                return _('day');
+                            default:
+                                return _('unknown');
+                        }
+                    }
+
+                    function sensationString() {
+                        if (res.current.apparent_temperature < 10) {
+                            return _('cold');
+                        }
+                        if (
+                            res.current.apparent_temperature >= 10 &&
+                            res.current.apparent_temperature < 25
+                        ) {
+                            return _('mild');
+                        }
+                        if (
+                            res.current.apparent_temperature >= 25 &&
+                            res.current.apparent_temperature < 35
+                        ) {
+                            return _('warm');
+                        }
+                        if (res.current.apparent_temperature >= 35) {
+                            return _('hot');
+                        }
+                        return _('unknown temperature');
+                    }
+
+                    function climeStatus() {
+                        let clime = '';
+                        if (res.current.precipitation > 0) {
+                            clime = _(' and raining');
+                        }
+                        if (res.current.snowfall > 0) {
+                            clime = _(' and snowing');
+                        }
+                        if (res.current.is_day === 1) {
+                            clime = _(' and sunny');
+                        }
+                        return clime;
+                    }
+
+                    let weatherDescription = `${_('Now it is')} ${isDayString()}${climeStatus()} ${_('in')} ${this.loc} ${_('and the weather is')} ${sensationString()}, ${_('the temperature is now')} ${res.current.temperature_2m}${res.current_units.temperature_2m}, ${_('but it feels like')} ${res.current.apparent_temperature}${res.current_units.apparent_temperature}. ${_('The humidity of the air is')} ${res.current.relative_humidity_2m}%.`;
+                    this.app.chat.editResponse(weatherDescription);
+                },
+            );
         } catch (error) {
             this.app.logError('Error getting weather:', error);
             this.app.chat.editResponse(_('Error getting weather'));
