@@ -121,6 +121,7 @@ export class Utils {
      * @description add to chat news from google
      * @param {string} topic
      * @param {string} [lang='en-US']
+     * @param {*} callback
      */
     async readNews(topic = undefined, lang = 'en-US', callback) {
         try {

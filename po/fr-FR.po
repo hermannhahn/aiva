@@ -415,7 +415,7 @@ msgstr "Code copié dans le presse-papier"
 msgid "dry_lang_var2"
 msgstr "Code copié dans le presse-papier"
 
-#: src/ai/gemini/activations.js:110 src/utils/utils.js:363
+#: src/ai/gemini/activations.js:110 src/utils/utils.js:364
 msgid "cold"
 msgstr ""
 
@@ -429,7 +429,7 @@ msgstr "Code copié dans le presse-papier"
 msgid "cold_lang_var2"
 msgstr "Code copié dans le presse-papier"
 
-#: src/ai/gemini/activations.js:113 src/utils/utils.js:378
+#: src/ai/gemini/activations.js:113 src/utils/utils.js:379
 msgid "hot"
 msgstr ""
 
@@ -443,7 +443,7 @@ msgstr "Code copié dans le presse-papier"
 msgid "hot_lang_var2"
 msgstr "Code copié dans le presse-papier"
 
-#: src/ai/gemini/activations.js:116 src/utils/utils.js:375
+#: src/ai/gemini/activations.js:116 src/utils/utils.js:376
 msgid "warm"
 msgstr ""
 
@@ -452,7 +452,7 @@ msgstr ""
 msgid "warm_lang_var1"
 msgstr "Code copié dans le presse-papier"
 
-#: src/ai/gemini/activations.js:118 src/utils/utils.js:369
+#: src/ai/gemini/activations.js:118 src/utils/utils.js:370
 msgid "mild"
 msgstr ""
 
@@ -745,45 +745,45 @@ msgstr ""
 msgid "Give me a moment to sort this out..."
 msgstr ""
 
-#: src/utils/utils.js:143
+#: src/utils/utils.js:144
 msgid "Here are the main news"
 msgstr ""
 
-#: src/utils/utils.js:145
+#: src/utils/utils.js:146
 #, fuzzy
 msgid "Error fetching news"
 msgstr "Code copié dans le presse-papier"
 
-#: src/utils/utils.js:252
+#: src/utils/utils.js:253
 msgid "Look at example below:"
 msgstr ""
 
-#: src/utils/utils.js:353
+#: src/utils/utils.js:354
 msgid "night"
 msgstr ""
 
-#: src/utils/utils.js:355
+#: src/utils/utils.js:356
 msgid "day"
 msgstr ""
 
-#: src/utils/utils.js:357
+#: src/utils/utils.js:358
 msgid "unknown"
 msgstr ""
 
-#: src/utils/utils.js:380
+#: src/utils/utils.js:381
 #, fuzzy
 msgid "unknown temperature"
 msgstr "Code copié dans le presse-papier"
 
-#: src/utils/utils.js:386
+#: src/utils/utils.js:387
 msgid " and is raining"
 msgstr ""
 
-#: src/utils/utils.js:389
+#: src/utils/utils.js:390
 msgid " and is snowing"
 msgstr ""
 
-#: src/utils/utils.js:392
+#: src/utils/utils.js:393
 msgid " and is sunny"
 msgstr ""
 
