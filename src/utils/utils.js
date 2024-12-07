@@ -436,12 +436,11 @@ export class Utils {
                             let bytes =
                                 _httpSessionCoord.send_and_read_finish(result);
                             let decoder = new TextDecoder('utf-8');
-                            let res = decoder.decode(bytes.get_data());
+                            let response = decoder.decode(bytes.get_data());
+                            let res = JSON.parse(response);
                             this.app.log(`First result: ${res}`); // debug
-                            this.lat =
-                                res.results[0]?.locations[0]?.latLng?.lat;
-                            this.lon =
-                                res.results[0]?.locations[0]?.latLng?.lng;
+                            this.lat = res[0]?.lat;
+                            this.lon = res[0].lng;
 
                             // curl
                             let url = `https://api.open-meteo.com/v1/forecast?latitude=${this.lat}&longitude=${this.lon}&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,rain,showers,snowfall,cloud_cover`;
