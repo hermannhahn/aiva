@@ -414,8 +414,7 @@ export class GoogleGemini {
             // get first five words from text
             if (declarations) {
                 const tools = JSON.stringify(declarations);
-                return `{"contents":${request}, ""systemInstructions"
-":${systemInstructions}, "tools":${tools}}`;
+                return `{"contents":${request}, "systemInstructions":${systemInstructions}, "tools":${tools}}`;
             }
             return `{"contents":${request}}`;
         } catch {
