@@ -466,7 +466,6 @@ msgid "blizzard"
 msgstr "nevoeiro"
 
 #: src/ai/gemini_functions.js:191
-#, fuzzy
 msgid "show the weather for today."
 msgstr "exiba informações sobre tempo para hoje"
 
