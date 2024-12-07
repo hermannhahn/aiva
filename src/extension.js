@@ -102,13 +102,13 @@ const Aiva = GObject.registerClass(
          */
         _createInstances() {
             this.logger = new Logger(true);
-            this.commands = new Commands(this);
-            this.database = new Database(this);
-            this.gemini = new GoogleGemini(this);
-            this.azure = new MicrosoftAzure(this);
-            this.audio = new Audio(this);
             this.utils = new Utils(this.log, this.logError);
+            this.database = new Database(this);
             this.ui = new UI(this);
+            this.commands = new Commands(this);
+            this.audio = new Audio(this);
+            this.azure = new MicrosoftAzure(this);
+            this.gemini = new GoogleGemini(this);
             this.chat = new Chat(this);
             this.interpreter = new Interpreter(this);
         }
