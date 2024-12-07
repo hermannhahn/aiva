@@ -466,9 +466,9 @@ export class Utils {
     /**
      * @description Fetches and returns the text content of a website from the given URL, with all HTML tags removed.
      * @param {string} url - The URL of the website to fetch.
-     * @returns {string} - A promise that resolves to the plain text content of the website.
+     * @param {*} callback
      */
-    readUrlText(url) {
+    readUrlText(url, callback) {
         try {
             let _httpSession = new Soup.Session();
             let message = Soup.Message.new('GET', url);
@@ -481,8 +481,7 @@ export class Utils {
                     let decoder = new TextDecoder('utf-8');
                     let response = decoder.decode(bytes.get_data());
                     const plainText = response.replace(/<[^>]*>/g, '');
-                    this.app.chat.editResponse(plainText);
-                    return plainText;
+                    callback(plainText);
                 },
             );
 
