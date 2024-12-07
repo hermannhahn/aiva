@@ -40,7 +40,7 @@ export class Logger {
     logError(message) {
         if (this.debug === true) {
             if (message) {
-                console.log(`[AIVA][ERROR] ${message}`);
+                console.error(`[AIVA] ${message}`);
             }
         }
     }
