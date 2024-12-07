@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-07 19:37-0300\n"
+"POT-Creation-Date: 2024-12-07 19:47-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -532,15 +532,17 @@ msgstr ""
 msgid "Sure, opening..."
 msgstr ""
 
-#: src/ai/gemini/declarations.js:75
-msgid "show the weather for today."
+#: src/ai/gemini/declarations.js:76
+msgid ""
+"Show the weather for today. Use only if user wants to know weather "
+"information."
 msgstr ""
 
-#: src/ai/gemini/declarations.js:83
+#: src/ai/gemini/declarations.js:85
 msgid "Provide a location, e.g.: \"New York, NY\" (always use this format)"
 msgstr ""
 
-#: src/ai/gemini/declarations.js:87
+#: src/ai/gemini/declarations.js:89
 msgid "or don't provide a location to show weather from user location"
 msgstr ""
 

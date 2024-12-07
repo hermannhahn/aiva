@@ -72,7 +72,9 @@ export class FunctionsDeclarations {
 
         this.weather = {
             name: 'get_weather',
-            description: _('show the weather for today.'),
+            description: _(
+                'Show the weather for today. Use only if user wants to know weather information.',
+            ),
             parameters: {
                 type: 'object',
                 properties: {

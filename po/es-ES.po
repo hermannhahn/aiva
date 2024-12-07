@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-07 19:31-0300\n"
+"POT-Creation-Date: 2024-12-07 19:47-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language es-ES\n"
@@ -587,16 +587,17 @@ msgstr ""
 msgid "Sure, opening..."
 msgstr ""
 
-#: src/ai/gemini/declarations.js:75
-#, fuzzy
-msgid "show the weather for today."
-msgstr "Código copiado al portapapeles"
+#: src/ai/gemini/declarations.js:76
+msgid ""
+"Show the weather for today. Use only if user wants to know weather "
+"information."
+msgstr ""
 
-#: src/ai/gemini/declarations.js:83
+#: src/ai/gemini/declarations.js:85
 msgid "Provide a location, e.g.: \"New York, NY\" (always use this format)"
 msgstr ""
 
-#: src/ai/gemini/declarations.js:87
+#: src/ai/gemini/declarations.js:89
 msgid "or don't provide a location to show weather from user location"
 msgstr ""
 
@@ -895,6 +896,10 @@ msgstr ""
 #: src/prefs.js:287
 msgid "Your preferences have been saved"
 msgstr ""
+
+#, fuzzy
+#~ msgid "show the weather for today."
+#~ msgstr "Código copiado al portapapeles"
 
 #, fuzzy
 #~ msgid "and the weather is"
