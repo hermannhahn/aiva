@@ -58,7 +58,7 @@ export class Chat {
                     const district = res.district;
                     const lat = res.lat;
                     const lon = res.lon;
-                    this.app.userSettings.LOCATION = country;
+                    this.app.userSettings.LOCATION = `${city}, ${regionName}, ${country}`;
                     this.app.userSettings.IP = ip;
                     this.app.userSettings.COUNTRY = country;
                     this.app.userSettings.COUNTRY_CODE = countryCode;
