@@ -22,7 +22,6 @@ import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 import * as PanelMenu from 'resource:///org/gnome/shell/ui/panelMenu.js';
 
 // App
-import {Logger} from './utils/logger.js';
 import {Database} from './database.js';
 import {Audio} from './audio.js';
 import {Interpreter} from './interpreter.js';
@@ -101,7 +100,6 @@ const Aiva = GObject.registerClass(
          * @description public instances
          */
         _createInstances() {
-            this.logger = new Logger(true);
             this.database = new Database(this);
             this.audio = new Audio(this);
             this.interpreter = new Interpreter(this);
@@ -183,7 +181,7 @@ const Aiva = GObject.registerClass(
          * @param {string} message - string to log
          */
         log(message) {
-            this.logger.log(message);
+            console.log('[AIVA] ' + message);
         }
 
         /**
@@ -191,7 +189,7 @@ const Aiva = GObject.registerClass(
          * @param {string} message - string to log error
          */
         logError(message) {
-            this.logger.logError(message);
+            console.error('[AIVA] ' + message);
         }
     },
 );
