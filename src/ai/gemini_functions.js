@@ -198,19 +198,12 @@ export class GeminiFunctions {
                             _(
                                 "Don't provide a location to get weather from user location",
                             ) +
-                            ', ' +
+                            ' ' +
                             _(
                                 'or provide a location, e.g.: "New York, NY" (always use this format)',
                             ),
                     },
-                    response: {
-                        type: 'string',
-                        description:
-                            _('Response text before get weather, e.g.: ') +
-                            _('Sure, getting weather forecast...'),
-                    },
                 },
-                required: ['response'],
             },
         };
 
