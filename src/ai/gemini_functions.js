@@ -227,6 +227,7 @@ export class GeminiFunctions {
         command = command?.toLowerCase();
         const commandLine = args.commandLine;
         const response = args.response;
+        let location = args.location || this.app.userSettings.CITY;
         const url = args.url;
 
         switch (command) {
@@ -240,7 +241,7 @@ export class GeminiFunctions {
                 this._browseWeb(url, response);
                 break;
             case 'get_weather':
-                this._getWeather(url, response);
+                this._getWeather(location, response);
                 break;
             default:
                 this.app.chat.editResponse(
@@ -389,7 +390,7 @@ export class GeminiFunctions {
                 this.app.chat.editResponse(response);
             }
             this.app.log('Getting weather from ' + location);
-            this.app.utils.getCurrentLocalWeather();
+            this.app.utils.getCurrentLocalWeather(location);
         } catch (error) {
             this.app.logError('Error getting weather:', error);
             this.app.chat.editResponse(_('Error getting weather'));

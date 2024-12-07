@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-06 20:48-0300\n"
+"POT-Creation-Date: 2024-12-06 21:01-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -543,44 +543,44 @@ msgstr "Texto de resposta antes de executar, por exemplo: "
 msgid "Sure, getting weather forecast..."
 msgstr "Claro, obtendo informações do tempo..."
 
-#: src/ai/gemini_functions.js:247
+#: src/ai/gemini_functions.js:248
 #, fuzzy
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr "Eu não posso fazer isso agora. Talvez no futuro."
 
-#: src/ai/gemini_functions.js:288
+#: src/ai/gemini_functions.js:289
 msgid "End of text!"
 msgstr "Fim do texto!"
 
-#: src/ai/gemini_functions.js:292
+#: src/ai/gemini_functions.js:293
 msgid "Failed to get text from clipboard"
 msgstr "Falha ao obter texto da área de transferência"
 
-#: src/ai/gemini_functions.js:308
+#: src/ai/gemini_functions.js:309
 msgid "Please, install"
 msgstr "Por favor, instale"
 
-#: src/ai/gemini_functions.js:312
+#: src/ai/gemini_functions.js:313
 msgid "first"
 msgstr "primeiro"
 
-#: src/ai/gemini_functions.js:329 src/ai/gemini_functions.js:382
+#: src/ai/gemini_functions.js:330 src/ai/gemini_functions.js:383
 msgid "Error opening site"
 msgstr "Falha ao abrir site"
 
-#: src/ai/gemini_functions.js:373
+#: src/ai/gemini_functions.js:374
 msgid "You don't have any browser installed."
 msgstr "Você não tem nenhum navegador instalado."
 
-#: src/ai/gemini_functions.js:375
+#: src/ai/gemini_functions.js:376
 msgid "Please, install a browser and try again."
 msgstr "Por favor, instale um navegador e tente novamente."
 
-#: src/ai/gemini_functions.js:377
+#: src/ai/gemini_functions.js:378
 msgid "Opening App Store..."
 msgstr "Abrindo App Store..."
 
-#: src/ai/gemini_functions.js:395
+#: src/ai/gemini_functions.js:396
 #, fuzzy
 msgid "Error getting weather"
 msgstr "Falha ao abrir site"
@@ -791,8 +791,7 @@ msgstr "neblinado"
 
 #: src/utils/utils.js:486
 msgid "dust"
-msgstr"empoeirado"
-
+msgstr "empoeirado"
 
 #: src/utils/utils.js:488
 msgid "sand"
