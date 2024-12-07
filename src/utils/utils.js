@@ -433,7 +433,7 @@ export class Utils {
                     (_httpSessionCoord, result) => {
                         try {
                             let bytes =
-                                _httpSession.send_and_read_finish(result);
+                                _httpSessionCoord.send_and_read_finish(result);
                             let decoder = new TextDecoder('utf-8');
                             let response = decoder.decode(bytes.get_data());
                             let res = response.results[0]?.locations[0]?.latLng;
