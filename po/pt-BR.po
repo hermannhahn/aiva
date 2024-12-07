@@ -732,22 +732,22 @@ msgstr "desconhecida"
 #: src/utils/utils.js:365
 #, fuzzy
 msgid "the weather is cold"
-msgstr "e o tempo está"
+msgstr "o tempo está"
 
 #: src/utils/utils.js:371
 #, fuzzy
 msgid "the weather is mild"
-msgstr "e o tempo está"
+msgstr "o tempo está"
 
 #: src/utils/utils.js:377
 #, fuzzy
 msgid "the weather is warm"
-msgstr "e o tempo está"
+msgstr "o tempo está"
 
 #: src/utils/utils.js:380
 #, fuzzy
 msgid "the weather is hot"
-msgstr "e o tempo está"
+msgstr "o tempo está"
 
 #: src/utils/utils.js:388
 msgid " and is raining"
