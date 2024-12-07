@@ -118,17 +118,14 @@ msgid "launch_lang_var2"
 msgstr "lança"
 
 #: src/ai/gemini_functions.js:58
-#, fuzzy
 msgid "Run non-sudo commandline in the user terminal"
 msgstr "Rodar comandos no terminal"
 
 #: src/ai/gemini_functions.js:65
-#, fuzzy
 msgid "commandline to run"
 msgstr "linha de comando para rodar"
 
 #: src/ai/gemini_functions.js:71
-#, fuzzy
 msgid "Sure, opening GNOME Software..."
 msgstr "Claro, abrindo GNOME Software..."
 
@@ -137,12 +134,10 @@ msgid "search"
 msgstr "pesquisar"
 
 #: src/ai/gemini_functions.js:83
-#, fuzzy
 msgid "search_lang_var1"
 msgstr "pesquise"
 
 #: src/ai/gemini_functions.js:84
-#, fuzzy
 msgid "search_lang_var2"
 msgstr "pesquisa"
 
@@ -151,12 +146,10 @@ msgid "find"
 msgstr "procurar"
 
 #: src/ai/gemini_functions.js:86
-#, fuzzy
 msgid "find_lang_var1"
 msgstr "procure"
 
 #: src/ai/gemini_functions.js:87
-#, fuzzy
 msgid "find_lang_var2"
 msgstr "procura"
 
@@ -165,12 +158,10 @@ msgid "seek"
 msgstr "vasculhar"
 
 #: src/ai/gemini_functions.js:89
-#, fuzzy
 msgid "seek_lang_var1"
 msgstr "vasculhe"
 
 #: src/ai/gemini_functions.js:90
-#, fuzzy
 msgid "seek_lang_var2"
 msgstr "vasculha"
 
@@ -179,12 +170,10 @@ msgid "go"
 msgstr "vá para"
 
 #: src/ai/gemini_functions.js:92
-#, fuzzy
 msgid "go_lang_var1"
 msgstr "vai na"
 
 #: src/ai/gemini_functions.js:93
-#, fuzzy
 msgid "go_lang_var2"
 msgstr "vai no"
 
@@ -193,12 +182,10 @@ msgid "visit"
 msgstr "visitar"
 
 #: src/ai/gemini_functions.js:95
-#, fuzzy
 msgid "visit_lang_var1"
 msgstr "visite"
 
 #: src/ai/gemini_functions.js:96
-#, fuzzy
 msgid "visit_lang_var2"
 msgstr "visita"
 
@@ -207,12 +194,10 @@ msgid "navigate"
 msgstr "navegar"
 
 #: src/ai/gemini_functions.js:98
-#, fuzzy
 msgid "navigate_lang_var1"
 msgstr "navegue"
 
 #: src/ai/gemini_functions.js:99
-#, fuzzy
 msgid "navigate_lang_var2"
 msgstr "navega"
 
@@ -269,7 +254,6 @@ msgid "forecast"
 msgstr "ṕrevisão"
 
 #: src/ai/gemini_functions.js:134
-#, fuzzy
 msgid "temperature"
 msgstr "temperatura"
 
@@ -748,7 +732,6 @@ msgid "in"
 msgstr "em"
 
 #: src/utils/utils.js:563
-#, fuzzy
 msgid "and the weather is"
 msgstr "e o tempo está"
 
