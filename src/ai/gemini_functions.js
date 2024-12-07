@@ -222,7 +222,10 @@ export class GeminiFunctions {
         command = command?.toLowerCase();
         const commandLine = args.commandLine;
         const response = args.response;
-        const location = args.location;
+        let location = args.location;
+        if (!location || location === undefined) {
+            location = this.app.userSettings.LOCATION;
+        }
         const url = args.url;
 
         switch (command) {
