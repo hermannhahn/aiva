@@ -2,6 +2,8 @@ import Soup from 'gi://Soup';
 import GLib from 'gi://GLib';
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
+import {GeminiFunctions} from './gemini_functions.js';
+
 /**
  * @description Google Gemini API
  * @param {object} app
@@ -16,6 +18,7 @@ import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js'
 export class GoogleGemini {
     constructor(app) {
         this.app = app;
+        this.functions = new GeminiFunctions(app);
         this.USERNAME = app.userSettings.USERNAME;
         this.LOCATION = app.userSettings.LOCATION;
         this.GEMINI_API_KEY = app.userSettings.GEMINI_API_KEY;
