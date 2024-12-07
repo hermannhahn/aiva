@@ -422,7 +422,6 @@ export class Utils {
 
             if (location !== undefined) {
                 this.loc = location;
-                this.app.log(`Location: ${location}`); // debug
                 let coordURL = `https://geocode.maps.co/search?q=${location}&api_key=6753c06c9c8c8475490416eox643a09`;
                 let _httpSessionCoord = new Soup.Session();
                 let messageCoord = Soup.Message.new('GET', coordURL);
@@ -502,43 +501,6 @@ export class Utils {
                                         //     }
                                         //   }
 
-                                        function cloudCloverString() {
-                                            switch (res.current.cloud_cover) {
-                                                case 0:
-                                                    return _('clear');
-                                                case 1:
-                                                    return _('few clouds');
-                                                case 2:
-                                                    return _(
-                                                        'scattered clouds',
-                                                    );
-                                                case 3:
-                                                    return _('broken clouds');
-                                                case 4:
-                                                    return _('overcast');
-                                                case 5:
-                                                    return _('fog');
-                                                case 6:
-                                                    return _('mist');
-                                                case 7:
-                                                    return _('haze');
-                                                case 8:
-                                                    return _('dust');
-                                                case 9:
-                                                    return _('sand');
-                                                case 10:
-                                                    return _('ash');
-                                                case 11:
-                                                    return _('squall');
-                                                case 12:
-                                                    return _('tornado');
-                                                case 13:
-                                                    return _('hurricane');
-                                                default:
-                                                    return _('unknown');
-                                            }
-                                        }
-
                                         function isDayString() {
                                             switch (res.current.is_day) {
                                                 case 0:
@@ -598,7 +560,7 @@ export class Utils {
                                             return clime;
                                         }
 
-                                        let weatherDescription = `${_('Now it is')} ${isDayString()}${climeStatus()} ${_('in')} ${this.loc}. ${_('The sky is')} ${cloudCloverString()} ${_('and the weather is')} ${sensationString()}, ${_('the temperature is now')} ${res.current.temperature_2m}${res.current_units.temperature_2m}, ${_('but it feels like')} ${res.current.apparent_temperature}${res.current_units.apparent_temperature}. ${_('The humidity of the air is')} ${res.current.relative_humidity_2m}%.`;
+                                        let weatherDescription = `${_('Now it is')} ${isDayString()}${climeStatus()} ${_('in')} ${this.loc}. ${_('The weather is')} ${sensationString()}, ${_('the temperature is now')} ${res.current.temperature_2m}${res.current_units.temperature_2m}, ${_('but it feels like')} ${res.current.apparent_temperature}${res.current_units.apparent_temperature}. ${_('The humidity of the air is')} ${res.current.relative_humidity_2m}%.`;
                                         this.app.chat.editResponse(
                                             weatherDescription,
                                         );
