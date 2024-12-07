@@ -383,9 +383,6 @@ export class GeminiFunctions {
     _getWeather(location) {
         try {
             this.app.log('Getting weather from ' + location);
-            if (!location) {
-                location = 'userLocation';
-            }
             this.app.utils.getCurrentLocalWeather(location);
         } catch (error) {
             this.app.logError('Error getting weather:', error);
