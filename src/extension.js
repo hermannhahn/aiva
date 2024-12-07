@@ -211,8 +211,6 @@ export default class AivaExtension extends Extension {
             openSettings: this.openPreferences,
             uuid: this.uuid,
             userSettings: this.userSettings,
-            log: this.log,
-            logError: this.logError,
         });
         this._app.log('Starting...');
 
