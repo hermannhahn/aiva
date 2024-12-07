@@ -423,7 +423,7 @@ export class Utils {
             if (location !== undefined) {
                 this.loc = location;
                 this.app.log(`Location: ${location}`); // debug
-                let coordURL = `https://www.mapquestapi.com/geocoding/v1/address?key=KEY&location=${location}`;
+                let coordURL = `https://geocode.maps.co/search?q=${location}&api_key=6753c06c9c8c8475490416eox643a09`;
                 let _httpSessionCoord = new Soup.Session();
                 let messageCoord = Soup.Message.new('GET', coordURL);
 
