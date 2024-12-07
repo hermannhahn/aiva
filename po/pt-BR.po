@@ -727,7 +727,7 @@ msgstr "dia"
 
 #: src/utils/utils.js:359
 msgid "unknown"
-msgstr "desconhecida"
+msgstr "desconhecido"
 
 #: src/utils/utils.js:365
 #, fuzzy
