@@ -533,7 +533,7 @@ msgstr ""
 #: src/ai/gemini_functions.js:203
 #, fuzzy
 msgid "or provide a location, e.g.: \"London, UK\" (always use this format)"
-msgstr "ou forneça uma localização, por exemplo: London, UK"
+msgstr "ou forneça uma localização, por exemplo: \"New York, NY\" (sempre use este formato)"
 
 #: src/ai/gemini_functions.js:209
 msgid "Response text before get weather, e.g.: "
