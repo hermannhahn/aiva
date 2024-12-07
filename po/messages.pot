@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-06 23:54-0300\n"
+"POT-Creation-Date: 2024-12-07 00:00-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -336,7 +336,7 @@ msgstr ""
 msgid "frost_lang_var2"
 msgstr ""
 
-#: src/ai/gemini_functions.js:155 src/utils/utils.js:477
+#: src/ai/gemini_functions.js:155 src/utils/utils.js:478
 msgid "fog"
 msgstr ""
 
@@ -408,7 +408,7 @@ msgstr ""
 msgid "dry_lang_var2"
 msgstr ""
 
-#: src/ai/gemini_functions.js:173 src/utils/utils.js:515
+#: src/ai/gemini_functions.js:173 src/utils/utils.js:516
 msgid "cold"
 msgstr ""
 
@@ -420,7 +420,7 @@ msgstr ""
 msgid "cold_lang_var2"
 msgstr ""
 
-#: src/ai/gemini_functions.js:176 src/utils/utils.js:539
+#: src/ai/gemini_functions.js:176 src/utils/utils.js:540
 msgid "hot"
 msgstr ""
 
@@ -432,7 +432,7 @@ msgstr ""
 msgid "hot_lang_var2"
 msgstr ""
 
-#: src/ai/gemini_functions.js:179 src/utils/utils.js:533
+#: src/ai/gemini_functions.js:179 src/utils/utils.js:534
 msgid "warm"
 msgstr ""
 
@@ -440,7 +440,7 @@ msgstr ""
 msgid "warm_lang_var1"
 msgstr ""
 
-#: src/ai/gemini_functions.js:181 src/utils/utils.js:524
+#: src/ai/gemini_functions.js:181 src/utils/utils.js:525
 msgid "mild"
 msgstr ""
 
@@ -685,111 +685,111 @@ msgstr ""
 msgid "Look at example below:"
 msgstr ""
 
-#: src/utils/utils.js:465
+#: src/utils/utils.js:466
 msgid "clear"
 msgstr ""
 
-#: src/utils/utils.js:467
+#: src/utils/utils.js:468
 msgid "few clouds"
 msgstr ""
 
-#: src/utils/utils.js:470
+#: src/utils/utils.js:471
 msgid "scattered clouds"
 msgstr ""
 
-#: src/utils/utils.js:473
+#: src/utils/utils.js:474
 msgid "broken clouds"
 msgstr ""
 
-#: src/utils/utils.js:475
+#: src/utils/utils.js:476
 msgid "overcast"
 msgstr ""
 
-#: src/utils/utils.js:479
+#: src/utils/utils.js:480
 msgid "mist"
 msgstr ""
 
-#: src/utils/utils.js:481
+#: src/utils/utils.js:482
 msgid "haze"
 msgstr ""
 
-#: src/utils/utils.js:483
+#: src/utils/utils.js:484
 msgid "dust"
 msgstr ""
 
-#: src/utils/utils.js:485
+#: src/utils/utils.js:486
 msgid "sand"
 msgstr ""
 
-#: src/utils/utils.js:487
+#: src/utils/utils.js:488
 msgid "ash"
 msgstr ""
 
-#: src/utils/utils.js:489
+#: src/utils/utils.js:490
 msgid "squall"
 msgstr ""
 
-#: src/utils/utils.js:491
+#: src/utils/utils.js:492
 msgid "tornado"
 msgstr ""
 
-#: src/utils/utils.js:493
+#: src/utils/utils.js:494
 msgid "hurricane"
 msgstr ""
 
-#: src/utils/utils.js:495 src/utils/utils.js:506
+#: src/utils/utils.js:496 src/utils/utils.js:507
 msgid "unknown"
 msgstr ""
 
-#: src/utils/utils.js:502
+#: src/utils/utils.js:503
 msgid "night"
 msgstr ""
 
-#: src/utils/utils.js:504
+#: src/utils/utils.js:505
 msgid "day"
 msgstr ""
 
-#: src/utils/utils.js:541
+#: src/utils/utils.js:542
 msgid "unknown temperature"
 msgstr ""
 
-#: src/utils/utils.js:547
+#: src/utils/utils.js:548
 msgid " and raining"
 msgstr ""
 
-#: src/utils/utils.js:550
+#: src/utils/utils.js:551
 msgid " and snowing"
 msgstr ""
 
-#: src/utils/utils.js:553
+#: src/utils/utils.js:554
 msgid " and sunny"
 msgstr ""
 
-#: src/utils/utils.js:558
+#: src/utils/utils.js:559
 msgid "Now it is"
 msgstr ""
 
-#: src/utils/utils.js:558
+#: src/utils/utils.js:559
 msgid "in"
 msgstr ""
 
-#: src/utils/utils.js:558
+#: src/utils/utils.js:559
 msgid "The sky is"
 msgstr ""
 
-#: src/utils/utils.js:558
+#: src/utils/utils.js:559
 msgid "and the weather is"
 msgstr ""
 
-#: src/utils/utils.js:558
+#: src/utils/utils.js:559
 msgid "the temperature is now"
 msgstr ""
 
-#: src/utils/utils.js:558
+#: src/utils/utils.js:559
 msgid "but it feels like"
 msgstr ""
 
-#: src/utils/utils.js:558
+#: src/utils/utils.js:559
 msgid "The humidity of the air is"
 msgstr ""
 

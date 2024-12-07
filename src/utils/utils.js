@@ -436,10 +436,11 @@ export class Utils {
                                 _httpSessionCoord.send_and_read_finish(result);
                             let decoder = new TextDecoder('utf-8');
                             let response = decoder.decode(bytes.get_data());
-                            let res = response.results[0]?.locations[0]?.latLng;
+                            let res = JSON.parse(response);
+                            let w = res.results[0]?.locations[0]?.latLng;
 
                             // curl
-                            let url = `https://api.open-meteo.com/v1/forecast?latitude=${res.lat}&longitude=${res.lng}&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,rain,showers,snowfall,cloud_cover`;
+                            let url = `https://api.open-meteo.com/v1/forecast?latitude=${w.lat}&longitude=${w.lng}&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,rain,showers,snowfall,cloud_cover`;
                             let _httpSession = new Soup.Session();
                             let message = Soup.Message.new('GET', url);
 
