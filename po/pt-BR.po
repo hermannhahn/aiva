@@ -729,15 +729,15 @@ msgstr "temperatura desconhecida"
 
 #: src/utils/utils.js:552
 msgid " and raining"
-msgstr "e chovendo"
+msgstr " e chovendo"
 
 #: src/utils/utils.js:555
 msgid " and snowing"
-msgstr "e nevando"
+msgstr " e nevando"
 
 #: src/utils/utils.js:558
 msgid " and sunny"
-msgstr "e ensolarado"
+msgstr " e está ensolarado"
 
 #: src/utils/utils.js:563
 msgid "Now it is"
