@@ -1,3 +1,4 @@
+import St from 'gi://St';
 import GLib from 'gi://GLib';
 import Soup from 'gi://Soup';
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
@@ -144,7 +145,7 @@ export class Chat {
             this.app.azure.tts(response.tts);
         }
         if (response.code) {
-            this.app.utils.copyToClipboard(response.code);
+            this.copyToClipboard(response.code);
             this.app.log('Code copied to clipboard.');
         }
         this.scrollToBottom();
@@ -179,7 +180,7 @@ export class Chat {
             this.app.azure.tts(response.tts);
         }
         if (response.code) {
-            this.app.utils.copyToClipboard(response.code);
+            this.copyToClipboard(response.code);
             this.app.log('Code copied to clipboard.');
         }
         this.scrollToBottom();
@@ -202,7 +203,7 @@ export class Chat {
             this.app.ui.chat.resetStatusIcon();
         }
         if (response.code) {
-            this.app.utils.copyToClipboard(response.code);
+            this.copyToClipboard(response.code);
             this.app.log('Code copied to clipboard.');
         }
         this.scrollToBottom();
@@ -225,5 +226,13 @@ export class Chat {
                 return GLib.SOURCE_REMOVE; // Remove o callback após execução
             });
         });
+    }
+
+    /**
+     * @description copy text to clipboard
+     * @param {string} text
+     */
+    copyToClipboard(text) {
+        this.app.extension.clipboard.set_text(St.ClipboardType.CLIPBOARD, text);
     }
 }
