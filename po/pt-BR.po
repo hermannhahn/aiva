@@ -125,7 +125,7 @@ msgstr "Rodar comandos no terminal"
 #: src/ai/gemini_functions.js:65
 #, fuzzy
 msgid "commandline to run"
-msgstr "Linha de comando, por exemplo: "
+msgstr "linha de comando para rodar"
 
 #: src/ai/gemini_functions.js:71
 #, fuzzy
@@ -221,12 +221,10 @@ msgid "browse"
 msgstr "vizualizar"
 
 #: src/ai/gemini_functions.js:101
-#, fuzzy
 msgid "browse_lang_var1"
 msgstr "visualize"
 
 #: src/ai/gemini_functions.js:102
-#, fuzzy
 msgid "browse_lang_var2"
 msgstr "visualiza"
 
@@ -235,12 +233,10 @@ msgid "access"
 msgstr "acessar"
 
 #: src/ai/gemini_functions.js:104
-#, fuzzy
 msgid "access_lang_var1"
 msgstr "acesse"
 
 #: src/ai/gemini_functions.js:105
-#, fuzzy
 msgid "access_lang_var2"
 msgstr "acessa"
 
@@ -253,12 +249,10 @@ msgid "URL to open, e.g.: "
 msgstr "URL para abrir, por exemplo: "
 
 #: src/ai/gemini_functions.js:122
-#, fuzzy
 msgid "Response text before open, e.g.: "
 msgstr "Texto de resposta antes de executar, por exemplo: "
 
 #: src/ai/gemini_functions.js:123
-#, fuzzy
 msgid "Sure, opening..."
 msgstr "Claro, abrindo..."
 
@@ -267,7 +261,6 @@ msgid "weather"
 msgstr "tempo"
 
 #: src/ai/gemini_functions.js:132
-#, fuzzy
 msgid "weather_lang_var1"
 msgstr "clima"
 
@@ -285,7 +278,6 @@ msgid "humidity"
 msgstr "humidade"
 
 #: src/ai/gemini_functions.js:136
-#, fuzzy
 msgid "humidity_lang_var1"
 msgstr "humidades"
 
@@ -294,12 +286,10 @@ msgid "wind"
 msgstr "vento"
 
 #: src/ai/gemini_functions.js:138
-#, fuzzy
 msgid "wind_lang_var1"
 msgstr "ar"
 
 #: src/ai/gemini_functions.js:139
-#, fuzzy
 msgid "wind_lang_var2"
 msgstr "ventania"
 
@@ -308,12 +298,10 @@ msgid "precipitation"
 msgstr "precipitação"
 
 #: src/ai/gemini_functions.js:141
-#, fuzzy
 msgid "precipitation_lang_var1"
 msgstr "precipitações"
 
 #: src/ai/gemini_functions.js:142
-#, fuzzy
 msgid "precipitation_lang_var2"
 msgstr "precipitando"
 
@@ -322,7 +310,6 @@ msgid "cloud"
 msgstr "nuvem"
 
 #: src/ai/gemini_functions.js:144
-#, fuzzy
 msgid "cloud_lang_var1"
 msgstr "nublado"
 
@@ -335,12 +322,10 @@ msgid "rain"
 msgstr "chuva"
 
 #: src/ai/gemini_functions.js:147
-#, fuzzy
 msgid "rain_lang_var1"
 msgstr "chover"
 
 #: src/ai/gemini_functions.js:148
-#, fuzzy
 msgid "rain_lang_var2"
 msgstr "chovendo"
 
@@ -349,12 +334,10 @@ msgid "snow"
 msgstr "neve"
 
 #: src/ai/gemini_functions.js:150
-#, fuzzy
 msgid "snow_lang_var1"
 msgstr "nevar"
 
 #: src/ai/gemini_functions.js:151
-#, fuzzy
 msgid "snow_lang_var2"
 msgstr "nevando"
 
@@ -363,12 +346,10 @@ msgid "frost"
 msgstr "frio"
 
 #: src/ai/gemini_functions.js:153
-#, fuzzy
 msgid "frost_lang_var1"
 msgstr "congelando"
 
 #: src/ai/gemini_functions.js:154
-#, fuzzy
 msgid "frost_lang_var2"
 msgstr "congelar"
 
@@ -377,27 +358,22 @@ msgid "fog"
 msgstr "nevoa"
 
 #: src/ai/gemini_functions.js:156
-#, fuzzy
 msgid "fog_lang_var1"
 msgstr "nevoeiro"
 
 #: src/ai/gemini_functions.js:157
-#, fuzzy
 msgid "fog_lang_var2"
 msgstr "brisa"
 
 #: src/ai/gemini_functions.js:158
-#, fuzzy
 msgid "sun"
 msgstr "sol"
 
 #: src/ai/gemini_functions.js:159
-#, fuzzy
 msgid "sun_lang_var1"
 msgstr "ensolarado"
 
 #: src/ai/gemini_functions.js:160
-#, fuzzy
 msgid "sun_lang_var2"
 msgstr "calor"
 
@@ -406,12 +382,10 @@ msgid "clouds"
 msgstr "nuvens"
 
 #: src/ai/gemini_functions.js:162
-#, fuzzy
 msgid "clouds_lang_var1"
 msgstr "nevoeiro"
 
 #: src/ai/gemini_functions.js:163
-#, fuzzy
 msgid "clouds_lang_var2"
 msgstr "nevoada"
 
@@ -424,7 +398,6 @@ msgid "windy"
 msgstr "ventania"
 
 #: src/ai/gemini_functions.js:166
-#, fuzzy
 msgid "windy_lang_var1"
 msgstr "ventos"
 
@@ -433,12 +406,10 @@ msgid "humid"
 msgstr "humido"
 
 #: src/ai/gemini_functions.js:168
-#, fuzzy
 msgid "humid_lang_var1"
 msgstr "humidos"
 
 #: src/ai/gemini_functions.js:169
-#, fuzzy
 msgid "humid_lang_var2"
 msgstr "molhado"
 
@@ -447,12 +418,10 @@ msgid "dry"
 msgstr "seco"
 
 #: src/ai/gemini_functions.js:171
-#, fuzzy
 msgid "dry_lang_var1"
 msgstr "palha"
 
 #: src/ai/gemini_functions.js:172
-#, fuzzy
 msgid "dry_lang_var2"
 msgstr "deserto"
 
@@ -461,12 +430,10 @@ msgid "cold"
 msgstr "frio"
 
 #: src/ai/gemini_functions.js:174
-#, fuzzy
 msgid "cold_lang_var1"
 msgstr "gelado"
 
 #: src/ai/gemini_functions.js:175
-#, fuzzy
 msgid "cold_lang_var2"
 msgstr "gelando"
 
@@ -475,12 +442,10 @@ msgid "hot"
 msgstr "quente"
 
 #: src/ai/gemini_functions.js:177
-#, fuzzy
 msgid "hot_lang_var1"
 msgstr "calor"
 
 #: src/ai/gemini_functions.js:178
-#, fuzzy
 msgid "hot_lang_var2"
 msgstr "fogo"
 
@@ -489,7 +454,6 @@ msgid "warm"
 msgstr "esquentando"
 
 #: src/ai/gemini_functions.js:180
-#, fuzzy
 msgid "warm_lang_var1"
 msgstr "aquecendo"
 
@@ -498,12 +462,10 @@ msgid "mild"
 msgstr "calmo"
 
 #: src/ai/gemini_functions.js:182
-#, fuzzy
 msgid "mild_lang_var1"
 msgstr "amêno"
 
 #: src/ai/gemini_functions.js:183
-#, fuzzy
 msgid "mild_lang_var2"
 msgstr "suave"
 
@@ -512,7 +474,6 @@ msgid "freezing"
 msgstr "gelando"
 
 #: src/ai/gemini_functions.js:185
-#, fuzzy
 msgid "freezing_lang_var1"
 msgstr "esfriando"
 
@@ -521,25 +482,21 @@ msgid "blizzard"
 msgstr "nevoeiro"
 
 #: src/ai/gemini_functions.js:191
-#, fuzzy
 msgid "get weather."
 msgstr "Falha ao abrir site"
 
 #: src/ai/gemini_functions.js:199
-#, fuzzy
 msgid "Don't provide a location to get weather from user location"
 msgstr ""
 "Não forneça uma localização para obter o clima da localização do usuário"
 
 #: src/ai/gemini_functions.js:203
-#, fuzzy
 msgid "or provide a location, e.g.: \"New York, NY\" (always use this format)"
 msgstr ""
 "ou forneça uma localização, por exemplo: \"New York, NY\" (sempre use este "
 "formato)"
 
 #: src/ai/gemini_functions.js:246
-#, fuzzy
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr "Eu não posso fazer isso agora. Talvez no futuro."
 
@@ -576,7 +533,6 @@ msgid "Opening App Store..."
 msgstr "Abrindo App Store..."
 
 #: src/ai/gemini_functions.js:389
-#, fuzzy
 msgid "Error getting weather"
 msgstr "Falha ao abrir site"
 
@@ -688,6 +644,7 @@ msgid "Let me figure this out..."
 msgstr "Vou tentar isso..."
 
 #: src/utils/phrases.js:27
+#, fuzzy
 msgid "I'll get back to you in a sec..."
 msgstr "Vou te responder em um segundo..."
 
@@ -696,6 +653,7 @@ msgid "Just thinking this through..."
 msgstr "Vou pensar nisso..."
 
 #: src/utils/phrases.js:29
+#, fuzzy
 msgid "Let's see what I can find..."
 msgstr "Vou ver o que posso encontrar..."
 
@@ -790,7 +748,6 @@ msgid "in"
 msgstr "em"
 
 #: src/utils/utils.js:563
-#, fuzzy
 msgid "The weather is"
 msgstr "e o tempo está"
 
@@ -800,7 +757,7 @@ msgstr "a temperatura agora é de"
 
 #: src/utils/utils.js:563
 msgid "but it feels like"
-msgstr "mas a sensação é de"
+msgstr "e a sensação é de"
 
 #: src/utils/utils.js:563
 msgid "The humidity of the air is"
