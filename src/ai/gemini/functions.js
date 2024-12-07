@@ -10,8 +10,8 @@ import {FunctionsDeclarations} from './declarations.js';
 export class GeminiFunctions {
     constructor(app) {
         this.app = app;
-        this.activations = new FunctionsActivations(app);
-        this.declarations = new FunctionsDeclarations(app);
+        this.activation = new FunctionsActivations(app);
+        this.declaration = new FunctionsDeclarations(app);
     }
 
     callback(command, args) {
