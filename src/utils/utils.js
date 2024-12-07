@@ -362,24 +362,24 @@ export class Utils {
 
     sensationString(res) {
         if (res.current.apparent_temperature < 10) {
-            return _('is cold');
+            return _('the weather is cold');
         }
         if (
             res.current.apparent_temperature >= 10 &&
             res.current.apparent_temperature < 25
         ) {
-            return _('is mild');
+            return _('the weather is mild');
         }
         if (
             res.current.apparent_temperature >= 25 &&
             res.current.apparent_temperature < 35
         ) {
-            return _('is warm');
+            return _('the weather is warm');
         }
         if (res.current.apparent_temperature >= 35) {
-            return _('is hot');
+            return _('the weather is hot');
         }
-        return _('unknown temperature');
+        return _('');
     }
 
     climeStatus(res) {

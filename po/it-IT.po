@@ -3,11 +3,12 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Hermann <hermann.h.hahn@gmail.com>, 2024.
 #
+#: src/utils/utils.js:382
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-07 19:50-0300\n"
+"POT-Creation-Date: 2024-12-07 19:53-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language it-IT\n"
@@ -772,24 +773,23 @@ msgid "unknown"
 msgstr ""
 
 #: src/utils/utils.js:365
-msgid "is cold"
-msgstr ""
+#, fuzzy
+msgid "the weather is cold"
+msgstr "Codice copiato negli appunti"
 
 #: src/utils/utils.js:371
-msgid "is mild"
-msgstr ""
+#, fuzzy
+msgid "the weather is mild"
+msgstr "Codice copiato negli appunti"
 
 #: src/utils/utils.js:377
-msgid "is warm"
-msgstr ""
+#, fuzzy
+msgid "the weather is warm"
+msgstr "Codice copiato negli appunti"
 
 #: src/utils/utils.js:380
-msgid "is hot"
-msgstr ""
-
-#: src/utils/utils.js:382
 #, fuzzy
-msgid "unknown temperature"
+msgid "the weather is hot"
 msgstr "Codice copiato negli appunti"
 
 #: src/utils/utils.js:388
@@ -914,11 +914,11 @@ msgid "Your preferences have been saved"
 msgstr ""
 
 #, fuzzy
-#~ msgid "show the weather for today."
+#~ msgid "unknown temperature"
 #~ msgstr "Codice copiato negli appunti"
 
 #, fuzzy
-#~ msgid "and the weather is"
+#~ msgid "show the weather for today."
 #~ msgstr "Codice copiato negli appunti"
 
 #, fuzzy
