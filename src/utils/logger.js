@@ -13,7 +13,7 @@ export class Logger {
     constructor(debug = true) {
         this.debug = debug;
         if (debug === true) {
-            this.log('Debug mode enabled.');
+            console.log('Debug mode enabled.');
         }
     }
 
