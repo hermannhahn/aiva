@@ -395,23 +395,23 @@ msgstr "quente"
 
 #: src/ai/gemini/activations.js:114
 msgid "hot_lang_var1"
-msgstr "calor"
+msgstr "pegando fogo"
 
 #: src/ai/gemini/activations.js:115
 msgid "hot_lang_var2"
-msgstr "fogo"
+msgstr "calorento"
 
 #: src/ai/gemini/activations.js:116 src/utils/utils.js:381
 msgid "warm"
-msgstr "esquentando"
+msgstr "calor"
 
 #: src/ai/gemini/activations.js:117
 msgid "warm_lang_var1"
-msgstr "aquecendo"
+msgstr "sufocante"
 
 #: src/ai/gemini/activations.js:118 src/utils/utils.js:375
 msgid "mild"
-msgstr "calmo"
+msgstr "agradável"
 
 #: src/ai/gemini/activations.js:119
 msgid "mild_lang_var1"
@@ -419,15 +419,15 @@ msgstr "amêno"
 
 #: src/ai/gemini/activations.js:120
 msgid "mild_lang_var2"
-msgstr "suave"
+msgstr "gostoso"
 
 #: src/ai/gemini/activations.js:121
 msgid "freezing"
-msgstr "gelando"
+msgstr "frio"
 
 #: src/ai/gemini/activations.js:122
 msgid "freezing_lang_var1"
-msgstr "esfriando"
+msgstr "congelando"
 
 #: src/ai/gemini/activations.js:123
 msgid "blizzard"
