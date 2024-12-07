@@ -503,7 +503,7 @@ msgstr "Claro, iniciando leitura..."
 
 #: src/ai/gemini/declarations.js:31
 msgid "Run non-sudo commandline in the user terminal"
-msgstr "Rodar comandos no terminal"
+msgstr "Rodar comandos no terminal do usuário"
 
 #: src/ai/gemini/declarations.js:38
 msgid "commandline to run"
