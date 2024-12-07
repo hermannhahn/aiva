@@ -538,6 +538,8 @@ msgid ""
 "Show the weather for today. Use only if user wants to know weather "
 "information."
 msgstr ""
+"Exibe informações sobre o clima. Use apenas se o usuário quiser saber "
+"sobre o clima."
 
 #: src/ai/gemini/declarations.js:85
 #, fuzzy
