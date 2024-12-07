@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-07 15:21-0300\n"
+"POT-Creation-Date: 2024-12-07 15:22-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language es-ES\n"
@@ -407,8 +407,7 @@ msgstr "Código copiado al portapapeles"
 msgid "dry_lang_var2"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:110 src/ai/gemini/functions.js:221
-#: src/utils/utils.js:430
+#: src/ai/gemini/activations.js:110 src/utils/utils.js:430
 msgid "cold"
 msgstr ""
 
@@ -422,8 +421,7 @@ msgstr "Código copiado al portapapeles"
 msgid "cold_lang_var2"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:113 src/ai/gemini/functions.js:236
-#: src/utils/utils.js:445
+#: src/ai/gemini/activations.js:113 src/utils/utils.js:445
 msgid "hot"
 msgstr ""
 
@@ -437,8 +435,7 @@ msgstr "Código copiado al portapapeles"
 msgid "hot_lang_var2"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:116 src/ai/gemini/functions.js:233
-#: src/utils/utils.js:442
+#: src/ai/gemini/activations.js:116 src/utils/utils.js:442
 msgid "warm"
 msgstr ""
 
@@ -447,8 +444,7 @@ msgstr ""
 msgid "warm_lang_var1"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:118 src/ai/gemini/functions.js:227
-#: src/utils/utils.js:436
+#: src/ai/gemini/activations.js:118 src/utils/utils.js:436
 msgid "mild"
 msgstr ""
 
@@ -515,63 +511,34 @@ msgstr ""
 msgid "Opening App Store..."
 msgstr ""
 
-#: src/ai/gemini/functions.js:211 src/utils/utils.js:420
-msgid "night"
-msgstr ""
-
-#: src/ai/gemini/functions.js:213 src/utils/utils.js:422
-msgid "day"
-msgstr ""
-
-#: src/ai/gemini/functions.js:215 src/utils/utils.js:424
-msgid "unknown"
-msgstr ""
-
-#: src/ai/gemini/functions.js:238 src/utils/utils.js:447
-#, fuzzy
-msgid "unknown temperature"
-msgstr "Código copiado al portapapeles"
-
-#: src/ai/gemini/functions.js:244 src/utils/utils.js:453
-msgid " and raining"
-msgstr ""
-
-#: src/ai/gemini/functions.js:247 src/utils/utils.js:456
-msgid " and snowing"
-msgstr ""
-
-#: src/ai/gemini/functions.js:250 src/utils/utils.js:459
-msgid " and sunny"
-msgstr ""
-
-#: src/ai/gemini/functions.js:255
+#: src/ai/gemini/functions.js:207
 msgid "Now it is"
 msgstr ""
 
-#: src/ai/gemini/functions.js:255
+#: src/ai/gemini/functions.js:207
 msgid "in"
 msgstr ""
 
-#: src/ai/gemini/functions.js:255
+#: src/ai/gemini/functions.js:207
 #, fuzzy
 msgid "and the weather is"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/functions.js:255
+#: src/ai/gemini/functions.js:207
 #, fuzzy
 msgid "the temperature is now"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/functions.js:255
+#: src/ai/gemini/functions.js:207
 msgid "but it feels like"
 msgstr ""
 
-#: src/ai/gemini/functions.js:255
+#: src/ai/gemini/functions.js:207
 #, fuzzy
 msgid "The humidity of the air is"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/functions.js:261
+#: src/ai/gemini/functions.js:213
 #, fuzzy
 msgid "Error getting weather"
 msgstr "Código copiado al portapapeles"
@@ -797,6 +764,35 @@ msgstr ""
 
 #: src/utils/utils.js:320
 msgid "Look at example below:"
+msgstr ""
+
+#: src/utils/utils.js:420
+msgid "night"
+msgstr ""
+
+#: src/utils/utils.js:422
+msgid "day"
+msgstr ""
+
+#: src/utils/utils.js:424
+msgid "unknown"
+msgstr ""
+
+#: src/utils/utils.js:447
+#, fuzzy
+msgid "unknown temperature"
+msgstr "Código copiado al portapapeles"
+
+#: src/utils/utils.js:453
+msgid " and raining"
+msgstr ""
+
+#: src/utils/utils.js:456
+msgid " and snowing"
+msgstr ""
+
+#: src/utils/utils.js:459
+msgid " and sunny"
 msgstr ""
 
 #: src/commands.js:21

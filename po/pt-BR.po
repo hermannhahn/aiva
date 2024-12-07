@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-07 15:21-0300\n"
+"POT-Creation-Date: 2024-12-07 15:22-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -369,8 +369,7 @@ msgstr "palha"
 msgid "dry_lang_var2"
 msgstr "deserto"
 
-#: src/ai/gemini/activations.js:110 src/ai/gemini/functions.js:221
-#: src/utils/utils.js:430
+#: src/ai/gemini/activations.js:110 src/utils/utils.js:430
 msgid "cold"
 msgstr "frio"
 
@@ -382,8 +381,7 @@ msgstr "gelado"
 msgid "cold_lang_var2"
 msgstr "gelando"
 
-#: src/ai/gemini/activations.js:113 src/ai/gemini/functions.js:236
-#: src/utils/utils.js:445
+#: src/ai/gemini/activations.js:113 src/utils/utils.js:445
 msgid "hot"
 msgstr "quente"
 
@@ -395,8 +393,7 @@ msgstr "calor"
 msgid "hot_lang_var2"
 msgstr "fogo"
 
-#: src/ai/gemini/activations.js:116 src/ai/gemini/functions.js:233
-#: src/utils/utils.js:442
+#: src/ai/gemini/activations.js:116 src/utils/utils.js:442
 msgid "warm"
 msgstr "esquentando"
 
@@ -404,8 +401,7 @@ msgstr "esquentando"
 msgid "warm_lang_var1"
 msgstr "aquecendo"
 
-#: src/ai/gemini/activations.js:118 src/ai/gemini/functions.js:227
-#: src/utils/utils.js:436
+#: src/ai/gemini/activations.js:118 src/utils/utils.js:436
 msgid "mild"
 msgstr "calmo"
 
@@ -465,59 +461,31 @@ msgstr "Por favor, instale um navegador e tente novamente."
 msgid "Opening App Store..."
 msgstr "Abrindo App Store..."
 
-#: src/ai/gemini/functions.js:211 src/utils/utils.js:420
-msgid "night"
-msgstr "noite"
-
-#: src/ai/gemini/functions.js:213 src/utils/utils.js:422
-msgid "day"
-msgstr "dia"
-
-#: src/ai/gemini/functions.js:215 src/utils/utils.js:424
-msgid "unknown"
-msgstr "desconhecida"
-
-#: src/ai/gemini/functions.js:238 src/utils/utils.js:447
-msgid "unknown temperature"
-msgstr "temperatura desconhecida"
-
-#: src/ai/gemini/functions.js:244 src/utils/utils.js:453
-msgid " and raining"
-msgstr " e chovendo"
-
-#: src/ai/gemini/functions.js:247 src/utils/utils.js:456
-msgid " and snowing"
-msgstr " e nevando"
-
-#: src/ai/gemini/functions.js:250 src/utils/utils.js:459
-msgid " and sunny"
-msgstr " e está ensolarado"
-
-#: src/ai/gemini/functions.js:255
+#: src/ai/gemini/functions.js:207
 msgid "Now it is"
 msgstr "Agora é"
 
-#: src/ai/gemini/functions.js:255
+#: src/ai/gemini/functions.js:207
 msgid "in"
 msgstr "em"
 
-#: src/ai/gemini/functions.js:255
+#: src/ai/gemini/functions.js:207
 msgid "and the weather is"
 msgstr "e o tempo está"
 
-#: src/ai/gemini/functions.js:255
+#: src/ai/gemini/functions.js:207
 msgid "the temperature is now"
 msgstr "a temperatura agora é de"
 
-#: src/ai/gemini/functions.js:255
+#: src/ai/gemini/functions.js:207
 msgid "but it feels like"
 msgstr "e a sensação é de"
 
-#: src/ai/gemini/functions.js:255
+#: src/ai/gemini/functions.js:207
 msgid "The humidity of the air is"
 msgstr "A humidade do ar é de"
 
-#: src/ai/gemini/functions.js:261
+#: src/ai/gemini/functions.js:213
 msgid "Error getting weather"
 msgstr "Falha ao abrir site"
 
@@ -752,6 +720,34 @@ msgstr "Aqui estão as principais notícias"
 #: src/utils/utils.js:320
 msgid "Look at example below:"
 msgstr "Veja o exemplo abaixo:"
+
+#: src/utils/utils.js:420
+msgid "night"
+msgstr "noite"
+
+#: src/utils/utils.js:422
+msgid "day"
+msgstr "dia"
+
+#: src/utils/utils.js:424
+msgid "unknown"
+msgstr "desconhecida"
+
+#: src/utils/utils.js:447
+msgid "unknown temperature"
+msgstr "temperatura desconhecida"
+
+#: src/utils/utils.js:453
+msgid " and raining"
+msgstr " e chovendo"
+
+#: src/utils/utils.js:456
+msgid " and snowing"
+msgstr " e nevando"
+
+#: src/utils/utils.js:459
+msgid " and sunny"
+msgstr " e está ensolarado"
 
 #: src/commands.js:21
 msgid "Invalid command"

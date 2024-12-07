@@ -204,55 +204,7 @@ export class GeminiFunctions {
                     let decoder = new TextDecoder('utf-8');
                     let response = decoder.decode(bytes.get_data());
                     let res = JSON.parse(response);
-
-                    function isDayString() {
-                        switch (res.current.is_day) {
-                            case 0:
-                                return _('night');
-                            case 1:
-                                return _('day');
-                            default:
-                                return _('unknown');
-                        }
-                    }
-
-                    function sensationString() {
-                        if (res.current.apparent_temperature < 10) {
-                            return _('cold');
-                        }
-                        if (
-                            res.current.apparent_temperature >= 10 &&
-                            res.current.apparent_temperature < 25
-                        ) {
-                            return _('mild');
-                        }
-                        if (
-                            res.current.apparent_temperature >= 25 &&
-                            res.current.apparent_temperature < 35
-                        ) {
-                            return _('warm');
-                        }
-                        if (res.current.apparent_temperature >= 35) {
-                            return _('hot');
-                        }
-                        return _('unknown temperature');
-                    }
-
-                    function climeStatus() {
-                        let clime = '';
-                        if (res.current.precipitation > 0) {
-                            clime = _(' and raining');
-                        }
-                        if (res.current.snowfall > 0) {
-                            clime = _(' and snowing');
-                        }
-                        if (res.current.is_day === 1) {
-                            clime = _(' and sunny');
-                        }
-                        return clime;
-                    }
-
-                    let weatherDescription = `${_('Now it is')} ${isDayString()}${climeStatus()} ${_('in')} ${this.loc} ${_('and the weather is')} ${sensationString()}, ${_('the temperature is now')} ${res.current.temperature_2m}${res.current_units.temperature_2m}, ${_('but it feels like')} ${res.current.apparent_temperature}${res.current_units.apparent_temperature}. ${_('The humidity of the air is')} ${res.current.relative_humidity_2m}%.`;
+                    let weatherDescription = `${_('Now it is')} ${this.app.utils.isDayString(res)}${this.app.utils.climeStatus(res)} ${_('in')} ${this.loc} ${_('and the weather is')} ${this.app.utils.sensationString(res)}, ${_('the temperature is now')} ${res.current.temperature_2m}${res.current_units.temperature_2m}, ${_('but it feels like')} ${res.current.apparent_temperature}${res.current_units.apparent_temperature}. ${_('The humidity of the air is')} ${res.current.relative_humidity_2m}%.`;
                     this.app.chat.editResponse(weatherDescription);
                 },
             );
