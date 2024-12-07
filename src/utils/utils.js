@@ -467,6 +467,43 @@ export class Utils {
                                             `Second result: ${JSON.stringify(res)}}`,
                                         ); // debug
 
+                                        // result example
+                                        // {
+                                        //     "latitude": -24.0,
+                                        //     "longitude": -46.25,
+                                        //     "generationtime_ms": 0.04792213439941406,
+                                        //     "utc_offset_seconds": 0,
+                                        //     "timezone": "GMT",
+                                        //     "timezone_abbreviation": "GMT",
+                                        //     "elevation": 5.0,
+                                        //     "current_units": {
+                                        //       "time": "iso8601",
+                                        //       "interval": "seconds",
+                                        //       "temperature_2m": "°C",
+                                        //       "relative_humidity_2m": "%",
+                                        //       "apparent_temperature": "°C",
+                                        //       "is_day": "",
+                                        //       "precipitation": "mm",
+                                        //       "rain": "mm",
+                                        //       "showers": "mm",
+                                        //       "snowfall": "cm",
+                                        //       "cloud_cover": "%"
+                                        //     },
+                                        //     "current": {
+                                        //       "time": "2024-12-06T18:30",
+                                        //       "interval": 900,
+                                        //       "temperature_2m": 28.9,
+                                        //       "relative_humidity_2m": 72,
+                                        //       "apparent_temperature": 34.1,
+                                        //       "is_day": 1,
+                                        //       "precipitation": 0.0,
+                                        //       "rain": 0.0,
+                                        //       "showers": 0.0,
+                                        //       "snowfall": 0.0,
+                                        //       "cloud_cover": 0
+                                        //     }
+                                        //   }
+
                                         function cloudCloverString() {
                                             switch (res.current.cloud_cover) {
                                                 case 0:

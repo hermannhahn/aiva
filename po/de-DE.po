@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-07 00:12-0300\n"
+"POT-Creation-Date: 2024-12-07 00:33-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language de-DE\n"
@@ -365,7 +365,7 @@ msgstr "Code kopiert in die Zwischenablage"
 msgid "frost_lang_var2"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini_functions.js:155 src/utils/utils.js:485
+#: src/ai/gemini_functions.js:155 src/utils/utils.js:522
 msgid "fog"
 msgstr ""
 
@@ -448,7 +448,7 @@ msgstr "Code kopiert in die Zwischenablage"
 msgid "dry_lang_var2"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini_functions.js:173 src/utils/utils.js:523
+#: src/ai/gemini_functions.js:173 src/utils/utils.js:560
 msgid "cold"
 msgstr ""
 
@@ -462,7 +462,7 @@ msgstr "Code kopiert in die Zwischenablage"
 msgid "cold_lang_var2"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini_functions.js:176 src/utils/utils.js:547
+#: src/ai/gemini_functions.js:176 src/utils/utils.js:584
 msgid "hot"
 msgstr ""
 
@@ -476,7 +476,7 @@ msgstr "Code kopiert in die Zwischenablage"
 msgid "hot_lang_var2"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini_functions.js:179 src/utils/utils.js:541
+#: src/ai/gemini_functions.js:179 src/utils/utils.js:578
 msgid "warm"
 msgstr ""
 
@@ -485,7 +485,7 @@ msgstr ""
 msgid "warm_lang_var1"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini_functions.js:181 src/utils/utils.js:532
+#: src/ai/gemini_functions.js:181 src/utils/utils.js:569
 msgid "mild"
 msgstr ""
 
@@ -739,116 +739,116 @@ msgstr ""
 msgid "Look at example below:"
 msgstr ""
 
-#: src/utils/utils.js:473
+#: src/utils/utils.js:510
 msgid "clear"
 msgstr ""
 
-#: src/utils/utils.js:475
+#: src/utils/utils.js:512
 msgid "few clouds"
 msgstr ""
 
-#: src/utils/utils.js:478
+#: src/utils/utils.js:515
 msgid "scattered clouds"
 msgstr ""
 
-#: src/utils/utils.js:481
+#: src/utils/utils.js:518
 msgid "broken clouds"
 msgstr ""
 
-#: src/utils/utils.js:483
+#: src/utils/utils.js:520
 #, fuzzy
 msgid "overcast"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/utils/utils.js:487
+#: src/utils/utils.js:524
 msgid "mist"
 msgstr ""
 
-#: src/utils/utils.js:489
+#: src/utils/utils.js:526
 msgid "haze"
 msgstr ""
 
-#: src/utils/utils.js:491
+#: src/utils/utils.js:528
 msgid "dust"
 msgstr ""
 
-#: src/utils/utils.js:493
+#: src/utils/utils.js:530
 msgid "sand"
 msgstr ""
 
-#: src/utils/utils.js:495
+#: src/utils/utils.js:532
 msgid "ash"
 msgstr ""
 
-#: src/utils/utils.js:497
+#: src/utils/utils.js:534
 msgid "squall"
 msgstr ""
 
-#: src/utils/utils.js:499
+#: src/utils/utils.js:536
 msgid "tornado"
 msgstr ""
 
-#: src/utils/utils.js:501
+#: src/utils/utils.js:538
 msgid "hurricane"
 msgstr ""
 
-#: src/utils/utils.js:503 src/utils/utils.js:514
+#: src/utils/utils.js:540 src/utils/utils.js:551
 msgid "unknown"
 msgstr ""
 
-#: src/utils/utils.js:510
+#: src/utils/utils.js:547
 msgid "night"
 msgstr ""
 
-#: src/utils/utils.js:512
+#: src/utils/utils.js:549
 msgid "day"
 msgstr ""
 
-#: src/utils/utils.js:549
+#: src/utils/utils.js:586
 #, fuzzy
 msgid "unknown temperature"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/utils/utils.js:555
+#: src/utils/utils.js:592
 msgid " and raining"
 msgstr ""
 
-#: src/utils/utils.js:558
+#: src/utils/utils.js:595
 msgid " and snowing"
 msgstr ""
 
-#: src/utils/utils.js:561
+#: src/utils/utils.js:598
 msgid " and sunny"
 msgstr ""
 
-#: src/utils/utils.js:566
+#: src/utils/utils.js:603
 msgid "Now it is"
 msgstr ""
 
-#: src/utils/utils.js:566
+#: src/utils/utils.js:603
 msgid "in"
 msgstr ""
 
-#: src/utils/utils.js:566
+#: src/utils/utils.js:603
 #, fuzzy
 msgid "The sky is"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/utils/utils.js:566
+#: src/utils/utils.js:603
 #, fuzzy
 msgid "and the weather is"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/utils/utils.js:566
+#: src/utils/utils.js:603
 #, fuzzy
 msgid "the temperature is now"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/utils/utils.js:566
+#: src/utils/utils.js:603
 msgid "but it feels like"
 msgstr ""
 
-#: src/utils/utils.js:566
+#: src/utils/utils.js:603
 #, fuzzy
 msgid "The humidity of the air is"
 msgstr "Code kopiert in die Zwischenablage"
