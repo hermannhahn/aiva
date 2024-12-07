@@ -480,7 +480,7 @@ msgstr ""
 #, fuzzy
 msgid "or don't provide a location to get weather from user location"
 msgstr ""
-"Não forneça uma localização para obter o clima da localização do usuário"
+"ou não forneça uma localização para exibir o clima da localização do usuário"
 
 #: src/ai/gemini_functions.js:246
 msgid "Sorry, I can't do that right now. Maybe in the future."
