@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-06 23:32-0300\n"
+"POT-Creation-Date: 2024-12-06 23:37-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language it-IT\n"
@@ -516,7 +516,7 @@ msgstr "Codice copiato negli appunti"
 
 #: src/ai/gemini_functions.js:191
 #, fuzzy
-msgid "Get Weather and forecast."
+msgid "get weather."
 msgstr "Codice copiato negli appunti"
 
 #: src/ai/gemini_functions.js:199
@@ -961,6 +961,10 @@ msgstr ""
 #: src/prefs.js:287
 msgid "Your preferences have been saved"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Get Weather and forecast."
+#~ msgstr "Codice copiato negli appunti"
 
 #, fuzzy
 #~ msgid "Sure, getting weather forecast..."

@@ -188,7 +188,7 @@ export class GeminiFunctions {
 
         this._weatherDeclaration = {
             name: 'get_weather',
-            description: _('Get Weather and forecast.'),
+            description: _('get weather.'),
             parameters: {
                 type: 'object',
                 properties: {
@@ -236,7 +236,7 @@ export class GeminiFunctions {
                 this._browseWeb(url, response);
                 break;
             case 'get_weather':
-                this._getWeather(location, response);
+                this._getWeather(location);
                 break;
             default:
                 this.app.chat.editResponse(
