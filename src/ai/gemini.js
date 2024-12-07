@@ -370,11 +370,21 @@ export class GoogleGemini {
     _createBody(request, text) {
         try {
             const declarations = this.app.functions.declarations(text);
+            const systemInstructions = {
+                parts: [
+                    {
+                        text: `
+1. You are a friendly and helpful voice assistant. Your name is AIVA. Use your name whenever prompted.
+2. You can use the declared functions to assist in your responses, execute commands, perform tasks, create, edit, and locate files, and do everything possible through terminal commands to fulfill the user's requests. If this is not possible, I teach the user how to achieve the goal.
+3. Make sure your responses are short and concise, unless the user requests a more thorough approach.`,
+                    },
+                ],
+            };
 
             // get first five words from text
             if (declarations) {
                 const tools = JSON.stringify(declarations);
-                return `{"contents":${request}, "tools":${tools}}`;
+                return `{"contents":${request}, "system_instructions":${systemInstructions}, "tools":${tools}}`;
             }
             return `{"contents":${request}}`;
         } catch {
