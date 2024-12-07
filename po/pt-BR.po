@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-07 13:18-0300\n"
+"POT-Creation-Date: 2024-12-07 13:24-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -33,501 +33,511 @@ msgstr "Erro na transcrição!"
 msgid "Sorry, I'm having trouble to listen you. Please try again."
 msgstr "Estou tendo dificuldade de te escutar. Por favor, tente novamente."
 
-#: src/ai/gemini_functions.js:15 src/ai/functions_declarations.js:15
+#: src/ai/gemini/activations.js:15 src/ai/gemini/declarations.js:15
 msgid "read"
 msgstr "ler"
 
-#: src/ai/gemini_functions.js:16 src/ai/functions_declarations.js:16
+#: src/ai/gemini/activations.js:16 src/ai/gemini/declarations.js:16
 msgid "read_lang_var1"
 msgstr "leia"
 
-#: src/ai/gemini_functions.js:17 src/ai/functions_declarations.js:17
+#: src/ai/gemini/activations.js:17 src/ai/gemini/declarations.js:17
 msgid "read_lang_var2"
 msgstr "lê"
 
-#: src/ai/gemini_functions.js:22 src/ai/functions_declarations.js:22
+#: src/ai/gemini/activations.js:22 src/ai/gemini/declarations.js:22
 msgid "Clipboard Text-to-Speech"
 msgstr ""
 
-#: src/ai/gemini_functions.js:29 src/ai/gemini_functions.js:70
-#: src/ai/functions_declarations.js:29 src/ai/functions_declarations.js:70
+#: src/ai/gemini/activations.js:29 src/ai/gemini/activations.js:70
+#: src/ai/gemini/declarations.js:29 src/ai/gemini/declarations.js:70
 msgid "Response text before run, e.g.: "
 msgstr "Texto de resposta antes de executar, por exemplo: "
 
-#: src/ai/gemini_functions.js:30 src/ai/functions_declarations.js:30
+#: src/ai/gemini/activations.js:30 src/ai/gemini/declarations.js:30
 msgid "Sure, start reading..."
 msgstr "Claro, iniciando leitura..."
 
-#: src/ai/gemini_functions.js:38 src/ai/gemini_functions.js:79
-#: src/ai/functions_declarations.js:38 src/ai/functions_declarations.js:79
+#: src/ai/gemini/activations.js:38 src/ai/gemini/activations.js:79
+#: src/ai/gemini/declarations.js:38 src/ai/gemini/declarations.js:79
 msgid "open"
 msgstr "abrir"
 
-#: src/ai/gemini_functions.js:39 src/ai/gemini_functions.js:80
-#: src/ai/functions_declarations.js:39 src/ai/functions_declarations.js:80
+#: src/ai/gemini/activations.js:39 src/ai/gemini/activations.js:80
+#: src/ai/gemini/declarations.js:39 src/ai/gemini/declarations.js:80
 msgid "open_lang_var1"
 msgstr "abra"
 
-#: src/ai/gemini_functions.js:40 src/ai/gemini_functions.js:81
-#: src/ai/functions_declarations.js:40 src/ai/functions_declarations.js:81
+#: src/ai/gemini/activations.js:40 src/ai/gemini/activations.js:81
+#: src/ai/gemini/declarations.js:40 src/ai/gemini/declarations.js:81
 msgid "open_lang_var2"
 msgstr "abre"
 
-#: src/ai/gemini_functions.js:41 src/ai/functions_declarations.js:41
+#: src/ai/gemini/activations.js:41 src/ai/gemini/declarations.js:41
 msgid "run"
 msgstr "rodar"
 
-#: src/ai/gemini_functions.js:42 src/ai/functions_declarations.js:42
+#: src/ai/gemini/activations.js:42 src/ai/gemini/declarations.js:42
 msgid "run_lang_var1"
 msgstr "rode"
 
-#: src/ai/gemini_functions.js:43 src/ai/functions_declarations.js:43
+#: src/ai/gemini/activations.js:43 src/ai/gemini/declarations.js:43
 msgid "run_lang_var2"
 msgstr "roda"
 
-#: src/ai/gemini_functions.js:44 src/ai/functions_declarations.js:44
+#: src/ai/gemini/activations.js:44 src/ai/gemini/declarations.js:44
 msgid "execute"
 msgstr "executar"
 
-#: src/ai/gemini_functions.js:45 src/ai/functions_declarations.js:45
+#: src/ai/gemini/activations.js:45 src/ai/gemini/declarations.js:45
 msgid "execute_lang_var1"
 msgstr "execute"
 
-#: src/ai/gemini_functions.js:46 src/ai/functions_declarations.js:46
+#: src/ai/gemini/activations.js:46 src/ai/gemini/declarations.js:46
 msgid "execute_lang_var2"
 msgstr "executa"
 
-#: src/ai/gemini_functions.js:47 src/ai/functions_declarations.js:47
+#: src/ai/gemini/activations.js:47 src/ai/gemini/declarations.js:47
 msgid "start"
 msgstr "iniciar"
 
-#: src/ai/gemini_functions.js:48 src/ai/functions_declarations.js:48
+#: src/ai/gemini/activations.js:48 src/ai/gemini/declarations.js:48
 msgid "start_lang_var1"
 msgstr "inicie"
 
-#: src/ai/gemini_functions.js:49 src/ai/functions_declarations.js:49
+#: src/ai/gemini/activations.js:49 src/ai/gemini/declarations.js:49
 msgid "start_lang_var2"
 msgstr "inicia"
 
-#: src/ai/gemini_functions.js:50 src/ai/functions_declarations.js:50
+#: src/ai/gemini/activations.js:50 src/ai/gemini/declarations.js:50
 msgid "launch"
 msgstr "lançar"
 
-#: src/ai/gemini_functions.js:51 src/ai/functions_declarations.js:51
+#: src/ai/gemini/activations.js:51 src/ai/gemini/declarations.js:51
 msgid "launch_lang_var1"
 msgstr "lance"
 
-#: src/ai/gemini_functions.js:52 src/ai/functions_declarations.js:52
+#: src/ai/gemini/activations.js:52 src/ai/gemini/declarations.js:52
 msgid "launch_lang_var2"
 msgstr "lança"
 
-#: src/ai/gemini_functions.js:58 src/ai/functions_declarations.js:58
+#: src/ai/gemini/activations.js:58 src/ai/gemini/declarations.js:58
 msgid "Run non-sudo commandline in the user terminal"
 msgstr "Rodar comandos no terminal"
 
-#: src/ai/gemini_functions.js:65 src/ai/functions_declarations.js:65
+#: src/ai/gemini/activations.js:65 src/ai/gemini/declarations.js:65
 msgid "commandline to run"
 msgstr "linha de comando para rodar"
 
-#: src/ai/gemini_functions.js:71 src/ai/functions_declarations.js:71
+#: src/ai/gemini/activations.js:71 src/ai/gemini/declarations.js:71
 msgid "Sure, opening GNOME Software..."
 msgstr "Claro, abrindo GNOME Software..."
 
-#: src/ai/gemini_functions.js:82 src/ai/functions_declarations.js:82
+#: src/ai/gemini/activations.js:82 src/ai/gemini/declarations.js:82
 msgid "search"
 msgstr "pesquisar"
 
-#: src/ai/gemini_functions.js:83 src/ai/functions_declarations.js:83
+#: src/ai/gemini/activations.js:83 src/ai/gemini/declarations.js:83
 msgid "search_lang_var1"
 msgstr "pesquise"
 
-#: src/ai/gemini_functions.js:84 src/ai/functions_declarations.js:84
+#: src/ai/gemini/activations.js:84 src/ai/gemini/declarations.js:84
 msgid "search_lang_var2"
 msgstr "pesquisa"
 
-#: src/ai/gemini_functions.js:85 src/ai/functions_declarations.js:85
+#: src/ai/gemini/activations.js:85 src/ai/gemini/declarations.js:85
 msgid "find"
 msgstr "procurar"
 
-#: src/ai/gemini_functions.js:86 src/ai/functions_declarations.js:86
+#: src/ai/gemini/activations.js:86 src/ai/gemini/declarations.js:86
 msgid "find_lang_var1"
 msgstr "procure"
 
-#: src/ai/gemini_functions.js:87 src/ai/functions_declarations.js:87
+#: src/ai/gemini/activations.js:87 src/ai/gemini/declarations.js:87
 msgid "find_lang_var2"
 msgstr "procura"
 
-#: src/ai/gemini_functions.js:88 src/ai/functions_declarations.js:88
+#: src/ai/gemini/activations.js:88 src/ai/gemini/declarations.js:88
 msgid "seek"
 msgstr "vasculhar"
 
-#: src/ai/gemini_functions.js:89 src/ai/functions_declarations.js:89
+#: src/ai/gemini/activations.js:89 src/ai/gemini/declarations.js:89
 msgid "seek_lang_var1"
 msgstr "vasculhe"
 
-#: src/ai/gemini_functions.js:90 src/ai/functions_declarations.js:90
+#: src/ai/gemini/activations.js:90 src/ai/gemini/declarations.js:90
 msgid "seek_lang_var2"
 msgstr "vasculha"
 
-#: src/ai/gemini_functions.js:91 src/ai/functions_declarations.js:91
+#: src/ai/gemini/activations.js:91 src/ai/gemini/declarations.js:91
 msgid "go"
 msgstr "vá para"
 
-#: src/ai/gemini_functions.js:92 src/ai/functions_declarations.js:92
+#: src/ai/gemini/activations.js:92 src/ai/gemini/declarations.js:92
 msgid "go_lang_var1"
 msgstr "vai na"
 
-#: src/ai/gemini_functions.js:93 src/ai/functions_declarations.js:93
+#: src/ai/gemini/activations.js:93 src/ai/gemini/declarations.js:93
 msgid "go_lang_var2"
 msgstr "vai no"
 
-#: src/ai/gemini_functions.js:94 src/ai/functions_declarations.js:94
+#: src/ai/gemini/activations.js:94 src/ai/gemini/declarations.js:94
 msgid "visit"
 msgstr "visitar"
 
-#: src/ai/gemini_functions.js:95 src/ai/functions_declarations.js:95
+#: src/ai/gemini/activations.js:95 src/ai/gemini/declarations.js:95
 msgid "visit_lang_var1"
 msgstr "visite"
 
-#: src/ai/gemini_functions.js:96 src/ai/functions_declarations.js:96
+#: src/ai/gemini/activations.js:96 src/ai/gemini/declarations.js:96
 msgid "visit_lang_var2"
 msgstr "visita"
 
-#: src/ai/gemini_functions.js:97 src/ai/functions_declarations.js:97
+#: src/ai/gemini/activations.js:97 src/ai/gemini/declarations.js:97
 msgid "navigate"
 msgstr "navegar"
 
-#: src/ai/gemini_functions.js:98 src/ai/functions_declarations.js:98
+#: src/ai/gemini/activations.js:98 src/ai/gemini/declarations.js:98
 msgid "navigate_lang_var1"
 msgstr "navegue"
 
-#: src/ai/gemini_functions.js:99 src/ai/functions_declarations.js:99
+#: src/ai/gemini/activations.js:99 src/ai/gemini/declarations.js:99
 msgid "navigate_lang_var2"
 msgstr "navega"
 
-#: src/ai/gemini_functions.js:100 src/ai/functions_declarations.js:100
+#: src/ai/gemini/activations.js:100 src/ai/gemini/declarations.js:100
 msgid "browse"
 msgstr "vizualizar"
 
-#: src/ai/gemini_functions.js:101 src/ai/functions_declarations.js:101
+#: src/ai/gemini/activations.js:101 src/ai/gemini/declarations.js:101
 msgid "browse_lang_var1"
 msgstr "visualize"
 
-#: src/ai/gemini_functions.js:102 src/ai/functions_declarations.js:102
+#: src/ai/gemini/activations.js:102 src/ai/gemini/declarations.js:102
 msgid "browse_lang_var2"
 msgstr "visualiza"
 
-#: src/ai/gemini_functions.js:103 src/ai/functions_declarations.js:103
+#: src/ai/gemini/activations.js:103 src/ai/gemini/declarations.js:103
 msgid "access"
 msgstr "acessar"
 
-#: src/ai/gemini_functions.js:104 src/ai/functions_declarations.js:104
+#: src/ai/gemini/activations.js:104 src/ai/gemini/declarations.js:104
 msgid "access_lang_var1"
 msgstr "acesse"
 
-#: src/ai/gemini_functions.js:105 src/ai/functions_declarations.js:105
+#: src/ai/gemini/activations.js:105 src/ai/gemini/declarations.js:105
 msgid "access_lang_var2"
 msgstr "acessa"
 
-#: src/ai/gemini_functions.js:110 src/ai/functions_declarations.js:110
+#: src/ai/gemini/activations.js:110 src/ai/gemini/declarations.js:110
 msgid "Open url in the browser."
 msgstr "Abrir URL no navegador."
 
-#: src/ai/gemini_functions.js:117 src/ai/functions_declarations.js:117
+#: src/ai/gemini/activations.js:117 src/ai/gemini/declarations.js:117
 msgid "URL to open, e.g.: "
 msgstr "URL para abrir, por exemplo: "
 
-#: src/ai/gemini_functions.js:122 src/ai/functions_declarations.js:122
+#: src/ai/gemini/activations.js:122 src/ai/gemini/declarations.js:122
 msgid "Response text before open, e.g.: "
 msgstr "Texto de resposta antes de executar, por exemplo: "
 
-#: src/ai/gemini_functions.js:123 src/ai/functions_declarations.js:123
+#: src/ai/gemini/activations.js:123 src/ai/gemini/declarations.js:123
 msgid "Sure, opening..."
 msgstr "Claro, abrindo..."
 
-#: src/ai/gemini_functions.js:131 src/ai/functions_declarations.js:131
+#: src/ai/gemini/activations.js:131 src/ai/gemini/declarations.js:131
 msgid "weather"
 msgstr "tempo"
 
-#: src/ai/gemini_functions.js:132 src/ai/functions_declarations.js:132
+#: src/ai/gemini/activations.js:132 src/ai/gemini/declarations.js:132
 msgid "weather_lang_var1"
 msgstr "clima"
 
-#: src/ai/gemini_functions.js:133 src/ai/functions_declarations.js:133
+#: src/ai/gemini/activations.js:133 src/ai/gemini/declarations.js:133
 msgid "forecast"
 msgstr "ṕrevisão"
 
-#: src/ai/gemini_functions.js:134 src/ai/functions_declarations.js:134
+#: src/ai/gemini/activations.js:134 src/ai/gemini/declarations.js:134
 msgid "temperature"
 msgstr "temperatura"
 
-#: src/ai/gemini_functions.js:135 src/ai/functions_declarations.js:135
+#: src/ai/gemini/activations.js:135 src/ai/gemini/declarations.js:135
 msgid "humidity"
 msgstr "humidade"
 
-#: src/ai/gemini_functions.js:136 src/ai/functions_declarations.js:136
+#: src/ai/gemini/activations.js:136 src/ai/gemini/declarations.js:136
 msgid "humidity_lang_var1"
 msgstr "humidades"
 
-#: src/ai/gemini_functions.js:137 src/ai/functions_declarations.js:137
+#: src/ai/gemini/activations.js:137 src/ai/gemini/declarations.js:137
 msgid "wind"
 msgstr "vento"
 
-#: src/ai/gemini_functions.js:138 src/ai/functions_declarations.js:138
+#: src/ai/gemini/activations.js:138 src/ai/gemini/declarations.js:138
 msgid "wind_lang_var1"
 msgstr "ar"
 
-#: src/ai/gemini_functions.js:139 src/ai/functions_declarations.js:139
+#: src/ai/gemini/activations.js:139 src/ai/gemini/declarations.js:139
 msgid "wind_lang_var2"
 msgstr "ventania"
 
-#: src/ai/gemini_functions.js:140 src/ai/functions_declarations.js:140
+#: src/ai/gemini/activations.js:140 src/ai/gemini/declarations.js:140
 msgid "precipitation"
 msgstr "precipitação"
 
-#: src/ai/gemini_functions.js:141 src/ai/functions_declarations.js:141
+#: src/ai/gemini/activations.js:141 src/ai/gemini/declarations.js:141
 msgid "precipitation_lang_var1"
 msgstr "precipitações"
 
-#: src/ai/gemini_functions.js:142 src/ai/functions_declarations.js:142
+#: src/ai/gemini/activations.js:142 src/ai/gemini/declarations.js:142
 msgid "precipitation_lang_var2"
 msgstr "precipitando"
 
-#: src/ai/gemini_functions.js:143 src/ai/functions_declarations.js:143
+#: src/ai/gemini/activations.js:143 src/ai/gemini/declarations.js:143
 msgid "cloud"
 msgstr "nuvem"
 
-#: src/ai/gemini_functions.js:144 src/ai/functions_declarations.js:144
+#: src/ai/gemini/activations.js:144 src/ai/gemini/declarations.js:144
 msgid "cloud_lang_var1"
 msgstr "nublado"
 
-#: src/ai/gemini_functions.js:145 src/ai/functions_declarations.js:145
+#: src/ai/gemini/activations.js:145 src/ai/gemini/declarations.js:145
 msgid "climate"
 msgstr "clima"
 
-#: src/ai/gemini_functions.js:146 src/ai/functions_declarations.js:146
+#: src/ai/gemini/activations.js:146 src/ai/gemini/declarations.js:146
 msgid "rain"
 msgstr "chuva"
 
-#: src/ai/gemini_functions.js:147 src/ai/functions_declarations.js:147
+#: src/ai/gemini/activations.js:147 src/ai/gemini/declarations.js:147
 msgid "rain_lang_var1"
 msgstr "chover"
 
-#: src/ai/gemini_functions.js:148 src/ai/functions_declarations.js:148
+#: src/ai/gemini/activations.js:148 src/ai/gemini/declarations.js:148
 msgid "rain_lang_var2"
 msgstr "chovendo"
 
-#: src/ai/gemini_functions.js:149 src/ai/functions_declarations.js:149
+#: src/ai/gemini/activations.js:149 src/ai/gemini/declarations.js:149
 msgid "snow"
 msgstr "neve"
 
-#: src/ai/gemini_functions.js:150 src/ai/functions_declarations.js:150
+#: src/ai/gemini/activations.js:150 src/ai/gemini/declarations.js:150
 msgid "snow_lang_var1"
 msgstr "nevar"
 
-#: src/ai/gemini_functions.js:151 src/ai/functions_declarations.js:151
+#: src/ai/gemini/activations.js:151 src/ai/gemini/declarations.js:151
 msgid "snow_lang_var2"
 msgstr "nevando"
 
-#: src/ai/gemini_functions.js:152 src/ai/functions_declarations.js:152
+#: src/ai/gemini/activations.js:152 src/ai/gemini/declarations.js:152
 msgid "frost"
 msgstr "frio"
 
-#: src/ai/gemini_functions.js:153 src/ai/functions_declarations.js:153
+#: src/ai/gemini/activations.js:153 src/ai/gemini/declarations.js:153
 msgid "frost_lang_var1"
 msgstr "congelando"
 
-#: src/ai/gemini_functions.js:154 src/ai/functions_declarations.js:154
+#: src/ai/gemini/activations.js:154 src/ai/gemini/declarations.js:154
 msgid "frost_lang_var2"
 msgstr "congelar"
 
-#: src/ai/gemini_functions.js:155 src/ai/functions_declarations.js:155
+#: src/ai/gemini/activations.js:155 src/ai/gemini/declarations.js:155
 msgid "fog"
 msgstr "nevoa"
 
-#: src/ai/gemini_functions.js:156 src/ai/functions_declarations.js:156
+#: src/ai/gemini/activations.js:156 src/ai/gemini/declarations.js:156
 msgid "fog_lang_var1"
 msgstr "nevoeiro"
 
-#: src/ai/gemini_functions.js:157 src/ai/functions_declarations.js:157
+#: src/ai/gemini/activations.js:157 src/ai/gemini/declarations.js:157
 msgid "fog_lang_var2"
 msgstr "brisa"
 
-#: src/ai/gemini_functions.js:158 src/ai/functions_declarations.js:158
+#: src/ai/gemini/activations.js:158 src/ai/gemini/declarations.js:158
 msgid "sun"
 msgstr "sol"
 
-#: src/ai/gemini_functions.js:159 src/ai/functions_declarations.js:159
+#: src/ai/gemini/activations.js:159 src/ai/gemini/declarations.js:159
 msgid "sun_lang_var1"
 msgstr "ensolarado"
 
-#: src/ai/gemini_functions.js:160 src/ai/functions_declarations.js:160
+#: src/ai/gemini/activations.js:160 src/ai/gemini/declarations.js:160
 msgid "sun_lang_var2"
 msgstr "calor"
 
-#: src/ai/gemini_functions.js:161 src/ai/functions_declarations.js:161
+#: src/ai/gemini/activations.js:161 src/ai/gemini/declarations.js:161
 msgid "clouds"
 msgstr "nuvens"
 
-#: src/ai/gemini_functions.js:162 src/ai/functions_declarations.js:162
+#: src/ai/gemini/activations.js:162 src/ai/gemini/declarations.js:162
 msgid "clouds_lang_var1"
 msgstr "nevoeiro"
 
-#: src/ai/gemini_functions.js:163 src/ai/functions_declarations.js:163
+#: src/ai/gemini/activations.js:163 src/ai/gemini/declarations.js:163
 msgid "clouds_lang_var2"
 msgstr "nevoada"
 
-#: src/ai/gemini_functions.js:164 src/ai/functions_declarations.js:164
+#: src/ai/gemini/activations.js:164 src/ai/gemini/declarations.js:164
 msgid "sky"
 msgstr "céu"
 
-#: src/ai/gemini_functions.js:165 src/ai/functions_declarations.js:165
+#: src/ai/gemini/activations.js:165 src/ai/gemini/declarations.js:165
 msgid "windy"
 msgstr "ventania"
 
-#: src/ai/gemini_functions.js:166 src/ai/functions_declarations.js:166
+#: src/ai/gemini/activations.js:166 src/ai/gemini/declarations.js:166
 msgid "windy_lang_var1"
 msgstr "ventos"
 
-#: src/ai/gemini_functions.js:167 src/ai/functions_declarations.js:167
+#: src/ai/gemini/activations.js:167 src/ai/gemini/declarations.js:167
 msgid "humid"
 msgstr "humido"
 
-#: src/ai/gemini_functions.js:168 src/ai/functions_declarations.js:168
+#: src/ai/gemini/activations.js:168 src/ai/gemini/declarations.js:168
 msgid "humid_lang_var1"
 msgstr "humidos"
 
-#: src/ai/gemini_functions.js:169 src/ai/functions_declarations.js:169
+#: src/ai/gemini/activations.js:169 src/ai/gemini/declarations.js:169
 msgid "humid_lang_var2"
 msgstr "molhado"
 
-#: src/ai/gemini_functions.js:170 src/ai/functions_declarations.js:170
+#: src/ai/gemini/activations.js:170 src/ai/gemini/declarations.js:170
 msgid "dry"
 msgstr "seco"
 
-#: src/ai/gemini_functions.js:171 src/ai/functions_declarations.js:171
+#: src/ai/gemini/activations.js:171 src/ai/gemini/declarations.js:171
 msgid "dry_lang_var1"
 msgstr "palha"
 
-#: src/ai/gemini_functions.js:172 src/ai/functions_declarations.js:172
+#: src/ai/gemini/activations.js:172 src/ai/gemini/declarations.js:172
 msgid "dry_lang_var2"
 msgstr "deserto"
 
-#: src/ai/gemini_functions.js:173 src/ai/functions_declarations.js:173
+#: src/ai/gemini/activations.js:173 src/ai/gemini/declarations.js:173
 #: src/utils/utils.js:520
 msgid "cold"
 msgstr "frio"
 
-#: src/ai/gemini_functions.js:174 src/ai/functions_declarations.js:174
+#: src/ai/gemini/activations.js:174 src/ai/gemini/declarations.js:174
 msgid "cold_lang_var1"
 msgstr "gelado"
 
-#: src/ai/gemini_functions.js:175 src/ai/functions_declarations.js:175
+#: src/ai/gemini/activations.js:175 src/ai/gemini/declarations.js:175
 msgid "cold_lang_var2"
 msgstr "gelando"
 
-#: src/ai/gemini_functions.js:176 src/ai/functions_declarations.js:176
+#: src/ai/gemini/activations.js:176 src/ai/gemini/declarations.js:176
 #: src/utils/utils.js:544
 msgid "hot"
 msgstr "quente"
 
-#: src/ai/gemini_functions.js:177 src/ai/functions_declarations.js:177
+#: src/ai/gemini/activations.js:177 src/ai/gemini/declarations.js:177
 msgid "hot_lang_var1"
 msgstr "calor"
 
-#: src/ai/gemini_functions.js:178 src/ai/functions_declarations.js:178
+#: src/ai/gemini/activations.js:178 src/ai/gemini/declarations.js:178
 msgid "hot_lang_var2"
 msgstr "fogo"
 
-#: src/ai/gemini_functions.js:179 src/ai/functions_declarations.js:179
+#: src/ai/gemini/activations.js:179 src/ai/gemini/declarations.js:179
 #: src/utils/utils.js:538
 msgid "warm"
 msgstr "esquentando"
 
-#: src/ai/gemini_functions.js:180 src/ai/functions_declarations.js:180
+#: src/ai/gemini/activations.js:180 src/ai/gemini/declarations.js:180
 msgid "warm_lang_var1"
 msgstr "aquecendo"
 
-#: src/ai/gemini_functions.js:181 src/ai/functions_declarations.js:181
+#: src/ai/gemini/activations.js:181 src/ai/gemini/declarations.js:181
 #: src/utils/utils.js:529
 msgid "mild"
 msgstr "calmo"
 
-#: src/ai/gemini_functions.js:182 src/ai/functions_declarations.js:182
+#: src/ai/gemini/activations.js:182 src/ai/gemini/declarations.js:182
 msgid "mild_lang_var1"
 msgstr "amêno"
 
-#: src/ai/gemini_functions.js:183 src/ai/functions_declarations.js:183
+#: src/ai/gemini/activations.js:183 src/ai/gemini/declarations.js:183
 msgid "mild_lang_var2"
 msgstr "suave"
 
-#: src/ai/gemini_functions.js:184 src/ai/functions_declarations.js:184
+#: src/ai/gemini/activations.js:184 src/ai/gemini/declarations.js:184
 msgid "freezing"
 msgstr "gelando"
 
-#: src/ai/gemini_functions.js:185 src/ai/functions_declarations.js:185
+#: src/ai/gemini/activations.js:185 src/ai/gemini/declarations.js:185
 msgid "freezing_lang_var1"
 msgstr "esfriando"
 
-#: src/ai/gemini_functions.js:186 src/ai/functions_declarations.js:186
+#: src/ai/gemini/activations.js:186 src/ai/gemini/declarations.js:186
 msgid "blizzard"
 msgstr "nevoeiro"
 
-#: src/ai/gemini_functions.js:191 src/ai/functions_declarations.js:191
+#: src/ai/gemini/activations.js:191 src/ai/gemini/declarations.js:191
 msgid "show the weather for today."
 msgstr "exiba informações sobre tempo para hoje"
 
-#: src/ai/gemini_functions.js:199 src/ai/functions_declarations.js:199
+#: src/ai/gemini/activations.js:199 src/ai/gemini/declarations.js:199
 #, fuzzy
 msgid "Provide a location, e.g.: \"New York, NY\" (always use this format)"
 msgstr ""
 "ou forneça uma localização, por exemplo: \"New York, NY\" (sempre use este "
 "formato)"
 
-#: src/ai/gemini_functions.js:203 src/ai/functions_declarations.js:203
+#: src/ai/gemini/activations.js:203 src/ai/gemini/declarations.js:203
 #, fuzzy
 msgid "or don't provide a location to show weather from user location"
 msgstr ""
 "ou não forneça uma localização para exibir o clima da localização do usuário"
 
-#: src/ai/gemini_functions.js:246 src/ai/functions_declarations.js:246
+#: src/ai/gemini/activations.js:246 src/ai/gemini/functions.js:42
+#: src/ai/gemini/declarations.js:246
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr "Eu não posso fazer isso agora. Talvez no futuro."
 
-#: src/ai/gemini_functions.js:285 src/ai/functions_declarations.js:285
+#: src/ai/gemini/activations.js:285 src/ai/gemini/functions.js:59
+#: src/ai/gemini/declarations.js:285
 msgid "End of text!"
 msgstr "Fim do texto!"
 
-#: src/ai/gemini_functions.js:289 src/ai/functions_declarations.js:289
+#: src/ai/gemini/activations.js:289 src/ai/gemini/functions.js:63
+#: src/ai/gemini/declarations.js:289
 msgid "Failed to get text from clipboard"
 msgstr "Falha ao obter texto da área de transferência"
 
-#: src/ai/gemini_functions.js:305 src/ai/functions_declarations.js:305
+#: src/ai/gemini/activations.js:305 src/ai/gemini/functions.js:79
+#: src/ai/gemini/declarations.js:305
 msgid "Please, install"
 msgstr "Por favor, instale"
 
-#: src/ai/gemini_functions.js:309 src/ai/functions_declarations.js:309
+#: src/ai/gemini/activations.js:309 src/ai/gemini/functions.js:83
+#: src/ai/gemini/declarations.js:309
 msgid "first"
 msgstr "primeiro"
 
-#: src/ai/gemini_functions.js:326 src/ai/gemini_functions.js:379
-#: src/ai/functions_declarations.js:326 src/ai/functions_declarations.js:379
+#: src/ai/gemini/activations.js:326 src/ai/gemini/activations.js:379
+#: src/ai/gemini/functions.js:100 src/ai/gemini/functions.js:153
+#: src/ai/gemini/declarations.js:326 src/ai/gemini/declarations.js:379
 msgid "Error opening site"
 msgstr "Falha ao abrir site"
 
-#: src/ai/gemini_functions.js:370 src/ai/functions_declarations.js:370
+#: src/ai/gemini/activations.js:370 src/ai/gemini/functions.js:144
+#: src/ai/gemini/declarations.js:370
 msgid "You don't have any browser installed."
 msgstr "Você não tem nenhum navegador instalado."
 
-#: src/ai/gemini_functions.js:372 src/ai/functions_declarations.js:372
+#: src/ai/gemini/activations.js:372 src/ai/gemini/functions.js:146
+#: src/ai/gemini/declarations.js:372
 msgid "Please, install a browser and try again."
 msgstr "Por favor, instale um navegador e tente novamente."
 
-#: src/ai/gemini_functions.js:374 src/ai/functions_declarations.js:374
+#: src/ai/gemini/activations.js:374 src/ai/gemini/functions.js:148
+#: src/ai/gemini/declarations.js:374
 msgid "Opening App Store..."
 msgstr "Abrindo App Store..."
 
-#: src/ai/gemini_functions.js:389 src/ai/functions_declarations.js:389
+#: src/ai/gemini/activations.js:389 src/ai/gemini/functions.js:163
+#: src/ai/gemini/declarations.js:389
 msgid "Error getting weather"
 msgstr "Falha ao abrir site"
 
