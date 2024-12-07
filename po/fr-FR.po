@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-07 00:36-0300\n"
+"POT-Creation-Date: 2024-12-07 00:39-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language fr-FR\n"
@@ -365,7 +365,7 @@ msgstr "Code copié dans le presse-papier"
 msgid "frost_lang_var2"
 msgstr "Code copié dans le presse-papier"
 
-#: src/ai/gemini_functions.js:155 src/utils/utils.js:524
+#: src/ai/gemini_functions.js:155 src/utils/utils.js:520
 msgid "fog"
 msgstr ""
 
@@ -448,7 +448,7 @@ msgstr "Code copié dans le presse-papier"
 msgid "dry_lang_var2"
 msgstr "Code copié dans le presse-papier"
 
-#: src/ai/gemini_functions.js:173 src/utils/utils.js:562
+#: src/ai/gemini_functions.js:173 src/utils/utils.js:558
 msgid "cold"
 msgstr ""
 
@@ -462,7 +462,7 @@ msgstr "Code copié dans le presse-papier"
 msgid "cold_lang_var2"
 msgstr "Code copié dans le presse-papier"
 
-#: src/ai/gemini_functions.js:176 src/utils/utils.js:586
+#: src/ai/gemini_functions.js:176 src/utils/utils.js:582
 msgid "hot"
 msgstr ""
 
@@ -476,7 +476,7 @@ msgstr "Code copié dans le presse-papier"
 msgid "hot_lang_var2"
 msgstr "Code copié dans le presse-papier"
 
-#: src/ai/gemini_functions.js:179 src/utils/utils.js:580
+#: src/ai/gemini_functions.js:179 src/utils/utils.js:576
 msgid "warm"
 msgstr ""
 
@@ -485,7 +485,7 @@ msgstr ""
 msgid "warm_lang_var1"
 msgstr "Code copié dans le presse-papier"
 
-#: src/ai/gemini_functions.js:181 src/utils/utils.js:571
+#: src/ai/gemini_functions.js:181 src/utils/utils.js:567
 msgid "mild"
 msgstr ""
 
@@ -739,116 +739,116 @@ msgstr ""
 msgid "Look at example below:"
 msgstr ""
 
-#: src/utils/utils.js:512
+#: src/utils/utils.js:508
 msgid "clear"
 msgstr ""
 
-#: src/utils/utils.js:514
+#: src/utils/utils.js:510
 msgid "few clouds"
 msgstr ""
 
-#: src/utils/utils.js:517
+#: src/utils/utils.js:513
 msgid "scattered clouds"
 msgstr ""
 
-#: src/utils/utils.js:520
+#: src/utils/utils.js:516
 msgid "broken clouds"
 msgstr ""
 
-#: src/utils/utils.js:522
+#: src/utils/utils.js:518
 #, fuzzy
 msgid "overcast"
 msgstr "Code copié dans le presse-papier"
 
-#: src/utils/utils.js:526
+#: src/utils/utils.js:522
 msgid "mist"
 msgstr ""
 
-#: src/utils/utils.js:528
+#: src/utils/utils.js:524
 msgid "haze"
 msgstr ""
 
-#: src/utils/utils.js:530
+#: src/utils/utils.js:526
 msgid "dust"
 msgstr ""
 
-#: src/utils/utils.js:532
+#: src/utils/utils.js:528
 msgid "sand"
 msgstr ""
 
-#: src/utils/utils.js:534
+#: src/utils/utils.js:530
 msgid "ash"
 msgstr ""
 
-#: src/utils/utils.js:536
+#: src/utils/utils.js:532
 msgid "squall"
 msgstr ""
 
-#: src/utils/utils.js:538
+#: src/utils/utils.js:534
 msgid "tornado"
 msgstr ""
 
-#: src/utils/utils.js:540
+#: src/utils/utils.js:536
 msgid "hurricane"
 msgstr ""
 
-#: src/utils/utils.js:542 src/utils/utils.js:553
+#: src/utils/utils.js:538 src/utils/utils.js:549
 msgid "unknown"
 msgstr ""
 
-#: src/utils/utils.js:549
+#: src/utils/utils.js:545
 msgid "night"
 msgstr ""
 
-#: src/utils/utils.js:551
+#: src/utils/utils.js:547
 msgid "day"
 msgstr ""
 
-#: src/utils/utils.js:588
+#: src/utils/utils.js:584
 #, fuzzy
 msgid "unknown temperature"
 msgstr "Code copié dans le presse-papier"
 
-#: src/utils/utils.js:594
+#: src/utils/utils.js:590
 msgid " and raining"
 msgstr ""
 
-#: src/utils/utils.js:597
+#: src/utils/utils.js:593
 msgid " and snowing"
 msgstr ""
 
-#: src/utils/utils.js:600
+#: src/utils/utils.js:596
 msgid " and sunny"
 msgstr ""
 
-#: src/utils/utils.js:605
+#: src/utils/utils.js:601
 msgid "Now it is"
 msgstr ""
 
-#: src/utils/utils.js:605
+#: src/utils/utils.js:601
 msgid "in"
 msgstr ""
 
-#: src/utils/utils.js:605
+#: src/utils/utils.js:601
 #, fuzzy
 msgid "The sky is"
 msgstr "Code copié dans le presse-papier"
 
-#: src/utils/utils.js:605
+#: src/utils/utils.js:601
 #, fuzzy
 msgid "and the weather is"
 msgstr "Code copié dans le presse-papier"
 
-#: src/utils/utils.js:605
+#: src/utils/utils.js:601
 #, fuzzy
 msgid "the temperature is now"
 msgstr "Code copié dans le presse-papier"
 
-#: src/utils/utils.js:605
+#: src/utils/utils.js:601
 msgid "but it feels like"
 msgstr ""
 
-#: src/utils/utils.js:605
+#: src/utils/utils.js:601
 #, fuzzy
 msgid "The humidity of the air is"
 msgstr "Code copié dans le presse-papier"

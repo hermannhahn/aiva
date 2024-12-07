@@ -437,13 +437,9 @@ export class Utils {
                                 _httpSessionCoord.send_and_read_finish(result);
                             let decoder = new TextDecoder('utf-8');
                             let response = decoder.decode(bytes.get_data());
-                            this.app.log(
-                                `First result response: ${response}`, // debug
-                            );
                             let res = JSON.parse(response);
-                            this.app.log(`First result res: ${res}`); // debug
                             this.lat = res[0]?.lat;
-                            this.lon = res[0].lng;
+                            this.lon = res[0]?.lon;
 
                             // curl
                             let url = `https://api.open-meteo.com/v1/forecast?latitude=${this.lat}&longitude=${this.lon}&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,rain,showers,snowfall,cloud_cover`;
