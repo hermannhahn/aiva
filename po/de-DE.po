@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-07 16:47-0300\n"
+"POT-Creation-Date: 2024-12-07 16:48-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language de-DE\n"
@@ -783,15 +783,15 @@ msgid "unknown temperature"
 msgstr "Code kopiert in die Zwischenablage"
 
 #: src/utils/utils.js:392
-msgid ", and is raining"
+msgid ", is raining"
 msgstr ""
 
 #: src/utils/utils.js:395
-msgid ", and is snowing"
+msgid ", is snowing"
 msgstr ""
 
 #: src/utils/utils.js:398
-msgid ", and is sunny"
+msgid ", is sunny"
 msgstr ""
 
 #: src/commands.js:21

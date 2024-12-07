@@ -389,13 +389,13 @@ export class Utils {
     climeStatus(res) {
         let clime = '';
         if (res.current.precipitation > 0) {
-            clime = _(', and is raining');
+            clime = _(', is raining');
         }
         if (res.current.snowfall > 0) {
-            clime = _(', and is snowing');
+            clime = _(', is snowing');
         }
         if (res.current.is_day === 1) {
-            clime = _(', and is sunny');
+            clime = _(', is sunny');
         }
         return clime;
     }
