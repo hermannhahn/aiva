@@ -214,7 +214,7 @@ export default class AivaExtension extends Extension {
             log: this.log,
             logError: this.logError,
         });
-        console.log('[AIVA] Starting...');
+        this._app.log('Starting...');
 
         // add to status bar
         Main.panel.addToStatusArea('gvaGnomeExtension', this._app, 1);
@@ -238,7 +238,7 @@ export default class AivaExtension extends Extension {
             this._shortcutBinding = null;
         }
         this._app.database.closeDatabase();
-        console.log('[AIVA] Disabling extension...');
+        this._app.log('Disabling extension...');
         this._app.destroy();
         this._app = null;
         console.log('[AIVA] Extension disabled.');
@@ -269,12 +269,12 @@ export default class AivaExtension extends Extension {
 
         const dbusImpl = Gio.DBusExportedObject.wrapJSObject(interfaceXML, {
             SetRequestable(request) {
-                console.log(`[AIVA] Request received: ${request}`);
+                this._app.log(`Request received: ${request}`);
             },
         });
 
         dbusImpl.export(Gio.DBus.session, '/org/gnome/shell/extensions/aiva');
 
-        console.log('[AIVA] D-Bus server started');
+        this._app.log('D-Bus server started');
     }
 }
