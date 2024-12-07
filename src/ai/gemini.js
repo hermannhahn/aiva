@@ -372,7 +372,7 @@ export class GoogleGemini {
 
     _createBody(request, text) {
         try {
-            const declarations = this.app.functions.declarations(text);
+            const declarations = this.functions.declarations.get(text);
 
             // get first five words from text
             if (declarations) {
