@@ -421,6 +421,7 @@ export class Utils {
             this.loc = this.app.userSettings.CITY;
 
             if (location !== 'userLocation') {
+                this.loc = location;
                 let coordURL = `https://www.mapquestapi.com/geocoding/v1/address?key=KEY&location=${location}`;
                 let _httpSessionCoord = new Soup.Session();
                 let messageCoord = Soup.Message.new('GET', coordURL);
@@ -438,7 +439,6 @@ export class Utils {
                             let res = response.results[0]?.locations[0]?.latLng;
                             this.lat = res.lat;
                             this.lon = res.lng;
-                            this.loc = location;
                         } catch (error) {
                             this.app.log(
                                 `Failed to process response: ${error}`,
