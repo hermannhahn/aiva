@@ -436,11 +436,8 @@ export class Utils {
                             let bytes =
                                 _httpSessionCoord.send_and_read_finish(result);
                             let decoder = new TextDecoder('utf-8');
-                            let response = decoder.decode(bytes.get_data());
-                            let res = JSON.parse(response);
-                            this.app.log(
-                                `First result: ${JSON.stringify(res)}}`,
-                            ); // debug
+                            let res = decoder.decode(bytes.get_data());
+                            this.app.log(`First result: ${res}`); // debug
                             this.lat =
                                 res.results[0]?.locations[0]?.latLng?.lat;
                             this.lon =
