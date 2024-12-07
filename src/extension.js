@@ -102,15 +102,15 @@ const Aiva = GObject.registerClass(
          */
         _createInstances() {
             this.logger = new Logger(true);
-            this.utils = new Utils(this.log, this.logError);
             this.database = new Database(this);
-            this.ui = new UI(this);
-            this.commands = new Commands(this);
             this.audio = new Audio(this);
+            this.interpreter = new Interpreter(this);
+            this.chat = new Chat(this);
+            this.ui = new UI(this);
+            this.utils = new Utils(this.log, this.logError);
+            this.commands = new Commands(this);
             this.azure = new MicrosoftAzure(this);
             this.gemini = new GoogleGemini(this);
-            this.chat = new Chat(this);
-            this.interpreter = new Interpreter(this);
         }
 
         /**
@@ -211,6 +211,8 @@ export default class AivaExtension extends Extension {
             openSettings: this.openPreferences,
             uuid: this.uuid,
             userSettings: this.userSettings,
+            log: this.log,
+            logError: this.logError,
         });
         console.log('[AIVA] Starting...');
 
