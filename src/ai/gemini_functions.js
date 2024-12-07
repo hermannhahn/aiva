@@ -188,7 +188,7 @@ export class GeminiFunctions {
 
         this._weatherDeclaration = {
             name: 'get_weather',
-            description: _('get weather for today.'),
+            description: _('show the weather for today.'),
             parameters: {
                 type: 'object',
                 properties: {

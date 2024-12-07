@@ -465,7 +465,7 @@ msgid "blizzard"
 msgstr ""
 
 #: src/ai/gemini_functions.js:191
-msgid "get weather for today."
+msgid "show the weather for today."
 msgstr ""
 
 #: src/ai/gemini_functions.js:199
