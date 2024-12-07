@@ -22,6 +22,7 @@ import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 import * as PanelMenu from 'resource:///org/gnome/shell/ui/panelMenu.js';
 
 // App
+import {Logger} from './utils/logger.js';
 import {Database} from './database.js';
 import {Audio} from './audio.js';
 import {Interpreter} from './interpreter.js';
@@ -100,6 +101,7 @@ const Aiva = GObject.registerClass(
          * @description public instances
          */
         _createInstances() {
+            this.logger = new Logger(true);
             this.commands = new Commands(this);
             this.database = new Database(this);
             this.gemini = new GoogleGemini(this);
@@ -209,14 +211,8 @@ export default class AivaExtension extends Extension {
             openSettings: this.openPreferences,
             uuid: this.uuid,
             userSettings: this.userSettings,
-            log: (message) => {
-                console.log('[AIVA] ' + message);
-            },
-            logError: (message) => {
-                console.error('[AIVA] ' + message);
-            },
         });
-        this._app.log('Starting AIVA...');
+        console.log('[AIVA] Starting...');
 
         // add to status bar
         Main.panel.addToStatusArea('gvaGnomeExtension', this._app, 1);
@@ -229,8 +225,6 @@ export default class AivaExtension extends Extension {
 
         // register dbus
         this._registerDBus();
-
-        this._app.log('AIVA started.');
     }
 
     /**
@@ -242,10 +236,10 @@ export default class AivaExtension extends Extension {
             this._shortcutBinding = null;
         }
         this._app.database.closeDatabase();
-        this._app.log('Disabling extension...');
+        console.log('[AIVA] Disabling extension...');
         this._app.destroy();
         this._app = null;
-        console.log('Extension disabled.');
+        console.log('[AIVA] Extension disabled.');
     }
 
     _onKeyPress(display, event) {
@@ -273,12 +267,12 @@ export default class AivaExtension extends Extension {
 
         const dbusImpl = Gio.DBusExportedObject.wrapJSObject(interfaceXML, {
             SetRequestable(request) {
-                log(`[AIVA] Request received: ${request}`);
+                console.log(`[AIVA] Request received: ${request}`);
             },
         });
 
         dbusImpl.export(Gio.DBus.session, '/org/gnome/shell/extensions/aiva');
 
-        log('[AIVA] D-Bus server started');
+        console.log('[AIVA] D-Bus server started');
     }
 }
