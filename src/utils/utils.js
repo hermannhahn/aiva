@@ -13,10 +13,11 @@ import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js'
  * @param {object} app
  */
 export class Utils {
-    constructor(app) {
-        this.app = app;
+    constructor(log, logError) {
+        this.log = log;
+        this.logError = logError;
         this._pangoConvert = convertMD;
-        this.app.log('Utils loaded.');
+        this.log('Utils loaded.');
     }
 
     /**
@@ -145,7 +146,7 @@ export class Utils {
                 `${_('Here are the main news')}:\n\n` + news,
             );
         } catch (error) {
-            this.app.log(`Error fetching news: ${error}`);
+            this.log(`Error fetching news: ${error}`);
             this.app.chat.editResponse(
                 _("Sorry, I'm having connection trouble. Please try again."),
             );
@@ -204,7 +205,7 @@ export class Utils {
             const [, contents] = file.load_contents(null);
             return GLib.base64_encode(contents);
         } catch (error) {
-            this.app.log('Error while encoding file to base64: ' + error);
+            this.log('Error while encoding file to base64: ' + error);
             return null;
         }
     }
@@ -257,13 +258,13 @@ export class Utils {
                 text = text.replace(nextMatch[0], _('Look at example below:'));
                 nextMatch = text.match(regex);
             }
-            this.app.log('code detected!');
+            this.log('code detected!');
             let tts = formatTTS(text);
             return {code, tts};
         } else {
             // If not
             let tts = formatTTS(text);
-            this.app.log('code not detected!');
+            this.log('code not detected!');
             return {code: null, tts};
         }
     }
@@ -271,21 +272,21 @@ export class Utils {
     /**
      * @description execute shell command
      * @param {string} cmd
+     * @returns
      */
     executeCommand(cmd) {
         const command = cmd;
-        const process = GLib.spawn_async(
-            null, // pasta de trabalho
-            ['/bin/sh', '-c', command], // comando e argumentos
-            null, // opções
-            GLib.SpawnFlags.SEARCH_PATH, // flags
-            null, // PID
-        );
-
-        if (process) {
-            this.app.log(`Executing command: ${command}`);
-        } else {
-            this.app.log('Error executing command.');
+        try {
+            const process = GLib.spawn_async(
+                null, // pasta de trabalho
+                ['/bin/sh', '-c', command], // comando e argumentos
+                null, // opções
+                GLib.SpawnFlags.SEARCH_PATH, // flags
+                null, // PID
+            );
+            return process;
+        } catch (error) {
+            throw new Error(`Failed to complete request: ${error.message}`);
         }
     }
 
@@ -296,12 +297,12 @@ export class Utils {
      */
     isAppInstalled(command) {
         try {
-            this.app.log('Checking if app is installed: ' + command);
+            this.log('Checking if app is installed: ' + command);
             const process = GLib.spawn_command_line_sync(`which ${command}`);
-            this.app.log('Process: ' + process[0]);
+            this.log('Process: ' + process[0]);
             return process[0];
         } catch (error) {
-            this.app.logError('Error checking if app is installed:', error);
+            this.logError('Error checking if app is installed:', error);
             return false;
         }
     }
@@ -310,7 +311,7 @@ export class Utils {
      * @description remove all gva .wav files from /tmp folder
      */
     removeWavFiles() {
-        this.app.log('Removing all .wav files from /tmp folder');
+        this.log('Removing all .wav files from /tmp folder');
         const command = 'rm -rf /tmp/gva*.wav';
         const process = GLib.spawn_async(
             null, // pasta de trabalho
@@ -321,17 +322,18 @@ export class Utils {
         );
 
         if (process) {
-            this.app.log('Wav files removed successfully.');
+            this.log('Wav files removed successfully.');
         } else {
-            this.app.log('Error removing wav files.');
+            this.log('Error removing wav files.');
         }
     }
 
     /**
      * @description send curl
      * @param {string} url
+     * @param {*} callback
      */
-    curl(url) {
+    curl(url, callback) {
         try {
             let _httpSession = new Soup.Session();
             let message = Soup.Message.new('GET', url);
@@ -343,7 +345,7 @@ export class Utils {
                     let bytes = _httpSession.send_and_read_finish(result);
                     let decoder = new TextDecoder('utf-8');
                     let response = decoder.decode(bytes.get_data());
-                    return response;
+                    callback(response);
                 },
             );
         } catch {

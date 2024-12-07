@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-07 15:41-0300\n"
+"POT-Creation-Date: 2024-12-07 15:50-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language fr-FR\n"
@@ -26,7 +26,7 @@ msgstr ""
 
 #: src/ai/azure.js:68 src/ai/azure.js:81 src/ai/azure.js:123
 #: src/ai/azure.js:132 src/ai/gemini.js:117 src/ai/gemini.js:148
-#: src/ai/gemini.js:225 src/ai/gemini.js:256 src/utils/utils.js:150
+#: src/ai/gemini.js:225 src/ai/gemini.js:256 src/utils/utils.js:151
 msgid "Sorry, I'm having connection trouble. Please try again."
 msgstr ""
 
@@ -415,7 +415,7 @@ msgstr "Code copié dans le presse-papier"
 msgid "dry_lang_var2"
 msgstr "Code copié dans le presse-papier"
 
-#: src/ai/gemini/activations.js:110 src/utils/utils.js:367
+#: src/ai/gemini/activations.js:110 src/utils/utils.js:369
 msgid "cold"
 msgstr ""
 
@@ -429,7 +429,7 @@ msgstr "Code copié dans le presse-papier"
 msgid "cold_lang_var2"
 msgstr "Code copié dans le presse-papier"
 
-#: src/ai/gemini/activations.js:113 src/utils/utils.js:382
+#: src/ai/gemini/activations.js:113 src/utils/utils.js:384
 msgid "hot"
 msgstr ""
 
@@ -443,7 +443,7 @@ msgstr "Code copié dans le presse-papier"
 msgid "hot_lang_var2"
 msgstr "Code copié dans le presse-papier"
 
-#: src/ai/gemini/activations.js:116 src/utils/utils.js:379
+#: src/ai/gemini/activations.js:116 src/utils/utils.js:381
 msgid "warm"
 msgstr ""
 
@@ -452,7 +452,7 @@ msgstr ""
 msgid "warm_lang_var1"
 msgstr "Code copié dans le presse-papier"
 
-#: src/ai/gemini/activations.js:118 src/utils/utils.js:373
+#: src/ai/gemini/activations.js:118 src/utils/utils.js:375
 msgid "mild"
 msgstr ""
 
@@ -750,48 +750,48 @@ msgstr ""
 msgid "Give me a moment to sort this out..."
 msgstr ""
 
-#: src/utils/utils.js:130
+#: src/utils/utils.js:131
 msgid "Of course, searching..."
 msgstr ""
 
-#: src/utils/utils.js:133
+#: src/utils/utils.js:134
 msgid "Sure, searching..."
 msgstr ""
 
-#: src/utils/utils.js:145
+#: src/utils/utils.js:146
 msgid "Here are the main news"
 msgstr ""
 
-#: src/utils/utils.js:257
+#: src/utils/utils.js:258
 msgid "Look at example below:"
 msgstr ""
 
-#: src/utils/utils.js:357
+#: src/utils/utils.js:359
 msgid "night"
 msgstr ""
 
-#: src/utils/utils.js:359
+#: src/utils/utils.js:361
 msgid "day"
 msgstr ""
 
-#: src/utils/utils.js:361
+#: src/utils/utils.js:363
 msgid "unknown"
 msgstr ""
 
-#: src/utils/utils.js:384
+#: src/utils/utils.js:386
 #, fuzzy
 msgid "unknown temperature"
 msgstr "Code copié dans le presse-papier"
 
-#: src/utils/utils.js:390
+#: src/utils/utils.js:392
 msgid " and raining"
 msgstr ""
 
-#: src/utils/utils.js:393
+#: src/utils/utils.js:395
 msgid " and snowing"
 msgstr ""
 
-#: src/utils/utils.js:396
+#: src/utils/utils.js:398
 msgid " and sunny"
 msgstr ""
 
