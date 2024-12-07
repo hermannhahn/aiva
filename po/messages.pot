@@ -726,15 +726,15 @@ msgid "unknown temperature"
 msgstr ""
 
 #: src/utils/utils.js:392
-msgid ", is raining"
+msgid " and is raining"
 msgstr ""
 
 #: src/utils/utils.js:395
-msgid ", is snowing"
+msgid " and is snowing"
 msgstr ""
 
 #: src/utils/utils.js:398
-msgid ", is sunny"
+msgid " and is sunny"
 msgstr ""
 
 #: src/commands.js:21
