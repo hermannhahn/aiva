@@ -473,7 +473,7 @@ msgid "Provide a location, e.g.: \"New York, NY\" (always use this format)"
 msgstr ""
 
 #: src/ai/gemini_functions.js:203
-msgid "or don't provide a location to get weather from user location"
+msgid "or don't provide a location to show weather from user location"
 msgstr ""
 
 #: src/ai/gemini_functions.js:246

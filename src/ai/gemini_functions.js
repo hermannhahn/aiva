@@ -200,7 +200,7 @@ export class GeminiFunctions {
                             ) +
                             ' ' +
                             _(
-                                "or don't provide a location to get weather from user location",
+                                "or don't provide a location to show weather from user location",
                             ),
                     },
                 },
