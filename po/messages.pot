@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-07 16:51-0300\n"
+"POT-Creation-Date: 2024-12-07 16:52-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -468,27 +468,27 @@ msgstr ""
 msgid "Opening App Store..."
 msgstr ""
 
-#: src/ai/gemini/functions.js:207
+#: src/ai/gemini/functions.js:209
 msgid "Now it is"
 msgstr ""
 
-#: src/ai/gemini/functions.js:207
+#: src/ai/gemini/functions.js:209
 msgid "in"
 msgstr ""
 
-#: src/ai/gemini/functions.js:207
+#: src/ai/gemini/functions.js:209
 msgid "the temperature is now"
 msgstr ""
 
-#: src/ai/gemini/functions.js:207
+#: src/ai/gemini/functions.js:209
 msgid "but it feels like"
 msgstr ""
 
-#: src/ai/gemini/functions.js:207
+#: src/ai/gemini/functions.js:209
 msgid "The humidity of the air is"
 msgstr ""
 
-#: src/ai/gemini/functions.js:213
+#: src/ai/gemini/functions.js:215
 msgid "Error getting weather"
 msgstr ""
 

@@ -194,6 +194,8 @@ export class GeminiFunctions {
             let url = `https://api.open-meteo.com/v1/forecast?latitude=${this.lat}&longitude=${this.lon}&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,rain,showers,snowfall,cloud_cover`;
             let _httpSession = new Soup.Session();
             let message = Soup.Message.new('GET', url);
+            // remove region after city name
+            this.loc = this.loc.split(',')[0];
 
             _httpSession.send_and_read_async(
                 message,
