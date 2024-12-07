@@ -18,7 +18,7 @@ import {GeminiFunctions} from './gemini/functions.js';
 export class GoogleGemini {
     constructor(app) {
         this.app = app;
-        this.functions = new GeminiFunctions(app);
+        this.function = new GeminiFunctions(app);
         this.USERNAME = app.userSettings.USERNAME;
         this.LOCATION = app.userSettings.LOCATION;
         this.GEMINI_API_KEY = app.userSettings.GEMINI_API_KEY;
@@ -103,7 +103,7 @@ export class GoogleGemini {
                     for (const part of parts) {
                         if (part.functionCall !== undefined) {
                             const f = part.functionCall;
-                            this.functions.callback(f.name, f.args);
+                            this.function.callback(f.name, f.args);
                             return;
                         }
                     }
@@ -209,7 +209,7 @@ export class GoogleGemini {
                     for (const part of parts) {
                         if (part.functionCall !== undefined) {
                             const f = part.functionCall;
-                            this.functions.callback(f.name, f.args);
+                            this.function.callback(f.name, f.args);
                             return;
                         }
                     }
@@ -372,7 +372,7 @@ export class GoogleGemini {
 
     _createBody(request, text) {
         try {
-            const declarations = this.functions.declarations.get(text);
+            const declarations = this.function.declarations.get(text);
 
             // get first five words from text
             if (declarations) {
