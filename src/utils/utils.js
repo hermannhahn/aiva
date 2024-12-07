@@ -414,13 +414,13 @@ export class Utils {
         }
     }
 
-    getCurrentLocalWeather(location = 'userLocation') {
+    getCurrentLocalWeather(location) {
         try {
             this.lat = this.app.userSettings.LAT;
             this.lon = this.app.userSettings.LON;
             this.loc = this.app.userSettings.CITY;
 
-            if (location !== 'userLocation') {
+            if (location !== undefined) {
                 this.loc = location;
                 let coordURL = `https://www.mapquestapi.com/geocoding/v1/address?key=KEY&location=${location}`;
                 let _httpSessionCoord = new Soup.Session();
@@ -439,6 +439,135 @@ export class Utils {
                             let res = response.results[0]?.locations[0]?.latLng;
                             this.lat = res.lat;
                             this.lon = res.lng;
+
+                            // curl
+                            let url = `https://api.open-meteo.com/v1/forecast?latitude=${this.lat}&longitude=${this.lon}&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,rain,showers,snowfall,cloud_cover`;
+                            let _httpSession = new Soup.Session();
+                            let message = Soup.Message.new('GET', url);
+
+                            _httpSession.send_and_read_async(
+                                message,
+                                GLib.PRIORITY_DEFAULT,
+                                null,
+                                (_httpSession, result) => {
+                                    try {
+                                        let bytes =
+                                            _httpSession.send_and_read_finish(
+                                                result,
+                                            );
+                                        let decoder = new TextDecoder('utf-8');
+                                        let response = decoder.decode(
+                                            bytes.get_data(),
+                                        );
+                                        let res = JSON.parse(response);
+
+                                        function cloudCloverString() {
+                                            switch (res.current.cloud_cover) {
+                                                case 0:
+                                                    return _('clear');
+                                                case 1:
+                                                    return _('few clouds');
+                                                case 2:
+                                                    return _(
+                                                        'scattered clouds',
+                                                    );
+                                                case 3:
+                                                    return _('broken clouds');
+                                                case 4:
+                                                    return _('overcast');
+                                                case 5:
+                                                    return _('fog');
+                                                case 6:
+                                                    return _('mist');
+                                                case 7:
+                                                    return _('haze');
+                                                case 8:
+                                                    return _('dust');
+                                                case 9:
+                                                    return _('sand');
+                                                case 10:
+                                                    return _('ash');
+                                                case 11:
+                                                    return _('squall');
+                                                case 12:
+                                                    return _('tornado');
+                                                case 13:
+                                                    return _('hurricane');
+                                                default:
+                                                    return _('unknown');
+                                            }
+                                        }
+
+                                        function isDayString() {
+                                            switch (res.current.is_day) {
+                                                case 0:
+                                                    return _('night');
+                                                case 1:
+                                                    return _('day');
+                                                default:
+                                                    return _('unknown');
+                                            }
+                                        }
+
+                                        function sensationString() {
+                                            if (
+                                                res.current
+                                                    .apparent_temperature < 10
+                                            ) {
+                                                return _('cold');
+                                            }
+                                            if (
+                                                res.current
+                                                    .apparent_temperature >=
+                                                    10 &&
+                                                res.current
+                                                    .apparent_temperature < 25
+                                            ) {
+                                                return _('mild');
+                                            }
+                                            if (
+                                                res.current
+                                                    .apparent_temperature >=
+                                                    25 &&
+                                                res.current
+                                                    .apparent_temperature < 35
+                                            ) {
+                                                return _('warm');
+                                            }
+                                            if (
+                                                res.current
+                                                    .apparent_temperature >= 35
+                                            ) {
+                                                return _('hot');
+                                            }
+                                            return _('unknown temperature');
+                                        }
+
+                                        function climeStatus() {
+                                            let clime = '';
+                                            if (res.current.precipitation > 0) {
+                                                clime = _(' and raining');
+                                            }
+                                            if (res.current.snowfall > 0) {
+                                                clime = _(' and snowing');
+                                            }
+                                            if (res.current.is_day === 1) {
+                                                clime = _(' and sunny');
+                                            }
+                                            return clime;
+                                        }
+
+                                        let weatherDescription = `${_('Now it is')} ${isDayString()}${climeStatus()} ${_('in')} ${this.loc}. ${_('The sky is')} ${cloudCloverString()} ${_('and the weather is')} ${sensationString()}, ${_('the temperature is now')} ${res.current.temperature_2m}${res.current_units.temperature_2m}, ${_('but it feels like')} ${res.current.apparent_temperature}${res.current_units.apparent_temperature}. ${_('The humidity of the air is')} ${res.current.relative_humidity_2m}%.`;
+                                        this.app.chat.editResponse(
+                                            weatherDescription,
+                                        );
+                                    } catch (error) {
+                                        this.app.log(
+                                            `Failed to process response: ${error}`,
+                                        );
+                                    }
+                                },
+                            );
                         } catch (error) {
                             this.app.log(
                                 `Failed to process response: ${error}`,
@@ -447,112 +576,6 @@ export class Utils {
                     },
                 );
             }
-
-            // curl
-            let url = `https://api.open-meteo.com/v1/forecast?latitude=${this.lat}&longitude=${this.lon}&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,rain,showers,snowfall,cloud_cover`;
-            let _httpSession = new Soup.Session();
-            let message = Soup.Message.new('GET', url);
-
-            _httpSession.send_and_read_async(
-                message,
-                GLib.PRIORITY_DEFAULT,
-                null,
-                (_httpSession, result) => {
-                    try {
-                        let bytes = _httpSession.send_and_read_finish(result);
-                        let decoder = new TextDecoder('utf-8');
-                        let response = decoder.decode(bytes.get_data());
-                        let res = JSON.parse(response);
-
-                        function cloudCloverString() {
-                            switch (res.current.cloud_cover) {
-                                case 0:
-                                    return _('clear');
-                                case 1:
-                                    return _('few clouds');
-                                case 2:
-                                    return _('scattered clouds');
-                                case 3:
-                                    return _('broken clouds');
-                                case 4:
-                                    return _('overcast');
-                                case 5:
-                                    return _('fog');
-                                case 6:
-                                    return _('mist');
-                                case 7:
-                                    return _('haze');
-                                case 8:
-                                    return _('dust');
-                                case 9:
-                                    return _('sand');
-                                case 10:
-                                    return _('ash');
-                                case 11:
-                                    return _('squall');
-                                case 12:
-                                    return _('tornado');
-                                case 13:
-                                    return _('hurricane');
-                                default:
-                                    return _('unknown');
-                            }
-                        }
-
-                        function isDayString() {
-                            switch (res.current.is_day) {
-                                case 0:
-                                    return _('night');
-                                case 1:
-                                    return _('day');
-                                default:
-                                    return _('unknown');
-                            }
-                        }
-
-                        function sensationString() {
-                            if (res.current.apparent_temperature < 10) {
-                                return _('cold');
-                            }
-                            if (
-                                res.current.apparent_temperature >= 10 &&
-                                res.current.apparent_temperature < 25
-                            ) {
-                                return _('mild');
-                            }
-                            if (
-                                res.current.apparent_temperature >= 25 &&
-                                res.current.apparent_temperature < 35
-                            ) {
-                                return _('warm');
-                            }
-                            if (res.current.apparent_temperature >= 35) {
-                                return _('hot');
-                            }
-                            return _('unknown temperature');
-                        }
-
-                        function climeStatus() {
-                            let clime = '';
-                            if (res.current.precipitation > 0) {
-                                clime = _(' and raining');
-                            }
-                            if (res.current.snowfall > 0) {
-                                clime = _(' and snowing');
-                            }
-                            if (res.current.is_day === 1) {
-                                clime = _(' and sunny');
-                            }
-                            return clime;
-                        }
-
-                        let weatherDescription = `${_('Now it is')} ${isDayString()}${climeStatus()} ${_('in')} ${this.loc}. ${_('The sky is')} ${cloudCloverString()} ${_('and the weather is')} ${sensationString()}, ${_('the temperature is now')} ${res.current.temperature_2m}${res.current_units.temperature_2m}, ${_('but it feels like')} ${res.current.apparent_temperature}${res.current_units.apparent_temperature}. ${_('The humidity of the air is')} ${res.current.relative_humidity_2m}%.`;
-                        this.app.chat.editResponse(weatherDescription);
-                    } catch (error) {
-                        this.app.log(`Failed to process response: ${error}`);
-                    }
-                },
-            );
         } catch (error) {
             this.app.log(`Failed to complete request: ${error.message}`);
             throw new Error(`Request error: ${error.message}`);
