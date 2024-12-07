@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-06 21:01-0300\n"
+"POT-Creation-Date: 2024-12-06 21:10-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language de-DE\n"
@@ -523,58 +523,58 @@ msgstr "Code kopiert in die Zwischenablage"
 msgid "Don't provide a location to get weather from user location"
 msgstr ""
 
-#: src/ai/gemini_functions.js:202
-msgid "or provide a location, e.g.: London, UK"
+#: src/ai/gemini_functions.js:203
+msgid "or provide a location, e.g.: \"London, UK\" (always use this format)"
 msgstr ""
 
-#: src/ai/gemini_functions.js:207
+#: src/ai/gemini_functions.js:209
 msgid "Response text before get weather, e.g.: "
 msgstr ""
 
-#: src/ai/gemini_functions.js:208
+#: src/ai/gemini_functions.js:210
 #, fuzzy
 msgid "Sure, getting weather forecast..."
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini_functions.js:248
+#: src/ai/gemini_functions.js:250
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr ""
 
-#: src/ai/gemini_functions.js:289
+#: src/ai/gemini_functions.js:291
 msgid "End of text!"
 msgstr ""
 
-#: src/ai/gemini_functions.js:293
+#: src/ai/gemini_functions.js:295
 #, fuzzy
 msgid "Failed to get text from clipboard"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini_functions.js:309
+#: src/ai/gemini_functions.js:311
 msgid "Please, install"
 msgstr ""
 
-#: src/ai/gemini_functions.js:313
+#: src/ai/gemini_functions.js:315
 msgid "first"
 msgstr ""
 
-#: src/ai/gemini_functions.js:330 src/ai/gemini_functions.js:383
+#: src/ai/gemini_functions.js:332 src/ai/gemini_functions.js:385
 #, fuzzy
 msgid "Error opening site"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini_functions.js:374
+#: src/ai/gemini_functions.js:376
 msgid "You don't have any browser installed."
 msgstr ""
 
-#: src/ai/gemini_functions.js:376
+#: src/ai/gemini_functions.js:378
 msgid "Please, install a browser and try again."
 msgstr ""
 
-#: src/ai/gemini_functions.js:378
+#: src/ai/gemini_functions.js:380
 msgid "Opening App Store..."
 msgstr ""
 
-#: src/ai/gemini_functions.js:396
+#: src/ai/gemini_functions.js:398
 #, fuzzy
 msgid "Error getting weather"
 msgstr "Code kopiert in die Zwischenablage"
