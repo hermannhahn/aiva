@@ -103,7 +103,7 @@ export class GoogleGemini {
                     for (const part of parts) {
                         if (part.functionCall !== undefined) {
                             const f = part.functionCall;
-                            this.app.functions.callback(f.name, f.args);
+                            this.app.gemini.functions.callback(f.name, f.args);
                             return;
                         }
                     }
