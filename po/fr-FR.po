@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-07 16:49-0300\n"
+"POT-Creation-Date: 2024-12-07 16:51-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language fr-FR\n"
@@ -525,10 +525,6 @@ msgstr ""
 
 #: src/ai/gemini/functions.js:207
 msgid "in"
-msgstr ""
-
-#: src/ai/gemini/functions.js:207
-msgid "and"
 msgstr ""
 
 #: src/ai/gemini/functions.js:207

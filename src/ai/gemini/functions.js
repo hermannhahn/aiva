@@ -204,7 +204,7 @@ export class GeminiFunctions {
                     let decoder = new TextDecoder('utf-8');
                     let response = decoder.decode(bytes.get_data());
                     let res = JSON.parse(response);
-                    let weatherDescription = `${_('Now it is')} ${this.app.utils.isDayString(res)}${this.app.utils.climeStatus(res)} ${_('in')} ${this.loc} ${_('and')} ${this.app.utils.sensationString(res)}, ${_('the temperature is now')} ${res.current.temperature_2m}${res.current_units.temperature_2m}, ${_('but it feels like')} ${res.current.apparent_temperature}${res.current_units.apparent_temperature}. ${_('The humidity of the air is')} ${res.current.relative_humidity_2m}%.`;
+                    let weatherDescription = `${_('Now it is')} ${this.app.utils.isDayString(res)}${this.app.utils.climeStatus(res)} ${_('in')} ${this.loc}, ${this.app.utils.sensationString(res)}, ${_('the temperature is now')} ${res.current.temperature_2m}${res.current_units.temperature_2m}, ${_('but it feels like')} ${res.current.apparent_temperature}${res.current_units.apparent_temperature}. ${_('The humidity of the air is')} ${res.current.relative_humidity_2m}%.`;
                     this.app.chat.editResponse(weatherDescription);
                 },
             );

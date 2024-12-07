@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-07 16:49-0300\n"
+"POT-Creation-Date: 2024-12-07 16:51-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -478,11 +478,6 @@ msgid "in"
 msgstr "em"
 
 #: src/ai/gemini/functions.js:207
-#, fuzzy
-msgid "and"
-msgstr "e"
-
-#: src/ai/gemini/functions.js:207
 msgid "the temperature is now"
 msgstr "a temperatura agora é de"
 
@@ -860,6 +855,10 @@ msgstr "Salvar"
 #: src/prefs.js:287
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
+
+#, fuzzy
+#~ msgid "and"
+#~ msgstr "e"
 
 #~ msgid "and the weather is"
 #~ msgstr "e o tempo está"
