@@ -370,51 +370,11 @@ export class GoogleGemini {
     _createBody(request, text) {
         try {
             const declarations = this.app.functions.declarations(text);
-            const systemInstructions = {
-                parts: [
-                    {
-                        text:
-                            _(
-                                '1. You are a friendly and helpful voice assistant.)',
-                            ) +
-                            '\n' +
-                            _(
-                                '2. Your name is AIVA. Use your name whenever prompted.',
-                            ) +
-                            '\n' +
-                            _(
-                                '3. You can use the declared functions to assist in your responses',
-                            ) +
-                            ', ' +
-                            _(
-                                'execute commands, perform tasks, create, edit, and locate files',
-                            ) +
-                            ', ' +
-                            _(
-                                'and do everything possible through terminal commands',
-                            ) +
-                            ' ' +
-                            _(
-                                "to fulfill the user's requests. If this is not possible",
-                            ) +
-                            ', ' +
-                            _('I teach the user how to achieve the goal.') +
-                            '\n' +
-                            _(
-                                '3. Make sure your responses are short and concise',
-                            ) +
-                            ', ' +
-                            _(
-                                'unless the user requests a more thorough approach.',
-                            ),
-                    },
-                ],
-            };
 
             // get first five words from text
             if (declarations) {
                 const tools = JSON.stringify(declarations);
-                return `{"contents":${request}, "systemInstructions":${systemInstructions}, "tools":${tools}}`;
+                return `{"contents":${request}, "tools":${tools}}`;
             }
             return `{"contents":${request}}`;
         } catch {
