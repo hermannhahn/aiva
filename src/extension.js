@@ -1,5 +1,3 @@
-const DEBUG = true;
-
 /**
  *
  * AIVA - Artificial Intelligence Voice Assistant
@@ -24,7 +22,6 @@ import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 import * as PanelMenu from 'resource:///org/gnome/shell/ui/panelMenu.js';
 
 // App
-import {Logger} from './utils/logger.js';
 import {Database} from './database.js';
 import {Audio} from './audio.js';
 import {Interpreter} from './interpreter.js';
@@ -62,7 +59,6 @@ const Aiva = GObject.registerClass(
             const {settings} = this.extension;
             this._shortcutBinding = null;
             this.interface = this.menu;
-            this._ = _;
 
             // extension directory
             const EXT_DIR = GLib.build_filenamev([
@@ -104,7 +100,6 @@ const Aiva = GObject.registerClass(
          * @description public instances
          */
         _createInstances() {
-            this.logger = new Logger(DEBUG);
             this.commands = new Commands(this);
             this.database = new Database(this);
             this.gemini = new GoogleGemini(this);
@@ -216,6 +211,9 @@ export default class AivaExtension extends Extension {
             userSettings: this.userSettings,
             log: (message) => {
                 console.log('[AIVA] ' + message);
+            },
+            logError: (message) => {
+                console.error('[AIVA] ' + message);
             },
         });
         this._app.log('Starting AIVA...');
