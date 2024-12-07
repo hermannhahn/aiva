@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-06 23:48-0300\n"
+"POT-Creation-Date: 2024-12-06 23:50-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language es-ES\n"
@@ -365,7 +365,7 @@ msgstr "Código copiado al portapapeles"
 msgid "frost_lang_var2"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini_functions.js:155 src/utils/utils.js:479
+#: src/ai/gemini_functions.js:155 src/utils/utils.js:477
 msgid "fog"
 msgstr ""
 
@@ -448,7 +448,7 @@ msgstr "Código copiado al portapapeles"
 msgid "dry_lang_var2"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini_functions.js:173 src/utils/utils.js:517
+#: src/ai/gemini_functions.js:173 src/utils/utils.js:515
 msgid "cold"
 msgstr ""
 
@@ -462,7 +462,7 @@ msgstr "Código copiado al portapapeles"
 msgid "cold_lang_var2"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini_functions.js:176 src/utils/utils.js:541
+#: src/ai/gemini_functions.js:176 src/utils/utils.js:539
 msgid "hot"
 msgstr ""
 
@@ -476,7 +476,7 @@ msgstr "Código copiado al portapapeles"
 msgid "hot_lang_var2"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini_functions.js:179 src/utils/utils.js:535
+#: src/ai/gemini_functions.js:179 src/utils/utils.js:533
 msgid "warm"
 msgstr ""
 
@@ -485,7 +485,7 @@ msgstr ""
 msgid "warm_lang_var1"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini_functions.js:181 src/utils/utils.js:526
+#: src/ai/gemini_functions.js:181 src/utils/utils.js:524
 msgid "mild"
 msgstr ""
 
@@ -739,116 +739,116 @@ msgstr ""
 msgid "Look at example below:"
 msgstr ""
 
-#: src/utils/utils.js:467
+#: src/utils/utils.js:465
 msgid "clear"
 msgstr ""
 
-#: src/utils/utils.js:469
+#: src/utils/utils.js:467
 msgid "few clouds"
 msgstr ""
 
-#: src/utils/utils.js:472
+#: src/utils/utils.js:470
 msgid "scattered clouds"
 msgstr ""
 
-#: src/utils/utils.js:475
+#: src/utils/utils.js:473
 msgid "broken clouds"
 msgstr ""
 
-#: src/utils/utils.js:477
+#: src/utils/utils.js:475
 #, fuzzy
 msgid "overcast"
 msgstr "Código copiado al portapapeles"
 
-#: src/utils/utils.js:481
+#: src/utils/utils.js:479
 msgid "mist"
 msgstr ""
 
-#: src/utils/utils.js:483
+#: src/utils/utils.js:481
 msgid "haze"
 msgstr ""
 
-#: src/utils/utils.js:485
+#: src/utils/utils.js:483
 msgid "dust"
 msgstr ""
 
-#: src/utils/utils.js:487
+#: src/utils/utils.js:485
 msgid "sand"
 msgstr ""
 
-#: src/utils/utils.js:489
+#: src/utils/utils.js:487
 msgid "ash"
 msgstr ""
 
-#: src/utils/utils.js:491
+#: src/utils/utils.js:489
 msgid "squall"
 msgstr ""
 
-#: src/utils/utils.js:493
+#: src/utils/utils.js:491
 msgid "tornado"
 msgstr ""
 
-#: src/utils/utils.js:495
+#: src/utils/utils.js:493
 msgid "hurricane"
 msgstr ""
 
-#: src/utils/utils.js:497 src/utils/utils.js:508
+#: src/utils/utils.js:495 src/utils/utils.js:506
 msgid "unknown"
 msgstr ""
 
-#: src/utils/utils.js:504
+#: src/utils/utils.js:502
 msgid "night"
 msgstr ""
 
-#: src/utils/utils.js:506
+#: src/utils/utils.js:504
 msgid "day"
 msgstr ""
 
-#: src/utils/utils.js:543
+#: src/utils/utils.js:541
 #, fuzzy
 msgid "unknown temperature"
 msgstr "Código copiado al portapapeles"
 
-#: src/utils/utils.js:549
+#: src/utils/utils.js:547
 msgid " and raining"
 msgstr ""
 
-#: src/utils/utils.js:552
+#: src/utils/utils.js:550
 msgid " and snowing"
 msgstr ""
 
-#: src/utils/utils.js:555
+#: src/utils/utils.js:553
 msgid " and sunny"
 msgstr ""
 
-#: src/utils/utils.js:560
+#: src/utils/utils.js:558
 msgid "Now it is"
 msgstr ""
 
-#: src/utils/utils.js:560
+#: src/utils/utils.js:558
 msgid "in"
 msgstr ""
 
-#: src/utils/utils.js:560
+#: src/utils/utils.js:558
 #, fuzzy
 msgid "The sky is"
 msgstr "Código copiado al portapapeles"
 
-#: src/utils/utils.js:560
+#: src/utils/utils.js:558
 #, fuzzy
 msgid "and the weather is"
 msgstr "Código copiado al portapapeles"
 
-#: src/utils/utils.js:560
+#: src/utils/utils.js:558
 #, fuzzy
 msgid "the temperature is now"
 msgstr "Código copiado al portapapeles"
 
-#: src/utils/utils.js:560
+#: src/utils/utils.js:558
 msgid "but it feels like"
 msgstr ""
 
-#: src/utils/utils.js:560
+#: src/utils/utils.js:558
 #, fuzzy
 msgid "The humidity of the air is"
 msgstr "Código copiado al portapapeles"

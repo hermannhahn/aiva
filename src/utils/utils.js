@@ -437,11 +437,9 @@ export class Utils {
                             let decoder = new TextDecoder('utf-8');
                             let response = decoder.decode(bytes.get_data());
                             let res = response.results[0]?.locations[0]?.latLng;
-                            this.lat = res.lat;
-                            this.lon = res.lng;
 
                             // curl
-                            let url = `https://api.open-meteo.com/v1/forecast?latitude=${this.lat}&longitude=${this.lon}&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,rain,showers,snowfall,cloud_cover`;
+                            let url = `https://api.open-meteo.com/v1/forecast?latitude=${res.lat}&longitude=${res.lng}&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,rain,showers,snowfall,cloud_cover`;
                             let _httpSession = new Soup.Session();
                             let message = Soup.Message.new('GET', url);
 
