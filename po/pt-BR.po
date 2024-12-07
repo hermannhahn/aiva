@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-07 20:15-0300\n"
+"POT-Creation-Date: 2024-12-07 20:17-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -54,481 +54,616 @@ msgid "read_lang_var2"
 msgstr "lê"
 
 #: src/ai/gemini/activations.js:20
-msgid "open"
-msgstr "abrir"
+msgid "open the app"
+msgstr ""
 
 #: src/ai/gemini/activations.js:21
-msgid "open_lang_var1"
-msgstr "abra"
+msgid "open the application"
+msgstr ""
 
 #: src/ai/gemini/activations.js:22
-msgid "open_lang_var2"
-msgstr "abre"
-
-#: src/ai/gemini/activations.js:23
-msgid "run"
-msgstr "rodar"
-
-#: src/ai/gemini/activations.js:24
-msgid "run_lang_var1"
-msgstr "rode"
-
-#: src/ai/gemini/activations.js:25
-msgid "run_lang_var2"
-msgstr "roda"
-
-#: src/ai/gemini/activations.js:26
-msgid "execute"
-msgstr "executar"
-
-#: src/ai/gemini/activations.js:27
-msgid "execute_lang_var1"
-msgstr "execute"
-
-#: src/ai/gemini/activations.js:28
-msgid "execute_lang_var2"
-msgstr "executa"
-
-#: src/ai/gemini/activations.js:29
-msgid "start"
-msgstr "iniciar"
-
-#: src/ai/gemini/activations.js:30
-msgid "start_lang_var1"
-msgstr "inicie"
-
-#: src/ai/gemini/activations.js:31
-msgid "start_lang_var2"
-msgstr "inicia"
-
-#: src/ai/gemini/activations.js:32
-msgid "launch"
+#, fuzzy
+msgid "launch the app"
 msgstr "lançar"
 
+#: src/ai/gemini/activations.js:23
+msgid "launch the software"
+msgstr ""
+
+#: src/ai/gemini/activations.js:24
+msgid "start the app"
+msgstr ""
+
+#: src/ai/gemini/activations.js:25
+msgid "start the application"
+msgstr ""
+
+#: src/ai/gemini/activations.js:26
+msgid "run the app"
+msgstr ""
+
+#: src/ai/gemini/activations.js:27
+msgid "run the software"
+msgstr ""
+
+#: src/ai/gemini/activations.js:28
+msgid "open this program"
+msgstr ""
+
+#: src/ai/gemini/activations.js:29
+msgid "launch this program"
+msgstr ""
+
+#: src/ai/gemini/activations.js:30
+msgid "start the program"
+msgstr ""
+
+#: src/ai/gemini/activations.js:31
+msgid "can you open the app"
+msgstr ""
+
+#: src/ai/gemini/activations.js:32
+msgid "could you open the software"
+msgstr ""
+
 #: src/ai/gemini/activations.js:33
-msgid "launch_lang_var1"
-msgstr "lance"
+msgid "bring up the app"
+msgstr ""
 
 #: src/ai/gemini/activations.js:34
-msgid "launch_lang_var2"
-msgstr "lança"
+msgid "bring up the application"
+msgstr ""
+
+#: src/ai/gemini/activations.js:35
+msgid "fire up the app"
+msgstr ""
+
+#: src/ai/gemini/activations.js:36
+msgid "fire up the program"
+msgstr ""
+
+#: src/ai/gemini/activations.js:37
+msgid "please open the software"
+msgstr ""
 
 #: src/ai/gemini/activations.js:38
-msgid "open the website"
+msgid "please start the app"
 msgstr ""
 
 #: src/ai/gemini/activations.js:39
-msgid "open the page"
+msgid "run this application"
 msgstr ""
 
 #: src/ai/gemini/activations.js:40
-msgid "open the blog"
+msgid "execute the program"
 msgstr ""
 
 #: src/ai/gemini/activations.js:41
+msgid "load the app"
+msgstr ""
+
+#: src/ai/gemini/activations.js:42
+msgid "load the software"
+msgstr ""
+
+#: src/ai/gemini/activations.js:43
+msgid "boot up the app"
+msgstr ""
+
+#: src/ai/gemini/activations.js:44
+msgid "can you run this program"
+msgstr ""
+
+#: src/ai/gemini/activations.js:45
+msgid "could you launch this software"
+msgstr ""
+
+#: src/ai/gemini/activations.js:46
+msgid "open the snap"
+msgstr ""
+
+#: src/ai/gemini/activations.js:47
+msgid "launch the snap"
+msgstr ""
+
+#: src/ai/gemini/activations.js:48
+msgid "start the snap"
+msgstr ""
+
+#: src/ai/gemini/activations.js:49
+msgid "run the snap"
+msgstr ""
+
+#: src/ai/gemini/activations.js:50
+msgid "load the snap"
+msgstr ""
+
+#: src/ai/gemini/activations.js:51
+msgid "open the flatpak"
+msgstr ""
+
+#: src/ai/gemini/activations.js:52
+msgid "launch the flatpak"
+msgstr ""
+
+#: src/ai/gemini/activations.js:53
+msgid "start the flatpak"
+msgstr ""
+
+#: src/ai/gemini/activations.js:54
+msgid "run the flatpak"
+msgstr ""
+
+#: src/ai/gemini/activations.js:55
+msgid "load the flatpak"
+msgstr ""
+
+#: src/ai/gemini/activations.js:56
+msgid "fire up the software"
+msgstr ""
+
+#: src/ai/gemini/activations.js:57
+msgid "boot up this application"
+msgstr ""
+
+#: src/ai/gemini/activations.js:58
+msgid "pull up the app"
+msgstr ""
+
+#: src/ai/gemini/activations.js:59
+msgid "navigate to the app"
+msgstr ""
+
+#: src/ai/gemini/activations.js:60
+msgid "turn on the software"
+msgstr ""
+
+#: src/ai/gemini/activations.js:61
+#, fuzzy
+msgid "access the app"
+msgstr "acessar"
+
+#: src/ai/gemini/activations.js:62
+msgid "can you open this tool"
+msgstr ""
+
+#: src/ai/gemini/activations.js:63
+#, fuzzy
+msgid "could you start this application"
+msgstr "Para usar quando quiser abrir um aplicativo"
+
+#: src/ai/gemini/activations.js:64
+msgid "execute this tool"
+msgstr ""
+
+#: src/ai/gemini/activations.js:65
+msgid "please run this software"
+msgstr ""
+
+#: src/ai/gemini/activations.js:66
+msgid "activate the app"
+msgstr ""
+
+#: src/ai/gemini/activations.js:67
+msgid "initialize the software"
+msgstr ""
+
+#: src/ai/gemini/activations.js:71
+msgid "open the website"
+msgstr ""
+
+#: src/ai/gemini/activations.js:72
+msgid "open the page"
+msgstr ""
+
+#: src/ai/gemini/activations.js:73
+msgid "open the blog"
+msgstr ""
+
+#: src/ai/gemini/activations.js:74
 #, fuzzy
 msgid "go to the website"
 msgstr "exiba informações sobre tempo para hoje"
 
-#: src/ai/gemini/activations.js:42
+#: src/ai/gemini/activations.js:75
 msgid "go to the page"
 msgstr ""
 
-#: src/ai/gemini/activations.js:43
+#: src/ai/gemini/activations.js:76
 msgid "go to the blog"
 msgstr ""
 
-#: src/ai/gemini/activations.js:44
+#: src/ai/gemini/activations.js:77
 msgid "navigate to the site"
 msgstr ""
 
-#: src/ai/gemini/activations.js:45
-msgid "navigate to the page"
-msgstr ""
-
-#: src/ai/gemini/activations.js:46
-#, fuzzy
-msgid "visit the website"
-msgstr "exiba informações sobre tempo para hoje"
-
-#: src/ai/gemini/activations.js:47
-msgid "visit the page"
-msgstr ""
-
-#: src/ai/gemini/activations.js:48
-msgid "open this link"
-msgstr ""
-
-#: src/ai/gemini/activations.js:49
-msgid "go to this URL"
-msgstr ""
-
-#: src/ai/gemini/activations.js:50
-msgid "open the URL"
-msgstr ""
-
-#: src/ai/gemini/activations.js:51
-msgid "check out this site"
-msgstr ""
-
-#: src/ai/gemini/activations.js:52
-msgid "pull up the website"
-msgstr ""
-
-#: src/ai/gemini/activations.js:53
-msgid "can you open the site"
-msgstr ""
-
-#: src/ai/gemini/activations.js:54
-msgid "could you open the page"
-msgstr ""
-
-#: src/ai/gemini/activations.js:55
-msgid "bring up the website"
-msgstr ""
-
-#: src/ai/gemini/activations.js:56
-msgid "take me to the site"
-msgstr ""
-
-#: src/ai/gemini/activations.js:57
-msgid "take me to the page"
-msgstr ""
-
-#: src/ai/gemini/activations.js:58
-#, fuzzy
-msgid "show me the website"
-msgstr "exiba informações sobre tempo para hoje"
-
-#: src/ai/gemini/activations.js:59
-#, fuzzy
-msgid "show me the page"
-msgstr "exiba informações sobre tempo para hoje"
-
-#: src/ai/gemini/activations.js:60
-msgid "launch the site"
-msgstr ""
-
-#: src/ai/gemini/activations.js:61
-msgid "launch the page"
-msgstr ""
-
-#: src/ai/gemini/activations.js:62
-msgid "visit this link"
-msgstr ""
-
-#: src/ai/gemini/activations.js:63
-msgid "can you navigate to the URL"
-msgstr ""
-
-#: src/ai/gemini/activations.js:64
-msgid "please open this site"
-msgstr ""
-
-#: src/ai/gemini/activations.js:65
-msgid "please visit the page"
-msgstr ""
-
-#: src/ai/gemini/activations.js:66
-msgid "open this blog for me"
-msgstr ""
-
-#: src/ai/gemini/activations.js:67
-msgid "take me to this blog"
-msgstr ""
-
-#: src/ai/gemini/activations.js:68
-msgid "show me the link"
-msgstr ""
-
-#: src/ai/gemini/activations.js:69
-msgid "can you load this page"
-msgstr ""
-
-#: src/ai/gemini/activations.js:70
-msgid "go to this link"
-msgstr ""
-
-#: src/ai/gemini/activations.js:71
-msgid "open a new tab with this site"
-msgstr ""
-
-#: src/ai/gemini/activations.js:72
-msgid "navigate to this link"
-msgstr ""
-
-#: src/ai/gemini/activations.js:73
-msgid "find this website for me"
-msgstr ""
-
-#: src/ai/gemini/activations.js:74
-msgid "bring up the blog"
-msgstr ""
-
-#: src/ai/gemini/activations.js:75
-msgid "open a tab for this page"
-msgstr ""
-
-#: src/ai/gemini/activations.js:76
-msgid "could you visit this link"
-msgstr ""
-
-#: src/ai/gemini/activations.js:77
-msgid "click this link for me"
-msgstr ""
-
 #: src/ai/gemini/activations.js:78
-msgid "take me to this URL"
+msgid "navigate to the page"
 msgstr ""
 
 #: src/ai/gemini/activations.js:79
 #, fuzzy
-msgid "browse to the website"
+msgid "visit the website"
 msgstr "exiba informações sobre tempo para hoje"
 
 #: src/ai/gemini/activations.js:80
-msgid "open this webpage"
+msgid "visit the page"
 msgstr ""
 
 #: src/ai/gemini/activations.js:81
-msgid "find this page online"
+msgid "open this link"
 msgstr ""
 
 #: src/ai/gemini/activations.js:82
+msgid "go to this URL"
+msgstr ""
+
+#: src/ai/gemini/activations.js:83
+msgid "open the URL"
+msgstr ""
+
+#: src/ai/gemini/activations.js:84
+msgid "check out this site"
+msgstr ""
+
+#: src/ai/gemini/activations.js:85
+msgid "pull up the website"
+msgstr ""
+
+#: src/ai/gemini/activations.js:86
+msgid "can you open the site"
+msgstr ""
+
+#: src/ai/gemini/activations.js:87
+msgid "could you open the page"
+msgstr ""
+
+#: src/ai/gemini/activations.js:88
+msgid "bring up the website"
+msgstr ""
+
+#: src/ai/gemini/activations.js:89
+msgid "take me to the site"
+msgstr ""
+
+#: src/ai/gemini/activations.js:90
+msgid "take me to the page"
+msgstr ""
+
+#: src/ai/gemini/activations.js:91
+#, fuzzy
+msgid "show me the website"
+msgstr "exiba informações sobre tempo para hoje"
+
+#: src/ai/gemini/activations.js:92
+#, fuzzy
+msgid "show me the page"
+msgstr "exiba informações sobre tempo para hoje"
+
+#: src/ai/gemini/activations.js:93
+msgid "launch the site"
+msgstr ""
+
+#: src/ai/gemini/activations.js:94
+msgid "launch the page"
+msgstr ""
+
+#: src/ai/gemini/activations.js:95
+msgid "visit this link"
+msgstr ""
+
+#: src/ai/gemini/activations.js:96
+msgid "can you navigate to the URL"
+msgstr ""
+
+#: src/ai/gemini/activations.js:97
+msgid "please open this site"
+msgstr ""
+
+#: src/ai/gemini/activations.js:98
+msgid "please visit the page"
+msgstr ""
+
+#: src/ai/gemini/activations.js:99
+msgid "open this blog for me"
+msgstr ""
+
+#: src/ai/gemini/activations.js:100
+msgid "take me to this blog"
+msgstr ""
+
+#: src/ai/gemini/activations.js:101
+msgid "show me the link"
+msgstr ""
+
+#: src/ai/gemini/activations.js:102
+msgid "can you load this page"
+msgstr ""
+
+#: src/ai/gemini/activations.js:103
+msgid "go to this link"
+msgstr ""
+
+#: src/ai/gemini/activations.js:104
+msgid "open a new tab with this site"
+msgstr ""
+
+#: src/ai/gemini/activations.js:105
+msgid "navigate to this link"
+msgstr ""
+
+#: src/ai/gemini/activations.js:106
+msgid "find this website for me"
+msgstr ""
+
+#: src/ai/gemini/activations.js:107
+msgid "bring up the blog"
+msgstr ""
+
+#: src/ai/gemini/activations.js:108
+msgid "open a tab for this page"
+msgstr ""
+
+#: src/ai/gemini/activations.js:109
+msgid "could you visit this link"
+msgstr ""
+
+#: src/ai/gemini/activations.js:110
+msgid "click this link for me"
+msgstr ""
+
+#: src/ai/gemini/activations.js:111
+msgid "take me to this URL"
+msgstr ""
+
+#: src/ai/gemini/activations.js:112
+#, fuzzy
+msgid "browse to the website"
+msgstr "exiba informações sobre tempo para hoje"
+
+#: src/ai/gemini/activations.js:113
+msgid "open this webpage"
+msgstr ""
+
+#: src/ai/gemini/activations.js:114
+msgid "find this page online"
+msgstr ""
+
+#: src/ai/gemini/activations.js:115
 #, fuzzy
 msgid "show me this site"
 msgstr "Mostra essa ajuda"
 
-#: src/ai/gemini/activations.js:86
+#: src/ai/gemini/activations.js:119
 #, fuzzy
 msgid "how is the weather"
 msgstr "exiba informações sobre tempo para hoje"
 
-#: src/ai/gemini/activations.js:87
+#: src/ai/gemini/activations.js:120
 #, fuzzy
 msgid "what is the temperature"
 msgstr "a temperatura agora é de"
 
-#: src/ai/gemini/activations.js:88
+#: src/ai/gemini/activations.js:121
 #, fuzzy
 msgid "what's the weather like"
 msgstr "o tempo está"
 
-#: src/ai/gemini/activations.js:89
+#: src/ai/gemini/activations.js:122
 #, fuzzy
 msgid "is it raining"
 msgstr " e está chovendo"
 
-#: src/ai/gemini/activations.js:90
+#: src/ai/gemini/activations.js:123
 #, fuzzy
 msgid "is it sunny"
 msgstr " e está ensolarado"
 
-#: src/ai/gemini/activations.js:91
+#: src/ai/gemini/activations.js:124
 #, fuzzy
 msgid "is it snowing"
 msgstr " e está nevando"
 
-#: src/ai/gemini/activations.js:92
+#: src/ai/gemini/activations.js:125
 #, fuzzy
 msgid "is it windy"
 msgstr "ventania"
 
-#: src/ai/gemini/activations.js:93
+#: src/ai/gemini/activations.js:126
 #, fuzzy
 msgid "what's the forecast"
 msgstr "Informações sobre tempo e previsão."
 
-#: src/ai/gemini/activations.js:94
+#: src/ai/gemini/activations.js:127
 #, fuzzy
 msgid "what's the weather forecast"
 msgstr "exiba informações sobre tempo para hoje"
 
-#: src/ai/gemini/activations.js:95
+#: src/ai/gemini/activations.js:128
 msgid "how hot is it outside"
 msgstr ""
 
-#: src/ai/gemini/activations.js:96
+#: src/ai/gemini/activations.js:129
 msgid "how cold is it outside"
 msgstr ""
 
-#: src/ai/gemini/activations.js:97
+#: src/ai/gemini/activations.js:130
 msgid "is it cloudy"
 msgstr ""
 
-#: src/ai/gemini/activations.js:98
+#: src/ai/gemini/activations.js:131
 msgid "is there a storm coming"
 msgstr ""
 
-#: src/ai/gemini/activations.js:99
+#: src/ai/gemini/activations.js:132
 msgid "what's the humidity level"
 msgstr ""
 
-#: src/ai/gemini/activations.js:100
+#: src/ai/gemini/activations.js:133
 msgid "is it going to rain today"
 msgstr ""
 
-#: src/ai/gemini/activations.js:101
+#: src/ai/gemini/activations.js:134
 msgid "will it snow tomorrow"
 msgstr ""
 
-#: src/ai/gemini/activations.js:102
+#: src/ai/gemini/activations.js:135
 #, fuzzy
 msgid "what's the weather like this week"
 msgstr "o tempo está"
 
-#: src/ai/gemini/activations.js:103
+#: src/ai/gemini/activations.js:136
 msgid "do I need an umbrella"
 msgstr ""
 
-#: src/ai/gemini/activations.js:104
+#: src/ai/gemini/activations.js:137
 msgid "do I need a jacket"
 msgstr ""
 
-#: src/ai/gemini/activations.js:105
+#: src/ai/gemini/activations.js:138
 msgid "how warm is it outside"
 msgstr ""
 
-#: src/ai/gemini/activations.js:106
+#: src/ai/gemini/activations.js:139
 msgid "is there a chance of rain"
 msgstr ""
 
-#: src/ai/gemini/activations.js:107
+#: src/ai/gemini/activations.js:140
 msgid "is it foggy"
 msgstr ""
 
-#: src/ai/gemini/activations.js:108
+#: src/ai/gemini/activations.js:141
 #, fuzzy
 msgid "is it freezing"
 msgstr "frio"
 
-#: src/ai/gemini/activations.js:109
+#: src/ai/gemini/activations.js:142
 #, fuzzy
 msgid "what's the high for today"
 msgstr "exiba informações sobre tempo para hoje"
 
-#: src/ai/gemini/activations.js:110
+#: src/ai/gemini/activations.js:143
 #, fuzzy
 msgid "what's the low for today"
 msgstr "exiba informações sobre tempo para hoje"
 
-#: src/ai/gemini/activations.js:111
+#: src/ai/gemini/activations.js:144
 #, fuzzy
 msgid "how's the weather right now"
 msgstr "exiba informações sobre tempo para hoje"
 
-#: src/ai/gemini/activations.js:112
+#: src/ai/gemini/activations.js:145
 msgid "should I bring a coat"
 msgstr ""
 
-#: src/ai/gemini/activations.js:113
+#: src/ai/gemini/activations.js:146
 msgid "what's the wind speed"
 msgstr ""
 
-#: src/ai/gemini/activations.js:114
+#: src/ai/gemini/activations.js:147
 msgid "is it stormy"
 msgstr ""
 
-#: src/ai/gemini/activations.js:115
+#: src/ai/gemini/activations.js:148
 msgid "is it drizzling"
 msgstr ""
 
-#: src/ai/gemini/activations.js:116
+#: src/ai/gemini/activations.js:149
 msgid "is there thunder"
 msgstr ""
 
-#: src/ai/gemini/activations.js:117
+#: src/ai/gemini/activations.js:150
 msgid "is it lightning"
 msgstr ""
 
-#: src/ai/gemini/activations.js:118
+#: src/ai/gemini/activations.js:151
 msgid "is it mild outside"
 msgstr ""
 
-#: src/ai/gemini/activations.js:119
+#: src/ai/gemini/activations.js:152
 msgid "what's the air pressure"
 msgstr ""
 
-#: src/ai/gemini/activations.js:120
+#: src/ai/gemini/activations.js:153
 msgid "is there a heatwave"
 msgstr ""
 
-#: src/ai/gemini/activations.js:121
+#: src/ai/gemini/activations.js:154
 msgid "is it chilly"
 msgstr ""
 
-#: src/ai/gemini/activations.js:122
+#: src/ai/gemini/activations.js:155
 #, fuzzy
 msgid "is it overcast"
 msgstr "ṕrevisão"
 
-#: src/ai/gemini/activations.js:123
+#: src/ai/gemini/activations.js:156
 #, fuzzy
 msgid "is the weather clear"
 msgstr "o tempo está"
 
-#: src/ai/gemini/activations.js:124
+#: src/ai/gemini/activations.js:157
 msgid "will it be hot this weekend"
 msgstr ""
 
-#: src/ai/gemini/activations.js:125
+#: src/ai/gemini/activations.js:158
 msgid "is it safe to go outside"
 msgstr ""
 
-#: src/ai/gemini/activations.js:126
+#: src/ai/gemini/activations.js:159
 msgid "is there a hurricane warning"
 msgstr ""
 
-#: src/ai/gemini/activations.js:127
+#: src/ai/gemini/activations.js:160
 msgid "what's the UV index today"
 msgstr ""
 
-#: src/ai/gemini/activations.js:128
+#: src/ai/gemini/activations.js:161
 msgid "what time will it rain"
 msgstr ""
 
-#: src/ai/gemini/activations.js:129
+#: src/ai/gemini/activations.js:162
 #, fuzzy
 msgid "is it good weather for a walk"
 msgstr "exiba informações sobre tempo para hoje"
 
-#: src/ai/gemini/activations.js:130
+#: src/ai/gemini/activations.js:163
 msgid "is it safe to drive in this weather"
 msgstr ""
 
-#: src/ai/gemini/activations.js:131
+#: src/ai/gemini/activations.js:164
 msgid "will it be sunny later"
 msgstr ""
 
-#: src/ai/gemini/activations.js:132
+#: src/ai/gemini/activations.js:165
 msgid "how long will it rain"
 msgstr ""
 
-#: src/ai/gemini/activations.js:133
+#: src/ai/gemini/activations.js:166
 msgid "are there any weather alerts"
 msgstr ""
 
-#: src/ai/gemini/activations.js:134
+#: src/ai/gemini/activations.js:167
 msgid "will it clear up later"
 msgstr ""
 
-#: src/ai/gemini/activations.js:135
+#: src/ai/gemini/activations.js:168
 msgid "should I expect hail"
 msgstr ""
 
-#: src/ai/gemini/activations.js:136
+#: src/ai/gemini/activations.js:169
 msgid "will there be a frost tonight"
 msgstr ""
 
-#: src/ai/gemini/activations.js:137
+#: src/ai/gemini/activations.js:170
 msgid "is there a cold front coming"
 msgstr ""
 
-#: src/ai/gemini/activations.js:138
+#: src/ai/gemini/activations.js:171
 msgid "what's the dew point"
 msgstr ""
 
-#: src/ai/gemini/activations.js:139
+#: src/ai/gemini/activations.js:172
 msgid "how's the visibility today"
 msgstr ""
 
@@ -968,6 +1103,48 @@ msgstr "Salvar"
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
 
+#~ msgid "open"
+#~ msgstr "abrir"
+
+#~ msgid "open_lang_var1"
+#~ msgstr "abra"
+
+#~ msgid "open_lang_var2"
+#~ msgstr "abre"
+
+#~ msgid "run"
+#~ msgstr "rodar"
+
+#~ msgid "run_lang_var1"
+#~ msgstr "rode"
+
+#~ msgid "run_lang_var2"
+#~ msgstr "roda"
+
+#~ msgid "execute"
+#~ msgstr "executar"
+
+#~ msgid "execute_lang_var1"
+#~ msgstr "execute"
+
+#~ msgid "execute_lang_var2"
+#~ msgstr "executa"
+
+#~ msgid "start"
+#~ msgstr "iniciar"
+
+#~ msgid "start_lang_var1"
+#~ msgstr "inicie"
+
+#~ msgid "start_lang_var2"
+#~ msgstr "inicia"
+
+#~ msgid "launch_lang_var1"
+#~ msgstr "lance"
+
+#~ msgid "launch_lang_var2"
+#~ msgstr "lança"
+
 #~ msgid "search"
 #~ msgstr "pesquisar"
 
@@ -1030,9 +1207,6 @@ msgstr "Suas preferências foram salvas"
 
 #~ msgid "browse_lang_var2"
 #~ msgstr "visualiza"
-
-#~ msgid "access"
-#~ msgstr "acessar"
 
 #~ msgid "access_lang_var1"
 #~ msgstr "acesse"
@@ -1326,9 +1500,6 @@ msgstr "Suas preferências foram salvas"
 #, fuzzy
 #~ msgid "To use when you want to browse the web"
 #~ msgstr "Para usar quando quiser ler a área de transferência"
-
-#~ msgid "To use when you want to open an application"
-#~ msgstr "Para usar quando quiser abrir um aplicativo"
 
 #~ msgid "computer"
 #~ msgstr "computador"
