@@ -229,7 +229,7 @@ export class GeminiFunctions {
         command = command?.toLowerCase();
         const commandLine = args.commandLine;
         const response = args.response;
-        let location = args.location || this.app.userSettings.CITY;
+        let location = args.location;
         const url = args.url;
 
         switch (command) {
@@ -392,6 +392,9 @@ export class GeminiFunctions {
                 this.app.chat.editResponse(response);
             }
             this.app.log('Getting weather from ' + location);
+            if (!location) {
+                location = 'userLocation';
+            }
             this.app.utils.getCurrentLocalWeather(location);
         } catch (error) {
             this.app.logError('Error getting weather:', error);
