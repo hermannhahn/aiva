@@ -101,21 +101,19 @@ export class FunctionsDeclarations {
 
         for (const word of words) {
             if (
-                this.app.gemini.functions.activations.readClipboard.includes(
+                this.app.gemini.function.activations.readClipboard.includes(
                     word,
                 )
             ) {
                 functionDeclarations.push(this.readClipboard);
             }
-            if (
-                this.app.gemini.functions.activations.browseWeb.includes(word)
-            ) {
+            if (this.app.gemini.function.activations.browseWeb.includes(word)) {
                 functionDeclarations.push(this.browseWeb);
             }
-            if (this.app.gemini.functions.activations.cmd.includes(word)) {
+            if (this.app.gemini.function.activations.cmd.includes(word)) {
                 functionDeclarations.push(this.cmd);
             }
-            if (this.app.gemini.functions.activations.weather.includes(word)) {
+            if (this.app.gemini.function.activations.weather.includes(word)) {
                 functionDeclarations.push(this.weather);
             }
         }
