@@ -422,6 +422,7 @@ export class Utils {
 
             if (location !== undefined) {
                 this.loc = location;
+                this.app.log(`Location: ${location}`); // debug
                 let coordURL = `https://www.mapquestapi.com/geocoding/v1/address?key=KEY&location=${location}`;
                 let _httpSessionCoord = new Soup.Session();
                 let messageCoord = Soup.Message.new('GET', coordURL);
@@ -437,10 +438,16 @@ export class Utils {
                             let decoder = new TextDecoder('utf-8');
                             let response = decoder.decode(bytes.get_data());
                             let res = JSON.parse(response);
-                            let w = res.results[0]?.locations[0]?.latLng;
+                            this.app.log(
+                                `First result: ${JSON.stringify(res)}}`,
+                            ); // debug
+                            this.lat =
+                                res.results[0]?.locations[0]?.latLng?.lat;
+                            this.lon =
+                                res.results[0]?.locations[0]?.latLng?.lng;
 
                             // curl
-                            let url = `https://api.open-meteo.com/v1/forecast?latitude=${w.lat}&longitude=${w.lng}&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,rain,showers,snowfall,cloud_cover`;
+                            let url = `https://api.open-meteo.com/v1/forecast?latitude=${this.lat}&longitude=${this.lon}&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,rain,showers,snowfall,cloud_cover`;
                             let _httpSession = new Soup.Session();
                             let message = Soup.Message.new('GET', url);
 
@@ -459,6 +466,9 @@ export class Utils {
                                             bytes.get_data(),
                                         );
                                         let res = JSON.parse(response);
+                                        this.app.log(
+                                            `Second result: ${JSON.stringify(res)}}`,
+                                        ); // debug
 
                                         function cloudCloverString() {
                                             switch (res.current.cloud_cover) {
