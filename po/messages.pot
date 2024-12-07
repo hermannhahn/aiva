@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-07 20:20-0300\n"
+"POT-Creation-Date: 2024-12-07 20:22-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,854 +41,962 @@ msgid "Sorry, I'm having trouble to listen you. Please try again."
 msgstr ""
 
 #: src/ai/gemini/activations.js:14
-msgid "read"
+msgid "read the copied text"
 msgstr ""
 
 #: src/ai/gemini/activations.js:15
-msgid "read_lang_var1"
+msgid "what's in the clipboard"
 msgstr ""
 
 #: src/ai/gemini/activations.js:16
-msgid "read_lang_var2"
+msgid "read the clipboard content"
+msgstr ""
+
+#: src/ai/gemini/activations.js:17
+msgid "read the text I copied"
+msgstr ""
+
+#: src/ai/gemini/activations.js:18
+msgid "what did I copy"
+msgstr ""
+
+#: src/ai/gemini/activations.js:19
+msgid "show me the copied text"
 msgstr ""
 
 #: src/ai/gemini/activations.js:20
-msgid "open the app"
+msgid "what's in my clipboard"
 msgstr ""
 
 #: src/ai/gemini/activations.js:21
-msgid "open the application"
+msgid "read what's copied"
 msgstr ""
 
 #: src/ai/gemini/activations.js:22
-msgid "launch the app"
+msgid "tell me the clipboard text"
 msgstr ""
 
 #: src/ai/gemini/activations.js:23
-msgid "launch the software"
+msgid "can you read the copied text"
 msgstr ""
 
 #: src/ai/gemini/activations.js:24
-msgid "start the app"
+msgid "could you show the clipboard content"
 msgstr ""
 
 #: src/ai/gemini/activations.js:25
-msgid "start the application"
+msgid "read the text from the clipboard"
 msgstr ""
 
 #: src/ai/gemini/activations.js:26
-msgid "run the app"
+msgid "display the copied text"
 msgstr ""
 
 #: src/ai/gemini/activations.js:27
-msgid "run the software"
+msgid "show the clipboard content"
 msgstr ""
 
 #: src/ai/gemini/activations.js:28
-msgid "open this program"
+msgid "can you access the clipboard"
 msgstr ""
 
 #: src/ai/gemini/activations.js:29
-msgid "launch this program"
+msgid "read what I just copied"
 msgstr ""
 
 #: src/ai/gemini/activations.js:30
-msgid "start the program"
+msgid "what text is on the clipboard"
 msgstr ""
 
 #: src/ai/gemini/activations.js:31
-msgid "can you open the app"
+msgid "tell me what I copied"
 msgstr ""
 
 #: src/ai/gemini/activations.js:32
-msgid "could you open the software"
+msgid "fetch the clipboard content"
 msgstr ""
 
 #: src/ai/gemini/activations.js:33
-msgid "bring up the app"
+msgid "read the copied content"
 msgstr ""
 
 #: src/ai/gemini/activations.js:34
-msgid "bring up the application"
+msgid "read the clipboard data"
 msgstr ""
 
 #: src/ai/gemini/activations.js:35
-msgid "fire up the app"
+msgid "show me what's on the clipboard"
 msgstr ""
 
 #: src/ai/gemini/activations.js:36
-msgid "fire up the program"
+msgid "can you display the copied text"
 msgstr ""
 
 #: src/ai/gemini/activations.js:37
-msgid "please open the software"
+msgid "read my copied text"
 msgstr ""
 
 #: src/ai/gemini/activations.js:38
-msgid "please start the app"
+msgid "what is the copied text"
 msgstr ""
 
 #: src/ai/gemini/activations.js:39
-msgid "run this application"
+msgid "can you fetch the clipboard text"
 msgstr ""
 
 #: src/ai/gemini/activations.js:40
-msgid "execute the program"
+msgid "read the clipboard for me"
 msgstr ""
 
 #: src/ai/gemini/activations.js:41
-msgid "load the app"
+msgid "what text is stored in the clipboard"
 msgstr ""
 
 #: src/ai/gemini/activations.js:42
-msgid "load the software"
+msgid "show the latest copied text"
 msgstr ""
 
 #: src/ai/gemini/activations.js:43
-msgid "boot up the app"
-msgstr ""
-
-#: src/ai/gemini/activations.js:44
-msgid "can you run this program"
-msgstr ""
-
-#: src/ai/gemini/activations.js:45
-msgid "could you launch this software"
-msgstr ""
-
-#: src/ai/gemini/activations.js:46
-msgid "open the snap"
+msgid "read the most recent clipboard content"
 msgstr ""
 
 #: src/ai/gemini/activations.js:47
-msgid "launch the snap"
+msgid "open the app"
 msgstr ""
 
 #: src/ai/gemini/activations.js:48
-msgid "start the snap"
+msgid "open the application"
 msgstr ""
 
 #: src/ai/gemini/activations.js:49
-msgid "run the snap"
+msgid "launch the app"
 msgstr ""
 
 #: src/ai/gemini/activations.js:50
-msgid "load the snap"
+msgid "launch the software"
 msgstr ""
 
 #: src/ai/gemini/activations.js:51
-msgid "open the flatpak"
+msgid "start the app"
 msgstr ""
 
 #: src/ai/gemini/activations.js:52
-msgid "launch the flatpak"
+msgid "start the application"
 msgstr ""
 
 #: src/ai/gemini/activations.js:53
-msgid "start the flatpak"
+msgid "run the app"
 msgstr ""
 
 #: src/ai/gemini/activations.js:54
-msgid "run the flatpak"
+msgid "run the software"
 msgstr ""
 
 #: src/ai/gemini/activations.js:55
-msgid "load the flatpak"
+msgid "open this program"
 msgstr ""
 
 #: src/ai/gemini/activations.js:56
-msgid "fire up the software"
+msgid "launch this program"
 msgstr ""
 
 #: src/ai/gemini/activations.js:57
-msgid "boot up this application"
+msgid "start the program"
 msgstr ""
 
 #: src/ai/gemini/activations.js:58
-msgid "pull up the app"
+msgid "can you open the app"
 msgstr ""
 
 #: src/ai/gemini/activations.js:59
-msgid "navigate to the app"
+msgid "could you open the software"
 msgstr ""
 
 #: src/ai/gemini/activations.js:60
-msgid "turn on the software"
+msgid "bring up the app"
 msgstr ""
 
 #: src/ai/gemini/activations.js:61
-msgid "access the app"
+msgid "bring up the application"
 msgstr ""
 
 #: src/ai/gemini/activations.js:62
-msgid "can you open this tool"
+msgid "fire up the app"
 msgstr ""
 
 #: src/ai/gemini/activations.js:63
-msgid "could you start this application"
+msgid "fire up the program"
 msgstr ""
 
 #: src/ai/gemini/activations.js:64
-msgid "execute this tool"
+msgid "please open the software"
 msgstr ""
 
 #: src/ai/gemini/activations.js:65
-msgid "please run this software"
+msgid "please start the app"
 msgstr ""
 
 #: src/ai/gemini/activations.js:66
-msgid "activate the app"
+msgid "run this application"
 msgstr ""
 
 #: src/ai/gemini/activations.js:67
-msgid "initialize the software"
+msgid "execute the program"
 msgstr ""
 
 #: src/ai/gemini/activations.js:68
-msgid "change the wallpaper"
+msgid "load the app"
 msgstr ""
 
 #: src/ai/gemini/activations.js:69
-msgid "set a new desktop background"
+msgid "load the software"
 msgstr ""
 
 #: src/ai/gemini/activations.js:70
-msgid "enable dark mode"
+msgid "boot up the app"
 msgstr ""
 
 #: src/ai/gemini/activations.js:71
-msgid "switch to light mode"
+msgid "can you run this program"
 msgstr ""
 
 #: src/ai/gemini/activations.js:72
-msgid "adjust the screen brightness"
+msgid "could you launch this software"
 msgstr ""
 
 #: src/ai/gemini/activations.js:73
-msgid "change the display resolution"
+msgid "open the snap"
 msgstr ""
 
 #: src/ai/gemini/activations.js:74
-msgid "enable fractional scaling"
+msgid "launch the snap"
 msgstr ""
 
 #: src/ai/gemini/activations.js:75
-msgid "customize the dock position"
+msgid "start the snap"
 msgstr ""
 
 #: src/ai/gemini/activations.js:76
-msgid "hide the dock"
+msgid "run the snap"
 msgstr ""
 
 #: src/ai/gemini/activations.js:77
-msgid "show the dock"
+msgid "load the snap"
 msgstr ""
 
 #: src/ai/gemini/activations.js:78
-msgid "change the dock size"
+msgid "open the flatpak"
 msgstr ""
 
 #: src/ai/gemini/activations.js:79
-msgid "enable auto-hide for the dock"
+msgid "launch the flatpak"
 msgstr ""
 
 #: src/ai/gemini/activations.js:80
-msgid "disable auto-hide for the dock"
+msgid "start the flatpak"
 msgstr ""
 
 #: src/ai/gemini/activations.js:81
-msgid "add an app to the favorites"
+msgid "run the flatpak"
 msgstr ""
 
 #: src/ai/gemini/activations.js:82
-msgid "remove an app from the favorites"
+msgid "load the flatpak"
 msgstr ""
 
 #: src/ai/gemini/activations.js:83
-msgid "customize the keyboard shortcuts"
+msgid "fire up the software"
 msgstr ""
 
 #: src/ai/gemini/activations.js:84
-msgid "change the font size"
+msgid "boot up this application"
 msgstr ""
 
 #: src/ai/gemini/activations.js:85
-msgid "enable animations"
+msgid "pull up the app"
 msgstr ""
 
 #: src/ai/gemini/activations.js:86
-msgid "disable animations"
+msgid "navigate to the app"
 msgstr ""
 
 #: src/ai/gemini/activations.js:87
-msgid "adjust the workspace settings"
+msgid "turn on the software"
 msgstr ""
 
 #: src/ai/gemini/activations.js:88
-msgid "change the number of workspaces"
+msgid "access the app"
 msgstr ""
 
 #: src/ai/gemini/activations.js:89
-msgid "rename a workspace"
+msgid "can you open this tool"
 msgstr ""
 
 #: src/ai/gemini/activations.js:90
-msgid "configure the touchpad settings"
+msgid "could you start this application"
 msgstr ""
 
 #: src/ai/gemini/activations.js:91
-msgid "enable tap-to-click"
+msgid "execute this tool"
 msgstr ""
 
 #: src/ai/gemini/activations.js:92
-msgid "disable tap-to-click"
+msgid "please run this software"
 msgstr ""
 
 #: src/ai/gemini/activations.js:93
-msgid "enable natural scrolling"
+msgid "activate the app"
 msgstr ""
 
 #: src/ai/gemini/activations.js:94
-msgid "disable natural scrolling"
+msgid "initialize the software"
 msgstr ""
 
 #: src/ai/gemini/activations.js:95
-msgid "change the default shell theme"
+msgid "change the wallpaper"
 msgstr ""
 
 #: src/ai/gemini/activations.js:96
-msgid "apply a new GTK theme"
+msgid "set a new desktop background"
 msgstr ""
 
 #: src/ai/gemini/activations.js:97
-msgid "change the icon theme"
+msgid "enable dark mode"
 msgstr ""
 
 #: src/ai/gemini/activations.js:98
-msgid "reset GNOME settings to default"
+msgid "switch to light mode"
 msgstr ""
 
 #: src/ai/gemini/activations.js:99
-msgid "turn on night light"
+msgid "adjust the screen brightness"
 msgstr ""
 
 #: src/ai/gemini/activations.js:100
-msgid "turn off night light"
+msgid "change the display resolution"
 msgstr ""
 
 #: src/ai/gemini/activations.js:101
-msgid "schedule night light"
+msgid "enable fractional scaling"
 msgstr ""
 
 #: src/ai/gemini/activations.js:102
-msgid "customize the power settings"
+msgid "customize the dock position"
 msgstr ""
 
 #: src/ai/gemini/activations.js:103
-msgid "set the screen to never lock"
+msgid "hide the dock"
 msgstr ""
 
 #: src/ai/gemini/activations.js:104
-msgid "change the lock screen background"
+msgid "show the dock"
 msgstr ""
 
 #: src/ai/gemini/activations.js:105
-msgid "enable notifications"
+msgid "change the dock size"
 msgstr ""
 
 #: src/ai/gemini/activations.js:106
-msgid "disable notifications"
+msgid "enable auto-hide for the dock"
 msgstr ""
 
 #: src/ai/gemini/activations.js:107
-msgid "install GNOME extensions"
+msgid "disable auto-hide for the dock"
 msgstr ""
 
 #: src/ai/gemini/activations.js:108
-msgid "remove a GNOME extension"
+msgid "add an app to the favorites"
 msgstr ""
 
 #: src/ai/gemini/activations.js:109
-msgid "enable a GNOME extension"
+msgid "remove an app from the favorites"
 msgstr ""
 
 #: src/ai/gemini/activations.js:110
-msgid "disable a GNOME extension"
+msgid "customize the keyboard shortcuts"
 msgstr ""
 
 #: src/ai/gemini/activations.js:111
-msgid "list all GNOME extensions"
+msgid "change the font size"
 msgstr ""
 
 #: src/ai/gemini/activations.js:112
-msgid "check the status of GNOME extensions"
+msgid "enable animations"
 msgstr ""
 
 #: src/ai/gemini/activations.js:113
-msgid "update the GNOME extensions"
+msgid "disable animations"
 msgstr ""
 
 #: src/ai/gemini/activations.js:114
-msgid "restart GNOME shell"
+msgid "adjust the workspace settings"
 msgstr ""
 
 #: src/ai/gemini/activations.js:115
-msgid "change the primary display"
+msgid "change the number of workspaces"
 msgstr ""
 
 #: src/ai/gemini/activations.js:116
-msgid "disable secondary monitor"
+msgid "rename a workspace"
 msgstr ""
 
 #: src/ai/gemini/activations.js:117
-msgid "enable secondary monitor"
+msgid "configure the touchpad settings"
 msgstr ""
 
 #: src/ai/gemini/activations.js:118
-msgid "mirror the displays"
+msgid "enable tap-to-click"
 msgstr ""
 
 #: src/ai/gemini/activations.js:119
-msgid "extend the displays"
+msgid "disable tap-to-click"
 msgstr ""
 
 #: src/ai/gemini/activations.js:120
-msgid "set the display refresh rate"
+msgid "enable natural scrolling"
 msgstr ""
 
 #: src/ai/gemini/activations.js:121
-msgid "adjust the sound volume"
+msgid "disable natural scrolling"
 msgstr ""
 
 #: src/ai/gemini/activations.js:122
-msgid "enable do not disturb mode"
+msgid "change the default shell theme"
 msgstr ""
 
 #: src/ai/gemini/activations.js:123
-msgid "disable do not disturb mode"
+msgid "apply a new GTK theme"
 msgstr ""
 
 #: src/ai/gemini/activations.js:124
-msgid "change the default browser"
+msgid "change the icon theme"
 msgstr ""
 
 #: src/ai/gemini/activations.js:125
-msgid "set the default terminal"
+msgid "reset GNOME settings to default"
 msgstr ""
 
 #: src/ai/gemini/activations.js:126
-msgid "enable accessibility features"
+msgid "turn on night light"
 msgstr ""
 
 #: src/ai/gemini/activations.js:127
-msgid "disable accessibility features"
+msgid "turn off night light"
 msgstr ""
 
 #: src/ai/gemini/activations.js:128
-msgid "set a new keyboard layout"
+msgid "schedule night light"
 msgstr ""
 
 #: src/ai/gemini/activations.js:129
-msgid "enable the on-screen keyboard"
+msgid "customize the power settings"
 msgstr ""
 
 #: src/ai/gemini/activations.js:130
-msgid "disable the on-screen keyboard"
+msgid "set the screen to never lock"
+msgstr ""
+
+#: src/ai/gemini/activations.js:131
+msgid "change the lock screen background"
+msgstr ""
+
+#: src/ai/gemini/activations.js:132
+msgid "enable notifications"
+msgstr ""
+
+#: src/ai/gemini/activations.js:133
+msgid "disable notifications"
 msgstr ""
 
 #: src/ai/gemini/activations.js:134
-msgid "open the website"
+msgid "install GNOME extensions"
 msgstr ""
 
 #: src/ai/gemini/activations.js:135
-msgid "open the page"
+msgid "remove a GNOME extension"
 msgstr ""
 
 #: src/ai/gemini/activations.js:136
-msgid "open the blog"
+msgid "enable a GNOME extension"
 msgstr ""
 
 #: src/ai/gemini/activations.js:137
-msgid "go to the website"
+msgid "disable a GNOME extension"
 msgstr ""
 
 #: src/ai/gemini/activations.js:138
-msgid "go to the page"
+msgid "list all GNOME extensions"
 msgstr ""
 
 #: src/ai/gemini/activations.js:139
-msgid "go to the blog"
+msgid "check the status of GNOME extensions"
 msgstr ""
 
 #: src/ai/gemini/activations.js:140
-msgid "navigate to the site"
+msgid "update the GNOME extensions"
 msgstr ""
 
 #: src/ai/gemini/activations.js:141
-msgid "navigate to the page"
+msgid "restart GNOME shell"
 msgstr ""
 
 #: src/ai/gemini/activations.js:142
-msgid "visit the website"
+msgid "change the primary display"
 msgstr ""
 
 #: src/ai/gemini/activations.js:143
-msgid "visit the page"
+msgid "disable secondary monitor"
 msgstr ""
 
 #: src/ai/gemini/activations.js:144
-msgid "open this link"
+msgid "enable secondary monitor"
 msgstr ""
 
 #: src/ai/gemini/activations.js:145
-msgid "go to this URL"
+msgid "mirror the displays"
 msgstr ""
 
 #: src/ai/gemini/activations.js:146
-msgid "open the URL"
+msgid "extend the displays"
 msgstr ""
 
 #: src/ai/gemini/activations.js:147
-msgid "check out this site"
+msgid "set the display refresh rate"
 msgstr ""
 
 #: src/ai/gemini/activations.js:148
-msgid "pull up the website"
+msgid "adjust the sound volume"
 msgstr ""
 
 #: src/ai/gemini/activations.js:149
-msgid "can you open the site"
+msgid "enable do not disturb mode"
 msgstr ""
 
 #: src/ai/gemini/activations.js:150
-msgid "could you open the page"
+msgid "disable do not disturb mode"
 msgstr ""
 
 #: src/ai/gemini/activations.js:151
-msgid "bring up the website"
+msgid "change the default browser"
 msgstr ""
 
 #: src/ai/gemini/activations.js:152
-msgid "take me to the site"
+msgid "set the default terminal"
 msgstr ""
 
 #: src/ai/gemini/activations.js:153
-msgid "take me to the page"
+msgid "enable accessibility features"
 msgstr ""
 
 #: src/ai/gemini/activations.js:154
-msgid "show me the website"
+msgid "disable accessibility features"
 msgstr ""
 
 #: src/ai/gemini/activations.js:155
-msgid "show me the page"
+msgid "set a new keyboard layout"
 msgstr ""
 
 #: src/ai/gemini/activations.js:156
-msgid "launch the site"
+msgid "enable the on-screen keyboard"
 msgstr ""
 
 #: src/ai/gemini/activations.js:157
-msgid "launch the page"
-msgstr ""
-
-#: src/ai/gemini/activations.js:158
-msgid "visit this link"
-msgstr ""
-
-#: src/ai/gemini/activations.js:159
-msgid "can you navigate to the URL"
-msgstr ""
-
-#: src/ai/gemini/activations.js:160
-msgid "please open this site"
+msgid "disable the on-screen keyboard"
 msgstr ""
 
 #: src/ai/gemini/activations.js:161
-msgid "please visit the page"
+msgid "open the website"
 msgstr ""
 
 #: src/ai/gemini/activations.js:162
-msgid "open this blog for me"
+msgid "open the page"
 msgstr ""
 
 #: src/ai/gemini/activations.js:163
-msgid "take me to this blog"
+msgid "open the blog"
 msgstr ""
 
 #: src/ai/gemini/activations.js:164
-msgid "show me the link"
+msgid "go to the website"
 msgstr ""
 
 #: src/ai/gemini/activations.js:165
-msgid "can you load this page"
+msgid "go to the page"
 msgstr ""
 
 #: src/ai/gemini/activations.js:166
-msgid "go to this link"
+msgid "go to the blog"
 msgstr ""
 
 #: src/ai/gemini/activations.js:167
-msgid "open a new tab with this site"
+msgid "navigate to the site"
 msgstr ""
 
 #: src/ai/gemini/activations.js:168
-msgid "navigate to this link"
+msgid "navigate to the page"
 msgstr ""
 
 #: src/ai/gemini/activations.js:169
-msgid "find this website for me"
+msgid "visit the website"
 msgstr ""
 
 #: src/ai/gemini/activations.js:170
-msgid "bring up the blog"
+msgid "visit the page"
 msgstr ""
 
 #: src/ai/gemini/activations.js:171
-msgid "open a tab for this page"
+msgid "open this link"
 msgstr ""
 
 #: src/ai/gemini/activations.js:172
-msgid "could you visit this link"
+msgid "go to this URL"
 msgstr ""
 
 #: src/ai/gemini/activations.js:173
-msgid "click this link for me"
+msgid "open the URL"
 msgstr ""
 
 #: src/ai/gemini/activations.js:174
-msgid "take me to this URL"
+msgid "check out this site"
 msgstr ""
 
 #: src/ai/gemini/activations.js:175
-msgid "browse to the website"
+msgid "pull up the website"
 msgstr ""
 
 #: src/ai/gemini/activations.js:176
-msgid "open this webpage"
+msgid "can you open the site"
 msgstr ""
 
 #: src/ai/gemini/activations.js:177
-msgid "find this page online"
+msgid "could you open the page"
 msgstr ""
 
 #: src/ai/gemini/activations.js:178
-msgid "show me this site"
+msgid "bring up the website"
+msgstr ""
+
+#: src/ai/gemini/activations.js:179
+msgid "take me to the site"
+msgstr ""
+
+#: src/ai/gemini/activations.js:180
+msgid "take me to the page"
+msgstr ""
+
+#: src/ai/gemini/activations.js:181
+msgid "show me the website"
 msgstr ""
 
 #: src/ai/gemini/activations.js:182
-msgid "how is the weather"
+msgid "show me the page"
 msgstr ""
 
 #: src/ai/gemini/activations.js:183
-msgid "what is the temperature"
+msgid "launch the site"
 msgstr ""
 
 #: src/ai/gemini/activations.js:184
-msgid "what's the weather like"
+msgid "launch the page"
 msgstr ""
 
 #: src/ai/gemini/activations.js:185
-msgid "is it raining"
+msgid "visit this link"
 msgstr ""
 
 #: src/ai/gemini/activations.js:186
-msgid "is it sunny"
+msgid "can you navigate to the URL"
 msgstr ""
 
 #: src/ai/gemini/activations.js:187
-msgid "is it snowing"
+msgid "please open this site"
 msgstr ""
 
 #: src/ai/gemini/activations.js:188
-msgid "is it windy"
+msgid "please visit the page"
 msgstr ""
 
 #: src/ai/gemini/activations.js:189
-msgid "what's the forecast"
+msgid "open this blog for me"
 msgstr ""
 
 #: src/ai/gemini/activations.js:190
-msgid "what's the weather forecast"
+msgid "take me to this blog"
 msgstr ""
 
 #: src/ai/gemini/activations.js:191
-msgid "how hot is it outside"
+msgid "show me the link"
 msgstr ""
 
 #: src/ai/gemini/activations.js:192
-msgid "how cold is it outside"
+msgid "can you load this page"
 msgstr ""
 
 #: src/ai/gemini/activations.js:193
-msgid "is it cloudy"
+msgid "go to this link"
 msgstr ""
 
 #: src/ai/gemini/activations.js:194
-msgid "is there a storm coming"
+msgid "open a new tab with this site"
 msgstr ""
 
 #: src/ai/gemini/activations.js:195
-msgid "what's the humidity level"
+msgid "navigate to this link"
 msgstr ""
 
 #: src/ai/gemini/activations.js:196
-msgid "is it going to rain today"
+msgid "find this website for me"
 msgstr ""
 
 #: src/ai/gemini/activations.js:197
-msgid "will it snow tomorrow"
+msgid "bring up the blog"
 msgstr ""
 
 #: src/ai/gemini/activations.js:198
-msgid "what's the weather like this week"
+msgid "open a tab for this page"
 msgstr ""
 
 #: src/ai/gemini/activations.js:199
-msgid "do I need an umbrella"
+msgid "could you visit this link"
 msgstr ""
 
 #: src/ai/gemini/activations.js:200
-msgid "do I need a jacket"
+msgid "click this link for me"
 msgstr ""
 
 #: src/ai/gemini/activations.js:201
-msgid "how warm is it outside"
+msgid "take me to this URL"
 msgstr ""
 
 #: src/ai/gemini/activations.js:202
-msgid "is there a chance of rain"
+msgid "browse to the website"
 msgstr ""
 
 #: src/ai/gemini/activations.js:203
-msgid "is it foggy"
+msgid "open this webpage"
 msgstr ""
 
 #: src/ai/gemini/activations.js:204
-msgid "is it freezing"
+msgid "find this page online"
 msgstr ""
 
 #: src/ai/gemini/activations.js:205
-msgid "what's the high for today"
-msgstr ""
-
-#: src/ai/gemini/activations.js:206
-msgid "what's the low for today"
-msgstr ""
-
-#: src/ai/gemini/activations.js:207
-msgid "how's the weather right now"
-msgstr ""
-
-#: src/ai/gemini/activations.js:208
-msgid "should I bring a coat"
+msgid "show me this site"
 msgstr ""
 
 #: src/ai/gemini/activations.js:209
-msgid "what's the wind speed"
+msgid "how is the weather"
 msgstr ""
 
 #: src/ai/gemini/activations.js:210
-msgid "is it stormy"
+msgid "what is the temperature"
 msgstr ""
 
 #: src/ai/gemini/activations.js:211
-msgid "is it drizzling"
+msgid "what's the weather like"
 msgstr ""
 
 #: src/ai/gemini/activations.js:212
-msgid "is there thunder"
+msgid "is it raining"
 msgstr ""
 
 #: src/ai/gemini/activations.js:213
-msgid "is it lightning"
+msgid "is it sunny"
 msgstr ""
 
 #: src/ai/gemini/activations.js:214
-msgid "is it mild outside"
+msgid "is it snowing"
 msgstr ""
 
 #: src/ai/gemini/activations.js:215
-msgid "what's the air pressure"
+msgid "is it windy"
 msgstr ""
 
 #: src/ai/gemini/activations.js:216
-msgid "is there a heatwave"
+msgid "what's the forecast"
 msgstr ""
 
 #: src/ai/gemini/activations.js:217
-msgid "is it chilly"
+msgid "what's the weather forecast"
 msgstr ""
 
 #: src/ai/gemini/activations.js:218
-msgid "is it overcast"
+msgid "how hot is it outside"
 msgstr ""
 
 #: src/ai/gemini/activations.js:219
-msgid "is the weather clear"
+msgid "how cold is it outside"
 msgstr ""
 
 #: src/ai/gemini/activations.js:220
-msgid "will it be hot this weekend"
+msgid "is it cloudy"
 msgstr ""
 
 #: src/ai/gemini/activations.js:221
-msgid "is it safe to go outside"
+msgid "is there a storm coming"
 msgstr ""
 
 #: src/ai/gemini/activations.js:222
-msgid "is there a hurricane warning"
+msgid "what's the humidity level"
 msgstr ""
 
 #: src/ai/gemini/activations.js:223
-msgid "what's the UV index today"
+msgid "is it going to rain today"
 msgstr ""
 
 #: src/ai/gemini/activations.js:224
-msgid "what time will it rain"
+msgid "will it snow tomorrow"
 msgstr ""
 
 #: src/ai/gemini/activations.js:225
-msgid "is it good weather for a walk"
+msgid "what's the weather like this week"
 msgstr ""
 
 #: src/ai/gemini/activations.js:226
-msgid "is it safe to drive in this weather"
+msgid "do I need an umbrella"
 msgstr ""
 
 #: src/ai/gemini/activations.js:227
-msgid "will it be sunny later"
+msgid "do I need a jacket"
 msgstr ""
 
 #: src/ai/gemini/activations.js:228
-msgid "how long will it rain"
+msgid "how warm is it outside"
 msgstr ""
 
 #: src/ai/gemini/activations.js:229
-msgid "are there any weather alerts"
+msgid "is there a chance of rain"
 msgstr ""
 
 #: src/ai/gemini/activations.js:230
-msgid "will it clear up later"
+msgid "is it foggy"
 msgstr ""
 
 #: src/ai/gemini/activations.js:231
-msgid "should I expect hail"
+msgid "is it freezing"
 msgstr ""
 
 #: src/ai/gemini/activations.js:232
-msgid "will there be a frost tonight"
+msgid "what's the high for today"
 msgstr ""
 
 #: src/ai/gemini/activations.js:233
-msgid "is there a cold front coming"
+msgid "what's the low for today"
 msgstr ""
 
 #: src/ai/gemini/activations.js:234
-msgid "what's the dew point"
+msgid "how's the weather right now"
 msgstr ""
 
 #: src/ai/gemini/activations.js:235
+msgid "should I bring a coat"
+msgstr ""
+
+#: src/ai/gemini/activations.js:236
+msgid "what's the wind speed"
+msgstr ""
+
+#: src/ai/gemini/activations.js:237
+msgid "is it stormy"
+msgstr ""
+
+#: src/ai/gemini/activations.js:238
+msgid "is it drizzling"
+msgstr ""
+
+#: src/ai/gemini/activations.js:239
+msgid "is there thunder"
+msgstr ""
+
+#: src/ai/gemini/activations.js:240
+msgid "is it lightning"
+msgstr ""
+
+#: src/ai/gemini/activations.js:241
+msgid "is it mild outside"
+msgstr ""
+
+#: src/ai/gemini/activations.js:242
+msgid "what's the air pressure"
+msgstr ""
+
+#: src/ai/gemini/activations.js:243
+msgid "is there a heatwave"
+msgstr ""
+
+#: src/ai/gemini/activations.js:244
+msgid "is it chilly"
+msgstr ""
+
+#: src/ai/gemini/activations.js:245
+msgid "is it overcast"
+msgstr ""
+
+#: src/ai/gemini/activations.js:246
+msgid "is the weather clear"
+msgstr ""
+
+#: src/ai/gemini/activations.js:247
+msgid "will it be hot this weekend"
+msgstr ""
+
+#: src/ai/gemini/activations.js:248
+msgid "is it safe to go outside"
+msgstr ""
+
+#: src/ai/gemini/activations.js:249
+msgid "is there a hurricane warning"
+msgstr ""
+
+#: src/ai/gemini/activations.js:250
+msgid "what's the UV index today"
+msgstr ""
+
+#: src/ai/gemini/activations.js:251
+msgid "what time will it rain"
+msgstr ""
+
+#: src/ai/gemini/activations.js:252
+msgid "is it good weather for a walk"
+msgstr ""
+
+#: src/ai/gemini/activations.js:253
+msgid "is it safe to drive in this weather"
+msgstr ""
+
+#: src/ai/gemini/activations.js:254
+msgid "will it be sunny later"
+msgstr ""
+
+#: src/ai/gemini/activations.js:255
+msgid "how long will it rain"
+msgstr ""
+
+#: src/ai/gemini/activations.js:256
+msgid "are there any weather alerts"
+msgstr ""
+
+#: src/ai/gemini/activations.js:257
+msgid "will it clear up later"
+msgstr ""
+
+#: src/ai/gemini/activations.js:258
+msgid "should I expect hail"
+msgstr ""
+
+#: src/ai/gemini/activations.js:259
+msgid "will there be a frost tonight"
+msgstr ""
+
+#: src/ai/gemini/activations.js:260
+msgid "is there a cold front coming"
+msgstr ""
+
+#: src/ai/gemini/activations.js:261
+msgid "what's the dew point"
+msgstr ""
+
+#: src/ai/gemini/activations.js:262
 msgid "how's the visibility today"
 msgstr ""
 
