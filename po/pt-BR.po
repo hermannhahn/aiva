@@ -741,7 +741,7 @@ msgstr "temperatura desconhecida"
 #: src/utils/utils.js:392
 #, fuzzy
 msgid ", and is raining"
-msgstr " e chovendo"
+msgstr ", e chovendo"
 
 #: src/utils/utils.js:395
 #, fuzzy
