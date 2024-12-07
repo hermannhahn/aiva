@@ -120,18 +120,16 @@ export class Utils {
     /**
      * @description add to chat news from google
      * @param {string} topic
+     * @param {string} [lang='en-US']
      */
-    async readNews(topic = undefined) {
+    async readNews(topic = undefined, lang = 'en-US', callback) {
         try {
             let url = '';
-            const lang = this.app.userSettings.AZURE_SPEECH_LANGUAGE;
             const countryLang = lang.split('-')[1];
             if (topic !== undefined) {
                 url = `https://news.google.com/rss/search?q=${topic}&hl=${lang}&gl=${countryLang}&ceid=${countryLang}`;
-                this.app.chat.editResponse(_('Of course, searching...'));
             } else {
                 url = `https://news.google.com/rss?hl=${lang}&gl=${countryLang}&ceid=${countryLang}`;
-                this.app.chat.editResponse(_('Sure, searching...'));
             }
             const fetchNews = await this.fetchRSS(url);
             const stringNews = JSON.stringify(fetchNews, null, 2);
@@ -142,14 +140,10 @@ export class Utils {
                 .replace(/\]/g, '');
 
             const news = this.swapNewspaperAndNews(preFormattedNews);
-            this.app.chat.editResponse(
-                `${_('Here are the main news')}:\n\n` + news,
-            );
+            callback(`${_('Here are the main news')}:\n\n` + news);
         } catch (error) {
-            this.log(`Error fetching news: ${error}`);
-            this.app.chat.editResponse(
-                _("Sorry, I'm having connection trouble. Please try again."),
-            );
+            callback(_('Error fetching news'));
+            throw new Error(`Error fetching news: ${error}`);
         }
     }
 

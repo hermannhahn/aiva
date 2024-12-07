@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-07 16:52-0300\n"
+"POT-Creation-Date: 2024-12-07 17:02-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language es-ES\n"
@@ -26,7 +26,7 @@ msgstr ""
 
 #: src/ai/azure.js:68 src/ai/azure.js:81 src/ai/azure.js:123
 #: src/ai/azure.js:132 src/ai/gemini.js:117 src/ai/gemini.js:148
-#: src/ai/gemini.js:225 src/ai/gemini.js:256 src/utils/utils.js:151
+#: src/ai/gemini.js:225 src/ai/gemini.js:256
 msgid "Sorry, I'm having connection trouble. Please try again."
 msgstr ""
 
@@ -415,7 +415,7 @@ msgstr "Código copiado al portapapeles"
 msgid "dry_lang_var2"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:110 src/utils/utils.js:369
+#: src/ai/gemini/activations.js:110 src/utils/utils.js:363
 msgid "cold"
 msgstr ""
 
@@ -429,7 +429,7 @@ msgstr "Código copiado al portapapeles"
 msgid "cold_lang_var2"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:113 src/utils/utils.js:384
+#: src/ai/gemini/activations.js:113 src/utils/utils.js:378
 msgid "hot"
 msgstr ""
 
@@ -443,7 +443,7 @@ msgstr "Código copiado al portapapeles"
 msgid "hot_lang_var2"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:116 src/utils/utils.js:381
+#: src/ai/gemini/activations.js:116 src/utils/utils.js:375
 msgid "warm"
 msgstr ""
 
@@ -452,7 +452,7 @@ msgstr ""
 msgid "warm_lang_var1"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:118 src/utils/utils.js:375
+#: src/ai/gemini/activations.js:118 src/utils/utils.js:369
 msgid "mild"
 msgstr ""
 
@@ -745,48 +745,45 @@ msgstr ""
 msgid "Give me a moment to sort this out..."
 msgstr ""
 
-#: src/utils/utils.js:131
-msgid "Of course, searching..."
-msgstr ""
-
-#: src/utils/utils.js:134
-msgid "Sure, searching..."
-msgstr ""
-
-#: src/utils/utils.js:146
+#: src/utils/utils.js:143
 msgid "Here are the main news"
 msgstr ""
 
-#: src/utils/utils.js:258
+#: src/utils/utils.js:145
+#, fuzzy
+msgid "Error fetching news"
+msgstr "Código copiado al portapapeles"
+
+#: src/utils/utils.js:252
 msgid "Look at example below:"
 msgstr ""
 
-#: src/utils/utils.js:359
+#: src/utils/utils.js:353
 msgid "night"
 msgstr ""
 
-#: src/utils/utils.js:361
+#: src/utils/utils.js:355
 msgid "day"
 msgstr ""
 
-#: src/utils/utils.js:363
+#: src/utils/utils.js:357
 msgid "unknown"
 msgstr ""
 
-#: src/utils/utils.js:386
+#: src/utils/utils.js:380
 #, fuzzy
 msgid "unknown temperature"
 msgstr "Código copiado al portapapeles"
 
-#: src/utils/utils.js:392
+#: src/utils/utils.js:386
 msgid " and is raining"
 msgstr ""
 
-#: src/utils/utils.js:395
+#: src/utils/utils.js:389
 msgid " and is snowing"
 msgstr ""
 
-#: src/utils/utils.js:398
+#: src/utils/utils.js:392
 msgid " and is sunny"
 msgstr ""
 
