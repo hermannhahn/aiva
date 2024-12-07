@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-07 19:47-0300\n"
+"POT-Creation-Date: 2024-12-07 19:50-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -377,7 +377,7 @@ msgstr "palha"
 msgid "dry_lang_var2"
 msgstr "deserto"
 
-#: src/ai/gemini/activations.js:110 src/utils/utils.js:365
+#: src/ai/gemini/activations.js:110
 msgid "cold"
 msgstr "frio"
 
@@ -389,7 +389,7 @@ msgstr "gelado"
 msgid "cold_lang_var2"
 msgstr "gelando"
 
-#: src/ai/gemini/activations.js:113 src/utils/utils.js:380
+#: src/ai/gemini/activations.js:113
 msgid "hot"
 msgstr "quente"
 
@@ -401,7 +401,7 @@ msgstr "pegando fogo"
 msgid "hot_lang_var2"
 msgstr "calorento"
 
-#: src/ai/gemini/activations.js:116 src/utils/utils.js:377
+#: src/ai/gemini/activations.js:116
 msgid "warm"
 msgstr "calor"
 
@@ -409,7 +409,7 @@ msgstr "calor"
 msgid "warm_lang_var1"
 msgstr "sufocante"
 
-#: src/ai/gemini/activations.js:118 src/utils/utils.js:371
+#: src/ai/gemini/activations.js:118
 msgid "mild"
 msgstr "agradável"
 
@@ -538,8 +538,8 @@ msgid ""
 "Show the weather for today. Use only if user wants to know weather "
 "information."
 msgstr ""
-"Exibe informações sobre o clima. Use apenas se o usuário quiser saber "
-"sobre o clima."
+"Exibe informações sobre o clima. Use apenas se o usuário quiser saber sobre "
+"o clima."
 
 #: src/ai/gemini/declarations.js:85
 #, fuzzy
@@ -728,6 +728,25 @@ msgstr "dia"
 #: src/utils/utils.js:359
 msgid "unknown"
 msgstr "desconhecida"
+
+#: src/utils/utils.js:365
+#, fuzzy
+msgid "is cold"
+msgstr "frio"
+
+#: src/utils/utils.js:371
+#, fuzzy
+msgid "is mild"
+msgstr "agradável"
+
+#: src/utils/utils.js:377
+#, fuzzy
+msgid "is warm"
+msgstr "calor"
+
+#: src/utils/utils.js:380
+msgid "is hot"
+msgstr ""
 
 #: src/utils/utils.js:382
 msgid "unknown temperature"

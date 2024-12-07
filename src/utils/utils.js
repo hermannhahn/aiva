@@ -362,22 +362,22 @@ export class Utils {
 
     sensationString(res) {
         if (res.current.apparent_temperature < 10) {
-            return _('cold');
+            return _('is cold');
         }
         if (
             res.current.apparent_temperature >= 10 &&
             res.current.apparent_temperature < 25
         ) {
-            return _('mild');
+            return _('is mild');
         }
         if (
             res.current.apparent_temperature >= 25 &&
             res.current.apparent_temperature < 35
         ) {
-            return _('warm');
+            return _('is warm');
         }
         if (res.current.apparent_temperature >= 35) {
-            return _('hot');
+            return _('is hot');
         }
         return _('unknown temperature');
     }

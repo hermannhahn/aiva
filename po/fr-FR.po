@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-07 19:47-0300\n"
+"POT-Creation-Date: 2024-12-07 19:50-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language fr-FR\n"
@@ -415,7 +415,7 @@ msgstr "Code copié dans le presse-papier"
 msgid "dry_lang_var2"
 msgstr "Code copié dans le presse-papier"
 
-#: src/ai/gemini/activations.js:110 src/utils/utils.js:365
+#: src/ai/gemini/activations.js:110
 msgid "cold"
 msgstr ""
 
@@ -429,7 +429,7 @@ msgstr "Code copié dans le presse-papier"
 msgid "cold_lang_var2"
 msgstr "Code copié dans le presse-papier"
 
-#: src/ai/gemini/activations.js:113 src/utils/utils.js:380
+#: src/ai/gemini/activations.js:113
 msgid "hot"
 msgstr ""
 
@@ -443,7 +443,7 @@ msgstr "Code copié dans le presse-papier"
 msgid "hot_lang_var2"
 msgstr "Code copié dans le presse-papier"
 
-#: src/ai/gemini/activations.js:116 src/utils/utils.js:377
+#: src/ai/gemini/activations.js:116
 msgid "warm"
 msgstr ""
 
@@ -452,7 +452,7 @@ msgstr ""
 msgid "warm_lang_var1"
 msgstr "Code copié dans le presse-papier"
 
-#: src/ai/gemini/activations.js:118 src/utils/utils.js:371
+#: src/ai/gemini/activations.js:118
 msgid "mild"
 msgstr ""
 
@@ -769,6 +769,22 @@ msgstr ""
 
 #: src/utils/utils.js:359
 msgid "unknown"
+msgstr ""
+
+#: src/utils/utils.js:365
+msgid "is cold"
+msgstr ""
+
+#: src/utils/utils.js:371
+msgid "is mild"
+msgstr ""
+
+#: src/utils/utils.js:377
+msgid "is warm"
+msgstr ""
+
+#: src/utils/utils.js:380
+msgid "is hot"
 msgstr ""
 
 #: src/utils/utils.js:382
