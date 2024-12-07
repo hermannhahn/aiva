@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-06 21:12-0300\n"
+"POT-Creation-Date: 2024-12-06 23:28-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language de-DE\n"
@@ -540,41 +540,41 @@ msgstr "Code kopiert in die Zwischenablage"
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr ""
 
-#: src/ai/gemini_functions.js:291
+#: src/ai/gemini_functions.js:292
 msgid "End of text!"
 msgstr ""
 
-#: src/ai/gemini_functions.js:295
+#: src/ai/gemini_functions.js:296
 #, fuzzy
 msgid "Failed to get text from clipboard"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini_functions.js:311
+#: src/ai/gemini_functions.js:312
 msgid "Please, install"
 msgstr ""
 
-#: src/ai/gemini_functions.js:315
+#: src/ai/gemini_functions.js:316
 msgid "first"
 msgstr ""
 
-#: src/ai/gemini_functions.js:332 src/ai/gemini_functions.js:385
+#: src/ai/gemini_functions.js:333 src/ai/gemini_functions.js:386
 #, fuzzy
 msgid "Error opening site"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini_functions.js:376
+#: src/ai/gemini_functions.js:377
 msgid "You don't have any browser installed."
 msgstr ""
 
-#: src/ai/gemini_functions.js:378
+#: src/ai/gemini_functions.js:379
 msgid "Please, install a browser and try again."
 msgstr ""
 
-#: src/ai/gemini_functions.js:380
+#: src/ai/gemini_functions.js:381
 msgid "Opening App Store..."
 msgstr ""
 
-#: src/ai/gemini_functions.js:401
+#: src/ai/gemini_functions.js:402
 #, fuzzy
 msgid "Error getting weather"
 msgstr "Code kopiert in die Zwischenablage"

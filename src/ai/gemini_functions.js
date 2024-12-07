@@ -255,6 +255,7 @@ export class GeminiFunctions {
 
     declarations(text) {
         let functionDeclarations = [];
+        text = text.replace(/[.,!?;:"]/g, '');
         const firstWords = text.toLowerCase().split(' ').slice(0, 5);
         const allText = text.toLowerCase().split(' ');
 
