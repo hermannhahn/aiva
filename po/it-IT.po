@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-07 00:39-0300\n"
+"POT-Creation-Date: 2024-12-07 01:38-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language it-IT\n"
@@ -613,6 +613,42 @@ msgstr ""
 
 #: src/ai/gemini.js:307
 msgid "Possible dangerous content in the question or response."
+msgstr ""
+
+#: src/ai/gemini.js:378
+msgid "1. You are a friendly and helpful voice assistant.)"
+msgstr ""
+
+#: src/ai/gemini.js:382
+msgid "2. Your name is AIVA. Use your name whenever prompted."
+msgstr ""
+
+#: src/ai/gemini.js:386
+msgid "3. You can use the declared functions to assist in your responses"
+msgstr ""
+
+#: src/ai/gemini.js:390
+msgid "execute commands, perform tasks, create, edit, and locate files"
+msgstr ""
+
+#: src/ai/gemini.js:394
+msgid "and do everything possible through terminal commands"
+msgstr ""
+
+#: src/ai/gemini.js:398
+msgid "to fulfill the user's requests. If this is not possible"
+msgstr ""
+
+#: src/ai/gemini.js:401
+msgid "I teach the user how to achieve the goal."
+msgstr ""
+
+#: src/ai/gemini.js:404
+msgid "3. Make sure your responses are short and concise"
+msgstr ""
+
+#: src/ai/gemini.js:408
+msgid "unless the user requests a more thorough approach."
 msgstr ""
 
 #: src/utils/phrases.js:6

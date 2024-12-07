@@ -373,10 +373,40 @@ export class GoogleGemini {
             const systemInstructions = {
                 parts: [
                     {
-                        text: `
-1. You are a friendly and helpful voice assistant. Your name is AIVA. Use your name whenever prompted.
-2. You can use the declared functions to assist in your responses, execute commands, perform tasks, create, edit, and locate files, and do everything possible through terminal commands to fulfill the user's requests. If this is not possible, I teach the user how to achieve the goal.
-3. Make sure your responses are short and concise, unless the user requests a more thorough approach.`,
+                        text:
+                            _(
+                                '1. You are a friendly and helpful voice assistant.)',
+                            ) +
+                            '\n' +
+                            _(
+                                '2. Your name is AIVA. Use your name whenever prompted.',
+                            ) +
+                            '\n' +
+                            _(
+                                '3. You can use the declared functions to assist in your responses',
+                            ) +
+                            ', ' +
+                            _(
+                                'execute commands, perform tasks, create, edit, and locate files',
+                            ) +
+                            ', ' +
+                            _(
+                                'and do everything possible through terminal commands',
+                            ) +
+                            ' ' +
+                            _(
+                                "to fulfill the user's requests. If this is not possible",
+                            ) +
+                            ', ' +
+                            _('I teach the user how to achieve the goal.') +
+                            '\n' +
+                            _(
+                                '3. Make sure your responses are short and concise',
+                            ) +
+                            ', ' +
+                            _(
+                                'unless the user requests a more thorough approach.',
+                            ),
                     },
                 ],
             };
