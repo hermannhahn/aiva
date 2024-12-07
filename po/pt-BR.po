@@ -708,9 +708,8 @@ msgid "Here are the main news"
 msgstr "Aqui estão as principais notícias"
 
 #: src/utils/utils.js:147
-#, fuzzy
 msgid "Error fetching news"
-msgstr "Falha ao abrir site"
+msgstr "Falha ao carregar as notícias"
 
 #: src/utils/utils.js:254
 msgid "Look at example below:"
@@ -733,17 +732,14 @@ msgid "unknown temperature"
 msgstr "temperatura desconhecida"
 
 #: src/utils/utils.js:388
-#, fuzzy
 msgid " and is raining"
-msgstr "e está chovendo"
+msgstr " e está chovendo"
 
 #: src/utils/utils.js:391
-#, fuzzy
 msgid " and is snowing"
 msgstr " e está nevando"
 
 #: src/utils/utils.js:394
-#, fuzzy
 msgid " and is sunny"
 msgstr " e está ensolarado"
 
