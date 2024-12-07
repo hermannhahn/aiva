@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-07 20:12-0300\n"
+"POT-Creation-Date: 2024-12-07 20:15-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language es-ES\n"
@@ -52,16 +52,16 @@ msgstr ""
 msgid "read_lang_var2"
 msgstr ""
 
-#: src/ai/gemini/activations.js:20 src/ai/gemini/activations.js:38
+#: src/ai/gemini/activations.js:20
 #, fuzzy
 msgid "open"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:21 src/ai/gemini/activations.js:39
+#: src/ai/gemini/activations.js:21
 msgid "open_lang_var1"
 msgstr ""
 
-#: src/ai/gemini/activations.js:22 src/ai/gemini/activations.js:40
+#: src/ai/gemini/activations.js:22
 msgid "open_lang_var2"
 msgstr ""
 
@@ -113,338 +113,452 @@ msgstr ""
 msgid "launch_lang_var2"
 msgstr ""
 
+#: src/ai/gemini/activations.js:38
+#, fuzzy
+msgid "open the website"
+msgstr "Código copiado al portapapeles"
+
+#: src/ai/gemini/activations.js:39
+#, fuzzy
+msgid "open the page"
+msgstr "Código copiado al portapapeles"
+
+#: src/ai/gemini/activations.js:40
+#, fuzzy
+msgid "open the blog"
+msgstr "Código copiado al portapapeles"
+
 #: src/ai/gemini/activations.js:41
-msgid "search"
-msgstr ""
+#, fuzzy
+msgid "go to the website"
+msgstr "Código copiado al portapapeles"
 
 #: src/ai/gemini/activations.js:42
-msgid "search_lang_var1"
-msgstr ""
+#, fuzzy
+msgid "go to the page"
+msgstr "Código copiado al portapapeles"
 
 #: src/ai/gemini/activations.js:43
-msgid "search_lang_var2"
-msgstr ""
+#, fuzzy
+msgid "go to the blog"
+msgstr "Código copiado al portapapeles"
 
 #: src/ai/gemini/activations.js:44
-msgid "find"
-msgstr ""
+#, fuzzy
+msgid "navigate to the site"
+msgstr "Código copiado al portapapeles"
 
 #: src/ai/gemini/activations.js:45
-msgid "find_lang_var1"
-msgstr ""
+#, fuzzy
+msgid "navigate to the page"
+msgstr "Código copiado al portapapeles"
 
 #: src/ai/gemini/activations.js:46
-msgid "find_lang_var2"
-msgstr ""
+#, fuzzy
+msgid "visit the website"
+msgstr "Código copiado al portapapeles"
 
 #: src/ai/gemini/activations.js:47
-msgid "seek"
-msgstr ""
+#, fuzzy
+msgid "visit the page"
+msgstr "Código copiado al portapapeles"
 
 #: src/ai/gemini/activations.js:48
-msgid "seek_lang_var1"
-msgstr ""
+#, fuzzy
+msgid "open this link"
+msgstr "Código copiado al portapapeles"
 
 #: src/ai/gemini/activations.js:49
-msgid "seek_lang_var2"
-msgstr ""
+#, fuzzy
+msgid "go to this URL"
+msgstr "Código copiado al portapapeles"
 
 #: src/ai/gemini/activations.js:50
-msgid "go"
-msgstr ""
+#, fuzzy
+msgid "open the URL"
+msgstr "Código copiado al portapapeles"
 
 #: src/ai/gemini/activations.js:51
-msgid "go_lang_var1"
-msgstr ""
+#, fuzzy
+msgid "check out this site"
+msgstr "Código copiado al portapapeles"
 
 #: src/ai/gemini/activations.js:52
-msgid "go_lang_var2"
-msgstr ""
+#, fuzzy
+msgid "pull up the website"
+msgstr "Código copiado al portapapeles"
 
 #: src/ai/gemini/activations.js:53
 #, fuzzy
-msgid "visit"
+msgid "can you open the site"
 msgstr "Código copiado al portapapeles"
 
 #: src/ai/gemini/activations.js:54
-msgid "visit_lang_var1"
+msgid "could you open the page"
 msgstr ""
 
 #: src/ai/gemini/activations.js:55
-msgid "visit_lang_var2"
-msgstr ""
+#, fuzzy
+msgid "bring up the website"
+msgstr "Código copiado al portapapeles"
 
 #: src/ai/gemini/activations.js:56
 #, fuzzy
-msgid "navigate"
+msgid "take me to the site"
 msgstr "Código copiado al portapapeles"
 
 #: src/ai/gemini/activations.js:57
 #, fuzzy
-msgid "navigate_lang_var1"
+msgid "take me to the page"
 msgstr "Código copiado al portapapeles"
 
 #: src/ai/gemini/activations.js:58
 #, fuzzy
-msgid "navigate_lang_var2"
+msgid "show me the website"
 msgstr "Código copiado al portapapeles"
 
 #: src/ai/gemini/activations.js:59
 #, fuzzy
-msgid "browse"
+msgid "show me the page"
 msgstr "Código copiado al portapapeles"
 
 #: src/ai/gemini/activations.js:60
 #, fuzzy
-msgid "browse_lang_var1"
+msgid "launch the site"
 msgstr "Código copiado al portapapeles"
 
 #: src/ai/gemini/activations.js:61
 #, fuzzy
-msgid "browse_lang_var2"
+msgid "launch the page"
 msgstr "Código copiado al portapapeles"
 
 #: src/ai/gemini/activations.js:62
 #, fuzzy
-msgid "access"
+msgid "visit this link"
 msgstr "Código copiado al portapapeles"
 
 #: src/ai/gemini/activations.js:63
 #, fuzzy
-msgid "access_lang_var1"
+msgid "can you navigate to the URL"
 msgstr "Código copiado al portapapeles"
 
 #: src/ai/gemini/activations.js:64
 #, fuzzy
-msgid "access_lang_var2"
+msgid "please open this site"
 msgstr "Código copiado al portapapeles"
+
+#: src/ai/gemini/activations.js:65
+#, fuzzy
+msgid "please visit the page"
+msgstr "Código copiado al portapapeles"
+
+#: src/ai/gemini/activations.js:66
+#, fuzzy
+msgid "open this blog for me"
+msgstr "Código copiado al portapapeles"
+
+#: src/ai/gemini/activations.js:67
+msgid "take me to this blog"
+msgstr ""
 
 #: src/ai/gemini/activations.js:68
 #, fuzzy
-msgid "how is the weather"
+msgid "show me the link"
 msgstr "Código copiado al portapapeles"
 
 #: src/ai/gemini/activations.js:69
 #, fuzzy
-msgid "what is the temperature"
+msgid "can you load this page"
 msgstr "Código copiado al portapapeles"
 
 #: src/ai/gemini/activations.js:70
 #, fuzzy
-msgid "what's the weather like"
+msgid "go to this link"
 msgstr "Código copiado al portapapeles"
 
 #: src/ai/gemini/activations.js:71
-msgid "is it raining"
-msgstr ""
+#, fuzzy
+msgid "open a new tab with this site"
+msgstr "Código copiado al portapapeles"
 
 #: src/ai/gemini/activations.js:72
-msgid "is it sunny"
-msgstr ""
+#, fuzzy
+msgid "navigate to this link"
+msgstr "Código copiado al portapapeles"
 
 #: src/ai/gemini/activations.js:73
-msgid "is it snowing"
-msgstr ""
+#, fuzzy
+msgid "find this website for me"
+msgstr "Código copiado al portapapeles"
 
 #: src/ai/gemini/activations.js:74
-msgid "is it windy"
+msgid "bring up the blog"
 msgstr ""
 
 #: src/ai/gemini/activations.js:75
 #, fuzzy
-msgid "what's the forecast"
+msgid "open a tab for this page"
 msgstr "Código copiado al portapapeles"
 
 #: src/ai/gemini/activations.js:76
 #, fuzzy
-msgid "what's the weather forecast"
+msgid "could you visit this link"
 msgstr "Código copiado al portapapeles"
 
 #: src/ai/gemini/activations.js:77
-msgid "how hot is it outside"
+msgid "click this link for me"
 msgstr ""
 
 #: src/ai/gemini/activations.js:78
-msgid "how cold is it outside"
+msgid "take me to this URL"
 msgstr ""
 
 #: src/ai/gemini/activations.js:79
+#, fuzzy
+msgid "browse to the website"
+msgstr "Código copiado al portapapeles"
+
+#: src/ai/gemini/activations.js:80
+#, fuzzy
+msgid "open this webpage"
+msgstr "Código copiado al portapapeles"
+
+#: src/ai/gemini/activations.js:81
+#, fuzzy
+msgid "find this page online"
+msgstr "Código copiado al portapapeles"
+
+#: src/ai/gemini/activations.js:82
+#, fuzzy
+msgid "show me this site"
+msgstr "Código copiado al portapapeles"
+
+#: src/ai/gemini/activations.js:86
+#, fuzzy
+msgid "how is the weather"
+msgstr "Código copiado al portapapeles"
+
+#: src/ai/gemini/activations.js:87
+#, fuzzy
+msgid "what is the temperature"
+msgstr "Código copiado al portapapeles"
+
+#: src/ai/gemini/activations.js:88
+#, fuzzy
+msgid "what's the weather like"
+msgstr "Código copiado al portapapeles"
+
+#: src/ai/gemini/activations.js:89
+msgid "is it raining"
+msgstr ""
+
+#: src/ai/gemini/activations.js:90
+msgid "is it sunny"
+msgstr ""
+
+#: src/ai/gemini/activations.js:91
+msgid "is it snowing"
+msgstr ""
+
+#: src/ai/gemini/activations.js:92
+msgid "is it windy"
+msgstr ""
+
+#: src/ai/gemini/activations.js:93
+#, fuzzy
+msgid "what's the forecast"
+msgstr "Código copiado al portapapeles"
+
+#: src/ai/gemini/activations.js:94
+#, fuzzy
+msgid "what's the weather forecast"
+msgstr "Código copiado al portapapeles"
+
+#: src/ai/gemini/activations.js:95
+msgid "how hot is it outside"
+msgstr ""
+
+#: src/ai/gemini/activations.js:96
+msgid "how cold is it outside"
+msgstr ""
+
+#: src/ai/gemini/activations.js:97
 msgid "is it cloudy"
 msgstr ""
 
-#: src/ai/gemini/activations.js:80
+#: src/ai/gemini/activations.js:98
 msgid "is there a storm coming"
 msgstr ""
 
-#: src/ai/gemini/activations.js:81
+#: src/ai/gemini/activations.js:99
 msgid "what's the humidity level"
 msgstr ""
 
-#: src/ai/gemini/activations.js:82
+#: src/ai/gemini/activations.js:100
 msgid "is it going to rain today"
 msgstr ""
 
-#: src/ai/gemini/activations.js:83
+#: src/ai/gemini/activations.js:101
 msgid "will it snow tomorrow"
 msgstr ""
 
-#: src/ai/gemini/activations.js:84
+#: src/ai/gemini/activations.js:102
 #, fuzzy
 msgid "what's the weather like this week"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:85
+#: src/ai/gemini/activations.js:103
 msgid "do I need an umbrella"
 msgstr ""
 
-#: src/ai/gemini/activations.js:86
+#: src/ai/gemini/activations.js:104
 msgid "do I need a jacket"
 msgstr ""
 
-#: src/ai/gemini/activations.js:87
+#: src/ai/gemini/activations.js:105
 msgid "how warm is it outside"
 msgstr ""
 
-#: src/ai/gemini/activations.js:88
+#: src/ai/gemini/activations.js:106
 msgid "is there a chance of rain"
 msgstr ""
 
-#: src/ai/gemini/activations.js:89
+#: src/ai/gemini/activations.js:107
 msgid "is it foggy"
 msgstr ""
 
-#: src/ai/gemini/activations.js:90
+#: src/ai/gemini/activations.js:108
 #, fuzzy
 msgid "is it freezing"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:91
+#: src/ai/gemini/activations.js:109
 #, fuzzy
 msgid "what's the high for today"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:92
+#: src/ai/gemini/activations.js:110
 #, fuzzy
 msgid "what's the low for today"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:93
+#: src/ai/gemini/activations.js:111
 #, fuzzy
 msgid "how's the weather right now"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:94
+#: src/ai/gemini/activations.js:112
 msgid "should I bring a coat"
 msgstr ""
 
-#: src/ai/gemini/activations.js:95
+#: src/ai/gemini/activations.js:113
 msgid "what's the wind speed"
 msgstr ""
 
-#: src/ai/gemini/activations.js:96
+#: src/ai/gemini/activations.js:114
 msgid "is it stormy"
 msgstr ""
 
-#: src/ai/gemini/activations.js:97
+#: src/ai/gemini/activations.js:115
 msgid "is it drizzling"
 msgstr ""
 
-#: src/ai/gemini/activations.js:98
+#: src/ai/gemini/activations.js:116
 msgid "is there thunder"
 msgstr ""
 
-#: src/ai/gemini/activations.js:99
+#: src/ai/gemini/activations.js:117
 msgid "is it lightning"
 msgstr ""
 
-#: src/ai/gemini/activations.js:100
+#: src/ai/gemini/activations.js:118
 msgid "is it mild outside"
 msgstr ""
 
-#: src/ai/gemini/activations.js:101
+#: src/ai/gemini/activations.js:119
 msgid "what's the air pressure"
 msgstr ""
 
-#: src/ai/gemini/activations.js:102
+#: src/ai/gemini/activations.js:120
 msgid "is there a heatwave"
 msgstr ""
 
-#: src/ai/gemini/activations.js:103
+#: src/ai/gemini/activations.js:121
 msgid "is it chilly"
 msgstr ""
 
-#: src/ai/gemini/activations.js:104
+#: src/ai/gemini/activations.js:122
 #, fuzzy
 msgid "is it overcast"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:105
+#: src/ai/gemini/activations.js:123
 #, fuzzy
 msgid "is the weather clear"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:106
+#: src/ai/gemini/activations.js:124
 msgid "will it be hot this weekend"
 msgstr ""
 
-#: src/ai/gemini/activations.js:107
+#: src/ai/gemini/activations.js:125
 msgid "is it safe to go outside"
 msgstr ""
 
-#: src/ai/gemini/activations.js:108
+#: src/ai/gemini/activations.js:126
 msgid "is there a hurricane warning"
 msgstr ""
 
-#: src/ai/gemini/activations.js:109
+#: src/ai/gemini/activations.js:127
 msgid "what's the UV index today"
 msgstr ""
 
-#: src/ai/gemini/activations.js:110
+#: src/ai/gemini/activations.js:128
 msgid "what time will it rain"
 msgstr ""
 
-#: src/ai/gemini/activations.js:111
+#: src/ai/gemini/activations.js:129
 #, fuzzy
 msgid "is it good weather for a walk"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:112
+#: src/ai/gemini/activations.js:130
 msgid "is it safe to drive in this weather"
 msgstr ""
 
-#: src/ai/gemini/activations.js:113
+#: src/ai/gemini/activations.js:131
 msgid "will it be sunny later"
 msgstr ""
 
-#: src/ai/gemini/activations.js:114
+#: src/ai/gemini/activations.js:132
 msgid "how long will it rain"
 msgstr ""
 
-#: src/ai/gemini/activations.js:115
+#: src/ai/gemini/activations.js:133
 msgid "are there any weather alerts"
 msgstr ""
 
-#: src/ai/gemini/activations.js:116
+#: src/ai/gemini/activations.js:134
 msgid "will it clear up later"
 msgstr ""
 
-#: src/ai/gemini/activations.js:117
+#: src/ai/gemini/activations.js:135
 msgid "should I expect hail"
 msgstr ""
 
-#: src/ai/gemini/activations.js:118
+#: src/ai/gemini/activations.js:136
 msgid "will there be a frost tonight"
 msgstr ""
 
-#: src/ai/gemini/activations.js:119
+#: src/ai/gemini/activations.js:137
 msgid "is there a cold front coming"
 msgstr ""
 
-#: src/ai/gemini/activations.js:120
+#: src/ai/gemini/activations.js:138
 msgid "what's the dew point"
 msgstr ""
 
-#: src/ai/gemini/activations.js:121
+#: src/ai/gemini/activations.js:139
 msgid "how's the visibility today"
 msgstr ""
 
@@ -878,6 +992,46 @@ msgstr ""
 #: src/prefs.js:287
 msgid "Your preferences have been saved"
 msgstr ""
+
+#, fuzzy
+#~ msgid "visit"
+#~ msgstr "Código copiado al portapapeles"
+
+#, fuzzy
+#~ msgid "navigate"
+#~ msgstr "Código copiado al portapapeles"
+
+#, fuzzy
+#~ msgid "navigate_lang_var1"
+#~ msgstr "Código copiado al portapapeles"
+
+#, fuzzy
+#~ msgid "navigate_lang_var2"
+#~ msgstr "Código copiado al portapapeles"
+
+#, fuzzy
+#~ msgid "browse"
+#~ msgstr "Código copiado al portapapeles"
+
+#, fuzzy
+#~ msgid "browse_lang_var1"
+#~ msgstr "Código copiado al portapapeles"
+
+#, fuzzy
+#~ msgid "browse_lang_var2"
+#~ msgstr "Código copiado al portapapeles"
+
+#, fuzzy
+#~ msgid "access"
+#~ msgstr "Código copiado al portapapeles"
+
+#, fuzzy
+#~ msgid "access_lang_var1"
+#~ msgstr "Código copiado al portapapeles"
+
+#, fuzzy
+#~ msgid "access_lang_var2"
+#~ msgstr "Código copiado al portapapeles"
 
 #, fuzzy
 #~ msgid "weather_lang_var1"
@@ -1408,19 +1562,11 @@ msgstr ""
 #~ msgstr "Código copiado al portapapeles"
 
 #, fuzzy
-#~ msgid "open the application"
-#~ msgstr "Código copiado al portapapeles"
-
-#, fuzzy
 #~ msgid "open app"
 #~ msgstr "Código copiado al portapapeles"
 
 #, fuzzy
 #~ msgid "go page"
-#~ msgstr "Código copiado al portapapeles"
-
-#, fuzzy
-#~ msgid "open page"
 #~ msgstr "Código copiado al portapapeles"
 
 #, fuzzy
@@ -1432,10 +1578,6 @@ msgstr ""
 #~ msgstr "Código copiado al portapapeles"
 
 #, fuzzy
-#~ msgid "enter page"
-#~ msgstr "Código copiado al portapapeles"
-
-#, fuzzy
 #~ msgid "open link"
 #~ msgstr "Código copiado al portapapeles"
 
@@ -1444,15 +1586,7 @@ msgstr ""
 #~ msgstr "Código copiado al portapapeles"
 
 #, fuzzy
-#~ msgid "enter link"
-#~ msgstr "Código copiado al portapapeles"
-
-#, fuzzy
 #~ msgid "go website"
-#~ msgstr "Código copiado al portapapeles"
-
-#, fuzzy
-#~ msgid "open website"
 #~ msgstr "Código copiado al portapapeles"
 
 #, fuzzy
@@ -1461,10 +1595,6 @@ msgstr ""
 
 #, fuzzy
 #~ msgid "load website"
-#~ msgstr "Código copiado al portapapeles"
-
-#, fuzzy
-#~ msgid "visit website"
 #~ msgstr "Código copiado al portapapeles"
 
 #, fuzzy
@@ -1488,19 +1618,11 @@ msgstr ""
 #~ msgstr "Código copiado al portapapeles"
 
 #, fuzzy
-#~ msgid "open webpage"
-#~ msgstr "Código copiado al portapapeles"
-
-#, fuzzy
 #~ msgid "access webpage"
 #~ msgstr "Código copiado al portapapeles"
 
 #, fuzzy
 #~ msgid "load webpage"
-#~ msgstr "Código copiado al portapapeles"
-
-#, fuzzy
-#~ msgid "visit webpage"
 #~ msgstr "Código copiado al portapapeles"
 
 #, fuzzy
@@ -1536,10 +1658,6 @@ msgstr ""
 #~ msgstr "Código copiado al portapapeles"
 
 #, fuzzy
-#~ msgid "browse the site"
-#~ msgstr "Código copiado al portapapeles"
-
-#, fuzzy
 #~ msgid "join the site"
 #~ msgstr "Código copiado al portapapeles"
 
@@ -1557,14 +1675,6 @@ msgstr ""
 
 #, fuzzy
 #~ msgid "load this site"
-#~ msgstr "Código copiado al portapapeles"
-
-#, fuzzy
-#~ msgid "visit this site"
-#~ msgstr "Código copiado al portapapeles"
-
-#, fuzzy
-#~ msgid "browse this site"
 #~ msgstr "Código copiado al portapapeles"
 
 #, fuzzy
@@ -1648,15 +1758,7 @@ msgstr ""
 #~ msgstr "Código copiado al portapapeles"
 
 #, fuzzy
-#~ msgid "load in the site"
-#~ msgstr "Código copiado al portapapeles"
-
-#, fuzzy
 #~ msgid "visit in the site"
-#~ msgstr "Código copiado al portapapeles"
-
-#, fuzzy
-#~ msgid "browse in the site"
 #~ msgstr "Código copiado al portapapeles"
 
 #, fuzzy
@@ -1673,10 +1775,6 @@ msgstr ""
 
 #, fuzzy
 #~ msgid "go in this site"
-#~ msgstr "Código copiado al portapapeles"
-
-#, fuzzy
-#~ msgid "open in this site"
 #~ msgstr "Código copiado al portapapeles"
 
 #, fuzzy
@@ -1756,14 +1854,6 @@ msgstr ""
 #~ msgstr "Código copiado al portapapeles"
 
 #, fuzzy
-#~ msgid "navigate to site"
-#~ msgstr "Código copiado al portapapeles"
-
-#, fuzzy
-#~ msgid "open to the site"
-#~ msgstr "Código copiado al portapapeles"
-
-#, fuzzy
 #~ msgid "access to the site"
 #~ msgstr "Código copiado al portapapeles"
 
@@ -1776,27 +1866,7 @@ msgstr ""
 #~ msgstr "Código copiado al portapapeles"
 
 #, fuzzy
-#~ msgid "browse to the site"
-#~ msgstr "Código copiado al portapapeles"
-
-#, fuzzy
 #~ msgid "join to the site"
-#~ msgstr "Código copiado al portapapeles"
-
-#, fuzzy
-#~ msgid "enter to the site"
-#~ msgstr "Código copiado al portapapeles"
-
-#, fuzzy
-#~ msgid "go to this site"
-#~ msgstr "Código copiado al portapapeles"
-
-#, fuzzy
-#~ msgid "open to this site"
-#~ msgstr "Código copiado al portapapeles"
-
-#, fuzzy
-#~ msgid "access to this site"
 #~ msgstr "Código copiado al portapapeles"
 
 #, fuzzy
@@ -1817,10 +1887,6 @@ msgstr ""
 
 #, fuzzy
 #~ msgid "enter to this site"
-#~ msgstr "Código copiado al portapapeles"
-
-#, fuzzy
-#~ msgid "navigate to this site"
 #~ msgstr "Código copiado al portapapeles"
 
 #, fuzzy
@@ -1872,10 +1938,6 @@ msgstr ""
 #~ msgstr "Código copiado al portapapeles"
 
 #, fuzzy
-#~ msgid "open this channel on youtube"
-#~ msgstr "Código copiado al portapapeles"
-
-#, fuzzy
 #~ msgid "go to the youtube channel"
 #~ msgstr "Código copiado al portapapeles"
 
@@ -1924,15 +1986,7 @@ msgstr ""
 #~ msgstr "Código copiado al portapapeles"
 
 #, fuzzy
-#~ msgid "read this page"
-#~ msgstr "Código copiado al portapapeles"
-
-#, fuzzy
 #~ msgid "read that page"
-#~ msgstr "Código copiado al portapapeles"
-
-#, fuzzy
-#~ msgid "read this link"
 #~ msgstr "Código copiado al portapapeles"
 
 #, fuzzy
@@ -1948,15 +2002,7 @@ msgstr ""
 #~ msgstr "Código copiado al portapapeles"
 
 #, fuzzy
-#~ msgid "Read this website"
-#~ msgstr "Código copiado al portapapeles"
-
-#, fuzzy
 #~ msgid "please read the clipboard"
-#~ msgstr "Código copiado al portapapeles"
-
-#, fuzzy
-#~ msgid "can you read this clipboard?"
 #~ msgstr "Código copiado al portapapeles"
 
 #, fuzzy
