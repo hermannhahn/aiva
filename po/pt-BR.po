@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Hermann <hermann.h.hahn@gmail.com>, 2024.
 #
-#: src/utils/utils.js:382
 msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"

@@ -379,7 +379,7 @@ export class Utils {
         if (res.current.apparent_temperature >= 35) {
             return _('the weather is hot');
         }
-        return _('');
+        return '';
     }
 
     climeStatus(res) {

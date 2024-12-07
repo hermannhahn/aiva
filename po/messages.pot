@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the aiva@gemini-assist.vercel.app package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#: src/utils/utils.js:382
 #, fuzzy
 msgid ""
 msgstr ""
