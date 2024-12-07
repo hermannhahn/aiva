@@ -68,7 +68,7 @@ export class GoogleGemini {
 
             // Send async request
             let body = this._buildBody(question);
-            this.app.log('Body Question: ' + body);
+            this.app.log('Body Question: ' + body); // debug
             let message = Soup.Message.new('POST', url);
             let bytes = GLib.Bytes.new(body);
             message.set_request_body_from_bytes('application/json', bytes);
@@ -90,9 +90,9 @@ export class GoogleGemini {
                     }
 
                     // DEBUG
-                    let jsonResponse = {};
-                    jsonResponse = JSON.stringify(res);
-                    this.app.log('Response: ' + jsonResponse);
+                    // let jsonResponse = {};
+                    // jsonResponse = JSON.stringify(res);
+                    // this.app.log('Response: ' + jsonResponse);
 
                     const parts = res.candidates[0]?.content?.parts;
 
