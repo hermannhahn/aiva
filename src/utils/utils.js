@@ -1,6 +1,5 @@
 import GLib from 'gi://GLib';
 import Gio from 'gi://Gio';
-import St from 'gi://St';
 // import Pango from 'gi://Pango';
 // import PangoCairo from 'gi://PangoCairo';
 // import Cairo from 'gi://cairo';
@@ -61,68 +60,6 @@ export class Utils {
             ' -a "AI Voice Assistant" ' +
             text;
         this.executeCommand(command);
-    }
-
-    /**
-     * @description copy text to clipboard
-     * @param {string} text
-     */
-    copyToClipboard(text) {
-        this.app.extension.clipboard.set_text(St.ClipboardType.CLIPBOARD, text);
-    }
-
-    /**
-     * @description copy selected text to clipboard
-     * @param {object} inputChat
-     * @param {object} responseChat
-     * @param {object} copyButton
-     */
-    copySelectedText(inputChat, responseChat, copyButton = null) {
-        // get text selection
-        let qselectedText = inputChat.label.clutter_text.get_selection();
-        let rselectedText = responseChat.label.clutter_text.get_selection();
-
-        // set if selection is from question or response
-        let selectedText = null;
-        if (rselectedText) {
-            selectedText = rselectedText;
-        } else if (qselectedText) {
-            selectedText = qselectedText;
-        }
-
-        // if there is a selected text
-        if (selectedText) {
-            // copy selected text
-            this.app.extension.clipboard.set_text(
-                St.ClipboardType.CLIPBOARD,
-                selectedText,
-            );
-            // set visual feedback
-            if (copyButton) {
-                copyButton.label.clutter_text.set_markup(
-                    _('[ Selected Copied ]'),
-                );
-                GLib.timeout_add(GLib.PRIORITY_DEFAULT, 3000, () => {
-                    copyButton.label.clutter_text.set_markup('');
-                    return false;
-                });
-            }
-            // if not, copy all response
-        } else {
-            this.app.extension.clipboard.set_text(
-                St.ClipboardType.CLIPBOARD,
-                responseChat.label.text,
-            );
-            // set visual feedback
-            if (copyButton) {
-                copyButton.label.clutter_text.set_markup(_('[ Copied ]'));
-                GLib.timeout_add(GLib.PRIORITY_DEFAULT, 3000, () => {
-                    copyButton.label.clutter_text.set_markup('');
-                    return false;
-                });
-            }
-            this.app.log(`Copied: ${responseChat.label.text}`);
-        }
     }
 
     /**

@@ -16,17 +16,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/chat.js:268 src/utils/utils.js:103
+#: src/chat.js:268
 msgid "[ Selected Copied ]"
 msgstr "[ Seleção Copiada ]"
 
-#: src/chat.js:283 src/utils/utils.js:118
+#: src/chat.js:283
 msgid "[ Copied ]"
 msgstr "[ Copiado ]"
 
 #: src/ai/azure.js:68 src/ai/azure.js:81 src/ai/azure.js:123
 #: src/ai/azure.js:132 src/ai/gemini.js:117 src/ai/gemini.js:148
-#: src/ai/gemini.js:225 src/ai/gemini.js:256 src/utils/utils.js:213
+#: src/ai/gemini.js:225 src/ai/gemini.js:256 src/utils/utils.js:150
 #, fuzzy
 msgid "Sorry, I'm having connection trouble. Please try again."
 msgstr "Estou tendo problemas de conexão. Por favor, tente novamente."
@@ -377,7 +377,7 @@ msgstr "palha"
 msgid "dry_lang_var2"
 msgstr "deserto"
 
-#: src/ai/gemini/activations.js:110 src/utils/utils.js:430
+#: src/ai/gemini/activations.js:110 src/utils/utils.js:367
 msgid "cold"
 msgstr "frio"
 
@@ -389,7 +389,7 @@ msgstr "gelado"
 msgid "cold_lang_var2"
 msgstr "gelando"
 
-#: src/ai/gemini/activations.js:113 src/utils/utils.js:445
+#: src/ai/gemini/activations.js:113 src/utils/utils.js:382
 msgid "hot"
 msgstr "quente"
 
@@ -401,7 +401,7 @@ msgstr "calor"
 msgid "hot_lang_var2"
 msgstr "fogo"
 
-#: src/ai/gemini/activations.js:116 src/utils/utils.js:442
+#: src/ai/gemini/activations.js:116 src/utils/utils.js:379
 msgid "warm"
 msgstr "esquentando"
 
@@ -409,7 +409,7 @@ msgstr "esquentando"
 msgid "warm_lang_var1"
 msgstr "aquecendo"
 
-#: src/ai/gemini/activations.js:118 src/utils/utils.js:436
+#: src/ai/gemini/activations.js:118 src/utils/utils.js:373
 msgid "mild"
 msgstr "calmo"
 
@@ -705,47 +705,47 @@ msgstr "Estou pensando nisso..."
 msgid "Give me a moment to sort this out..."
 msgstr "Me dê um momento para organizar isso..."
 
-#: src/utils/utils.js:193
+#: src/utils/utils.js:130
 msgid "Of course, searching..."
 msgstr "Com certeza, pesquisando..."
 
-#: src/utils/utils.js:196
+#: src/utils/utils.js:133
 msgid "Sure, searching..."
 msgstr "Claro, pesquisando..."
 
-#: src/utils/utils.js:208
+#: src/utils/utils.js:145
 msgid "Here are the main news"
 msgstr "Aqui estão as principais notícias"
 
-#: src/utils/utils.js:320
+#: src/utils/utils.js:257
 msgid "Look at example below:"
 msgstr "Veja o exemplo abaixo:"
 
-#: src/utils/utils.js:420
+#: src/utils/utils.js:357
 msgid "night"
 msgstr "noite"
 
-#: src/utils/utils.js:422
+#: src/utils/utils.js:359
 msgid "day"
 msgstr "dia"
 
-#: src/utils/utils.js:424
+#: src/utils/utils.js:361
 msgid "unknown"
 msgstr "desconhecida"
 
-#: src/utils/utils.js:447
+#: src/utils/utils.js:384
 msgid "unknown temperature"
 msgstr "temperatura desconhecida"
 
-#: src/utils/utils.js:453
+#: src/utils/utils.js:390
 msgid " and raining"
 msgstr " e chovendo"
 
-#: src/utils/utils.js:456
+#: src/utils/utils.js:393
 msgid " and snowing"
 msgstr " e nevando"
 
-#: src/utils/utils.js:459
+#: src/utils/utils.js:396
 msgid " and sunny"
 msgstr " e está ensolarado"
 
