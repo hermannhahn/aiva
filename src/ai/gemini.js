@@ -2,7 +2,7 @@ import Soup from 'gi://Soup';
 import GLib from 'gi://GLib';
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
-import {GeminiFunctions} from './gemini_functions.js';
+import {GeminiFunctions} from './gemini/functions.js';
 
 /**
  * @description Google Gemini API
