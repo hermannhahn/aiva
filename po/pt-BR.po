@@ -43,158 +43,158 @@ msgstr "Estou tendo dificuldade de te escutar. Por favor, tente novamente."
 
 #: src/ai/gemini/activations.js:14
 msgid "read the copied text"
-msgstr ""
+msgstr "leia o texto que copiei"
 
 #: src/ai/gemini/activations.js:15
 #, fuzzy
 msgid "what's in the clipboard"
-msgstr "exiba informações sobre tempo para hoje"
+msgstr "leia o que copiei"
 
 #: src/ai/gemini/activations.js:16
 #, fuzzy
 msgid "read the clipboard content"
-msgstr "leia o texto que copiei"
+msgstr "leia o texto na área de transferência"
 
 #: src/ai/gemini/activations.js:17
 msgid "read the text I copied"
-msgstr ""
+msgstr "leia o texto que eu copiei"
 
 #: src/ai/gemini/activations.js:18
 msgid "what did I copy"
-msgstr ""
+msgstr "leia o que eu copiei"
 
 #: src/ai/gemini/activations.js:19
 #, fuzzy
 msgid "show me the copied text"
-msgstr "exiba informações sobre tempo para hoje"
+msgstr "leia o texto copiado"
 
 #: src/ai/gemini/activations.js:20
 msgid "what's in my clipboard"
-msgstr ""
+msgstr "o que foi copiado para a área de transferência"
 
 #: src/ai/gemini/activations.js:21
 msgid "read what's copied"
-msgstr ""
+msgstr "leia o que foi copiado"
 
 #: src/ai/gemini/activations.js:22
 msgid "tell me the clipboard text"
-msgstr ""
+msgstr "leia em voz alta o que foi copiado"
 
 #: src/ai/gemini/activations.js:23
 msgid "can you read the copied text"
-msgstr ""
+msgstr "pode ler o texto"
 
 #: src/ai/gemini/activations.js:24
 msgid "could you show the clipboard content"
-msgstr ""
+msgstr "o texto que copiei, pode lê-lo"
 
 #: src/ai/gemini/activations.js:25
 #, fuzzy
 msgid "read the text from the clipboard"
-msgstr "Falha ao obter texto da área de transferência"
+msgstr "ler o texto da área de transferência"
 
 #: src/ai/gemini/activations.js:26
 msgid "display the copied text"
-msgstr ""
+msgstr "ler o que foi copiado"
 
 #: src/ai/gemini/activations.js:27
 msgid "show the clipboard content"
-msgstr ""
+msgstr "ler o texto que copiei"
 
 #: src/ai/gemini/activations.js:28
 msgid "can you access the clipboard"
-msgstr ""
+msgstr "ler o texto copiado"
 
 #: src/ai/gemini/activations.js:29
 msgid "read what I just copied"
-msgstr ""
+msgstr "leia o que acabei de copiar"
 
 #: src/ai/gemini/activations.js:30
 #, fuzzy
 msgid "what text is on the clipboard"
-msgstr "Falha ao obter texto da área de transferência"
+msgstr "lê o texto copiado"
 
 #: src/ai/gemini/activations.js:31
 msgid "tell me what I copied"
-msgstr ""
+msgstr "Lẽ o texto que copiei"
 
 #: src/ai/gemini/activations.js:32
 msgid "fetch the clipboard content"
-msgstr ""
+msgstr "lê o que copiei"
 
 #: src/ai/gemini/activations.js:33
 msgid "read the copied content"
-msgstr ""
+msgstr "leia o conteúdo copiado"
 
 #: src/ai/gemini/activations.js:34
 #, fuzzy
 msgid "read the clipboard data"
-msgstr "leia o texto que copiei"
+msgstr "leia o conteudo da área de transferência"
 
 #: src/ai/gemini/activations.js:35
 msgid "show me what's on the clipboard"
-msgstr ""
+msgstr "lê o texto pra mim"
 
 #: src/ai/gemini/activations.js:36
 msgid "can you display the copied text"
-msgstr ""
+msgstr "ler o texto pra mim"
 
 #: src/ai/gemini/activations.js:37
 msgid "read my copied text"
-msgstr ""
+msgstr "leia o texto em voz alta"
 
 #: src/ai/gemini/activations.js:38
 #, fuzzy
 msgid "what is the copied text"
-msgstr "a temperatura agora é de"
+msgstr "o que tem no texto copiado"
 
 #: src/ai/gemini/activations.js:39
 msgid "can you fetch the clipboard text"
-msgstr ""
+msgstr "me fala o texto da área de transferência"
 
 #: src/ai/gemini/activations.js:40
 #, fuzzy
 msgid "read the clipboard for me"
-msgstr "leia o texto que copiei"
+msgstr "leia o texto da área de transferência"
 
 #: src/ai/gemini/activations.js:41
 msgid "what text is stored in the clipboard"
-msgstr ""
+msgstr "ler texto na memória"
 
 #: src/ai/gemini/activations.js:42
 #, fuzzy
 msgid "show the latest copied text"
-msgstr "exiba informações sobre tempo para hoje"
+msgstr "leia o texto na memória"
 
 #: src/ai/gemini/activations.js:43
 #, fuzzy
 msgid "read the most recent clipboard content"
-msgstr "leia o texto que copiei"
+msgstr "lê o texto que copiei"
 
 #: src/ai/gemini/activations.js:47
 msgid "open the app"
-msgstr ""
+msgstr "abra o aplicativo"
 
 #: src/ai/gemini/activations.js:48
 msgid "open the application"
-msgstr ""
+msgstr "abre o aplicativo"
 
 #: src/ai/gemini/activations.js:49
 #, fuzzy
 msgid "launch the app"
-msgstr "lançar"
+msgstr "abra o programa"
 
 #: src/ai/gemini/activations.js:50
 msgid "launch the software"
-msgstr ""
+msgstr "abre o programa"
 
 #: src/ai/gemini/activations.js:51
 msgid "start the app"
-msgstr ""
+msgstr "inicie o app"
 
 #: src/ai/gemini/activations.js:52
 msgid "start the application"
-msgstr ""
+msgstr "inicia o app"
 
 #: src/ai/gemini/activations.js:53
 msgid "run the app"
