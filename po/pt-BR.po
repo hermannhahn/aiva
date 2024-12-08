@@ -173,7 +173,7 @@ msgstr "lê o texto que copiei"
 
 #: src/ai/gemini/activations.js:47
 msgid "open the app"
-msgstr "abra o aplicativo"
+msgstr "abrir o aplicativo"
 
 #: src/ai/gemini/activations.js:48
 msgid "open the application"
@@ -182,27 +182,27 @@ msgstr "abre o aplicativo"
 #: src/ai/gemini/activations.js:49
 #, fuzzy
 msgid "launch the app"
-msgstr "abra o programa"
+msgstr "abra o aplicativo"
 
 #: src/ai/gemini/activations.js:50
 msgid "launch the software"
-msgstr "abre o programa"
+msgstr "abrir o programa"
 
 #: src/ai/gemini/activations.js:51
 msgid "start the app"
-msgstr "inicie o app"
+msgstr "inicia o programa"
 
 #: src/ai/gemini/activations.js:52
 msgid "start the application"
-msgstr "inicia o app"
+msgstr "inicie o programa"
 
 #: src/ai/gemini/activations.js:53
 msgid "run the app"
-msgstr ""
+msgstr "executa o programa"
 
 #: src/ai/gemini/activations.js:54
 msgid "run the software"
-msgstr ""
+msgstr "executa o software"
 
 #: src/ai/gemini/activations.js:55
 msgid "open this program"
