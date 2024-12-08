@@ -186,11 +186,11 @@ msgstr "abra o aplicativo"
 
 #: src/ai/gemini/activations.js:50
 msgid "launch the software"
-msgstr "abrir o programa"
+msgstr "abrir navegador"
 
 #: src/ai/gemini/activations.js:51
 msgid "start the app"
-msgstr "inicia o programa"
+msgstr "abra o navegador"
 
 #: src/ai/gemini/activations.js:52
 msgid "start the application"
