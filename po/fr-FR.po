@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-07 20:22-0300\n"
+"POT-Creation-Date: 2024-12-09 00:36-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language fr-FR\n"
@@ -39,24 +39,19 @@ msgstr ""
 msgid "Sorry, I'm having trouble to listen you. Please try again."
 msgstr ""
 
-#: src/ai/gemini/activations.js:14
+#: src/ai/gemini/activations.js:13
 #, fuzzy
-msgid "read the copied text"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:15
-#, fuzzy
-msgid "what's in the clipboard"
+msgid "read"
 msgstr "Code copié dans le presse-papier"
 
 #: src/ai/gemini/activations.js:16
 #, fuzzy
-msgid "read the clipboard content"
+msgid "clipboard text"
 msgstr "Code copié dans le presse-papier"
 
 #: src/ai/gemini/activations.js:17
 #, fuzzy
-msgid "read the text I copied"
+msgid "text I copied"
 msgstr "Code copié dans le presse-papier"
 
 #: src/ai/gemini/activations.js:18
@@ -65,1062 +60,409 @@ msgstr ""
 
 #: src/ai/gemini/activations.js:19
 #, fuzzy
-msgid "show me the copied text"
+msgid "copied text"
 msgstr "Code copié dans le presse-papier"
 
 #: src/ai/gemini/activations.js:20
 #, fuzzy
-msgid "what's in my clipboard"
+msgid "my clipboard"
 msgstr "Code copié dans le presse-papier"
 
 #: src/ai/gemini/activations.js:21
 #, fuzzy
-msgid "read what's copied"
+msgid "what's copied"
 msgstr "Code copié dans le presse-papier"
 
 #: src/ai/gemini/activations.js:22
 #, fuzzy
-msgid "tell me the clipboard text"
+msgid "clipboard content"
 msgstr "Code copié dans le presse-papier"
 
 #: src/ai/gemini/activations.js:23
 #, fuzzy
-msgid "can you read the copied text"
+msgid "just copied"
 msgstr "Code copié dans le presse-papier"
 
 #: src/ai/gemini/activations.js:24
 #, fuzzy
-msgid "could you show the clipboard content"
+msgid "what I copied"
 msgstr "Code copié dans le presse-papier"
 
 #: src/ai/gemini/activations.js:25
 #, fuzzy
-msgid "read the text from the clipboard"
+msgid "copied content"
 msgstr "Code copié dans le presse-papier"
 
 #: src/ai/gemini/activations.js:26
 #, fuzzy
-msgid "display the copied text"
+msgid "clipboard data"
 msgstr "Code copié dans le presse-papier"
 
 #: src/ai/gemini/activations.js:27
 #, fuzzy
-msgid "show the clipboard content"
+msgid "the clipboard"
 msgstr "Code copié dans le presse-papier"
 
-#: src/ai/gemini/activations.js:28
+#: src/ai/gemini/activations.js:31 src/ai/gemini/activations.js:40
 #, fuzzy
-msgid "can you access the clipboard"
+msgid "open"
 msgstr "Code copié dans le presse-papier"
 
-#: src/ai/gemini/activations.js:29
+#: src/ai/gemini/activations.js:32 src/ai/gemini/activations.js:49
 #, fuzzy
-msgid "read what I just copied"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:30
-#, fuzzy
-msgid "what text is on the clipboard"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:31
-#, fuzzy
-msgid "tell me what I copied"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:32
-#, fuzzy
-msgid "fetch the clipboard content"
+msgid "launch"
 msgstr "Code copié dans le presse-papier"
 
 #: src/ai/gemini/activations.js:33
-#, fuzzy
-msgid "read the copied content"
-msgstr "Code copié dans le presse-papier"
+msgid "start"
+msgstr ""
 
 #: src/ai/gemini/activations.js:34
-#, fuzzy
-msgid "read the clipboard data"
-msgstr "Code copié dans le presse-papier"
+msgid "run"
+msgstr ""
 
-#: src/ai/gemini/activations.js:35
+#: src/ai/gemini/activations.js:35 src/ai/gemini/activations.js:50
 #, fuzzy
-msgid "show me what's on the clipboard"
+msgid "load"
 msgstr "Code copié dans le presse-papier"
 
 #: src/ai/gemini/activations.js:36
 #, fuzzy
-msgid "can you display the copied text"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:37
-#, fuzzy
-msgid "read my copied text"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:38
-#, fuzzy
-msgid "what is the copied text"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:39
-#, fuzzy
-msgid "can you fetch the clipboard text"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:40
-#, fuzzy
-msgid "read the clipboard for me"
+msgid "initialize"
 msgstr "Code copié dans le presse-papier"
 
 #: src/ai/gemini/activations.js:41
-#, fuzzy
-msgid "what text is stored in the clipboard"
-msgstr "Code copié dans le presse-papier"
+msgid "go to"
+msgstr ""
 
 #: src/ai/gemini/activations.js:42
 #, fuzzy
-msgid "show the latest copied text"
+msgid "navigate"
 msgstr "Code copié dans le presse-papier"
 
 #: src/ai/gemini/activations.js:43
 #, fuzzy
-msgid "read the most recent clipboard content"
+msgid "visit"
 msgstr "Code copié dans le presse-papier"
 
-#: src/ai/gemini/activations.js:47
+#: src/ai/gemini/activations.js:44
 #, fuzzy
-msgid "open the app"
+msgid "check out"
 msgstr "Code copié dans le presse-papier"
+
+#: src/ai/gemini/activations.js:45
+#, fuzzy
+msgid "pull up"
+msgstr "Code copié dans le presse-papier"
+
+#: src/ai/gemini/activations.js:46
+msgid "bring"
+msgstr ""
+
+#: src/ai/gemini/activations.js:47
+msgid "take me"
+msgstr ""
 
 #: src/ai/gemini/activations.js:48
 #, fuzzy
-msgid "open the application"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:49
-#, fuzzy
-msgid "launch the app"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:50
-#, fuzzy
-msgid "launch the software"
+msgid "show me"
 msgstr "Code copié dans le presse-papier"
 
 #: src/ai/gemini/activations.js:51
-msgid "start the app"
+msgid "find"
 msgstr ""
 
 #: src/ai/gemini/activations.js:52
-msgid "start the application"
-msgstr ""
+#, fuzzy
+msgid "browse"
+msgstr "Code copié dans le presse-papier"
 
 #: src/ai/gemini/activations.js:53
-#, fuzzy
-msgid "run the app"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:54
-#, fuzzy
-msgid "run the software"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:55
-#, fuzzy
-msgid "open this program"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:56
-#, fuzzy
-msgid "launch this program"
-msgstr "Code copié dans le presse-papier"
+msgid "search"
+msgstr ""
 
 #: src/ai/gemini/activations.js:57
-msgid "start the program"
-msgstr ""
+#, fuzzy
+msgid "website"
+msgstr "Code copié dans le presse-papier"
 
 #: src/ai/gemini/activations.js:58
 #, fuzzy
-msgid "can you open the app"
+msgid "site"
 msgstr "Code copié dans le presse-papier"
 
 #: src/ai/gemini/activations.js:59
 #, fuzzy
-msgid "could you open the software"
+msgid "page"
 msgstr "Code copié dans le presse-papier"
 
 #: src/ai/gemini/activations.js:60
 #, fuzzy
-msgid "bring up the app"
+msgid "webpage"
 msgstr "Code copié dans le presse-papier"
 
 #: src/ai/gemini/activations.js:61
 #, fuzzy
-msgid "bring up the application"
+msgid "link"
 msgstr "Code copié dans le presse-papier"
 
 #: src/ai/gemini/activations.js:62
-msgid "fire up the app"
+msgid "url"
 msgstr ""
 
 #: src/ai/gemini/activations.js:63
-msgid "fire up the program"
-msgstr ""
+#, fuzzy
+msgid "address"
+msgstr "Code copié dans le presse-papier"
 
 #: src/ai/gemini/activations.js:64
-#, fuzzy
-msgid "please open the software"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:65
-#, fuzzy
-msgid "please start the app"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:66
-#, fuzzy
-msgid "run this application"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:67
-msgid "execute the program"
+msgid "blog"
 msgstr ""
 
 #: src/ai/gemini/activations.js:68
 #, fuzzy
-msgid "load the app"
+msgid "how is the"
 msgstr "Code copié dans le presse-papier"
 
 #: src/ai/gemini/activations.js:69
 #, fuzzy
-msgid "load the software"
+msgid "what is the"
 msgstr "Code copié dans le presse-papier"
 
 #: src/ai/gemini/activations.js:70
 #, fuzzy
-msgid "boot up the app"
+msgid "what's the"
 msgstr "Code copié dans le presse-papier"
 
 #: src/ai/gemini/activations.js:71
 #, fuzzy
-msgid "can you run this program"
+msgid "how hot is it"
 msgstr "Code copié dans le presse-papier"
 
 #: src/ai/gemini/activations.js:72
 #, fuzzy
-msgid "could you launch this software"
+msgid "how cold is it"
 msgstr "Code copié dans le presse-papier"
 
 #: src/ai/gemini/activations.js:73
 #, fuzzy
-msgid "open the snap"
+msgid "is there"
 msgstr "Code copié dans le presse-papier"
 
 #: src/ai/gemini/activations.js:74
-#, fuzzy
-msgid "launch the snap"
-msgstr "Code copié dans le presse-papier"
+msgid "will it"
+msgstr ""
 
 #: src/ai/gemini/activations.js:75
-msgid "start the snap"
+msgid "do I need"
 msgstr ""
 
 #: src/ai/gemini/activations.js:76
-msgid "run the snap"
-msgstr ""
+#, fuzzy
+msgid "how warm is it"
+msgstr "Code copié dans le presse-papier"
 
 #: src/ai/gemini/activations.js:77
 #, fuzzy
-msgid "load the snap"
+msgid "how's the"
 msgstr "Code copié dans le presse-papier"
 
 #: src/ai/gemini/activations.js:78
-#, fuzzy
-msgid "open the flatpak"
-msgstr "Code copié dans le presse-papier"
+msgid "should I"
+msgstr ""
 
 #: src/ai/gemini/activations.js:79
 #, fuzzy
-msgid "launch the flatpak"
+msgid "is the"
 msgstr "Code copié dans le presse-papier"
 
 #: src/ai/gemini/activations.js:80
-msgid "start the flatpak"
+msgid "what time will it"
 msgstr ""
 
 #: src/ai/gemini/activations.js:81
-#, fuzzy
-msgid "run the flatpak"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:82
-#, fuzzy
-msgid "load the flatpak"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:83
-#, fuzzy
-msgid "fire up the software"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:84
-msgid "boot up this application"
+msgid "is it"
 msgstr ""
 
-#: src/ai/gemini/activations.js:85
-#, fuzzy
-msgid "pull up the app"
-msgstr "Code copié dans le presse-papier"
+#: src/ai/gemini/activations.js:82
+msgid "how long will it"
+msgstr ""
 
-#: src/ai/gemini/activations.js:86
-#, fuzzy
-msgid "navigate to the app"
-msgstr "Code copié dans le presse-papier"
+#: src/ai/gemini/activations.js:83
+msgid "are there any"
+msgstr ""
 
-#: src/ai/gemini/activations.js:87
-#, fuzzy
-msgid "turn on the software"
-msgstr "Code copié dans le presse-papier"
+#: src/ai/gemini/activations.js:84
+msgid "will there be a"
+msgstr ""
 
 #: src/ai/gemini/activations.js:88
-#, fuzzy
-msgid "access the app"
-msgstr "Code copié dans le presse-papier"
+msgid "weather"
+msgstr ""
 
 #: src/ai/gemini/activations.js:89
 #, fuzzy
-msgid "can you open this tool"
+msgid "temperature"
 msgstr "Code copié dans le presse-papier"
 
 #: src/ai/gemini/activations.js:90
-#, fuzzy
-msgid "could you start this application"
-msgstr "Code copié dans le presse-papier"
+msgid "raining"
+msgstr ""
 
 #: src/ai/gemini/activations.js:91
-#, fuzzy
-msgid "execute this tool"
-msgstr "Code copié dans le presse-papier"
+msgid "snowing"
+msgstr ""
 
 #: src/ai/gemini/activations.js:92
-#, fuzzy
-msgid "please run this software"
-msgstr "Code copié dans le presse-papier"
+msgid "windy"
+msgstr ""
 
 #: src/ai/gemini/activations.js:93
 #, fuzzy
-msgid "activate the app"
+msgid "forecast"
 msgstr "Code copié dans le presse-papier"
 
 #: src/ai/gemini/activations.js:94
-#, fuzzy
-msgid "initialize the software"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:95
-#, fuzzy
-msgid "change the wallpaper"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:96
-msgid "set a new desktop background"
+msgid "cloudy"
 msgstr ""
 
+#: src/ai/gemini/activations.js:95
+msgid "storm"
+msgstr ""
+
+#: src/ai/gemini/activations.js:96
+#, fuzzy
+msgid "humidity"
+msgstr "Code copié dans le presse-papier"
+
 #: src/ai/gemini/activations.js:97
-msgid "enable dark mode"
+msgid "rain"
 msgstr ""
 
 #: src/ai/gemini/activations.js:98
-#, fuzzy
-msgid "switch to light mode"
-msgstr "Code copié dans le presse-papier"
+msgid "snow"
+msgstr ""
 
 #: src/ai/gemini/activations.js:99
-msgid "adjust the screen brightness"
+msgid "umbrella"
 msgstr ""
 
 #: src/ai/gemini/activations.js:100
-msgid "change the display resolution"
+msgid "jacket"
 msgstr ""
 
 #: src/ai/gemini/activations.js:101
-msgid "enable fractional scaling"
+msgid "warm"
 msgstr ""
 
 #: src/ai/gemini/activations.js:102
-msgid "customize the dock position"
+msgid "foggy"
 msgstr ""
 
 #: src/ai/gemini/activations.js:103
-msgid "hide the dock"
-msgstr ""
+#, fuzzy
+msgid "freezing"
+msgstr "Code copié dans le presse-papier"
 
 #: src/ai/gemini/activations.js:104
 #, fuzzy
-msgid "show the dock"
+msgid "high for today"
 msgstr "Code copié dans le presse-papier"
 
 #: src/ai/gemini/activations.js:105
-msgid "change the dock size"
-msgstr ""
+#, fuzzy
+msgid "low for today"
+msgstr "Code copié dans le presse-papier"
 
 #: src/ai/gemini/activations.js:106
-msgid "enable auto-hide for the dock"
+msgid "a coat"
 msgstr ""
 
 #: src/ai/gemini/activations.js:107
-msgid "disable auto-hide for the dock"
+msgid "wind"
 msgstr ""
 
 #: src/ai/gemini/activations.js:108
-msgid "add an app to the favorites"
+msgid "stormy"
 msgstr ""
 
 #: src/ai/gemini/activations.js:109
-msgid "remove an app from the favorites"
+msgid "drizzling"
 msgstr ""
 
 #: src/ai/gemini/activations.js:110
-msgid "customize the keyboard shortcuts"
+msgid "thunder"
 msgstr ""
 
 #: src/ai/gemini/activations.js:111
-msgid "change the font size"
+msgid "lightning"
 msgstr ""
 
 #: src/ai/gemini/activations.js:112
-msgid "enable animations"
+msgid "mild"
 msgstr ""
 
 #: src/ai/gemini/activations.js:113
-msgid "disable animations"
+msgid "air pressure"
 msgstr ""
 
 #: src/ai/gemini/activations.js:114
-msgid "adjust the workspace settings"
+msgid "heatwave"
 msgstr ""
 
 #: src/ai/gemini/activations.js:115
-msgid "change the number of workspaces"
+msgid "chilly"
 msgstr ""
 
 #: src/ai/gemini/activations.js:116
-msgid "rename a workspace"
-msgstr ""
+#, fuzzy
+msgid "overcast"
+msgstr "Code copié dans le presse-papier"
 
 #: src/ai/gemini/activations.js:117
-msgid "configure the touchpad settings"
+msgid "clear"
 msgstr ""
 
 #: src/ai/gemini/activations.js:118
-msgid "enable tap-to-click"
+msgid "hot"
 msgstr ""
 
 #: src/ai/gemini/activations.js:119
-msgid "disable tap-to-click"
+msgid "outside"
 msgstr ""
 
 #: src/ai/gemini/activations.js:120
-msgid "enable natural scrolling"
+msgid "hurricane"
 msgstr ""
 
 #: src/ai/gemini/activations.js:121
-msgid "disable natural scrolling"
+msgid "uv index"
 msgstr ""
 
 #: src/ai/gemini/activations.js:122
-msgid "change the default shell theme"
+msgid "sunny"
 msgstr ""
 
 #: src/ai/gemini/activations.js:123
-msgid "apply a new GTK theme"
+msgid "hail"
 msgstr ""
 
 #: src/ai/gemini/activations.js:124
-msgid "change the icon theme"
+msgid "frost"
 msgstr ""
 
 #: src/ai/gemini/activations.js:125
-msgid "reset GNOME settings to default"
+msgid "cold"
 msgstr ""
 
 #: src/ai/gemini/activations.js:126
-msgid "turn on night light"
+msgid "dew point"
 msgstr ""
 
 #: src/ai/gemini/activations.js:127
-msgid "turn off night light"
-msgstr ""
-
-#: src/ai/gemini/activations.js:128
-msgid "schedule night light"
-msgstr ""
-
-#: src/ai/gemini/activations.js:129
-msgid "customize the power settings"
-msgstr ""
-
-#: src/ai/gemini/activations.js:130
-msgid "set the screen to never lock"
-msgstr ""
-
-#: src/ai/gemini/activations.js:131
-msgid "change the lock screen background"
-msgstr ""
-
-#: src/ai/gemini/activations.js:132
-msgid "enable notifications"
-msgstr ""
-
-#: src/ai/gemini/activations.js:133
-msgid "disable notifications"
-msgstr ""
-
-#: src/ai/gemini/activations.js:134
-msgid "install GNOME extensions"
-msgstr ""
-
-#: src/ai/gemini/activations.js:135
-msgid "remove a GNOME extension"
-msgstr ""
-
-#: src/ai/gemini/activations.js:136
-msgid "enable a GNOME extension"
-msgstr ""
-
-#: src/ai/gemini/activations.js:137
-msgid "disable a GNOME extension"
-msgstr ""
-
-#: src/ai/gemini/activations.js:138
-msgid "list all GNOME extensions"
-msgstr ""
-
-#: src/ai/gemini/activations.js:139
-msgid "check the status of GNOME extensions"
-msgstr ""
-
-#: src/ai/gemini/activations.js:140
-msgid "update the GNOME extensions"
-msgstr ""
-
-#: src/ai/gemini/activations.js:141
-msgid "restart GNOME shell"
-msgstr ""
-
-#: src/ai/gemini/activations.js:142
-msgid "change the primary display"
-msgstr ""
-
-#: src/ai/gemini/activations.js:143
-msgid "disable secondary monitor"
-msgstr ""
-
-#: src/ai/gemini/activations.js:144
-msgid "enable secondary monitor"
-msgstr ""
-
-#: src/ai/gemini/activations.js:145
-msgid "mirror the displays"
-msgstr ""
-
-#: src/ai/gemini/activations.js:146
-msgid "extend the displays"
-msgstr ""
-
-#: src/ai/gemini/activations.js:147
-msgid "set the display refresh rate"
-msgstr ""
-
-#: src/ai/gemini/activations.js:148
-msgid "adjust the sound volume"
-msgstr ""
-
-#: src/ai/gemini/activations.js:149
-msgid "enable do not disturb mode"
-msgstr ""
-
-#: src/ai/gemini/activations.js:150
-msgid "disable do not disturb mode"
-msgstr ""
-
-#: src/ai/gemini/activations.js:151
-msgid "change the default browser"
-msgstr ""
-
-#: src/ai/gemini/activations.js:152
-msgid "set the default terminal"
-msgstr ""
-
-#: src/ai/gemini/activations.js:153
-msgid "enable accessibility features"
-msgstr ""
-
-#: src/ai/gemini/activations.js:154
-msgid "disable accessibility features"
-msgstr ""
-
-#: src/ai/gemini/activations.js:155
-msgid "set a new keyboard layout"
-msgstr ""
-
-#: src/ai/gemini/activations.js:156
-msgid "enable the on-screen keyboard"
-msgstr ""
-
-#: src/ai/gemini/activations.js:157
-msgid "disable the on-screen keyboard"
-msgstr ""
-
-#: src/ai/gemini/activations.js:161
 #, fuzzy
-msgid "open the website"
+msgid "visibility"
 msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:162
-#, fuzzy
-msgid "open the page"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:163
-#, fuzzy
-msgid "open the blog"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:164
-#, fuzzy
-msgid "go to the website"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:165
-#, fuzzy
-msgid "go to the page"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:166
-#, fuzzy
-msgid "go to the blog"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:167
-#, fuzzy
-msgid "navigate to the site"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:168
-#, fuzzy
-msgid "navigate to the page"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:169
-#, fuzzy
-msgid "visit the website"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:170
-#, fuzzy
-msgid "visit the page"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:171
-#, fuzzy
-msgid "open this link"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:172
-#, fuzzy
-msgid "go to this URL"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:173
-#, fuzzy
-msgid "open the URL"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:174
-#, fuzzy
-msgid "check out this site"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:175
-#, fuzzy
-msgid "pull up the website"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:176
-#, fuzzy
-msgid "can you open the site"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:177
-msgid "could you open the page"
-msgstr ""
-
-#: src/ai/gemini/activations.js:178
-#, fuzzy
-msgid "bring up the website"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:179
-#, fuzzy
-msgid "take me to the site"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:180
-#, fuzzy
-msgid "take me to the page"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:181
-#, fuzzy
-msgid "show me the website"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:182
-#, fuzzy
-msgid "show me the page"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:183
-#, fuzzy
-msgid "launch the site"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:184
-#, fuzzy
-msgid "launch the page"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:185
-#, fuzzy
-msgid "visit this link"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:186
-#, fuzzy
-msgid "can you navigate to the URL"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:187
-#, fuzzy
-msgid "please open this site"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:188
-#, fuzzy
-msgid "please visit the page"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:189
-#, fuzzy
-msgid "open this blog for me"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:190
-msgid "take me to this blog"
-msgstr ""
-
-#: src/ai/gemini/activations.js:191
-#, fuzzy
-msgid "show me the link"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:192
-#, fuzzy
-msgid "can you load this page"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:193
-#, fuzzy
-msgid "go to this link"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:194
-#, fuzzy
-msgid "open a new tab with this site"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:195
-#, fuzzy
-msgid "navigate to this link"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:196
-#, fuzzy
-msgid "find this website for me"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:197
-msgid "bring up the blog"
-msgstr ""
-
-#: src/ai/gemini/activations.js:198
-#, fuzzy
-msgid "open a tab for this page"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:199
-#, fuzzy
-msgid "could you visit this link"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:200
-msgid "click this link for me"
-msgstr ""
-
-#: src/ai/gemini/activations.js:201
-msgid "take me to this URL"
-msgstr ""
-
-#: src/ai/gemini/activations.js:202
-#, fuzzy
-msgid "browse to the website"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:203
-#, fuzzy
-msgid "open this webpage"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:204
-#, fuzzy
-msgid "find this page online"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:205
-#, fuzzy
-msgid "show me this site"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:209
-#, fuzzy
-msgid "how is the weather"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:210
-#, fuzzy
-msgid "what is the temperature"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:211
-#, fuzzy
-msgid "what's the weather like"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:212
-msgid "is it raining"
-msgstr ""
-
-#: src/ai/gemini/activations.js:213
-msgid "is it sunny"
-msgstr ""
-
-#: src/ai/gemini/activations.js:214
-msgid "is it snowing"
-msgstr ""
-
-#: src/ai/gemini/activations.js:215
-msgid "is it windy"
-msgstr ""
-
-#: src/ai/gemini/activations.js:216
-#, fuzzy
-msgid "what's the forecast"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:217
-#, fuzzy
-msgid "what's the weather forecast"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:218
-msgid "how hot is it outside"
-msgstr ""
-
-#: src/ai/gemini/activations.js:219
-msgid "how cold is it outside"
-msgstr ""
-
-#: src/ai/gemini/activations.js:220
-msgid "is it cloudy"
-msgstr ""
-
-#: src/ai/gemini/activations.js:221
-msgid "is there a storm coming"
-msgstr ""
-
-#: src/ai/gemini/activations.js:222
-msgid "what's the humidity level"
-msgstr ""
-
-#: src/ai/gemini/activations.js:223
-msgid "is it going to rain today"
-msgstr ""
-
-#: src/ai/gemini/activations.js:224
-msgid "will it snow tomorrow"
-msgstr ""
-
-#: src/ai/gemini/activations.js:225
-#, fuzzy
-msgid "what's the weather like this week"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:226
-msgid "do I need an umbrella"
-msgstr ""
-
-#: src/ai/gemini/activations.js:227
-msgid "do I need a jacket"
-msgstr ""
-
-#: src/ai/gemini/activations.js:228
-msgid "how warm is it outside"
-msgstr ""
-
-#: src/ai/gemini/activations.js:229
-msgid "is there a chance of rain"
-msgstr ""
-
-#: src/ai/gemini/activations.js:230
-msgid "is it foggy"
-msgstr ""
-
-#: src/ai/gemini/activations.js:231
-#, fuzzy
-msgid "is it freezing"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:232
-#, fuzzy
-msgid "what's the high for today"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:233
-#, fuzzy
-msgid "what's the low for today"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:234
-#, fuzzy
-msgid "how's the weather right now"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:235
-msgid "should I bring a coat"
-msgstr ""
-
-#: src/ai/gemini/activations.js:236
-msgid "what's the wind speed"
-msgstr ""
-
-#: src/ai/gemini/activations.js:237
-msgid "is it stormy"
-msgstr ""
-
-#: src/ai/gemini/activations.js:238
-msgid "is it drizzling"
-msgstr ""
-
-#: src/ai/gemini/activations.js:239
-msgid "is there thunder"
-msgstr ""
-
-#: src/ai/gemini/activations.js:240
-msgid "is it lightning"
-msgstr ""
-
-#: src/ai/gemini/activations.js:241
-msgid "is it mild outside"
-msgstr ""
-
-#: src/ai/gemini/activations.js:242
-msgid "what's the air pressure"
-msgstr ""
-
-#: src/ai/gemini/activations.js:243
-msgid "is there a heatwave"
-msgstr ""
-
-#: src/ai/gemini/activations.js:244
-msgid "is it chilly"
-msgstr ""
-
-#: src/ai/gemini/activations.js:245
-#, fuzzy
-msgid "is it overcast"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:246
-#, fuzzy
-msgid "is the weather clear"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:247
-msgid "will it be hot this weekend"
-msgstr ""
-
-#: src/ai/gemini/activations.js:248
-msgid "is it safe to go outside"
-msgstr ""
-
-#: src/ai/gemini/activations.js:249
-msgid "is there a hurricane warning"
-msgstr ""
-
-#: src/ai/gemini/activations.js:250
-msgid "what's the UV index today"
-msgstr ""
-
-#: src/ai/gemini/activations.js:251
-msgid "what time will it rain"
-msgstr ""
-
-#: src/ai/gemini/activations.js:252
-#, fuzzy
-msgid "is it good weather for a walk"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:253
-msgid "is it safe to drive in this weather"
-msgstr ""
-
-#: src/ai/gemini/activations.js:254
-msgid "will it be sunny later"
-msgstr ""
-
-#: src/ai/gemini/activations.js:255
-msgid "how long will it rain"
-msgstr ""
-
-#: src/ai/gemini/activations.js:256
-msgid "are there any weather alerts"
-msgstr ""
-
-#: src/ai/gemini/activations.js:257
-msgid "will it clear up later"
-msgstr ""
-
-#: src/ai/gemini/activations.js:258
-msgid "should I expect hail"
-msgstr ""
-
-#: src/ai/gemini/activations.js:259
-msgid "will there be a frost tonight"
-msgstr ""
-
-#: src/ai/gemini/activations.js:260
-msgid "is there a cold front coming"
-msgstr ""
-
-#: src/ai/gemini/activations.js:261
-msgid "what's the dew point"
-msgstr ""
-
-#: src/ai/gemini/activations.js:262
-msgid "how's the visibility today"
-msgstr ""
 
 #: src/ai/gemini/functions.js:45
 msgid "Sorry, I can't do that right now. Maybe in the future."
@@ -1554,19 +896,407 @@ msgid "Your preferences have been saved"
 msgstr ""
 
 #, fuzzy
-#~ msgid "read"
+#~ msgid "read the copied text"
 #~ msgstr "Code copié dans le presse-papier"
 
 #, fuzzy
-#~ msgid "open"
+#~ msgid "what's in the clipboard"
 #~ msgstr "Code copié dans le presse-papier"
 
 #, fuzzy
-#~ msgid "visit"
+#~ msgid "show me the copied text"
 #~ msgstr "Code copié dans le presse-papier"
 
 #, fuzzy
-#~ msgid "navigate"
+#~ msgid "what's in my clipboard"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "can you read the copied text"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "could you show the clipboard content"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "read the text from the clipboard"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "display the copied text"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "show the clipboard content"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "can you access the clipboard"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "what text is on the clipboard"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "fetch the clipboard content"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "show me what's on the clipboard"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "can you display the copied text"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "can you fetch the clipboard text"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "read the clipboard for me"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "what text is stored in the clipboard"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "show the latest copied text"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "read the most recent clipboard content"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "open the app"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "open the application"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "launch the software"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "run the app"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "run the software"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "open this program"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "launch this program"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "can you open the app"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "could you open the software"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "bring up the app"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "bring up the application"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "please open the software"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "please start the app"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "run this application"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "load the app"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "load the software"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "boot up the app"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "can you run this program"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "could you launch this software"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "open the snap"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "launch the snap"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "load the snap"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "open the flatpak"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "launch the flatpak"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "run the flatpak"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "load the flatpak"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "fire up the software"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "navigate to the app"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "turn on the software"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "access the app"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "can you open this tool"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "could you start this application"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "execute this tool"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "please run this software"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "activate the app"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "change the wallpaper"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "switch to light mode"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "open the website"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "open the page"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "open the blog"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "go to the website"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "go to the page"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "go to the blog"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "navigate to the site"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "navigate to the page"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "visit the website"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "open this link"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "go to this URL"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "open the URL"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "pull up the website"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "can you open the site"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "bring up the website"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "take me to the site"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "take me to the page"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "show me the website"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "launch the site"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "launch the page"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "visit this link"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "can you navigate to the URL"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "please open this site"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "please visit the page"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "open this blog for me"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "show me the link"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "can you load this page"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "go to this link"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "open a new tab with this site"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "navigate to this link"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "find this website for me"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "open a tab for this page"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "could you visit this link"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "browse to the website"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "open this webpage"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "find this page online"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "how is the weather"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "what is the temperature"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "what's the weather like"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "what's the weather forecast"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "what's the weather like this week"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "how's the weather right now"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "is it overcast"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "is the weather clear"
+#~ msgstr "Code copié dans le presse-papier"
+
+#, fuzzy
+#~ msgid "is it good weather for a walk"
 #~ msgstr "Code copié dans le presse-papier"
 
 #, fuzzy
@@ -1575,10 +1305,6 @@ msgstr ""
 
 #, fuzzy
 #~ msgid "navigate_lang_var2"
-#~ msgstr "Code copié dans le presse-papier"
-
-#, fuzzy
-#~ msgid "browse"
 #~ msgstr "Code copié dans le presse-papier"
 
 #, fuzzy
@@ -1603,18 +1329,6 @@ msgstr ""
 
 #, fuzzy
 #~ msgid "weather_lang_var1"
-#~ msgstr "Code copié dans le presse-papier"
-
-#, fuzzy
-#~ msgid "forecast"
-#~ msgstr "Code copié dans le presse-papier"
-
-#, fuzzy
-#~ msgid "temperature"
-#~ msgstr "Code copié dans le presse-papier"
-
-#, fuzzy
-#~ msgid "humidity"
 #~ msgstr "Code copié dans le presse-papier"
 
 #, fuzzy
@@ -2070,18 +1784,6 @@ msgstr ""
 #~ msgstr "Code copié dans le presse-papier"
 
 #, fuzzy
-#~ msgid "website"
-#~ msgstr "Code copié dans le presse-papier"
-
-#, fuzzy
-#~ msgid "webpage"
-#~ msgstr "Code copié dans le presse-papier"
-
-#, fuzzy
-#~ msgid "page"
-#~ msgstr "Code copié dans le presse-papier"
-
-#, fuzzy
 #~ msgid "text"
 #~ msgstr "Code copié dans le presse-papier"
 
@@ -2091,10 +1793,6 @@ msgstr ""
 
 #, fuzzy
 #~ msgid "read that"
-#~ msgstr "Code copié dans le presse-papier"
-
-#, fuzzy
-#~ msgid "read clipboard"
 #~ msgstr "Code copié dans le presse-papier"
 
 #, fuzzy
@@ -2123,10 +1821,6 @@ msgstr ""
 
 #, fuzzy
 #~ msgid "join page"
-#~ msgstr "Code copié dans le presse-papier"
-
-#, fuzzy
-#~ msgid "open link"
 #~ msgstr "Code copié dans le presse-papier"
 
 #, fuzzy
@@ -2191,10 +1885,6 @@ msgstr ""
 
 #, fuzzy
 #~ msgid "open url"
-#~ msgstr "Code copié dans le presse-papier"
-
-#, fuzzy
-#~ msgid "load url"
 #~ msgstr "Code copié dans le presse-papier"
 
 #, fuzzy
@@ -2515,10 +2205,6 @@ msgstr ""
 
 #, fuzzy
 #~ msgid "read that link"
-#~ msgstr "Code copié dans le presse-papier"
-
-#, fuzzy
-#~ msgid "read the address"
 #~ msgstr "Code copié dans le presse-papier"
 
 #, fuzzy
