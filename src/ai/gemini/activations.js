@@ -10,10 +10,12 @@ export class FunctionsActivations {
 
         this.assitname = ['aiva', this.app.userSettings.ASSIST_NAME];
 
-        this.read = [_('read'), _('read_lang_var1'), _('read_lang_var2')];
+        this.read = [_('read'), _('read_var1'), _('read_var2')];
 
         this.clipboard = [
             _('clipboard text'),
+            _('clipboard_text_var1'),
+            _('clipboard_text_var2'),
             _('text I copied'),
             _('what did I copy'),
             _('copied text'),
