@@ -63,7 +63,7 @@ msgstr "texto na área de transferência"
 #: src/ai/gemini/activations.js:17
 #, fuzzy
 msgid "clipboard_text_var1"
-msgstr "texto na área de transferência"
+msgstr "texto da área de transferência"
 
 #: src/ai/gemini/activations.js:18
 #, fuzzy
