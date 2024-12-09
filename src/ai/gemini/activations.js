@@ -64,7 +64,7 @@ export class FunctionsActivations {
             _('blog'),
         ];
 
-        this.preWeather = [
+        this.preweather = [
             _('how is the'),
             _('what is the'),
             _("what's the"),
