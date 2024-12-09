@@ -72,7 +72,7 @@ msgstr "texto que eu copiei"
 
 #: src/ai/gemini/activations.js:19
 msgid "what did I copy"
-msgstr "o que foi copiado"
+msgstr "o que copiei"
 
 #: src/ai/gemini/activations.js:20
 #, fuzzy
