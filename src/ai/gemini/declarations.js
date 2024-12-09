@@ -48,7 +48,7 @@ export class FunctionsDeclarations {
             },
         };
 
-        this.browseWeb = {
+        this.browse = {
             name: 'browse_web',
             description: _('Open url in the browser.'),
             parameters: {
@@ -100,23 +100,54 @@ export class FunctionsDeclarations {
         let functionDeclarations = [];
         text = text.replace(/[.,!?;:"]/g, '');
         const words = text.toLowerCase().split(' ');
+        const firstFiveWords = words.slice(0, 5);
+        const firstTenWords = words.slice(0, 10);
 
-        for (const word of words) {
-            if (
-                this.app.gemini.function.activation.readClipboard.includes(word)
-            ) {
-                functionDeclarations.push(this.readClipboard);
+        for (const word of firstFiveWords) {
+            // read
+            if (this.app.gemini.function.activation.read.includes(word)) {
+                for (const word of firstTenWords) {
+                    // clipboard
+                    if (
+                        this.app.gemini.function.activation.clipboard.includes(
+                            word,
+                        )
+                    ) {
+                        functionDeclarations.push(this.readClipboard);
+                    }
+                }
             }
-            if (this.app.gemini.function.activation.browseWeb.includes(word)) {
-                functionDeclarations.push(this.browseWeb);
+            // browse
+            if (this.app.gemini.function.activation.browse.includes(word)) {
+                for (const word of firstTenWords) {
+                    // site
+                    if (
+                        this.app.gemini.function.activation.site.includes(word)
+                    ) {
+                        functionDeclarations.push(this.browse);
+                    }
+                }
             }
-            if (this.app.gemini.function.activation.cmd.includes(word)) {
+            // pre weather
+            if (this.app.gemini.function.activation.preweather.includes(word)) {
+                for (const word of firstTenWords) {
+                    // weather
+                    if (
+                        this.app.gemini.function.activation.weather.includes(
+                            word,
+                        )
+                    ) {
+                        functionDeclarations.push(this.weather);
+                    }
+                }
+            }
+            // app
+            if (this.app.gemini.function.activation.open.includes(word)) {
+                // commandline
                 functionDeclarations.push(this.cmd);
             }
-            if (this.app.gemini.function.activation.weather.includes(word)) {
-                functionDeclarations.push(this.weather);
-            }
         }
+
         return [{functionDeclarations}];
     }
 }
