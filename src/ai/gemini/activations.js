@@ -10,7 +10,7 @@ export class FunctionsActivations {
 
         this.assitname = ['aiva', this.app.userSettings.ASSIST_NAME];
 
-        this.read = [_('read')];
+        this.read = [_('read'), _('read_lang_var1'), _('read_lang_var2')];
 
         this.clipboard = [
             _('clipboard text'),

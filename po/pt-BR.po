@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-09 00:36-0300\n"
+"POT-Creation-Date: 2024-12-09 13:39-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -44,6 +44,14 @@ msgstr "Estou tendo dificuldade de te escutar. Por favor, tente novamente."
 #: src/ai/gemini/activations.js:13
 msgid "read"
 msgstr "ler"
+
+#: src/ai/gemini/activations.js:13
+msgid "read_lang_var1"
+msgstr "leia"
+
+#: src/ai/gemini/activations.js:13
+msgid "read_lang_var2"
+msgstr "lê"
 
 #: src/ai/gemini/activations.js:16
 #, fuzzy
@@ -1044,12 +1052,6 @@ msgstr "Suas preferências foram salvas"
 #, fuzzy
 #~ msgid "is it good weather for a walk"
 #~ msgstr "exiba informações sobre tempo para hoje"
-
-#~ msgid "read_lang_var1"
-#~ msgstr "leia"
-
-#~ msgid "read_lang_var2"
-#~ msgstr "lê"
 
 #~ msgid "open_lang_var1"
 #~ msgstr "abra"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-09 00:36-0300\n"
+"POT-Creation-Date: 2024-12-09 13:39-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language fr-FR\n"
@@ -42,6 +42,16 @@ msgstr ""
 #: src/ai/gemini/activations.js:13
 #, fuzzy
 msgid "read"
+msgstr "Code copié dans le presse-papier"
+
+#: src/ai/gemini/activations.js:13
+#, fuzzy
+msgid "read_lang_var1"
+msgstr "Code copié dans le presse-papier"
+
+#: src/ai/gemini/activations.js:13
+#, fuzzy
+msgid "read_lang_var2"
 msgstr "Code copié dans le presse-papier"
 
 #: src/ai/gemini/activations.js:16
@@ -1357,14 +1367,6 @@ msgstr ""
 
 #, fuzzy
 #~ msgid "cloud_lang_var1"
-#~ msgstr "Code copié dans le presse-papier"
-
-#, fuzzy
-#~ msgid "rain_lang_var1"
-#~ msgstr "Code copié dans le presse-papier"
-
-#, fuzzy
-#~ msgid "rain_lang_var2"
 #~ msgstr "Code copié dans le presse-papier"
 
 #, fuzzy
