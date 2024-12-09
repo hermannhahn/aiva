@@ -27,7 +27,7 @@ export class FunctionsActivations {
             _('the clipboard'),
         ];
 
-        this.openApp = [
+        this.open = [
             _('open'),
             _('launch'),
             _('start'),
@@ -36,7 +36,7 @@ export class FunctionsActivations {
             _('initialize'),
         ];
 
-        this.openSite = [
+        this.browse = [
             _('open'),
             _('go to'),
             _('navigate'),
@@ -64,7 +64,7 @@ export class FunctionsActivations {
             _('blog'),
         ];
 
-        this.weather = [
+        this.preWeather = [
             _('how is the'),
             _('what is the'),
             _("what's the"),
