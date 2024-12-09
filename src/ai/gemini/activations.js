@@ -15,7 +15,6 @@ export class FunctionsActivations {
         this.clipboard = [
             _('clipboard text'),
             _('clipboard_text_var1'),
-            _('clipboard_text_var2'),
             _('text I copied'),
             _('what did I copy'),
             _('copied text'),

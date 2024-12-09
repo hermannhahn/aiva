@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-09 13:40-0300\n"
+"POT-Creation-Date: 2024-12-09 13:43-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -67,409 +67,404 @@ msgstr "texto da área de transferência"
 
 #: src/ai/gemini/activations.js:18
 #, fuzzy
-msgid "clipboard_text_var2"
-msgstr "texto na área de transferência"
-
-#: src/ai/gemini/activations.js:19
-#, fuzzy
 msgid "text I copied"
 msgstr "texto que eu copiei"
 
-#: src/ai/gemini/activations.js:20
+#: src/ai/gemini/activations.js:19
 msgid "what did I copy"
 msgstr "o que foi copiado"
 
-#: src/ai/gemini/activations.js:21
+#: src/ai/gemini/activations.js:20
 #, fuzzy
 msgid "copied text"
 msgstr "texto copiado"
 
-#: src/ai/gemini/activations.js:22
+#: src/ai/gemini/activations.js:21
 #, fuzzy
 msgid "my clipboard"
 msgstr "minha área de transferência"
 
-#: src/ai/gemini/activations.js:23
+#: src/ai/gemini/activations.js:22
 #, fuzzy
 msgid "what's copied"
 msgstr "que copiei"
 
-#: src/ai/gemini/activations.js:24
+#: src/ai/gemini/activations.js:23
 #, fuzzy
 msgid "clipboard content"
 msgstr "conteúdo da área de transferência"
 
-#: src/ai/gemini/activations.js:25
+#: src/ai/gemini/activations.js:24
 #, fuzzy
 msgid "just copied"
 msgstr "copiado agora"
 
-#: src/ai/gemini/activations.js:26
+#: src/ai/gemini/activations.js:25
 #, fuzzy
 msgid "what I copied"
 msgstr "o que eu copiei"
 
-#: src/ai/gemini/activations.js:27
+#: src/ai/gemini/activations.js:26
 #, fuzzy
 msgid "copied content"
 msgstr "conteúdo copiado"
 
-#: src/ai/gemini/activations.js:28
+#: src/ai/gemini/activations.js:27
 #, fuzzy
 msgid "clipboard data"
 msgstr "da área de transferência"
 
-#: src/ai/gemini/activations.js:29
+#: src/ai/gemini/activations.js:28
 #, fuzzy
 msgid "the clipboard"
 msgstr "na área de transferência"
 
-#: src/ai/gemini/activations.js:33 src/ai/gemini/activations.js:42
+#: src/ai/gemini/activations.js:32 src/ai/gemini/activations.js:41
 msgid "open"
 msgstr "abrir"
 
-#: src/ai/gemini/activations.js:34 src/ai/gemini/activations.js:51
+#: src/ai/gemini/activations.js:33 src/ai/gemini/activations.js:50
 #, fuzzy
 msgid "launch"
 msgstr "lançar"
 
-#: src/ai/gemini/activations.js:35
+#: src/ai/gemini/activations.js:34
 msgid "start"
 msgstr "iniciar"
 
-#: src/ai/gemini/activations.js:36
+#: src/ai/gemini/activations.js:35
 msgid "run"
 msgstr "rodar"
 
-#: src/ai/gemini/activations.js:37 src/ai/gemini/activations.js:52
+#: src/ai/gemini/activations.js:36 src/ai/gemini/activations.js:51
 msgid "load"
 msgstr "carregar"
 
-#: src/ai/gemini/activations.js:38
+#: src/ai/gemini/activations.js:37
 msgid "initialize"
 msgstr "inicializar"
 
-#: src/ai/gemini/activations.js:43
+#: src/ai/gemini/activations.js:42
 msgid "go to"
 msgstr "ir para"
 
-#: src/ai/gemini/activations.js:44
+#: src/ai/gemini/activations.js:43
 msgid "navigate"
 msgstr "navegar"
 
-#: src/ai/gemini/activations.js:45
+#: src/ai/gemini/activations.js:44
 msgid "visit"
 msgstr "visitar"
 
-#: src/ai/gemini/activations.js:46
+#: src/ai/gemini/activations.js:45
 #, fuzzy
 msgid "check out"
 msgstr "verificar"
 
-#: src/ai/gemini/activations.js:47
+#: src/ai/gemini/activations.js:46
 msgid "pull up"
 msgstr "levantamento"
 
-#: src/ai/gemini/activations.js:48
+#: src/ai/gemini/activations.js:47
 msgid "bring"
 msgstr "trazer"
 
-#: src/ai/gemini/activations.js:49
+#: src/ai/gemini/activations.js:48
 msgid "take me"
 msgstr "me levar"
 
-#: src/ai/gemini/activations.js:50
+#: src/ai/gemini/activations.js:49
 #, fuzzy
 msgid "show me"
 msgstr "mostrar"
 
-#: src/ai/gemini/activations.js:53
+#: src/ai/gemini/activations.js:52
 msgid "find"
 msgstr "procurar"
 
-#: src/ai/gemini/activations.js:54
+#: src/ai/gemini/activations.js:53
 msgid "browse"
 msgstr "vizualizar"
 
-#: src/ai/gemini/activations.js:55
+#: src/ai/gemini/activations.js:54
 msgid "search"
 msgstr "pesquisar"
 
-#: src/ai/gemini/activations.js:59
+#: src/ai/gemini/activations.js:58
 msgid "website"
 msgstr ""
 
-#: src/ai/gemini/activations.js:60
+#: src/ai/gemini/activations.js:59
 msgid "site"
 msgstr ""
 
-#: src/ai/gemini/activations.js:61
+#: src/ai/gemini/activations.js:60
 msgid "page"
 msgstr "página"
 
-#: src/ai/gemini/activations.js:62
+#: src/ai/gemini/activations.js:61
 msgid "webpage"
 msgstr "página da web"
 
-#: src/ai/gemini/activations.js:63
+#: src/ai/gemini/activations.js:62
 msgid "link"
 msgstr ""
 
-#: src/ai/gemini/activations.js:64
+#: src/ai/gemini/activations.js:63
 msgid "url"
 msgstr ""
 
-#: src/ai/gemini/activations.js:65
+#: src/ai/gemini/activations.js:64
 msgid "address"
 msgstr "endereço"
 
-#: src/ai/gemini/activations.js:66
+#: src/ai/gemini/activations.js:65
 msgid "blog"
 msgstr ""
 
-#: src/ai/gemini/activations.js:70
+#: src/ai/gemini/activations.js:69
 #, fuzzy
 msgid "how is the"
 msgstr "como está o"
 
-#: src/ai/gemini/activations.js:71
+#: src/ai/gemini/activations.js:70
 #, fuzzy
 msgid "what is the"
 msgstr "qual é o"
 
-#: src/ai/gemini/activations.js:72
+#: src/ai/gemini/activations.js:71
 #, fuzzy
 msgid "what's the"
 msgstr "qual é a"
 
-#: src/ai/gemini/activations.js:73
+#: src/ai/gemini/activations.js:72
 #, fuzzy
 msgid "how hot is it"
 msgstr "quão quente está"
 
-#: src/ai/gemini/activations.js:74
+#: src/ai/gemini/activations.js:73
 #, fuzzy
 msgid "how cold is it"
 msgstr "quão frio está"
 
-#: src/ai/gemini/activations.js:75
+#: src/ai/gemini/activations.js:74
 msgid "is there"
 msgstr "está"
 
-#: src/ai/gemini/activations.js:76
+#: src/ai/gemini/activations.js:75
 msgid "will it"
 msgstr "vai"
 
-#: src/ai/gemini/activations.js:77
+#: src/ai/gemini/activations.js:76
 msgid "do I need"
 msgstr "eu preciso"
 
-#: src/ai/gemini/activations.js:78
+#: src/ai/gemini/activations.js:77
 #, fuzzy
 msgid "how warm is it"
 msgstr "quão quente está"
 
-#: src/ai/gemini/activations.js:79
+#: src/ai/gemini/activations.js:78
 #, fuzzy
 msgid "how's the"
 msgstr "como está"
 
-#: src/ai/gemini/activations.js:80
+#: src/ai/gemini/activations.js:79
 msgid "should I"
 msgstr "eu deveria"
 
-#: src/ai/gemini/activations.js:81
+#: src/ai/gemini/activations.js:80
 msgid "is the"
 msgstr "está"
 
-#: src/ai/gemini/activations.js:82
+#: src/ai/gemini/activations.js:81
 msgid "what time will it"
 msgstr "quando vai"
 
-#: src/ai/gemini/activations.js:83
+#: src/ai/gemini/activations.js:82
 #, fuzzy
 msgid "is it"
 msgstr "está"
 
-#: src/ai/gemini/activations.js:84
+#: src/ai/gemini/activations.js:83
 msgid "how long will it"
 msgstr "quanto tempo vai"
 
-#: src/ai/gemini/activations.js:85
+#: src/ai/gemini/activations.js:84
 #, fuzzy
 msgid "are there any"
 msgstr "há algum"
 
-#: src/ai/gemini/activations.js:86
+#: src/ai/gemini/activations.js:85
 msgid "will there be a"
 msgstr "vai haver"
 
-#: src/ai/gemini/activations.js:90
+#: src/ai/gemini/activations.js:89
 msgid "weather"
 msgstr "tempo"
 
-#: src/ai/gemini/activations.js:91
+#: src/ai/gemini/activations.js:90
 msgid "temperature"
 msgstr "temperatura"
 
-#: src/ai/gemini/activations.js:92
+#: src/ai/gemini/activations.js:91
 #, fuzzy
 msgid "raining"
 msgstr "chuvendo"
 
-#: src/ai/gemini/activations.js:93
+#: src/ai/gemini/activations.js:92
 #, fuzzy
 msgid "snowing"
 msgstr "nevando"
 
-#: src/ai/gemini/activations.js:94
+#: src/ai/gemini/activations.js:93
 #, fuzzy
 msgid "windy"
 msgstr "ventando"
 
-#: src/ai/gemini/activations.js:95
+#: src/ai/gemini/activations.js:94
 msgid "forecast"
 msgstr "ṕrevisão"
 
-#: src/ai/gemini/activations.js:96
+#: src/ai/gemini/activations.js:95
 #, fuzzy
 msgid "cloudy"
 msgstr "nublado"
 
-#: src/ai/gemini/activations.js:97
+#: src/ai/gemini/activations.js:96
 msgid "storm"
 msgstr "tempestade"
 
-#: src/ai/gemini/activations.js:98
+#: src/ai/gemini/activations.js:97
 msgid "humidity"
 msgstr "humidade"
 
-#: src/ai/gemini/activations.js:99
+#: src/ai/gemini/activations.js:98
 msgid "rain"
 msgstr "chuva"
 
-#: src/ai/gemini/activations.js:100
+#: src/ai/gemini/activations.js:99
 msgid "snow"
 msgstr "neve"
 
-#: src/ai/gemini/activations.js:101
+#: src/ai/gemini/activations.js:100
 msgid "umbrella"
 msgstr "guarda-chuva"
 
-#: src/ai/gemini/activations.js:102
+#: src/ai/gemini/activations.js:101
 msgid "jacket"
 msgstr "jaqueta"
 
-#: src/ai/gemini/activations.js:103
+#: src/ai/gemini/activations.js:102
 msgid "warm"
 msgstr "calor"
 
-#: src/ai/gemini/activations.js:104
+#: src/ai/gemini/activations.js:103
 msgid "foggy"
 msgstr "nevoeiro"
 
-#: src/ai/gemini/activations.js:105
+#: src/ai/gemini/activations.js:104
 #, fuzzy
 msgid "freezing"
 msgstr "congelando"
 
-#: src/ai/gemini/activations.js:106
+#: src/ai/gemini/activations.js:105
 #, fuzzy
 msgid "high for today"
 msgstr "informações sobre tempo"
 
-#: src/ai/gemini/activations.js:107
+#: src/ai/gemini/activations.js:106
 #, fuzzy
 msgid "low for today"
 msgstr "informações sobre clima"
 
-#: src/ai/gemini/activations.js:108
+#: src/ai/gemini/activations.js:107
 msgid "a coat"
 msgstr "casaco"
 
-#: src/ai/gemini/activations.js:109
+#: src/ai/gemini/activations.js:108
 msgid "wind"
 msgstr "vento"
 
-#: src/ai/gemini/activations.js:110
+#: src/ai/gemini/activations.js:109
 msgid "stormy"
 msgstr "tempestade"
 
-#: src/ai/gemini/activations.js:111
+#: src/ai/gemini/activations.js:110
 msgid "drizzling"
 msgstr "chovendo"
 
-#: src/ai/gemini/activations.js:112
+#: src/ai/gemini/activations.js:111
 msgid "thunder"
 msgstr "trovoada"
 
-#: src/ai/gemini/activations.js:113
+#: src/ai/gemini/activations.js:112
 msgid "lightning"
 msgstr "relampejando"
 
-#: src/ai/gemini/activations.js:114
+#: src/ai/gemini/activations.js:113
 msgid "mild"
 msgstr "agradável"
 
-#: src/ai/gemini/activations.js:115
+#: src/ai/gemini/activations.js:114
 msgid "air pressure"
 msgstr "pressão do ar"
 
-#: src/ai/gemini/activations.js:116
+#: src/ai/gemini/activations.js:115
 msgid "heatwave"
 msgstr "onda de calor"
 
-#: src/ai/gemini/activations.js:117
+#: src/ai/gemini/activations.js:116
 msgid "chilly"
 msgstr "frio"
 
-#: src/ai/gemini/activations.js:118
+#: src/ai/gemini/activations.js:117
 #, fuzzy
 msgid "overcast"
 msgstr "ṕrevisão"
 
-#: src/ai/gemini/activations.js:119
+#: src/ai/gemini/activations.js:118
 msgid "clear"
 msgstr "limpo"
 
-#: src/ai/gemini/activations.js:120
+#: src/ai/gemini/activations.js:119
 msgid "hot"
 msgstr "quente"
 
-#: src/ai/gemini/activations.js:121
+#: src/ai/gemini/activations.js:120
 msgid "outside"
 msgstr "lá fora"
 
-#: src/ai/gemini/activations.js:122
+#: src/ai/gemini/activations.js:121
 msgid "hurricane"
 msgstr "furacão"
 
-#: src/ai/gemini/activations.js:123
+#: src/ai/gemini/activations.js:122
 msgid "uv index"
 msgstr "índice uv"
 
-#: src/ai/gemini/activations.js:124
+#: src/ai/gemini/activations.js:123
 #, fuzzy
 msgid "sunny"
 msgstr "ensolarado"
 
-#: src/ai/gemini/activations.js:125
+#: src/ai/gemini/activations.js:124
 msgid "hail"
 msgstr "granizo"
 
-#: src/ai/gemini/activations.js:126
+#: src/ai/gemini/activations.js:125
 msgid "frost"
 msgstr "congelamento"
 
-#: src/ai/gemini/activations.js:127
+#: src/ai/gemini/activations.js:126
 msgid "cold"
 msgstr "frio"
 
-#: src/ai/gemini/activations.js:128
+#: src/ai/gemini/activations.js:127
 msgid "dew point"
 msgstr "ponto de orvalho"
 
-#: src/ai/gemini/activations.js:129
+#: src/ai/gemini/activations.js:128
 #, fuzzy
 msgid "visibility"
 msgstr "visibilidade"
@@ -909,6 +904,10 @@ msgstr "Salvar"
 #: src/prefs.js:287
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
+
+#, fuzzy
+#~ msgid "clipboard_text_var2"
+#~ msgstr "texto na área de transferência"
 
 #~ msgid "read the copied text"
 #~ msgstr "leia o texto que copiei"

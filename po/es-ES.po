@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-09 13:40-0300\n"
+"POT-Creation-Date: 2024-12-09 13:43-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language es-ES\n"
@@ -66,420 +66,415 @@ msgstr "Código copiado al portapapeles"
 
 #: src/ai/gemini/activations.js:18
 #, fuzzy
-msgid "clipboard_text_var2"
-msgstr "Código copiado al portapapeles"
-
-#: src/ai/gemini/activations.js:19
-#, fuzzy
 msgid "text I copied"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:20
+#: src/ai/gemini/activations.js:19
 msgid "what did I copy"
 msgstr ""
 
-#: src/ai/gemini/activations.js:21
+#: src/ai/gemini/activations.js:20
 #, fuzzy
 msgid "copied text"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:22
+#: src/ai/gemini/activations.js:21
 #, fuzzy
 msgid "my clipboard"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:23
+#: src/ai/gemini/activations.js:22
 #, fuzzy
 msgid "what's copied"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:24
+#: src/ai/gemini/activations.js:23
 #, fuzzy
 msgid "clipboard content"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:25
+#: src/ai/gemini/activations.js:24
 #, fuzzy
 msgid "just copied"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:26
+#: src/ai/gemini/activations.js:25
 #, fuzzy
 msgid "what I copied"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:27
+#: src/ai/gemini/activations.js:26
 #, fuzzy
 msgid "copied content"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:28
+#: src/ai/gemini/activations.js:27
 #, fuzzy
 msgid "clipboard data"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:29
+#: src/ai/gemini/activations.js:28
 #, fuzzy
 msgid "the clipboard"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:33 src/ai/gemini/activations.js:42
+#: src/ai/gemini/activations.js:32 src/ai/gemini/activations.js:41
 #, fuzzy
 msgid "open"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:34 src/ai/gemini/activations.js:51
+#: src/ai/gemini/activations.js:33 src/ai/gemini/activations.js:50
 #, fuzzy
 msgid "launch"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:35
+#: src/ai/gemini/activations.js:34
 msgid "start"
 msgstr ""
 
-#: src/ai/gemini/activations.js:36
+#: src/ai/gemini/activations.js:35
 msgid "run"
 msgstr ""
 
-#: src/ai/gemini/activations.js:37 src/ai/gemini/activations.js:52
+#: src/ai/gemini/activations.js:36 src/ai/gemini/activations.js:51
 #, fuzzy
 msgid "load"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:38
+#: src/ai/gemini/activations.js:37
 #, fuzzy
 msgid "initialize"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:43
+#: src/ai/gemini/activations.js:42
 msgid "go to"
 msgstr ""
 
-#: src/ai/gemini/activations.js:44
+#: src/ai/gemini/activations.js:43
 #, fuzzy
 msgid "navigate"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:45
+#: src/ai/gemini/activations.js:44
 #, fuzzy
 msgid "visit"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:46
+#: src/ai/gemini/activations.js:45
 #, fuzzy
 msgid "check out"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:47
+#: src/ai/gemini/activations.js:46
 #, fuzzy
 msgid "pull up"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:48
+#: src/ai/gemini/activations.js:47
 msgid "bring"
 msgstr ""
 
-#: src/ai/gemini/activations.js:49
+#: src/ai/gemini/activations.js:48
 msgid "take me"
 msgstr ""
 
-#: src/ai/gemini/activations.js:50
+#: src/ai/gemini/activations.js:49
 #, fuzzy
 msgid "show me"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:53
+#: src/ai/gemini/activations.js:52
 msgid "find"
 msgstr ""
 
-#: src/ai/gemini/activations.js:54
+#: src/ai/gemini/activations.js:53
 #, fuzzy
 msgid "browse"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:55
+#: src/ai/gemini/activations.js:54
 msgid "search"
 msgstr ""
 
-#: src/ai/gemini/activations.js:59
+#: src/ai/gemini/activations.js:58
 #, fuzzy
 msgid "website"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:60
+#: src/ai/gemini/activations.js:59
 #, fuzzy
 msgid "site"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:61
+#: src/ai/gemini/activations.js:60
 #, fuzzy
 msgid "page"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:62
+#: src/ai/gemini/activations.js:61
 #, fuzzy
 msgid "webpage"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:63
+#: src/ai/gemini/activations.js:62
 #, fuzzy
 msgid "link"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:64
+#: src/ai/gemini/activations.js:63
 msgid "url"
 msgstr ""
 
-#: src/ai/gemini/activations.js:65
+#: src/ai/gemini/activations.js:64
 #, fuzzy
 msgid "address"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:66
+#: src/ai/gemini/activations.js:65
 msgid "blog"
 msgstr ""
 
-#: src/ai/gemini/activations.js:70
+#: src/ai/gemini/activations.js:69
 #, fuzzy
 msgid "how is the"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:71
+#: src/ai/gemini/activations.js:70
 #, fuzzy
 msgid "what is the"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:72
+#: src/ai/gemini/activations.js:71
 #, fuzzy
 msgid "what's the"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:73
+#: src/ai/gemini/activations.js:72
 #, fuzzy
 msgid "how hot is it"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:74
+#: src/ai/gemini/activations.js:73
 #, fuzzy
 msgid "how cold is it"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:75
+#: src/ai/gemini/activations.js:74
 #, fuzzy
 msgid "is there"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:76
+#: src/ai/gemini/activations.js:75
 msgid "will it"
 msgstr ""
 
-#: src/ai/gemini/activations.js:77
+#: src/ai/gemini/activations.js:76
 msgid "do I need"
 msgstr ""
 
-#: src/ai/gemini/activations.js:78
+#: src/ai/gemini/activations.js:77
 #, fuzzy
 msgid "how warm is it"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:79
+#: src/ai/gemini/activations.js:78
 #, fuzzy
 msgid "how's the"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:80
+#: src/ai/gemini/activations.js:79
 msgid "should I"
 msgstr ""
 
-#: src/ai/gemini/activations.js:81
+#: src/ai/gemini/activations.js:80
 #, fuzzy
 msgid "is the"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:82
+#: src/ai/gemini/activations.js:81
 msgid "what time will it"
 msgstr ""
 
-#: src/ai/gemini/activations.js:83
+#: src/ai/gemini/activations.js:82
 msgid "is it"
 msgstr ""
 
-#: src/ai/gemini/activations.js:84
+#: src/ai/gemini/activations.js:83
 msgid "how long will it"
 msgstr ""
 
-#: src/ai/gemini/activations.js:85
+#: src/ai/gemini/activations.js:84
 msgid "are there any"
 msgstr ""
 
-#: src/ai/gemini/activations.js:86
+#: src/ai/gemini/activations.js:85
 msgid "will there be a"
 msgstr ""
 
-#: src/ai/gemini/activations.js:90
+#: src/ai/gemini/activations.js:89
 msgid "weather"
 msgstr ""
 
-#: src/ai/gemini/activations.js:91
+#: src/ai/gemini/activations.js:90
 #, fuzzy
 msgid "temperature"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:92
+#: src/ai/gemini/activations.js:91
 msgid "raining"
 msgstr ""
 
-#: src/ai/gemini/activations.js:93
+#: src/ai/gemini/activations.js:92
 msgid "snowing"
 msgstr ""
 
-#: src/ai/gemini/activations.js:94
+#: src/ai/gemini/activations.js:93
 msgid "windy"
 msgstr ""
 
-#: src/ai/gemini/activations.js:95
+#: src/ai/gemini/activations.js:94
 #, fuzzy
 msgid "forecast"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:96
+#: src/ai/gemini/activations.js:95
 msgid "cloudy"
 msgstr ""
 
-#: src/ai/gemini/activations.js:97
+#: src/ai/gemini/activations.js:96
 msgid "storm"
 msgstr ""
 
-#: src/ai/gemini/activations.js:98
+#: src/ai/gemini/activations.js:97
 #, fuzzy
 msgid "humidity"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:99
+#: src/ai/gemini/activations.js:98
 msgid "rain"
 msgstr ""
 
-#: src/ai/gemini/activations.js:100
+#: src/ai/gemini/activations.js:99
 msgid "snow"
 msgstr ""
 
-#: src/ai/gemini/activations.js:101
+#: src/ai/gemini/activations.js:100
 msgid "umbrella"
 msgstr ""
 
-#: src/ai/gemini/activations.js:102
+#: src/ai/gemini/activations.js:101
 msgid "jacket"
 msgstr ""
 
-#: src/ai/gemini/activations.js:103
+#: src/ai/gemini/activations.js:102
 msgid "warm"
 msgstr ""
 
-#: src/ai/gemini/activations.js:104
+#: src/ai/gemini/activations.js:103
 msgid "foggy"
 msgstr ""
 
-#: src/ai/gemini/activations.js:105
+#: src/ai/gemini/activations.js:104
 #, fuzzy
 msgid "freezing"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:106
+#: src/ai/gemini/activations.js:105
 #, fuzzy
 msgid "high for today"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:107
+#: src/ai/gemini/activations.js:106
 #, fuzzy
 msgid "low for today"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:108
+#: src/ai/gemini/activations.js:107
 msgid "a coat"
 msgstr ""
 
-#: src/ai/gemini/activations.js:109
+#: src/ai/gemini/activations.js:108
 msgid "wind"
 msgstr ""
 
-#: src/ai/gemini/activations.js:110
+#: src/ai/gemini/activations.js:109
 msgid "stormy"
 msgstr ""
 
-#: src/ai/gemini/activations.js:111
+#: src/ai/gemini/activations.js:110
 msgid "drizzling"
 msgstr ""
 
-#: src/ai/gemini/activations.js:112
+#: src/ai/gemini/activations.js:111
 msgid "thunder"
 msgstr ""
 
-#: src/ai/gemini/activations.js:113
+#: src/ai/gemini/activations.js:112
 msgid "lightning"
 msgstr ""
 
-#: src/ai/gemini/activations.js:114
+#: src/ai/gemini/activations.js:113
 msgid "mild"
 msgstr ""
 
-#: src/ai/gemini/activations.js:115
+#: src/ai/gemini/activations.js:114
 msgid "air pressure"
 msgstr ""
 
-#: src/ai/gemini/activations.js:116
+#: src/ai/gemini/activations.js:115
 msgid "heatwave"
 msgstr ""
 
-#: src/ai/gemini/activations.js:117
+#: src/ai/gemini/activations.js:116
 msgid "chilly"
 msgstr ""
 
-#: src/ai/gemini/activations.js:118
+#: src/ai/gemini/activations.js:117
 #, fuzzy
 msgid "overcast"
 msgstr "Código copiado al portapapeles"
 
-#: src/ai/gemini/activations.js:119
+#: src/ai/gemini/activations.js:118
 msgid "clear"
 msgstr ""
 
-#: src/ai/gemini/activations.js:120
+#: src/ai/gemini/activations.js:119
 msgid "hot"
 msgstr ""
 
-#: src/ai/gemini/activations.js:121
+#: src/ai/gemini/activations.js:120
 msgid "outside"
 msgstr ""
 
-#: src/ai/gemini/activations.js:122
+#: src/ai/gemini/activations.js:121
 msgid "hurricane"
 msgstr ""
 
-#: src/ai/gemini/activations.js:123
+#: src/ai/gemini/activations.js:122
 msgid "uv index"
 msgstr ""
 
-#: src/ai/gemini/activations.js:124
+#: src/ai/gemini/activations.js:123
 msgid "sunny"
 msgstr ""
 
-#: src/ai/gemini/activations.js:125
+#: src/ai/gemini/activations.js:124
 msgid "hail"
 msgstr ""
 
-#: src/ai/gemini/activations.js:126
+#: src/ai/gemini/activations.js:125
 msgid "frost"
 msgstr ""
 
-#: src/ai/gemini/activations.js:127
+#: src/ai/gemini/activations.js:126
 msgid "cold"
 msgstr ""
 
-#: src/ai/gemini/activations.js:128
+#: src/ai/gemini/activations.js:127
 msgid "dew point"
 msgstr ""
 
-#: src/ai/gemini/activations.js:129
+#: src/ai/gemini/activations.js:128
 #, fuzzy
 msgid "visibility"
 msgstr "Código copiado al portapapeles"
@@ -914,6 +909,10 @@ msgstr ""
 #: src/prefs.js:287
 msgid "Your preferences have been saved"
 msgstr ""
+
+#, fuzzy
+#~ msgid "clipboard_text_var2"
+#~ msgstr "Código copiado al portapapeles"
 
 #, fuzzy
 #~ msgid "read the copied text"
