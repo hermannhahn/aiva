@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-10 01:58-0300\n"
+"POT-Creation-Date: 2024-12-10 01:59-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language it-IT\n"
@@ -444,7 +444,7 @@ msgstr ""
 msgid "open"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini/activations.js:114 src/ai/gemini/activations.js:153
+#: src/ai/gemini/activations.js:114 src/ai/gemini/activations.js:154
 #, fuzzy
 msgid "launch"
 msgstr "Codice copiato negli appunti"
@@ -457,7 +457,7 @@ msgstr ""
 msgid "run"
 msgstr ""
 
-#: src/ai/gemini/activations.js:117 src/ai/gemini/activations.js:156
+#: src/ai/gemini/activations.js:117 src/ai/gemini/activations.js:157
 #, fuzzy
 msgid "load"
 msgstr "Codice copiato negli appunti"
@@ -577,399 +577,404 @@ msgstr "Codice copiato negli appunti"
 
 #: src/ai/gemini/activations.js:147
 #, fuzzy
-msgid "navigate"
+msgid "go_to_var4"
 msgstr "Codice copiato negli appunti"
 
 #: src/ai/gemini/activations.js:148
 #, fuzzy
-msgid "navigate_var1"
+msgid "navigate"
 msgstr "Codice copiato negli appunti"
 
 #: src/ai/gemini/activations.js:149
 #, fuzzy
-msgid "navigate_var2"
+msgid "navigate_var1"
 msgstr "Codice copiato negli appunti"
 
 #: src/ai/gemini/activations.js:150
 #, fuzzy
-msgid "visit"
+msgid "navigate_var2"
 msgstr "Codice copiato negli appunti"
 
 #: src/ai/gemini/activations.js:151
 #, fuzzy
-msgid "visit_var1"
+msgid "visit"
 msgstr "Codice copiato negli appunti"
 
 #: src/ai/gemini/activations.js:152
 #, fuzzy
-msgid "visit_var2"
+msgid "visit_var1"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini/activations.js:154
+#: src/ai/gemini/activations.js:153
 #, fuzzy
-msgid "launch_var1"
+msgid "visit_var2"
 msgstr "Codice copiato negli appunti"
 
 #: src/ai/gemini/activations.js:155
 #, fuzzy
-msgid "launch_var2"
+msgid "launch_var1"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini/activations.js:157
+#: src/ai/gemini/activations.js:156
 #, fuzzy
-msgid "load_var1"
+msgid "launch_var2"
 msgstr "Codice copiato negli appunti"
 
 #: src/ai/gemini/activations.js:158
 #, fuzzy
-msgid "load_var2"
+msgid "load_var1"
 msgstr "Codice copiato negli appunti"
 
 #: src/ai/gemini/activations.js:159
+#, fuzzy
+msgid "load_var2"
+msgstr "Codice copiato negli appunti"
+
+#: src/ai/gemini/activations.js:160
 msgid "find"
 msgstr ""
 
-#: src/ai/gemini/activations.js:160
+#: src/ai/gemini/activations.js:161
 #, fuzzy
 msgid "find_var1"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini/activations.js:161
+#: src/ai/gemini/activations.js:162
 #, fuzzy
 msgid "find_var2"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini/activations.js:162
+#: src/ai/gemini/activations.js:163
 msgid "search"
 msgstr ""
 
-#: src/ai/gemini/activations.js:163
+#: src/ai/gemini/activations.js:164
 #, fuzzy
 msgid "search_var1"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini/activations.js:164
+#: src/ai/gemini/activations.js:165
 #, fuzzy
 msgid "search_var2"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini/activations.js:165
+#: src/ai/gemini/activations.js:166
 #, fuzzy
 msgid "browse"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini/activations.js:166
+#: src/ai/gemini/activations.js:167
 #, fuzzy
 msgid "browse_var1"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini/activations.js:167
+#: src/ai/gemini/activations.js:168
 #, fuzzy
 msgid "browse_var2"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini/activations.js:168
+#: src/ai/gemini/activations.js:169
 #, fuzzy
 msgid "check out"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini/activations.js:169
+#: src/ai/gemini/activations.js:170
 #, fuzzy
 msgid "pull up"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini/activations.js:170
+#: src/ai/gemini/activations.js:171
 msgid "bring"
 msgstr ""
 
-#: src/ai/gemini/activations.js:171
+#: src/ai/gemini/activations.js:172
 msgid "take me"
 msgstr ""
 
-#: src/ai/gemini/activations.js:172
+#: src/ai/gemini/activations.js:173
 #, fuzzy
 msgid "show me"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini/activations.js:176
+#: src/ai/gemini/activations.js:177
 #, fuzzy
 msgid "website"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini/activations.js:177
+#: src/ai/gemini/activations.js:178
 #, fuzzy
 msgid "site"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini/activations.js:178
+#: src/ai/gemini/activations.js:179
 #, fuzzy
 msgid "page"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini/activations.js:179
+#: src/ai/gemini/activations.js:180
 #, fuzzy
 msgid "webpage"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini/activations.js:180
+#: src/ai/gemini/activations.js:181
 #, fuzzy
 msgid "link"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini/activations.js:181
+#: src/ai/gemini/activations.js:182
 msgid "url"
 msgstr ""
 
-#: src/ai/gemini/activations.js:182
+#: src/ai/gemini/activations.js:183
 #, fuzzy
 msgid "address"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini/activations.js:183
+#: src/ai/gemini/activations.js:184
 msgid "blog"
 msgstr ""
 
-#: src/ai/gemini/activations.js:187
+#: src/ai/gemini/activations.js:188
 #, fuzzy
 msgid "how is the"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini/activations.js:188
+#: src/ai/gemini/activations.js:189
 #, fuzzy
 msgid "what is the"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini/activations.js:189
+#: src/ai/gemini/activations.js:190
 #, fuzzy
 msgid "what's the"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini/activations.js:190
+#: src/ai/gemini/activations.js:191
 #, fuzzy
 msgid "how hot is it"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini/activations.js:191
+#: src/ai/gemini/activations.js:192
 #, fuzzy
 msgid "how cold is it"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini/activations.js:192
+#: src/ai/gemini/activations.js:193
 #, fuzzy
 msgid "is there"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini/activations.js:193
+#: src/ai/gemini/activations.js:194
 msgid "will it"
 msgstr ""
 
-#: src/ai/gemini/activations.js:194
+#: src/ai/gemini/activations.js:195
 msgid "do I need"
 msgstr ""
 
-#: src/ai/gemini/activations.js:195
+#: src/ai/gemini/activations.js:196
 #, fuzzy
 msgid "how warm is it"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini/activations.js:196
+#: src/ai/gemini/activations.js:197
 #, fuzzy
 msgid "how's the"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini/activations.js:197
+#: src/ai/gemini/activations.js:198
 msgid "should I"
 msgstr ""
 
-#: src/ai/gemini/activations.js:198
+#: src/ai/gemini/activations.js:199
 #, fuzzy
 msgid "is the"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini/activations.js:199
+#: src/ai/gemini/activations.js:200
 msgid "what time will it"
 msgstr ""
 
-#: src/ai/gemini/activations.js:200
+#: src/ai/gemini/activations.js:201
 msgid "is it"
 msgstr ""
 
-#: src/ai/gemini/activations.js:201
+#: src/ai/gemini/activations.js:202
 msgid "how long will it"
 msgstr ""
 
-#: src/ai/gemini/activations.js:202
+#: src/ai/gemini/activations.js:203
 msgid "are there any"
 msgstr ""
 
-#: src/ai/gemini/activations.js:203
+#: src/ai/gemini/activations.js:204
 msgid "will there be a"
 msgstr ""
 
-#: src/ai/gemini/activations.js:207
+#: src/ai/gemini/activations.js:208
 msgid "weather"
 msgstr ""
 
-#: src/ai/gemini/activations.js:208
+#: src/ai/gemini/activations.js:209
 #, fuzzy
 msgid "temperature"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini/activations.js:209
+#: src/ai/gemini/activations.js:210
 msgid "raining"
 msgstr ""
 
-#: src/ai/gemini/activations.js:210
+#: src/ai/gemini/activations.js:211
 msgid "snowing"
 msgstr ""
 
-#: src/ai/gemini/activations.js:211
+#: src/ai/gemini/activations.js:212
 msgid "windy"
 msgstr ""
 
-#: src/ai/gemini/activations.js:212
+#: src/ai/gemini/activations.js:213
 #, fuzzy
 msgid "forecast"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini/activations.js:213
+#: src/ai/gemini/activations.js:214
 msgid "cloudy"
 msgstr ""
 
-#: src/ai/gemini/activations.js:214
+#: src/ai/gemini/activations.js:215
 msgid "storm"
 msgstr ""
 
-#: src/ai/gemini/activations.js:215
+#: src/ai/gemini/activations.js:216
 #, fuzzy
 msgid "humidity"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini/activations.js:216
+#: src/ai/gemini/activations.js:217
 msgid "rain"
 msgstr ""
 
-#: src/ai/gemini/activations.js:217
+#: src/ai/gemini/activations.js:218
 msgid "snow"
 msgstr ""
 
-#: src/ai/gemini/activations.js:218
+#: src/ai/gemini/activations.js:219
 msgid "umbrella"
 msgstr ""
 
-#: src/ai/gemini/activations.js:219
+#: src/ai/gemini/activations.js:220
 msgid "jacket"
 msgstr ""
 
-#: src/ai/gemini/activations.js:220
+#: src/ai/gemini/activations.js:221
 msgid "warm"
 msgstr ""
 
-#: src/ai/gemini/activations.js:221
+#: src/ai/gemini/activations.js:222
 msgid "foggy"
 msgstr ""
 
-#: src/ai/gemini/activations.js:222
+#: src/ai/gemini/activations.js:223
 #, fuzzy
 msgid "freezing"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini/activations.js:223
+#: src/ai/gemini/activations.js:224
 #, fuzzy
 msgid "high for today"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini/activations.js:224
+#: src/ai/gemini/activations.js:225
 #, fuzzy
 msgid "low for today"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini/activations.js:225
+#: src/ai/gemini/activations.js:226
 msgid "a coat"
 msgstr ""
 
-#: src/ai/gemini/activations.js:226
+#: src/ai/gemini/activations.js:227
 msgid "wind"
 msgstr ""
 
-#: src/ai/gemini/activations.js:227
+#: src/ai/gemini/activations.js:228
 msgid "stormy"
 msgstr ""
 
-#: src/ai/gemini/activations.js:228
+#: src/ai/gemini/activations.js:229
 msgid "drizzling"
 msgstr ""
 
-#: src/ai/gemini/activations.js:229
+#: src/ai/gemini/activations.js:230
 msgid "thunder"
 msgstr ""
 
-#: src/ai/gemini/activations.js:230
+#: src/ai/gemini/activations.js:231
 msgid "lightning"
 msgstr ""
 
-#: src/ai/gemini/activations.js:231
+#: src/ai/gemini/activations.js:232
 msgid "mild"
 msgstr ""
 
-#: src/ai/gemini/activations.js:232
+#: src/ai/gemini/activations.js:233
 msgid "air pressure"
 msgstr ""
 
-#: src/ai/gemini/activations.js:233
+#: src/ai/gemini/activations.js:234
 msgid "heatwave"
 msgstr ""
 
-#: src/ai/gemini/activations.js:234
+#: src/ai/gemini/activations.js:235
 msgid "chilly"
 msgstr ""
 
-#: src/ai/gemini/activations.js:235
+#: src/ai/gemini/activations.js:236
 #, fuzzy
 msgid "overcast"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini/activations.js:236
+#: src/ai/gemini/activations.js:237
 msgid "clear"
 msgstr ""
 
-#: src/ai/gemini/activations.js:237
+#: src/ai/gemini/activations.js:238
 msgid "hot"
 msgstr ""
 
-#: src/ai/gemini/activations.js:238
+#: src/ai/gemini/activations.js:239
 msgid "outside"
 msgstr ""
 
-#: src/ai/gemini/activations.js:239
+#: src/ai/gemini/activations.js:240
 msgid "hurricane"
 msgstr ""
 
-#: src/ai/gemini/activations.js:240
+#: src/ai/gemini/activations.js:241
 msgid "uv index"
 msgstr ""
 
-#: src/ai/gemini/activations.js:241
+#: src/ai/gemini/activations.js:242
 msgid "sunny"
 msgstr ""
 
-#: src/ai/gemini/activations.js:242
+#: src/ai/gemini/activations.js:243
 msgid "hail"
 msgstr ""
 
-#: src/ai/gemini/activations.js:243
+#: src/ai/gemini/activations.js:244
 msgid "frost"
 msgstr ""
 
-#: src/ai/gemini/activations.js:244
+#: src/ai/gemini/activations.js:245
 msgid "cold"
 msgstr ""
 
-#: src/ai/gemini/activations.js:245
+#: src/ai/gemini/activations.js:246
 msgid "dew point"
 msgstr ""
 
-#: src/ai/gemini/activations.js:246
+#: src/ai/gemini/activations.js:247
 #, fuzzy
 msgid "visibility"
 msgstr "Codice copiato negli appunti"
