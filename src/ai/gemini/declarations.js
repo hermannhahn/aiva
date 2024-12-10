@@ -103,14 +103,16 @@ export class FunctionsDeclarations {
         const firstFiveWords = words.slice(0, 5);
         const firstTenWords = words.slice(0, 10);
 
-        for (const word of firstFiveWords) {
+        for (const cmdActivation of firstFiveWords) {
             // read
-            if (this.app.gemini.function.activation.read.includes(word)) {
-                for (const word of firstTenWords) {
+            if (
+                this.app.gemini.function.activation.read.includes(cmdActivation)
+            ) {
+                for (const cmdFunction of firstTenWords) {
                     // clipboard
                     if (
                         this.app.gemini.function.activation.clipboard.includes(
-                            word,
+                            cmdFunction,
                         )
                     ) {
                         functionDeclarations.push(this.readClipboard);
@@ -118,23 +120,33 @@ export class FunctionsDeclarations {
                 }
             }
             // browse
-            if (this.app.gemini.function.activation.browse.includes(word)) {
-                for (const word of firstTenWords) {
+            if (
+                this.app.gemini.function.activation.browse.includes(
+                    cmdActivation,
+                )
+            ) {
+                for (const cmdFunction of firstTenWords) {
                     // site
                     if (
-                        this.app.gemini.function.activation.site.includes(word)
+                        this.app.gemini.function.activation.site.includes(
+                            cmdFunction,
+                        )
                     ) {
                         functionDeclarations.push(this.browse);
                     }
                 }
             }
             // pre weather
-            if (this.app.gemini.function.activation.preweather.includes(word)) {
-                for (const word of firstTenWords) {
+            if (
+                this.app.gemini.function.activation.preweather.includes(
+                    cmdActivation,
+                )
+            ) {
+                for (const cmdFunction of firstTenWords) {
                     // weather
                     if (
                         this.app.gemini.function.activation.weather.includes(
-                            word,
+                            cmdFunction,
                         )
                     ) {
                         functionDeclarations.push(this.weather);
@@ -142,7 +154,9 @@ export class FunctionsDeclarations {
                 }
             }
             // app
-            if (this.app.gemini.function.activation.open.includes(word)) {
+            if (
+                this.app.gemini.function.activation.open.includes(cmdActivation)
+            ) {
                 // commandline
                 functionDeclarations.push(this.cmd);
             }
