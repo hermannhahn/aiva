@@ -188,6 +188,7 @@ export class FunctionsActivations {
 
         this.preweather = [
             _('how is the'),
+            _("how's the"),
             _('what is the'),
             _("what's the"),
             _('how hot is it'),
@@ -208,6 +209,7 @@ export class FunctionsActivations {
 
         this.weather = [
             _('weather'),
+            _('clime'),
             _('temperature'),
             _('raining'),
             _('snowing'),
