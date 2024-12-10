@@ -66,7 +66,6 @@ msgid "gnome"
 msgstr ""
 
 #: src/ai/gemini/activations.js:15
-#, fuzzy
 msgid "settings"
 msgstr "configurações"
 
@@ -160,9 +159,8 @@ msgid "docker"
 msgstr ""
 
 #: src/ai/gemini/activations.js:39
-#, fuzzy
 msgid "kubernetes"
-msgstr "hibernar"
+msgstr ""
 
 #: src/ai/gemini/activations.js:40
 msgid "steam"
@@ -181,9 +179,8 @@ msgid "battle.net"
 msgstr ""
 
 #: src/ai/gemini/activations.js:44
-#, fuzzy
 msgid "gog"
-msgstr "vá para"
+msgstr ""
 
 #: src/ai/gemini/activations.js:45
 msgid "itch.io"
@@ -446,7 +443,6 @@ msgid "open"
 msgstr "abrir"
 
 #: src/ai/gemini/activations.js:114 src/ai/gemini/activations.js:156
-#, fuzzy
 msgid "launch"
 msgstr "lançar"
 
@@ -471,27 +467,22 @@ msgid "read"
 msgstr "ler"
 
 #: src/ai/gemini/activations.js:121
-#, fuzzy
 msgid "read_var1"
 msgstr "leia"
 
 #: src/ai/gemini/activations.js:121
-#, fuzzy
 msgid "read_var2"
 msgstr "lê"
 
 #: src/ai/gemini/activations.js:124
-#, fuzzy
 msgid "clipboard text"
 msgstr "texto na área de transferência"
 
 #: src/ai/gemini/activations.js:125
-#, fuzzy
 msgid "clipboard_text_var1"
 msgstr "texto da área de transferência"
 
 #: src/ai/gemini/activations.js:126
-#, fuzzy
 msgid "text I copied"
 msgstr "texto que eu copiei"
 
@@ -500,57 +491,46 @@ msgid "what did I copy"
 msgstr "o que copiei"
 
 #: src/ai/gemini/activations.js:128
-#, fuzzy
 msgid "copied text"
 msgstr "texto copiado"
 
 #: src/ai/gemini/activations.js:129
-#, fuzzy
 msgid "my clipboard"
 msgstr "minha área de transferência"
 
 #: src/ai/gemini/activations.js:130
-#, fuzzy
 msgid "what's copied"
 msgstr "que copiei"
 
 #: src/ai/gemini/activations.js:131
-#, fuzzy
 msgid "clipboard content"
 msgstr "conteúdo da área de transferência"
 
 #: src/ai/gemini/activations.js:132
-#, fuzzy
 msgid "just copied"
 msgstr "copiado agora"
 
 #: src/ai/gemini/activations.js:133
-#, fuzzy
 msgid "what I copied"
 msgstr "o que eu copiei"
 
 #: src/ai/gemini/activations.js:134
-#, fuzzy
 msgid "copied content"
 msgstr "conteúdo copiado"
 
 #: src/ai/gemini/activations.js:135
-#, fuzzy
 msgid "clipboard data"
 msgstr "da área de transferência"
 
 #: src/ai/gemini/activations.js:136
-#, fuzzy
 msgid "the clipboard"
 msgstr "na área de transferência"
 
 #: src/ai/gemini/activations.js:141
-#, fuzzy
 msgid "open_var1"
 msgstr "abra"
 
 #: src/ai/gemini/activations.js:142
-#, fuzzy
 msgid "open_var2"
 msgstr "abre"
 
@@ -559,32 +539,26 @@ msgid "go to"
 msgstr "ir para"
 
 #: src/ai/gemini/activations.js:144
-#, fuzzy
 msgid "go_to_var1"
 msgstr "vai para"
 
 #: src/ai/gemini/activations.js:145
-#, fuzzy
 msgid "go_to_var2"
 msgstr "vai pra"
 
 #: src/ai/gemini/activations.js:146
-#, fuzzy
 msgid "go_to_var3"
 msgstr "vai na"
 
 #: src/ai/gemini/activations.js:147
-#, fuzzy
 msgid "go_to_var4"
 msgstr "vá para"
 
 #: src/ai/gemini/activations.js:148
-#, fuzzy
 msgid "go_to_var5"
 msgstr "vá pra"
 
 #: src/ai/gemini/activations.js:149
-#, fuzzy
 msgid "go_to_var6"
 msgstr "ir pra"
 
@@ -593,12 +567,10 @@ msgid "navigate"
 msgstr "navegar"
 
 #: src/ai/gemini/activations.js:151
-#, fuzzy
 msgid "navigate_var1"
 msgstr "navegue"
 
 #: src/ai/gemini/activations.js:152
-#, fuzzy
 msgid "navigate_var2"
 msgstr "navega"
 
@@ -607,32 +579,26 @@ msgid "visit"
 msgstr "visitar"
 
 #: src/ai/gemini/activations.js:154
-#, fuzzy
 msgid "visit_var1"
 msgstr "visite"
 
 #: src/ai/gemini/activations.js:155
-#, fuzzy
 msgid "visit_var2"
 msgstr "visita"
 
 #: src/ai/gemini/activations.js:157
-#, fuzzy
 msgid "launch_var1"
 msgstr "lance"
 
 #: src/ai/gemini/activations.js:158
-#, fuzzy
 msgid "launch_var2"
 msgstr "lança"
 
 #: src/ai/gemini/activations.js:160
-#, fuzzy
 msgid "load_var1"
 msgstr "carrega"
 
 #: src/ai/gemini/activations.js:161
-#, fuzzy
 msgid "load_var2"
 msgstr "carregue"
 
@@ -641,12 +607,10 @@ msgid "find"
 msgstr "procurar"
 
 #: src/ai/gemini/activations.js:163
-#, fuzzy
 msgid "find_var1"
 msgstr "procure"
 
 #: src/ai/gemini/activations.js:164
-#, fuzzy
 msgid "find_var2"
 msgstr "procura"
 
@@ -655,12 +619,10 @@ msgid "search"
 msgstr "pesquisar"
 
 #: src/ai/gemini/activations.js:166
-#, fuzzy
 msgid "search_var1"
 msgstr "pesquise"
 
 #: src/ai/gemini/activations.js:167
-#, fuzzy
 msgid "search_var2"
 msgstr "pesquisa"
 
@@ -669,17 +631,14 @@ msgid "browse"
 msgstr "vizualizar"
 
 #: src/ai/gemini/activations.js:169
-#, fuzzy
 msgid "browse_var1"
 msgstr "visualize"
 
 #: src/ai/gemini/activations.js:170
-#, fuzzy
 msgid "browse_var2"
 msgstr "visualiza"
 
 #: src/ai/gemini/activations.js:171
-#, fuzzy
 msgid "check out"
 msgstr "verificar"
 
@@ -696,9 +655,8 @@ msgid "take me"
 msgstr "me levar"
 
 #: src/ai/gemini/activations.js:175
-#, fuzzy
 msgid "show me"
-msgstr "mostrar"
+msgstr "me mostra"
 
 #: src/ai/gemini/activations.js:179
 msgid "website"
@@ -733,27 +691,22 @@ msgid "blog"
 msgstr ""
 
 #: src/ai/gemini/activations.js:190
-#, fuzzy
 msgid "how is the"
 msgstr "como está o"
 
 #: src/ai/gemini/activations.js:191
-#, fuzzy
 msgid "what is the"
 msgstr "qual é o"
 
 #: src/ai/gemini/activations.js:192
-#, fuzzy
 msgid "what's the"
 msgstr "qual é a"
 
 #: src/ai/gemini/activations.js:193
-#, fuzzy
 msgid "how hot is it"
 msgstr "quão quente está"
 
 #: src/ai/gemini/activations.js:194
-#, fuzzy
 msgid "how cold is it"
 msgstr "quão frio está"
 
@@ -770,12 +723,10 @@ msgid "do I need"
 msgstr "eu preciso"
 
 #: src/ai/gemini/activations.js:198
-#, fuzzy
 msgid "how warm is it"
 msgstr "quão quente está"
 
 #: src/ai/gemini/activations.js:199
-#, fuzzy
 msgid "how's the"
 msgstr "como está"
 
@@ -792,7 +743,6 @@ msgid "what time will it"
 msgstr "quando vai"
 
 #: src/ai/gemini/activations.js:203
-#, fuzzy
 msgid "is it"
 msgstr "está"
 
@@ -801,7 +751,6 @@ msgid "how long will it"
 msgstr "quanto tempo vai"
 
 #: src/ai/gemini/activations.js:205
-#, fuzzy
 msgid "are there any"
 msgstr "há algum"
 
@@ -818,17 +767,14 @@ msgid "temperature"
 msgstr "temperatura"
 
 #: src/ai/gemini/activations.js:212
-#, fuzzy
 msgid "raining"
 msgstr "chuvendo"
 
 #: src/ai/gemini/activations.js:213
-#, fuzzy
 msgid "snowing"
 msgstr "nevando"
 
 #: src/ai/gemini/activations.js:214
-#, fuzzy
 msgid "windy"
 msgstr "ventando"
 
@@ -837,7 +783,6 @@ msgid "forecast"
 msgstr "ṕrevisão"
 
 #: src/ai/gemini/activations.js:216
-#, fuzzy
 msgid "cloudy"
 msgstr "nublado"
 
@@ -874,17 +819,14 @@ msgid "foggy"
 msgstr "nevoeiro"
 
 #: src/ai/gemini/activations.js:225
-#, fuzzy
 msgid "freezing"
 msgstr "congelando"
 
 #: src/ai/gemini/activations.js:226
-#, fuzzy
 msgid "high for today"
 msgstr "informações sobre tempo"
 
 #: src/ai/gemini/activations.js:227
-#, fuzzy
 msgid "low for today"
 msgstr "informações sobre clima"
 
@@ -929,7 +871,6 @@ msgid "chilly"
 msgstr "frio"
 
 #: src/ai/gemini/activations.js:238
-#, fuzzy
 msgid "overcast"
 msgstr "ṕrevisão"
 
@@ -954,7 +895,6 @@ msgid "uv index"
 msgstr "índice uv"
 
 #: src/ai/gemini/activations.js:244
-#, fuzzy
 msgid "sunny"
 msgstr "ensolarado"
 
@@ -975,7 +915,6 @@ msgid "dew point"
 msgstr "ponto de orvalho"
 
 #: src/ai/gemini/activations.js:249
-#, fuzzy
 msgid "visibility"
 msgstr "visibilidade"
 
@@ -1230,6 +1169,7 @@ msgid "Let me look into that..."
 msgstr "Deixe me ver..."
 
 #: src/utils/phrases.js:32
+#, fuzzy
 msgid "I'm on it..."
 msgstr "Estou nisso..."
 
@@ -1276,24 +1216,20 @@ msgid "unknown"
 msgstr "desconhecido"
 
 #: src/utils/utils.js:365
-#, fuzzy
 msgid "the weather is cold"
-msgstr "o tempo está"
+msgstr "o tempo está frio"
 
 #: src/utils/utils.js:371
-#, fuzzy
 msgid "the weather is mild"
-msgstr "o tempo está"
+msgstr "o clima está agradável"
 
 #: src/utils/utils.js:377
-#, fuzzy
 msgid "the weather is warm"
-msgstr "o tempo está"
+msgstr "o tempo está quentinho"
 
 #: src/utils/utils.js:380
-#, fuzzy
 msgid "the weather is hot"
-msgstr "o tempo está"
+msgstr "o tempo está quente"
 
 #: src/utils/utils.js:388
 msgid " and is raining"
@@ -1415,578 +1351,3 @@ msgstr "Salvar"
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
 
-#, fuzzy
-#~ msgid "clipboard_text_var2"
-#~ msgstr "texto na área de transferência"
-
-#~ msgid "read the copied text"
-#~ msgstr "leia o texto que copiei"
-
-#, fuzzy
-#~ msgid "show me the copied text"
-#~ msgstr "leia o texto copiado"
-
-#~ msgid "can you read the copied text"
-#~ msgstr "pode ler o texto"
-
-#~ msgid "could you show the clipboard content"
-#~ msgstr "o texto que copiei, pode lê-lo"
-
-#, fuzzy
-#~ msgid "read the text from the clipboard"
-#~ msgstr "ler o texto da área de transferência"
-
-#~ msgid "display the copied text"
-#~ msgstr "ler o que foi copiado"
-
-#~ msgid "show the clipboard content"
-#~ msgstr "ler o texto que copiei"
-
-#~ msgid "can you access the clipboard"
-#~ msgstr "ler o texto copiado"
-
-#, fuzzy
-#~ msgid "what text is on the clipboard"
-#~ msgstr "lê o texto copiado"
-
-#~ msgid "fetch the clipboard content"
-#~ msgstr "lê o que copiei"
-
-#~ msgid "show me what's on the clipboard"
-#~ msgstr "lê o texto pra mim"
-
-#~ msgid "can you display the copied text"
-#~ msgstr "ler o texto pra mim"
-
-#~ msgid "can you fetch the clipboard text"
-#~ msgstr "me fala o texto da área de transferência"
-
-#, fuzzy
-#~ msgid "read the clipboard for me"
-#~ msgstr "leia o texto da área de transferência"
-
-#~ msgid "what text is stored in the clipboard"
-#~ msgstr "ler texto na memória"
-
-#, fuzzy
-#~ msgid "show the latest copied text"
-#~ msgstr "leia o texto na memória"
-
-#, fuzzy
-#~ msgid "read the most recent clipboard content"
-#~ msgstr "lê o texto que copiei"
-
-#~ msgid "open the app"
-#~ msgstr "abrir o aplicativo"
-
-#~ msgid "open the application"
-#~ msgstr "abre o aplicativo"
-
-#~ msgid "launch the software"
-#~ msgstr "abrir navegador"
-
-#~ msgid "start the application"
-#~ msgstr "inicie o programa"
-
-#~ msgid "run the app"
-#~ msgstr "executa o programa"
-
-#~ msgid "run the software"
-#~ msgstr "executa o software"
-
-#, fuzzy
-#~ msgid "access the app"
-#~ msgstr "acessar"
-
-#, fuzzy
-#~ msgid "could you start this application"
-#~ msgstr "Para usar quando quiser abrir um aplicativo"
-
-#, fuzzy
-#~ msgid "set the screen to never lock"
-#~ msgstr "Na tela agora."
-
-#, fuzzy
-#~ msgid "go to the website"
-#~ msgstr "exiba informações sobre tempo para hoje"
-
-#, fuzzy
-#~ msgid "visit the website"
-#~ msgstr "exiba informações sobre tempo para hoje"
-
-#, fuzzy
-#~ msgid "show me the website"
-#~ msgstr "exiba informações sobre tempo para hoje"
-
-#, fuzzy
-#~ msgid "show me the page"
-#~ msgstr "exiba informações sobre tempo para hoje"
-
-#, fuzzy
-#~ msgid "browse to the website"
-#~ msgstr "exiba informações sobre tempo para hoje"
-
-#, fuzzy
-#~ msgid "how is the weather"
-#~ msgstr "exiba informações sobre tempo para hoje"
-
-#, fuzzy
-#~ msgid "what is the temperature"
-#~ msgstr "a temperatura agora é de"
-
-#, fuzzy
-#~ msgid "what's the weather like"
-#~ msgstr "o tempo está"
-
-#, fuzzy
-#~ msgid "is it raining"
-#~ msgstr " e está chovendo"
-
-#, fuzzy
-#~ msgid "is it snowing"
-#~ msgstr " e está nevando"
-
-#, fuzzy
-#~ msgid "is it windy"
-#~ msgstr "ventania"
-
-#, fuzzy
-#~ msgid "what's the weather forecast"
-#~ msgstr "exiba informações sobre tempo para hoje"
-
-#, fuzzy
-#~ msgid "what's the weather like this week"
-#~ msgstr "como está o tempo"
-
-#, fuzzy
-#~ msgid "how's the weather right now"
-#~ msgstr "exiba informações sobre tempo"
-
-#, fuzzy
-#~ msgid "is it overcast"
-#~ msgstr "ṕrevisão"
-
-#, fuzzy
-#~ msgid "is the weather clear"
-#~ msgstr "o tempo está"
-
-#, fuzzy
-#~ msgid "is it good weather for a walk"
-#~ msgstr "exiba informações sobre tempo para hoje"
-
-#~ msgid "run_lang_var1"
-#~ msgstr "rode"
-
-#~ msgid "run_lang_var2"
-#~ msgstr "roda"
-
-#~ msgid "execute"
-#~ msgstr "executar"
-
-#~ msgid "execute_lang_var1"
-#~ msgstr "execute"
-
-#~ msgid "execute_lang_var2"
-#~ msgstr "executa"
-
-#~ msgid "start_lang_var1"
-#~ msgstr "inicie"
-
-#~ msgid "start_lang_var2"
-#~ msgstr "inicia"
-
-#~ msgid "seek"
-#~ msgstr "vasculhar"
-
-#~ msgid "seek_lang_var1"
-#~ msgstr "vasculhe"
-
-#~ msgid "seek_lang_var2"
-#~ msgstr "vasculha"
-
-#~ msgid "go_lang_var2"
-#~ msgstr "vai no"
-
-#~ msgid "access_lang_var1"
-#~ msgstr "acesse"
-
-#~ msgid "access_lang_var2"
-#~ msgstr "acessa"
-
-#~ msgid "weather_lang_var1"
-#~ msgstr "clima"
-
-#~ msgid "humidity_lang_var1"
-#~ msgstr "humidades"
-
-#~ msgid "wind_lang_var1"
-#~ msgstr "ar"
-
-#~ msgid "wind_lang_var2"
-#~ msgstr "ventania"
-
-#~ msgid "precipitation"
-#~ msgstr "precipitação"
-
-#~ msgid "precipitation_lang_var1"
-#~ msgstr "precipitações"
-
-#~ msgid "precipitation_lang_var2"
-#~ msgstr "precipitando"
-
-#~ msgid "cloud_lang_var1"
-#~ msgstr "nublado"
-
-#~ msgid "climate"
-#~ msgstr "clima"
-
-#~ msgid "rain_lang_var1"
-#~ msgstr "chover"
-
-#~ msgid "rain_lang_var2"
-#~ msgstr "chovendo"
-
-#~ msgid "snow_lang_var1"
-#~ msgstr "nevar"
-
-#~ msgid "snow_lang_var2"
-#~ msgstr "nevando"
-
-#~ msgid "frost_lang_var1"
-#~ msgstr "congelando"
-
-#~ msgid "frost_lang_var2"
-#~ msgstr "congelar"
-
-#~ msgid "fog"
-#~ msgstr "nevoa"
-
-#~ msgid "fog_lang_var1"
-#~ msgstr "nevoeiro"
-
-#~ msgid "fog_lang_var2"
-#~ msgstr "brisa"
-
-#~ msgid "sun"
-#~ msgstr "sol"
-
-#~ msgid "sun_lang_var1"
-#~ msgstr "ensolarado"
-
-#~ msgid "sun_lang_var2"
-#~ msgstr "calor"
-
-#~ msgid "clouds"
-#~ msgstr "nuvens"
-
-#~ msgid "clouds_lang_var1"
-#~ msgstr "nevoeiro"
-
-#~ msgid "clouds_lang_var2"
-#~ msgstr "nevoada"
-
-#~ msgid "sky"
-#~ msgstr "céu"
-
-#~ msgid "windy_lang_var1"
-#~ msgstr "ventos"
-
-#~ msgid "humid"
-#~ msgstr "humido"
-
-#~ msgid "humid_lang_var1"
-#~ msgstr "humidos"
-
-#~ msgid "humid_lang_var2"
-#~ msgstr "molhado"
-
-#~ msgid "dry"
-#~ msgstr "seco"
-
-#~ msgid "dry_lang_var1"
-#~ msgstr "palha"
-
-#~ msgid "dry_lang_var2"
-#~ msgstr "deserto"
-
-#~ msgid "cold_lang_var1"
-#~ msgstr "gelado"
-
-#~ msgid "cold_lang_var2"
-#~ msgstr "gelando"
-
-#~ msgid "hot_lang_var1"
-#~ msgstr "pegando fogo"
-
-#~ msgid "hot_lang_var2"
-#~ msgstr "calorento"
-
-#~ msgid "warm_lang_var1"
-#~ msgstr "sufocante"
-
-#~ msgid "mild_lang_var1"
-#~ msgstr "amêno"
-
-#~ msgid "mild_lang_var2"
-#~ msgstr "gostoso"
-
-#~ msgid "freezing_lang_var1"
-#~ msgstr "congelando"
-
-#~ msgid "blizzard"
-#~ msgstr "nevoeiro"
-
-#, fuzzy
-#~ msgid "is cold"
-#~ msgstr "frio"
-
-#, fuzzy
-#~ msgid "is mild"
-#~ msgstr "agradável"
-
-#, fuzzy
-#~ msgid "is warm"
-#~ msgstr "calor"
-
-#~ msgid "is hot"
-#~ msgstr "está quente"
-
-#~ msgid "unknown temperature"
-#~ msgstr "temperatura desconhecida"
-
-#~ msgid "Of course, searching..."
-#~ msgstr "Com certeza, pesquisando..."
-
-#~ msgid "Sure, searching..."
-#~ msgstr "Claro, pesquisando..."
-
-#, fuzzy
-#~ msgid "and"
-#~ msgstr "e"
-
-#, fuzzy
-#~ msgid "few clouds"
-#~ msgstr "poucas nuvens"
-
-#~ msgid "scattered clouds"
-#~ msgstr "nuvens dispersas"
-
-#, fuzzy
-#~ msgid "broken clouds"
-#~ msgstr "nuvens esparsas"
-
-#~ msgid "mist"
-#~ msgstr "neblinado"
-
-#~ msgid "haze"
-#~ msgstr "neblinado"
-
-#~ msgid "dust"
-#~ msgstr "empoeirado"
-
-#~ msgid "sand"
-#~ msgstr "arenoso"
-
-#~ msgid "ash"
-#~ msgstr "esfumaçado"
-
-#~ msgid "squall"
-#~ msgstr "tempestade"
-
-#~ msgid "The sky is"
-#~ msgstr "o céu está"
-
-#~ msgid "Response text before get weather, e.g.: "
-#~ msgstr "Texto de resposta antes de executar, por exemplo: "
-
-#~ msgid "Sure, getting weather forecast..."
-#~ msgstr "Claro, obtendo informações do tempo..."
-
-#~ msgid "rainy"
-#~ msgstr "chuva"
-
-#~ msgid "snowy"
-#~ msgstr "neve"
-
-#~ msgid "and it is"
-#~ msgstr "e está"
-
-#, fuzzy
-#~ msgid "Leave empty if no location was provided"
-#~ msgstr "Deixe em branco se nenhuma localização foi fornecida"
-
-#, fuzzy
-#~ msgid "Location to get weather, e.g.: "
-#~ msgstr "Texto de resposta antes de executar, por exemplo: "
-
-#~ msgid "In"
-#~ msgstr "Em"
-
-#, fuzzy
-#~ msgid "to"
-#~ msgstr "para"
-
-#, fuzzy
-#~ msgid "Temperature"
-#~ msgstr "temperatura"
-
-#, fuzzy
-#~ msgid "Humidity"
-#~ msgstr "humidade"
-
-#, fuzzy
-#~ msgid "Apparent temperature"
-#~ msgstr "temperatura"
-
-#, fuzzy
-#~ msgid "Precipitation"
-#~ msgstr "precipitação"
-
-#, fuzzy
-#~ msgid "weather_lang_var2"
-#~ msgstr "chover"
-
-#, fuzzy
-#~ msgid "cloud_lang_var2"
-#~ msgstr "nublado"
-
-#, fuzzy
-#~ msgid "blizzard_lang_var1"
-#~ msgstr "nevoeiro"
-
-#, fuzzy
-#~ msgid "To use when you want to browse the web"
-#~ msgstr "Para usar quando quiser ler a área de transferência"
-
-#~ msgid "To run apps, flatpak, snap, etc..."
-#~ msgstr "Para rodar apps, flatpak, snap, etc..."
-
-#~ msgid "Install instructions for app and dependencies if needed."
-#~ msgstr ""
-#~ "Instruções para instalação do app e suas dependencias caso necessário."
-
-#~ msgid "close"
-#~ msgstr "fechar"
-
-#~ msgid "pause"
-#~ msgstr "pausar"
-
-#~ msgid "resume"
-#~ msgstr "retomar"
-
-#~ msgid "reboot"
-#~ msgstr "reiniciar"
-
-#~ msgid "shutdown"
-#~ msgstr "desligar"
-
-#~ msgid "lock"
-#~ msgstr "bloquear"
-
-#~ msgid "unlock"
-#~ msgstr "desbloquear"
-
-#~ msgid "suspend"
-#~ msgstr "suspender"
-
-#~ msgid "sleep"
-#~ msgstr "dormir"
-
-#~ msgid "warn"
-#~ msgstr "avisar"
-
-#~ msgid "remind"
-#~ msgstr "lembrar"
-
-#~ msgid "remember"
-#~ msgstr "lembrar"
-
-#~ msgid "watch"
-#~ msgstr "assistir"
-
-#~ msgid "track"
-#~ msgstr "seguir"
-
-#~ msgid "localize"
-#~ msgstr "localizar"
-
-#~ msgid "locate"
-#~ msgstr "encontrar"
-
-#~ msgid "create"
-#~ msgstr "criar"
-
-#~ msgid "make"
-#~ msgstr "fazer"
-
-#~ msgid "register"
-#~ msgstr "registrar"
-
-#~ msgid "modify"
-#~ msgstr "modificar"
-
-#~ msgid "send"
-#~ msgstr "enviar"
-
-#~ msgid "receive"
-#~ msgstr "receber"
-
-#~ msgid "write"
-#~ msgstr "escrever"
-
-#~ msgid "copy"
-#~ msgstr "copiar"
-
-#~ msgid "move"
-#~ msgstr "mover"
-
-#~ msgid "delete"
-#~ msgstr "deletar"
-
-#~ msgid "clean"
-#~ msgstr "limpar"
-
-#~ msgid "turn on"
-#~ msgstr "ligar"
-
-#~ msgid "turn off"
-#~ msgstr "desligar"
-
-#~ msgid "please"
-#~ msgstr "por favor"
-
-#~ msgid "can you"
-#~ msgstr "você pode"
-
-#~ msgid "would you"
-#~ msgstr "você poderia"
-
-#~ msgid "could you"
-#~ msgstr "você consegue"
-
-#~ msgid "paste"
-#~ msgstr "colar"
-
-#~ msgid "speak"
-#~ msgstr "conversar"
-
-#~ msgid "speech"
-#~ msgstr "falar"
-
-#~ msgid "uninstall"
-#~ msgstr "desinstalar"
-
-#~ msgid "remove"
-#~ msgstr "remover"
-
-#~ msgid "update"
-#~ msgstr "atualizar"
-
-#~ msgid "change"
-#~ msgstr "alterar"
-
-#~ msgid "configure"
-#~ msgstr "configurar"
-
-#~ msgid "print"
-#~ msgstr "imprimir"
