@@ -148,7 +148,12 @@ export class FunctionsDeclarations {
 
         function allWordsPresent(phrases, text) {
             let words = phrases.map((phrase) => phrase.toLowerCase());
-            return words.every((word) => text.includes(word));
+            for (let word of words) {
+                if (!text.includes(word)) {
+                    return false;
+                }
+            }
+            return true;
         }
 
         let hasActivation = allWordsPresent(
