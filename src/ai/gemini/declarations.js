@@ -98,70 +98,69 @@ export class FunctionsDeclarations {
 
     get(text) {
         let functionDeclarations = [];
-        text = text.replace(/[.,!?;:"]/g, '');
-        const words = text.toLowerCase().split(' ');
-        const firstFiveWords = words.slice(0, 5);
-        const firstTenWords = words.slice(0, 10);
 
-        for (const cmdActivation of firstFiveWords) {
-            // read
-            if (
-                this.app.gemini.function.activation.read.includes(cmdActivation)
-            ) {
-                for (const cmdFunction of firstTenWords) {
-                    // clipboard
-                    if (
-                        this.app.gemini.function.activation.clipboard.includes(
-                            cmdFunction,
-                        )
-                    ) {
-                        functionDeclarations.push(this.readClipboard);
-                    }
-                }
-            }
-            // browse
-            if (
-                this.app.gemini.function.activation.browse.includes(
-                    cmdActivation,
-                )
-            ) {
-                for (const cmdFunction of firstTenWords) {
-                    // site
-                    if (
-                        this.app.gemini.function.activation.site.includes(
-                            cmdFunction,
-                        )
-                    ) {
-                        functionDeclarations.push(this.browse);
-                    }
-                }
-            }
-            // pre weather
-            if (
-                this.app.gemini.function.activation.preweather.includes(
-                    cmdActivation,
-                )
-            ) {
-                for (const cmdFunction of firstTenWords) {
-                    // weather
-                    if (
-                        this.app.gemini.function.activation.weather.includes(
-                            cmdFunction,
-                        )
-                    ) {
-                        functionDeclarations.push(this.weather);
-                    }
-                }
-            }
-            // app
-            if (
-                this.app.gemini.function.activation.open.includes(cmdActivation)
-            ) {
-                // commandline
-                functionDeclarations.push(this.cmd);
-            }
+        // read clipboard
+        let isCommand = this.checkTextActivation(
+            text,
+            this.app.gemini.function.activation.read,
+            this.app.gemini.function.activation.clipboard,
+        );
+        if (isCommand) {
+            functionDeclarations.push(this.readClipboard);
+        }
+        // browse
+        isCommand = this.checkTextActivation(
+            text,
+            this.app.gemini.function.activation.browse,
+            this.app.gemini.function.activation.site,
+        );
+        if (isCommand) {
+            functionDeclarations.push(this.browse);
+        }
+        // pre weather
+        isCommand = this.checkTextActivation(
+            text,
+            this.app.gemini.function.activation.preweather,
+            this.app.gemini.function.activation.weather,
+        );
+        if (isCommand) {
+            functionDeclarations.push(this.weather);
+        }
+        // app
+        isCommand = this.checkTextActivation(
+            text,
+            this.app.gemini.function.activation.open,
+            this.app.gemini.function.activation.applist,
+        );
+        if (isCommand) {
+            functionDeclarations.push(this.cmd);
         }
 
         return [{functionDeclarations}];
+    }
+
+    checkTextActivation(text, cmdActivation, cmdFunction) {
+        // Remove pontuações como vírgulas e pontos ao final das palavras
+        const sanitizedText = text.replace(/[.,!?]/g, '');
+
+        // Divide o texto em palavras
+        const words = sanitizedText.split(/\s+/);
+
+        // Verifica se as 5 primeiras palavras contêm alguma palavra de cmdActivation
+        const hasActivation = words
+            .slice(0, 5)
+            .some((word) => cmdActivation.includes(word));
+
+        // Se não contém palavra de ativação, retorna false
+        if (!hasActivation) {
+            return false;
+        }
+
+        // Verifica se as 10 primeiras palavras contêm alguma palavra de cmdFunction
+        const hasFunction = words
+            .slice(0, 10)
+            .some((word) => cmdFunction.includes(word));
+
+        return hasFunction;
     }
 }
