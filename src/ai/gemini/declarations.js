@@ -10,7 +10,9 @@ export class FunctionsDeclarations {
 
         this.readClipboard = {
             name: 'read_clipboard',
-            description: _('Text-to-Speech, read copied text from clipboard'),
+            description: _(
+                'Execute Text-to-Speech in the user terminal to read user clipboard text.',
+            ),
             parameters: {
                 type: 'object',
                 properties: {
@@ -50,7 +52,7 @@ export class FunctionsDeclarations {
 
         this.browse = {
             name: 'browse_web',
-            description: _('Open url in the browser.'),
+            description: _('Open url in the user browser.'),
             parameters: {
                 type: 'object',
                 properties: {

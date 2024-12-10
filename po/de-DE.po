@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-10 19:10-0300\n"
+"POT-Creation-Date: 2024-12-10 19:36-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language de-DE\n"
@@ -1073,63 +1073,63 @@ msgstr "Code kopiert in die Zwischenablage"
 msgid "Error getting weather"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini/declarations.js:13
-#, fuzzy
-msgid "Text-to-Speech, read copied text from clipboard"
-msgstr "Code kopiert in die Zwischenablage"
+#: src/ai/gemini/declarations.js:14
+msgid ""
+"Execute Text-to-Speech in the user terminal to read user clipboard text."
+msgstr ""
 
-#: src/ai/gemini/declarations.js:20
+#: src/ai/gemini/declarations.js:22
 msgid "Response text before start read, e.g.: "
 msgstr ""
 
-#: src/ai/gemini/declarations.js:21
+#: src/ai/gemini/declarations.js:23
 msgid "Sure, start reading..."
 msgstr ""
 
-#: src/ai/gemini/declarations.js:31
+#: src/ai/gemini/declarations.js:33
 msgid "Run non-sudo commandline in the user terminal"
 msgstr ""
 
-#: src/ai/gemini/declarations.js:38
+#: src/ai/gemini/declarations.js:40
 msgid "commandline to run"
 msgstr ""
 
-#: src/ai/gemini/declarations.js:43
+#: src/ai/gemini/declarations.js:45
 msgid "Response text before run, e.g.: "
 msgstr ""
 
-#: src/ai/gemini/declarations.js:44
+#: src/ai/gemini/declarations.js:46
 msgid "Sure, opening GNOME Software..."
 msgstr ""
 
-#: src/ai/gemini/declarations.js:53
+#: src/ai/gemini/declarations.js:55
 #, fuzzy
-msgid "Open url in the browser."
+msgid "Open url in the user browser."
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini/declarations.js:60
+#: src/ai/gemini/declarations.js:62
 msgid "URL to open, e.g.: "
 msgstr ""
 
-#: src/ai/gemini/declarations.js:65
+#: src/ai/gemini/declarations.js:67
 msgid "Response text before open, e.g.: "
 msgstr ""
 
-#: src/ai/gemini/declarations.js:66
+#: src/ai/gemini/declarations.js:68
 msgid "Sure, opening..."
 msgstr ""
 
-#: src/ai/gemini/declarations.js:76
+#: src/ai/gemini/declarations.js:78
 msgid ""
 "Show the weather for today. Use only if user wants to know weather "
 "information."
 msgstr ""
 
-#: src/ai/gemini/declarations.js:85
+#: src/ai/gemini/declarations.js:87
 msgid "Provide a location, e.g.: \"New York, NY\" (always use this format)"
 msgstr ""
 
-#: src/ai/gemini/declarations.js:89
+#: src/ai/gemini/declarations.js:91
 msgid "or don't provide a location to show weather from user location"
 msgstr ""
 
@@ -1443,6 +1443,10 @@ msgstr ""
 #: src/prefs.js:287
 msgid "Your preferences have been saved"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Text-to-Speech, read copied text from clipboard"
+#~ msgstr "Code kopiert in die Zwischenablage"
 
 #, fuzzy
 #~ msgid "clipboard_text_var2"
