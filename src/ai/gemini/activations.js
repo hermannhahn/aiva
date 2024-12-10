@@ -138,6 +138,8 @@ export class FunctionsActivations {
 
         this.browse = [
             _('open'),
+            _('open_var1'),
+            _('open_var2'),
             _('go to'),
             _('navigate'),
             _('visit'),
