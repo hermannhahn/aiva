@@ -68,7 +68,7 @@ msgstr ""
 #: src/ai/gemini/activations.js:20
 #, fuzzy
 msgid "settings"
-msgstr "Abrir configurações"
+msgstr "configurações"
 
 #: src/ai/gemini/activations.js:21
 msgid "monitor"
@@ -76,12 +76,12 @@ msgstr ""
 
 #: src/ai/gemini/activations.js:22
 msgid "calculator"
-msgstr ""
+msgstr "calculadora"
 
 #: src/ai/gemini/activations.js:23
 #, fuzzy
 msgid "gedit"
-msgstr "editar"
+msgstr ""
 
 #: src/ai/gemini/activations.js:24
 msgid "libreoffice"
@@ -225,12 +225,12 @@ msgstr ""
 #: src/ai/gemini/activations.js:59
 #, fuzzy
 msgid "deb"
-msgstr "apagar"
+msgstr ""
 
 #: src/ai/gemini/activations.js:60
 #, fuzzy
 msgid "tar"
-msgstr "iniciar"
+msgstr ""
 
 #: src/ai/gemini/activations.js:61
 msgid "zip"
@@ -239,7 +239,7 @@ msgstr ""
 #: src/ai/gemini/activations.js:62
 #, fuzzy
 msgid "rar"
-msgstr "reiniciar"
+msgstr ""
 
 #: src/ai/gemini/activations.js:63
 msgid "7z"
@@ -308,7 +308,7 @@ msgstr ""
 #: src/ai/gemini/activations.js:79
 #, fuzzy
 msgid "py"
-msgstr "tocar"
+msgstr ""
 
 #: src/ai/gemini/activations.js:80
 msgid "java"
@@ -361,7 +361,7 @@ msgstr ""
 #: src/ai/gemini/activations.js:92
 #, fuzzy
 msgid "composer"
-msgstr "computador"
+msgstr ""
 
 #: src/ai/gemini/activations.js:93
 msgid "maven"
@@ -374,12 +374,12 @@ msgstr ""
 #: src/ai/gemini/activations.js:95
 #, fuzzy
 msgid "ant"
-msgstr "pintar"
+msgstr ""
 
 #: src/ai/gemini/activations.js:96
 #, fuzzy
 msgid "git"
-msgstr "pegar"
+msgstr ""
 
 #: src/ai/gemini/activations.js:97
 msgid "github"
@@ -419,15 +419,15 @@ msgstr ""
 
 #: src/ai/gemini/activations.js:107
 msgid "photos"
-msgstr ""
+msgstr "fotos"
 
 #: src/ai/gemini/activations.js:108
 msgid "docs"
-msgstr ""
+msgstr "documentos"
 
 #: src/ai/gemini/activations.js:109
 msgid "sheets"
-msgstr ""
+msgstr "planilhas"
 
 #: src/ai/gemini/activations.js:110
 msgid "slides"
@@ -435,19 +435,19 @@ msgstr ""
 
 #: src/ai/gemini/activations.js:111
 msgid "forms"
-msgstr ""
+msgstr "formularios"
 
 #: src/ai/gemini/activations.js:112
 msgid "translate"
-msgstr ""
+msgstr "tradutor"
 
 #: src/ai/gemini/activations.js:113
 msgid "calendar"
-msgstr ""
+msgstr "calendario"
 
 #: src/ai/gemini/activations.js:114
 msgid "tasks"
-msgstr ""
+msgstr "tarefas"
 
 #: src/ai/gemini/activations.js:118 src/ai/gemini/activations.js:145
 msgid "open"
