@@ -140,11 +140,16 @@ export class FunctionsDeclarations {
     }
 
     checkTextActivation(text, cmdActivation, cmdFunction) {
+        console.log('Text: ' + text);
+        console.log('Activation: ' + JSON.stringify(cmdActivation));
+        console.log('Function: ' + JSON.stringify(cmdFunction));
         // Normalização do texto
         const sanitizedText = text
             .replace(/[.,!?]/g, '')
             .toLowerCase()
             .split(/\s+/);
+
+        console.log('Sanitized Text: ' + JSON.stringify(sanitizedText));
 
         // Função auxiliar para verificar se uma frase está contida na ordem correta
         function containsPhraseInOrder(text, phrase) {
