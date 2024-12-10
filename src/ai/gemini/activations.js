@@ -1,15 +1,10 @@
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
 
 /**
- * @description gemini functions
- * @param {object} app
+ * @description functions activations words
  */
 export class FunctionsActivations {
-    constructor(app) {
-        this.app = app;
-
-        this.assitname = ['aiva', this.app.userSettings.ASSIST_NAME];
-
+    constructor() {
         this.applist = [
             _('youtube'),
             _('chrome'),
