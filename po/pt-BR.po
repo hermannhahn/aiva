@@ -1446,11 +1446,11 @@ msgstr "Suas preferências foram salvas"
 
 #, fuzzy
 #~ msgid "what's the weather like this week"
-#~ msgstr "o tempo está"
+#~ msgstr "como está o tempo"
 
 #, fuzzy
 #~ msgid "how's the weather right now"
-#~ msgstr "exiba informações sobre tempo para hoje"
+#~ msgstr "exiba informações sobre tempo"
 
 #, fuzzy
 #~ msgid "is it overcast"
