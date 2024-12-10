@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-10 01:27-0300\n"
+"POT-Creation-Date: 2024-12-10 01:35-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -40,395 +40,791 @@ msgstr ""
 msgid "Sorry, I'm having trouble to listen you. Please try again."
 msgstr ""
 
-#: src/ai/gemini/activations.js:13
-msgid "read"
+#: src/ai/gemini/activations.js:14
+msgid "youtube"
 msgstr ""
 
-#: src/ai/gemini/activations.js:13
-msgid "read_var1"
-msgstr ""
-
-#: src/ai/gemini/activations.js:13
-msgid "read_var2"
+#: src/ai/gemini/activations.js:15
+msgid "chrome"
 msgstr ""
 
 #: src/ai/gemini/activations.js:16
-msgid "clipboard text"
+msgid "edge"
 msgstr ""
 
-#: src/ai/gemini/activations.js:17
-msgid "clipboard_text_var1"
+#: src/ai/gemini/activations.js:17 src/ai/gemini/activations.js:25
+msgid "firefox"
 msgstr ""
 
 #: src/ai/gemini/activations.js:18
-msgid "text I copied"
+msgid "terminal"
 msgstr ""
 
 #: src/ai/gemini/activations.js:19
-msgid "what did I copy"
+msgid "gnome"
 msgstr ""
 
 #: src/ai/gemini/activations.js:20
-msgid "copied text"
+msgid "settings"
 msgstr ""
 
 #: src/ai/gemini/activations.js:21
-msgid "my clipboard"
+msgid "monitor"
 msgstr ""
 
 #: src/ai/gemini/activations.js:22
-msgid "what's copied"
+msgid "calculator"
 msgstr ""
 
 #: src/ai/gemini/activations.js:23
-msgid "clipboard content"
+msgid "gedit"
 msgstr ""
 
 #: src/ai/gemini/activations.js:24
-msgid "just copied"
+msgid "libreoffice"
 msgstr ""
 
-#: src/ai/gemini/activations.js:25
-msgid "what I copied"
-msgstr ""
-
-#: src/ai/gemini/activations.js:26
-msgid "copied content"
+#: src/ai/gemini/activations.js:26 src/ai/gemini/activations.js:100
+msgid "vscode"
 msgstr ""
 
 #: src/ai/gemini/activations.js:27
-msgid "clipboard data"
+msgid "code"
 msgstr ""
 
 #: src/ai/gemini/activations.js:28
-msgid "the clipboard"
+msgid "brave"
 msgstr ""
 
-#: src/ai/gemini/activations.js:32 src/ai/gemini/activations.js:41
-msgid "open"
+#: src/ai/gemini/activations.js:29
+msgid "telegram"
 msgstr ""
 
-#: src/ai/gemini/activations.js:33 src/ai/gemini/activations.js:50
-msgid "launch"
+#: src/ai/gemini/activations.js:30
+msgid "spotify"
+msgstr ""
+
+#: src/ai/gemini/activations.js:31
+msgid "discord"
+msgstr ""
+
+#: src/ai/gemini/activations.js:32
+msgid "slack"
+msgstr ""
+
+#: src/ai/gemini/activations.js:33
+msgid "zoom"
 msgstr ""
 
 #: src/ai/gemini/activations.js:34
-msgid "start"
+msgid "teams"
 msgstr ""
 
 #: src/ai/gemini/activations.js:35
-msgid "run"
+msgid "meet"
 msgstr ""
 
-#: src/ai/gemini/activations.js:36 src/ai/gemini/activations.js:51
-msgid "load"
+#: src/ai/gemini/activations.js:36
+msgid "evolution"
 msgstr ""
 
 #: src/ai/gemini/activations.js:37
-msgid "initialize"
+msgid "thunderbird"
+msgstr ""
+
+#: src/ai/gemini/activations.js:38
+msgid "filezilla"
+msgstr ""
+
+#: src/ai/gemini/activations.js:39
+msgid "winscp"
+msgstr ""
+
+#: src/ai/gemini/activations.js:40
+msgid "putty"
+msgstr ""
+
+#: src/ai/gemini/activations.js:41
+msgid "virtualbox"
 msgstr ""
 
 #: src/ai/gemini/activations.js:42
-msgid "go to"
+msgid "vmware"
 msgstr ""
 
 #: src/ai/gemini/activations.js:43
-msgid "navigate"
+msgid "docker"
 msgstr ""
 
 #: src/ai/gemini/activations.js:44
-msgid "visit"
+msgid "kubernetes"
 msgstr ""
 
 #: src/ai/gemini/activations.js:45
-msgid "check out"
+msgid "steam"
 msgstr ""
 
 #: src/ai/gemini/activations.js:46
-msgid "pull up"
+msgid "origin"
 msgstr ""
 
 #: src/ai/gemini/activations.js:47
-msgid "bring"
+msgid "epic"
 msgstr ""
 
 #: src/ai/gemini/activations.js:48
-msgid "take me"
+msgid "battle.net"
 msgstr ""
 
 #: src/ai/gemini/activations.js:49
-msgid "show me"
+msgid "gog"
+msgstr ""
+
+#: src/ai/gemini/activations.js:50
+msgid "itch.io"
+msgstr ""
+
+#: src/ai/gemini/activations.js:51
+msgid "lutris"
 msgstr ""
 
 #: src/ai/gemini/activations.js:52
-msgid "find"
+msgid "wine"
 msgstr ""
 
 #: src/ai/gemini/activations.js:53
-msgid "browse"
+msgid "proton"
 msgstr ""
 
 #: src/ai/gemini/activations.js:54
-msgid "search"
+msgid "playonlinux"
+msgstr ""
+
+#: src/ai/gemini/activations.js:55
+msgid "appimage"
+msgstr ""
+
+#: src/ai/gemini/activations.js:56
+msgid "snap"
+msgstr ""
+
+#: src/ai/gemini/activations.js:57
+msgid "flatpak"
 msgstr ""
 
 #: src/ai/gemini/activations.js:58
-msgid "website"
+msgid "rpm"
 msgstr ""
 
 #: src/ai/gemini/activations.js:59
-msgid "site"
+msgid "deb"
 msgstr ""
 
 #: src/ai/gemini/activations.js:60
-msgid "page"
+msgid "tar"
 msgstr ""
 
 #: src/ai/gemini/activations.js:61
-msgid "webpage"
+msgid "zip"
 msgstr ""
 
 #: src/ai/gemini/activations.js:62
-msgid "link"
+msgid "rar"
 msgstr ""
 
 #: src/ai/gemini/activations.js:63
-msgid "url"
+msgid "7z"
 msgstr ""
 
 #: src/ai/gemini/activations.js:64
-msgid "address"
+msgid "pdf"
 msgstr ""
 
 #: src/ai/gemini/activations.js:65
-msgid "blog"
+msgid "doc"
+msgstr ""
+
+#: src/ai/gemini/activations.js:66
+msgid "docx"
+msgstr ""
+
+#: src/ai/gemini/activations.js:67
+msgid "xls"
+msgstr ""
+
+#: src/ai/gemini/activations.js:68
+msgid "xlsx"
 msgstr ""
 
 #: src/ai/gemini/activations.js:69
-msgid "how is the"
+msgid "ppt"
 msgstr ""
 
 #: src/ai/gemini/activations.js:70
-msgid "what is the"
+msgid "pptx"
 msgstr ""
 
 #: src/ai/gemini/activations.js:71
-msgid "what's the"
+msgid "txt"
 msgstr ""
 
 #: src/ai/gemini/activations.js:72
-msgid "how hot is it"
+msgid "csv"
 msgstr ""
 
 #: src/ai/gemini/activations.js:73
-msgid "how cold is it"
+msgid "json"
 msgstr ""
 
 #: src/ai/gemini/activations.js:74
-msgid "is there"
+msgid "xml"
 msgstr ""
 
 #: src/ai/gemini/activations.js:75
-msgid "will it"
+msgid "html"
 msgstr ""
 
 #: src/ai/gemini/activations.js:76
-msgid "do I need"
+msgid "css"
 msgstr ""
 
 #: src/ai/gemini/activations.js:77
-msgid "how warm is it"
+msgid "js"
 msgstr ""
 
 #: src/ai/gemini/activations.js:78
-msgid "how's the"
+msgid "php"
 msgstr ""
 
 #: src/ai/gemini/activations.js:79
-msgid "should I"
+msgid "py"
 msgstr ""
 
 #: src/ai/gemini/activations.js:80
-msgid "is the"
+msgid "java"
 msgstr ""
 
 #: src/ai/gemini/activations.js:81
-msgid "what time will it"
+msgid "c"
 msgstr ""
 
 #: src/ai/gemini/activations.js:82
-msgid "is it"
+msgid "cpp"
 msgstr ""
 
 #: src/ai/gemini/activations.js:83
-msgid "how long will it"
+msgid "go"
 msgstr ""
 
 #: src/ai/gemini/activations.js:84
-msgid "are there any"
+msgid "swift"
 msgstr ""
 
 #: src/ai/gemini/activations.js:85
-msgid "will there be a"
+msgid "kotlin"
+msgstr ""
+
+#: src/ai/gemini/activations.js:86
+msgid "ruby"
+msgstr ""
+
+#: src/ai/gemini/activations.js:87
+msgid "perl"
+msgstr ""
+
+#: src/ai/gemini/activations.js:88
+msgid "python"
 msgstr ""
 
 #: src/ai/gemini/activations.js:89
-msgid "weather"
+msgid "node"
 msgstr ""
 
 #: src/ai/gemini/activations.js:90
-msgid "temperature"
+msgid "npm"
 msgstr ""
 
 #: src/ai/gemini/activations.js:91
-msgid "raining"
+msgid "yarn"
 msgstr ""
 
 #: src/ai/gemini/activations.js:92
-msgid "snowing"
+msgid "composer"
 msgstr ""
 
 #: src/ai/gemini/activations.js:93
-msgid "windy"
+msgid "maven"
 msgstr ""
 
 #: src/ai/gemini/activations.js:94
-msgid "forecast"
+msgid "gradle"
 msgstr ""
 
 #: src/ai/gemini/activations.js:95
-msgid "cloudy"
+msgid "ant"
 msgstr ""
 
 #: src/ai/gemini/activations.js:96
-msgid "storm"
+msgid "git"
 msgstr ""
 
 #: src/ai/gemini/activations.js:97
-msgid "humidity"
+msgid "github"
 msgstr ""
 
 #: src/ai/gemini/activations.js:98
-msgid "rain"
+msgid "gitlab"
 msgstr ""
 
 #: src/ai/gemini/activations.js:99
-msgid "snow"
-msgstr ""
-
-#: src/ai/gemini/activations.js:100
-msgid "umbrella"
+msgid "bitbucket"
 msgstr ""
 
 #: src/ai/gemini/activations.js:101
-msgid "jacket"
+msgid "sublime"
 msgstr ""
 
 #: src/ai/gemini/activations.js:102
-msgid "warm"
+msgid "atom"
 msgstr ""
 
 #: src/ai/gemini/activations.js:103
-msgid "foggy"
+msgid "notepad++"
 msgstr ""
 
 #: src/ai/gemini/activations.js:104
-msgid "freezing"
+msgid "drive"
 msgstr ""
 
 #: src/ai/gemini/activations.js:105
-msgid "high for today"
+msgid "onedrive"
 msgstr ""
 
 #: src/ai/gemini/activations.js:106
-msgid "low for today"
+msgid "dropbox"
 msgstr ""
 
 #: src/ai/gemini/activations.js:107
-msgid "a coat"
+msgid "photos"
 msgstr ""
 
 #: src/ai/gemini/activations.js:108
-msgid "wind"
+msgid "docs"
 msgstr ""
 
 #: src/ai/gemini/activations.js:109
-msgid "stormy"
+msgid "sheets"
 msgstr ""
 
 #: src/ai/gemini/activations.js:110
-msgid "drizzling"
+msgid "slides"
 msgstr ""
 
 #: src/ai/gemini/activations.js:111
-msgid "thunder"
+msgid "forms"
 msgstr ""
 
 #: src/ai/gemini/activations.js:112
-msgid "lightning"
+msgid "translate"
 msgstr ""
 
 #: src/ai/gemini/activations.js:113
-msgid "mild"
+msgid "calendar"
 msgstr ""
 
 #: src/ai/gemini/activations.js:114
-msgid "air pressure"
+msgid "tasks"
 msgstr ""
 
-#: src/ai/gemini/activations.js:115
-msgid "heatwave"
+#: src/ai/gemini/activations.js:118 src/ai/gemini/activations.js:145
+msgid "open"
 msgstr ""
 
-#: src/ai/gemini/activations.js:116
-msgid "chilly"
-msgstr ""
-
-#: src/ai/gemini/activations.js:117
-msgid "overcast"
-msgstr ""
-
-#: src/ai/gemini/activations.js:118
-msgid "clear"
-msgstr ""
-
-#: src/ai/gemini/activations.js:119
-msgid "hot"
+#: src/ai/gemini/activations.js:119 src/ai/gemini/activations.js:154
+msgid "launch"
 msgstr ""
 
 #: src/ai/gemini/activations.js:120
-msgid "outside"
+msgid "start"
 msgstr ""
 
 #: src/ai/gemini/activations.js:121
-msgid "hurricane"
+msgid "run"
 msgstr ""
 
-#: src/ai/gemini/activations.js:122
-msgid "uv index"
+#: src/ai/gemini/activations.js:122 src/ai/gemini/activations.js:155
+msgid "load"
 msgstr ""
 
 #: src/ai/gemini/activations.js:123
-msgid "sunny"
-msgstr ""
-
-#: src/ai/gemini/activations.js:124
-msgid "hail"
-msgstr ""
-
-#: src/ai/gemini/activations.js:125
-msgid "frost"
+msgid "initialize"
 msgstr ""
 
 #: src/ai/gemini/activations.js:126
+msgid "read"
+msgstr ""
+
+#: src/ai/gemini/activations.js:126
+msgid "read_var1"
+msgstr ""
+
+#: src/ai/gemini/activations.js:126
+msgid "read_var2"
+msgstr ""
+
+#: src/ai/gemini/activations.js:129
+msgid "clipboard text"
+msgstr ""
+
+#: src/ai/gemini/activations.js:130
+msgid "clipboard_text_var1"
+msgstr ""
+
+#: src/ai/gemini/activations.js:131
+msgid "text I copied"
+msgstr ""
+
+#: src/ai/gemini/activations.js:132
+msgid "what did I copy"
+msgstr ""
+
+#: src/ai/gemini/activations.js:133
+msgid "copied text"
+msgstr ""
+
+#: src/ai/gemini/activations.js:134
+msgid "my clipboard"
+msgstr ""
+
+#: src/ai/gemini/activations.js:135
+msgid "what's copied"
+msgstr ""
+
+#: src/ai/gemini/activations.js:136
+msgid "clipboard content"
+msgstr ""
+
+#: src/ai/gemini/activations.js:137
+msgid "just copied"
+msgstr ""
+
+#: src/ai/gemini/activations.js:138
+msgid "what I copied"
+msgstr ""
+
+#: src/ai/gemini/activations.js:139
+msgid "copied content"
+msgstr ""
+
+#: src/ai/gemini/activations.js:140
+msgid "clipboard data"
+msgstr ""
+
+#: src/ai/gemini/activations.js:141
+msgid "the clipboard"
+msgstr ""
+
+#: src/ai/gemini/activations.js:146
+msgid "go to"
+msgstr ""
+
+#: src/ai/gemini/activations.js:147
+msgid "navigate"
+msgstr ""
+
+#: src/ai/gemini/activations.js:148
+msgid "visit"
+msgstr ""
+
+#: src/ai/gemini/activations.js:149
+msgid "check out"
+msgstr ""
+
+#: src/ai/gemini/activations.js:150
+msgid "pull up"
+msgstr ""
+
+#: src/ai/gemini/activations.js:151
+msgid "bring"
+msgstr ""
+
+#: src/ai/gemini/activations.js:152
+msgid "take me"
+msgstr ""
+
+#: src/ai/gemini/activations.js:153
+msgid "show me"
+msgstr ""
+
+#: src/ai/gemini/activations.js:156
+msgid "find"
+msgstr ""
+
+#: src/ai/gemini/activations.js:157
+msgid "browse"
+msgstr ""
+
+#: src/ai/gemini/activations.js:158
+msgid "search"
+msgstr ""
+
+#: src/ai/gemini/activations.js:162
+msgid "website"
+msgstr ""
+
+#: src/ai/gemini/activations.js:163
+msgid "site"
+msgstr ""
+
+#: src/ai/gemini/activations.js:164
+msgid "page"
+msgstr ""
+
+#: src/ai/gemini/activations.js:165
+msgid "webpage"
+msgstr ""
+
+#: src/ai/gemini/activations.js:166
+msgid "link"
+msgstr ""
+
+#: src/ai/gemini/activations.js:167
+msgid "url"
+msgstr ""
+
+#: src/ai/gemini/activations.js:168
+msgid "address"
+msgstr ""
+
+#: src/ai/gemini/activations.js:169
+msgid "blog"
+msgstr ""
+
+#: src/ai/gemini/activations.js:173
+msgid "how is the"
+msgstr ""
+
+#: src/ai/gemini/activations.js:174
+msgid "what is the"
+msgstr ""
+
+#: src/ai/gemini/activations.js:175
+msgid "what's the"
+msgstr ""
+
+#: src/ai/gemini/activations.js:176
+msgid "how hot is it"
+msgstr ""
+
+#: src/ai/gemini/activations.js:177
+msgid "how cold is it"
+msgstr ""
+
+#: src/ai/gemini/activations.js:178
+msgid "is there"
+msgstr ""
+
+#: src/ai/gemini/activations.js:179
+msgid "will it"
+msgstr ""
+
+#: src/ai/gemini/activations.js:180
+msgid "do I need"
+msgstr ""
+
+#: src/ai/gemini/activations.js:181
+msgid "how warm is it"
+msgstr ""
+
+#: src/ai/gemini/activations.js:182
+msgid "how's the"
+msgstr ""
+
+#: src/ai/gemini/activations.js:183
+msgid "should I"
+msgstr ""
+
+#: src/ai/gemini/activations.js:184
+msgid "is the"
+msgstr ""
+
+#: src/ai/gemini/activations.js:185
+msgid "what time will it"
+msgstr ""
+
+#: src/ai/gemini/activations.js:186
+msgid "is it"
+msgstr ""
+
+#: src/ai/gemini/activations.js:187
+msgid "how long will it"
+msgstr ""
+
+#: src/ai/gemini/activations.js:188
+msgid "are there any"
+msgstr ""
+
+#: src/ai/gemini/activations.js:189
+msgid "will there be a"
+msgstr ""
+
+#: src/ai/gemini/activations.js:193
+msgid "weather"
+msgstr ""
+
+#: src/ai/gemini/activations.js:194
+msgid "temperature"
+msgstr ""
+
+#: src/ai/gemini/activations.js:195
+msgid "raining"
+msgstr ""
+
+#: src/ai/gemini/activations.js:196
+msgid "snowing"
+msgstr ""
+
+#: src/ai/gemini/activations.js:197
+msgid "windy"
+msgstr ""
+
+#: src/ai/gemini/activations.js:198
+msgid "forecast"
+msgstr ""
+
+#: src/ai/gemini/activations.js:199
+msgid "cloudy"
+msgstr ""
+
+#: src/ai/gemini/activations.js:200
+msgid "storm"
+msgstr ""
+
+#: src/ai/gemini/activations.js:201
+msgid "humidity"
+msgstr ""
+
+#: src/ai/gemini/activations.js:202
+msgid "rain"
+msgstr ""
+
+#: src/ai/gemini/activations.js:203
+msgid "snow"
+msgstr ""
+
+#: src/ai/gemini/activations.js:204
+msgid "umbrella"
+msgstr ""
+
+#: src/ai/gemini/activations.js:205
+msgid "jacket"
+msgstr ""
+
+#: src/ai/gemini/activations.js:206
+msgid "warm"
+msgstr ""
+
+#: src/ai/gemini/activations.js:207
+msgid "foggy"
+msgstr ""
+
+#: src/ai/gemini/activations.js:208
+msgid "freezing"
+msgstr ""
+
+#: src/ai/gemini/activations.js:209
+msgid "high for today"
+msgstr ""
+
+#: src/ai/gemini/activations.js:210
+msgid "low for today"
+msgstr ""
+
+#: src/ai/gemini/activations.js:211
+msgid "a coat"
+msgstr ""
+
+#: src/ai/gemini/activations.js:212
+msgid "wind"
+msgstr ""
+
+#: src/ai/gemini/activations.js:213
+msgid "stormy"
+msgstr ""
+
+#: src/ai/gemini/activations.js:214
+msgid "drizzling"
+msgstr ""
+
+#: src/ai/gemini/activations.js:215
+msgid "thunder"
+msgstr ""
+
+#: src/ai/gemini/activations.js:216
+msgid "lightning"
+msgstr ""
+
+#: src/ai/gemini/activations.js:217
+msgid "mild"
+msgstr ""
+
+#: src/ai/gemini/activations.js:218
+msgid "air pressure"
+msgstr ""
+
+#: src/ai/gemini/activations.js:219
+msgid "heatwave"
+msgstr ""
+
+#: src/ai/gemini/activations.js:220
+msgid "chilly"
+msgstr ""
+
+#: src/ai/gemini/activations.js:221
+msgid "overcast"
+msgstr ""
+
+#: src/ai/gemini/activations.js:222
+msgid "clear"
+msgstr ""
+
+#: src/ai/gemini/activations.js:223
+msgid "hot"
+msgstr ""
+
+#: src/ai/gemini/activations.js:224
+msgid "outside"
+msgstr ""
+
+#: src/ai/gemini/activations.js:225
+msgid "hurricane"
+msgstr ""
+
+#: src/ai/gemini/activations.js:226
+msgid "uv index"
+msgstr ""
+
+#: src/ai/gemini/activations.js:227
+msgid "sunny"
+msgstr ""
+
+#: src/ai/gemini/activations.js:228
+msgid "hail"
+msgstr ""
+
+#: src/ai/gemini/activations.js:229
+msgid "frost"
+msgstr ""
+
+#: src/ai/gemini/activations.js:230
 msgid "cold"
 msgstr ""
 
-#: src/ai/gemini/activations.js:127
+#: src/ai/gemini/activations.js:231
 msgid "dew point"
 msgstr ""
 
-#: src/ai/gemini/activations.js:128
+#: src/ai/gemini/activations.js:232
 msgid "visibility"
 msgstr ""
 

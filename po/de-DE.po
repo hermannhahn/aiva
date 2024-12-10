@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-09 13:43-0300\n"
+"POT-Creation-Date: 2024-12-10 01:35-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language de-DE\n"
@@ -39,442 +39,842 @@ msgstr ""
 msgid "Sorry, I'm having trouble to listen you. Please try again."
 msgstr ""
 
-#: src/ai/gemini/activations.js:13
-#, fuzzy
-msgid "read"
-msgstr "Code kopiert in die Zwischenablage"
+#: src/ai/gemini/activations.js:14
+msgid "youtube"
+msgstr ""
 
-#: src/ai/gemini/activations.js:13
-#, fuzzy
-msgid "read_var1"
-msgstr "Code kopiert in die Zwischenablage"
-
-#: src/ai/gemini/activations.js:13
-#, fuzzy
-msgid "read_var2"
-msgstr "Code kopiert in die Zwischenablage"
+#: src/ai/gemini/activations.js:15
+msgid "chrome"
+msgstr ""
 
 #: src/ai/gemini/activations.js:16
-#, fuzzy
-msgid "clipboard text"
-msgstr "Code kopiert in die Zwischenablage"
+msgid "edge"
+msgstr ""
 
-#: src/ai/gemini/activations.js:17
-#, fuzzy
-msgid "clipboard_text_var1"
-msgstr "Code kopiert in die Zwischenablage"
+#: src/ai/gemini/activations.js:17 src/ai/gemini/activations.js:25
+msgid "firefox"
+msgstr ""
 
 #: src/ai/gemini/activations.js:18
-#, fuzzy
-msgid "text I copied"
-msgstr "Code kopiert in die Zwischenablage"
+msgid "terminal"
+msgstr ""
 
 #: src/ai/gemini/activations.js:19
-msgid "what did I copy"
+msgid "gnome"
 msgstr ""
 
 #: src/ai/gemini/activations.js:20
-#, fuzzy
-msgid "copied text"
-msgstr "Code kopiert in die Zwischenablage"
+msgid "settings"
+msgstr ""
 
 #: src/ai/gemini/activations.js:21
-#, fuzzy
-msgid "my clipboard"
-msgstr "Code kopiert in die Zwischenablage"
+msgid "monitor"
+msgstr ""
 
 #: src/ai/gemini/activations.js:22
-#, fuzzy
-msgid "what's copied"
-msgstr "Code kopiert in die Zwischenablage"
+msgid "calculator"
+msgstr ""
 
 #: src/ai/gemini/activations.js:23
-#, fuzzy
-msgid "clipboard content"
-msgstr "Code kopiert in die Zwischenablage"
+msgid "gedit"
+msgstr ""
 
 #: src/ai/gemini/activations.js:24
-#, fuzzy
-msgid "just copied"
-msgstr "Code kopiert in die Zwischenablage"
+msgid "libreoffice"
+msgstr ""
 
-#: src/ai/gemini/activations.js:25
-#, fuzzy
-msgid "what I copied"
-msgstr "Code kopiert in die Zwischenablage"
-
-#: src/ai/gemini/activations.js:26
-#, fuzzy
-msgid "copied content"
-msgstr "Code kopiert in die Zwischenablage"
+#: src/ai/gemini/activations.js:26 src/ai/gemini/activations.js:100
+msgid "vscode"
+msgstr ""
 
 #: src/ai/gemini/activations.js:27
-#, fuzzy
-msgid "clipboard data"
-msgstr "Code kopiert in die Zwischenablage"
+msgid "code"
+msgstr ""
 
 #: src/ai/gemini/activations.js:28
-#, fuzzy
-msgid "the clipboard"
-msgstr "Code kopiert in die Zwischenablage"
+msgid "brave"
+msgstr ""
 
-#: src/ai/gemini/activations.js:32 src/ai/gemini/activations.js:41
-#, fuzzy
-msgid "open"
-msgstr "Code kopiert in die Zwischenablage"
+#: src/ai/gemini/activations.js:29
+msgid "telegram"
+msgstr ""
 
-#: src/ai/gemini/activations.js:33 src/ai/gemini/activations.js:50
-#, fuzzy
-msgid "launch"
-msgstr "Code kopiert in die Zwischenablage"
+#: src/ai/gemini/activations.js:30
+msgid "spotify"
+msgstr ""
+
+#: src/ai/gemini/activations.js:31
+msgid "discord"
+msgstr ""
+
+#: src/ai/gemini/activations.js:32
+msgid "slack"
+msgstr ""
+
+#: src/ai/gemini/activations.js:33
+msgid "zoom"
+msgstr ""
 
 #: src/ai/gemini/activations.js:34
-msgid "start"
+msgid "teams"
 msgstr ""
 
 #: src/ai/gemini/activations.js:35
-msgid "run"
+msgid "meet"
 msgstr ""
 
-#: src/ai/gemini/activations.js:36 src/ai/gemini/activations.js:51
-#, fuzzy
-msgid "load"
-msgstr "Code kopiert in die Zwischenablage"
+#: src/ai/gemini/activations.js:36
+msgid "evolution"
+msgstr ""
 
 #: src/ai/gemini/activations.js:37
-#, fuzzy
-msgid "initialize"
-msgstr "Code kopiert in die Zwischenablage"
+msgid "thunderbird"
+msgstr ""
+
+#: src/ai/gemini/activations.js:38
+msgid "filezilla"
+msgstr ""
+
+#: src/ai/gemini/activations.js:39
+msgid "winscp"
+msgstr ""
+
+#: src/ai/gemini/activations.js:40
+msgid "putty"
+msgstr ""
+
+#: src/ai/gemini/activations.js:41
+msgid "virtualbox"
+msgstr ""
 
 #: src/ai/gemini/activations.js:42
-msgid "go to"
+msgid "vmware"
 msgstr ""
 
 #: src/ai/gemini/activations.js:43
-#, fuzzy
-msgid "navigate"
-msgstr "Code kopiert in die Zwischenablage"
+msgid "docker"
+msgstr ""
 
 #: src/ai/gemini/activations.js:44
-#, fuzzy
-msgid "visit"
-msgstr "Code kopiert in die Zwischenablage"
+msgid "kubernetes"
+msgstr ""
 
 #: src/ai/gemini/activations.js:45
-#, fuzzy
-msgid "check out"
-msgstr "Code kopiert in die Zwischenablage"
+msgid "steam"
+msgstr ""
 
 #: src/ai/gemini/activations.js:46
-#, fuzzy
-msgid "pull up"
-msgstr "Code kopiert in die Zwischenablage"
+msgid "origin"
+msgstr ""
 
 #: src/ai/gemini/activations.js:47
-msgid "bring"
+msgid "epic"
 msgstr ""
 
 #: src/ai/gemini/activations.js:48
-msgid "take me"
+msgid "battle.net"
 msgstr ""
 
 #: src/ai/gemini/activations.js:49
 #, fuzzy
-msgid "show me"
+msgid "gog"
 msgstr "Code kopiert in die Zwischenablage"
 
+#: src/ai/gemini/activations.js:50
+msgid "itch.io"
+msgstr ""
+
+#: src/ai/gemini/activations.js:51
+msgid "lutris"
+msgstr ""
+
 #: src/ai/gemini/activations.js:52
-msgid "find"
+msgid "wine"
 msgstr ""
 
 #: src/ai/gemini/activations.js:53
+msgid "proton"
+msgstr ""
+
+#: src/ai/gemini/activations.js:54
+msgid "playonlinux"
+msgstr ""
+
+#: src/ai/gemini/activations.js:55
+msgid "appimage"
+msgstr ""
+
+#: src/ai/gemini/activations.js:56
+msgid "snap"
+msgstr ""
+
+#: src/ai/gemini/activations.js:57
+#, fuzzy
+msgid "flatpak"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/ai/gemini/activations.js:58
+msgid "rpm"
+msgstr ""
+
+#: src/ai/gemini/activations.js:59
+msgid "deb"
+msgstr ""
+
+#: src/ai/gemini/activations.js:60
+msgid "tar"
+msgstr ""
+
+#: src/ai/gemini/activations.js:61
+msgid "zip"
+msgstr ""
+
+#: src/ai/gemini/activations.js:62
+msgid "rar"
+msgstr ""
+
+#: src/ai/gemini/activations.js:63
+msgid "7z"
+msgstr ""
+
+#: src/ai/gemini/activations.js:64
+msgid "pdf"
+msgstr ""
+
+#: src/ai/gemini/activations.js:65
+msgid "doc"
+msgstr ""
+
+#: src/ai/gemini/activations.js:66
+msgid "docx"
+msgstr ""
+
+#: src/ai/gemini/activations.js:67
+msgid "xls"
+msgstr ""
+
+#: src/ai/gemini/activations.js:68
+msgid "xlsx"
+msgstr ""
+
+#: src/ai/gemini/activations.js:69
+msgid "ppt"
+msgstr ""
+
+#: src/ai/gemini/activations.js:70
+msgid "pptx"
+msgstr ""
+
+#: src/ai/gemini/activations.js:71
+#, fuzzy
+msgid "txt"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/ai/gemini/activations.js:72
+msgid "csv"
+msgstr ""
+
+#: src/ai/gemini/activations.js:73
+msgid "json"
+msgstr ""
+
+#: src/ai/gemini/activations.js:74
+msgid "xml"
+msgstr ""
+
+#: src/ai/gemini/activations.js:75
+msgid "html"
+msgstr ""
+
+#: src/ai/gemini/activations.js:76
+#, fuzzy
+msgid "css"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/ai/gemini/activations.js:77
+msgid "js"
+msgstr ""
+
+#: src/ai/gemini/activations.js:78
+msgid "php"
+msgstr ""
+
+#: src/ai/gemini/activations.js:79
+msgid "py"
+msgstr ""
+
+#: src/ai/gemini/activations.js:80
+msgid "java"
+msgstr ""
+
+#: src/ai/gemini/activations.js:81
+msgid "c"
+msgstr ""
+
+#: src/ai/gemini/activations.js:82
+msgid "cpp"
+msgstr ""
+
+#: src/ai/gemini/activations.js:83
+msgid "go"
+msgstr ""
+
+#: src/ai/gemini/activations.js:84
+msgid "swift"
+msgstr ""
+
+#: src/ai/gemini/activations.js:85
+msgid "kotlin"
+msgstr ""
+
+#: src/ai/gemini/activations.js:86
+msgid "ruby"
+msgstr ""
+
+#: src/ai/gemini/activations.js:87
+msgid "perl"
+msgstr ""
+
+#: src/ai/gemini/activations.js:88
+msgid "python"
+msgstr ""
+
+#: src/ai/gemini/activations.js:89
+msgid "node"
+msgstr ""
+
+#: src/ai/gemini/activations.js:90
+msgid "npm"
+msgstr ""
+
+#: src/ai/gemini/activations.js:91
+msgid "yarn"
+msgstr ""
+
+#: src/ai/gemini/activations.js:92
+msgid "composer"
+msgstr ""
+
+#: src/ai/gemini/activations.js:93
+msgid "maven"
+msgstr ""
+
+#: src/ai/gemini/activations.js:94
+msgid "gradle"
+msgstr ""
+
+#: src/ai/gemini/activations.js:95
+msgid "ant"
+msgstr ""
+
+#: src/ai/gemini/activations.js:96
+msgid "git"
+msgstr ""
+
+#: src/ai/gemini/activations.js:97
+msgid "github"
+msgstr ""
+
+#: src/ai/gemini/activations.js:98
+msgid "gitlab"
+msgstr ""
+
+#: src/ai/gemini/activations.js:99
+msgid "bitbucket"
+msgstr ""
+
+#: src/ai/gemini/activations.js:101
+msgid "sublime"
+msgstr ""
+
+#: src/ai/gemini/activations.js:102
+msgid "atom"
+msgstr ""
+
+#: src/ai/gemini/activations.js:103
+msgid "notepad++"
+msgstr ""
+
+#: src/ai/gemini/activations.js:104
+msgid "drive"
+msgstr ""
+
+#: src/ai/gemini/activations.js:105
+msgid "onedrive"
+msgstr ""
+
+#: src/ai/gemini/activations.js:106
+msgid "dropbox"
+msgstr ""
+
+#: src/ai/gemini/activations.js:107
+msgid "photos"
+msgstr ""
+
+#: src/ai/gemini/activations.js:108
+msgid "docs"
+msgstr ""
+
+#: src/ai/gemini/activations.js:109
+msgid "sheets"
+msgstr ""
+
+#: src/ai/gemini/activations.js:110
+msgid "slides"
+msgstr ""
+
+#: src/ai/gemini/activations.js:111
+msgid "forms"
+msgstr ""
+
+#: src/ai/gemini/activations.js:112
+msgid "translate"
+msgstr ""
+
+#: src/ai/gemini/activations.js:113
+msgid "calendar"
+msgstr ""
+
+#: src/ai/gemini/activations.js:114
+msgid "tasks"
+msgstr ""
+
+#: src/ai/gemini/activations.js:118 src/ai/gemini/activations.js:145
+#, fuzzy
+msgid "open"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/ai/gemini/activations.js:119 src/ai/gemini/activations.js:154
+#, fuzzy
+msgid "launch"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/ai/gemini/activations.js:120
+msgid "start"
+msgstr ""
+
+#: src/ai/gemini/activations.js:121
+msgid "run"
+msgstr ""
+
+#: src/ai/gemini/activations.js:122 src/ai/gemini/activations.js:155
+#, fuzzy
+msgid "load"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/ai/gemini/activations.js:123
+#, fuzzy
+msgid "initialize"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/ai/gemini/activations.js:126
+#, fuzzy
+msgid "read"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/ai/gemini/activations.js:126
+#, fuzzy
+msgid "read_var1"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/ai/gemini/activations.js:126
+#, fuzzy
+msgid "read_var2"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/ai/gemini/activations.js:129
+#, fuzzy
+msgid "clipboard text"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/ai/gemini/activations.js:130
+#, fuzzy
+msgid "clipboard_text_var1"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/ai/gemini/activations.js:131
+#, fuzzy
+msgid "text I copied"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/ai/gemini/activations.js:132
+msgid "what did I copy"
+msgstr ""
+
+#: src/ai/gemini/activations.js:133
+#, fuzzy
+msgid "copied text"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/ai/gemini/activations.js:134
+#, fuzzy
+msgid "my clipboard"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/ai/gemini/activations.js:135
+#, fuzzy
+msgid "what's copied"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/ai/gemini/activations.js:136
+#, fuzzy
+msgid "clipboard content"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/ai/gemini/activations.js:137
+#, fuzzy
+msgid "just copied"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/ai/gemini/activations.js:138
+#, fuzzy
+msgid "what I copied"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/ai/gemini/activations.js:139
+#, fuzzy
+msgid "copied content"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/ai/gemini/activations.js:140
+#, fuzzy
+msgid "clipboard data"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/ai/gemini/activations.js:141
+#, fuzzy
+msgid "the clipboard"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/ai/gemini/activations.js:146
+msgid "go to"
+msgstr ""
+
+#: src/ai/gemini/activations.js:147
+#, fuzzy
+msgid "navigate"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/ai/gemini/activations.js:148
+#, fuzzy
+msgid "visit"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/ai/gemini/activations.js:149
+#, fuzzy
+msgid "check out"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/ai/gemini/activations.js:150
+#, fuzzy
+msgid "pull up"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/ai/gemini/activations.js:151
+msgid "bring"
+msgstr ""
+
+#: src/ai/gemini/activations.js:152
+msgid "take me"
+msgstr ""
+
+#: src/ai/gemini/activations.js:153
+#, fuzzy
+msgid "show me"
+msgstr "Code kopiert in die Zwischenablage"
+
+#: src/ai/gemini/activations.js:156
+msgid "find"
+msgstr ""
+
+#: src/ai/gemini/activations.js:157
 #, fuzzy
 msgid "browse"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini/activations.js:54
+#: src/ai/gemini/activations.js:158
 msgid "search"
 msgstr ""
 
-#: src/ai/gemini/activations.js:58
+#: src/ai/gemini/activations.js:162
 #, fuzzy
 msgid "website"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini/activations.js:59
+#: src/ai/gemini/activations.js:163
 #, fuzzy
 msgid "site"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini/activations.js:60
+#: src/ai/gemini/activations.js:164
 #, fuzzy
 msgid "page"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini/activations.js:61
+#: src/ai/gemini/activations.js:165
 #, fuzzy
 msgid "webpage"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini/activations.js:62
+#: src/ai/gemini/activations.js:166
 #, fuzzy
 msgid "link"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini/activations.js:63
+#: src/ai/gemini/activations.js:167
 msgid "url"
 msgstr ""
 
-#: src/ai/gemini/activations.js:64
+#: src/ai/gemini/activations.js:168
 #, fuzzy
 msgid "address"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini/activations.js:65
+#: src/ai/gemini/activations.js:169
 msgid "blog"
 msgstr ""
 
-#: src/ai/gemini/activations.js:69
+#: src/ai/gemini/activations.js:173
 #, fuzzy
 msgid "how is the"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini/activations.js:70
+#: src/ai/gemini/activations.js:174
 #, fuzzy
 msgid "what is the"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini/activations.js:71
+#: src/ai/gemini/activations.js:175
 #, fuzzy
 msgid "what's the"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini/activations.js:72
+#: src/ai/gemini/activations.js:176
 #, fuzzy
 msgid "how hot is it"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini/activations.js:73
+#: src/ai/gemini/activations.js:177
 #, fuzzy
 msgid "how cold is it"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini/activations.js:74
+#: src/ai/gemini/activations.js:178
 #, fuzzy
 msgid "is there"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini/activations.js:75
+#: src/ai/gemini/activations.js:179
 msgid "will it"
 msgstr ""
 
-#: src/ai/gemini/activations.js:76
+#: src/ai/gemini/activations.js:180
 msgid "do I need"
 msgstr ""
 
-#: src/ai/gemini/activations.js:77
+#: src/ai/gemini/activations.js:181
 #, fuzzy
 msgid "how warm is it"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini/activations.js:78
+#: src/ai/gemini/activations.js:182
 #, fuzzy
 msgid "how's the"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini/activations.js:79
+#: src/ai/gemini/activations.js:183
 msgid "should I"
 msgstr ""
 
-#: src/ai/gemini/activations.js:80
+#: src/ai/gemini/activations.js:184
 #, fuzzy
 msgid "is the"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini/activations.js:81
+#: src/ai/gemini/activations.js:185
 msgid "what time will it"
 msgstr ""
 
-#: src/ai/gemini/activations.js:82
+#: src/ai/gemini/activations.js:186
 msgid "is it"
 msgstr ""
 
-#: src/ai/gemini/activations.js:83
+#: src/ai/gemini/activations.js:187
 msgid "how long will it"
 msgstr ""
 
-#: src/ai/gemini/activations.js:84
+#: src/ai/gemini/activations.js:188
 msgid "are there any"
 msgstr ""
 
-#: src/ai/gemini/activations.js:85
+#: src/ai/gemini/activations.js:189
 msgid "will there be a"
 msgstr ""
 
-#: src/ai/gemini/activations.js:89
+#: src/ai/gemini/activations.js:193
 msgid "weather"
 msgstr ""
 
-#: src/ai/gemini/activations.js:90
+#: src/ai/gemini/activations.js:194
 #, fuzzy
 msgid "temperature"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini/activations.js:91
+#: src/ai/gemini/activations.js:195
 msgid "raining"
 msgstr ""
 
-#: src/ai/gemini/activations.js:92
+#: src/ai/gemini/activations.js:196
 msgid "snowing"
 msgstr ""
 
-#: src/ai/gemini/activations.js:93
+#: src/ai/gemini/activations.js:197
 msgid "windy"
 msgstr ""
 
-#: src/ai/gemini/activations.js:94
+#: src/ai/gemini/activations.js:198
 #, fuzzy
 msgid "forecast"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini/activations.js:95
+#: src/ai/gemini/activations.js:199
 msgid "cloudy"
 msgstr ""
 
-#: src/ai/gemini/activations.js:96
+#: src/ai/gemini/activations.js:200
 msgid "storm"
 msgstr ""
 
-#: src/ai/gemini/activations.js:97
+#: src/ai/gemini/activations.js:201
 #, fuzzy
 msgid "humidity"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini/activations.js:98
+#: src/ai/gemini/activations.js:202
 msgid "rain"
 msgstr ""
 
-#: src/ai/gemini/activations.js:99
+#: src/ai/gemini/activations.js:203
 msgid "snow"
 msgstr ""
 
-#: src/ai/gemini/activations.js:100
+#: src/ai/gemini/activations.js:204
 msgid "umbrella"
 msgstr ""
 
-#: src/ai/gemini/activations.js:101
+#: src/ai/gemini/activations.js:205
 msgid "jacket"
 msgstr ""
 
-#: src/ai/gemini/activations.js:102
+#: src/ai/gemini/activations.js:206
 msgid "warm"
 msgstr ""
 
-#: src/ai/gemini/activations.js:103
+#: src/ai/gemini/activations.js:207
 msgid "foggy"
 msgstr ""
 
-#: src/ai/gemini/activations.js:104
+#: src/ai/gemini/activations.js:208
 #, fuzzy
 msgid "freezing"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini/activations.js:105
+#: src/ai/gemini/activations.js:209
 #, fuzzy
 msgid "high for today"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini/activations.js:106
+#: src/ai/gemini/activations.js:210
 #, fuzzy
 msgid "low for today"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini/activations.js:107
+#: src/ai/gemini/activations.js:211
 msgid "a coat"
 msgstr ""
 
-#: src/ai/gemini/activations.js:108
+#: src/ai/gemini/activations.js:212
 msgid "wind"
 msgstr ""
 
-#: src/ai/gemini/activations.js:109
+#: src/ai/gemini/activations.js:213
 msgid "stormy"
 msgstr ""
 
-#: src/ai/gemini/activations.js:110
+#: src/ai/gemini/activations.js:214
 msgid "drizzling"
 msgstr ""
 
-#: src/ai/gemini/activations.js:111
+#: src/ai/gemini/activations.js:215
 msgid "thunder"
 msgstr ""
 
-#: src/ai/gemini/activations.js:112
+#: src/ai/gemini/activations.js:216
 msgid "lightning"
 msgstr ""
 
-#: src/ai/gemini/activations.js:113
+#: src/ai/gemini/activations.js:217
 msgid "mild"
 msgstr ""
 
-#: src/ai/gemini/activations.js:114
+#: src/ai/gemini/activations.js:218
 msgid "air pressure"
 msgstr ""
 
-#: src/ai/gemini/activations.js:115
+#: src/ai/gemini/activations.js:219
 msgid "heatwave"
 msgstr ""
 
-#: src/ai/gemini/activations.js:116
+#: src/ai/gemini/activations.js:220
 msgid "chilly"
 msgstr ""
 
-#: src/ai/gemini/activations.js:117
+#: src/ai/gemini/activations.js:221
 #, fuzzy
 msgid "overcast"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini/activations.js:118
+#: src/ai/gemini/activations.js:222
 msgid "clear"
 msgstr ""
 
-#: src/ai/gemini/activations.js:119
+#: src/ai/gemini/activations.js:223
 msgid "hot"
 msgstr ""
 
-#: src/ai/gemini/activations.js:120
+#: src/ai/gemini/activations.js:224
 msgid "outside"
 msgstr ""
 
-#: src/ai/gemini/activations.js:121
+#: src/ai/gemini/activations.js:225
 msgid "hurricane"
 msgstr ""
 
-#: src/ai/gemini/activations.js:122
+#: src/ai/gemini/activations.js:226
 msgid "uv index"
 msgstr ""
 
-#: src/ai/gemini/activations.js:123
+#: src/ai/gemini/activations.js:227
 msgid "sunny"
 msgstr ""
 
-#: src/ai/gemini/activations.js:124
+#: src/ai/gemini/activations.js:228
 msgid "hail"
 msgstr ""
 
-#: src/ai/gemini/activations.js:125
+#: src/ai/gemini/activations.js:229
 msgid "frost"
 msgstr ""
 
-#: src/ai/gemini/activations.js:126
+#: src/ai/gemini/activations.js:230
 msgid "cold"
 msgstr ""
 
-#: src/ai/gemini/activations.js:127
+#: src/ai/gemini/activations.js:231
 msgid "dew point"
 msgstr ""
 
-#: src/ai/gemini/activations.js:128
+#: src/ai/gemini/activations.js:232
 #, fuzzy
 msgid "visibility"
 msgstr "Code kopiert in die Zwischenablage"
@@ -1087,10 +1487,6 @@ msgstr ""
 #~ msgstr "Code kopiert in die Zwischenablage"
 
 #, fuzzy
-#~ msgid "run the flatpak"
-#~ msgstr "Code kopiert in die Zwischenablage"
-
-#, fuzzy
 #~ msgid "load the flatpak"
 #~ msgstr "Code kopiert in die Zwischenablage"
 
@@ -1332,10 +1728,6 @@ msgstr ""
 
 #, fuzzy
 #~ msgid "browse_lang_var2"
-#~ msgstr "Code kopiert in die Zwischenablage"
-
-#, fuzzy
-#~ msgid "access"
 #~ msgstr "Code kopiert in die Zwischenablage"
 
 #, fuzzy
@@ -1795,10 +2187,6 @@ msgstr ""
 #~ msgstr "Code kopiert in die Zwischenablage"
 
 #, fuzzy
-#~ msgid "text"
-#~ msgstr "Code kopiert in die Zwischenablage"
-
-#, fuzzy
 #~ msgid "read this"
 #~ msgstr "Code kopiert in die Zwischenablage"
 
@@ -1820,10 +2208,6 @@ msgstr ""
 
 #, fuzzy
 #~ msgid "open app"
-#~ msgstr "Code kopiert in die Zwischenablage"
-
-#, fuzzy
-#~ msgid "go page"
 #~ msgstr "Code kopiert in die Zwischenablage"
 
 #, fuzzy
