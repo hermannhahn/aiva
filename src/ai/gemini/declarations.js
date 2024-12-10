@@ -1,4 +1,5 @@
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
+import {FunctionsActivations} from './activations.js';
 
 /**
  * @description gemini functions
@@ -7,6 +8,7 @@ import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js'
 export class FunctionsDeclarations {
     constructor(app) {
         this.app = app;
+        this.activation = new FunctionsActivations(app);
 
         this.readClipboard = {
             name: 'read_clipboard',
@@ -102,8 +104,8 @@ export class FunctionsDeclarations {
         // read clipboard
         let isCommand = this.checkTextActivation(
             text,
-            this.app.gemini.function.activation.read,
-            this.app.gemini.function.activation.clipboard,
+            this.activation.read,
+            this.activation.clipboard,
         );
         if (isCommand) {
             functionDeclarations.push(this.readClipboard);
@@ -111,8 +113,8 @@ export class FunctionsDeclarations {
         // browse
         isCommand = this.checkTextActivation(
             text,
-            this.app.gemini.function.activation.browse,
-            this.app.gemini.function.activation.site,
+            this.activation.browse,
+            this.activation.site,
         );
         if (isCommand) {
             functionDeclarations.push(this.browse);
@@ -120,8 +122,8 @@ export class FunctionsDeclarations {
         // pre weather
         isCommand = this.checkTextActivation(
             text,
-            this.app.gemini.function.activation.preweather,
-            this.app.gemini.function.activation.weather,
+            this.activation.preweather,
+            this.activation.weather,
         );
         if (isCommand) {
             functionDeclarations.push(this.weather);
@@ -129,8 +131,8 @@ export class FunctionsDeclarations {
         // app
         isCommand = this.checkTextActivation(
             text,
-            this.app.gemini.function.activation.open,
-            this.app.gemini.function.activation.applist,
+            this.activation.open,
+            this.activation.applist,
         );
         if (isCommand) {
             functionDeclarations.push(this.cmd);
