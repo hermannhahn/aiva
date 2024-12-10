@@ -11,7 +11,7 @@ export class FunctionsDeclarations {
         this.readClipboard = {
             name: 'read_clipboard',
             description: _(
-                'Execute Text-to-Speech in the user terminal to read user clipboard text.',
+                "Speech the text from the user's terminal clipboard to the user.",
             ),
             parameters: {
                 type: 'object',
@@ -20,7 +20,7 @@ export class FunctionsDeclarations {
                         type: 'string',
                         description:
                             _(
-                                'Response text before execute text-to-speak, e.g.: ',
+                                'Text to speech before speech clipboard text, e.g.: ',
                             ) + _('Sure, start reading...'),
                     },
                 },

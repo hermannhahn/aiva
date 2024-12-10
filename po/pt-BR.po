@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-10 19:37-0300\n"
+"POT-Creation-Date: 2024-12-10 20:49-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -998,14 +998,12 @@ msgid "Error getting weather"
 msgstr "Falha ao abrir site"
 
 #: src/ai/gemini/declarations.js:14
-msgid ""
-"Execute Text-to-Speech in the user terminal to read user clipboard text."
+msgid "Speech the text from the user's terminal clipboard to the user."
 msgstr ""
 
 #: src/ai/gemini/declarations.js:23
-#, fuzzy
-msgid "Response text before execute text-to-speak, e.g.: "
-msgstr "Texto de resposta antes de executar, por exemplo: "
+msgid "Text to speech before speech clipboard text, e.g.: "
+msgstr ""
 
 #: src/ai/gemini/declarations.js:24
 msgid "Sure, start reading..."
@@ -1376,6 +1374,10 @@ msgstr "Salvar"
 #: src/prefs.js:287
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
+
+#, fuzzy
+#~ msgid "Response text before execute text-to-speak, e.g.: "
+#~ msgstr "Texto de resposta antes de executar, por exemplo: "
 
 #, fuzzy
 #~ msgid "Response text before start read, e.g.: "

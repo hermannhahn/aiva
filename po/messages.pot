@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-10 19:37-0300\n"
+"POT-Creation-Date: 2024-12-10 20:49-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -993,12 +993,11 @@ msgid "Error getting weather"
 msgstr ""
 
 #: src/ai/gemini/declarations.js:14
-msgid ""
-"Execute Text-to-Speech in the user terminal to read user clipboard text."
+msgid "Speech the text from the user's terminal clipboard to the user."
 msgstr ""
 
 #: src/ai/gemini/declarations.js:23
-msgid "Response text before execute text-to-speak, e.g.: "
+msgid "Text to speech before speech clipboard text, e.g.: "
 msgstr ""
 
 #: src/ai/gemini/declarations.js:24

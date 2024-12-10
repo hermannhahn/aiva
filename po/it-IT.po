@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-10 19:37-0300\n"
+"POT-Creation-Date: 2024-12-10 20:49-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language it-IT\n"
@@ -1074,12 +1074,12 @@ msgid "Error getting weather"
 msgstr "Codice copiato negli appunti"
 
 #: src/ai/gemini/declarations.js:14
-msgid ""
-"Execute Text-to-Speech in the user terminal to read user clipboard text."
-msgstr ""
+#, fuzzy
+msgid "Speech the text from the user's terminal clipboard to the user."
+msgstr "Codice copiato negli appunti"
 
 #: src/ai/gemini/declarations.js:23
-msgid "Response text before execute text-to-speak, e.g.: "
+msgid "Text to speech before speech clipboard text, e.g.: "
 msgstr ""
 
 #: src/ai/gemini/declarations.js:24
@@ -1474,10 +1474,6 @@ msgstr ""
 
 #, fuzzy
 #~ msgid "could you show the clipboard content"
-#~ msgstr "Codice copiato negli appunti"
-
-#, fuzzy
-#~ msgid "read the text from the clipboard"
 #~ msgstr "Codice copiato negli appunti"
 
 #, fuzzy
