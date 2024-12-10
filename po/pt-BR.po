@@ -130,9 +130,8 @@ msgid "evolution"
 msgstr ""
 
 #: src/ai/gemini/activations.js:32
-#, fuzzy
 msgid "thunderbird"
-msgstr "trovoada"
+msgstr ""
 
 #: src/ai/gemini/activations.js:33
 msgid "filezilla"
@@ -316,7 +315,7 @@ msgstr ""
 
 #: src/ai/gemini/activations.js:78
 msgid "go"
-msgstr "vá para"
+msgstr ""
 
 #: src/ai/gemini/activations.js:79
 msgid "swift"
@@ -707,27 +706,24 @@ msgid "what's the"
 msgstr "qual o"
 
 #: src/ai/gemini/activations.js:194
-#, fuzzy
 msgid "what is it"
 msgstr "qual é a"
 
 #: src/ai/gemini/activations.js:195
-#, fuzzy
 msgid "what is"
 msgstr "qual a"
 
 #: src/ai/gemini/activations.js:197
-#, fuzzy
 msgid "how is it"
 msgstr "como está"
 
 #: src/ai/gemini/activations.js:198
 msgid "how hot is it"
-msgstr "quão quente está"
+msgstr "está muito quente"
 
 #: src/ai/gemini/activations.js:199
 msgid "how cold is it"
-msgstr "quão frio está"
+msgstr "está muito frio"
 
 #: src/ai/gemini/activations.js:200
 msgid "is there"
@@ -767,11 +763,11 @@ msgstr "quanto tempo vai"
 
 #: src/ai/gemini/activations.js:210
 msgid "are there any"
-msgstr "há algum"
+msgstr "tem algum"
 
 #: src/ai/gemini/activations.js:211
 msgid "will there be a"
-msgstr "vai haver"
+msgstr "vai ter"
 
 #: src/ai/gemini/activations.js:215
 msgid "weather"
@@ -999,11 +995,11 @@ msgstr "Falha ao abrir site"
 
 #: src/ai/gemini/declarations.js:14
 msgid "Speech the text from the user's terminal clipboard to the user."
-msgstr ""
+msgstr "Fala o texto da área de transferência do terminal do usuário para o usuário."
 
 #: src/ai/gemini/declarations.js:23
 msgid "Text to speech before speech clipboard text, e.g.: "
-msgstr ""
+msgstr "Texto para falar antes de falar de executar a função, e.g.: "
 
 #: src/ai/gemini/declarations.js:24
 msgid "Sure, start reading..."
@@ -1026,7 +1022,6 @@ msgid "Sure, opening GNOME Software..."
 msgstr "Claro, abrindo GNOME Software..."
 
 #: src/ai/gemini/declarations.js:56
-#, fuzzy
 msgid "Open url in the user browser."
 msgstr "Abrir URL no navegador."
 
@@ -1249,7 +1244,7 @@ msgstr "o clima está agradável"
 
 #: src/utils/utils.js:377
 msgid "the weather is warm"
-msgstr "o tempo está quentinho"
+msgstr "o tempo está agradável"
 
 #: src/utils/utils.js:380
 msgid "the weather is hot"
@@ -1374,15 +1369,3 @@ msgstr "Salvar"
 #: src/prefs.js:287
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
-
-#, fuzzy
-#~ msgid "Response text before execute text-to-speak, e.g.: "
-#~ msgstr "Texto de resposta antes de executar, por exemplo: "
-
-#, fuzzy
-#~ msgid "Response text before start read, e.g.: "
-#~ msgstr "Texto de resposta antes de executar, por exemplo: "
-
-#, fuzzy
-#~ msgid "Text-to-Speech, read copied text from clipboard"
-#~ msgstr "Falha ao obter texto da área de transferência"
