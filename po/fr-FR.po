@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-10 19:08-0300\n"
+"POT-Creation-Date: 2024-12-10 19:10-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language fr-FR\n"
@@ -744,12 +744,12 @@ msgstr "Code copié dans le presse-papier"
 msgid "blog"
 msgstr ""
 
-#: src/ai/gemini/activations.js:190
+#: src/ai/gemini/activations.js:190 src/ai/gemini/activations.js:196
 #, fuzzy
 msgid "how is the"
 msgstr "Code copié dans le presse-papier"
 
-#: src/ai/gemini/activations.js:191 src/ai/gemini/activations.js:200
+#: src/ai/gemini/activations.js:191 src/ai/gemini/activations.js:204
 #, fuzzy
 msgid "how's the"
 msgstr "Code copié dans le presse-papier"
@@ -766,229 +766,244 @@ msgstr "Code copié dans le presse-papier"
 
 #: src/ai/gemini/activations.js:194
 #, fuzzy
-msgid "how hot is it"
+msgid "what is it"
 msgstr "Code copié dans le presse-papier"
 
 #: src/ai/gemini/activations.js:195
 #, fuzzy
+msgid "what is"
+msgstr "Code copié dans le presse-papier"
+
+#: src/ai/gemini/activations.js:197
+#, fuzzy
+msgid "how is it"
+msgstr "Code copié dans le presse-papier"
+
+#: src/ai/gemini/activations.js:198
+#, fuzzy
+msgid "how hot is it"
+msgstr "Code copié dans le presse-papier"
+
+#: src/ai/gemini/activations.js:199
+#, fuzzy
 msgid "how cold is it"
 msgstr "Code copié dans le presse-papier"
 
-#: src/ai/gemini/activations.js:196
+#: src/ai/gemini/activations.js:200
 #, fuzzy
 msgid "is there"
 msgstr "Code copié dans le presse-papier"
 
-#: src/ai/gemini/activations.js:197
+#: src/ai/gemini/activations.js:201
 msgid "will it"
 msgstr ""
 
-#: src/ai/gemini/activations.js:198
+#: src/ai/gemini/activations.js:202
 msgid "do I need"
 msgstr ""
 
-#: src/ai/gemini/activations.js:199
+#: src/ai/gemini/activations.js:203
 #, fuzzy
 msgid "how warm is it"
 msgstr "Code copié dans le presse-papier"
 
-#: src/ai/gemini/activations.js:201
+#: src/ai/gemini/activations.js:205
 msgid "should I"
 msgstr ""
 
-#: src/ai/gemini/activations.js:202
+#: src/ai/gemini/activations.js:206
 #, fuzzy
 msgid "is the"
 msgstr "Code copié dans le presse-papier"
 
-#: src/ai/gemini/activations.js:203
+#: src/ai/gemini/activations.js:207
 msgid "what time will it"
 msgstr ""
 
-#: src/ai/gemini/activations.js:204
+#: src/ai/gemini/activations.js:208
 msgid "is it"
 msgstr ""
 
-#: src/ai/gemini/activations.js:205
+#: src/ai/gemini/activations.js:209
 msgid "how long will it"
 msgstr ""
 
-#: src/ai/gemini/activations.js:206
+#: src/ai/gemini/activations.js:210
 msgid "are there any"
 msgstr ""
 
-#: src/ai/gemini/activations.js:207
+#: src/ai/gemini/activations.js:211
 msgid "will there be a"
 msgstr ""
 
-#: src/ai/gemini/activations.js:211
+#: src/ai/gemini/activations.js:215
 msgid "weather"
 msgstr ""
 
-#: src/ai/gemini/activations.js:212
-msgid "clime"
-msgstr ""
-
-#: src/ai/gemini/activations.js:213
-#, fuzzy
-msgid "temperature"
-msgstr "Code copié dans le presse-papier"
-
-#: src/ai/gemini/activations.js:214
-msgid "raining"
-msgstr ""
-
-#: src/ai/gemini/activations.js:215
-msgid "snowing"
-msgstr ""
-
 #: src/ai/gemini/activations.js:216
-msgid "windy"
+msgid "clime"
 msgstr ""
 
 #: src/ai/gemini/activations.js:217
 #, fuzzy
-msgid "forecast"
+msgid "temperature"
 msgstr "Code copié dans le presse-papier"
 
 #: src/ai/gemini/activations.js:218
-msgid "cloudy"
+msgid "raining"
 msgstr ""
 
 #: src/ai/gemini/activations.js:219
-msgid "storm"
+msgid "snowing"
 msgstr ""
 
 #: src/ai/gemini/activations.js:220
+msgid "windy"
+msgstr ""
+
+#: src/ai/gemini/activations.js:221
+#, fuzzy
+msgid "forecast"
+msgstr "Code copié dans le presse-papier"
+
+#: src/ai/gemini/activations.js:222
+msgid "cloudy"
+msgstr ""
+
+#: src/ai/gemini/activations.js:223
+msgid "storm"
+msgstr ""
+
+#: src/ai/gemini/activations.js:224
 #, fuzzy
 msgid "humidity"
 msgstr "Code copié dans le presse-papier"
 
-#: src/ai/gemini/activations.js:221
+#: src/ai/gemini/activations.js:225
 msgid "rain"
 msgstr ""
 
-#: src/ai/gemini/activations.js:222
+#: src/ai/gemini/activations.js:226
 msgid "snow"
 msgstr ""
 
-#: src/ai/gemini/activations.js:223
+#: src/ai/gemini/activations.js:227
 msgid "umbrella"
 msgstr ""
 
-#: src/ai/gemini/activations.js:224
+#: src/ai/gemini/activations.js:228
 msgid "jacket"
 msgstr ""
 
-#: src/ai/gemini/activations.js:225
+#: src/ai/gemini/activations.js:229
 msgid "warm"
 msgstr ""
 
-#: src/ai/gemini/activations.js:226
+#: src/ai/gemini/activations.js:230
 msgid "foggy"
 msgstr ""
 
-#: src/ai/gemini/activations.js:227
+#: src/ai/gemini/activations.js:231
 #, fuzzy
 msgid "freezing"
 msgstr "Code copié dans le presse-papier"
 
-#: src/ai/gemini/activations.js:228
+#: src/ai/gemini/activations.js:232
 #, fuzzy
 msgid "high for today"
 msgstr "Code copié dans le presse-papier"
 
-#: src/ai/gemini/activations.js:229
+#: src/ai/gemini/activations.js:233
 #, fuzzy
 msgid "low for today"
 msgstr "Code copié dans le presse-papier"
 
-#: src/ai/gemini/activations.js:230
+#: src/ai/gemini/activations.js:234
 msgid "a coat"
 msgstr ""
 
-#: src/ai/gemini/activations.js:231
+#: src/ai/gemini/activations.js:235
 msgid "wind"
 msgstr ""
 
-#: src/ai/gemini/activations.js:232
+#: src/ai/gemini/activations.js:236
 msgid "stormy"
 msgstr ""
 
-#: src/ai/gemini/activations.js:233
+#: src/ai/gemini/activations.js:237
 msgid "drizzling"
 msgstr ""
 
-#: src/ai/gemini/activations.js:234
+#: src/ai/gemini/activations.js:238
 msgid "thunder"
 msgstr ""
 
-#: src/ai/gemini/activations.js:235
+#: src/ai/gemini/activations.js:239
 msgid "lightning"
 msgstr ""
 
-#: src/ai/gemini/activations.js:236
+#: src/ai/gemini/activations.js:240
 msgid "mild"
 msgstr ""
 
-#: src/ai/gemini/activations.js:237
+#: src/ai/gemini/activations.js:241
 msgid "air pressure"
 msgstr ""
 
-#: src/ai/gemini/activations.js:238
+#: src/ai/gemini/activations.js:242
 msgid "heatwave"
 msgstr ""
 
-#: src/ai/gemini/activations.js:239
+#: src/ai/gemini/activations.js:243
 msgid "chilly"
 msgstr ""
 
-#: src/ai/gemini/activations.js:240
+#: src/ai/gemini/activations.js:244
 #, fuzzy
 msgid "overcast"
 msgstr "Code copié dans le presse-papier"
 
-#: src/ai/gemini/activations.js:241
+#: src/ai/gemini/activations.js:245
 msgid "clear"
 msgstr ""
 
-#: src/ai/gemini/activations.js:242
+#: src/ai/gemini/activations.js:246
 msgid "hot"
 msgstr ""
 
-#: src/ai/gemini/activations.js:243
+#: src/ai/gemini/activations.js:247
 msgid "outside"
 msgstr ""
 
-#: src/ai/gemini/activations.js:244
+#: src/ai/gemini/activations.js:248
 msgid "hurricane"
 msgstr ""
 
-#: src/ai/gemini/activations.js:245
+#: src/ai/gemini/activations.js:249
 msgid "uv index"
 msgstr ""
 
-#: src/ai/gemini/activations.js:246
+#: src/ai/gemini/activations.js:250
 msgid "sunny"
 msgstr ""
 
-#: src/ai/gemini/activations.js:247
+#: src/ai/gemini/activations.js:251
 msgid "hail"
 msgstr ""
 
-#: src/ai/gemini/activations.js:248
+#: src/ai/gemini/activations.js:252
 msgid "frost"
 msgstr ""
 
-#: src/ai/gemini/activations.js:249
+#: src/ai/gemini/activations.js:253
 msgid "cold"
 msgstr ""
 
-#: src/ai/gemini/activations.js:250
+#: src/ai/gemini/activations.js:254
 msgid "dew point"
 msgstr ""
 
-#: src/ai/gemini/activations.js:251
+#: src/ai/gemini/activations.js:255
 #, fuzzy
 msgid "visibility"
 msgstr "Code copié dans le presse-papier"
