@@ -154,9 +154,13 @@ export class FunctionsDeclarations {
         const firstTenWords = words.slice(0, 10).join(' ');
 
         // Verifica se alguma frase ou palavra de cmdActivation está nas 5 primeiras palavras
-        const hasActivation = cmdActivation.some((phrase) =>
-            firstFiveWords.includes(phrase.toLowerCase()),
-        );
+        let hasActivation = false;
+        for (const phrase of cmdActivation) {
+            if (firstFiveWords.includes(phrase.toLowerCase())) {
+                hasActivation = true;
+                break;
+            }
+        }
 
         // Se não contém ativação, retorna false
         if (!hasActivation) {
@@ -164,10 +168,15 @@ export class FunctionsDeclarations {
         }
 
         // Verifica se alguma frase ou palavra de cmdFunction está nas 10 primeiras palavras
-        const hasFunction = cmdFunction.some((phrase) =>
-            firstTenWords.includes(phrase.toLowerCase()),
-        );
+        let hasFunction = false;
+        for (const phrase of cmdFunction) {
+            if (firstTenWords.includes(phrase.toLowerCase())) {
+                hasFunction = true;
+                break;
+            }
+        }
 
+        // Se não contém função, retorna false
         return hasFunction;
     }
 }
