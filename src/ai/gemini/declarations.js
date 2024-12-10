@@ -147,13 +147,19 @@ export class FunctionsDeclarations {
         // }
 
         function allWordsPresent(phrases, text) {
-            let words = phrases.split(' ');
-            for (let word of words) {
-                if (!text.includes(word)) {
-                    return false;
+            text = text.toLowerCase().split(' ');
+            for (let word of phrases) {
+                for (let t of text) {
+                    if (t.includes(word)) {
+                        text.splice(text.indexOf(t), 1);
+                        break;
+                    }
+                }
+                if (text.length === 0) {
+                    return true;
                 }
             }
-            return true;
+            return false;
         }
 
         let hasActivation = allWordsPresent(
