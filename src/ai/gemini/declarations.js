@@ -19,8 +19,9 @@ export class FunctionsDeclarations {
                     response: {
                         type: 'string',
                         description:
-                            _('Response text before start read, e.g.: ') +
-                            _('Sure, start reading...'),
+                            _(
+                                'Response text before execute text-to-speak, e.g.: ',
+                            ) + _('Sure, start reading...'),
                     },
                 },
                 required: ['response'],
