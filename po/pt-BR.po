@@ -566,12 +566,12 @@ msgstr "vai para"
 #: src/ai/gemini/activations.js:145
 #, fuzzy
 msgid "go_to_var2"
-msgstr "vai para"
+msgstr "vai pra"
 
 #: src/ai/gemini/activations.js:146
 #, fuzzy
 msgid "go_to_var3"
-msgstr "vai para"
+msgstr "vai na"
 
 #: src/ai/gemini/activations.js:147
 msgid "navigate"
