@@ -52,7 +52,8 @@ export class GeminiFunctions {
             (clipboard, result) => {
                 if (result) {
                     let clipboardText = result;
-                    this.app.chat.editResponse(
+                    this.app.chat.editResponse(response, false);
+                    this.app.chat.tts(
                         response +
                             '\n ' +
                             clipboardText +

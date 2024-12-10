@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-10 13:21-0300\n"
+"POT-Creation-Date: 2024-12-10 13:33-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -922,59 +922,59 @@ msgstr "visibilidade"
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr "Eu não posso fazer isso agora. Talvez no futuro."
 
-#: src/ai/gemini/functions.js:60
+#: src/ai/gemini/functions.js:61
 msgid "End of text!"
 msgstr "Fim do texto!"
 
-#: src/ai/gemini/functions.js:64
+#: src/ai/gemini/functions.js:65
 msgid "Failed to get text from clipboard"
 msgstr "Falha ao obter texto da área de transferência"
 
-#: src/ai/gemini/functions.js:80
+#: src/ai/gemini/functions.js:81
 msgid "Please, install"
 msgstr "Por favor, instale"
 
-#: src/ai/gemini/functions.js:84
+#: src/ai/gemini/functions.js:85
 msgid "first"
 msgstr "primeiro"
 
-#: src/ai/gemini/functions.js:101 src/ai/gemini/functions.js:154
+#: src/ai/gemini/functions.js:102 src/ai/gemini/functions.js:155
 msgid "Error opening site"
 msgstr "Falha ao abrir site"
 
-#: src/ai/gemini/functions.js:145
+#: src/ai/gemini/functions.js:146
 msgid "You don't have any browser installed."
 msgstr "Você não tem nenhum navegador instalado."
 
-#: src/ai/gemini/functions.js:147
+#: src/ai/gemini/functions.js:148
 msgid "Please, install a browser and try again."
 msgstr "Por favor, instale um navegador e tente novamente."
 
-#: src/ai/gemini/functions.js:149
+#: src/ai/gemini/functions.js:150
 msgid "Opening App Store..."
 msgstr "Abrindo App Store..."
 
-#: src/ai/gemini/functions.js:207
+#: src/ai/gemini/functions.js:208
 msgid "Now it is"
 msgstr "Agora é"
 
-#: src/ai/gemini/functions.js:207
+#: src/ai/gemini/functions.js:208
 msgid "in"
 msgstr "em"
 
-#: src/ai/gemini/functions.js:207
+#: src/ai/gemini/functions.js:208
 msgid "the temperature is now"
 msgstr "a temperatura agora é de"
 
-#: src/ai/gemini/functions.js:207
+#: src/ai/gemini/functions.js:208
 msgid "but it feels like"
 msgstr "e a sensação é de"
 
-#: src/ai/gemini/functions.js:207
+#: src/ai/gemini/functions.js:208
 msgid "The humidity of the air is"
 msgstr "A humidade do ar é de"
 
-#: src/ai/gemini/functions.js:213
+#: src/ai/gemini/functions.js:214
 msgid "Error getting weather"
 msgstr "Falha ao abrir site"
 
