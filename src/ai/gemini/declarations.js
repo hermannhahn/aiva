@@ -147,7 +147,7 @@ export class FunctionsDeclarations {
         // }
 
         function allWordsPresent(phrases, text) {
-            let words = phrases.map((phrase) => phrase.toLowerCase());
+            let words = phrases.split(' ');
             for (let word of words) {
                 if (!text.includes(word)) {
                     return false;
