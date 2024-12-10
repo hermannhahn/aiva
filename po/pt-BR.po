@@ -760,11 +760,11 @@ msgstr "vai haver"
 
 #: src/ai/gemini/activations.js:211
 msgid "weather"
-msgstr "clima"
+msgstr "tempo"
 
 #: src/ai/gemini/activations.js:212
 msgid "clime"
-msgstr ""
+msgstr "clima"
 
 #: src/ai/gemini/activations.js:213
 msgid "temperature"
