@@ -629,12 +629,12 @@ msgstr "lança"
 #: src/ai/gemini/activations.js:160
 #, fuzzy
 msgid "load_var1"
-msgstr "leia"
+msgstr "carrega"
 
 #: src/ai/gemini/activations.js:161
 #, fuzzy
 msgid "load_var2"
-msgstr "lê"
+msgstr "carregue"
 
 #: src/ai/gemini/activations.js:162
 msgid "find"
