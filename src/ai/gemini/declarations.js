@@ -140,43 +140,33 @@ export class FunctionsDeclarations {
     }
 
     checkTextActivation(text, cmdActivation, cmdFunction) {
-        const stringToCheck = text.replace(/[.,!?]/g, '').toLowerCase();
+        // Remove pontuações e converte para minúsculas.
+        const normalizedText = text.replace(/[.,!?]/g, '').toLowerCase();
 
-        // function containsWordsInString(words, request) {
-        //     return words.every((word) => request.includes(word.toLowerCase()));
-        // }
+        // Divide o texto em palavras.
+        const textWords = normalizedText.split(/\s+/);
 
-        function allWordsPresent(phrases, text) {
-            text = text.toLowerCase().split(' ');
-            for (let word of phrases) {
-                for (let t of text) {
-                    if (t.includes(word)) {
-                        text.splice(text.indexOf(t), 1);
-                        break;
-                    }
-                }
-                if (text.length === 0) {
-                    return true;
-                }
-            }
-            return false;
+        // Verifica se todas as palavras de uma frase estão no texto (independente da ordem).
+        function containsAllWords(phraseWords, textWords) {
+            return phraseWords.every((word) =>
+                textWords.includes(word.toLowerCase()),
+            );
         }
 
-        let hasActivation = allWordsPresent(
-            cmdActivation,
-            stringToCheck.slice(0, 5),
-        );
+        // Verifica se ao menos uma das frases de uma lista está presente no texto.
+        function anyPhraseMatches(phrases, textWords) {
+            return phrases.some((phrase) => {
+                const phraseWords = phrase.toLowerCase().split(/\s+/);
+                return containsAllWords(phraseWords, textWords);
+            });
+        }
 
-        let hasFunction = allWordsPresent(
-            cmdFunction,
-            stringToCheck.slice(0, 10),
-        );
+        // Verifica as listas de ativação e função.
+        const hasActivation = anyPhraseMatches(cmdActivation, textWords);
+        const hasFunction = anyPhraseMatches(cmdFunction, textWords);
 
         console.log(
-            'Has Activation: ' +
-                hasActivation +
-                ' Has Function: ' +
-                hasFunction,
+            `Has Activation: ${hasActivation}, Has Function: ${hasFunction}`,
         );
 
         return hasActivation && hasFunction;
