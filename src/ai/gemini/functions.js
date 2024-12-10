@@ -12,7 +12,7 @@ import {FunctionsDeclarations} from './declarations.js';
 export class GeminiFunctions {
     constructor(app) {
         this.app = app;
-        this.declaration = new FunctionsDeclarations(app);
+        this.declaration = new FunctionsDeclarations();
     }
 
     callback(command, args) {
