@@ -140,23 +140,22 @@ export class FunctionsDeclarations {
     }
 
     checkTextActivation(text, cmdActivation, cmdFunction) {
-        // Normalização do texto
         const stringToCheck = text.replace(/[.,!?]/g, '').toLowerCase();
 
-        // Função auxiliar para verificar se uma frase está contida na ordem correta
-        function containsWordsInString(words, request) {
-            // Verifica se todas as palavras da lista existem na string.
-            return words.every((word) => request.includes(word.toLowerCase()));
+        // function containsWordsInString(words, request) {
+        //     return words.every((word) => request.includes(word.toLowerCase()));
+        // }
+
+        function allWordsPresent(words, text) {
+            return words.every((word) => text.includes(word));
         }
 
-        // Verifica se alguma das frases ou palavras de ativação está nas primeiras 5 palavras
-        let hasActivation = containsWordsInString(
+        let hasActivation = allWordsPresent(
             cmdActivation,
             stringToCheck.slice(0, 5),
         );
 
-        // Verifica se alguma frase de função está nas primeiras 10 palavras
-        let hasFunction = containsWordsInString(
+        let hasFunction = allWordsPresent(
             cmdFunction,
             stringToCheck.slice(0, 10),
         );
@@ -170,45 +169,4 @@ export class FunctionsDeclarations {
 
         return hasActivation && hasFunction;
     }
-
-    // checkTextActivation(text, cmdActivation, cmdFunction) {
-    //     // Normaliza o texto: remove pontuações, transforma em minúsculas e divide em palavras
-    //     const sanitizedText = text
-    //         .replace(/[.,!?]/g, '') // Remove pontuações
-    //         .toLowerCase(); // Transforma em minúsculas
-
-    //     const words = sanitizedText.split(/\s+/); // Divide em palavras
-
-    //     // Junta as 5 primeiras palavras em uma string para buscar frases
-    //     const firstFiveWords = words.slice(0, 5).join(' ');
-
-    //     // Junta as 10 primeiras palavras em uma string para buscar frases
-    //     const firstTenWords = words.slice(0, 10).join(' ');
-
-    //     // Verifica se alguma frase ou palavra de cmdActivation está nas 5 primeiras palavras
-    //     let hasActivation = false;
-    //     for (const phrase of cmdActivation) {
-    //         if (firstFiveWords.includes(phrase.toLowerCase())) {
-    //             hasActivation = true;
-    //             break;
-    //         }
-    //     }
-
-    //     // Se não contém ativação, retorna false
-    //     if (!hasActivation) {
-    //         return false;
-    //     }
-
-    //     // Verifica se alguma frase ou palavra de cmdFunction está nas 10 primeiras palavras
-    //     let hasFunction = false;
-    //     for (const phrase of cmdFunction) {
-    //         if (firstTenWords.includes(phrase.toLowerCase())) {
-    //             hasFunction = true;
-    //             break;
-    //         }
-    //     }
-
-    //     // Se não contém função, retorna false
-    //     return hasFunction;
-    // }
 }
