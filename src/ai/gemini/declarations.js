@@ -3,12 +3,10 @@ import {FunctionsActivations} from './activations.js';
 
 /**
  * @description gemini functions
- * @param {object} app
  */
 export class FunctionsDeclarations {
-    constructor(app) {
-        this.app = app;
-        this.activation = new FunctionsActivations(app);
+    constructor() {
+        this.activation = new FunctionsActivations();
 
         this.readClipboard = {
             name: 'read_clipboard',

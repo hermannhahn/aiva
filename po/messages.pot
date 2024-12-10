@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-10 01:46-0300\n"
+"POT-Creation-Date: 2024-12-10 01:47-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -888,57 +888,57 @@ msgstr ""
 msgid "Error getting weather"
 msgstr ""
 
-#: src/ai/gemini/declarations.js:15
+#: src/ai/gemini/declarations.js:13
 msgid "Clipboard Text-to-Speech"
 msgstr ""
 
-#: src/ai/gemini/declarations.js:22 src/ai/gemini/declarations.js:45
+#: src/ai/gemini/declarations.js:20 src/ai/gemini/declarations.js:43
 msgid "Response text before run, e.g.: "
 msgstr ""
 
-#: src/ai/gemini/declarations.js:23
+#: src/ai/gemini/declarations.js:21
 msgid "Sure, start reading..."
 msgstr ""
 
-#: src/ai/gemini/declarations.js:33
+#: src/ai/gemini/declarations.js:31
 msgid "Run non-sudo commandline in the user terminal"
 msgstr ""
 
-#: src/ai/gemini/declarations.js:40
+#: src/ai/gemini/declarations.js:38
 msgid "commandline to run"
 msgstr ""
 
-#: src/ai/gemini/declarations.js:46
+#: src/ai/gemini/declarations.js:44
 msgid "Sure, opening GNOME Software..."
 msgstr ""
 
-#: src/ai/gemini/declarations.js:55
+#: src/ai/gemini/declarations.js:53
 msgid "Open url in the browser."
 msgstr ""
 
-#: src/ai/gemini/declarations.js:62
+#: src/ai/gemini/declarations.js:60
 msgid "URL to open, e.g.: "
 msgstr ""
 
-#: src/ai/gemini/declarations.js:67
+#: src/ai/gemini/declarations.js:65
 msgid "Response text before open, e.g.: "
 msgstr ""
 
-#: src/ai/gemini/declarations.js:68
+#: src/ai/gemini/declarations.js:66
 msgid "Sure, opening..."
 msgstr ""
 
-#: src/ai/gemini/declarations.js:78
+#: src/ai/gemini/declarations.js:76
 msgid ""
 "Show the weather for today. Use only if user wants to know weather "
 "information."
 msgstr ""
 
-#: src/ai/gemini/declarations.js:87
+#: src/ai/gemini/declarations.js:85
 msgid "Provide a location, e.g.: \"New York, NY\" (always use this format)"
 msgstr ""
 
-#: src/ai/gemini/declarations.js:91
+#: src/ai/gemini/declarations.js:89
 msgid "or don't provide a location to show weather from user location"
 msgstr ""
 
