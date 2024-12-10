@@ -140,43 +140,76 @@ export class FunctionsDeclarations {
     }
 
     checkTextActivation(text, cmdActivation, cmdFunction) {
-        // Normaliza o texto: remove pontuações, transforma em minúsculas e divide em palavras
+        // Normalização do texto
         const sanitizedText = text
-            .replace(/[.,!?]/g, '') // Remove pontuações
-            .toLowerCase(); // Transforma em minúsculas
+            .replace(/[.,!?]/g, '')
+            .toLowerCase()
+            .split(/\s+/);
 
-        const words = sanitizedText.split(/\s+/); // Divide em palavras
-
-        // Junta as 5 primeiras palavras em uma string para buscar frases
-        const firstFiveWords = words.slice(0, 5).join(' ');
-
-        // Junta as 10 primeiras palavras em uma string para buscar frases
-        const firstTenWords = words.slice(0, 10).join(' ');
-
-        // Verifica se alguma frase ou palavra de cmdActivation está nas 5 primeiras palavras
-        let hasActivation = false;
-        for (const phrase of cmdActivation) {
-            if (firstFiveWords.includes(phrase.toLowerCase())) {
-                hasActivation = true;
-                break;
+        // Função auxiliar para verificar se uma frase está contida na ordem correta
+        function containsPhraseInOrder(text, phrase) {
+            const words = phrase.split(' ');
+            let index = 0;
+            for (const word of words) {
+                index = text.indexOf(word, index);
+                if (index === -1) {
+                    return false;
+                }
             }
+            return true;
         }
 
-        // Se não contém ativação, retorna false
-        if (!hasActivation) {
-            return false;
-        }
+        // Verifica se alguma frase de ativação está nas primeiras 5 palavras
+        let hasActivation = cmdActivation.some((phrase) =>
+            containsPhraseInOrder(sanitizedText.slice(0, 5).join(' '), phrase),
+        );
 
-        // Verifica se alguma frase ou palavra de cmdFunction está nas 10 primeiras palavras
-        let hasFunction = false;
-        for (const phrase of cmdFunction) {
-            if (firstTenWords.includes(phrase.toLowerCase())) {
-                hasFunction = true;
-                break;
-            }
-        }
+        // Verifica se alguma frase de função está nas primeiras 10 palavras
+        let hasFunction = cmdFunction.some((phrase) =>
+            containsPhraseInOrder(sanitizedText.slice(0, 10).join(' '), phrase),
+        );
 
-        // Se não contém função, retorna false
-        return hasFunction;
+        return hasActivation && hasFunction;
     }
+
+    // checkTextActivation(text, cmdActivation, cmdFunction) {
+    //     // Normaliza o texto: remove pontuações, transforma em minúsculas e divide em palavras
+    //     const sanitizedText = text
+    //         .replace(/[.,!?]/g, '') // Remove pontuações
+    //         .toLowerCase(); // Transforma em minúsculas
+
+    //     const words = sanitizedText.split(/\s+/); // Divide em palavras
+
+    //     // Junta as 5 primeiras palavras em uma string para buscar frases
+    //     const firstFiveWords = words.slice(0, 5).join(' ');
+
+    //     // Junta as 10 primeiras palavras em uma string para buscar frases
+    //     const firstTenWords = words.slice(0, 10).join(' ');
+
+    //     // Verifica se alguma frase ou palavra de cmdActivation está nas 5 primeiras palavras
+    //     let hasActivation = false;
+    //     for (const phrase of cmdActivation) {
+    //         if (firstFiveWords.includes(phrase.toLowerCase())) {
+    //             hasActivation = true;
+    //             break;
+    //         }
+    //     }
+
+    //     // Se não contém ativação, retorna false
+    //     if (!hasActivation) {
+    //         return false;
+    //     }
+
+    //     // Verifica se alguma frase ou palavra de cmdFunction está nas 10 primeiras palavras
+    //     let hasFunction = false;
+    //     for (const phrase of cmdFunction) {
+    //         if (firstTenWords.includes(phrase.toLowerCase())) {
+    //             hasFunction = true;
+    //             break;
+    //         }
+    //     }
+
+    //     // Se não contém função, retorna false
+    //     return hasFunction;
+    // }
 }
