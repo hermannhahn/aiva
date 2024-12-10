@@ -141,33 +141,24 @@ export class FunctionsDeclarations {
 
     checkTextActivation(text, cmdActivation, cmdFunction) {
         // Normalização do texto
-        const sanitizedText = text
-            .replace(/[.,!?]/g, '')
-            .toLowerCase()
-            .split(/\s+/);
-
-        console.log('Sanitized Text: ' + JSON.stringify(sanitizedText));
+        const stringToCheck = text.replace(/[.,!?]/g, '').toLowerCase();
 
         // Função auxiliar para verificar se uma frase está contida na ordem correta
-        function containsPhraseInOrder(text, phrase) {
-            let index = 0;
-            for (const word of phrase) {
-                index = text.indexOf(word, index);
-                if (index === -1) {
-                    return false;
-                }
-            }
-            return true;
+        function containsWordsInString(words, request) {
+            // Verifica se todas as palavras da lista existem na string.
+            return words.every((word) => request.includes(word.toLowerCase()));
         }
 
-        // Verifica se alguma frase de ativação está nas primeiras 5 palavras
-        let hasActivation = cmdActivation.some((phrase) =>
-            containsPhraseInOrder(sanitizedText.slice(0, 5).join(' '), phrase),
+        // Verifica se alguma das frases ou palavras de ativação está nas primeiras 5 palavras
+        let hasActivation = containsWordsInString(
+            cmdActivation,
+            stringToCheck.slice(0, 5),
         );
 
         // Verifica se alguma frase de função está nas primeiras 10 palavras
-        let hasFunction = cmdFunction.some((phrase) =>
-            containsPhraseInOrder(sanitizedText.slice(0, 10).join(' '), phrase),
+        let hasFunction = containsWordsInString(
+            cmdFunction,
+            stringToCheck.slice(0, 10),
         );
 
         console.log(
