@@ -142,9 +142,10 @@ export class FunctionsDeclarations {
     checkTextActivation(text, cmdActivation, cmdFunction) {
         // Remove pontuações como vírgulas e pontos ao final das palavras
         const sanitizedText = text.replace(/[.,!?]/g, '');
+        const normalizedText = sanitizedText.toLowerCase();
 
         // Divide o texto em palavras
-        const words = sanitizedText.split(/\s+/);
+        const words = normalizedText.split(/\s+/);
 
         // Verifica se as 5 primeiras palavras contêm alguma palavra de cmdActivation
         const hasActivation = words
