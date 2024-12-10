@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-10 01:35-0300\n"
+"POT-Creation-Date: 2024-12-10 01:45-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language de-DE\n"
@@ -879,67 +879,67 @@ msgstr ""
 msgid "visibility"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini/functions.js:45
+#: src/ai/gemini/functions.js:43
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr ""
 
-#: src/ai/gemini/functions.js:62
+#: src/ai/gemini/functions.js:60
 msgid "End of text!"
 msgstr ""
 
-#: src/ai/gemini/functions.js:66
+#: src/ai/gemini/functions.js:64
 #, fuzzy
 msgid "Failed to get text from clipboard"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini/functions.js:82
+#: src/ai/gemini/functions.js:80
 msgid "Please, install"
 msgstr ""
 
-#: src/ai/gemini/functions.js:86
+#: src/ai/gemini/functions.js:84
 msgid "first"
 msgstr ""
 
-#: src/ai/gemini/functions.js:103 src/ai/gemini/functions.js:156
+#: src/ai/gemini/functions.js:101 src/ai/gemini/functions.js:154
 #, fuzzy
 msgid "Error opening site"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini/functions.js:147
+#: src/ai/gemini/functions.js:145
 msgid "You don't have any browser installed."
 msgstr ""
 
-#: src/ai/gemini/functions.js:149
+#: src/ai/gemini/functions.js:147
 msgid "Please, install a browser and try again."
 msgstr ""
 
-#: src/ai/gemini/functions.js:151
+#: src/ai/gemini/functions.js:149
 msgid "Opening App Store..."
 msgstr ""
 
-#: src/ai/gemini/functions.js:209
+#: src/ai/gemini/functions.js:207
 msgid "Now it is"
 msgstr ""
 
-#: src/ai/gemini/functions.js:209
+#: src/ai/gemini/functions.js:207
 msgid "in"
 msgstr ""
 
-#: src/ai/gemini/functions.js:209
+#: src/ai/gemini/functions.js:207
 #, fuzzy
 msgid "the temperature is now"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini/functions.js:209
+#: src/ai/gemini/functions.js:207
 msgid "but it feels like"
 msgstr ""
 
-#: src/ai/gemini/functions.js:209
+#: src/ai/gemini/functions.js:207
 #, fuzzy
 msgid "The humidity of the air is"
 msgstr "Code kopiert in die Zwischenablage"
 
-#: src/ai/gemini/functions.js:215
+#: src/ai/gemini/functions.js:213
 #, fuzzy
 msgid "Error getting weather"
 msgstr "Code kopiert in die Zwischenablage"

@@ -3,7 +3,6 @@ import Soup from 'gi://Soup';
 import GLib from 'gi://GLib';
 
 import {gettext as _} from 'resource:///org/gnome/shell/extensions/extension.js';
-import {FunctionsActivations} from './activations.js';
 import {FunctionsDeclarations} from './declarations.js';
 
 /**
@@ -13,7 +12,6 @@ import {FunctionsDeclarations} from './declarations.js';
 export class GeminiFunctions {
     constructor(app) {
         this.app = app;
-        this.activation = new FunctionsActivations(app);
         this.declaration = new FunctionsDeclarations(app);
     }
 
