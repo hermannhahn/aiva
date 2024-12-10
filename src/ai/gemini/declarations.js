@@ -146,7 +146,8 @@ export class FunctionsDeclarations {
         //     return words.every((word) => request.includes(word.toLowerCase()));
         // }
 
-        function allWordsPresent(words, text) {
+        function allWordsPresent(phrases, text) {
+            let words = phrases.map((phrase) => phrase.toLowerCase());
             return words.every((word) => text.includes(word));
         }
 
