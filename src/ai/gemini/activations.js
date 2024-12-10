@@ -142,6 +142,8 @@ export class FunctionsActivations {
             _('open_var2'),
             _('go to'),
             _('go_to_var1'),
+            _('go_to_var2'),
+            _('go_to_var3'),
             _('navigate'),
             _('navigate_var1'),
             _('navigate_var2'),

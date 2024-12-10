@@ -440,7 +440,7 @@ msgstr ""
 msgid "open"
 msgstr ""
 
-#: src/ai/gemini/activations.js:114 src/ai/gemini/activations.js:151
+#: src/ai/gemini/activations.js:114 src/ai/gemini/activations.js:153
 msgid "launch"
 msgstr ""
 
@@ -452,7 +452,7 @@ msgstr ""
 msgid "run"
 msgstr ""
 
-#: src/ai/gemini/activations.js:117 src/ai/gemini/activations.js:154
+#: src/ai/gemini/activations.js:117 src/ai/gemini/activations.js:156
 msgid "load"
 msgstr ""
 
@@ -541,358 +541,366 @@ msgid "go_to_var1"
 msgstr ""
 
 #: src/ai/gemini/activations.js:145
-msgid "navigate"
+msgid "go_to_var2"
 msgstr ""
 
 #: src/ai/gemini/activations.js:146
-msgid "navigate_var1"
+msgid "go_to_var3"
 msgstr ""
 
 #: src/ai/gemini/activations.js:147
-msgid "navigate_var2"
+msgid "navigate"
 msgstr ""
 
 #: src/ai/gemini/activations.js:148
-msgid "visit"
+msgid "navigate_var1"
 msgstr ""
 
 #: src/ai/gemini/activations.js:149
-msgid "visit_var1"
+msgid "navigate_var2"
 msgstr ""
 
 #: src/ai/gemini/activations.js:150
-msgid "visit_var2"
+msgid "visit"
+msgstr ""
+
+#: src/ai/gemini/activations.js:151
+msgid "visit_var1"
 msgstr ""
 
 #: src/ai/gemini/activations.js:152
+msgid "visit_var2"
+msgstr ""
+
+#: src/ai/gemini/activations.js:154
 msgid "launch_var1"
 msgstr ""
 
-#: src/ai/gemini/activations.js:153
+#: src/ai/gemini/activations.js:155
 msgid "launch_var2"
 msgstr ""
 
-#: src/ai/gemini/activations.js:155
+#: src/ai/gemini/activations.js:157
 msgid "load_var1"
 msgstr ""
 
-#: src/ai/gemini/activations.js:156
+#: src/ai/gemini/activations.js:158
 msgid "load_var2"
 msgstr ""
 
-#: src/ai/gemini/activations.js:157
+#: src/ai/gemini/activations.js:159
 msgid "find"
 msgstr ""
 
-#: src/ai/gemini/activations.js:158
+#: src/ai/gemini/activations.js:160
 msgid "find_var1"
 msgstr ""
 
-#: src/ai/gemini/activations.js:159
+#: src/ai/gemini/activations.js:161
 msgid "find_var2"
 msgstr ""
 
-#: src/ai/gemini/activations.js:160
+#: src/ai/gemini/activations.js:162
 msgid "search"
 msgstr ""
 
-#: src/ai/gemini/activations.js:161
+#: src/ai/gemini/activations.js:163
 msgid "search_var1"
 msgstr ""
 
-#: src/ai/gemini/activations.js:162
+#: src/ai/gemini/activations.js:164
 msgid "search_var2"
 msgstr ""
 
-#: src/ai/gemini/activations.js:163
+#: src/ai/gemini/activations.js:165
 msgid "browse"
 msgstr ""
 
-#: src/ai/gemini/activations.js:164
+#: src/ai/gemini/activations.js:166
 msgid "browse_var1"
 msgstr ""
 
-#: src/ai/gemini/activations.js:165
+#: src/ai/gemini/activations.js:167
 msgid "browse_var2"
 msgstr ""
 
-#: src/ai/gemini/activations.js:166
+#: src/ai/gemini/activations.js:168
 msgid "check out"
 msgstr ""
 
-#: src/ai/gemini/activations.js:167
+#: src/ai/gemini/activations.js:169
 msgid "pull up"
 msgstr ""
 
-#: src/ai/gemini/activations.js:168
+#: src/ai/gemini/activations.js:170
 msgid "bring"
 msgstr ""
 
-#: src/ai/gemini/activations.js:169
+#: src/ai/gemini/activations.js:171
 msgid "take me"
 msgstr ""
 
-#: src/ai/gemini/activations.js:170
+#: src/ai/gemini/activations.js:172
 msgid "show me"
 msgstr ""
 
-#: src/ai/gemini/activations.js:174
+#: src/ai/gemini/activations.js:176
 msgid "website"
 msgstr ""
 
-#: src/ai/gemini/activations.js:175
+#: src/ai/gemini/activations.js:177
 msgid "site"
 msgstr ""
 
-#: src/ai/gemini/activations.js:176
+#: src/ai/gemini/activations.js:178
 msgid "page"
 msgstr ""
 
-#: src/ai/gemini/activations.js:177
+#: src/ai/gemini/activations.js:179
 msgid "webpage"
 msgstr ""
 
-#: src/ai/gemini/activations.js:178
+#: src/ai/gemini/activations.js:180
 msgid "link"
 msgstr ""
 
-#: src/ai/gemini/activations.js:179
+#: src/ai/gemini/activations.js:181
 msgid "url"
 msgstr ""
 
-#: src/ai/gemini/activations.js:180
+#: src/ai/gemini/activations.js:182
 msgid "address"
 msgstr ""
 
-#: src/ai/gemini/activations.js:181
+#: src/ai/gemini/activations.js:183
 msgid "blog"
 msgstr ""
 
-#: src/ai/gemini/activations.js:185
+#: src/ai/gemini/activations.js:187
 msgid "how is the"
 msgstr ""
 
-#: src/ai/gemini/activations.js:186
+#: src/ai/gemini/activations.js:188
 msgid "what is the"
 msgstr ""
 
-#: src/ai/gemini/activations.js:187
+#: src/ai/gemini/activations.js:189
 msgid "what's the"
 msgstr ""
 
-#: src/ai/gemini/activations.js:188
+#: src/ai/gemini/activations.js:190
 msgid "how hot is it"
 msgstr ""
 
-#: src/ai/gemini/activations.js:189
+#: src/ai/gemini/activations.js:191
 msgid "how cold is it"
 msgstr ""
 
-#: src/ai/gemini/activations.js:190
+#: src/ai/gemini/activations.js:192
 msgid "is there"
 msgstr ""
 
-#: src/ai/gemini/activations.js:191
+#: src/ai/gemini/activations.js:193
 msgid "will it"
 msgstr ""
 
-#: src/ai/gemini/activations.js:192
+#: src/ai/gemini/activations.js:194
 msgid "do I need"
 msgstr ""
 
-#: src/ai/gemini/activations.js:193
+#: src/ai/gemini/activations.js:195
 msgid "how warm is it"
 msgstr ""
 
-#: src/ai/gemini/activations.js:194
+#: src/ai/gemini/activations.js:196
 msgid "how's the"
 msgstr ""
 
-#: src/ai/gemini/activations.js:195
+#: src/ai/gemini/activations.js:197
 msgid "should I"
 msgstr ""
 
-#: src/ai/gemini/activations.js:196
+#: src/ai/gemini/activations.js:198
 msgid "is the"
 msgstr ""
 
-#: src/ai/gemini/activations.js:197
+#: src/ai/gemini/activations.js:199
 msgid "what time will it"
 msgstr ""
 
-#: src/ai/gemini/activations.js:198
+#: src/ai/gemini/activations.js:200
 msgid "is it"
 msgstr ""
 
-#: src/ai/gemini/activations.js:199
+#: src/ai/gemini/activations.js:201
 msgid "how long will it"
 msgstr ""
 
-#: src/ai/gemini/activations.js:200
+#: src/ai/gemini/activations.js:202
 msgid "are there any"
 msgstr ""
 
-#: src/ai/gemini/activations.js:201
+#: src/ai/gemini/activations.js:203
 msgid "will there be a"
 msgstr ""
 
-#: src/ai/gemini/activations.js:205
+#: src/ai/gemini/activations.js:207
 msgid "weather"
 msgstr ""
 
-#: src/ai/gemini/activations.js:206
+#: src/ai/gemini/activations.js:208
 msgid "temperature"
 msgstr ""
 
-#: src/ai/gemini/activations.js:207
+#: src/ai/gemini/activations.js:209
 msgid "raining"
 msgstr ""
 
-#: src/ai/gemini/activations.js:208
+#: src/ai/gemini/activations.js:210
 msgid "snowing"
 msgstr ""
 
-#: src/ai/gemini/activations.js:209
+#: src/ai/gemini/activations.js:211
 msgid "windy"
 msgstr ""
 
-#: src/ai/gemini/activations.js:210
+#: src/ai/gemini/activations.js:212
 msgid "forecast"
 msgstr ""
 
-#: src/ai/gemini/activations.js:211
+#: src/ai/gemini/activations.js:213
 msgid "cloudy"
 msgstr ""
 
-#: src/ai/gemini/activations.js:212
+#: src/ai/gemini/activations.js:214
 msgid "storm"
 msgstr ""
 
-#: src/ai/gemini/activations.js:213
+#: src/ai/gemini/activations.js:215
 msgid "humidity"
 msgstr ""
 
-#: src/ai/gemini/activations.js:214
+#: src/ai/gemini/activations.js:216
 msgid "rain"
 msgstr ""
 
-#: src/ai/gemini/activations.js:215
+#: src/ai/gemini/activations.js:217
 msgid "snow"
 msgstr ""
 
-#: src/ai/gemini/activations.js:216
+#: src/ai/gemini/activations.js:218
 msgid "umbrella"
 msgstr ""
 
-#: src/ai/gemini/activations.js:217
+#: src/ai/gemini/activations.js:219
 msgid "jacket"
 msgstr ""
 
-#: src/ai/gemini/activations.js:218
+#: src/ai/gemini/activations.js:220
 msgid "warm"
 msgstr ""
 
-#: src/ai/gemini/activations.js:219
+#: src/ai/gemini/activations.js:221
 msgid "foggy"
 msgstr ""
 
-#: src/ai/gemini/activations.js:220
+#: src/ai/gemini/activations.js:222
 msgid "freezing"
 msgstr ""
 
-#: src/ai/gemini/activations.js:221
+#: src/ai/gemini/activations.js:223
 msgid "high for today"
 msgstr ""
 
-#: src/ai/gemini/activations.js:222
+#: src/ai/gemini/activations.js:224
 msgid "low for today"
 msgstr ""
 
-#: src/ai/gemini/activations.js:223
+#: src/ai/gemini/activations.js:225
 msgid "a coat"
 msgstr ""
 
-#: src/ai/gemini/activations.js:224
+#: src/ai/gemini/activations.js:226
 msgid "wind"
 msgstr ""
 
-#: src/ai/gemini/activations.js:225
+#: src/ai/gemini/activations.js:227
 msgid "stormy"
 msgstr ""
 
-#: src/ai/gemini/activations.js:226
+#: src/ai/gemini/activations.js:228
 msgid "drizzling"
 msgstr ""
 
-#: src/ai/gemini/activations.js:227
+#: src/ai/gemini/activations.js:229
 msgid "thunder"
 msgstr ""
 
-#: src/ai/gemini/activations.js:228
+#: src/ai/gemini/activations.js:230
 msgid "lightning"
 msgstr ""
 
-#: src/ai/gemini/activations.js:229
+#: src/ai/gemini/activations.js:231
 msgid "mild"
 msgstr ""
 
-#: src/ai/gemini/activations.js:230
+#: src/ai/gemini/activations.js:232
 msgid "air pressure"
 msgstr ""
 
-#: src/ai/gemini/activations.js:231
+#: src/ai/gemini/activations.js:233
 msgid "heatwave"
 msgstr ""
 
-#: src/ai/gemini/activations.js:232
+#: src/ai/gemini/activations.js:234
 msgid "chilly"
 msgstr ""
 
-#: src/ai/gemini/activations.js:233
+#: src/ai/gemini/activations.js:235
 msgid "overcast"
 msgstr ""
 
-#: src/ai/gemini/activations.js:234
+#: src/ai/gemini/activations.js:236
 msgid "clear"
 msgstr ""
 
-#: src/ai/gemini/activations.js:235
+#: src/ai/gemini/activations.js:237
 msgid "hot"
 msgstr ""
 
-#: src/ai/gemini/activations.js:236
+#: src/ai/gemini/activations.js:238
 msgid "outside"
 msgstr ""
 
-#: src/ai/gemini/activations.js:237
+#: src/ai/gemini/activations.js:239
 msgid "hurricane"
 msgstr ""
 
-#: src/ai/gemini/activations.js:238
+#: src/ai/gemini/activations.js:240
 msgid "uv index"
 msgstr ""
 
-#: src/ai/gemini/activations.js:239
+#: src/ai/gemini/activations.js:241
 msgid "sunny"
 msgstr ""
 
-#: src/ai/gemini/activations.js:240
+#: src/ai/gemini/activations.js:242
 msgid "hail"
 msgstr ""
 
-#: src/ai/gemini/activations.js:241
+#: src/ai/gemini/activations.js:243
 msgid "frost"
 msgstr ""
 
-#: src/ai/gemini/activations.js:242
+#: src/ai/gemini/activations.js:244
 msgid "cold"
 msgstr ""
 
-#: src/ai/gemini/activations.js:243
+#: src/ai/gemini/activations.js:245
 msgid "dew point"
 msgstr ""
 
-#: src/ai/gemini/activations.js:244
+#: src/ai/gemini/activations.js:246
 msgid "visibility"
 msgstr ""
 
