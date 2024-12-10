@@ -140,9 +140,6 @@ export class FunctionsDeclarations {
     }
 
     checkTextActivation(text, cmdActivation, cmdFunction) {
-        console.log('Text: ' + text);
-        console.log('Activation: ' + JSON.stringify(cmdActivation));
-        console.log('Function: ' + JSON.stringify(cmdFunction));
         // Normalização do texto
         const sanitizedText = text
             .replace(/[.,!?]/g, '')
@@ -153,9 +150,8 @@ export class FunctionsDeclarations {
 
         // Função auxiliar para verificar se uma frase está contida na ordem correta
         function containsPhraseInOrder(text, phrase) {
-            const words = phrase.split(' ');
             let index = 0;
-            for (const word of words) {
+            for (const word of phrase) {
                 index = text.indexOf(word, index);
                 if (index === -1) {
                     return false;
@@ -172,6 +168,13 @@ export class FunctionsDeclarations {
         // Verifica se alguma frase de função está nas primeiras 10 palavras
         let hasFunction = cmdFunction.some((phrase) =>
             containsPhraseInOrder(sanitizedText.slice(0, 10).join(' '), phrase),
+        );
+
+        console.log(
+            'Has Activation: ' +
+                hasActivation +
+                ' Has Function: ' +
+                hasFunction,
         );
 
         return hasActivation && hasFunction;
