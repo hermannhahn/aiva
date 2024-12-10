@@ -704,22 +704,22 @@ msgstr "qual é o"
 
 #: src/ai/gemini/activations.js:193
 msgid "what's the"
-msgstr "qual é a"
+msgstr "qual o"
 
 #: src/ai/gemini/activations.js:194
 #, fuzzy
 msgid "what is it"
-msgstr "qual é o"
+msgstr "qual é a"
 
 #: src/ai/gemini/activations.js:195
 #, fuzzy
 msgid "what is"
-msgstr "qual é o"
+msgstr "qual a"
 
 #: src/ai/gemini/activations.js:197
 #, fuzzy
 msgid "how is it"
-msgstr "como está o"
+msgstr "como está"
 
 #: src/ai/gemini/activations.js:198
 msgid "how hot is it"
