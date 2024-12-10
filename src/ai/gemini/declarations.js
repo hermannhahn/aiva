@@ -10,14 +10,14 @@ export class FunctionsDeclarations {
 
         this.readClipboard = {
             name: 'read_clipboard',
-            description: _('Clipboard Text-to-Speech'),
+            description: _('Text-to-Speech, read copied text from clipboard'),
             parameters: {
                 type: 'object',
                 properties: {
                     response: {
                         type: 'string',
                         description:
-                            _('Response text before run, e.g.: ') +
+                            _('Response text before start read, e.g.: ') +
                             _('Sure, start reading...'),
                     },
                 },
