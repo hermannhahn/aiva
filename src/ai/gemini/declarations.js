@@ -140,27 +140,33 @@ export class FunctionsDeclarations {
     }
 
     checkTextActivation(text, cmdActivation, cmdFunction) {
-        // Remove pontuações como vírgulas e pontos ao final das palavras
-        const sanitizedText = text.replace(/[.,!?]/g, '');
-        const normalizedText = sanitizedText.toLowerCase();
+        // Normaliza o texto: remove pontuações, transforma em minúsculas e divide em palavras
+        const sanitizedText = text
+            .replace(/[.,!?]/g, '') // Remove pontuações
+            .toLowerCase(); // Transforma em minúsculas
 
-        // Divide o texto em palavras
-        const words = normalizedText.split(/\s+/);
+        const words = sanitizedText.split(/\s+/); // Divide em palavras
 
-        // Verifica se as 5 primeiras palavras contêm alguma palavra de cmdActivation
-        const hasActivation = words
-            .slice(0, 5)
-            .some((word) => cmdActivation.includes(word));
+        // Junta as 5 primeiras palavras em uma string para buscar frases
+        const firstFiveWords = words.slice(0, 5).join(' ');
 
-        // Se não contém palavra de ativação, retorna false
+        // Junta as 10 primeiras palavras em uma string para buscar frases
+        const firstTenWords = words.slice(0, 10).join(' ');
+
+        // Verifica se alguma frase ou palavra de cmdActivation está nas 5 primeiras palavras
+        const hasActivation = cmdActivation.some((phrase) =>
+            firstFiveWords.includes(phrase.toLowerCase()),
+        );
+
+        // Se não contém ativação, retorna false
         if (!hasActivation) {
             return false;
         }
 
-        // Verifica se as 10 primeiras palavras contêm alguma palavra de cmdFunction
-        const hasFunction = words
-            .slice(0, 10)
-            .some((word) => cmdFunction.includes(word));
+        // Verifica se alguma frase ou palavra de cmdFunction está nas 10 primeiras palavras
+        const hasFunction = cmdFunction.some((phrase) =>
+            firstTenWords.includes(phrase.toLowerCase()),
+        );
 
         return hasFunction;
     }
