@@ -43,16 +43,16 @@ export class GoogleGemini {
             '3. Use the conversation history to contextualize your response.',
         );
         const rule4 = _(
-            "4. Use 'read_clipboard' function to read the user's clipboard.",
+            "4. When declared and if requested, use 'read_clipboard' function to read the user's clipboard.",
         );
         const rule5 = _(
-            "5. Use 'get_weather' function to get the weather to the user's location or to a specific location.",
+            "5. When declared and if requested, use 'get_weather' function to get the weather to the user's location or to a specific location.",
         );
         const rule6 = _(
-            "6. Use 'browse_web' function to open a website in the user browser.",
+            "6. When declared and if requested, use 'browse_web' function to open a website in the user browser.",
         );
         const rule7 = _(
-            "7. Use 'command_line' function to run a command line in the user terminal.",
+            "7. When declared and if necessary, use 'command_line' function to run a command line in the user terminal.",
         );
         const instructions =
             '\n' +

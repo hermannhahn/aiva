@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-10 23:28-0300\n"
+"POT-Creation-Date: 2024-12-11 00:58-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -1076,27 +1076,37 @@ msgid "3. Use the conversation history to contextualize your response."
 msgstr "3. Use o histórico para contextualizar suas respostas."
 
 #: src/ai/gemini.js:46
-msgid "4. Use 'read_clipboard' function to read the user's clipboard."
-msgstr "4. Use a função 'read_clipboard' para ler a área de transferência do "
-"usuário."
-
+#, fuzzy
+msgid ""
+"4. When declared and if requested, use 'read_clipboard' function to read the "
+"user's clipboard."
+msgstr ""
+"4. Use a função 'read_clipboard' para ler a área de transferência do usuário."
 
 #: src/ai/gemini.js:49
+#, fuzzy
 msgid ""
-"5. Use 'get_weather' function to get the weather to the user's location or "
-"to a specific location."
-msgstr "5. Use a função 'get_weather' para obter o clima para a localização do "
+"5. When declared and if requested, use 'get_weather' function to get the "
+"weather to the user's location or to a specific location."
+msgstr ""
+"5. Use a função 'get_weather' para obter o clima para a localização do "
 "usuário ou para uma localização específica."
 
 #: src/ai/gemini.js:52
-msgid "6. Use 'browse_web' function to open a website in the user browser."
-msgstr "6. Use a função 'browse_web' para abrir um site no navegador do usuário."
+#, fuzzy
+msgid ""
+"6. When declared and if requested, use 'browse_web' function to open a "
+"website in the user browser."
+msgstr ""
+"6. Use a função 'browse_web' para abrir um site no navegador do usuário."
 
 #: src/ai/gemini.js:55
 #, fuzzy
 msgid ""
-"7. Use 'command_line' function to run a command line in the user terminal."
-msgstr "7. Use a função 'command_line' para executar uma linha de comando no "
+"7. When declared and if necessary, use 'command_line' function to run a "
+"command line in the user terminal."
+msgstr ""
+"7. Use a função 'command_line' para executar uma linha de comando no "
 "terminal do usuário."
 
 #: src/ai/gemini.js:59
