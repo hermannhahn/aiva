@@ -42,6 +42,18 @@ export class GoogleGemini {
         const rule3 = _(
             '3. Use the conversation history to contextualize your response.',
         );
+        const rule4 = _(
+            "4. Use 'read_clipboard' function to read the user's clipboard.",
+        );
+        const rule5 = _(
+            "5. Use 'get_weather' function to get the weather to the user's location or to a specific location.",
+        );
+        const rule6 = _(
+            "6. Use 'browse_web' function to open a website in the user browser.",
+        );
+        const rule7 = _(
+            "7. Use 'command_line' function to run a command line in the user terminal.",
+        );
         const instructions =
             '\n' +
             _('Use the following instructions for any interaction:') +
@@ -50,7 +62,15 @@ export class GoogleGemini {
             '\n' +
             rule2 +
             '\n' +
-            rule3;
+            rule3 +
+            '\n' +
+            rule4 +
+            '\n' +
+            rule5 +
+            '\n' +
+            rule6 +
+            '\n' +
+            rule7;
         const instructionsReforce =
             _('I will use the declared functions when they are necessary;') +
             ' ' +
