@@ -1000,7 +1000,7 @@ msgstr ""
 
 #: src/ai/gemini/declarations.js:23
 msgid "Text to speech before speech clipboard text, e.g.: "
-msgstr "Texto para falar antes de falar de executar a função, e.g.: "
+msgstr "Texto para falar antes de executar a função, e.g.: "
 
 #: src/ai/gemini/declarations.js:24
 msgid "Sure, start reading..."
