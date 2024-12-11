@@ -1061,33 +1061,35 @@ msgstr ""
 
 #: src/ai/gemini.js:38
 msgid "1. Use the name "
-msgstr ""
+msgstr "1. Use o nome "
 
 #: src/ai/gemini.js:40
 msgid ""
 "2. Use the declared functions to fulfill requests that require access to the "
 "user's operating system."
 msgstr ""
+"2. Use as funções declaradas para atender as solicitações que necessitam de "
+"acesso ao sistema operacional do usuário."
 
 #: src/ai/gemini.js:43
 msgid "3. Use the conversation history to contextualize your response."
-msgstr ""
+msgstr "3. Use o histórico para contextualizar suas respostas."
 
 #: src/ai/gemini.js:47
 msgid "Use the following instructions for any interaction:"
-msgstr ""
+msgstr "Use as seguintes instruções para qualquer interação:"
 
 #: src/ai/gemini.js:55
 msgid "I will use the declared functions when they are necessary;"
-msgstr ""
+msgstr "Eu vou usar as funções declaradas quando forem necessárias;"
 
 #: src/ai/gemini.js:57
 msgid "When they are not useful for the request"
-msgstr ""
+msgstr "Quando não forem úteis para a solicitação"
 
 #: src/ai/gemini.js:60
 msgid "I will simply ignore them and respond to your request normally."
-msgstr ""
+msgstr "Eu vou apenas ignorá-los e responder a sua solicitação normalmente."
 
 #: src/ai/gemini.js:63
 msgid "Hi, I am"
@@ -1103,11 +1105,11 @@ msgstr "e hoje é"
 
 #: src/ai/gemini.js:65
 msgid "Hi, perfect, I will be"
-msgstr ""
+msgstr "Olá, perfeito, eu vou ser"
 
 #: src/ai/gemini.js:65
 msgid "in my conversations with you."
-msgstr ""
+msgstr "em minhas conversas com você."
 
 #: src/ai/gemini.js:65
 msgid "How can I help you today?"
