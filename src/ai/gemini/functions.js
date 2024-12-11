@@ -53,7 +53,7 @@ export class GeminiFunctions {
                 if (result) {
                     let clipboardText = result;
                     this.app.chat.editResponse(response, false);
-                    this.app.chat.tts(
+                    this.app.azure.tts(
                         response +
                             '\n ' +
                             clipboardText +
