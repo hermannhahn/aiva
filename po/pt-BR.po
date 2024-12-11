@@ -25,8 +25,8 @@ msgid "[ Copied ]"
 msgstr "[ Copiado ]"
 
 #: src/ai/azure.js:68 src/ai/azure.js:81 src/ai/azure.js:123
-#: src/ai/azure.js:132 src/ai/gemini.js:143 src/ai/gemini.js:174
-#: src/ai/gemini.js:251 src/ai/gemini.js:282
+#: src/ai/azure.js:132 src/ai/gemini.js:142 src/ai/gemini.js:173
+#: src/ai/gemini.js:250 src/ai/gemini.js:281
 #, fuzzy
 msgid "Sorry, I'm having connection trouble. Please try again."
 msgstr "Estou tendo problemas de conexão. Por favor, tente novamente."
@@ -1059,84 +1059,84 @@ msgid "or don't provide a location to show weather from user location"
 msgstr ""
 "ou não forneça uma localização para exibir o clima da localização do usuário"
 
-#: src/ai/gemini.js:39
-msgid "1. Respond to the name "
+#: src/ai/gemini.js:38
+msgid "1. Use the name "
 msgstr ""
 
-#: src/ai/gemini.js:41
+#: src/ai/gemini.js:40
 msgid ""
 "2. Use the declared functions to fulfill requests that require access to the "
 "user's operating system."
 msgstr ""
 
-#: src/ai/gemini.js:44
+#: src/ai/gemini.js:43
 msgid "3. Use the conversation history to contextualize your response."
 msgstr ""
 
-#: src/ai/gemini.js:48
+#: src/ai/gemini.js:47
 msgid "Use the following instructions for any interaction:"
 msgstr ""
 
-#: src/ai/gemini.js:56
+#: src/ai/gemini.js:55
 msgid "I will use the declared functions when they are necessary;"
 msgstr ""
 
-#: src/ai/gemini.js:58
+#: src/ai/gemini.js:57
 msgid "When they are not useful for the request"
 msgstr ""
 
-#: src/ai/gemini.js:61
+#: src/ai/gemini.js:60
 msgid "I will simply ignore them and respond to your request normally."
 msgstr ""
 
-#: src/ai/gemini.js:64
+#: src/ai/gemini.js:63
 msgid "Hi, I am"
 msgstr "Olá, eu sou"
 
-#: src/ai/gemini.js:64
+#: src/ai/gemini.js:63
 msgid "I am from"
 msgstr "Eu sou de"
 
-#: src/ai/gemini.js:64
+#: src/ai/gemini.js:63
 msgid "and today is"
 msgstr "e hoje é"
 
-#: src/ai/gemini.js:66
+#: src/ai/gemini.js:65
 msgid "Hi, perfect, I will be"
 msgstr ""
 
-#: src/ai/gemini.js:66
+#: src/ai/gemini.js:65
 msgid "in my conversations with you."
 msgstr ""
 
-#: src/ai/gemini.js:66
+#: src/ai/gemini.js:65
 msgid "How can I help you today?"
 msgstr "Como posso ajudar hoje?"
 
-#: src/ai/gemini.js:159 src/ai/gemini.js:267
+#: src/ai/gemini.js:158 src/ai/gemini.js:266
 #, fuzzy
 msgid "Sorry, I can't answer this question now."
 msgstr "Peço desculpas, eu não posso responder a esta pergunta."
 
-#: src/ai/gemini.js:306 src/ai/gemini.js:314 src/ai/gemini.js:322
-#: src/ai/gemini.js:333
+#: src/ai/gemini.js:305 src/ai/gemini.js:313 src/ai/gemini.js:321
+#: src/ai/gemini.js:332
 #, fuzzy
 msgid "Sorry, I can't answer this question."
 msgstr "Peço desculpas, eu não posso responder a esta pergunta."
 
-#: src/ai/gemini.js:309
+#: src/ai/gemini.js:308
 msgid "Possible sexually explicit content in the question or response."
 msgstr "Possível conteúdo sexualmente explícito na pergunta ou resposta."
 
-#: src/ai/gemini.js:317
+#: src/ai/gemini.js:316
 msgid "Possible hate speech in the question or response."
 msgstr "Possível discurso de ódio na pergunta ou resposta."
 
-#: src/ai/gemini.js:325
+#: src/ai/gemini.js:324
 msgid "Possible harassment in the question or response."
 msgstr "Possível assédio na pergunta ou resposta."
 
-#: src/ai/gemini.js:336
+#: src/ai/gemini.js:335
 msgid "Possible dangerous content in the question or response."
 msgstr "Possível assédio na pergunta ou resposta."
 

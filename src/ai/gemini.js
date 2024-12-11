@@ -35,8 +35,7 @@ export class GoogleGemini {
     getTuneString(role = 'user') {
         const date = new Date();
         const location = this.app.userSettings.LOCATION;
-        const rule1 =
-            _('1. Respond to the name ') + this.app.userSettings.ASSIST_NAME;
+        const rule1 = _('1. Use the name ') + this.app.userSettings.ASSIST_NAME;
         const rule2 = _(
             "2. Use the declared functions to fulfill requests that require access to the user's operating system.",
         );
