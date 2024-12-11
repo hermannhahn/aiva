@@ -22,7 +22,7 @@ fi
 
 # Change to main branch
 git checkout main
-cd -- "$( dirname "$0" )/../"
+cd -- "$( dirname "$0" )/"
 
 # Update main with version branch
 git merge $VERSION
