@@ -200,7 +200,7 @@ export class Chat {
         if (speech) {
             this.app.azure.tts(response.tts);
         } else {
-            this.app.ui.chat.resetStatusIcon();
+            this.app.ui.resetStatusIcon();
         }
         if (response.code) {
             this.copyToClipboard(response.code);
