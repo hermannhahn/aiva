@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-10 21:49-0300\n"
+"POT-Creation-Date: 2024-12-10 22:02-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language es-ES\n"
@@ -25,8 +25,8 @@ msgid "[ Copied ]"
 msgstr ""
 
 #: src/ai/azure.js:68 src/ai/azure.js:81 src/ai/azure.js:123
-#: src/ai/azure.js:132 src/ai/gemini.js:130 src/ai/gemini.js:161
-#: src/ai/gemini.js:238 src/ai/gemini.js:269
+#: src/ai/azure.js:132 src/ai/gemini.js:143 src/ai/gemini.js:174
+#: src/ai/gemini.js:251 src/ai/gemini.js:282
 msgid "Sorry, I'm having connection trouble. Please try again."
 msgstr ""
 
@@ -1133,66 +1133,82 @@ msgstr ""
 msgid "or don't provide a location to show weather from user location"
 msgstr ""
 
-#: src/ai/gemini.js:40
-msgid ""
-"\n"
-"            Use the following instructions for any interaction:\n"
-"            1. Respond to the name AIVA\n"
-"            2. Use the declared functions to fulfill requests that require "
-"access to the user's operating system.\n"
-"            3. Use the conversation history to contextualize your response.\n"
-"        "
+#: src/ai/gemini.js:39
+msgid "1. Respond to the name "
 msgstr ""
 
-#: src/ai/gemini.js:47
+#: src/ai/gemini.js:41
 msgid ""
-"I will use the declared functions when they are necessary; when they are not "
-"useful for the request, I will simply ignore them and respond to your "
-"request normally."
+"2. Use the declared functions to fulfill requests that require access to the "
+"user's operating system."
 msgstr ""
 
-#: src/ai/gemini.js:51
+#: src/ai/gemini.js:44
+msgid "3. Use the conversation history to contextualize your response."
+msgstr ""
+
+#: src/ai/gemini.js:48
+msgid "Use the following instructions for any interaction:"
+msgstr ""
+
+#: src/ai/gemini.js:56
+msgid "I will use the declared functions when they are necessary;"
+msgstr ""
+
+#: src/ai/gemini.js:58
+msgid "When they are not useful for the request"
+msgstr ""
+
+#: src/ai/gemini.js:61
+msgid "I will simply ignore them and respond to your request normally."
+msgstr ""
+
+#: src/ai/gemini.js:64
 msgid "Hi, I am"
 msgstr ""
 
-#: src/ai/gemini.js:51
+#: src/ai/gemini.js:64
 msgid "I am from"
 msgstr ""
 
-#: src/ai/gemini.js:51
+#: src/ai/gemini.js:64
 msgid "and today is"
 msgstr ""
 
-#: src/ai/gemini.js:53
-msgid "Hi! Perfect, now I am"
+#: src/ai/gemini.js:66
+msgid "Hi, perfect, I will be"
 msgstr ""
 
-#: src/ai/gemini.js:53
+#: src/ai/gemini.js:66
+msgid "in my conversations with you."
+msgstr ""
+
+#: src/ai/gemini.js:66
 msgid "How can I help you today?"
 msgstr ""
 
-#: src/ai/gemini.js:146 src/ai/gemini.js:254
+#: src/ai/gemini.js:159 src/ai/gemini.js:267
 msgid "Sorry, I can't answer this question now."
 msgstr ""
 
-#: src/ai/gemini.js:293 src/ai/gemini.js:301 src/ai/gemini.js:309
-#: src/ai/gemini.js:320
+#: src/ai/gemini.js:306 src/ai/gemini.js:314 src/ai/gemini.js:322
+#: src/ai/gemini.js:333
 msgid "Sorry, I can't answer this question."
 msgstr ""
 
-#: src/ai/gemini.js:296
+#: src/ai/gemini.js:309
 msgid "Possible sexually explicit content in the question or response."
 msgstr ""
 
-#: src/ai/gemini.js:304
+#: src/ai/gemini.js:317
 msgid "Possible hate speech in the question or response."
 msgstr ""
 
-#: src/ai/gemini.js:312
+#: src/ai/gemini.js:325
 msgid "Possible harassment in the question or response."
 msgstr ""
 
-#: src/ai/gemini.js:323
+#: src/ai/gemini.js:336
 msgid "Possible dangerous content in the question or response."
 msgstr ""
 
