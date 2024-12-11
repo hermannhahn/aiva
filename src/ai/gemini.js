@@ -35,9 +35,22 @@ export class GoogleGemini {
     getTuneString(role = 'user') {
         const date = new Date();
         const location = this.app.userSettings.LOCATION;
-        const user = `${_('Hi, I am')} ${this.app.userSettings.USERNAME}. ${_('I am from')} ${location} ${_('and today is')} ${date}`;
-        const model = `${_('Hi! I am')} ${this.app.userSettings.ASSIST_NAME}. ${_('How can I help you today?')}`;
+        const instructions =
+            '\n' +
+            _(`
+            Use the following instructions for any interaction:
+            1. Respond to the name AIVA
+            2. Use the declared functions to fulfill requests that require access to the user's operating system.
+            3. Use the conversation history to contextualize your response.
+        `);
+        const instructionsReforce = _(
+            'I will use the declared functions when they are necessary; when they are not useful for the request, I will simply ignore them and respond to your request normally.',
+        );
 
+        const user =
+            `${_('Hi, I am')} ${this.app.userSettings.USERNAME}. ${_('I am from')} ${location} ${_('and today is')} ${date}. ` +
+            instructions;
+        const model = `${_('Hi! Perfect, now I am')} ${this.app.userSettings.ASSIST_NAME}. ${instructionsReforce} ${_('How can I help you today?')}`;
         if (role === 'user') {
             return user;
         }
