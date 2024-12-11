@@ -1077,23 +1077,27 @@ msgstr "3. Use o histórico para contextualizar suas respostas."
 
 #: src/ai/gemini.js:46
 msgid "4. Use 'read_clipboard' function to read the user's clipboard."
-msgstr ""
+msgstr "4. Use a função 'read_clipboard' para ler a área de transferência do "
+"usuário."
+
 
 #: src/ai/gemini.js:49
 msgid ""
 "5. Use 'get_weather' function to get the weather to the user's location or "
 "to a specific location."
-msgstr ""
+msgstr "5. Use a função 'get_weather' para obter o clima para a localização do "
+"usuário ou para uma localização específica."
 
 #: src/ai/gemini.js:52
 msgid "6. Use 'browse_web' function to open a website in the user browser."
-msgstr ""
+msgstr "6. Use a função 'browse_web' para abrir um site no navegador do usuário."
 
 #: src/ai/gemini.js:55
 #, fuzzy
 msgid ""
 "7. Use 'command_line' function to run a command line in the user terminal."
-msgstr "Rodar comandos no terminal do usuário"
+msgstr "7. Use a função 'command_line' para executar uma linha de comando no "
+"terminal do usuário."
 
 #: src/ai/gemini.js:59
 msgid "Use the following instructions for any interaction:"
