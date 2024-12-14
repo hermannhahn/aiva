@@ -52,7 +52,7 @@ export class FunctionsDeclarations {
         };
 
         this.browse = {
-            name: 'browse_web',
+            name: 'open_website',
             description: _('Open url in the user browser.'),
             parameters: {
                 type: 'object',
