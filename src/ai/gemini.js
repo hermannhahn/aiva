@@ -107,17 +107,6 @@ export class GoogleGemini {
                     },
                 ],
             },
-            {
-                role: 'user',
-                parts: [
-                    {
-                        text: `${_('Always use the history of our interactions to contextualize your responses.')}.`,
-                    },
-                    {
-                        text: `${_('Ok, now I will always use the history of our interactions to contextualize my responses.')}.`,
-                    },
-                ],
-            },
         ];
         return model;
     }

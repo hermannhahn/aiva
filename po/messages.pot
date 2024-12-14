@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 1.0.0\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-14 18:55-0300\n"
+"POT-Creation-Date: 2024-12-14 19:02-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,8 +26,8 @@ msgid "[ Copied ]"
 msgstr ""
 
 #: src/ai/azure.js:68 src/ai/azure.js:81 src/ai/azure.js:123
-#: src/ai/azure.js:132 src/ai/gemini.js:195 src/ai/gemini.js:226
-#: src/ai/gemini.js:303 src/ai/gemini.js:334
+#: src/ai/azure.js:132 src/ai/gemini.js:184 src/ai/gemini.js:215
+#: src/ai/gemini.js:292 src/ai/gemini.js:323
 msgid "Sorry, I'm having connection trouble. Please try again."
 msgstr ""
 
@@ -1152,39 +1152,39 @@ msgstr ""
 msgid "when you ask for to do something in your computer"
 msgstr ""
 
-#: src/ai/gemini.js:103 src/ai/gemini.js:114
+#: src/ai/gemini.js:103
 msgid ""
 "Always use the history of our interactions to contextualize your responses."
 msgstr ""
 
-#: src/ai/gemini.js:106 src/ai/gemini.js:117
+#: src/ai/gemini.js:106
 msgid ""
 "Ok, now I will always use the history of our interactions to contextualize "
 "my responses."
 msgstr ""
 
-#: src/ai/gemini.js:211 src/ai/gemini.js:319
+#: src/ai/gemini.js:200 src/ai/gemini.js:308
 msgid "Sorry, I can't answer this question now."
 msgstr ""
 
-#: src/ai/gemini.js:357 src/ai/gemini.js:365 src/ai/gemini.js:373
-#: src/ai/gemini.js:384
+#: src/ai/gemini.js:346 src/ai/gemini.js:354 src/ai/gemini.js:362
+#: src/ai/gemini.js:373
 msgid "Sorry, I can't answer this question."
 msgstr ""
 
-#: src/ai/gemini.js:360
+#: src/ai/gemini.js:349
 msgid "Possible sexually explicit content in the question or response."
 msgstr ""
 
-#: src/ai/gemini.js:368
+#: src/ai/gemini.js:357
 msgid "Possible hate speech in the question or response."
 msgstr ""
 
-#: src/ai/gemini.js:376
+#: src/ai/gemini.js:365
 msgid "Possible harassment in the question or response."
 msgstr ""
 
-#: src/ai/gemini.js:387
+#: src/ai/gemini.js:376
 msgid "Possible dangerous content in the question or response."
 msgstr ""
 
