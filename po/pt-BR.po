@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-14 12:50-0300\n"
+"POT-Creation-Date: 2024-12-14 18:35-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -25,8 +25,8 @@ msgid "[ Copied ]"
 msgstr "[ Copiado ]"
 
 #: src/ai/azure.js:68 src/ai/azure.js:81 src/ai/azure.js:123
-#: src/ai/azure.js:132 src/ai/gemini.js:135 src/ai/gemini.js:166
-#: src/ai/gemini.js:243 src/ai/gemini.js:274
+#: src/ai/azure.js:132 src/ai/gemini.js:242 src/ai/gemini.js:273
+#: src/ai/gemini.js:350 src/ai/gemini.js:381
 #, fuzzy
 msgid "Sorry, I'm having connection trouble. Please try again."
 msgstr "Estou tendo problemas de conexão. Por favor, tente novamente."
@@ -1059,74 +1059,149 @@ msgid "or don't provide a location to show weather from user location"
 msgstr ""
 "ou não forneça uma localização para exibir o clima da localização do usuário"
 
-#: src/ai/gemini.js:38
-msgid "1. Use the name "
-msgstr "1. Use o nome "
-
-#: src/ai/gemini.js:40
-msgid ""
-"2. Use the declared functions to fulfill requests that require access to the "
-"user's operating system."
-msgstr ""
-"2. Use as funções declaradas para atender as solicitações que necessitam de "
-"acesso ao sistema operacional do usuário."
-
-#: src/ai/gemini.js:43
-msgid "3. Use the conversation history to contextualize your response."
-msgstr "3. Use o histórico para contextualizar suas respostas."
-
-#: src/ai/gemini.js:47
-msgid "Use the following instructions for any interaction:"
-msgstr "Use as seguintes instruções para qualquer interação:"
-
-#: src/ai/gemini.js:56
-msgid "Hi, I am"
+#: src/ai/gemini.js:44
+#, fuzzy
+msgid "Hi, I'm"
 msgstr "Olá, eu sou"
 
-#: src/ai/gemini.js:56
-msgid "I am from"
-msgstr "Eu sou de"
+#: src/ai/gemini.js:44
+msgid "I live in"
+msgstr ""
 
-#: src/ai/gemini.js:56
-msgid "and today is"
+#: src/ai/gemini.js:44
+#, fuzzy
+msgid "Today is"
 msgstr "e hoje é"
 
-#: src/ai/gemini.js:58
-msgid "Hi, perfect, I will be"
-msgstr "Olá, perfeito, eu vou ser"
+#: src/ai/gemini.js:52
+msgid "Hi, I'm your helpful assistant."
+msgstr ""
 
-#: src/ai/gemini.js:58
-msgid "in my conversations with you."
-msgstr "em minhas conversas com você."
-
-#: src/ai/gemini.js:58
-msgid "How can I help you today?"
+#: src/ai/gemini.js:52
+#, fuzzy
+msgid "How can I help you?"
 msgstr "Como posso ajudar hoje?"
 
-#: src/ai/gemini.js:151 src/ai/gemini.js:259
+#: src/ai/gemini.js:60
+msgid "You now use and respond to the name"
+msgstr ""
+
+#: src/ai/gemini.js:68
+msgid "Ok, now I'm"
+msgstr ""
+
+#: src/ai/gemini.js:68
+msgid "More instructions"
+msgstr ""
+
+#: src/ai/gemini.js:76
+msgid "When I request weather information"
+msgstr ""
+
+#: src/ai/gemini.js:76
+msgid "use the \"get_weather\" function"
+msgstr ""
+
+#: src/ai/gemini.js:76 src/ai/gemini.js:92 src/ai/gemini.js:108
+#: src/ai/gemini.js:124
+msgid "that will be declared with the request"
+msgstr ""
+
+#: src/ai/gemini.js:84
+msgid "Perfect, now I will always use the function"
+msgstr ""
+
+#: src/ai/gemini.js:84
+msgid "when you ask for weather information"
+msgstr ""
+
+#: src/ai/gemini.js:92
+msgid "When I request to read clipboard or copied text"
+msgstr ""
+
+#: src/ai/gemini.js:92
+msgid "use the \"read_clipboard\" function"
+msgstr ""
+
+#: src/ai/gemini.js:100
+msgid "Of course, now I will always use the function"
+msgstr ""
+
+#: src/ai/gemini.js:100
+msgid "when you ask for read clipboard or copied text"
+msgstr ""
+
+#: src/ai/gemini.js:108
+msgid "When I request to open a website"
+msgstr ""
+
+#: src/ai/gemini.js:108
+msgid "use the \"open_website\" function"
+msgstr ""
+
+#: src/ai/gemini.js:116
+msgid "Ok, now I will always use the function"
+msgstr ""
+
+#: src/ai/gemini.js:116
+msgid "when you ask for open a website"
+msgstr ""
+
+#: src/ai/gemini.js:124
+msgid ""
+"When I request to open apps, files, folder, or anything else in my computer"
+msgstr ""
+
+#: src/ai/gemini.js:124
+#, fuzzy
+msgid "use the \"command_line\" function"
+msgstr "linha de comando para rodar"
+
+#: src/ai/gemini.js:132
+msgid "Great, now I will always use the function"
+msgstr ""
+
+#: src/ai/gemini.js:132
+msgid "when you ask for to do something in your computer"
+msgstr ""
+
+#: src/ai/gemini.js:140 src/ai/gemini.js:156
+#, fuzzy
+msgid ""
+"Always use the history of our interactions to contextualize your responses."
+msgstr "3. Use o histórico para contextualizar suas respostas."
+
+#: src/ai/gemini.js:148 src/ai/gemini.js:164
+#, fuzzy
+msgid ""
+"Ok, now I will always use the history of our interactions to contextualize "
+"my responses."
+msgstr "3. Use o histórico para contextualizar suas respostas."
+
+#: src/ai/gemini.js:258 src/ai/gemini.js:366
 #, fuzzy
 msgid "Sorry, I can't answer this question now."
 msgstr "Peço desculpas, eu não posso responder a esta pergunta."
 
-#: src/ai/gemini.js:297 src/ai/gemini.js:305 src/ai/gemini.js:313
-#: src/ai/gemini.js:324
+#: src/ai/gemini.js:404 src/ai/gemini.js:412 src/ai/gemini.js:420
+#: src/ai/gemini.js:431
 #, fuzzy
 msgid "Sorry, I can't answer this question."
 msgstr "Peço desculpas, eu não posso responder a esta pergunta."
 
-#: src/ai/gemini.js:300
+#: src/ai/gemini.js:407
 msgid "Possible sexually explicit content in the question or response."
 msgstr "Possível conteúdo sexualmente explícito na pergunta ou resposta."
 
-#: src/ai/gemini.js:308
+#: src/ai/gemini.js:415
 msgid "Possible hate speech in the question or response."
 msgstr "Possível discurso de ódio na pergunta ou resposta."
 
-#: src/ai/gemini.js:316
+#: src/ai/gemini.js:423
 msgid "Possible harassment in the question or response."
 msgstr "Possível assédio na pergunta ou resposta."
 
-#: src/ai/gemini.js:327
+#: src/ai/gemini.js:434
 msgid "Possible dangerous content in the question or response."
 msgstr "Possível assédio na pergunta ou resposta."
 
@@ -1394,6 +1469,28 @@ msgstr "Salvar"
 #: src/prefs.js:287
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
+
+#~ msgid "1. Use the name "
+#~ msgstr "1. Use o nome "
+
+#~ msgid ""
+#~ "2. Use the declared functions to fulfill requests that require access to "
+#~ "the user's operating system."
+#~ msgstr ""
+#~ "2. Use as funções declaradas para atender as solicitações que necessitam "
+#~ "de acesso ao sistema operacional do usuário."
+
+#~ msgid "Use the following instructions for any interaction:"
+#~ msgstr "Use as seguintes instruções para qualquer interação:"
+
+#~ msgid "I am from"
+#~ msgstr "Eu sou de"
+
+#~ msgid "Hi, perfect, I will be"
+#~ msgstr "Olá, perfeito, eu vou ser"
+
+#~ msgid "in my conversations with you."
+#~ msgstr "em minhas conversas com você."
 
 #, fuzzy
 #~ msgid ""
