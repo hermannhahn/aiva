@@ -52,13 +52,12 @@ export class GeminiFunctions {
             (clipboard, result) => {
                 if (result) {
                     let clipboardText = result;
-                    this.app.chat.editResponse(response, false);
+                    if (response) {
+                        this.app.chat.editResponse(response, false);
+                        clipboardText = response + '\n ' + clipboardText;
+                    }
                     this.app.azure.tts(
-                        response +
-                            '\n ' +
-                            clipboardText +
-                            '\n ' +
-                            _('End of text!'),
+                        clipboardText + '\n ' + _('End of text!'),
                     );
                 } else {
                     this.app.chat.editResponse(

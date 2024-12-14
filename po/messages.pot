@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: aiva@gemini-assist.vercel.app 1.0.0\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-14 19:02-0300\n"
+"POT-Creation-Date: 2024-12-14 19:09-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: $USERNAME <$EMAIL>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -936,59 +936,59 @@ msgstr ""
 msgid "Sorry, I can't do that right now. Maybe in the future."
 msgstr ""
 
-#: src/ai/gemini/functions.js:61
+#: src/ai/gemini/functions.js:60
 msgid "End of text!"
 msgstr ""
 
-#: src/ai/gemini/functions.js:65
+#: src/ai/gemini/functions.js:64
 msgid "Failed to get text from clipboard"
 msgstr ""
 
-#: src/ai/gemini/functions.js:81
+#: src/ai/gemini/functions.js:80
 msgid "Please, install"
 msgstr ""
 
-#: src/ai/gemini/functions.js:85
+#: src/ai/gemini/functions.js:84
 msgid "first"
 msgstr ""
 
-#: src/ai/gemini/functions.js:102 src/ai/gemini/functions.js:155
+#: src/ai/gemini/functions.js:101 src/ai/gemini/functions.js:154
 msgid "Error opening site"
 msgstr ""
 
-#: src/ai/gemini/functions.js:146
+#: src/ai/gemini/functions.js:145
 msgid "You don't have any browser installed."
 msgstr ""
 
-#: src/ai/gemini/functions.js:148
+#: src/ai/gemini/functions.js:147
 msgid "Please, install a browser and try again."
 msgstr ""
 
-#: src/ai/gemini/functions.js:150
+#: src/ai/gemini/functions.js:149
 msgid "Opening App Store..."
 msgstr ""
 
-#: src/ai/gemini/functions.js:208
+#: src/ai/gemini/functions.js:207
 msgid "Now it is"
 msgstr ""
 
-#: src/ai/gemini/functions.js:208
+#: src/ai/gemini/functions.js:207
 msgid "in"
 msgstr ""
 
-#: src/ai/gemini/functions.js:208
+#: src/ai/gemini/functions.js:207
 msgid "the temperature is now"
 msgstr ""
 
-#: src/ai/gemini/functions.js:208
+#: src/ai/gemini/functions.js:207
 msgid "but it feels like"
 msgstr ""
 
-#: src/ai/gemini/functions.js:208
+#: src/ai/gemini/functions.js:207
 msgid "The humidity of the air is"
 msgstr ""
 
-#: src/ai/gemini/functions.js:214
+#: src/ai/gemini/functions.js:213
 msgid "Error getting weather"
 msgstr ""
 
