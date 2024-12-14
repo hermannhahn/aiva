@@ -55,6 +55,8 @@ export class GeminiFunctions {
                     if (response) {
                         this.app.chat.editResponse(response, false);
                         clipboardText = response + '\n ' + clipboardText;
+                    } else {
+                        this.app.chat.editResponse(_('Starting now...'));
                     }
                     this.app.azure.tts(
                         clipboardText + '\n ' + _('End of text!'),
