@@ -42,18 +42,6 @@ export class GoogleGemini {
         const rule3 = _(
             '3. Use the conversation history to contextualize your response.',
         );
-        const rule4 = _(
-            "4. When declared and if requested, use 'read_clipboard' function to read the user's clipboard.",
-        );
-        const rule5 = _(
-            "5. When declared and if requested, use 'get_weather' function to get the weather to the user's location or to a specific location.",
-        );
-        const rule6 = _(
-            "6. When declared and if requested, use 'browse_web' function to open a website in the user browser.",
-        );
-        const rule7 = _(
-            "7. When declared and if necessary, use 'command_line' function to run a command line in the user terminal.",
-        );
         const instructions =
             '\n' +
             _('Use the following instructions for any interaction:') +
@@ -62,27 +50,12 @@ export class GoogleGemini {
             '\n' +
             rule2 +
             '\n' +
-            rule3 +
-            '\n' +
-            rule4 +
-            '\n' +
-            rule5 +
-            '\n' +
-            rule6 +
-            '\n' +
-            rule7;
-        const instructionsReforce =
-            _('I will use the declared functions when they are necessary;') +
-            ' ' +
-            _('When they are not useful for the request') +
-            ', ' +
-            _(
-                'I will simply ignore them and respond to your request normally.',
-            );
+            rule3;
+
         const user =
             `${_('Hi, I am')} ${this.app.userSettings.USERNAME}. ${_('I am from')} ${location} ${_('and today is')} ${date}. ` +
             instructions;
-        const model = `${_('Hi, perfect, I will be')} ${this.app.userSettings.ASSIST_NAME} ${_('in my conversations with you.')} ${instructionsReforce} ${_('How can I help you today?')}`;
+        const model = `${_('Hi, perfect, I will be')} ${this.app.userSettings.ASSIST_NAME} ${_('in my conversations with you.')} ${_('How can I help you today?')}`;
         if (role === 'user') {
             return user;
         }
@@ -310,7 +283,6 @@ export class GoogleGemini {
      */
     safetyReason(res) {
         let aiResponse = '';
-        this.app.log('RESSSSSSSSSS: ' + JSON.stringify(res));
         // SAFETY warning
         if (res && res.candidates[0]?.finishReason === 'SAFETY') {
             // get safety reason
