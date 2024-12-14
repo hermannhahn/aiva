@@ -32,7 +32,7 @@ export class GeminiFunctions {
             case 'command_line':
                 this._commandLine(commandLine, response);
                 break;
-            case 'browse_web':
+            case 'open_website':
                 this._browseWeb(url, response);
                 break;
             case 'get_weather':
