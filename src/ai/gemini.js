@@ -138,9 +138,9 @@ export class GoogleGemini {
                     }
 
                     // DEBUG
-                    // let jsonResponse = {};
-                    // jsonResponse = JSON.stringify(res);
-                    // this.app.log('Response: ' + jsonResponse);
+                    let jsonResponse = {};
+                    jsonResponse = JSON.stringify(res);
+                    this.app.log('Response: ' + jsonResponse);
 
                     const parts = res.candidates[0]?.content?.parts;
 
