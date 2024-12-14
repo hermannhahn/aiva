@@ -1066,7 +1066,7 @@ msgstr "Olá, eu sou"
 
 #: src/ai/gemini.js:43
 msgid "I live in"
-msgstr ""
+msgstr "Eu estou em"
 
 #: src/ai/gemini.js:43
 #, fuzzy
@@ -1075,7 +1075,7 @@ msgstr "e hoje é"
 
 #: src/ai/gemini.js:46
 msgid "Hi, I'm your helpful assistant."
-msgstr ""
+msgstr "Olá, eu sou seu assistente útil."
 
 #: src/ai/gemini.js:46
 #, fuzzy
@@ -1084,99 +1084,100 @@ msgstr "Como posso ajudar hoje?"
 
 #: src/ai/gemini.js:53
 msgid "You now use and respond to the name"
-msgstr ""
+msgstr "Agora você usa e responde pelo nome"
 
 #: src/ai/gemini.js:56
 msgid "Ok, now I'm"
-msgstr ""
+msgstr "Ok, agora eu sou"
 
 #: src/ai/gemini.js:56
 msgid "More instructions"
-msgstr ""
+msgstr "Mais instruções"
 
 #: src/ai/gemini.js:63
 msgid "When I request weather information"
-msgstr ""
+msgstr "Quando eu solicitar informações sobre o clima"
 
 #: src/ai/gemini.js:63
 msgid "use the \"get_weather\" function"
-msgstr ""
+msgstr "use a função \"get_weather\""
 
 #: src/ai/gemini.js:63 src/ai/gemini.js:73 src/ai/gemini.js:83
 #: src/ai/gemini.js:93
 msgid "that will be declared with the request"
-msgstr ""
+msgstr "que será declarada com a solicitação"
 
 #: src/ai/gemini.js:66
 msgid "Perfect, now I will always use the function"
-msgstr ""
+msgstr "Perfeito, agora eu vou sempre usar a função"
 
 #: src/ai/gemini.js:66
 msgid "when you ask for weather information"
-msgstr ""
+msgstr "quando você pedir informações sobre o clima"
 
 #: src/ai/gemini.js:73
 msgid "When I request to read clipboard or copied text"
-msgstr ""
+msgstr "Quando eu solicitar para ler a área de transferência ou texto copiado"
 
 #: src/ai/gemini.js:73
 msgid "use the \"read_clipboard\" function"
-msgstr ""
+msgstr "use a função \"read_clipboard\""
 
 #: src/ai/gemini.js:76
 msgid "Of course, now I will always use the function"
-msgstr ""
+msgstr "Claro, agora eu vou sempre usar a função"
 
 #: src/ai/gemini.js:76
 msgid "when you ask for read clipboard or copied text"
-msgstr ""
+msgstr "quando você pedir para ler a área de transferência ou texto copiado"
 
 #: src/ai/gemini.js:83
 msgid "When I request to open a website"
-msgstr ""
+msgstr "Quando eu solicitar para abrir um site"
 
 #: src/ai/gemini.js:83
 msgid "use the \"open_website\" function"
-msgstr ""
+msgstr "use a função \"open_website\""
 
 #: src/ai/gemini.js:86
 msgid "Ok, now I will always use the function"
-msgstr ""
+msgstr "Ok, agora eu vou sempre usar a função"
 
 #: src/ai/gemini.js:86
 msgid "when you ask for open a website"
-msgstr ""
+msgstr "quando você pedir para abrir um site"
 
 #: src/ai/gemini.js:93
 msgid ""
 "When I request to open apps, files, folder, or anything else in my computer"
 msgstr ""
+"Quando eu solicitar para abrir apps, arquivos, pastas ou qualquer outra coisa "
+"no meu computador"
 
 #: src/ai/gemini.js:93
-#, fuzzy
 msgid "use the \"command_line\" function"
-msgstr "linha de comando para rodar"
+msgstr "use a função \"command_line\""
 
 #: src/ai/gemini.js:96
 msgid "Great, now I will always use the function"
-msgstr ""
+msgstr "Muito bem, agora eu vou sempre usar a função"
 
 #: src/ai/gemini.js:96
 msgid "when you ask for to do something in your computer"
-msgstr ""
+msgstr "quando você pedir para fazer algo no seu computador"
 
 #: src/ai/gemini.js:103 src/ai/gemini.js:114
-#, fuzzy
 msgid ""
 "Always use the history of our interactions to contextualize your responses."
-msgstr "3. Use o histórico para contextualizar suas respostas."
+msgstr ""
+"Sempre use o histórico para contextualizar suas respostas."
 
 #: src/ai/gemini.js:106 src/ai/gemini.js:117
-#, fuzzy
 msgid ""
 "Ok, now I will always use the history of our interactions to contextualize "
 "my responses."
-msgstr "3. Use o histórico para contextualizar suas respostas."
+msgstr ""
+"Ok, agora eu vou sempre usar o histórico para contextualizar minhas respostas."
 
 #: src/ai/gemini.js:211 src/ai/gemini.js:319
 #, fuzzy
@@ -1469,70 +1470,3 @@ msgstr "Salvar"
 #: src/prefs.js:287
 msgid "Your preferences have been saved"
 msgstr "Suas preferências foram salvas"
-
-#~ msgid "1. Use the name "
-#~ msgstr "1. Use o nome "
-
-#~ msgid ""
-#~ "2. Use the declared functions to fulfill requests that require access to "
-#~ "the user's operating system."
-#~ msgstr ""
-#~ "2. Use as funções declaradas para atender as solicitações que necessitam "
-#~ "de acesso ao sistema operacional do usuário."
-
-#~ msgid "Use the following instructions for any interaction:"
-#~ msgstr "Use as seguintes instruções para qualquer interação:"
-
-#~ msgid "I am from"
-#~ msgstr "Eu sou de"
-
-#~ msgid "Hi, perfect, I will be"
-#~ msgstr "Olá, perfeito, eu vou ser"
-
-#~ msgid "in my conversations with you."
-#~ msgstr "em minhas conversas com você."
-
-#, fuzzy
-#~ msgid ""
-#~ "4. When declared and if requested, use 'read_clipboard' function to read "
-#~ "the user's clipboard."
-#~ msgstr ""
-#~ "4. Quando declarado e se solicitado, use a função 'read_clipboard' para "
-#~ "ler a área de transferência do usuário."
-
-#, fuzzy
-#~ msgid ""
-#~ "5. When declared and if requested, use 'get_weather' function to get the "
-#~ "weather to the user's location or to a specific location."
-#~ msgstr ""
-#~ "5. Quando declarado e se solicitado, use a função 'get_weather' para "
-#~ "obter o clima para a localização do usuário ou para uma localização "
-#~ "específica."
-
-#, fuzzy
-#~ msgid ""
-#~ "6. When declared and if requested, use 'browse_web' function to open a "
-#~ "website in the user browser."
-#~ msgstr ""
-#~ "6. Quando declarado e se solicitado, use a função 'browse_web' para abrir "
-#~ "um site no navegador do usuário."
-
-#, fuzzy
-#~ msgid ""
-#~ "7. When declared and if necessary, use 'command_line' function to run a "
-#~ "command line in the user terminal."
-#~ msgstr ""
-#~ "7. Quando declarado e se necessário, use a função 'command_line' para "
-#~ "executar uma linha de comando no terminal do usuário."
-
-#~ msgid "I will use the declared functions when they are necessary;"
-#~ msgstr "Eu vou usar as funções declaradas quando forem necessárias;"
-
-#~ msgid "When they are not useful for the request"
-#~ msgstr "Quando não forem úteis para a solicitação"
-
-#~ msgid "I will simply ignore them and respond to your request normally."
-#~ msgstr "Eu vou apenas ignorá-los e responder a sua solicitação normalmente."
-
-#~ msgid "Hi! I am"
-#~ msgstr "Olá, eu sou"
