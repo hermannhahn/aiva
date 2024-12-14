@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-14 18:35-0300\n"
+"POT-Creation-Date: 2024-12-14 18:43-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -16,11 +16,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: src/chat.js:268
+#: src/chat.js:271
 msgid "[ Selected Copied ]"
 msgstr "[ Seleção Copiada ]"
 
-#: src/chat.js:283
+#: src/chat.js:286
 msgid "[ Copied ]"
 msgstr "[ Copiado ]"
 

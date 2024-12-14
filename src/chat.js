@@ -75,10 +75,13 @@ export class Chat {
                     );
                     this.history = this.app.database.getHistory();
                     if (!this.history.length || this.history.length < 1) {
-                        this.app.database.addToHistory(
-                            this.app.gemini.getTuneString('user'),
-                            this.app.gemini.getTuneString('model'),
-                        );
+                        let tuneString = this.app.gemini.getTuneString();
+                        for (let tune of tuneString) {
+                            this.app.database.addToHistory(
+                                tune.parts[0].text,
+                                tune.parts[1].text,
+                            );
+                        }
                     }
                 },
             );
