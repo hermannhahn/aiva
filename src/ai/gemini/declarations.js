@@ -69,7 +69,7 @@ export class FunctionsDeclarations {
                             _('Sure, opening...'),
                     },
                 },
-                required: ['url'],
+                required: ['url', 'response'],
             },
         };
 
