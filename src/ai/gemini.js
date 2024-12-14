@@ -38,112 +38,70 @@ export class GoogleGemini {
         // add initial instructions to model
         let model = [
             {
-                role: 'user',
                 parts: [
                     {
                         text: `${_("Hi, I'm")} ${this.USERNAME}. ${_('I live in')} ${this.LOCATION}. ${_('Today is')} ${date.toLocaleDateString()}.')}`,
                     },
-                ],
-            },
-            {
-                role: 'model',
-                parts: [
                     {
                         text: `${_("Hi, I'm your helpful assistant.")}, ${_('How can I help you?')}`,
                     },
                 ],
             },
             {
-                role: 'user',
                 parts: [
                     {
                         text: `${_('You now use and respond to the name')} ${this.ASSIST_NAME}.`,
                     },
-                ],
-            },
-            {
-                role: 'model',
-                parts: [
                     {
                         text: `${_("Ok, now I'm")} ${this.ASSIST_NAME}. ${_('More instructions')}?`,
                     },
                 ],
             },
             {
-                role: 'user',
                 parts: [
                     {
                         text: `${_('When I request weather information')}, ${_('use the "get_weather" function')} ${_('that will be declared with the request')}.`,
                     },
-                ],
-            },
-            {
-                role: 'model',
-                parts: [
                     {
                         text: `${_('Perfect, now I will always use the function')} "get_weather" ${_('when you ask for weather information')}.`,
                     },
                 ],
             },
             {
-                role: 'user',
                 parts: [
                     {
                         text: `${_('When I request to read clipboard or copied text')}, ${_('use the "read_clipboard" function')} ${_('that will be declared with the request')}.`,
                     },
-                ],
-            },
-            {
-                role: 'model',
-                parts: [
                     {
                         text: `${_('Of course, now I will always use the function')} "read_clipboard" ${_('when you ask for read clipboard or copied text')}.`,
                     },
                 ],
             },
             {
-                role: 'user',
                 parts: [
                     {
                         text: `${_('When I request to open a website')}, ${_('use the "open_website" function')} ${_('that will be declared with the request')}.`,
                     },
-                ],
-            },
-            {
-                role: 'model',
-                parts: [
                     {
                         text: `${_('Ok, now I will always use the function')} "open_website" ${_('when you ask for open a website')}.`,
                     },
                 ],
             },
             {
-                role: 'user',
                 parts: [
                     {
                         text: `${_('When I request to open apps, files, folder, or anything else in my computer')}, ${_('use the "command_line" function')} ${_('that will be declared with the request')}.`,
                     },
-                ],
-            },
-            {
-                role: 'model',
-                parts: [
                     {
                         text: `${_('Great, now I will always use the function')} "command_line" ${_('when you ask for to do something in your computer')}.`,
                     },
                 ],
             },
             {
-                role: 'user',
                 parts: [
                     {
                         text: `${_('Always use the history of our interactions to contextualize your responses.')}.`,
                     },
-                ],
-            },
-            {
-                role: 'model',
-                parts: [
                     {
                         text: `${_('Ok, now I will always use the history of our interactions to contextualize my responses.')}.`,
                     },
@@ -155,11 +113,6 @@ export class GoogleGemini {
                     {
                         text: `${_('Always use the history of our interactions to contextualize your responses.')}.`,
                     },
-                ],
-            },
-            {
-                role: 'model',
-                parts: [
                     {
                         text: `${_('Ok, now I will always use the history of our interactions to contextualize my responses.')}.`,
                     },
