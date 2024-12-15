@@ -8,16 +8,20 @@
  *
  */
 
-// Extension
+// GI
 import St from 'gi://St';
 import GObject from 'gi://GObject';
 import Clutter from 'gi://Clutter';
 import GLib from 'gi://GLib';
 import Gio from 'gi://Gio';
+
+// Extension
 import {
     Extension,
     gettext as _,
 } from 'resource:///org/gnome/shell/extensions/extension.js';
+
+// UI
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 import * as PanelMenu from 'resource:///org/gnome/shell/ui/panelMenu.js';
 
