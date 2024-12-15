@@ -17,10 +17,16 @@ export class MicrosoftAzure {
     constructor(app) {
         this.app = app;
         this.app.log('Microsoft Azure API loaded.');
-        this.AZURE_SPEECH_KEY = app.userSettings.AZURE_SPEECH_KEY;
-        this.AZURE_SPEECH_REGION = app.userSettings.AZURE_SPEECH_REGION;
-        this.AZURE_SPEECH_LANGUAGE = app.userSettings.AZURE_SPEECH_LANGUAGE;
-        this.AZURE_SPEECH_VOICE = app.userSettings.AZURE_SPEECH_VOICE;
+        this.AZURE_SPEECH_KEY =
+            app.extension.settings.get_string('azure-speech-key');
+        this.AZURE_SPEECH_REGION = app.extension.settings.get_string(
+            'azure-speech-region',
+        );
+        this.AZURE_SPEECH_LANGUAGE = app.extension.settings.get_string(
+            'azure-speech-language',
+        );
+        this.AZURE_SPEECH_VOICE =
+            app.extension.settings.get_string('azure-speech-voice');
     }
 
     /**
