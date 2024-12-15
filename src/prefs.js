@@ -261,6 +261,7 @@ class AivaSettings {
             // Save selected language
             const selectedLanguage = languageSelector.get_active_id();
             this.schema.set_string('azure-speech-language', selectedLanguage);
+            GLib.setenv('LANGUAGE', selectedLanguage, true);
 
             // Save selected voice
             const selectedVoice = voiceSelector.get_active_id();

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-15 02:04-0300\n"
+"POT-Creation-Date: 2024-12-15 02:07-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language es-ES\n"
@@ -1542,7 +1542,7 @@ msgstr ""
 msgid "Save"
 msgstr ""
 
-#: src/prefs.js:287
+#: src/prefs.js:288
 msgid "Your preferences have been saved"
 msgstr ""
 
