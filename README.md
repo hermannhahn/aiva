@@ -23,6 +23,7 @@ npm run publish<br>
 
 ## Bug Fixes
 
+-   [x] Auto-reload settings on save.
 -   [ ] Remove auto copy to clipboard code examples
 -   [ ] Change the way how warn about code examples on screen
 
