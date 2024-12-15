@@ -22,7 +22,8 @@ export class GoogleGemini {
         this.USERNAME = app.userSettings.USERNAME;
         this.LOCATION = app.userSettings.LOCATION;
         this.ASSIST_NAME = app.userSettings.ASSIST_NAME;
-        this.GEMINI_API_KEY = app.userSettings.GEMINI_API_KEY;
+        this.GEMINI_API_KEY =
+            app.extension.settings.get_string('gemini-api-key');
         this.afterTune = null;
         this.block = false;
         this.app.log('Google Gemini API loaded');

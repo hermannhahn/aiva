@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.2\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-14 19:12-0300\n"
+"POT-Creation-Date: 2024-12-15 02:03-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language pt-BR\n"
@@ -25,8 +25,8 @@ msgid "[ Copied ]"
 msgstr "[ Copiado ]"
 
 #: src/ai/azure.js:68 src/ai/azure.js:81 src/ai/azure.js:123
-#: src/ai/azure.js:132 src/ai/gemini.js:184 src/ai/gemini.js:215
-#: src/ai/gemini.js:292 src/ai/gemini.js:323
+#: src/ai/azure.js:132 src/ai/gemini.js:185 src/ai/gemini.js:216
+#: src/ai/gemini.js:293 src/ai/gemini.js:324
 #, fuzzy
 msgid "Sorry, I'm having connection trouble. Please try again."
 msgstr "Estou tendo problemas de conexão. Por favor, tente novamente."
@@ -1064,119 +1064,119 @@ msgid "or don't provide a location to show weather from user location"
 msgstr ""
 "ou não forneça uma localização para exibir o clima da localização do usuário"
 
-#: src/ai/gemini.js:43
+#: src/ai/gemini.js:44
 #, fuzzy
 msgid "Hi, I'm"
 msgstr "Olá, eu sou"
 
-#: src/ai/gemini.js:43
+#: src/ai/gemini.js:44
 msgid "I live in"
 msgstr "Eu estou em"
 
-#: src/ai/gemini.js:43
+#: src/ai/gemini.js:44
 #, fuzzy
 msgid "Today is"
 msgstr "e hoje é"
 
-#: src/ai/gemini.js:46
+#: src/ai/gemini.js:47
 msgid "Hi, I'm your helpful assistant."
 msgstr "Olá, eu sou seu assistente útil."
 
-#: src/ai/gemini.js:46
+#: src/ai/gemini.js:47
 #, fuzzy
 msgid "How can I help you?"
 msgstr "Como posso ajudar hoje?"
 
-#: src/ai/gemini.js:53
+#: src/ai/gemini.js:54
 msgid "You now use and respond to the name"
 msgstr "Agora você usa e responde pelo nome"
 
-#: src/ai/gemini.js:56
+#: src/ai/gemini.js:57
 msgid "Ok, now I'm"
 msgstr "Ok, agora eu sou"
 
-#: src/ai/gemini.js:56
+#: src/ai/gemini.js:57
 msgid "More instructions"
 msgstr "Mais instruções"
 
-#: src/ai/gemini.js:63
+#: src/ai/gemini.js:64
 msgid "When I request weather information"
 msgstr "Quando eu solicitar informações sobre o clima"
 
-#: src/ai/gemini.js:63
+#: src/ai/gemini.js:64
 msgid "use the \"get_weather\" function"
 msgstr "use a função \"get_weather\""
 
-#: src/ai/gemini.js:63 src/ai/gemini.js:73 src/ai/gemini.js:83
-#: src/ai/gemini.js:93
+#: src/ai/gemini.js:64 src/ai/gemini.js:74 src/ai/gemini.js:84
+#: src/ai/gemini.js:94
 msgid "that will be declared with the request"
 msgstr "que será declarada com a solicitação"
 
-#: src/ai/gemini.js:66
+#: src/ai/gemini.js:67
 msgid "Perfect, now I will always use the function"
 msgstr "Perfeito, agora eu vou sempre usar a função"
 
-#: src/ai/gemini.js:66
+#: src/ai/gemini.js:67
 msgid "when you ask for weather information"
 msgstr "quando você pedir informações sobre o clima"
 
-#: src/ai/gemini.js:73
+#: src/ai/gemini.js:74
 msgid "When I request to read clipboard or copied text"
 msgstr "Quando eu solicitar para ler a área de transferência ou texto copiado"
 
-#: src/ai/gemini.js:73
+#: src/ai/gemini.js:74
 msgid "use the \"read_clipboard\" function"
 msgstr "use a função \"read_clipboard\""
 
-#: src/ai/gemini.js:76
+#: src/ai/gemini.js:77
 msgid "Of course, now I will always use the function"
 msgstr "Claro, agora eu vou sempre usar a função"
 
-#: src/ai/gemini.js:76
+#: src/ai/gemini.js:77
 msgid "when you ask for read clipboard or copied text"
 msgstr "quando você pedir para ler a área de transferência ou texto copiado"
 
-#: src/ai/gemini.js:83
+#: src/ai/gemini.js:84
 msgid "When I request to open a website"
 msgstr "Quando eu solicitar para abrir um site"
 
-#: src/ai/gemini.js:83
+#: src/ai/gemini.js:84
 msgid "use the \"open_website\" function"
 msgstr "use a função \"open_website\""
 
-#: src/ai/gemini.js:86
+#: src/ai/gemini.js:87
 msgid "Ok, now I will always use the function"
 msgstr "Ok, agora eu vou sempre usar a função"
 
-#: src/ai/gemini.js:86
+#: src/ai/gemini.js:87
 msgid "when you ask for open a website"
 msgstr "quando você pedir para abrir um site"
 
-#: src/ai/gemini.js:93
+#: src/ai/gemini.js:94
 msgid ""
 "When I request to open apps, files, folder, or anything else in my computer"
 msgstr ""
 "Quando eu solicitar para abrir apps, arquivos, pastas ou qualquer outra "
 "coisa no meu computador"
 
-#: src/ai/gemini.js:93
+#: src/ai/gemini.js:94
 msgid "use the \"command_line\" function"
 msgstr "use a função \"command_line\""
 
-#: src/ai/gemini.js:96
+#: src/ai/gemini.js:97
 msgid "Great, now I will always use the function"
 msgstr "Muito bem, agora eu vou sempre usar a função"
 
-#: src/ai/gemini.js:96
+#: src/ai/gemini.js:97
 msgid "when you ask for to do something in your computer"
 msgstr "quando você pedir para fazer algo no seu computador"
 
-#: src/ai/gemini.js:103
+#: src/ai/gemini.js:104
 msgid ""
 "Always use the history of our interactions to contextualize your responses."
 msgstr "Sempre use o histórico para contextualizar suas respostas."
 
-#: src/ai/gemini.js:106
+#: src/ai/gemini.js:107
 msgid ""
 "Ok, now I will always use the history of our interactions to contextualize "
 "my responses."
@@ -1184,30 +1184,30 @@ msgstr ""
 "Ok, agora eu vou sempre usar o histórico para contextualizar minhas "
 "respostas."
 
-#: src/ai/gemini.js:200 src/ai/gemini.js:308
+#: src/ai/gemini.js:201 src/ai/gemini.js:309
 #, fuzzy
 msgid "Sorry, I can't answer this question now."
 msgstr "Peço desculpas, eu não posso responder a esta pergunta."
 
-#: src/ai/gemini.js:346 src/ai/gemini.js:354 src/ai/gemini.js:362
-#: src/ai/gemini.js:373
+#: src/ai/gemini.js:347 src/ai/gemini.js:355 src/ai/gemini.js:363
+#: src/ai/gemini.js:374
 #, fuzzy
 msgid "Sorry, I can't answer this question."
 msgstr "Peço desculpas, eu não posso responder a esta pergunta."
 
-#: src/ai/gemini.js:349
+#: src/ai/gemini.js:350
 msgid "Possible sexually explicit content in the question or response."
 msgstr "Possível conteúdo sexualmente explícito na pergunta ou resposta."
 
-#: src/ai/gemini.js:357
+#: src/ai/gemini.js:358
 msgid "Possible hate speech in the question or response."
 msgstr "Possível discurso de ódio na pergunta ou resposta."
 
-#: src/ai/gemini.js:365
+#: src/ai/gemini.js:366
 msgid "Possible harassment in the question or response."
 msgstr "Possível assédio na pergunta ou resposta."
 
-#: src/ai/gemini.js:376
+#: src/ai/gemini.js:377
 msgid "Possible dangerous content in the question or response."
 msgstr "Possível assédio na pergunta ou resposta."
 

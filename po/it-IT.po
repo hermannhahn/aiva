@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.0.1\n"
 "Report-Msgid-Bugs-To: hermann.h.hahn@gmail.com\n"
-"POT-Creation-Date: 2024-12-14 19:12-0300\n"
+"POT-Creation-Date: 2024-12-15 02:03-0300\n"
 "PO-Revision-Date: 2024-11-04 16:41-0300\n"
 "Last-Translator: Hermann <hermann.h.hahn@gmail.com>\n"
 "Language-Team: Language it-IT\n"
@@ -25,8 +25,8 @@ msgid "[ Copied ]"
 msgstr ""
 
 #: src/ai/azure.js:68 src/ai/azure.js:81 src/ai/azure.js:123
-#: src/ai/azure.js:132 src/ai/gemini.js:184 src/ai/gemini.js:215
-#: src/ai/gemini.js:292 src/ai/gemini.js:323
+#: src/ai/azure.js:132 src/ai/gemini.js:185 src/ai/gemini.js:216
+#: src/ai/gemini.js:293 src/ai/gemini.js:324
 msgid "Sorry, I'm having connection trouble. Please try again."
 msgstr ""
 
@@ -1137,146 +1137,146 @@ msgstr ""
 msgid "or don't provide a location to show weather from user location"
 msgstr ""
 
-#: src/ai/gemini.js:43
+#: src/ai/gemini.js:44
 msgid "Hi, I'm"
 msgstr ""
 
-#: src/ai/gemini.js:43
+#: src/ai/gemini.js:44
 msgid "I live in"
 msgstr ""
 
-#: src/ai/gemini.js:43
+#: src/ai/gemini.js:44
 msgid "Today is"
 msgstr ""
 
-#: src/ai/gemini.js:46
+#: src/ai/gemini.js:47
 msgid "Hi, I'm your helpful assistant."
 msgstr ""
 
-#: src/ai/gemini.js:46
+#: src/ai/gemini.js:47
 msgid "How can I help you?"
 msgstr ""
 
-#: src/ai/gemini.js:53
+#: src/ai/gemini.js:54
 msgid "You now use and respond to the name"
 msgstr ""
 
-#: src/ai/gemini.js:56
+#: src/ai/gemini.js:57
 msgid "Ok, now I'm"
 msgstr ""
 
-#: src/ai/gemini.js:56
+#: src/ai/gemini.js:57
 msgid "More instructions"
 msgstr ""
 
-#: src/ai/gemini.js:63
+#: src/ai/gemini.js:64
 msgid "When I request weather information"
 msgstr ""
 
-#: src/ai/gemini.js:63
+#: src/ai/gemini.js:64
 #, fuzzy
 msgid "use the \"get_weather\" function"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini.js:63 src/ai/gemini.js:73 src/ai/gemini.js:83
-#: src/ai/gemini.js:93
+#: src/ai/gemini.js:64 src/ai/gemini.js:74 src/ai/gemini.js:84
+#: src/ai/gemini.js:94
 msgid "that will be declared with the request"
 msgstr ""
 
-#: src/ai/gemini.js:66
+#: src/ai/gemini.js:67
 msgid "Perfect, now I will always use the function"
 msgstr ""
 
-#: src/ai/gemini.js:66
+#: src/ai/gemini.js:67
 #, fuzzy
 msgid "when you ask for weather information"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini.js:73
+#: src/ai/gemini.js:74
 msgid "When I request to read clipboard or copied text"
 msgstr ""
 
-#: src/ai/gemini.js:73
+#: src/ai/gemini.js:74
 #, fuzzy
 msgid "use the \"read_clipboard\" function"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini.js:76
+#: src/ai/gemini.js:77
 msgid "Of course, now I will always use the function"
 msgstr ""
 
-#: src/ai/gemini.js:76
+#: src/ai/gemini.js:77
 #, fuzzy
 msgid "when you ask for read clipboard or copied text"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini.js:83
+#: src/ai/gemini.js:84
 msgid "When I request to open a website"
 msgstr ""
 
-#: src/ai/gemini.js:83
+#: src/ai/gemini.js:84
 msgid "use the \"open_website\" function"
 msgstr ""
 
-#: src/ai/gemini.js:86
+#: src/ai/gemini.js:87
 msgid "Ok, now I will always use the function"
 msgstr ""
 
-#: src/ai/gemini.js:86
+#: src/ai/gemini.js:87
 #, fuzzy
 msgid "when you ask for open a website"
 msgstr "Codice copiato negli appunti"
 
-#: src/ai/gemini.js:93
+#: src/ai/gemini.js:94
 msgid ""
 "When I request to open apps, files, folder, or anything else in my computer"
 msgstr ""
 
-#: src/ai/gemini.js:93
+#: src/ai/gemini.js:94
 msgid "use the \"command_line\" function"
 msgstr ""
 
-#: src/ai/gemini.js:96
+#: src/ai/gemini.js:97
 msgid "Great, now I will always use the function"
 msgstr ""
 
-#: src/ai/gemini.js:96
+#: src/ai/gemini.js:97
 msgid "when you ask for to do something in your computer"
 msgstr ""
 
-#: src/ai/gemini.js:103
+#: src/ai/gemini.js:104
 msgid ""
 "Always use the history of our interactions to contextualize your responses."
 msgstr ""
 
-#: src/ai/gemini.js:106
+#: src/ai/gemini.js:107
 msgid ""
 "Ok, now I will always use the history of our interactions to contextualize "
 "my responses."
 msgstr ""
 
-#: src/ai/gemini.js:200 src/ai/gemini.js:308
+#: src/ai/gemini.js:201 src/ai/gemini.js:309
 msgid "Sorry, I can't answer this question now."
 msgstr ""
 
-#: src/ai/gemini.js:346 src/ai/gemini.js:354 src/ai/gemini.js:362
-#: src/ai/gemini.js:373
+#: src/ai/gemini.js:347 src/ai/gemini.js:355 src/ai/gemini.js:363
+#: src/ai/gemini.js:374
 msgid "Sorry, I can't answer this question."
 msgstr ""
 
-#: src/ai/gemini.js:349
+#: src/ai/gemini.js:350
 msgid "Possible sexually explicit content in the question or response."
 msgstr ""
 
-#: src/ai/gemini.js:357
+#: src/ai/gemini.js:358
 msgid "Possible hate speech in the question or response."
 msgstr ""
 
-#: src/ai/gemini.js:365
+#: src/ai/gemini.js:366
 msgid "Possible harassment in the question or response."
 msgstr ""
 
-#: src/ai/gemini.js:376
+#: src/ai/gemini.js:377
 msgid "Possible dangerous content in the question or response."
 msgstr ""
 
